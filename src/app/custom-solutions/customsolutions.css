@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+li{list-style:none;}img{max-width:100%;} html{font-size:100%;height:100%;background-color:#ffffff;}
+body{background-color:#ffffff;color:#3F3F3F;font-family:'roboto', sans-serif;font-size:15px;padding:0px !important;margin:0px !important;font-style:normal;font-weight:normal;min-height:100%;overflow-x:hidden;}
+h1, h2, h3, h4, h5, h6{margin:10px 0;font-family:'lato', Arial, Helvetica, sans-serif;font-weight:500;color:#505458;}
+a:hover, a:focus{outline:none;text-decoration:none;}
+.error::placeholder {  color: red; opacity: 1; }
+.error:-ms-input-placeholder {  color: red;}
+.error::-ms-input-placeholder {  color: red;}
+ h1, h2, h3, h4, h5, h6, ol, li, ul, a, img, p, span, strong{padding:0px;margin:0px;}
+ h1, h2, h3, h4, h5, h6{font-family:'lato', sans-serif;}
+body {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400;
+  color: #3f3f3f;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Online-Booking-App.top-head-custom {
+  background: url(/img/customsolutions/Online-Booking-App.jpg) top right
+    no-repeat;
+}
+
+.head-enquiry {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.head-enquiry h1 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 39px;
+  padding-bottom: 10px;
+}
+
+.head-enquiry p {
+  color: #fff;
+  font-size: 18px;
+  padding-bottom: 12px;
+}
+
+.head-enquiry .btn.btn-primary {
+  margin-top: 14px;
+  padding: 12px 13px;
+}
+.top-head-custom {
+  background: url(/img/customsolutionspage/top-bg.png) top right no-repeat;
+  display: inline-block;
+  width: 100%;
+  background-size: cover !important;
+  padding: 50px 0 20px;
+}
+
+.head-feature {
+  padding: 10px 0;
+}
+
+.head-feature > li {
+  color: #fff;
+  float: left;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px 30px;
+  position: relative;
+  width: 50%;
+  min-height: 70px;
+  list-style: none;
+}
+
+.head-feature > li::after {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 23px;
+  border: 3px solid;
+  border-radius: 50%;
+  content: "";
+}
+
+.feature_inner {
+  background-color: #eee;
+}
+
+.head-feature > li:after {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 23px;
+  border: 3px solid;
+  border-radius: 50%;
+}
+.my-breadcrumb {
+  display: inline-block;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.my-breadcrumb .breadcrumb {
+  padding: 8px 0;
+  margin-bottom: 0px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.my-breadcrumb .breadcrumb > li a {
+  color: #fff;
+}
+
+.my-breadcrumb .breadcrumb > li a:hover {
+  text-decoration: underline;
+}
+
+.my-breadcrumb .breadcrumb > .active {
+  color: #fff;
+}
+
+.my-breadcrumb .breadcrumb > li + li::before {
+  content: "\f105";
+  padding: 0 5px;
+  color: #ccc;
+  font-family: FontAwesome;
+}
+
+/*-------wahtsapp------------*/
+.WhatsappIcon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.WhatsappIcon img {
+  width: 50px;
+}
+
+.coccoc-alo-ph-circle {
+  width: 70px;
+  height: 70px;
+  top: -12px;
+  left: 2px;
+  position: absolute;
+  background-color: transparent;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid rgba(30, 30, 30, 0.4);
+  opacity: 0.1;
+  -webkit-animation: coccoc-alo-circle-anim 1.2s infinite ease-in-out;
+  -moz-animation: coccoc-alo-circle-anim 1.2s infinite ease-in-out;
+  -ms-animation: coccoc-alo-circle-anim 1.2s infinite ease-in-out;
+  -o-animation: coccoc-alo-circle-anim 1.2s infinite ease-in-out;
+  animation: coccoc-alo-circle-anim 1.2s infinite ease-in-out;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.coccoc-alo-phone {
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 200000 !important;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: visibility 0.5s;
+  -moz-transition: visibility 0.5s;
+  -o-transition: visibility 0.5s;
+  transition: visibility 0.5s;
+  right: 150px;
+  top: 30px;
+}
+
+.coccoc-alo-phone.coccoc-alo-green .coccoc-alo-ph-circle-fill {
+  background-color: rgba(54, 187, 34, 0.5);
+  opacity: 0.75 !important;
+}
+
+.coccoc-alo-ph-circle-fill {
+  width: 50px;
+  height: 50px;
+  top: -2px;
+  left: 12px;
+  position: absolute;
+  background-color: #000;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  opacity: 0.1;
+  -webkit-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  -moz-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  -ms-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  -o-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.coccoc-alo-ph-img-circle {
+  width: 39px;
+  height: 40px;
+  top: 3px;
+  left: 17px;
+  position: absolute;
+  background: rgba(30, 30, 30, 0.1) url(/img/product-img/whatsapp-icon.png)
+    no-repeat center center;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  opacity: 0.7;
+  background-size: 40px;
+}
+
+.coccoc-alo-phone.coccoc-alo-green .coccoc-alo-ph-img-circle {
+  background-color: #36bb22;
+}
+
+.coccoc-alo-phone.coccoc-alo-green .coccoc-alo-ph-circle {
+  border-color: #36bb22;
+  opacity: 0.5;
+}
+
+.coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-circle,
+.coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-circle {
+  border-color: #75eb50;
+  opacity: 0.5;
+}
+
+.coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-circle-fill,
+.coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-circle-fill {
+  background-color: rgba(117, 235, 80, 0.5);
+  opacity: 0.75 !important;
+}
+
+.coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-img-circle,
+.coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-img-circle {
+  background-color: #75eb50;
+}
+
+.WhatsappIconCustom {
+  margin-top: 14px;
+}
+
+@-moz-keyframes coccoc-alo-circle-anim {
+  0% {
+    transform: rotate(0) scale(0.5) skew(1deg);
+    opacity: 0.1;
+  }
+
+  30% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes coccoc-alo-circle-anim {
+  0% {
+    transform: rotate(0) scale(0.5) skew(1deg);
+    opacity: 0.1;
+  }
+
+  30% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.1;
+  }
+}
+
+@-o-keyframes coccoc-alo-circle-anim {
+  0% {
+    transform: rotate(0) scale(0.5) skew(1deg);
+    opacity: 0.1;
+  }
+
+  30% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.1;
+  }
+}
+
+@keyframes coccoc-alo-circle-anim {
+  0% {
+    transform: rotate(0) scale(0.5) skew(1deg);
+    opacity: 0.1;
+  }
+
+  30% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.1;
+  }
+}
+
+@-moz-keyframes coccoc-alo-circle-fill-anim {
+  0% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes coccoc-alo-circle-fill-anim {
+  0% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+
+@-o-keyframes coccoc-alo-circle-fill-anim {
+  0% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+
+@keyframes coccoc-alo-circle-fill-anim {
+  0% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+
+@-moz-keyframes coccoc-alo-circle-img-anim {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+@-webkit-keyframes coccoc-alo-circle-img-anim {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+@-o-keyframes coccoc-alo-circle-img-anim {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+@keyframes coccoc-alo-circle-img-anim {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+.BFC_logic {
+	padding: 60px 0;
+	overflow: hidden
+}
+
+.BFC_logic h2 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 22px;
+	color: #000;
+	margin-bottom: 75px
+}
+
+.top-box-BFC {
+	text-align: center;
+	background-color: #ebebeb;
+	padding: 0 18px 30px;
+	transition: all .3s ease 0s
+}
+
+.top-box-BFC img {
+	margin-top: -40px;
+	margin-bottom: 15px
+}
+
+.top-box-BFC h3 {
+	font-weight: 700;
+	color: #000;
+	font-size: 19px;
+	margin-bottom: 15px;
+	min-height: 40px
+}
+
+.top-box-BFC>p {
+	color: #424242;
+	font-size: 16px;
+	min-height: 138px
+}
+
+.top-box-BFC:hover {
+	background-color: #3489ca
+}
+
+.top-box-BFC:hover h3,
+.top-box-BFC:hover p {
+	color: #fff
+}
