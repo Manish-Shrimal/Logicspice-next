@@ -1,11 +1,684 @@
-import React from 'react'
+"use client";
+import React, { useState } from "react";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
+import "@/app/custom-solutions/customsolutions.css";
+import Image from "next/image";
+import Link from "next/link";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import "../../resposive.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Support from "@/app/Components/Support";
+import { Accordion, Card, Button } from "react-bootstrap";
+
+import {
+  MDBAccordion,
+  MDBAccordionItem,
+  MDBModal,
+  MDBModalBody,
+} from "mdb-react-ui-kit";
 
 const Page = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-export default Page
+  const [sellerTab, setSellerTab] = useState(true);
+  const [buyerTab, setBuyerTab] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const handleSellerTab = () => {
+    setSellerTab(true);
+    setBuyerTab(false);
+  };
+  const handleBuyerTab = () => {
+    setSellerTab(false);
+    setBuyerTab(true);
+  };
+
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
+  return (
+    <>
+      <Navbar />
+      <div class="top-head-custom Event-Booking">
+        <div class="container">
+          <div class="col-md-8">
+            <div class="head-enquiry">
+              <h1>Custom Event Booking System Development</h1>
+              <p class="sml_txt">
+              Logicspice offer the best custom mobile app and web application solution for your business which help your 
+              guests to book seats for events which you are hosting that can either be a demo lecture, drama, conference etc. 
+              </p>
+
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Custom Event Booking System Development"
+                  />
+                }
+              </div>
+              <Link
+                href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+                target="_blank"
+              >
+                <div class="WhatsappIcon WhatsappIconCustom">
+                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div class="coccoc-alo-ph-circle"></div>
+                    <div class="coccoc-alo-ph-circle-fill"></div>
+                    <div class="coccoc-alo-ph-img-circle"></div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <ul class="head-feature">
+              <li>We help you get more from custom solution</li>
+              <li>Improve the experience of the attendees and speakers</li>
+              <li>
+                Be in touch with your conference audience and improve the
+                success of the event.
+              </li>
+              <li>Easy to use interface to manage the event details</li>
+            </ul>
+            <div aria-label="breadcrumb" class="my-breadcrumb ">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <Link href="/">Home</Link>
+                </li>
+                <li class="breadcrumb-item">
+                  <Link href="/custom-solutions">Custom Solutions</Link>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                Event Booking
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="BFC_logic">
+        <div class="container">
+          <h2>Why logicspice is Best For Custom App/Web Development?</h2>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="top-box-BFC">
+                <Image
+                  height={100}
+                  width={100}
+                  src="/img/customsolutions/capp1.png"
+                  alt="img1"
+                />
+                <h3>Ready to Go for Development</h3>
+                <p>
+                  We have a team of dedicated developers who are ready to work
+                  on your requirements for app or web development. Our solution
+                  is robust &amp; highly scalable.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="top-box-BFC">
+                <Image
+                  height={100}
+                  width={100}
+                  src="/img/customsolutions/capp2.png"
+                  alt="img2"
+                />
+                <h3>Support &amp; Maintenance</h3>
+                <p>
+                  We support our customers from business analysis, designing,
+                  development, maintenance. Our team is always available to
+                  solve your query.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="top-box-BFC">
+                <Image
+                  height={100}
+                  width={100}
+                  src="/img/customsolutions/capp3.png"
+                  alt="img3"
+                />
+                <h3>Cost- Efficient</h3>
+                <p>
+                  Our development varies with your requirement. We assure to
+                  give cost efficient solution of development.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="top-box-BFC">
+                <Image
+                  height={100}
+                  width={100}
+                  src="/img/customsolutions/capp4.png"
+                  alt="img4"
+                />
+                <h3>Future Extendibility</h3>
+                <p>
+                  You can extend the features &amp; functionality in your
+                  customised app in future if you want to explore more. This
+                  feature doesn&apos;t come up with a ready made script.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="SBC_logic">
+        <div class="container">
+          <h2>Event Booking App Development</h2>
+        </div>
+        <div class="inner_content_SBG">
+          <div class="container">
+            <p>
+              This Event Booking System Software will serve as an attractive
+              medium for people to search for Event Managers on the website.
+              People can search for Event Vendors according to their location
+              and category. Customers will be able to see the list of vendors as
+              per the criteria defined by them.
+            </p>
+            <p>
+              {" "}
+              With the help of our on demand online event registration software,
+              they can go through any of the vendor's details that they prefer
+              from the listing. Customers can also create their own event and
+              share it other people using their email.
+            </p>
+            <p>
+              Event booking website development allow vendors to set up and
+              manage their "Store" over the website by uploading
+              products/service in different different categories in their
+              account. While adding their services vendors can put them into
+              proper categories and upload images to display their work to their
+              potential customers. Vendors can upload their contact information
+              at event registeration system so that customers can contact them
+              for services.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="demand_app">
+        <div class="container">
+          <h2>
+            Key Benefits of Our On Demand Event Booking Software Development
+          </h2>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="demand-card" data-aos="fade-right">
+                <div class="demand-img">
+                  <Image
+                    height={100}
+                    width={80}
+                    src="/img/customsolutions/b_icon1.png"
+                    alt="icon5"
+                  />
+                </div>
+                <div class="demand-content">
+                  <h3>Rating Feature</h3>
+                  <p>
+                    Customers can view ratings given to different vendors by
+                    other customers and rate them themselves
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="demand-card" data-aos="fade-right">
+                <div class="demand-img">
+                  <Image
+                    height={100}
+                    width={80}
+                    src="/img/customsolutions/b_icon3.png"
+                    alt="icon6"
+                  />
+                </div>
+                <div class="demand-content">
+                  <h3>Social Media Sign Up</h3>
+                  <p>
+                    {" "}
+                    Customers can use their social media accounts like Facebook
+                    and Google Plus to sign up to the website
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="demand-card" data-aos="fade-right" />
+              <div class="demand-img">
+                <Image
+                  height={100}
+                  width={80}
+                  src="/img/customsolutions/b_icon5.png"
+                  alt="icon7"
+                />
+              </div>
+              <div class="demand-content">
+                <h3>Location Based Search </h3>
+                <p>
+                  Customers can search for products according to the location by
+                  entering their zip code
+                </p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="col-sm-4 center_image">
+              <Image
+                height={100}
+                width={250}
+                src="/img/customsolutions/benifit.png"
+                alt="icon8"
+              />
+            </div>
+            <div class="col-sm-4">
+              <div class="demand-card" data-aos="fade-left">
+                <div class="demand-content">
+                  <h3>Store Management </h3>
+                  <p>
+                    {" "}
+                    Vendors can set up and manage their "Store" over the website
+                    easily providing their contact information
+                  </p>
+                </div>
+                <div class="demand-img">
+                  <Image
+                    height={100}
+                    width={80}
+                    src="/img/customsolutions/b_icon2.png"
+                    alt="icon9"
+                  />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="demand-card" data-aos="fade-left">
+                <div class="demand-content">
+                  <h3>Services/Product Management </h3>
+                  <p>
+                    Vendors can add products/services in their "Store" along
+                    with pictures to show their previous work
+                  </p>
+                </div>
+                <div class="demand-img">
+                  <Image
+                    height={100}
+                    width={80}
+                    src="/img/customsolutions/b_icon4.png"
+                    alt="icon10"
+                  />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="demand-card" data-aos="fade-left">
+                <div class="demand-content">
+                  <h3>Favorites Feature</h3>
+                  <p>
+                    Customers can add their favorite vendors to a list so that
+                    they can find them easily next time they visit the site
+                  </p>
+                </div>
+                <div class="demand-img">
+                  <Image
+                    height={100}
+                    width={80}
+                    src="/img/customsolutions/b_icon6.png"
+                    alt="icon11"
+                  />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="content_area feature_inner" id="features">
+        <div class="container">
+          <h2 class="titlesettop titlesettop_mar">
+          Event Booking Software Feature
+          </h2>
+
+          <div class="features-tab">
+            <div class="clearfix">
+              <ul class="nav nav-tabs" role="tablist">
+                <li
+                  id="tab1_li"
+                  className={`jobseeker_app_job ddlj ${
+                    sellerTab ? "active" : ""
+                  }`}
+                  onClick={() => handleSellerTab()}
+                >
+                  <a> Features</a>
+                </li>
+                <li
+                  id="tab2_li"
+                  className={`business-directory-system ddlj ${
+                    buyerTab ? "active" : ""
+                  }`}
+                  onClick={() => handleBuyerTab()}
+                >
+                  <a>Screenshot </a>
+                </li>
+              </ul>
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="features-car1">
+                  {sellerTab && (
+                    <>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/search.png"
+                              alt="Smart Routing"
+                            />
+                            <h3>Search Vendor</h3>
+                            <p>
+                              Users can search for vendors on website by vendor
+                              name, category, location(zip code) and Occasions.
+                            </p>
+                          </div>
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/admin-control.png"
+                              alt="Delivery Status"
+                            />
+                            <h3>User Profile</h3>
+                            <p>
+                              User/Vendor will be able to manage their basic
+                              personal information like name, birthday, email,
+                              password.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/product-listing.png"
+                              alt="Partial & Failed Delivery Status"
+                            />
+                            <h3>Manage Services</h3>
+                            <p>
+                              Vendors can manage products/ services in their
+                              "Store" and will be able to add/ edit/ update/
+                              delete them.
+                            </p>
+                          </div>
+
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/rental-request-management.png"
+                              alt="Track Sales"
+                            />
+                            <h3>Event Creation/Management</h3>
+                            <p>
+                              Customer can create events and manage events that
+                              they have created, they will be able to update
+                              them.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/simple-car-listing.png"
+                              alt="Admin Control"
+                            />
+                            <h3>Vendor Listing</h3>
+                            <p>
+                              Customers can see the vendor list defined by his
+                              criteria which includes details like title,
+                              category.
+                            </p>
+                          </div>
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/content-management.png"
+                              alt="Ratings & Reviews"
+                            />
+                            <h3>Vendor Details</h3>
+                            <p>
+                              Customer can view details like his "Store" name,
+                              pictures of his previous work, services provided
+                              and more.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="ftr-detail">
+                            <Image
+                              height={100}
+                              width={60}
+                              src="/img/customsolutions/Shop-Management.png"
+                              alt="Automated Dispatching"
+                            />
+                            <h3>Store Setup For Vendor</h3>
+                            <p>
+                              Vendors can set up and manage their "Store" by
+                              uploading products/service in different
+                              categories.{" "}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="features-car1">
+                  {buyerTab && (
+                    <>
+                      <div>
+                        <Slider {...settings}>
+                          <div class="SliderMainBx">
+                            <a>
+                              <Image
+                                src="/img/customsolutions/add-service-product.jpg"
+                                alt="icon"
+                                title=""
+                                className="img-fluid"
+                                width={1300}
+                                height={500 / (100 / 100)}
+                              />
+                            </a>
+                          </div>
+                          <div class="SliderMainBx">
+                            <a>
+                              <Image
+                                src="/img/customsolutions/event-creation.jpg"
+                                alt="icon"
+                                title=""
+                                className="img-fluid"
+                                width={1300}
+                                height={500 / (100 / 100)}
+                              />
+                            </a>
+                          </div>
+                          <div class="SliderMainBx">
+                            <a>
+                              <Image
+                                src="/img/customsolutions/search-vendors.jpg"
+                                alt="icon"
+                                title=""
+                                className="img-fluid"
+                                width={1300}
+                                height={500 / (100 / 100)}
+                              />
+                            </a>
+                          </div>
+                          <div class="SliderMainBx">
+                            <a>
+                              <Image
+                                src="/img/customsolutions/store-setup-management.jpg"
+                                alt="icon"
+                                title=""
+                                className="img-fluid"
+                                width={1300}
+                                height={500 / (100 / 100)}
+                              />
+                            </a>
+                          </div>
+                        </Slider>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="app_solution">
+        <div class="container">
+          <h2>Online Event Booking System Custom Development Solution</h2>
+          <Customsolutiontabs />
+        </div>
+      </div>
+      <div class="support_logic">
+        <div class="container">
+          <h2>What Support You Will Get ?</h2>
+          <Support />
+        </div>
+      </div>
+
+      {/*  */}
+      <section class="ecommerce_faq_section CustomSolutionFaqSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ecommerce__Quick_FAQ">
+                    <h4 class="title_main">Quick FAQ</h4>
+                    <MDBAccordion v-model="activeItem" borderless>
+        
+                        <MDBAccordionItem
+                          headerTitle="How can a customer search for products/services of vendors around his location?"
+                          collapseId="flush-collapse1">
+                          <p>User can enter his zip/postal code in the website and all the products/services that are around will be listed to the customer.</p>
+                        </MDBAccordionItem>
+        
+                         <MDBAccordionItem
+                          headerTitle="Can the Customer give rating to a vendor even if he hasn't purchased any services from them?"
+                          collapseId="flush-collapse2">
+                          <p>Yes. Customer can give rating out of 5 even if they have not purchased the product from a particular Vendor. Customer can also write a review along 
+                          with the rating.</p>
+                        </MDBAccordionItem>
+        
+                       <MDBAccordionItem
+                          headerTitle="How many days it will take to implement the customization?"
+                          collapseId="flush-collapse3">
+                         <p>Time taken to implement your Event Booking System depends on the level of customization and data migration. The time frame generally ranges 5-6 weeks</p>
+                        </MDBAccordionItem>
+        
+                       <MDBAccordionItem
+                          headerTitle="Can a Vendor upload multiple products/services to the website?"
+                          collapseId="flush-collapse4">
+                          <p>Yes, Vendors can add products/services in their "Store" along with multiple pictures to show their previous work.</p>
+                        </MDBAccordionItem>
+        
+        
+                       <MDBAccordionItem
+                          headerTitle="Can a vendor set up multiple Store on the website?"
+                          collapseId="flush-collapse5">
+                          <p>No. A Vendor can only setup one Store in which he can upload multiple products/services.</p>
+                        </MDBAccordionItem>
+        
+                       <MDBAccordionItem
+                          headerTitle="How can a customer create/manage an event?"
+                          collapseId="flush-collapse6">
+                          <p>Customer can create events on website by providing the respective details of the event like  Date, Time, Description, Event Location etc. They can also edit/update/delete the events and its details over the site.</p>
+                        </MDBAccordionItem>
+                        
+                        
+                        
+                    </MDBAccordion>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+      
+      <section class="enq-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Custom Event Booking System Development"
+                  />
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </Link>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Page;

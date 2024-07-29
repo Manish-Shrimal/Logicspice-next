@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -15,15 +15,10 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
-import { Metadata } from "next";
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
-// export const  metadata  = {
-//   title: "Vedanta",
-//   description: "Logic Spice is a leading software development agency specializing in advanced software solutions for various industries.",
-//   url: "https://logicspice.com",
-// }
-
-const page = () => {
+const Page = () => {
   var settings = {
     dots: true,
     arrows: true,
@@ -43,9 +38,23 @@ const page = () => {
   const [buyerTab, setBuyerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
   const [customerTab, setCustomerTab] = useState(false);
-  const [modalTitle, setModalTitle] = useState('');
+  const [pageData, setPageData] = useState([]);
 
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/inventory-management-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
+  useEffect(() => {
+    getData();
+  }, []);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -56,8 +65,7 @@ const page = () => {
   const toggleInfo = () => {
     setShowInfo(!showInfo);
   };
-  const openModal = (title) => {
-    setModalTitle(title);
+  const openModal = () => {
     setShowModal(!showModal);
   };
 
@@ -101,24 +109,26 @@ const page = () => {
                 <h2>Efficient Inventory Control and Tracking</h2>
               </div>
               <div className="job-valu">
-                <div class="portal-price NewPriceDesign">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
                           alt=""
                         />
                       </i>
                       <p>Limited Period Offer for First Year</p>
                     </span>
-                    <span class="AppPrice" style={{ display: "none" }}>
+                    <span className="AppPrice" style={{ display: "none" }}>
                       <a
-                        class="text-primary js-anchor-link"
+                        className="text-primary js-anchor-link"
                         href="#subscriptionmodel"
                       >
                         More Details
@@ -138,13 +148,14 @@ const page = () => {
                       />
                     }
                   </div>
-            
                 </div>
               </div>
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -156,7 +167,9 @@ const page = () => {
             </div>
             <div className="col-sm-5 col-md-5 col-lg-4">
               <div className="por-mobile-new">
-                <img
+                <Image
+                  width={400}
+                  height={100}
                   className=""
                   src="/img/inventory-management/inventory-banner-img.png"
                   alt="Marketplace Software"
@@ -171,7 +184,7 @@ const page = () => {
                   <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <Link href="/softwares'">Softwares</Link>
+                  <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Inventory Management Software
@@ -188,7 +201,7 @@ const page = () => {
             control with our web based inventory management system. From the
             moment you initiate a purchase order to the final customer sale, our
             robust solution diligently tracks your goods at every stage of the
-            journey. You'll gain real-time insights into inventory levels,
+            journey. You&apos;ll gain real-time insights into inventory levels,
             demand fluctuations, and production status, empowering you to make
             data-driven decisions for optimized stock management and enhanced
             operational efficiency. Streamline your supply chain processes and
@@ -247,8 +260,8 @@ const page = () => {
             </p>
           </div>
 
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job">
               <ul className="JobBoardNewtab">
                 <li
                   id="tab1_li"
@@ -287,13 +300,15 @@ const page = () => {
               </ul>
             </div>
 
-            <div class="tab_contant">
+            <div className="tab_contant">
               {sellerTab && (
                 <>
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right costomer_tab_rightleft">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/inventory-management/billers-img.png"
                           alt="Billers / Staff"
                         />
@@ -304,7 +319,9 @@ const page = () => {
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/ragister-icon.png"
                               />
@@ -321,7 +338,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_alert.png"
                               />
@@ -340,7 +359,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_profile.png"
                               />
@@ -349,16 +370,21 @@ const page = () => {
                               Manage Products
                               <div className="product-idea">
                                 <p>
-                                  Biller's capability to Add, Edit, and Delete
-                                  products from the backend as a staff member
-                                  after account creation.
+                                  Biller&apos;s capability to Add, Edit, and
+                                  Delete products from the backend as a staff
+                                  member after account creation.
                                 </p>
                               </div>
                             </span>
                           </li>
                           <li>
                             <i>
-                              <img alt="img" src="/img/jobboard/save_fav.png" />
+                              <Image
+                                width={100}
+                                height={100}
+                                alt="img"
+                                src="/img/jobboard/save_fav.png"
+                              />
                             </i>
                             <span>
                               Manage Sales Orders
@@ -372,7 +398,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/apply_job.png"
                               />
@@ -381,16 +409,18 @@ const page = () => {
                               Manage Purchase Orders
                               <div className="product-idea">
                                 <p>
-                                  Handling customer biller's ability to initiate
-                                  sales and purchase orders for customers from
-                                  warehouse inventory.
+                                  Handling customer biller&apos;s ability to
+                                  initiate sales and purchase orders for
+                                  customers from warehouse inventory.
                                 </p>
                               </div>
                             </span>
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/search_job.png"
                               />
@@ -407,7 +437,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/applied_job.png"
                               />
@@ -424,7 +456,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/share_job.png"
                               />
@@ -442,7 +476,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_edu.png"
                               />
@@ -469,7 +505,9 @@ const page = () => {
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/inventory-management/supplier-mode.png"
                           alt="Supplier Mode"
                         />
@@ -480,7 +518,9 @@ const page = () => {
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-availability-icon.png"
                               />
@@ -497,7 +537,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-services-icon.png"
                               />
@@ -516,7 +558,9 @@ const page = () => {
 
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-outstanding-icon.png"
                               />
@@ -533,7 +577,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/accept-requests-icon.png"
                               />
@@ -550,7 +596,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-requests-icon.png"
                               />
@@ -576,7 +624,9 @@ const page = () => {
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/inventory-management/customer-img.png"
                           alt="Customer"
                         />
@@ -587,7 +637,9 @@ const page = () => {
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-availability-icon.png"
                               />
@@ -604,7 +656,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-services-icon.png"
                               />
@@ -622,7 +676,9 @@ const page = () => {
 
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-outstanding-icon.png"
                               />
@@ -639,7 +695,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/accept-requests-icon.png"
                               />
@@ -656,7 +714,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-requests-icon.png"
                               />
@@ -673,7 +733,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-requests-icon.png"
                               />
@@ -700,7 +762,9 @@ const page = () => {
                   <div className="row">
                     <div className="col-lg-4 col-md-3 ">
                       <div className="costomer_tab_right costomer_tab_rightleft2">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/inventory-management/admin-dashboard-img.png"
                           alt="Admin Panel"
                         />
@@ -711,7 +775,9 @@ const page = () => {
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/secure_login.png"
                               />
@@ -725,7 +791,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/admin_dash.png"
                               />
@@ -744,7 +812,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/configuration.png"
                               />
@@ -762,7 +832,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_skill.png"
                               />
@@ -781,7 +853,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_emp.png"
                               />
@@ -799,7 +873,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_job.png"
                               />
@@ -818,7 +894,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_news.png"
                               />
@@ -836,7 +914,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/course_details.png"
                               />
@@ -856,7 +936,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_cat.png"
                               />
@@ -874,7 +956,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_blog.png"
                               />
@@ -892,7 +976,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -909,7 +995,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -929,7 +1017,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -946,7 +1036,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -965,7 +1057,9 @@ const page = () => {
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -1002,18 +1096,18 @@ const page = () => {
             <p>
               Discover the Power of Our Top-Tier Vendor Managed inventory
               software. Our system empowers your business to efficiently manage
-              and track goods throughout your entire supply chain. It's a
+              and track goods throughout your entire supply chain. It&apos;s a
               versatile tool that optimizes every step, from order placement
               with your vendor to final delivery to your customer, seamlessly
               mapping the entire product journey.
             </p>
             <p>
-              If you're in search of an affordable and hassle-free automated
-              inventory management system for your business, look no further.
-              Our experienced team has successfully delivered numerous software
-              solutions tailored to inventory management and tracking systems,
-              ensuring a smooth and cost-effective implementation for your
-              business.
+              If you&apos;re in search of an affordable and hassle-free
+              automated inventory management system for your business, look no
+              further. Our experienced team has successfully delivered numerous
+              software solutions tailored to inventory management and tracking
+              systems, ensuring a smooth and cost-effective implementation for
+              your business.
             </p>
           </div>
         </div>
@@ -1107,10 +1201,14 @@ const page = () => {
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
               <h4>
-                ₹88,190<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                ₹147,805<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
@@ -1123,12 +1221,13 @@ const page = () => {
                     />
                   }
                 </div>
-                
               </div>
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -1202,7 +1301,9 @@ const page = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
+                  <Image
+                    width={20}
+                    height={100}
                     src="/img/images/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1220,7 +1321,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx1">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/coding.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/coding.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Optimized Code with proper commenting</h3>
                       <p>
@@ -1236,7 +1342,9 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx2">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/data-complexity.png"
                           alt="img"
                         />
@@ -1256,7 +1364,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx3">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/coordinate.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/coordinate.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>
                         Quick Response and
@@ -1276,7 +1389,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx4">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/customize.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/customize.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Customization at affordable price</h3>
                       <p>
@@ -1291,7 +1409,9 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx5">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/smartphone-icon.png"
                           alt="img"
                         />
@@ -1309,7 +1429,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx6">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/data.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/data.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Dedicated Support Team</h3>
                       <p>
@@ -1326,7 +1451,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/web-icon.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/web-icon.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Global company with agile development approach</h3>
                       <p>
@@ -1345,7 +1475,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/encrypted.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/encrypted.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>
                         Customer information and application level security
@@ -1363,7 +1498,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/history-icon.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/history-icon.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Experienced workforce with 3000+ project history</h3>
                       <p>
@@ -1381,7 +1521,9 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/seouser-friendly.png"
                           alt="img"
                         />
@@ -1399,7 +1541,9 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/one-stop-solution.png"
                           alt="img"
                         />
@@ -1417,7 +1561,9 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/third-party-api.png"
                           alt="img"
                         />
@@ -1435,7 +1581,12 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/cost-effective.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/cost-effective.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Cost Effective</h3>
                       <p>
@@ -1461,7 +1612,9 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1470,7 +1623,9 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1479,13 +1634,20 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1501,7 +1663,9 @@ const page = () => {
         id="reviews"
       >
         <div className="ecommerce_review__img">
-          <img
+          <Image
+            width={300}
+            height={100}
             src="/img/marketplacesoftware/faq-review-img.png"
             alt="Marketplace Software"
             className=""
@@ -1515,10 +1679,10 @@ const page = () => {
               <div className="ecommerce--review">
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
-                    I'm delighted to share my experience with Logicspice and
-                    their parts inventory management software.. The process of
-                    purchasing the software and constructing my own website was
-                    remarkably smooth, thanks to their free installation and
+                    I&apos;m delighted to share my experience with Logicspice
+                    and their parts inventory management software.. The process
+                    of purchasing the software and constructing my own website
+                    was remarkably smooth, thanks to their free installation and
                     outstanding support. The ease of setup was impressive, and
                     it truly simplified the task. I commend Logicspice for their
                     excellent work, and I look forward to collaborating with
@@ -1537,7 +1701,9 @@ const page = () => {
                     </span>
                     Daniel Mugari Nyutu, South Africa
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/south_africa_flag_img.png"
                         alt="mobile app development"
                         style={{ width: "20px", marginLeft: "3px" }}
@@ -1548,12 +1714,12 @@ const page = () => {
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
                     I want to express my gratitude for providing the best
-                    readymade parts inventory softwares I've come across for my
-                    business. Your team's dedication, commitment, and support
-                    during the software installation process were outstanding. I
-                    especially appreciate your prompt attention to minor issues,
-                    demonstrating superb customer service and excellent
-                    communication skills. Thanks for a job well done!
+                    readymade parts inventory softwares I&apos;ve come across
+                    for my business. Your team&apos;s dedication, commitment,
+                    and support during the software installation process were
+                    outstanding. I especially appreciate your prompt attention
+                    to minor issues, demonstrating superb customer service and
+                    excellent communication skills. Thanks for a job well done!
                   </div>
 
                   <div className="who_ratset">
@@ -1569,7 +1735,9 @@ const page = () => {
                     </span>
                     <span id="client-name">Marcus Elveen, Germany</span>{" "}
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/german.png"
                         alt="mobile app development"
                         style={{ width: "20px", marginLeft: "3px" }}
@@ -1584,7 +1752,7 @@ const page = () => {
                     Logicspice, and it has exceeded my expectations. It
                     significantly improved the efficiency of my business
                     operations. I highly recommend it to anyone seeking
-                    freelance-based models; it's a fantastic solution.
+                    freelance-based models; it&apos;s a fantastic solution.
                   </div>
                   <div className="who_ratset">
                     <span
@@ -1599,7 +1767,9 @@ const page = () => {
                     </span>
                     <span id="client-name">Michael Batota, USA</span>{" "}
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/usa_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px" }}
@@ -1726,7 +1896,9 @@ const page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <img
+                  <Image
+                    width={400}
+                    height={100}
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
@@ -1857,9 +2029,11 @@ const page = () => {
 
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/inventory-management/admin-dashboard.jpg"
                     alt="admin-dashboard"
                   />
@@ -1868,9 +2042,11 @@ const page = () => {
                   <div className="titleof_scnew">Admin Dashboard</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/inventory-management/supplier.jpg"
                     alt="Supplier"
                   />
@@ -1879,9 +2055,11 @@ const page = () => {
                   <div className="titleof_scnew">Supplier</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/inventory-management/customer.jpg"
                     alt="customer"
                   />
@@ -1890,9 +2068,11 @@ const page = () => {
                   <div className="titleof_scnew">Customer</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/inventory-management/category-list.jpg"
                     alt="category-list"
                   />
@@ -1901,9 +2081,11 @@ const page = () => {
                   <div className="titleof_scnew">Category List</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/inventory-management/products-management.jpg"
                     alt="Products Management"
                   />
@@ -1912,16 +2094,18 @@ const page = () => {
                   <div className="titleof_scnew">Products Management</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
                     alt="Membership Plan"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Membership Plan</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Membership Plan</div>
+                  <div className="pro-feat-detai">
                     Employers buy membership plan which suits their requirement
                     best.They can renew or update your membership plan at any
                     time.
@@ -1948,7 +2132,6 @@ const page = () => {
                   />
                 }
               </div>
-              
             </div>
           </div>
         </div>
@@ -1969,7 +2152,9 @@ const page = () => {
                       <div className="other-caption-bx">
                         <h3>Business Directory</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/business-logo.png"
                             alt="business-directory-system"
                             className=""
@@ -1995,7 +2180,9 @@ const page = () => {
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
                             className=""
@@ -2021,7 +2208,9 @@ const page = () => {
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
                             className=""
@@ -2045,7 +2234,12 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -2057,8 +2251,6 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
-
-
-// 
+//

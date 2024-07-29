@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-const page = () => {
+const Page = () => {
   return (
     <>
      <NavBar />
@@ -122,4 +122,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

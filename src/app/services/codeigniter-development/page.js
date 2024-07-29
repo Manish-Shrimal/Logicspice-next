@@ -15,7 +15,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 
-const page = () => {
+const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
@@ -85,7 +85,7 @@ const page = () => {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="page_img">
-                <img
+                <Image
                   src="/img/codeigniterdevelopment/codeigniter-development-img.png"
                   alt="Codeigniter Development"
                 />
@@ -100,7 +100,7 @@ const page = () => {
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div class="laravel_img">
-                <img
+                <Image
                   src="/img/codeigniterdevelopment/codeigniter-logo-img.png"
                   alt="laravel web development"
                 />
@@ -119,8 +119,8 @@ const page = () => {
                   Development to avail its buzzing services. It facilitates the
                   user with a scheduled framework to construct websites and web
                   pages with a PHP. The
-                  <b>CodeIgniter Development Service</b> is SEO friendly,
-                  abundantly development,amicable and user friendly. It equips
+                  <b>CodeIgniter Development Service</b> is SEO friendly&sbquo;
+                  abundantly development&sbquo;amicable and user friendly. It equips
                   its users with easy to use tools and acutely interactive
                   interface.
                 </p>
@@ -152,7 +152,7 @@ const page = () => {
                   chosen through a combination of their experience and working
                   skills. CodeIgniter web development service creates elite web
                   designs suiting to the latest trends in the mobile
-                  applications,{" "}
+                  applications&sbquo;{" "}
                   <a
                     className="PhpProgramingLink"
                     href="https://www.logicspice.com/php-programing"
@@ -188,12 +188,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/laravel-new-icon1.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/laravel-white-icon1.png"
                         alt="CodeIgniter Development"
@@ -213,12 +213,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon1.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/codeigniter-white-icon1.png"
                         alt="CodeIgniter Development"
@@ -237,12 +237,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon2.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/codeigniter-white-icon2.png"
                         alt="CodeIgniter Development"
@@ -262,12 +262,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon3.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/codeigniter-white-icon3.png"
                         alt="CodeIgniter Development"
@@ -287,12 +287,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon4.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon4.png"
                         alt="CodeIgniter Development"
@@ -311,12 +311,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon5.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/codeigniter-white-icon5.png"
                         alt="CodeIgniter Development"
@@ -337,12 +337,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box7">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon6.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/codeigniter-white-icon6.png"
                         alt="CodeIgniter Development"
@@ -362,12 +362,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box8">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/codeigniterdevelopment/codeigniter-new-icon7.png"
                         alt="CodeIgniter Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/codeigniterdevelopment/codeigniter-white-icon7.png"
                         alt="CodeIgniter Development"
@@ -400,7 +400,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter_features_icon1.png"
                       alt="img1"
                     />
@@ -418,7 +418,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter_features_icon4.png"
                       alt="img4"
                     />
@@ -433,7 +433,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter_features_icon2.png"
                       alt="img2"
                     />
@@ -441,7 +441,7 @@ const page = () => {
                   <div class="laravel_core_features_detail">
                     <h3>Dynamic Division of Web Pages</h3>
                     <p>
-                      It is fast, easier to manage and dynamic in
+                      It is fast&sbquo; easier to manage and dynamic in
                       <br /> nature.
                     </p>
                   </div>
@@ -450,7 +450,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter_features_icon5.png"
                       alt="img5"
                     />
@@ -467,7 +467,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter_features_icon3.png"
                       alt="img3"
                     />
@@ -485,7 +485,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter_features_icon6.png"
                       alt="img6"
                     />
@@ -493,7 +493,7 @@ const page = () => {
                   <div class="laravel_core_features_detail">
                     <h3>Fluidic and Comprehensible Working</h3>
                     <p>
-                      CodeIgniter offer a clear, logical and smooth working
+                      CodeIgniter offer a clear&sbquo; logical and smooth working
                       environment to the programmers as well as to its users.
                     </p>
                   </div>
@@ -520,7 +520,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter-why-icon1.png"
                       alt="img1"
                     />
@@ -537,7 +537,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter-why-icon2.png"
                       alt="img1"
                     />
@@ -556,7 +556,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter-why-icon3.png"
                       alt="img1"
                     />
@@ -574,7 +574,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter-why-icon4.png"
                       alt="img1"
                     />
@@ -592,7 +592,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter-why-icon5.png"
                       alt="img1"
                     />
@@ -601,7 +601,7 @@ const page = () => {
                     <h3>CodeIgniter Consulting</h3>
                     <p>
                       CodeIgniter provides inclusive maintenance support for all
-                      classes of management's with libraries.{" "}
+                      classes of management&apos;s with libraries.{" "}
                     </p>
                   </div>
                 </div>
@@ -610,7 +610,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image
                       src="/img/codeigniterdevelopment/codeigniter-why-icon6.png"
                       alt="img1"
                     />
@@ -649,7 +649,7 @@ const page = () => {
             <Slider {...settings}>
               <div class="php-item">
                 <a href="https://www.eventigo.eu/" target="_blank">
-                  <img
+                  <Image
                     src="/img/codeigniterdevelopment/eventigo-banner.png"
                     alt="img13"
                   />
@@ -664,7 +664,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <a href="https://www.fourstrokescoaching.com/" target="_blank">
-                  <img
+                  <Image
                     src="/img/codeigniterdevelopment/fourstrokescoaching-banner.png"
                     alt="img14"
                   />
@@ -679,7 +679,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <a href="https://www.entitymakers.com.au/" target="_blank">
-                  <img
+                  <Image
                     src="/img/codeigniterdevelopment/entitymakers-banner.png"
                     alt="img15"
                   />
@@ -700,13 +700,10 @@ const page = () => {
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
-              src="/img/images/whatsapp.png"
-              alt="whatsapp-icon"
-            />
+            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -719,4 +716,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

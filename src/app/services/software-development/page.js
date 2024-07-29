@@ -9,7 +9,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
-const page = () => {
+const Page = () => {
 
     const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -31,7 +31,7 @@ const page = () => {
 
       <section class="d-framework d-framework1 none_space">
         <div class="page_img">
-          <img
+          <Image
             src="/img/websitedesign/web-designing-service.jpg"
             alt="web design service"
           />
@@ -237,38 +237,38 @@ const page = () => {
           <div class="row">
             <div class="col-sm-6 col-md-4">
               <div class="featureBox">
-                <img src="/img/websitedesign/lara_icon1.png" alt="icon1" />
+                <Image src="/img/websitedesign/lara_icon1.png" alt="icon1" />
                 <h3>Cost effective solutions</h3>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
               <div class="featureBox">
-                <img src="/img/websitedesign/lara_icon6.png" alt="icon2" />
+                <Image src="/img/websitedesign/lara_icon6.png" alt="icon2" />
                 <h3>Faster and time-bound delivery of solutions </h3>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
               <div class="featureBox">
-                <img src="/img/websitedesign/lara_icon5.png" alt="icon3" />
+                <Image src="/img/websitedesign/lara_icon5.png" alt="icon3" />
                 <h3>Minimum risk involved in offshore software development</h3>
               </div>
             </div>
 
             <div class="col-sm-6 col-md-4">
               <div class="featureBox">
-                <img src="/img/websitedesign/lara_icon4.png" alt="icon4" />
+                <Image src="/img/websitedesign/lara_icon4.png" alt="icon4" />
                 <h3>Confidential and highly secure software development</h3>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
               <div class="featureBox">
-                <img src="/img/websitedesign/lara_icon3.png" alt="icon5" />
+                <Image src="/img/websitedesign/lara_icon3.png" alt="icon5" />
                 <h3>Availability of customer support in working hours</h3>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
               <div class="featureBox">
-                <img src="/img/websitedesign/lara_icon2.png" alt="icon6" />
+                <Image src="/img/websitedesign/lara_icon2.png" alt="icon6" />
                 <h3>Adaptability to advanced technologies</h3>
               </div>
             </div>
@@ -312,7 +312,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -329,4 +329,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

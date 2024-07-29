@@ -9,22 +9,29 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import "../../resposive.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 
-const page = () => {
+const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
+  };
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
   };
 
   return (
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <img
+        <Image
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
+          height={300}
+          width={300}
         />
         <div className="container">
           <h1>
@@ -71,7 +78,13 @@ const page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <img src="/img/jobboard/stars.png" alt="stars" className="" />
+              <Image
+                src="/img/jobboard/stars.png"
+                alt="stars"
+                className=""
+                height={100}
+                width={100}
+              />
               <p>10 Reviews</p>
             </div>
             <a className="btn btn-primary" href="#">
@@ -105,7 +118,7 @@ const page = () => {
                   <i className="question_icon"></i>
                   <span className="tool_lgn">
                     {" "}
-                    It's required to login in admin panel.
+                    It&apos;s required to login in admin panel.
                   </span>
                 </div>
               </span>
@@ -134,10 +147,12 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img
+                      <Image
                         className="media-object"
                         src="/img/leadgeneration/unique_signupicon.png"
                         alt="Easy Registration"
+                        height={100}
+                        width={100}
                       />
                     </a>
                   </div>
@@ -153,10 +168,12 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img
+                      <Image
                         className="media-object"
                         src="/img/leadgeneration/great_profile_managment_icon.png"
                         alt="Great Profile Management"
+                        height={100}
+                        width={100}
                       />
                     </a>
                   </div>
@@ -173,18 +190,20 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img
+                      <Image
                         className="media-object"
                         src="/img/leadgeneration/fully_responsive_icon.png"
                         alt="Fully Responsive"
+                        height={100}
+                        width={100}
                       />
                     </a>
                   </div>
                   <div className="media-body">
                     <h3 className="media-heading">Fully Responsive</h3>
                     <p>
-                      Themes with 'fit-all-screen' compatibility allow user to
-                      access from mobile as well as tablet.
+                      Themes with &apos;fit-all-screen&apos; compatibility allow
+                      user to access from mobile as well as tablet.
                     </p>
                   </div>
                 </div>
@@ -193,10 +212,12 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img
+                      <Image
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Lost Password Recovery"
+                        height={100}
+                        width={100}
                       />
                     </a>
                   </div>
@@ -213,10 +234,12 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img
+                      <Image
                         className="media-object"
                         src="/img/leadgeneration/search_filter_icon.png"
                         alt="Search Filter"
+                        height={100}
+                        width={100}
                       />
                     </a>
                   </div>
@@ -233,10 +256,12 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <img
+                      <Image
                         className="media-object"
                         src="/img/leadgeneration/payment_options_icon.png"
                         alt="Payment Options"
+                        height={100}
+                        width={100}
                       />
                     </a>
                   </div>
@@ -299,9 +324,11 @@ const page = () => {
                         href="javascript:void(0);"
                       >
                         <span>
-                          <img
+                          <Image
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
+                            height={100}
+                            width={40}
                           />
                         </span>{" "}
                         Enquire Now
@@ -373,60 +400,88 @@ const page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/apple_phn_icon.png" alt="iOS" />
+                  <Image
+                    src="/img/jobboard/apple_phn_icon.png"
+                    height={40}
+                    width={40}
+                    alt="iOS"
+                  />
                 </div>
                 <div className="icntechimg_nm">iOS</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/tech_java_icon.png" alt="Java" />
+                  <Image
+                    src="/img/jobboard/tech_java_icon.png"
+                    alt="Java"
+                    height={40}
+                    width={40}
+                  />
                 </div>
                 <div className="icntechimg_nm">Java</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/andoird_icon.png" alt="Android" />
+                  <Image
+                    src="/img/jobboard/andoird_icon.png"
+                    alt="Android"
+                    height={40}
+                    width={40}
+                  />
                 </div>
                 <div className="icntechimg_nm">Android</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
+                    height={40}
+                    width={40}
                   />
                 </div>
                 <div className="icntechimg_nm">PHP</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
+                    height={40}
+                    width={40}
                   />
                 </div>
                 <div className="icntechimg_nm">CakePHP</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/bootstrap.png" alt="manager_icn" />
+                  <Image
+                    src="/img/jobboard/bootstrap.png"
+                    alt="manager_icn"
+                    height={40}
+                    width={40}
+                  />
                 </div>
                 <div className="icntechimg_nm">Bootstrap</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
+                    height={40}
+                    width={40}
                   />
                 </div>
                 <div className="icntechimg_nm">MySQL</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
+                    height={40}
+                    width={40}
                   />
                 </div>
                 <div className="icntechimg_nm">Apache</div>
@@ -444,18 +499,22 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
+                    height={40}
+                    width={40}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
+                    height={40}
+                    width={40}
                   />
                 </div>
                 <div className="supportsettingtext">Access to Source code</div>
@@ -604,7 +663,7 @@ const page = () => {
                     </div>
                     <div className="who_ratset">Emsall</div>
                     <div className="customer_review_stext">
-                      The word "perfect" is not enough to describe the
+                      The word &quot;perfect&quot; is not enough to describe the
                       capability of Logicspice. They are just wonderful and
                       willing to extend the effort until the customer satisfied,
                       definitely will re-hire them
@@ -666,8 +725,8 @@ const page = () => {
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      Yes, We deliver the exact product. We don't compromise
-                      with quality at all.
+                      Yes, We deliver the exact product. We don&apos;t
+                      compromise with quality at all.
                     </p>
                   </MDBAccordionItem>
 
@@ -689,8 +748,8 @@ const page = () => {
                     <p>
                       You are allowed to modify the script. You can remove our
                       company information and put yours. But you cannot put
-                      "copyright by" because only we own the copyrights for our
-                      products.{" "}
+                      &quot;copyright by&quot; because only we own the
+                      copyrights for our products.{" "}
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
@@ -699,9 +758,27 @@ const page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );
 };
 
-export default page;
+export default Page;

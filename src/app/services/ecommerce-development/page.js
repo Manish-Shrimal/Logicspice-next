@@ -14,7 +14,7 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 
-const page = () => {
+const Page = () => {
   var settings = {
     dots: false,
     arrows: true,
@@ -129,7 +129,7 @@ See how it work yourself!"
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border">
-                    <img
+                    <Image
                       src="/img/ecommercewebsite/stars.png"
                       alt=""
                       className="lazy"
@@ -141,7 +141,7 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                <Image
                   src="/img/ecommercewebsite/ecommerce-banner-img.png"
                   alt="eCommerce Ultimate Package"
                   className="lazy"
@@ -157,7 +157,7 @@ See how it work yourself!"
             At Logicspice, we specialize in providing top-notch ecommerce
             website development packages that are tailored to meet your unique
             needs. As a leading ecommerce website development company, we
-            understand the importance of a robust online presence, and we're
+            understand the importance of a robust online presence, and we&apos;re
             here to help you achieve just that. Get an eCommerce Website With
             Custom Theme, at an affordable price.
           </p>
@@ -177,14 +177,14 @@ See how it work yourself!"
                     >
                       <Slider {...settings}>
                         <div className="window window-desktop">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/vanessajo.jpg"
                             alt="img"
                           />
                           <div className="site-title">Vanessajo</div>
                         </div>
                         <div className="window window-desktop">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/onebed.jpg"
                             alt="img"
                           />
@@ -192,14 +192,14 @@ See how it work yourself!"
                         </div>
 
                         <div className="window window-desktop">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/la-maison-chic-img.jpg"
                             alt="img"
                           />
                           <div className="site-title">La Maison Chic</div>
                         </div>
                         <div className="window window-desktop">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/altijdbon-img.jpg"
                             alt="img"
                           />
@@ -264,7 +264,7 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/ecommerce_customer_mobile.png"
                             className="lazy"
                           />
@@ -275,7 +275,7 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon1.png"
                                   className="lazy"
@@ -293,7 +293,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon2.png"
                                   className="lazy"
@@ -311,7 +311,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon3.png"
                                   className="lazy"
@@ -329,7 +329,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon4.png"
                                   className="lazy"
@@ -347,7 +347,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon5.png"
                                   className="lazy"
@@ -366,7 +366,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon6.png"
                                   className="lazy"
@@ -386,7 +386,7 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon7.png"
                                   className="lazy"
@@ -406,7 +406,7 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon8.png"
                                   className="lazy"
@@ -425,7 +425,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon9.png"
                                   className="lazy"
@@ -444,7 +444,7 @@ See how it work yourself!"
                             </li>
                             <li className="">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon10.png"
                                   className="lazy"
@@ -463,7 +463,7 @@ See how it work yourself!"
                             </li>
                             <li className="">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon11.png"
                                   className="lazy"
@@ -481,7 +481,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-customer-icon12.png"
                                   className="lazy"
@@ -500,7 +500,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-bottom">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Invoice-icon.png"
                                   className="lazy"
@@ -519,7 +519,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-bottom">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Return-icon.png"
                                   className="lazy"
@@ -537,7 +537,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-bottom b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Wishlist-icon.png"
                                   className="lazy"
@@ -568,7 +568,7 @@ See how it work yourself!"
                         <div className="costomer_tab_right costomer_tab_rightleft2 ecommerce-admin-tbab">
                           <div className="ecommerce-admin-bax"></div>
                           <div className="ecommerce-admin-bax2"></div>
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/ecommerce-admin-img.png"
                             alt="Admin Panel"
                             className="lazy"
@@ -580,7 +580,7 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon1.png"
                                   className="lazy"
@@ -598,7 +598,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon2.png"
                                   className="lazy"
@@ -616,7 +616,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon9.png"
                                   className="lazy"
@@ -634,7 +634,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon3.png"
                                   className="lazy"
@@ -653,7 +653,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon4.png"
                                   className="lazy"
@@ -671,7 +671,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon10.png"
                                   className="lazy"
@@ -689,7 +689,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon5.png"
                                   className="lazy"
@@ -708,7 +708,7 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon6.png"
                                   className="lazy"
@@ -726,7 +726,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon11.png"
                                   className="lazy"
@@ -745,7 +745,7 @@ See how it work yourself!"
                             </li>
                             <li className="">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon7.png"
                                   className="lazy"
@@ -764,7 +764,7 @@ See how it work yourself!"
                             </li>
                             <li className="">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon8.png"
                                   className="lazy"
@@ -784,7 +784,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-admin-icon12.png"
                                   className="lazy"
@@ -794,7 +794,7 @@ See how it work yourself!"
                                 Manage Reports
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view reports for the customer's
+                                    Admin can view reports for the customer&apos;s
                                     orders with all order data with status and
                                     date-to-date reports from the backend.
                                   </p>
@@ -804,7 +804,7 @@ See how it work yourself!"
 
                             <li className="">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Discount-icon.png"
                                   className="lazy"
@@ -826,7 +826,7 @@ See how it work yourself!"
                             </li>
                             <li className="">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Variable-icon.png"
                                   className="lazy"
@@ -848,7 +848,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Country-icon.png"
                                   className="lazy"
@@ -867,7 +867,7 @@ See how it work yourself!"
                             </li>
                             <li className="b-bottom">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Payments-icon.png"
                                   className="lazy"
@@ -888,7 +888,7 @@ See how it work yourself!"
 
                             <li className="b-bottom">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Pages-icon.png"
                                   className="lazy"
@@ -899,14 +899,14 @@ See how it work yourself!"
                                 <div className="product-idea">
                                   <p>
                                     Admin can manage pages for page management,
-                                    he can add, edit, and delete pag's contents.
+                                    he can add, edit, and delete pag&apos;s contents.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li className="b-bottom b-right">
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/ecommercewebsite/ecommerce-Tax-icon.png"
                                   className="lazy"
@@ -944,7 +944,7 @@ See how it work yourself!"
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/LaravelLogo.png"
                         alt="Laravel Development"
                         className="lazy"
@@ -954,7 +954,7 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/html-5.png"
                         alt="HTML5"
                         className="lazy"
@@ -964,7 +964,7 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/tech_mysql_icon.png"
                         alt="MySQL"
                         className="lazy"
@@ -974,7 +974,7 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/tech_apache_icon.png"
                         alt="Apache"
                         className="lazy"
@@ -1030,7 +1030,7 @@ See how it work yourself!"
                 <Slider {...portfolio}>
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/ecommerce-project-img1.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1048,7 +1048,7 @@ See how it work yourself!"
 
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/ecommerce-project-img2.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1065,7 +1065,7 @@ See how it work yourself!"
                   </div>
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/onebed-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1082,7 +1082,7 @@ See how it work yourself!"
                   </div>
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/vanessajo-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1099,7 +1099,7 @@ See how it work yourself!"
                   </div>
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/la-maison-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1116,7 +1116,7 @@ See how it work yourself!"
                   </div>
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/altijdbon-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1147,7 +1147,7 @@ See how it work yourself!"
       </section>
       <section className="ecommerce_review_section" id="reviews">
         <div className="ecommerce_review__img">
-          <img
+          <Image
             src="/img/ecommercewebsite/ecommerce-review-img.png"
             alt="eCommerce Ultimate Package"
             className=""
@@ -1177,7 +1177,7 @@ See how it work yourself!"
                     </span>
                     Marcus Cruz, Canadamobile app development in USA
                     <span className="ReviewFlagBx">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/canada-flag.png"
                         alt="mobile app development in USA"
                       />
@@ -1205,7 +1205,7 @@ See how it work yourself!"
                       Lisa Jonhathan, Switzerland mobile app development in USA
                     </span>{" "}
                     <span className="ReviewFlagBx">
-                      <img
+                      <Image
                         src="/img/ecommercewebsite/switzerland_flag_img.png"
                         alt="mobile app development in USA"
                       />
@@ -1427,7 +1427,7 @@ See how it work yourself!"
                     collapseId="flush-collapse9"
                   >
                     <p>
-                      We don't have any type of hidden charges and after buying
+                      We don&apos;t have any type of hidden charges and after buying
                       a package, there will be zero setup charges.
                     </p>
                   </MDBAccordionItem>
@@ -1482,7 +1482,7 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Groupon clone</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/groupon-clone-logo.png"
                             alt="Groupon clone"
                             className=""
@@ -1507,7 +1507,7 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Equipment Rental Script</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/equipment_logo_new.png"
                             alt="Equipment Rental Script"
                             className=""
@@ -1535,7 +1535,7 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/ecommercewebsite/job-board-logo.png"
                             alt="Job board software"
                             className=""
@@ -1559,7 +1559,7 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -1576,4 +1576,4 @@ See how it work yourself!"
   );
 };
 
-export default page;
+export default Page;

@@ -15,7 +15,7 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 
 
-const page = () => {
+const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
@@ -89,7 +89,7 @@ const page = () => {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="page_img">
-                <img
+                <Image
                   src="/img/phpdevelopment/php-web-img.png"
                   alt="PHP Web Development Services"
                 />
@@ -104,7 +104,7 @@ const page = () => {
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div class="laravel_img">
-                <img
+                <Image
                   src="/img/phpdevelopment/phpweb-logo-img.png"
                   alt="Node JS Development Company"
                 />
@@ -133,7 +133,7 @@ const page = () => {
                   frameworks including Laravel, Cakephp, Yii, Codeigniter, and
                   so on along with latest client side technologies including
                   HTML, Bootstrap, jQuery, Ajax, CSS etc. With our highly
-                  professionals' team and latest tools, we promise to deliver
+                  professionals&apos; team and latest tools, we promise to deliver
                   efficient application development at an affordable price
                   range.
                 </p>
@@ -168,12 +168,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/phpweb-web-new-icon1.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/phpweb-white-icon1.png"
                         alt="OpenCart Framework Development"
@@ -193,12 +193,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/advanced-web-new-icon2.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/advanced-web-white-icon2.png"
                         alt="OpenCart Framework Development"
@@ -218,12 +218,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/advanced-web-new-icon3.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/advanced-web-white-icon3.png"
                         alt="OpenCart Framework Development"
@@ -243,12 +243,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon3.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon3.png"
                         alt="OpenCart Framework Development"
@@ -269,12 +269,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon4.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon4.png"
                         alt="OpenCart Framework Development"
@@ -295,12 +295,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon5.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon5.png"
                         alt="OpenCart Framework Development"
@@ -320,12 +320,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box7">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/advanced-web-new-icon4.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/advanced-web-white-icon4.png"
                         alt="OpenCart Framework Development"
@@ -344,12 +344,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box8">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon7.png"
                         alt="OpenCart Framework Development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon7.png"
                         alt="OpenCart Framework Development"
@@ -359,7 +359,7 @@ const page = () => {
                   </div>
                   <h3>PHP Customer Relationship Management</h3>
                   <p>
-                    What's more satisfying than managing customer relationships
+                    What&apos;s more satisfying than managing customer relationships
                     in a professional way? We can guarantee you that.
                   </p>
                 </div>
@@ -383,7 +383,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/phpwebt_features_icon1.png"
                       alt="img1"
                     />
@@ -391,7 +391,7 @@ const page = () => {
                   <div class="laravel_core_features_detail">
                     <h3>Cakephp Framework</h3>
                     <p>
-                      Due to its flexibility and it's effective features,
+                      Due to its flexibility and it&apos;s effective features,
                       Cakephp has become a well known platform for PHP
                       development. We offer you a scalable application and
                       e-commerce website and other complex website development
@@ -404,7 +404,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/phpwebt_features_icon2.png"
                       alt="img4"
                     />
@@ -425,7 +425,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/phpwebt_features_icon3.png"
                       alt="img2"
                     />
@@ -444,7 +444,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/phpwebt_features_icon4.png"
                       alt="img5"
                     />
@@ -478,7 +478,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/cackphp-why-icon3.png"
                       alt="img1"
                     />
@@ -496,7 +496,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/advances-why-icon2.png"
                       alt="img1"
                     />
@@ -514,7 +514,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/phpweb-why-icon1.png"
                       alt="img1"
                     />
@@ -533,7 +533,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/opencart-why-icon4.png"
                       alt="img1"
                     />
@@ -551,7 +551,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/opencart-why-icon2.png"
                       alt="img1"
                     />
@@ -569,7 +569,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image
                       src="/img/phpdevelopment/phpweb-why-icon2.png"
                       alt="img1"
                     />
@@ -607,7 +607,7 @@ const page = () => {
             <Slider {...settings}>
               <div class="php-item">
                 <Link href="https://www.yourpension.ch/" target="_blank">
-                  <img
+                  <Image
                     src="/img/phpdevelopment/yourpension-banner.png"
                     alt="img13"
                   />
@@ -622,7 +622,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <Link href="http://www.uloan.club/" target="_blank">
-                  <img src="/img/phpdevelopment/uloan-banner.png" alt="img14" />
+                  <Image src="/img/phpdevelopment/uloan-banner.png" alt="img14" />
                 </Link>
                 <Link
                   href="http://www.uloan.club/"
@@ -634,7 +634,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <Link href="https://www.altijdbon.nl/" target="_blank">
-                  <img
+                  <Image
                     src="/img/phpdevelopment/altijdbon-banner.png"
                     alt="img15"
                   />
@@ -657,7 +657,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -674,4 +674,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

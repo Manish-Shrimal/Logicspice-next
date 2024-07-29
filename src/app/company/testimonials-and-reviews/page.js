@@ -3,7 +3,7 @@ import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/company/company.css";
 import Image from "next/image";
-const page = () => {
+const Page = () => {
   return (
     <>
     <NavBar />
@@ -48,4 +48,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

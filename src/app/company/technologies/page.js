@@ -5,7 +5,7 @@ import "@/app/company/company.css";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <NavBar />
@@ -341,7 +341,7 @@ const page = () => {
       <section class="TechnologiesStatredSection" data-aos="fade-up">
         <div class="container">
           <div class="TechnologiesStatred">
-            <h2>Let's Get Started!</h2>
+            <h2>Let&ldquo;s Get Started!</h2>
             <div class="TechnologiesStatredBtn">
               <a onClick={() => openmodelcontactus()} class="btn btn-info">
                 Get a Free Quote
@@ -361,4 +361,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

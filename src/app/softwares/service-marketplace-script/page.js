@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -16,8 +16,9 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [jobportal, setJobportal] = useState(false);
   const [buyjobportal, setBuyJobportal] = useState(false);
@@ -77,30 +78,50 @@ const page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/service-marketplace-script"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+
   return (
     <>
       <NavBar />
-      <section class="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg service-market-banner-new">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-md-7">
+      <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg service-market-banner-new">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7 col-md-7">
               <h1>Service Marketplace Script</h1>
-              <div class="both-left-p-sec">
+              <div className="both-left-p-sec">
                 <h2>
                   On demand service marketplace like Thumbtack Clone, Airtasker
                   Clone, UrbanCompany Clone
                 </h2>
               </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image width={100} height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -109,7 +130,7 @@ const page = () => {
                     </span>
                   </div>
                 </div>
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Get Demo Access!</button>
@@ -122,15 +143,15 @@ const page = () => {
                     }
                   </div>
                   <Link
-                    class="btn fiverr-buys NewGreenBtnJob"
+                    className="btn fiverr-buys NewGreenBtnJob"
                     href="/softwares/service-marketplace-script"
                   >
                     Buy Now
                   </Link>
                 </div>
-                <div class="SubscriptionPrice">
-                  <div class="line-border NewLineBoader">
-                    <img
+                <div className="SubscriptionPrice">
+                  <div className="line-border NewLineBoader">
+                    <Image width={100} height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -138,33 +159,33 @@ const page = () => {
                   </div>
                 </div>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
-                    <i class="fa-solid fa-earth-americas"></i>
+                    <i className="fa-solid fa-earth-americas"></i>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-5 col-md-5">
-              <div class="por-mobile-new">
-                <img
+            <div className="col-sm-5 col-md-5">
+              <div className="por-mobile-new">
+                <Image width={100} height={100}
                   alt="service_marketplace_script"
                   src="/img/softwares-banner-img/ser-mar-banner-img.png"
                 />
               </div>
             </div>
           </div>
-          <div class="job-portal-banner-link">
-            <div aria-label="breadcrumb" class="my-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+          <div className="job-portal-banner-link">
+            <div aria-label="breadcrumb" className="my-breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <a href="">Home</a>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <a href="/softwares">Softwares</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   Service Marketplace Script
                 </li>
               </ol>
@@ -172,8 +193,8 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job-section-top-new JobBoardSectionNew">
-        <div class="container">
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
           <p>
             This Service Marketplace PHP script can be used by Businesses or
             Companies like Beauty, Laundry, Home Cleaning, Pest Control, repair,
@@ -183,12 +204,12 @@ const page = () => {
         </div>
       </section>
       <section
-        class="client-say crowdfunding-say"
+        className="client-say crowdfunding-say"
         style={{ backgroundColor: "#fff" }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 job-video">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 job-video">
               <iframe
                 width="100%"
                 height="312"
@@ -199,8 +220,8 @@ const page = () => {
                 allowfullscreen
               ></iframe>
             </div>
-            <div class="col-md-6">
-              <div class="service-market-ttd">
+            <div className="col-md-6">
+              <div className="service-market-ttd">
                 <ul>
                   <li>White labeled script. </li>
                   <li>Responsive website (mobile friendly).</li>
@@ -231,13 +252,13 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_portal_area">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Service Marketplace Script Features</h2>
+      <section className="job_portal_area">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Service Marketplace Script Features</h2>
           </div>
 
-          <div class="tatxt_txt_job">
+          <div className="tatxt_txt_job">
             This Airtasker Clone enables admin to use multiple features as
             manage service categories, manage customers, manage service
             providers, their communication on website, payment receipt report
@@ -246,8 +267,8 @@ const page = () => {
             Pet Care, etc.
           </div>
 
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job">
               <ul className="">
                 <li
                   id="tab1_li"
@@ -274,32 +295,32 @@ const page = () => {
                 </li>
               </ul>
             </div>
-            <div class="tab_contant">
+            <div className="tab_contant">
               {sellerTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab1">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right costomer_tab_rightleft">
-                          <img
+                  <div className="costomer_tab rj" id="tab1">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right costomer_tab_rightleft">
+                          <Image width={100} height={100}
                             src="/img/service-marketplace/ser_mar_customer.png"
                             alt="Customer"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
                               </i>
                               <span>
                                 Customer Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can register on the portal using
                                     Email Address or can log in using Facebook &
@@ -310,14 +331,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/select_service.png"
                                 />
                               </i>
                               <span>
                                 Select Service Module
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can select the Service Module such
                                     as Home Appliance, Furniture Repair, House
@@ -328,14 +349,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/search_job.png"
                                 />
                               </i>
                               <span>
                                 Search Service Provider
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can find Service Providers by
                                     applying search keywords relevant to
@@ -346,14 +367,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/outstanding_booking.png"
                                 />
                               </i>
                               <span>
                                 Manage Outstanding Bookings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customer can view the list of Outstanding
                                     Bookings & can view details, booking status
@@ -366,14 +387,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/schedule_service.png"
                                 />
                               </i>
                               <span>
                                 Schedule Services As Per Your Time
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can view the availability of
                                     Service providers & confirm the booking as
@@ -384,14 +405,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_bookings.png"
                                 />
                               </i>
                               <span>
                                 Manage Confirmed Bookings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can receive the bookings from the
                                     Service Providers. Customers can view a list
@@ -403,14 +424,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                 />
                               </i>
                               <span>
                                 Track Service & Pay for it
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customer can track the booked service and
                                     view the service status.
@@ -420,14 +441,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_messages.png"
                                 />
                               </i>
                               <span>
                                 Manage Messages
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customer can receive messages from Service
                                     Provider & can respond to that message by
@@ -439,14 +460,14 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_messages.png"
                                 />
                               </i>
                               <span>
                                 Add Service reminder to calendar
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customer can add service reminder to google
                                     event calendar and facebook event calendar.
@@ -457,14 +478,14 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_messages.png"
                                 />
                               </i>
                               <span>
                                 Get Service & Pay for it
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     {" "}
                                     Customers can get the service as per the
@@ -475,14 +496,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/user_profile.png"
                                 />
                               </i>
                               <span>
                                 Manage Profile
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can view their profile & can
                                     manage(add/edit/delete) Profile.
@@ -492,14 +513,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
                                 />
                               </i>
                               <span>
                                 Track Payment History
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customers can view the list of Payment
                                     transactions & can keep track of the
@@ -511,14 +532,14 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/service_provider.png"
                                 />
                               </i>
                               <span>
                                 Reviews to the Service provider
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Customer can add reviews & ratings to the
                                     Service Providers once they get the service.
@@ -535,29 +556,29 @@ const page = () => {
               )}
               {buyerTab && (
                 <>
-                  <div class="costomer_tab rj active" id="tab2">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right">
-                          <img
+                  <div className="costomer_tab rj active" id="tab2">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right">
+                          <Image width={100} height={100}
                             src="/img/service-marketplace/ser_mar_provider.png"
                             alt="Service Provider"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/Ser_provider_ragis.png"
                                 />
                               </i>
                               <span>
                                 Service Provider Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Service Provider can register on the portal
                                     using Email Address or can login using
@@ -568,14 +589,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_calendar.png"
                                 />
                               </i>
                               <span>
                                 Manage availability
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Service Provider can manage
                                     (add/edit/delete) the availability status as
@@ -587,14 +608,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_services.png"
                                 />
                               </i>
                               <span>
                                 Manage Service
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Service Provider can view the list of
                                     services they are available for, on the
@@ -606,14 +627,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_bookings.png"
                                 />
                               </i>
                               <span>
                                 Manage Confirmed Bookings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Service Provider can receive bookings from
                                     the Customers. Service Providers can view
@@ -624,14 +645,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/get_paid.png"
                                 />
                               </i>
                               <span>
                                 Get Paid
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     {" "}
                                     Service Provider can receive the payment for
@@ -642,14 +663,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_messages.png"
                                 />
                               </i>
                               <span>
                                 Manage Messages
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Service Provider can receive messages from
                                     Customer & can respond to that message by
@@ -661,14 +682,14 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/outstanding_booking.png"
                                 />
                               </i>
                               <span>
                                 Manage Outstanding Bookings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Service Provider can view the list of
                                     Outstanding Bookings & can view details,
@@ -688,43 +709,43 @@ const page = () => {
               )}
               {adminTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab3">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3 ">
-                        <div class="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                  <div className="costomer_tab rj" id="tab3">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3 ">
+                        <div className="costomer_tab_right costomer_tab_rightleft2">
+                          <Image width={100} height={100}
                             src="/img/service-marketplace/ser_mar_admin_mac.png"
                             alt="Admin Panel"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright2">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
                               </i>
                               <span>
                                 Secure Login
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>Admin can login securely on Tasker.</p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                 />
                               </i>
                               <span>
                                 Admin Dashboard
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Dashboard, with statistics of customers,
                                     service providers, addons, payments,
@@ -735,14 +756,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_customers.png"
                                 />
                               </i>
                               <span>
                                 Manage Customers
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage(view/add/edit/delete)
                                     Customers. Admin can activate/deactivate
@@ -753,14 +774,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/service_rovider.png"
                                 />
                               </i>
                               <span>
                                 Manage Service Providers
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage(view/add/edit/delete)
                                     Service Providers.
@@ -770,14 +791,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_services.png"
                                 />
                               </i>
                               <span>
                                 Manage Services
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>Manage (view/add/edit/delete) Services.</p>
                                 </div>
                               </span>
@@ -785,14 +806,14 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
                                 />
                               </i>
                               <span>
                                 Transaction History
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view payment transactions and
                                     payment methods etc.
@@ -802,14 +823,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_bookings.png"
                                 />
                               </i>
                               <span>
                                 View Confirmed & Outstanding Bookings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     {" "}
                                     Admin can view the list of Confirmed
@@ -820,14 +841,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
                                 />
                               </i>
                               <span>
                                 Manage Service Categories
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Can manage(view/add/edit/delete) Services
                                     Categories & subcategories.
@@ -837,14 +858,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/saved_gig.png"
                                 />
                               </i>
                               <span>
                                 Manage Service Packages
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     {" "}
                                     Admin can view list of service packages and
@@ -857,14 +878,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_admin.png"
                                 />
                               </i>
                               <span>
                                 Manage Service Addons
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     {" "}
                                     Admin can view list of service Addons and
@@ -886,10 +907,10 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_product_page_header_in">
-        <div class="container">
-          <div class="whateissuprt">
-            <h2 class="headhs">
+      <section className="job_product_page_header_in">
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">
               What does our <span>Thumbtack clone script</span> offer you ?
             </h2>
             <p>
@@ -898,7 +919,7 @@ const page = () => {
               <strong>Airtasker Clone script</strong> can be used in the
               following service areas:
             </p>
-            <ul class="ser-market-plus">
+            <ul className="ser-market-plus">
               <li>Academic Services.</li>
               <li>Automobile Services.</li>
               <li>Cleaning Services.</li>
@@ -956,12 +977,12 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="SubscriptionModel" id="subscriptionmodel">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Subscription Model</h2>
+      <section className="SubscriptionModel" id="subscriptionmodel">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
             <br />
-            <div class="SubscriptionModelBx">
+            <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
                 subscription-based hassle-free model, available at just{" "}
@@ -1029,18 +1050,22 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section id="subscriptionprice" class="SubscriptionpriceSection">
-        <div class="container">
-          <h2 class="taxt_tt_job">Delivered Solution</h2>
-          <div class="SubscriptionModelPrice">
-            <div class="SubscriptionModelPriceBx">
-              <h4>
-                ₹88,190<span class="sml_labl"> INR</span>
+      <section id="subscriptionprice" className="SubscriptionpriceSection">
+        <div className="container">
+          <h2 className="taxt_tt_job">Delivered Solution</h2>
+          <div className="SubscriptionModelPrice">
+            <div className="SubscriptionModelPriceBx">
+            <h4>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
-              <strike class="srik_cls">
-                ₹147,805<span class="sml_labl"> INR</span>
+              <strike className="srik_cls">
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
-              <div class="SubscriptionModelPriceBtn">
+              <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
@@ -1052,28 +1077,28 @@ const page = () => {
                   }
                 </div>
                 <Link
-                  class="btn fiverr-buys"
+                  className="btn fiverr-buys"
                   href="/softwares/crowdfunding-script"
                 >
                   Buy Now
                 </Link>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
-                    <i class="fa-solid fa-earth-americas"></i>
+                    <i className="fa-solid fa-earth-americas"></i>
                   </li>
                 </ul>
-                <div class="portel-btnbx">
-                  <div class="line-border NewLineBoader">
-                    <img src="/img/jobboard/stars.png" alt="" class="lazy" />
+                <div className="portel-btnbx">
+                  <div className="line-border NewLineBoader">
+                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
                     <p>47 Reviews</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="SubscriptionModelBx">
+          <div className="SubscriptionModelBx">
             <p>
               The solution offered by Logicspice provides several advantages
               that can assist you in expanding your business within the
@@ -1151,7 +1176,7 @@ const page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1173,7 +1198,7 @@ const page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <img
+            <Image width={100} height={100}
               src="/img/jobboard/Job_board_for_page.jpg"
               alt="icon"
               title=""
@@ -1218,7 +1243,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width={100} height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1241,7 +1266,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width={100} height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1264,7 +1289,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width={100} height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1287,7 +1312,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width={100} height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1297,7 +1322,7 @@ const page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <img
+                    <Image width={100} height={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
                       alt="Job Management"
                     />
@@ -1313,7 +1338,7 @@ const page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <img
+                    <Image width={100} height={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
                       alt="Membership Plan"
                     />
@@ -1340,69 +1365,69 @@ const page = () => {
           </Modal.Footer>
         </Modal>
       </div>
-      <section class="used_technology_section" id="technologies">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="used_technology_section" id="technologies">
+        <div className="container">
+          <h4 className="title_main">
             <span>Used Technologies</span> and Server Requirements
           </h4>
-          <div class="used_technology_section_dataa">
-            <div class="row">
-              <div class="col-sm-6">
+          <div className="used_technology_section_dataa">
+            <div className="row">
+              <div className="col-sm-6">
                 <ul>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
                     </div>
-                    <div class="icntechimg_nm">Laravel</div>
+                    <div className="icntechimg_nm">Laravel</div>
                   </li>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                    <div className="icntechimg">
+                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
                     </div>
-                    <div class="icntechimg_nm">HTML5</div>
+                    <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
                     </div>
-                    <div class="icntechimg_nm">MySQL</div>
+                    <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
                     </div>
-                    <div class="icntechimg_nm">Apache</div>
+                    <div className="icntechimg_nm">Apache</div>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-6">
-                <ul class="list_detail">
-                  <li class="same">
+              <div className="col-sm-6">
+                <ul className="list_detail">
+                  <li className="same">
                     <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
                     Safari 5+, IE 9+
                   </li>
-                  <li class="same">
+                  <li className="same">
                     <b>Framework - </b> Laravel 5+
                   </li>
-                  <li class="same">
+                  <li className="same">
                     <b>Language - </b> PHP 7.2+, AJAX, jQuery
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap 4.3, JavaScript
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Database - </b> MySQL 5.5+{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Server - </b> Apache 2.4+
                   </li>
                 </ul>
@@ -1411,71 +1436,71 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="whatsupport_section" id="support">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="whatsupport_section" id="support">
+        <div className="container">
+          <h4 className="title_main">
             What <span>support</span> you will get?
           </h4>
-          <div class="supportsetting">
+          <div className="supportsetting">
             <ul>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div class="supportsettingtext">Free Support</div>
+                <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div class="supportsettingtext">Free Brand Removal</div>
+                <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
                 </div>
-                <div class="supportsettingtext">Free Installation</div>
+                <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div class="supportsettingtext">Easily scalable</div>
+                <div className="supportsettingtext">Easily scalable</div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="su_rev_section" id="reviews">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="title_main">Customer Reviews </h4>
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="outof_rating">
-                    <div class="main-rait">
+      <section className="su_rev_section" id="reviews">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h4 className="title_main">Customer Reviews </h4>
+              <div className="row">
+                <div className="col-md-5">
+                  <div className="outof_rating">
+                    <div className="main-rait">
                       <span>
-                        <i class="fa fa-star"></i>{" "}
+                        <i className="fa fa-star"></i>{" "}
                         <span>4.8 out of 5 stars</span>
                       </span>
                     </div>
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        5 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1483,16 +1508,16 @@ const page = () => {
                           style={{ width: "90%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">42</div>
+                      <div className="people_star_num">42</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        4 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        4 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1500,16 +1525,16 @@ const page = () => {
                           style={{ width: "10%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">7</div>
+                      <div className="people_star_num">7</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        3 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        3 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1517,16 +1542,16 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        2 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        2 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1534,16 +1559,16 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        1 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        1 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1551,11 +1576,11 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-7">
+                <div className="col-md-7">
                   <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
@@ -1566,74 +1591,74 @@ const page = () => {
                     title="Service Marketplace Script"
                   />
                 </div>
-                <div class="col-md-12">
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "It is the best service marketplace with all the required
+                <div className="col-md-12">
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                    &quot;It is the best service marketplace with all the required
                       functionality at a very affordable price. I checked other
-                      website's service marketplace script also but logicspice
-                      is the best in the industry.- Thanks!"
+                      website&apos;s service marketplace script also but logicspice
+                      is the best in the industry.- Thanks!&quot;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star-half" aria-hidden="true"></i>
                       </span>
                       <span id="client-name">Rakesh Verma, India</span>{" "}
-                      <span class="ConuntryFlagIcon">
-                        <img
+                      <span className="ConuntryFlagIcon">
+                        <Image width={100} height={100}
                           src="/img/jobboard/india_flag_img.png"
                           alt="mobile app development in India"
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "Logicspice provides an amazing urban clap clone. Their
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                    &quot;Logicspice provides an amazing urban clap clone. Their
                       teams are highly skilled, very responsive and have
-                      excellent customer service."
+                      excellent customer service.&quot;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Shane, USA{" "}
-                      <span class="ConuntryFlagIcon">
-                        <img
+                      <span className="ConuntryFlagIcon">
+                        <Image width={100} height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "I really loved this script with an amazing user interface
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                    &quot;I really loved this script with an amazing user interface
                       with advanced functionality. I Recommend to buy this on
-                      demand service marketplace script from Logicspice."
+                      demand service marketplace script from Logicspice.&quot;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Peter, UK{" "}
-                      <span class="ConuntryFlagIcon">
-                        <img
+                      <span className="ConuntryFlagIcon">
+                        <Image width={100} height={100}
                           src="/img/jobboard/uk_flag_img.png"
                           alt="mobile app development in UK"
                         />
@@ -1643,9 +1668,9 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-6 Quick_FAQ">
-              <h4 class="title_main">FAQ's</h4>
-              <div class="MainFaqBx">
+            <div className="col-md-6 Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+              <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="How can a customer search for service providers around their location?"
@@ -1707,7 +1732,7 @@ const page = () => {
                     collapseId="flush-collapse7"
                   >
                     <p>
-                      No. we don't have any type of hidden charges and after
+                      No. we don&apos;t have any type of hidden charges and after
                       buying a product, installation will be done from our end
                       which will be free.{" "}
                     </p>
@@ -1718,7 +1743,7 @@ const page = () => {
                     collapseId="flush-collapse3"
                   >
                     <p>
-                      No. You don't have the right to resell the script. All
+                      No. You don&apos;t have the right to resell the script. All
                       rights will remain with Logicspice only. You can sell the
                       vendor panel too on subscription basis.{" "}
                     </p>
@@ -1741,66 +1766,66 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="title_main">Service Marketplace Script Features</h2>
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="title_main">Service Marketplace Script Features</h2>
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/service-marketplace/update-profile.png"
                     alt="Search Service Provider"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Update Profile</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Update Profile</div>
                 </div>
               </div>
 
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/service-marketplace/avaibility.png"
                     alt="Service Provider Listing"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">My Avaibility</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">My Avaibility</div>
                 </div>
               </div>
 
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/service-marketplace/addservice.png"
                     alt="View Service Provider Details"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Add Service</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Add Service</div>
                 </div>
               </div>
 
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/service-marketplace/mybooking.png"
                     alt="Sending Service Provider Request"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">My Booking</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">My Booking</div>
                 </div>
               </div>
             </Slider>
           </div>
         </div>
       </section>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
@@ -1815,19 +1840,19 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="latest_feature_product">
-        <div class="container">
-          <h2 class="title_main">Other Popular Softwares</h2>
-          <div class="other-product-box">
-            <div class="row">
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+      <section className="latest_feature_product">
+        <div className="container">
+          <h2 className="title_main">Other Popular Softwares</h2>
+          <div className="other-product-box">
+            <div className="row">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <a title="View Detail" target="_black">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>whatsapp clone</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image width={100} height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
                           />
@@ -1840,15 +1865,15 @@ const page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <a title="View Detail" target="_black">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
 
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image width={100} height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
                           />
@@ -1861,15 +1886,15 @@ const page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <a title="View Detail" target="_black">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Uship clone</h3>
 
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image width={100} height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
                           />
@@ -1892,7 +1917,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image width={100} height={100}
               src="https://www.logicspice.com/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -1907,4 +1932,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

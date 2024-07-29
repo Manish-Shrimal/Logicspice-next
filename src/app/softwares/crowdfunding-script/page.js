@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -16,8 +16,9 @@ import { Modal, ModalBody } from "react-bootstrap";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -42,6 +43,24 @@ const page = () => {
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/crowdfunding-script"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   var settings = {
     dots: true,
     arrows: true,
@@ -96,9 +115,11 @@ const page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
+                          width={100}
+                          height={100}
                         />
                       </i>
                       <p>Limited Period Offer for First Year</p>
@@ -126,15 +147,20 @@ const page = () => {
                       />
                     }
                   </div>
-                  <Link className="btn fiverr-buys" href="/softwares/udemy-clone">
+                  <Link
+                    className="btn fiverr-buys"
+                    href="/softwares/udemy-clone"
+                  >
                     Buy Now
                   </Link>
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
+                      height={100}
+                      width={100}
                     />
                     <p>47 Reviews</p>
                   </div>
@@ -150,9 +176,11 @@ const page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                <Image
                   alt="crowd_funding_script"
                   src="/img/softwares-banner-img/crowdfunding-banner-img.png"
+                  width={300}
+                  height={500 / (100 / 100)}
                 />
               </div>
             </div>
@@ -268,9 +296,11 @@ const page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <img
-                            src="/img/product-img//crowdfunding-mobile.png"
+                          <Image
+                            src="/img/product-img/crowdfunding-mobile.png"
                             alt="Fund Raiser"
+                            width={200}
+                            height={100}
                           />
                         </div>
                       </div>
@@ -279,9 +309,11 @@ const page = () => {
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/raising-img.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -299,9 +331,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage-project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -318,9 +352,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/add-collab.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -335,9 +371,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/refine_search.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -355,9 +393,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view-coll.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -373,9 +413,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/post_project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -385,7 +427,8 @@ const page = () => {
                                     Fundraiser can post the projects on the
                                     portal where Fundrasier can view how many
                                     Investors has Pledged, Funded, backers &
-                                    from how many days long it's been posted.
+                                    from how many days long it&apos;s been
+                                    posted.
                                   </p>
                                 </div>
                               </span>
@@ -393,9 +436,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/self_profile.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -405,16 +450,19 @@ const page = () => {
                                     Fundraiser can post the projects on the
                                     portal where Fundrasier can view how many
                                     Investors has Pledged, Funded, backers &
-                                    from how many days long it's been posted.
+                                    from how many days long it&apos;s been
+                                    posted.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_created.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -430,9 +478,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage-notifi.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -448,9 +498,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/share_project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -465,9 +517,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_activities.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -483,9 +537,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/withdraw_request.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -511,9 +567,11 @@ const page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <img
-                            src="/img/product-img//crowdfunding-mobile2.png"
+                          <Image
+                            src="/img/product-img/crowdfunding-mobile2.png"
                             alt="Investors"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
@@ -522,9 +580,11 @@ const page = () => {
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/back-project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -539,9 +599,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view-project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -556,9 +618,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/send-message.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -575,9 +639,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/make-payment.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -593,9 +659,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_listing.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -610,9 +678,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/project-profile.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -628,9 +698,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -645,9 +717,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/post_comments.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -662,9 +736,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_save_projects.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -680,9 +756,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_project_detail.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -699,9 +777,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/post_request.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -719,9 +799,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/save_projects.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -749,9 +831,11 @@ const page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <img
-                            src="/img/product-img//crowdfunding_admin.png"
+                          <Image
+                            src="/img/product-img/crowdfunding_admin.png"
                             alt="Admin Panel"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
@@ -760,9 +844,11 @@ const page = () => {
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -777,9 +863,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -795,9 +883,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -813,9 +903,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage-project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -832,9 +924,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/withdraw_request.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -850,9 +944,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_content.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -867,9 +963,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -884,9 +982,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_commission.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -902,9 +1002,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_blog.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -920,9 +1022,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_currency.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -938,9 +1042,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -958,9 +1064,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -1017,7 +1125,7 @@ const page = () => {
             </p>
             <p>
               Considering Ease to Use, Cost Effectiveness, Great Features,
-              Security, It's the best and worth choice to start with LS
+              Security, It&apos;s the best and worth choice to start with LS
               Crowdfunding.
             </p>
             <p>
@@ -1113,20 +1221,16 @@ const page = () => {
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
               <h4>
-                ₹88,190<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                ₹147,805<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                {/* <Link
-                  href="#"
-                  className="btn btn-get"
-                  id="buy_now_1"
-                  onClick={() => openDemoModel()}
-                >
-                  Get Demo Access!
-                </Link> */}
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
@@ -1153,7 +1257,13 @@ const page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <img src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                      width={100}
+                      height={100}
+                    />
                     <p>47 Reviews</p>
                   </div>
                 </div>
@@ -1263,7 +1373,7 @@ const page = () => {
                 <li>
                   <span>
                     Default admin commission for each project if the commission
-                    isn't added for that respective project.
+                    isn&apos;t added for that respective project.
                   </span>
                 </li>
                 <li>
@@ -1322,257 +1432,19 @@ const page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img src="/img/jobboard/why-logic-icon.png" alt="" className="" />
+                  <Image
+                    src="/img/jobboard/why-logic-icon.png"
+                    alt=""
+                    className=""
+                    width={20}
+                    height={100}
+                  />
                 </i>
                 <span>Why Logicspice</span>
               </a>
               <Whylogicspice open={showInfo} />
             </div>
           </div>
-
-          {/* {showInfo && (
-            <>
-              <div className="small_bbx_job_new">
-                <div className="row">
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-bx1">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/coding.png" alt="img" />
-                        </div>
-                        <h3>Optimized Code with proper commenting</h3>
-                        <p>
-                          Our script code is fully optimized, which results in
-                          quick load time and, Code is properly commented for
-                          each function and module so anyone can easily update
-                          the code in future.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-bx2">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img
-                            src="/img/jobboard/data-complexity.png"
-                            alt="img"
-                          />
-                        </div>
-                        <h3>Strong Framework of PHP & Well managed database</h3>
-                        <p>
-                          We used popular and strong Framework of PHP with
-                          latest versions to keep the code up to date and
-                          prevalent for longer duration. Our experienced team
-                          managed all the database tables with complete
-                          flexibility for extension versions in future.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-bx3">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/coordinate.png" alt="img" />
-                        </div>
-                        <h3>
-                          Quick Response and
-                          <br /> Coordination
-                        </h3>
-                        <p>
-                          Customers will always get a quick response from our
-                          technical support team, with the best possible
-                          solution. Expect our response within 24 hours.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-bx4">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/customize.png" alt="img" />
-                        </div>
-                        <h3>Customization at affordable price</h3>
-                        <p>
-                          We provide customization of our scripts, to meet
-                          customer expectations with best affordable price and
-                          minimum turn-around time.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-bx5">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img
-                            src="/img/jobboard/smartphone-icon.png"
-                            alt="img"
-                          />
-                        </div>
-                        <h3>Mobile Friendly Script</h3>
-                        <p>
-                          Our Script is mobile friendly so, users can easily
-                          access all the features through mobile devices that
-                          gives improved user experience with portability.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-bx6">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/data.png" alt="img" />
-                        </div>
-                        <h3>Dedicated Support Team</h3>
-                        <p>
-                          You will get the dedicated support team while
-                          purchasing the script or product. Technical support
-                          team will resolve your query quickly in a given time.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-box thumbnail-bx7">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/web-icon.png" alt="img" />
-                        </div>
-                        <h3>Global company with agile development approach</h3>
-                        <p>
-                          Our customers are almost equally spread around the
-                          globe and we provide international standard solutions
-                          for USA, UK, Europe, Australia, UAE and other
-                          countries. We follow a transparent work process and
-                          divide all the development processes into small
-                          phases. We can use the latest technology and standards
-                          that assure the smooth development and execution.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-box thumbnail-bx8">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/encrypted.png" alt="img" />
-                        </div>
-                        <h3>
-                          Customer information and application level security
-                        </h3>
-                        <p>
-                          Security of customer data and application is a major
-                          aspect of any of the solutions, Logicspice provides.
-                          Our programming is robust and secure that assures
-                          password encryption.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new thumbnail-box thumbnail-bx9">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img src="/img/jobboard/history-icon.png" alt="img" />
-                        </div>
-                        <h3>
-                          Experienced workforce with 3000+ project history
-                        </h3>
-                        <p>
-                          We are a team of experienced web and mobile app
-                          developers, having expertise in handling complex tasks
-                          since the past 16+ years. We delivered lots of
-                          projects with 100% client satisfaction on different
-                          platforms with high levels of standards.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img
-                            src="/img/jobboard/seouser-friendly.png"
-                            alt="img"
-                          />
-                        </div>
-                        <h3>Seo Friendly Development</h3>
-                        <p>
-                          Our developed websites are SEO optimized so it can
-                          rank better on Google.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img
-                            src="/img/jobboard/one-stop-solution.png"
-                            alt="img"
-                          />
-                        </div>
-                        <h3>One Stop Solution</h3>
-                        <p>
-                          We offer complete design & development solutions along
-                          with the business strategy, all under one roof.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img
-                            src="/img/jobboard/third-party-api.png"
-                            alt="img"
-                          />
-                        </div>
-                        <h3>Integration With Third Party Api</h3>
-                        <p>
-                          We integrate your website with third party API on our
-                          end to serve you better.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-4 col-md-4">
-                    <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
-                      <div className="caption">
-                        <div className="best-partner-img-bx">
-                          <img
-                            src="/img/jobboard/cost-effective.png"
-                            alt="img"
-                          />
-                        </div>
-                        <h3>Cost Effective</h3>
-                        <p>
-                          Powerful technology back-end with basic ready-made
-                          modules save time and hence overall project cost for
-                          your script gets reduced.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </>
-          )} */}
         </div>
       </section>
       <div>
@@ -1584,8 +1456,10 @@ const page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <img
-              src="/img/fiverrclone/gigger-how-it-works.jpg"
+            <Image
+            width={900}
+            height={900}
+              src="/img/crowdfunding/crowdfunding_for_page.jpg"
               alt="icon"
               title=""
               className="img-fluid"
@@ -1617,127 +1491,80 @@ const page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://solar-link.org"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      solar-link.org
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://solar-link.org"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
+                    <Image
+                      src="/img/crowdfunding/solar-link.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
+                    />
+                  </Link>
+                </div>
+               
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://chooseloveconcert.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                    chooseloveconcert.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://chooseloveconcert.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/img/crowdfunding/chooseloveconcert.jpg"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://www.kapolprojects.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      kapolprojects.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://www.kapolprojects.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
+                    <Image
+                      src="/img/crowdfunding/kapolprojects.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="feat-slide-img">
-                    <img
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
-                    />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Job Management</div>
-                    <div className="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="feat-slide-img">
-                    <img
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
-                    />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Membership Plan</div>
-                    <div className="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
-                </div>
+               
               </Slider>
             </div>
           </Modal.Body>
@@ -1762,33 +1589,44 @@ const page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">CakePHP</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                        width={40}
+                        height={100}
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
@@ -1831,33 +1669,44 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                    width={50}
+                    height={100}
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
+                    width={40}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Easily scalable</div>
@@ -1980,8 +1829,8 @@ const page = () => {
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "Best,User-Friendly Script Offered best solution for my
-                      project... Thanks LogicSpice Team !!! "
+                      &quot;Best,User-Friendly Script Offered best solution for
+                      my project... Thanks LogicSpice Team !!! &quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1994,17 +1843,19 @@ const page = () => {
                       </span>
                       <span id="client-name">Adam Wilson, USA</span>{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "Its an exicting platform for funding your projects. I am
-                      pleased with My LogicSpice Experience."
+                      &quot;Its an exicting platform for funding your projects.
+                      I am pleased with My LogicSpice Experience.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -2017,18 +1868,20 @@ const page = () => {
                       </span>
                       Jason Dinsmore, Germany{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/german.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "Its incredible,powerful crowdfunding platform. Nearly 50%
-                      projects funding I got from people found with LS
-                      Crowdfunding Script."
+                      &quot;Its incredible,powerful crowdfunding platform.
+                      Nearly 50% projects funding I got from people found with
+                      LS Crowdfunding Script.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -2041,9 +1894,11 @@ const page = () => {
                       </span>
                       Emma Davis, AUS{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
@@ -2052,7 +1907,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ's</h4>
+              <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
@@ -2155,9 +2010,11 @@ const page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/crowdfunding/collaborators-profile.png"
                     alt="Collaborators Profile"
+                    width={1075}
+                    height={100}
                   />
                 </div>
                 <div className="hands-proved">
@@ -2172,9 +2029,11 @@ const page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/crowdfunding/create-project.png"
                     alt="Create Projects"
+                    width={1075}
+                    height={100}
                   />
                 </div>
                 <div className="hands-proved">
@@ -2187,9 +2046,11 @@ const page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/crowdfunding/search-project.png"
                     alt="Search Projects"
+                    width={1075}
+                    height={100}
                   />
                 </div>
                 <div className="hands-proved">
@@ -2203,9 +2064,11 @@ const page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/crowdfunding/backed-projects.png"
                     alt="Backed projects"
+                    width={1075}
+                    height={100}
                   />
                 </div>
                 <div className="hands-proved">
@@ -2220,9 +2083,11 @@ const page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/crowdfunding/view-creator.png"
                     alt="View Creator"
+                    width={1075}
+                    height={100}
                   />
                 </div>
                 <div className="hands-proved">
@@ -2273,9 +2138,11 @@ const page = () => {
                       <div className="other-caption-bx">
                         <h3>Service Marketplace Script</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/service-logo.png"
                             alt="Service Marketplace Script"
+                            width={200}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -2301,9 +2168,11 @@ const page = () => {
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
+                            width={200}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -2326,9 +2195,11 @@ const page = () => {
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
+                            width={200}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -2349,7 +2220,12 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -2361,4 +2237,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

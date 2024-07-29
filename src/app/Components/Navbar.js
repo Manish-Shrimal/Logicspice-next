@@ -3,10 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import "../globals.css";
 import Link from "next/link";
-<script
-  src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
-  crossorigin
-></script>;
+
 // import {
 //   AppBar,
 //   Toolbar,
@@ -28,7 +25,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-light  navbar-expand-lg navbar-default mega-menu">
+      <nav className="navbar navbar-light header home-header navbar-expand-lg navbar-default mega-menu">
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">
@@ -47,8 +44,7 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-           
-            <ul className="nav navbar-nav navbar-right mx-auto top-main-menu">
+            <ul className="nav navbar-nav navbar-right ms-auto top-main-menu">
               <li className="dropdown mega-menu-fw">
                 <a
                   className="dropdown-toggle"
@@ -62,7 +58,7 @@ const NavBar = () => {
                   COMPANY
                   <b class="caret caret-company"></b>
                 </a>
-               
+
                 <div
                   className={`dropdown-menu company-menu company-menu-icon ${
                     dropdown1 ? "show" : ""

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -16,8 +16,9 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   var settings = {
     dots: true,
     arrows: true,
@@ -68,27 +69,47 @@ const page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/whatsapp-clone"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+
   return (
     <>
       <NavBar />
-      <section class="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg whatsapp-clone-new">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-md-7">
+      <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg whatsapp-clone-new">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7 col-md-7">
               <h1>WhatsApp Clone App</h1>
-              <div class="both-left-p-sec">
+              <div className="both-left-p-sec">
                 <h2>Instant messaging app like whatsapp</h2>
               </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image width={100} height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -97,7 +118,7 @@ const page = () => {
                     </span>
                   </div>
                 </div>
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Get Demo Access!</button>
@@ -111,15 +132,15 @@ See how it work yourself!"
                     }
                   </div>
                   <Link
-                    class="btn fiverr-buys"
+                    className="btn fiverr-buys"
                     href="/softwares/whatsapp-clone"
                   >
                     Buy Now
                   </Link>
                 </div>
-                <div class="SubscriptionPrice">
-                  <div class="line-border NewLineBoader">
-                    <img
+                <div className="SubscriptionPrice">
+                  <div className="line-border NewLineBoader">
+                    <Image width={100} height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -127,42 +148,42 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-5 col-md-5">
-              <div class="por-mobile-new">
-                <img
+            <div className="col-sm-5 col-md-5">
+              <div className="por-mobile-new">
+                <Image width={100} height={100}
                   alt="WhatsApp Clone"
                   src="/img/softwares-banner-img/whatsapp-banner-img.png"
                 />
               </div>
             </div>
           </div>
-          <div class="job-portal-banner-link">
-            <div aria-label="breadcrumb" class="my-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+          <div className="job-portal-banner-link">
+            <div aria-label="breadcrumb" className="my-breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <a href="">Home</a>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <a href="/softwares">Softwares</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   WhatsApp Clone
                 </li>
               </ol>
@@ -170,8 +191,8 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="job-section-top-new JobBoardSectionNew">
-        <div class="container">
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
           <p>
             Want to develop your instant messaging app like WhatsApp? Get on to
             our ready to use WhatsApp clone app and make your messenger similar
@@ -181,11 +202,11 @@ See how it work yourself!"
           </p>
         </div>
       </section>
-      <section class="client-say WhatsaapCliets" style={{ background: "#fff" }}>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="service-market-ttd">
+      <section className="client-say WhatsaapCliets" style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="service-market-ttd">
                 <ul>
                   <li>SEO Friendly</li>
                   <li>Social Media Sharing</li>
@@ -200,13 +221,13 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="job_portal_area">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">WhatsApp Clone Features</h2>
+      <section className="job_portal_area">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">WhatsApp Clone Features</h2>
           </div>
 
-          <div class="tatxt_txt_job text-center">
+          <div className="tatxt_txt_job text-center">
             Our ready to use app is well designed and has a variety of features
             like notifications, invite to friends, share location, status story
             and many more. This app
@@ -215,8 +236,8 @@ See how it work yourself!"
             application with the admin dashboard.
           </div>
 
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job tab_bbx_job_classified">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job tab_bbx_job_classified">
               <ul className="">
                 <li
                   id="tab2_li"
@@ -236,32 +257,32 @@ See how it work yourself!"
                 </li>
               </ul>
             </div>
-            <div class="tab_contant">
+            <div className="tab_contant">
               {buyerTab && (
                 <>
-                  <div class="costomer_tab rj active" id="tab2">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right">
-                          <img
+                  <div className="costomer_tab rj active" id="tab2">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right">
+                          <Image width={100} height={100}
                             src="/img/whatsappclone/whatsapp_user.png"
                             alt="Seller App Features"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
                               </i>
                               <span>
                                 User Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can register over the website if he
                                     wants to chat with any friend.
@@ -271,14 +292,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
                                 />
                               </i>
                               <span>
                                 Manage Profile
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can manage his basic profile like name,
                                     DOB, profile picture, password etc.
@@ -288,14 +309,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/private-chat.png"
                                 />
                               </i>
                               <span>
                                 Private Chat
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     This platform will provide private chat
                                     between users.
@@ -305,14 +326,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_job.png"
                                 />
                               </i>
                               <span>
                                 Group Chat
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     This platform will provide group chat where
                                     you can make your own group.
@@ -322,14 +343,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/search-friend.png"
                                 />
                               </i>
                               <span>
                                 Search Friend
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User will search a friend by the keyword and
                                     select a user from the list of related users
@@ -340,14 +361,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/add-group.png"
                                 />
                               </i>
                               <span>
                                 Add Group
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can create his own group and add
                                     friends to chat.
@@ -357,14 +378,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/update-group.png"
                                 />
                               </i>
                               <span>
                                 Update Group
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can update his created group
                                     information like name and group profile
@@ -375,14 +396,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/delete-group.png"
                                 />
                               </i>
                               <span>
                                 Delete Group
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can delete his own created group if he
                                     wants to delete.
@@ -392,14 +413,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/chear-chat.png"
                                 />
                               </i>
                               <span>
                                 Clear Chat
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can clear his all chat history of a
                                     group.
@@ -409,28 +430,28 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/leave-group.png"
                                 />
                               </i>
                               <span>
                                 Leave Group
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>User can leave a group.</p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/add-group.png"
                                 />
                               </i>
                               <span>
                                 Add Friend in Group
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can add new friends in his created
                                     group.
@@ -440,14 +461,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/remove-friend.png"
                                 />
                               </i>
                               <span>
                                 Remove Friend in Group
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can remove any friend from his created
                                     group.
@@ -464,43 +485,43 @@ See how it work yourself!"
               )}
               {adminTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab3">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3 ">
-                        <div class="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                  <div className="costomer_tab rj" id="tab3">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3 ">
+                        <div className="costomer_tab_right costomer_tab_rightleft2">
+                          <Image width={100} height={100}
                             src="/img/whatsappclone/whatsapp_deshboard.png"
                             alt="Admin Panel"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright2">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
                               </i>
                               <span>
                                 Secure Login
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>Admin login is secured.</p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                 />
                               </i>
                               <span>
                                 Manage Configuration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can change the username, password,
                                     email, set contact address & can also change
@@ -511,14 +532,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                 />
                               </i>
                               <span>
                                 Admin Dashboard
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the dashboard where it will
                                     display the total number of users, chats
@@ -529,14 +550,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
                                 />
                               </i>
                               <span>
                                 Manage Users
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of users & can
                                     activate, deactivate, delete, edit, view
@@ -547,14 +568,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_contents.png"
                                 />
                               </i>
                               <span>
                                 Manage Contents
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage the listed static pages
                                     content.
@@ -564,14 +585,14 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width={100} height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_service.png"
                                 />
                               </i>
                               <span>
                                 Manage Chat
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the chat of the users on the
                                     basis of selected group or all history. If
@@ -593,13 +614,13 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="job_product_page_header_in">
-        <div class="container">
-          <div class="whateissuprt">
-            <h2 class="headhs">What does our WhatsApp Clone App offer you?</h2>
+      <section className="job_product_page_header_in">
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">What does our WhatsApp Clone App offer you?</h2>
             <p>
               With the boom in this era of social networking{" "}
-              <strong>WhatsApp</strong> has become the world's most popular
+              <strong>WhatsApp</strong> has become the world&lsquo;s most popular
               messenger. More than one billion people are using this app for
               communication. So, take advantage of its popularity you can launch
               your messenger app like WhatsApp. We at Logicspice, provide ready
@@ -626,15 +647,15 @@ See how it work yourself!"
       </section>
 
       <section
-        class="SubscriptionModel"
+        className="SubscriptionModel"
         id="subscriptionmodel"
         style={{ background: "#f1f1f1" }}
       >
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Subscription Model</h2>
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
             <br />
-            <div class="SubscriptionModelBx">
+            <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
                 subscription-based hassle-free model, available at just{" "}
@@ -711,18 +732,22 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section id="subscriptionprice" class="SubscriptionpriceSection">
-        <div class="container">
-          <h2 class="taxt_tt_job">Delivered Solution</h2>
-          <div class="SubscriptionModelPrice">
-            <div class="SubscriptionModelPriceBx">
-              <h4>
-                ₹88,190<span class="sml_labl"> INR</span>
+      <section id="subscriptionprice" className="SubscriptionpriceSection">
+        <div className="container">
+          <h2 className="taxt_tt_job">Delivered Solution</h2>
+          <div className="SubscriptionModelPrice">
+            <div className="SubscriptionModelPriceBx">
+            <h4>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
-              <strike class="srik_cls">
-                ₹147,805<span class="sml_labl"> INR</span>
+              <strike className="srik_cls">
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
-              <div class="SubscriptionModelPriceBtn">
+              <div className="SubscriptionModelPriceBtn">
               <div className="btn btn-get" onClick={openModal}>
                     <button>Get Demo Access!</button>
                     {
@@ -734,35 +759,35 @@ See how it work yourself!"
                       />
                     }
                   </div>
-                <Link class="btn fiverr-buys" href="/softwares/whatsapp-clone">
+                <Link className="btn fiverr-buys" href="/softwares/whatsapp-clone">
                   Buy Now
                 </Link>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
-                <div class="portel-btnbx">
-                  <div class="line-border NewLineBoader">
-                    <img src="/img/jobboard/stars.png" alt="" class="lazy" />
+                <div className="portel-btnbx">
+                  <div className="line-border NewLineBoader">
+                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
                     <p>24 Reviews</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="SubscriptionModelBx">
+          <div className="SubscriptionModelBx">
             <p>
               The solution offered by Logicspice provides several advantages
               that can assist you in expanding your business within the
@@ -817,17 +842,17 @@ See how it work yourself!"
         </div>
       </section>
 
-      <section class="job_portal_area job_portal_area_food">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">
+      <section className="job_portal_area job_portal_area_food">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">
               Best Partner Company For Your Technological Solutions!
             </h2>
             <br />
-            <div class="logic-parter">
+            <div className="logic-parter">
             <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -839,13 +864,13 @@ See how it work yourself!"
              
             </div>
           </div>
-          <div class="small_bbx_job_new" style={{ display: "none" }}>
-            <div class="row">
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-bx1">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/coding.png" alt="img" />
+          <div className="small_bbx_job_new" style={{ display: "none" }}>
+            <div className="row">
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-bx1">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/coding.png" alt="img" />
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
@@ -857,11 +882,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-bx2">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/data-complexity.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-bx2">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/data-complexity.png" alt="img" />
                     </div>
                     <h3>Strong Framework of PHP & Well managed database</h3>
                     <p>
@@ -874,11 +899,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-bx3">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/coordinate.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-bx3">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/coordinate.png" alt="img" />
                     </div>
                     <h3>
                       Quick Response and
@@ -893,12 +918,12 @@ See how it work yourself!"
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-bx4">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/customize.png" alt="img" />
+            <div className="row">
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-bx4">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/customize.png" alt="img" />
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
@@ -909,11 +934,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-bx5">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/smartphone-icon.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-bx5">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/smartphone-icon.png" alt="img" />
                     </div>
                     <h3>Mobile Friendly Script</h3>
                     <p>
@@ -924,11 +949,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-bx6">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/data.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-bx6">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/data.png" alt="img" />
                     </div>
                     <h3>Dedicated Support Team</h3>
                     <p>
@@ -940,12 +965,12 @@ See how it work yourself!"
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-box thumbnail-bx7">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/web-icon.png" alt="img" />
+            <div className="row">
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-box thumbnail-bx7">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/web-icon.png" alt="img" />
                     </div>
                     <h3>Global company with agile development approach</h3>
                     <p>
@@ -960,11 +985,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-box thumbnail-bx8">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/encrypted.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-box thumbnail-bx8">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/encrypted.png" alt="img" />
                     </div>
                     <h3>Customer information and application level security</h3>
                     <p>
@@ -976,11 +1001,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new thumbnail-box thumbnail-bx9">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/history-icon.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new thumbnail-box thumbnail-bx9">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/history-icon.png" alt="img" />
                     </div>
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
@@ -994,11 +1019,11 @@ See how it work yourself!"
                 </div>
               </div>
 
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new productthumbnail-box thumbnail-bx10">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/seouser-friendly.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/seouser-friendly.png" alt="img" />
                     </div>
                     <h3>Seo Friendly Development</h3>
                     <p>
@@ -1009,11 +1034,11 @@ See how it work yourself!"
                 </div>
               </div>
 
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new productthumbnail-box thumbnail-bx11">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                       />
@@ -1027,11 +1052,11 @@ See how it work yourself!"
                 </div>
               </div>
 
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new productthumbnail-box thumbnail-bx12">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/third-party-api.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/third-party-api.png" alt="img" />
                     </div>
                     <h3>Integration With Third Party Api</h3>
                     <p>
@@ -1042,11 +1067,11 @@ See how it work yourself!"
                 </div>
               </div>
 
-              <div class="col-sm-4 col-md-4">
-                <div class="thumbnail-new productthumbnail-box thumbnail-bx13">
-                  <div class="caption">
-                    <div class="best-partner-img-bx">
-                      <img src="/img/jobboard/cost-effective.png" alt="img" />
+              <div className="col-sm-4 col-md-4">
+                <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
+                  <div className="caption">
+                    <div className="best-partner-img-bx">
+                      <Image width={100} height={100} src="/img/jobboard/cost-effective.png" alt="img" />
                     </div>
                     <h3>Cost Effective</h3>
                     <p>
@@ -1061,105 +1086,105 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="used_technology_section" id="technologies">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="used_technology_section" id="technologies">
+        <div className="container">
+          <h4 className="title_main">
             <span>Used Technologies</span> and Server Requirements
           </h4>
-          <div class="used_technology_section_dataa">
-            <div class="row">
-              <div class="col-sm-6">
+          <div className="used_technology_section_dataa">
+            <div className="row">
+              <div className="col-sm-6">
                 <ul>
                   <li>
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
                       />
                     </div>
-                    <div class="icntechimg_nm">CakePHP</div>
+                    <div className="icntechimg_nm">CakePHP</div>
                   </li>
                   <li>
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/nodejs_icon.png"
                         alt="Node.js"
-                        class="lazy"
+                        className="lazy"
                       />
                     </div>
-                    <div class="icntechimg_nm">Node.js</div>
+                    <div className="icntechimg_nm">Node.js</div>
                   </li>
                   <li>
-                    <div class="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                    <div className="icntechimg">
+                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
                     </div>
-                    <div class="icntechimg_nm">HTML5</div>
+                    <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li>
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
                     </div>
-                    <div class="icntechimg_nm">MySQL</div>
+                    <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li>
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
                     </div>
-                    <div class="icntechimg_nm">Apache</div>
+                    <div className="icntechimg_nm">Apache</div>
                   </li>
                   <li>
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="IOS"
-                        class="lazy"
+                        className="lazy"
                       />
                     </div>
-                    <div class="icntechimg_nm">iOS</div>
+                    <div className="icntechimg_nm">iOS</div>
                   </li>
                   <li>
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image width={100} height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
-                        class="lazy"
+                        className="lazy"
                       />
                     </div>
-                    <div class="icntechimg_nm">Android</div>
+                    <div className="icntechimg_nm">Android</div>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-6">
-                <ul class="list_detail">
-                  <li class="same">
+              <div className="col-sm-6">
+                <ul className="list_detail">
+                  <li className="same">
                     <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
                     Safari 5+, IE 9+
                   </li>
-                  <li class="same">
+                  <li className="same">
                     <b>Framework - </b> CakePHP
                   </li>
-                  <li class="same">
+                  <li className="same">
                     <b>Language - </b> Node.js 12.15.0, PHP 5.4+, AJAX, jQuery
                   </li>
-                  <li class="other ">
+                  <li className="other ">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap 4.3.1, JavaScript
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Database - </b> MySQL 5.5+{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Server - </b> Apache 2.4+{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>iOS - </b> Xcode 11.3 and swift 5{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Android - </b> Java 9 and Android Studio 4.1
                   </li>
                 </ul>
@@ -1168,71 +1193,71 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="whatsupport_section" id="support">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="whatsupport_section" id="support">
+        <div className="container">
+          <h4 className="title_main">
             What <span>support</span> you will get?
           </h4>
-          <div class="supportsetting">
+          <div className="supportsetting">
             <ul>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div class="supportsettingtext">Free Support</div>
+                <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div class="supportsettingtext">Free Brand Removal</div>
+                <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
                 </div>
-                <div class="supportsettingtext">Free Installation</div>
+                <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image width={100} height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div class="supportsettingtext">Easily scalable</div>
+                <div className="supportsettingtext">Easily scalable</div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="su_rev_section" id="reviews">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="title_main">Customer Reviews </h4>
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="outof_rating">
-                    <div class="main-rait">
+      <section className="su_rev_section" id="reviews">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h4 className="title_main">Customer Reviews </h4>
+              <div className="row">
+                <div className="col-md-5">
+                  <div className="outof_rating">
+                    <div className="main-rait">
                       <span>
-                        <i class="fa fa-star"></i>{" "}
+                        <i className="fa fa-star"></i>{" "}
                         <span>4.7 out of 5 stars</span>
                       </span>
                     </div>
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        5 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1240,16 +1265,16 @@ See how it work yourself!"
                           style={{ width: "90%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">21</div>
+                      <div className="people_star_num">21</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        4 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        4 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1257,16 +1282,16 @@ See how it work yourself!"
                           style={{ width: "10%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">3</div>
+                      <div className="people_star_num">3</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        3 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        3 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1274,16 +1299,16 @@ See how it work yourself!"
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        2 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        2 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1291,16 +1316,16 @@ See how it work yourself!"
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        1 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        1 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1308,11 +1333,11 @@ See how it work yourself!"
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-7">
+                <div className="col-md-7">
                 <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
@@ -1323,76 +1348,76 @@ See how it work yourself!"
                     title=" Whatsapp Clone"
                   />
                 </div>
-                <div class="col-md-12">
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "I have purchased this script and has constructed my own
-                      web-site. This was an easy task because of logicspice's
+                <div className="col-md-12">
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                    &apos;I have purchased this script and has constructed my own
+                      web-site. This was an easy task because of logicspice&lsquo;s
                       free installation and support. Keep up the good work. I
-                      will be back for more in the future."
+                      will be back for more in the future.&apos;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star-half" aria-hidden="true"></i>
                       </span>
                       <span id="client-name">John, USA</span>{" "}
                       <span>
-                        <img
+                        <Image width={100} height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "This is the best WhatsApp Clone App. Thanks for your
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                    &apos;This is the best WhatsApp Clone App. Thanks for your
                       great efforts and support while installing the script.
                       Your prompt service regarding a few minor issues was
-                      superb."
+                      superb.&apos;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       D. Smith, Germany{" "}
                       <span>
-                        <img
+                        <Image width={100} height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in USA"
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "Recently I bought this script from logicspice and it
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                    &apos;Recently I bought this script from logicspice and it
                       worked really nice, it helped my business to gain more
                       efficiency. I recommend for all whom looking for a
-                      WhatsApp Clone, it's really nice."
+                      WhatsApp Clone, it&lsquo;s really nice.&apos;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Mike wilshon, AUS{" "}
                       <span>
-                        <img
+                        <Image width={100} height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1402,9 +1427,9 @@ See how it work yourself!"
                 </div>
               </div>
             </div>
-            <div class="col-md-6 Quick_FAQ">
-              <h4 class="title_main">FAQ's</h4>
-              <div class="MainFaqBx">
+            <div className="col-md-6 Quick_FAQ">
+              <h4 className="title_main">FAQ&lsquo;s</h4>
+              <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Once I purchase this script, how many days will it take to go online?"
@@ -1431,7 +1456,7 @@ See how it work yourself!"
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      No, You can't resell the script. All rights will remain
+                      No, You can&lsquo;t resell the script. All rights will remain
                       with Logicspice only.
                     </p>
                   </MDBAccordionItem>
@@ -1463,60 +1488,60 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="title_main">WhatsApp Clone Features</h2>
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="title_main">WhatsApp Clone Features</h2>
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/whatsappclone/whatsapp-clone.png"
                     alt="Ls Chat"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Ls Chat</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Ls Chat</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/whatsappclone/chat-login.png"
                     alt="Chat Login"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Chat Login</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Chat Login</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100}
                     src="/img/whatsappclone/edit-profile.png"
                     alt="Edit Profile"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Edit Profile</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Edit Profile</div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img src="/img/whatsappclone/message.png" alt="Message" />
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width={100} height={100} src="/img/whatsappclone/message.png" alt="Message" />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Message</div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Message</div>
                 </div>
               </div>
             </Slider>
           </div>
         </div>
       </section>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
             <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
@@ -1531,22 +1556,22 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section class="latest_feature_product">
-        <div class="container">
-          <h2 class="title_main">Other Popular Softwares</h2>
-          <div class="other-product-box">
-            <div class="row">
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+      <section className="latest_feature_product">
+        <div className="container">
+          <h2 className="title_main">Other Popular Softwares</h2>
+          <div className="other-product-box">
+            <div className="row">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <Link href="#">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Crowdfunding</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image width={100} height={100}
                             src="/img/jobboard/crowdfunding_new.png"
                             alt="Crowdfunding"
-                            class=""
+                            className=""
                           />
                         </div>
                         <p>
@@ -1559,17 +1584,17 @@ See how it work yourself!"
                   </Link>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <Link href="#">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image width={100} height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
-                            class=""
+                            className=""
                           />
                         </div>
                         <p>
@@ -1580,17 +1605,17 @@ See how it work yourself!"
                   </Link>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <Link href="#">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Logistic Marketplace software</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image width={100} height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
-                            class=""
+                            className=""
                           />
                         </div>
                         <p>
@@ -1611,7 +1636,7 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image width={100} height={100}
               src="https://www.logicspice.com/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -1626,4 +1651,4 @@ See how it work yourself!"
   );
 };
 
-export default page;
+export default Page;

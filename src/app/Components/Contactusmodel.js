@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-// import { MDBModal } from 'mdb-react-ui-kit';
 import { Modal, Button } from "react-bootstrap";
+import Link from "next/link";
+
 
 const Contactusmodel = ({ modalStatus, toggle }) => {
-  const [popupScProductContacts, setPopupScProductContacts] =
-    useState(modalStatus);
+  const [popupScProductContacts, setPopupScProductContacts] = useState(modalStatus);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,17 +45,22 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
     toggle();
   };
 
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <div style={{ display: modalStatus ? "block" : "none" }}>
-      <div>
+      <div onClick={close}>
         <Modal
           id="popup_sc_product_contacts"
           tabIndex="-1"
           labelledby="exampleModalLabel"
           show={popupScProductContacts}
           className="contact-modal"
+          onHide={close}
         >
-          <div className="modal-dialog ContactModalDialog" role="document">
+          <div className="modal-dialog ContactModalDialog" role="document" onClick={stopPropagation}>
             <div className="modal-content ContactModalContent">
               <button
                 type="button"
@@ -72,7 +77,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                     <>
                       <div className="modal-header">
                         <h4 className="modal-title" id="myModalLabel">
-                          Contact Us
+                        contact us
                           <span>
                             <img src="https://www.logicspice.com/app/webroot/img/images/contact-img.png" />
                           </span>
@@ -309,3 +314,4 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
 };
 
 export default Contactusmodel;
+

@@ -8,15 +8,17 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
-const page = () => {
+const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [jobportal, setJobportal] = useState(false);
@@ -71,6 +73,24 @@ const page = () => {
     setBuyerTab(false);
     setAdminTab(true);
   };
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async() => {
+    try {
+        const response = await axios.get(BaseAPI + '/product/Details/job-board-software');
+        // console.log(response.data.data)
+        setPageData(response.data.data);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -91,7 +111,7 @@ const page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image width ={100} height ={100}
                           src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
                           alt=""
                         />
@@ -110,16 +130,7 @@ const page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  {/* <a
-                    className="btn btn-get"
-                    data-toggle="modal"
-                    data-target="#popup_sc_product_pro_demo"
-                    onClick='$("#update_frm1").html("Crowd Funding PHP Script");$("#update_frm2").html("Crowd Funding PHP Script");$("#review_msg").html($(".customer_review_stext").html());$(".client-name").html($("#client-name").html());
-                                $("#contact_fr1").val("Crowd Funding PHP Script");'
-                    id="buy_now_1"
-                  >
-                    Get Demo Access!
-                  </a> */}
+                
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Get Demo Access!</button>
                     {
@@ -149,7 +160,7 @@ const page = () => {
                     <span className="AppPrice">
                       <span className="MoreInfo">
                         <i>
-                          <img
+                          <Image width ={100} height ={100}
                             src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
                             alt=""
                           />
@@ -174,7 +185,7 @@ const page = () => {
                     <a href="#subscriptionprice">click here</a>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image width ={100} height ={100}
                       src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
                       alt=""
                       className="lazy"
@@ -202,9 +213,9 @@ const page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                <Image width ={370} height ={100 / (100 /100)}
                   className="lazy"
-                  src="https://cqmgdixdya.cloudimg.io/https://www.logicspice.com/img/images/product_new/new-img-jobboard.png"
+                  src="https://www.logicspice.com/img/images/product_new/new-img-jobboard.png"
                   alt="Job_Board_Software"
                 />
               </div>
@@ -227,8 +238,8 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job-section-top-new JobBoardSectionNew">
-        <div class="container">
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
           <p>
             Crafting a personalized job portal has never been this empowering.
             Our LS Jobber offers a gateway for businesses and companies to
@@ -239,7 +250,7 @@ const page = () => {
             With its <i>advanced functionalities</i> and{" "}
             <i>user-friendliness</i>, even individuals without a technical
             background can effortlessly navigate this dynamic platform. The
-            admin's role is made effortless through a responsive and
+            admin&apos;s role is made effortless through a responsive and
             user-friendly dashboard, where insights into users, jobs,
             categories, and payment histories are at your fingertips.
           </p>
@@ -289,7 +300,7 @@ const page = () => {
               LS Jobber- Job Portal Script Features
             </h2>
           </div>
-          <div class="tatxt_txt_job text-center">
+          <div className="tatxt_txt_job text-center">
             Navigating the hiring sphere takes on a new dimension with our
             feature-rich job portal PHP script. Employers can seamlessly post
             job listings by entering intricate details about the position and
@@ -304,8 +315,8 @@ const page = () => {
             and job seeker profiles as needed.
           </div>
 
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job">
               <ul className="JobBoardNewtab">
                 <li
                   id="tab1_li"
@@ -333,33 +344,33 @@ const page = () => {
               </ul>
             </div>
 
-            <div class="tab_contant">
+            <div className="tab_contant">
               {sellerTab && (
                 <>
-                  <div class="costomer_tab rj JobseekerTab" id="tab1">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right costomer_tab_rightleft JobBoardImg">
-                          <img
+                  <div className="costomer_tab rj JobseekerTab" id="tab1">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
+                          <Image width ={400} height ={100}
                             src="/img/jobboard/mobile-job-seeker.png"
                             alt="Jobseeker App Feature"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright">
                           <ul>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/ragister-icon.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Jobseeker Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can register on the Job Portal
                                     using Email Address.
@@ -368,16 +379,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_alert.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Job Alerts
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can apply for Job Alerts & will
                                     get the Job alerts for specific Job,
@@ -388,16 +399,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_profile.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Profile
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can view their profile details &
                                     can manage(add/edit/delete) their Profile.
@@ -406,16 +417,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/save_fav.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Save Favorite Jobs
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can save the Job as Favorite and
                                     can apply in future or soon.
@@ -424,16 +435,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/apply_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Apply to a Job
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can apply for the Jobs which are
                                     relevant to their Profile.{" "}
@@ -442,16 +453,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/search_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Search Jobs
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can search Jobs using Keyword,
                                     Category, Location & Work Type etc. which
@@ -461,16 +472,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/applied_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Applied List
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseeker can view the list of applied jobs
                                     on the portal.
@@ -479,16 +490,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/share_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Share a Job
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can share Job Tumblr, Facebook,
                                     Twitter, Print, Pinterest, Gmail, Google+
@@ -498,16 +509,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_edu.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Education
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can view their Education details
                                     & can manage(add/edit/delete) the Education.
@@ -516,16 +527,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_exp.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Experience
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can view all experience details
                                     which they have added in the profile & can
@@ -535,16 +546,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/genrate_cv.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Generate a CV
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can create CV by selecting the
                                     format & adding the fields which are
@@ -555,16 +566,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/jobs_by.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Jobs by Industry, Functions, City
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can search for Jobs using
                                     Specific Industry, Specific Functions &
@@ -574,16 +585,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/approve_tickets.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Declaration Statement
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseeker need to select a declaration
                                     statement while applying for jobs.
@@ -592,16 +603,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_blog.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Professional Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseeker need to fill all the professional
                                     descriptions.
@@ -610,16 +621,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/send_mail.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Mail Communication
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can communicate with employers
                                     through email.
@@ -628,16 +639,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/tickets_history.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Mail History
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can manage mail history of custom
                                     mail communication.
@@ -646,16 +657,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/deletes_acc.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Delete Account
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can delete accounts by entering
                                     the reason for account deletion.
@@ -664,16 +675,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/upload-video.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Upload Video CV
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can upload their video CV and
                                     employers can view it in their jobseeker
@@ -683,16 +694,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/categories-auto.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Membership Plan
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseekers can purchase the Membership
                                     Plan(Free/paid) as per their requirement
@@ -702,16 +713,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/simple_application.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Email Notification
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Jobseeker will receive email notifications
                                     for the Job Alerts and for some important
@@ -730,30 +741,30 @@ const page = () => {
 
               {buyerTab && (
                 <>
-                  <div class="costomer_tab rj EmployerTab" id="tab2">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right">
-                          <img
+                  <div className="costomer_tab rj EmployerTab" id="tab2">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right">
+                          <Image width ={400} height ={100}
                             src="/img/jobboard/emplyer-mobile.png"
                             alt="Buyer App Features"
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left">
                           <ul>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/ragister-icon.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Employer Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can register on the Job Portal
                                     using Email Address.
@@ -762,16 +773,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/membership_pur.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Membership Plans
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can purchase the Membership
                                     Plan(Free/paid) as per their requirement
@@ -782,16 +793,16 @@ const page = () => {
                             </li>
 
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/fov_cant.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Favorite Candidates
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can mark the Candidate as
                                     Favorites who is relevant to the Job Post or
@@ -801,16 +812,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/create-project.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Create Job
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can create a job by adding Job
                                     Title, Category, Job Description, Company
@@ -823,16 +834,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Jobs
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can view the list of Created Jobs
                                     & can manage(add/edit/delete) Jobs.
@@ -841,16 +852,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/update_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Update Job status
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employer can activate/deactivate the Jobs
                                     which are posted.
@@ -859,16 +870,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_profile.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Profile
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employer can view Profile & can
                                     manage(update) Profile. Employers can change
@@ -878,16 +889,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/count_search_view.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Count Search view
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can view the count for total
                                     numbers of Search views.
@@ -896,16 +907,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/count_job_view.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Count Job View
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can view the count for total
                                     numbers of Job views.
@@ -914,16 +925,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/payment_history.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Payment History
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can view the Payment Transaction
                                     as per the purchased plan.
@@ -932,16 +943,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_user_acc.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 View Jobseeker Profile
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employer can view Profile of Jobseekers who
                                     have shortlisted or want to Hire.
@@ -950,16 +961,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_content.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Plan Invoice
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     According to the purchased plan invoice will
                                     be generated & employer can
@@ -969,16 +980,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/send_mail.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Mail Communication
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can communicate with jobseekers by
                                     using the mail.
@@ -987,16 +998,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/tickets_history.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Mail History
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can manage mail history of custom
                                     mail communication.
@@ -1005,16 +1016,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage-dashboard.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Dashboard Background Image
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employer can change/update dashboard
                                     background image.
@@ -1023,16 +1034,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/deletes_acc.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Delete Account
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can delete accounts by entering
                                     the reason.
@@ -1041,16 +1052,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/import_jobseekers.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Import Jobseekers
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can now import jobseekers in bulk
                                     through excel file by using the predefined
@@ -1061,16 +1072,16 @@ const page = () => {
                             </li>
 
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/accept_online.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Accept Online Payments
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     When it comes to recruitment, accepting
                                     payments can be a headache. But with our job
@@ -1085,16 +1096,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/company_profile.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Company Profile Page
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers can create a branded company
                                     profile page on our job board software,
@@ -1108,16 +1119,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/view_jobseeker_icon.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 View Jobseeker Contact Details
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Employers will be able to view the jobseeker
                                     contact details only if they have that
@@ -1136,45 +1147,45 @@ const page = () => {
 
               {adminTab && (
                 <>
-                  <div class="costomer_tab rj AdminTab" id="tab3">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3 ">
-                        <div class="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                  <div className="costomer_tab rj AdminTab" id="tab3">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3 ">
+                        <div className="costomer_tab_right costomer_tab_rightleft2">
+                          <Image width ={400} height ={100}
                             src="/img/fiverrclone/gigger_deshboard.png"
                             alt="Admin Panel"
                           />{" "}
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright2">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/secure_login.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Secure Login
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>Admin can login securely on Job Portal.</p>
                                 </div>
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/admin_dash.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Admin Dashboard
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the Dashboard where it will
                                     display the total number of Employers,
@@ -1185,16 +1196,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/configuration.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Configuration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can update Username, Password, Email,
                                     Security Questions, Plans, Contact Us
@@ -1205,16 +1216,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_skill.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Jobseekers
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of Jobseekers & can
                                     activate, deactivate, delete, edit, view,
@@ -1224,16 +1235,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_emp.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Employers
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view a list of employers & can
                                     manage(view/add/edit/delete) employers.
@@ -1244,16 +1255,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Jobs
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of Jobs posted with
                                     and can manage(view/edit/delete) the Jobs.
@@ -1265,16 +1276,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_news.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Newsletter
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of Newsletter & can
                                     send Newsletter Email. Admin can keep logs
@@ -1284,16 +1295,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/course_details.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Course
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view list of course & can
                                     manage(view/add/edit/delete) course. Admin
@@ -1304,16 +1315,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_cat.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Categories
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view list of categories & can
                                     manage(view/add/edit/delete) categories.
@@ -1325,16 +1336,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_blog.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Blogs
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view lists of blogs & can manage
                                     (add/edit/delete) Blogs. Admin can
@@ -1344,16 +1355,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_banner.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Banner
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view a list of Banners & can
                                     manage(add/edit/delete) Banners.
@@ -1362,16 +1373,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/payment_history.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Payment History
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the Payment History for all
                                     Employers who have purchased plans.
@@ -1380,16 +1391,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/theme-color.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Theme color management
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can change the website color theme
                                     with multiple options and reset back to the
@@ -1399,16 +1410,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/manage_contents.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Announcement
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage announcements at backend ,
                                     which will be displayed on homepage
@@ -1418,16 +1429,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/self_profile.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Payment Configuration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can change/update configuration of
                                     payment gateways.
@@ -1436,18 +1447,18 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/announcement_marquee.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Sub Admin Management
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
-                                    If you're a business, looking to streamline
+                                    If you&apos;re a business, looking to streamline
                                     your recruitment process, Job board software
                                     has got you covered. Our platform allows you
                                     to create accounts for your teammates and
@@ -1458,16 +1469,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/admin_users.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Assign Roles to Sub Admin
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can assign roles and provide them with
                                     specific access to work over it as a
@@ -1479,16 +1490,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/banner_ads.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Banner Ads Placement
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Looking to generate additional revenue
                                     through 3rd party ad networks? With our job
@@ -1502,16 +1513,16 @@ const page = () => {
                               </span>
                             </li>
                             <li>
-                              <i class="JobBoardImg">
-                                <img
-                                  class="lazy"
+                              <i className="JobBoardImg">
+                                <Image width ={100} height ={100}
+                                  className="lazy"
                                   src="/img/jobboard/Manage_Membership.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
                               <span>
                                 Manage Membership Plan for Employers & Jobseeker
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin will be able to
                                     manage(add/edit/delete) the membership plans
@@ -1522,14 +1533,14 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image width ={100} height ={100}
                                   alt="img"
                                   src="/img/jobboard/customize_design.png"
                                 />
                               </i>
                               <span>
                                 Manage Currency
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin will be able to
                                     manage(add/edit/delete) the currency, and
@@ -1550,11 +1561,11 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_product_page_header_in">
-        <div class="container">
-          <div class="whateissuprt">
-            <h2 class="headhs">What does our LS Jobber do for you?</h2>
-            <h3 class="Haeddinh2">
+      <section className="job_product_page_header_in">
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">What does our LS Jobber do for you?</h2>
+            <h3 className="Haeddinh2">
               Empowering Possibilities with Our LS Jobber
             </h3>
             <p>
@@ -1563,14 +1574,14 @@ const page = () => {
               Indeed, CareerBuilder, or Naukri. The script is designed for
               scalability, robustness, and user-friendliness, providing you with
               a seamless journey to build your own online job portal. Employers
-              gain a panoramic view of job seekers who've applied for specific
+              gain a panoramic view of job seekers who&apos;ve applied for specific
               positions, enabling efficient interviewing and selection. Upon
               acceptance, automatic email notifications are dispatched,
               fostering seamless communication. Jobseekers also enjoy the
               ability to craft compelling CVs, ensuring their profiles stand out
               to potential employers.
             </p>
-            <h3 class="Haeddinh2">
+            <h3 className="Haeddinh2">
               An Advanced Solution for Your Recruitment Needs
             </h3>
             <p>
@@ -1588,12 +1599,12 @@ const page = () => {
               posting, and job posting with the added benefit of employer
               insight into applicant lists.
             </p>
-            <h3 class="Haeddinh2">
+            <h3 className="Haeddinh2">
               Exclusively Tailored Job Portal App Development
             </h3>
             <p>
               Experience the transformation of your hiring process through
-              Logicspice's tailored job portal app development. We bring the
+              Logicspice&apos;s tailored job portal app development. We bring the
               prowess of automated online platforms to your hiring endeavors,
               enabling you to craft your career portal with ease. Our readymade
               JobPortal Script expedites your journey to launching this
@@ -1603,19 +1614,19 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="SubscriptionModel" id="subscriptionmodel">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Subscription Model</h2>
+      <section className="SubscriptionModel" id="subscriptionmodel">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
             <br />
-            <div class="SubscriptionModelBx">
+            <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
                 subscription-based hassle-free model, available at just{" "}
                 <strong>USD 45 per month,</strong> limited offer available for
                 the first year.
               </p>
-              <div class="JobBoardPlans">
+              <div className="JobBoardPlans">
                 <ul>
                   <li>
                     <span>Custom Domain & Free SSL</span>
@@ -1755,31 +1766,15 @@ const page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              <h4>
-                ₹88,190<span className="sml_labl"> INR</span>
+            <h4>
+                {pageData.currency_symbol}{pageData.price}<span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                ₹147,805<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}{pageData.other_price}<span className="sml_labl"> {pageData.name}</span>
               </strike>
 
               <div className="SubscriptionModelPriceBtn">
-                {/* <a
-                  className="btn btn-get"
-                  data-toggle="modal"
-                  data-target="#popup_sc_product_pro_demo"
-                  onClick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm1").html("Job Board Software");
-                                $("#update_frm2").html("Job Board Software");
-                                $("#review_msg").html($(".customer_review_stext").html());
-                                $(".client-name").html($("#client-name").html());
-                                $("#contact_fr1").val("Job Board Software");'
-                  id="buy_now_1"
-                >
-                  Get Demo Access!
-                </a> */}
-                {/* <div className="btn btn-get" onClick={openModal}>
-                  <button >Get Demo Access!</button>
-                  {<Enquirymodal modalStatus={showModal} toggle={openModal} title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!" />}
-                  </div> */}
+              
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
@@ -1812,7 +1807,7 @@ const page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image width ={100} height ={100}
                       src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
                       alt=""
                       className="lazy"
@@ -1881,12 +1876,12 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_portal_area script-update-bg">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Script Update History</h2>
+      <section className="job_portal_area script-update-bg">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Script Update History</h2>
             <br />
-            <div class="script-update_title">
+            <div className="script-update_title">
               <p>
                 V6.0 - September 19th, 2023 - Latest release brings new
                 features, coupled with significant leaps in technologies!
@@ -1901,7 +1896,7 @@ const page = () => {
                 <li>
                   <span>
                     Upgraded to the latest PHP version, switched to the{" "}
-                    <strong>Laravel framework</strong>, and revamped it's
+                    <strong>Laravel framework</strong>, and revamped it&apos;s
                     frontend with <strong>ReactJS</strong>.
                   </span>
                 </li>
@@ -2117,7 +2112,7 @@ const page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
+                  <Image width ={20} height ={20}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -2139,7 +2134,7 @@ const page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <img
+            <Image width ={900} height ={100}
               src="/img/jobboard/Job_board_for_page.jpg"
               alt="icon"
               title=""
@@ -2184,7 +2179,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width ={900} height ={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2207,7 +2202,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width ={900} height ={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2230,7 +2225,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width ={900} height ={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2253,7 +2248,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image width ={900} height ={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2263,7 +2258,7 @@ const page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <img
+                    <Image width ={900} height ={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
                       alt="Job Management"
                     />
@@ -2279,7 +2274,7 @@ const page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <img
+                    <Image width ={900} height ={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
                       alt="Membership Plan"
                     />
@@ -2317,7 +2312,7 @@ const page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image width ={100} height ={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
                         alt="ReactJS Development"
                       />
@@ -2326,7 +2321,7 @@ const page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image width ={100} height ={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -2335,13 +2330,13 @@ const page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image width ={100} height ={100} src="/img/jobboard/html-5.png" alt="HTML5" />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image width ={100} height ={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -2350,7 +2345,7 @@ const page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image width ={100} height ={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -2359,7 +2354,7 @@ const page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image width ={100} height ={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
                         className="lazy"
@@ -2369,7 +2364,7 @@ const page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image width ={100} height ={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
                         className="lazy"
@@ -2380,37 +2375,37 @@ const page = () => {
                 </ul>
               </div>
               <div className="col-sm-6">
-                <ul class="list_detail">
-                  <li class="same">
+                <ul className="list_detail">
+                  <li className="same">
                     <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
                     Safari 5+, IE 9+
                   </li>
-                  <li class="same ">
+                  <li className="same ">
                     <b>Framework - </b> Laravel 10.x ReactJS (Version 18.2.0)
                   </li>
-                  <li class="same">
+                  <li className="same">
                     <b>Language - </b> PHP 8.2 Supported ReactJS (library),
                     jQuery
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap4, JavaScript
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Laravel - </b> 10.x{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>PHP - </b> 8.2{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Database - </b> MySQL 5.5+
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Server - </b> Apache 2.4+
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>iOS - </b> xcode 10.2.1 and swift 4.2{" "}
                   </li>
-                  <li class="other">
+                  <li className="other">
                     <b>Android - </b> java 9 and Android Studio 3.4
                   </li>
                 </ul>
@@ -2428,7 +2423,7 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image width ={60} height ={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -2437,7 +2432,7 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image width ={60} height ={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -2446,13 +2441,13 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image width ={60} height ={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image width ={50} height ={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -2465,7 +2460,7 @@ const page = () => {
       </section>
       <section className="ecommerce_review_section" id="reviews">
         <div className="ecommerce_review__img">
-          <img
+          <Image width ={400} height ={100}
             src="https://www.logicspice.com/app/webroot/img/images/ecommerce/ecommerce-review-img.png"
             alt="eCommerce Ultimate Package"
             className=""
@@ -2480,7 +2475,7 @@ const page = () => {
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
                     I have purchased this script and has constructed my own
-                    job-site. This was an easy task because of logicspice's free
+                    job-site. This was an easy task because of logicspice&apos;s free
                     installation and support. Keep up the good work. I will be
                     back for more in the future.
                   </div>
@@ -2497,7 +2492,7 @@ const page = () => {
                     </span>
                     John, USA
                     <span>
-                      <img
+                      <Image width ={100} height ={100}
                         src="https://www.logicspice.com/img/images/usa_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
@@ -2525,7 +2520,7 @@ const page = () => {
                     </span>
                     <span id="client-name">D. Smith, Germany in USA</span>{" "}
                     <span>
-                      <img
+                      <Image width ={100} height ={100}
                         src="https://www.logicspice.com/img/images/german.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
@@ -2539,7 +2534,7 @@ const page = () => {
                     Recently I bought this script from logicspice and it worked
                     really nice, it helped my business to gain more efficiency.
                     I recommend for all whom looking for a job board script,
-                    it's really nice.
+                    it&apos;s really nice.
                   </div>
 
                   <div className="who_ratset">
@@ -2555,7 +2550,7 @@ const page = () => {
                     </span>
                     <span id="client-name">mike wilshon, AUS</span>{" "}
                     <span>
-                      <img
+                      <Image width ={100} height ={100}
                         src="https://www.logicspice.com/img/images/australia_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
@@ -3028,97 +3023,97 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="title_main">LS Jobber Features</h2>
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="title_main">LS Jobber Features</h2>
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width ={900} height ={100}
                     src="/img/jobboard/job_portal_script_apply_jobs.png"
                     alt="Job Application"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Job Application</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Job Application</div>
+                  <div className="pro-feat-detai">
                     Jobseekers can apply for the job directly to the company or
                     they can attach a cover letter along with their application.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width ={900} height ={100}
                     src="/img/jobboard/Job_portal_script_create_job.png"
                     alt="Create New Job"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Create New Job</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Create New Job</div>
+                  <div className="pro-feat-detai">
                     Employers create new jobs by entering details i.e. Job
                     title,Category,Description,Company Name, Work Type.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width ={900} height ={100}
                     src="/img/jobboard/job_portal_system_search_jobs.png"
                     alt="Job Search"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Job Search</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Job Search</div>
+                  <div className="pro-feat-detai">
                     Search jobs by keywords, category, location, industry,
                     functional area & city.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width ={900} height ={100}
                     src="/img/jobboard/make_a_cv_job_portal_app.png"
                     alt="Create CV"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Create CV</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Create CV</div>
+                  <div className="pro-feat-detai">
                     Jobseekers will be able to create and download their CV on
                     the website. All the details will get automated from
                     profile.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width ={900} height ={100}
                     src="/img/jobboard/Manage_jobs_job_portal_script.png"
                     alt="Job Management"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Job Management</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Job Management</div>
+                  <div className="pro-feat-detai">
                     Manage the jobs created by them making them active or
                     inactive. Check the list of job seekers who applied for job.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image width ={900} height ={100}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
                     alt="Membership Plan"
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Membership Plan</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Membership Plan</div>
+                  <div className="pro-feat-detai">
                     Employers buy membership plan which suits their requirement
                     best.They can renew or update your membership plan at any
                     time.
@@ -3180,10 +3175,10 @@ const page = () => {
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image width ={300} height ={100}
                             src="/img/jobboard/udemy_new.png"
                             alt="Udemy Clone"
-                            class=""
+                            className=""
                           />
                         </div>
                         <p>
@@ -3208,10 +3203,10 @@ const page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image width ={300} height ={100}
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
-                            class=""
+                            className=""
                           />
                         </div>
                         <p>
@@ -3237,10 +3232,10 @@ const page = () => {
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image width ={300} height ={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
-                            class=""
+                            className=""
                           />
                         </div>
                         <p>
@@ -3261,7 +3256,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image width ={100} height ={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -3276,4 +3271,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

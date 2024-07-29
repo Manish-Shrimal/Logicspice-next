@@ -4,7 +4,7 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Lsclassified from "@/app/Components/Lsclassified";
@@ -16,8 +16,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const [buyerTab, setBuyerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
@@ -29,7 +30,22 @@ const page = () => {
   const [buyjobportal, setBuyJobportal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [pageData, setPageData] = useState([]);
 
+  const getData = async() => {
+    try {
+        const response = await axios.get(BaseAPI + '/product/Details/classified-ads-script');
+        // console.log(response.data.data)
+        setPageData(response.data.data);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
@@ -83,8 +99,10 @@ const page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
                           src="/img/images/more-info.png"
+                          width={100}
+                          height={100}
                           alt=""
                         />
                       </i>
@@ -141,37 +159,47 @@ const page = () => {
                     <Link href="#subscriptionprice">click here</Link>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
+                      width={100}
+                      height={100}
                     />
                     <p>24 Reviews</p>
                   </div>
                 </div>
               </div>
               <div className="jocpp">
-                <ul class="job-pr-icon">
+                <ul className="job-pr-icon">
                   <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                {/* <Image
                   src="/img/classified/classsifiedr-banner-img.png"
                   alt="classNameified_Ads_Script"
+                  width={100}
+                  height={100}
+                /> */}
+                <Image
+                  src="/img/classified/classsifiedr-banner-img.png"
+                  alt="classified_Ads_Script"
+                  width={500}
+                  height={500 / (100 / 100)} // Adjust height to maintain aspect ratio
                 />
               </div>
             </div>
@@ -273,8 +301,8 @@ const page = () => {
             the admin dashboard to smoothly manage the users, ads, categories,
             comments, and more.
           </div>
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job tab_bbx_job_classified">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job tab_bbx_job_classified">
               <ul className="">
                 <li
                   id="tab2_li"
@@ -294,32 +322,36 @@ const page = () => {
                 </li>
               </ul>
             </div>
-            <div class="tab_contant">
+            <div className="tab_contant">
               {buyerTab && (
                 <>
-                  <div class="costomer_tab rj active" id="tab2">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right">
-                          <img
+                  <div className="costomer_tab rj active" id="tab2">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right">
+                          <Image
                             src="/img/classified/classified_costomer.png"
                             alt="User"
+                            width={400}
+                            height={400}
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Create account
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can register on the portal for posting
                                     ad on the portal.
@@ -329,14 +361,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/multiple_picture.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Multiple Picture Upload
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Posting multiple picture relevant to your
                                     product give more details to the customer.
@@ -346,14 +380,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/share_review.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Social Media Sharing
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Share this classified ad to the social media
                                     platform to increase awareness about the
@@ -364,14 +400,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/social_login.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Social Media Login
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can directly login through social media
                                     i.e. facebook, twitter and google+.
@@ -381,14 +419,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_classified.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Classified
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can manage(add/edit/delete) classifieds
                                     & can activate/deactivate them with a single
@@ -399,14 +439,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/filter_project.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Advanced Filters
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can search for the classified by city,
                                     country, keyword, category, subcategory.
@@ -416,14 +458,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/postan_ad.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Post Classified
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can post classified by giving the
                                     required details with the relevant images.
@@ -433,14 +477,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_category.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Classified Category
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can view the search as per Classified
                                     Category and and view it in detail.
@@ -450,14 +496,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/search_location.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Location Based
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can Post classified to the individual
                                     location if your ads is more relevant to
@@ -468,14 +516,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Classified Listings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can view the classifieds where the user
                                     can view details in with name, city, images,
@@ -486,14 +536,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_comments.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Message Feature
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     User can contact to the classified ad owner
                                     through message to get more information
@@ -504,14 +556,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_alerts.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 View Alerts
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>User can view the alerts using email.</p>
                                 </div>
                               </span>
@@ -525,29 +579,33 @@ const page = () => {
               )}
               {adminTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab3">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3 ">
-                        <div class="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                  <div className="costomer_tab rj" id="tab3">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3 ">
+                        <div className="costomer_tab_right costomer_tab_rightleft2">
+                          <Image
                             src="/img/classified/lsclassified_admin_mac.png"
                             alt="Admin Panel"
+                            width={400}
+                            height={400}
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright2">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Secure Login
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can login securely in Admin Panel.
                                   </p>
@@ -556,14 +614,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Dashboard
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view total counts of Users,
                                     Classifieds & Categories. Admin can view the
@@ -575,14 +635,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Users
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view a list of all Users. Admin
                                     can manage (add/edit/delete) all Users.
@@ -592,14 +654,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/equipment_search.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Search & Filter Feature
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can search users by entering a first
                                     name, last name, email or created date.
@@ -610,14 +674,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Configuration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can change a username, password,
                                     email, set contact us address & can do site
@@ -628,14 +694,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Category
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of categories. Admin
                                     can manage (add/edit/delete) all categories.
@@ -645,14 +713,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Subcategory
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of sub-categories.
                                     Admin can manage (add/edit/delete) all
@@ -663,14 +733,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_classified.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Classifieds
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of Classifieds.
                                     Admin can manage (add/edit/delete) all
@@ -681,14 +753,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_bookings.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 View and Manage Comments
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list on comments over
                                     classifieds. Admin can approve & Disapprove
@@ -699,14 +773,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_content.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage CMS(Content Management System)
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage(add/edit/delete) all front
                                     end content of the website.
@@ -716,14 +792,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_address.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Top Location
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view list of top locations & can
                                     manage(add/edit/delete) all Top Location.
@@ -733,14 +811,16 @@ const page = () => {
                             </li>{" "}
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/active_deactive.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Activate/Deactivate Categories
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can activate & deactivate the
                                     categories.
@@ -894,10 +974,14 @@ const page = () => {
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
               <h4>
-                ₹88,160<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                ₹147,754<span className="sml_labl"> INR</span>{" "}
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
 
               <div className="SubscriptionModelPriceBtn">
@@ -924,23 +1008,25 @@ const page = () => {
                 <ul className="job-pr-icon">
                   <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
+                      width={100}
+                      height={100}
                     />
                     <p>24 Reviews</p>
                   </div>
@@ -1011,27 +1097,29 @@ const page = () => {
             <br />
             <div className="logic-parter">
               <a
-                class=""
+                className=""
                 aria-controls="jobportal"
                 onClick={toggleJobPortalModal}
               >
-                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <i className="fa fa-cogs" aria-hidden="true"></i>
                 <span>How It Works</span>
               </a>
               <a
-                class=""
+                className=""
                 aria-controls="buyjobportal"
                 onClick={toggleBuyJobPortalModal}
               >
-                <i class="fa fa-building" aria-hidden="true"></i>
+                <i className="fa fa-building" aria-hidden="true"></i>
                 <span>Companies Using It</span>
               </a>
-              <a onClick={toggleInfo} class="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
+                  <Image
                     src="/img/images/why-logic-icon.png"
                     alt=""
-                    class=""
+                    className=""
+                    width={20}
+                    height={100}
                   />
                 </i>
                 <span>Why Logicspice</span>
@@ -1053,11 +1141,13 @@ const page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <img
-              src="/img/fiverrclone/gigger-how-it-works.jpg"
+            <Image
+              src="/img/classified/Ls_classidied_infographic.jpg"
               alt="icon"
               title=""
               className="img-fluid"
+              width={900}
+              height={100}
             />
           </Modal.Body>
           <Modal.Footer>
@@ -1083,130 +1173,57 @@ const page = () => {
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...settings}>
-                <div class="SliderMainBx">
+                <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://medinest.info"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      medinest.info
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://medinest.info"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
+                    <Image
+                      src="/img/classified/medinest.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
-                <div class="SliderMainBx">
+                <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://pharmsat.info"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      pharmsat.info
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://pharmsat.info"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
+                    <Image
+                      src="/img/classified/pharmsat.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div class="SliderMainBx">
-                  <div class="feat-slide-img">
-                    <img
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
-                    />
-                  </div>
-                  <div class="hands-proved">
-                    <div class="titleof_scnew">Job Management</div>
-                    <div class="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
-                </div>
-                <div class="SliderMainBx">
-                  <div class="feat-slide-img">
-                    <img
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
-                    />
-                  </div>
-                  <div class="hands-proved">
-                    <div class="titleof_scnew">Membership Plan</div>
-                    <div class="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
-                </div>
+               
               </Slider>
             </div>
           </Modal.Body>
@@ -1231,53 +1248,68 @@ const page = () => {
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="wordpress Development"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Wordpress</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                        width={40}
+                        height={100}
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
                         className="lazy"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">iOS</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
                         className="lazy"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Android</div>
@@ -1326,33 +1358,44 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                    width={50}
+                    height={100}
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
+                    width={40}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Easily scalable</div>
@@ -1461,26 +1504,27 @@ const page = () => {
                     </div>
                   </div>
                 </div>
-                
-                  <div class="col-md-7">
-                    <a class="btn btn-primary" onClick={openReviewModel}>
-                      Rate and Review product
-                    </a>
 
-                    <Reviewmodals
-                      modalStatus={showReviewModal}
-                      toggle={openReviewModel}
-                      title="PHP Business Directory Script"
-                    />
-                  </div>
-                
+                <div className="col-md-7">
+                  <a className="btn btn-primary" onClick={openReviewModel}>
+                    Rate and Review product
+                  </a>
+
+                  <Reviewmodals
+                    modalStatus={showReviewModal}
+                    toggle={openReviewModel}
+                    title="PHP Business Directory Script"
+                  />
+                </div>
+
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "I have purchased this script and has constructed my own
-                      web-site. This was an easy task because of logicspice's
-                      free installation and support. Keep up the good work. I
-                      will be back for more in the future."
+                      &quot;I have purchased this script and has constructed my
+                      own web-site. This was an easy task because of
+                      logicspice&apos;s free installation and support. Keep up
+                      the good work. I will be back for more in the
+                      future.&quot;
                     </div>
                     <div
                       className="who_ratset"
@@ -1498,19 +1542,21 @@ const page = () => {
                       </span>
                       John, USA{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={20}
                         />
                       </span>
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext" id="fiveer-clone">
-                      "This is the best fiverr clone script. Thanks for your
-                      great efforts and support while installing the script.
-                      Your prompt service regarding a few minor issues was
-                      superb."
+                      &quot;This is the best fiverr clone script. Thanks for
+                      your great efforts and support while installing the
+                      script. Your prompt service regarding a few minor issues
+                      was superb.&quot;
                     </div>
 
                     <div
@@ -1529,19 +1575,21 @@ const page = () => {
                       </span>
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
+                          width={20}
+                          height={20}
                         />
                       </span>
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "Recently I bought this script from logicspice and it
+                      &quot;Recently I bought this script from logicspice and it
                       worked really nice, it helped my business to gain more
                       efficiency. I recommend for all whom looking for a Fiverr
-                      Clone script, it's really nice."
+                      Clone script, it&apos;s really nice.&quot;
                     </div>
                     <div
                       className="who_ratset"
@@ -1559,9 +1607,11 @@ const page = () => {
                       </span>
                       mike wilshon, AUS{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={20}
                         />
                       </span>
                     </div>
@@ -1647,10 +1697,10 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
@@ -1680,11 +1730,13 @@ const page = () => {
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Business Directory</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/business-logo.png"
                             alt="business-directory-system"
-                            class=""
+                            className=""
+                            width={200}
+                            height={200}
                           />
                         </div>
                         <p>
@@ -1706,10 +1758,12 @@ const page = () => {
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
-                            class=""
+                            className=""
+                            width={200}
+                            height={200}
                           />
                         </div>
                         <p>
@@ -1732,10 +1786,12 @@ const page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
-                            class=""
+                            className=""
+                            width={200}
+                            height={200}
                           />
                         </div>
                         <p>
@@ -1759,7 +1815,12 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -1772,4 +1833,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

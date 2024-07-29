@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -14,13 +14,13 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -31,6 +31,24 @@ const page = () => {
   const toggleInfo = () => {
     setShowInfo(!showInfo);
   };
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async() => {
+    try {
+        const response = await axios.get(BaseAPI + '/product/Details/forum-script');
+        // console.log(response.data.data)
+        setPageData(response.data.data);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   var settings = {
     dots: true,
     arrows: true,
@@ -65,14 +83,14 @@ const page = () => {
   return (
     <>
       <NavBar />
-<section className="paid-pro job-portal-banner fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg PHPForumScript">
-    <div className="container">
-        <div className="row">
+      <section className="paid-pro job-portal-banner fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg PHPForumScript">
+        <div className="container">
+          <div className="row">
             <div className="col-sm-7 col-md-7">
-                <h1>PHP Forum Script</h1>
-                <div className="both-left-p-sec">
-                    <h2>Readymade Online Forum Software</h2>                      
-                </div>
+              <h1>PHP Forum Script</h1>
+              <div className="both-left-p-sec">
+                <h2>Readymade Online Forum Software</h2>
+              </div>
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
                   <h4>
@@ -82,7 +100,9 @@ const page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -112,13 +132,18 @@ See how it work yourself!"
                       />
                     }
                   </div>
-                  <Link className="btn fiverr-buys NewGreenBtnJob" href="/softwares/forum-script">
+                  <Link
+                    className="btn fiverr-buys NewGreenBtnJob"
+                    href="/softwares/forum-script"
+                  >
                     Buy Now
                   </Link>
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -127,7 +152,6 @@ See how it work yourself!"
                 </div>
               </div>
 
-              
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
@@ -138,7 +162,9 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                <Image
+                  width={450}
+                  height={500 / (100 / 100)}
                   alt="forum_mobile"
                   src="/img/softwares-banner-img/forum-banner-img.png"
                 />
@@ -155,62 +181,72 @@ See how it work yourself!"
                   <a href="/softwares">Softwares</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                Forum Script
+                  Forum Script
                 </li>
               </ol>
             </div>
           </div>
         </div>
       </section>
-<section className="job-section-top-new JobBoardSectionNew">
-    <div className="container">
-        <p>Want to develop your online discussion forum to enable your audience to interact with each other? Get our ready to use forum script to make your help forum in no time. 
-            This script helps your users to connect in a place where they can share their queries and experience. It allows users to create an account, open threads, reply to 
-            messages and more. </p>
-    </div>
-</section>
-      <section className="client-say WhatsaapCliets" style={{ backgroundColor: "#fff" }}>
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
+          <p>
+            Want to develop your online discussion forum to enable your audience
+            to interact with each other? Get our ready to use forum script to
+            make your help forum in no time. This script helps your users to
+            connect in a place where they can share their queries and
+            experience. It allows users to create an account, open threads,
+            reply to messages and more.{" "}
+          </p>
+        </div>
+      </section>
+      <section
+        className="client-say WhatsaapCliets"
+        style={{ backgroundColor: "#fff" }}
+      >
         <div className="container">
           <div className="row">
-          
             <div className="col-md-12">
-            <div className="service-market-ttd">
-            <ul>
-                        <li>Profile Customization</li>
-                        <li>Category Management</li>
-                        <li>Responsive & SEO Friendly</li>
-                        <li>User-Friendly Dashboard</li>
-                        <li>Forum Search Option</li>
-                        <li>White Labeled Script</li>
-                        <li>One time License Fee</li>
-
-                    </ul>
-                </div>
-
+              <div className="service-market-ttd">
+                <ul>
+                  <li>Profile Customization</li>
+                  <li>Category Management</li>
+                  <li>Responsive & SEO Friendly</li>
+                  <li>User-Friendly Dashboard</li>
+                  <li>Forum Search Option</li>
+                  <li>White Labeled Script</li>
+                  <li>One time License Fee</li>
+                </ul>
+              </div>
             </div>
-
-
           </div>
         </div>
       </section>
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-          <h2 className="taxt_tt_job">Forum Script Features</h2>
+            <h2 className="taxt_tt_job">Forum Script Features</h2>
           </div>
 
-          <div className="tatxt_txt_job text-center">This software has all basic functionality like user registration and enables the user to customize their profiles and 
-            can increase engagement. It has a powerful text editor to create and customize the post. Users can create as many discussion threads as per their needs. 
-            This software is robust, scalable, secure and admin can take complete control over the forum with the admin dashboard. Aside from given functionality, 
-            you can customize this script according to your needs.
-        </div>
+          <div className="tatxt_txt_job text-center">
+            This software has all basic functionality like user registration and
+            enables the user to customize their profiles and can increase
+            engagement. It has a powerful text editor to create and customize
+            the post. Users can create as many discussion threads as per their
+            needs. This software is robust, scalable, secure and admin can take
+            complete control over the forum with the admin dashboard. Aside from
+            given functionality, you can customize this script according to your
+            needs.
+          </div>
 
           <div className="tab_bbx_job">
-            <div className="tab_bbx_top_job tab_bbx_job_classNameified">
+            <div className="tab_bbx_top_job tab_bbx_job_classified">
               <ul className="">
                 <li
                   id="tab1_li"
-                  className={`jobseeker_app_job ddlj ${sellerTab ? "active" : ""}`}
+                  className={`jobseeker_app_job ddlj ${
+                    sellerTab ? "active" : ""
+                  }`}
                   onClick={() => handleSellerTab()}
                 >
                   <a>User</a>
@@ -231,182 +267,357 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <img
+                          <Image
+                            width={300}
+                            height={100}
                             src="/img/forum-script/fourms-multiphone.png"
                             alt="Forum User"
                           />
-                        
                         </div>
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright">
-                        <ul>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/secure_login.png" /></i>
-                                        <span>User signup
-                                            <div className="product-idea">
-                                                <p>User can register on the Portal.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/configuration.png" /></i>
-                                        <span>User Login
-                                            <div className="product-idea">
-                                                <p>User login is secured</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage-dashboard.png" /></i>
-                                        <span>User Management
-                                            <div className="product-idea">
-                                                <p>Users can manage all their Profile details. </p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_user.png" /></i>
-                                        <span>Manage account
-                                            <div className="product-idea">
-                                                <p>User can view account and edit account.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_contents.png" /></i>
-                                        <span>Forum Management
-                                            <div className="product-idea">
-                                                <p>Users can manage all Forums which include adding,editing and deleting them and activate,deactivate them.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_service.png" /></i>
-                                        <span>Search forum
-                                            <div className="product-idea">
-                                                <p>Users can search forums.</p>
-                                            </div>
-                                        </span>
-                                    </li> 
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_service.png" /></i>
-                                        <span>View Forum details
-                                            <div className="product-idea">
-                                                <p>Users can view Forums details of the selected forum like Forum name,image.</p>
-                                            </div>
-                                        </span>
-                                    </li>  
-                                     <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_service.png" /></i>
-                                        <span>Manage Forum Comment List
-                                            <div className="product-idea">
-                                                <p>Any user can add new comments from the front end over the forum which is added by user or admin.</p>
-                                            </div>
-                                        </span>
-                                    </li>   
-                                     <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_service.png" /></i>
-                                        <span>Manage Reply List
-                                            <div className="product-idea">
-                                                <p>Users can reply to comments from the front end over the forum which is added by user or admin.</p>
-                                            </div>
-                                        </span>
-                                    </li>     
-                                    
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                />
+                              </i>
+                              <span>
+                                User signup
+                                <div className="product-idea">
+                                  <p>User can register on the Portal.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/configuration.png"
+                                />
+                              </i>
+                              <span>
+                                User Login
+                                <div className="product-idea">
+                                  <p>User login is secured</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage-dashboard.png"
+                                />
+                              </i>
+                              <span>
+                                User Management
+                                <div className="product-idea">
+                                  <p>
+                                    Users can manage all their Profile details.{" "}
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_user.png"
+                                />
+                              </i>
+                              <span>
+                                Manage account
+                                <div className="product-idea">
+                                  <p>User can view account and edit account.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_contents.png"
+                                />
+                              </i>
+                              <span>
+                                Forum Management
+                                <div className="product-idea">
+                                  <p>
+                                    Users can manage all Forums which include
+                                    adding,editing and deleting them and
+                                    activate,deactivate them.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_service.png"
+                                />
+                              </i>
+                              <span>
+                                Search forum
+                                <div className="product-idea">
+                                  <p>Users can search forums.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_service.png"
+                                />
+                              </i>
+                              <span>
+                                View Forum details
+                                <div className="product-idea">
+                                  <p>
+                                    Users can view Forums details of the
+                                    selected forum like Forum name,image.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_service.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Forum Comment List
+                                <div className="product-idea">
+                                  <p>
+                                    Any user can add new comments from the front
+                                    end over the forum which is added by user or
+                                    admin.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_service.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Reply List
+                                <div className="product-idea">
+                                  <p>
+                                    Users can reply to comments from the front
+                                    end over the forum which is added by user or
+                                    admin.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </>
               )}
-              
+
               {adminTab && (
                 <>
                   <div className="costomer_tab rj" id="tab3">
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                          <Image
+                            width={300}
+                            height={100}
                             src="/img/forum-script/fourms-dashboard.png"
                             alt="Admin Panel"
                           />
-                        
                         </div>
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright2">
-                        <ul>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/ragister-icon.png" /></i>
-                                        <span>Admin Login
-                                            <div className="product-idea">
-                                                <p>Admin login is secured.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_profile.png" /></i>
-                                        <span>Admin Dashboard
-                                            <div className="product-idea">
-                                                <p>Admin can manage their account settings and see their information over the dashboard.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/private-chat.png" /></i>
-                                        <span>Configuration
-                                            <div className="product-idea">
-                                                <p>Able to change the Username / Password / Change Email.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_job.png" /></i>
-                                        <span>Forum Categories Management
-                                            <div className="product-idea">
-                                                <p>Admin can manage all Forum categories which includes adding,editing and deleting them and activate,deactivate them.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/search-friend.png" /></i>
-                                        <span>Forum Management
-                                            <div className="product-idea">
-                                                <p>Admin can manage all Forums which includes adding,editing and deleting them and activate,deactivate them.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/add-group.png" /></i>
-                                        <span>User Management
-                                            <div className="product-idea">
-                                                <p>Admin can manage all Users which includes adding,editing and deleting them and activate,deactivate them.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/update-group.png" /></i>
-                                        <span>Manage Forum Comment List
-                                            <div className="product-idea">
-                                                <p>Admin can view all comments or give comments over any Forum which is added by user or admin.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/delete-group.png"/></i>
-                                        <span>Manage Reply List
-                                            <div className="product-idea">
-                                                <p>Admin can view all replies or give replies over any comment .</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                   
-                                  
-                                    
-                                   
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/ragister-icon.png"
+                                />
+                              </i>
+                              <span>
+                                Admin Login
+                                <div className="product-idea">
+                                  <p>Admin login is secured.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_profile.png"
+                                />
+                              </i>
+                              <span>
+                                Admin Dashboard
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage their account settings and
+                                    see their information over the dashboard.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/private-chat.png"
+                                />
+                              </i>
+                              <span>
+                                Configuration
+                                <div className="product-idea">
+                                  <p>
+                                    Able to change the Username / Password /
+                                    Change Email.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_job.png"
+                                />
+                              </i>
+                              <span>
+                                Forum Categories Management
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage all Forum categories which
+                                    includes adding,editing and deleting them
+                                    and activate,deactivate them.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/search-friend.png"
+                                />
+                              </i>
+                              <span>
+                                Forum Management
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage all Forums which includes
+                                    adding,editing and deleting them and
+                                    activate,deactivate them.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/add-group.png"
+                                />
+                              </i>
+                              <span>
+                                User Management
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage all Users which includes
+                                    adding,editing and deleting them and
+                                    activate,deactivate them.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/update-group.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Forum Comment List
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view all comments or give comments
+                                    over any Forum which is added by user or
+                                    admin.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/delete-group.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Reply List
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view all replies or give replies
+                                    over any comment .
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -418,47 +629,120 @@ See how it work yourself!"
         </div>
       </section>
       <section className="job_product_page_header_in">
-    <div className="container">
-        <div className="whateissuprt">
-            <h2 className="headhs">What does our Online Forum Software offer you?</h2>
-            <p>Having an online discussion forum has become the need of every online business nowadays as tends to reduce time to connect with the company and the users. By discussing the queries in a common transparent platform you can improve productivity within your team, stakeholders and prospective clients. With our ready to use forum script, you can create an online community so your audience will naturally feel more engaged with your product or project.  </p>
-            <p>This PHP forum script has a secure admin dashboard where admin can control the forum by viewing and deleting the list of all registered users and can edit and delete their topics and comment which provides full command over the forum. Users can raise the questions regarding knowledge, reviews, suggestions threads of product or services by our easy to use help forum. It can be easily integrated with your website in less time.</p>
-            <p>The active forum makes the users and prospective clients feel authenticated regarding your product or service. Get our readymade forum clone and save your development cost.</p>
-
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">
+              What does our Online Forum Software offer you?
+            </h2>
+            <p>
+              Having an online discussion forum has become the need of every
+              online business nowadays as tends to reduce time to connect with
+              the company and the users. By discussing the queries in a common
+              transparent platform you can improve productivity within your
+              team, stakeholders and prospective clients. With our ready to use
+              forum script, you can create an online community so your audience
+              will naturally feel more engaged with your product or project.{" "}
+            </p>
+            <p>
+              This PHP forum script has a secure admin dashboard where admin can
+              control the forum by viewing and deleting the list of all
+              registered users and can edit and delete their topics and comment
+              which provides full command over the forum. Users can raise the
+              questions regarding knowledge, reviews, suggestions threads of
+              product or services by our easy to use help forum. It can be
+              easily integrated with your website in less time.
+            </p>
+            <p>
+              The active forum makes the users and prospective clients feel
+              authenticated regarding your product or service. Get our readymade
+              forum clone and save your development cost.
+            </p>
+          </div>
         </div>
-    </div>
-</section>
-<section className="SubscriptionModel" id="subscriptionmodel">
-    <div className="container">	
-        <div className="job_or_title">
-            <h2 className="taxt_tt_job">Subscription Model</h2><br/>
+      </section>
+      <section className="SubscriptionModel" id="subscriptionmodel">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
+            <br />
             <div className="SubscriptionModelBx">
-                <p>Experience convenience like never before with our subscription-based hassle-free model, available at just <strong>USD 45 per month</strong>, limited offer available for the first year.</p>
-                <p>Key Benefits:</p>
-                <ul>
-                    <li><span>Lifetime Updates: Enjoy complimentary updates for your software version throughout its lifespan.</span></li>
-                    <li><span>Timely Upgrades: Seamlessly transition to upgraded versions at regular intervals, all at no extra cost.</span></li>
-                    <li><span><strong>Zero Setup Fees</strong>:- There are no additional charges for the setup and installation of the software, making it easier for customers to get started.</span></li>
-                    <li><span>Unlimited User Connection Listings: List as many user connections as you need without any limitations.</span></li>
-                    <li><span>Effortless Program Operation: Revel in robust bandwidth that guarantees your program runs flawlessly, supported by resources allocated to your subscription model. Any increase in allocated resources will incur additional charges beyond the standard subscription model.</span></li>
-                    <li><span>Enduring Support: We are committed to providing lifelong assistance through our subscription model. If any software issues arise, our <strong>dedicated technical team</strong> will promptly address them during office hours.</span></li>
-                <li><span>Personalized Customization Assistance: Delivering Custom Features According to Client Requirements at additional cost.</span></li>      
-                </ul>
-                <p>Discover a new era of convenience and efficiency with our subscription offering. Subscribe today and elevate your experience with our readymade solution!</p>
+              <p>
+                Experience convenience like never before with our
+                subscription-based hassle-free model, available at just{" "}
+                <strong>USD 45 per month</strong>, limited offer available for
+                the first year.
+              </p>
+              <p>Key Benefits:</p>
+              <ul>
+                <li>
+                  <span>
+                    Lifetime Updates: Enjoy complimentary updates for your
+                    software version throughout its lifespan.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Timely Upgrades: Seamlessly transition to upgraded versions
+                    at regular intervals, all at no extra cost.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Zero Setup Fees</strong>:- There are no additional
+                    charges for the setup and installation of the software,
+                    making it easier for customers to get started.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Unlimited User Connection Listings: List as many user
+                    connections as you need without any limitations.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Effortless Program Operation: Revel in robust bandwidth that
+                    guarantees your program runs flawlessly, supported by
+                    resources allocated to your subscription model. Any increase
+                    in allocated resources will incur additional charges beyond
+                    the standard subscription model.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Enduring Support: We are committed to providing lifelong
+                    assistance through our subscription model. If any software
+                    issues arise, our <strong>dedicated technical team</strong>{" "}
+                    will promptly address them during office hours.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Personalized Customization Assistance: Delivering Custom
+                    Features According to Client Requirements at additional
+                    cost.
+                  </span>
+                </li>
+              </ul>
+              <p>
+                Discover a new era of convenience and efficiency with our
+                subscription offering. Subscribe today and elevate your
+                experience with our readymade solution!
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
       <section id="subscriptionprice" className="SubscriptionpriceSection">
         <div className="container">
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              <h4>
-                ₹19,222<span className="sml_labl"> INR</span>
+            <h4>
+                {pageData.currency_symbol}{pageData.price}<span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                ₹39,332<span className="sml_labl"> INR</span>
+                {pageData.currency_symbol}{pageData.other_price}<span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
                 {/* <Link
@@ -470,16 +754,16 @@ See how it work yourself!"
                   Get Demo Access!
                 </Link> */}
                 <div className="btn btn-get" onClick={openModal}>
-                    <button>Get Demo Access!</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Forum Script.
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of Forum Script.
 See how it work yourself!"
-                      />
-                    }
-                  </div>
+                    />
+                  }
+                </div>
                 <Link
                   className="btn fiverr-buys"
                   href="/softwares/forum-script"
@@ -495,7 +779,13 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <img src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>17 Reviews</p>
                   </div>
                 </div>
@@ -556,8 +846,7 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-    
-     
+
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
           <div className="job_or_title">
@@ -566,9 +855,15 @@ See how it work yourself!"
             </h2>
             <br />
             <div className="logic-parter">
-            <a onClick={toggleInfo} className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img src="/img/images/why-logic-icon.png" alt="" className="" />
+                  <Image
+                    width={20}
+                    height={100}
+                    src="/img/images/why-logic-icon.png"
+                    alt=""
+                    className=""
+                  />
                 </i>
                 <span>Why Logicspice</span>
               </a>
@@ -581,7 +876,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/coding.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coding.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
@@ -597,7 +897,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/data-complexity.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data-complexity.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Strong Framework of PHP & Well managed database</h3>
                     <p>
@@ -614,7 +919,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/coordinate.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coordinate.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>
                       Quick Response and
@@ -634,7 +944,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/customize.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/customize.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
@@ -649,7 +964,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/smartphone-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/smartphone-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Mobile Friendly Script</h3>
                     <p>
@@ -664,7 +984,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/data.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Dedicated Support Team</h3>
                     <p>
@@ -681,7 +1006,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/web-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/web-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Global company with agile development approach</h3>
                     <p>
@@ -700,7 +1030,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/encrypted.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/encrypted.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customer information and application level security</h3>
                     <p>
@@ -716,7 +1051,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/history-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/history-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
@@ -734,7 +1074,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/seouser-friendly.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/seouser-friendly.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Seo Friendly Development</h3>
                     <p>
@@ -749,7 +1094,9 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                       />
@@ -767,7 +1114,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/third-party-api.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/third-party-api.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Integration With Third Party Api</h3>
                     <p>
@@ -782,7 +1134,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <img src="/img/jobboard/cost-effective.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/cost-effective.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Cost Effective</h3>
                     <p>
@@ -808,7 +1165,9 @@ See how it work yourself!"
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
+                        width={40}
+                        height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -817,13 +1176,20 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={40}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
+                        width={40}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -832,24 +1198,38 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
+                        width={40}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
                   </li>
-                  
                 </ul>
               </div>
               <div className="col-sm-6">
-              <ul className="list_detail">
-                    <li className="same"><b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+, Safari 5+, IE 9+</li> 
-                    <li className="same"><b>Framework  - </b> Laravel 5.5.41</li>  
-                    <li className="same "><b>Language  - </b> PHP 7 Supported, AJAX, jQuery</li> 
-                    <li className="other"><b>Design  - </b> HTML 5, CSS 3, Bootstrap 3.3.7, JavaScript</li> 
-                    <li className="other"><b>Database  - </b> MySQL 5.5+ </li>
-                    <li className="other"><b>Server  - </b>  Apache 2.4+</li>
+                <ul className="list_detail">
+                  <li className="same">
+                    <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
+                    Safari 5+, IE 9+
+                  </li>
+                  <li className="same">
+                    <b>Framework - </b> Laravel 5.5.41
+                  </li>
+                  <li className="same ">
+                    <b>Language - </b> PHP 7 Supported, AJAX, jQuery
+                  </li>
+                  <li className="other">
+                    <b>Design - </b> HTML 5, CSS 3, Bootstrap 3.3.7, JavaScript
+                  </li>
+                  <li className="other">
+                    <b>Database - </b> MySQL 5.5+{" "}
+                  </li>
+                  <li className="other">
+                    <b>Server - </b> Apache 2.4+
+                  </li>
                 </ul>
               </div>
             </div>
@@ -865,7 +1245,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -874,7 +1256,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -883,13 +1267,20 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1001,25 +1392,26 @@ See how it work yourself!"
                   </div>
                 </div>
 
-                
-                  <div className="col-md-7">
-                  
+                <div className="col-md-7">
                   <a className="btn btn-primary" onClick={openReviewModel}>
-                   Rate and Review product
-                 </a>
+                    Rate and Review product
+                  </a>
 
-                 <Reviewmodals
-                   modalStatus={showReviewModal}
-                   toggle={openReviewModel}
-                   title="Food Ordering And Delivery Script"
-                 />
-               </div>
-              
+                  <Reviewmodals
+                    modalStatus={showReviewModal}
+                    toggle={openReviewModel}
+                    title="Food Ordering And Delivery Script"
+                  />
+                </div>
+
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "I have purchased this script and has constructed my own Forum. This was an easy task because of logicspice's free
-                      installation and support. Keep up the good work. I will be back for more in the future. "
+                      &quot;I have purchased this script and has constructed my
+                      own Forum. This was an easy task because of
+                      logicspice&apos;s free installation and support. Keep up
+                      the good work. I will be back for more in the future.
+                      &quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1032,7 +1424,9 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">John, USA</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <img
+                        <Image
+                          width={20}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1041,8 +1435,10 @@ See how it work yourself!"
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "This is the best Forum Script. Thanks for your great efforts and support while installing the script. Your prompt service
-                      regarding a few minor issues was superb."
+                      &quot;This is the best Forum Script. Thanks for your great
+                      efforts and support while installing the script. Your
+                      prompt service regarding a few minor issues was
+                      superb.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1055,7 +1451,9 @@ See how it work yourself!"
                       </span>
                       D. Smith, Germany{" "}
                       <span className="ConuntryFlagIcon">
-                        <img
+                        <Image
+                          width={20}
+                          height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in Germany"
                         />
@@ -1064,8 +1462,10 @@ See how it work yourself!"
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "Recently I bought this script from logicspice and it worked really nice, it helped my business to gain more efficiency. I
-                      recommend for all whom looking for a Forum Script, it's really nice."
+                      &quot;Recently I bought this script from logicspice and it
+                      worked really nice, it helped my business to gain more
+                      efficiency. I recommend for all whom looking for a Forum
+                      Script, it&apos;s really nice.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1078,56 +1478,72 @@ See how it work yourself!"
                       </span>
                       mike wilshon, AUS{" "}
                       <span className="ConuntryFlagIcon">
-                        <img
+                        <Image
+                          width={20}
+                          height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in AUS"
                         />
                       </span>
                     </div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ's</h4>
+              <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Once I purchase this script, how many days will it take to go online?"
                     collapseId="flush-collapse1"
                   >
-                    <p>It takes 2 working days generally, provided all the information to make it live has been given. </p>
+                    <p>
+                      It takes 2 working days generally, provided all the
+                      information to make it live has been given.{" "}
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Can I get help for customization?"
                     collapseId="flush-collapse2"
                   >
-                    <p>Yes, we have an experienced team of developers to help you with customization as per your requirements.</p>
+                    <p>
+                      Yes, we have an experienced team of developers to help you
+                      with customization as per your requirements.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Can I resell the script? Will I have rights over the script code?"
                     collapseId="flush-collapse4"
                   >
-                    <p>No, You can't resell the script. All rights will remain with Logicspice only.</p>
+                    <p>
+                      No, You can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Will I be able to use it on multiple domains, after I purchase this script?"
                     collapseId="flush-collapse5"
                   >
-                    <p>You will be licensed to use it only for the domain, you purchased for.</p>
+                    <p>
+                      You will be licensed to use it only for the domain, you
+                      purchased for.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Along with hosting server details, what other recommendations?"
                     collapseId="flush-collapse14"
                   >
-                    <p>We recommend you purchase SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all the websites 
-                    these days and it provides a secure layer to the website as well.</p>
+                    <p>
+                      We recommend you purchase SSL certificate along with a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all the websites these days and it provides
+                      a secure layer to the website as well.
+                    </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
               </div>
@@ -1141,29 +1557,43 @@ See how it work yourself!"
           <div id="joblboardslide">
             <Slider {...settings}>
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><img src="/img/forum-script/fourms2.png" /></div>
-                    <div className="hands-proved">
-                        <div className="titleof_scnew">Forum listing</div>
-                    </div>
-              </div>
-         
-
-              <div className="SliderMainBx">
-              <div className="feat-slide-img"><img src="/img/forum-script/fourms3.png" /></div>
-                    <div className="hands-proved">
-                        <div className="titleof_scnew">Forum Detail </div>
-                    </div>
+                <div className="feat-slide-img">
+                  <Image
+                    width={1075}
+                    height={100}
+                    src="/img/forum-script/fourms2.png"
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Forum listing</div>
+                </div>
               </div>
 
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><img src="/img/forum-script/fourms4.png" /></div>
-                    <div className="hands-proved">
-                        <div className="titleof_scnew">Dashboard</div>
-                    </div>
+                <div className="feat-slide-img">
+                  <Image
+                    width={1075}
+                    height={100}
+                    src="/img/forum-script/fourms3.png"
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Forum Detail </div>
+                </div>
               </div>
 
-              
-
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    width={1075}
+                    height={100}
+                    src="/img/forum-script/fourms4.png"
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Dashboard</div>
+                </div>
+              </div>
             </Slider>
           </div>
         </div>
@@ -1172,101 +1602,30 @@ See how it work yourself!"
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
-                    <button>Enquire Now</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title=" Forum Script"
-                      />
-                    }
-                  </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="latest_feature_product">
-        <div className="container">
-          <h2 className="title_main">Other Popular Softwares</h2>
-          <div className="other-product-box">
-            <div className="row">
-            <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Udemy Clone</h3>
-
-                        <div className="other-project-logo">
-                          <img
-                            src="/img/jobboard/udemy_new.png"
-                            alt="Udemy Clone"
-                          />
-                        </div>
-                        <p>
-                          <span>Readymade Script of video E- Learning Platform like Udemy.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Job Board Software</h3>
-                        <div className="other-project-logo">
-                          <img
-                            src="/img/jobboard/job-board-logo.png"
-                            alt="Job board software"
-                          />
-                        </div>
-                        <p>
-                          <span>
-                          Best white label job board software. 
-                          </span>{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>WhatsApp Clone App</h3>
-
-                        <div className="other-project-logo">
-                          <img
-                            src="/img/jobboard/ls-chat-logo.png"
-                            alt="WhatsApp Clone App"
-                          />
-                        </div>
-                        <p>
-                          <span>Readymade WhatsApp Clone Script.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title=" Forum Script"
+                  />
+                }
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
+              width={50}
+              height={50}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -1281,4 +1640,4 @@ See how it work yourself!"
   );
 };
 
-export default page;
+export default Page;

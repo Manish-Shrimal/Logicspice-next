@@ -19,8 +19,9 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Certifications" ? "active" : ""}
           onClick={() => handleTabClick("Certifications")}
+          style={{cursor: "pointer"}}
         >
-          <Link href="#Certifications" aria-controls="home" role="tab" data-toggle="tab">
+          <a aria-controls="home" role="tab" data-toggle="tab">
             <span className="cer-icon">
               <img
                 className="lazy"
@@ -29,14 +30,15 @@ const Certificationtabs = () => {
               />
             </span>{" "}
             Certifications
-          </Link>
+          </a>
         </li>
         <li
           role="presentation"
           className={activeTab === "Achievements" ? "active" : ""}
           onClick={() => handleTabClick("Achievements")}
+          style={{cursor: "pointer"}}
         >
-          <Link href="#Achievements" aria-controls="profile" role="tab" data-toggle="tab">
+          <a aria-controls="profile" role="tab" data-toggle="tab">
             <span className="cer-icon">
               <img
                 className="lazy"
@@ -45,14 +47,15 @@ const Certificationtabs = () => {
               />
             </span>{" "}
             Achievements
-          </Link>
+          </a>
         </li>
         <li
           role="presentation"
           className={activeTab === "Affiliates" ? "active" : ""}
           onClick={() => handleTabClick("Affiliates")}
+          style={{cursor: "pointer"}}
         >
-          <Link href="#Affiliates" aria-controls="messages" role="tab" data-toggle="tab">
+          <a aria-controls="messages" role="tab" data-toggle="tab">
             <span className="cer-icon">
               <img
                 className="lazy"
@@ -61,7 +64,7 @@ const Certificationtabs = () => {
               />
             </span>{" "}
             Affiliates
-          </Link>
+          </a>
         </li>
       </ul>
       <div className="tab-content">

@@ -13,8 +13,7 @@ import Certificationtabs from "@/app/Components/Certificationtabs";
 import Workingwith from "@/app/Components/Workingwith";
 import "../../globals.css";
 
-
-const page = () => {
+const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -29,9 +28,6 @@ const page = () => {
   };
   return (
     <>
-      
-      
-      
       <NavBar />
       <section class="hire_developer_back">
         <div class="container">
@@ -56,7 +52,7 @@ const page = () => {
                   class="more_btn deve_btn aos-init aos-animate"
                 >
                   <a
-                    href="https://www.logicspice.com/portfolio/"
+                    href="/portfolio/"
                     class="btn btn-primary"
                   >
                     <span>Portfolio</span>
@@ -78,7 +74,9 @@ const page = () => {
                 data-aos="fade-left"
                 class="right_slide_section aos-init aos-animate"
               >
-                <img
+                <Image
+                   width={500}
+                   height={500 / (100 / 100)}
                   alt="Hire App Developers - Logicspice"
                   src="/img/hiredevelopers/man_slide.png"
                 />
@@ -146,9 +144,11 @@ const page = () => {
             <div class="col-md-8">
               <h3>Senior Developers</h3>
               <div class="mobile_view">
-                <img
+                <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                   alt="Senior Developers"
-                  src="https://www.logicspice.com/app/webroot/img/images/hire-web-developers-technource.png"
+                  src="/img/hiredevelopers/hire-web-developers-technource.png"
                 />
               </div>
               <p></p>
@@ -168,25 +168,32 @@ const page = () => {
               <p></p>
             </div>
             <div class="col-md-4">
-              <img
-                alt="Senior Developers"
-                src="https://www.logicspice.com/app/webroot/img/images/hire-web-developers-technource.png"
-              />
+            <Image
+                  width={400}
+                  height={500 / (100 / 100)}
+                  alt="Senior Developers"
+                  src="/img/hiredevelopers/hire-web-developers-technource.png"
+                />
             </div>
           </div>
           <div class="hire_type hire_type2 row">
             <div class="col-md-4">
-              <img
+              <Image
+                width={400}
+                height={500 / (100 / 100)}
                 alt="TEAM LEAD"
-                src="https://www.logicspice.com/app/webroot/img/images/Web-Developer.png"
+                src="/img/hiredevelopers/Web-Developer.png"
               />
             </div>
             <div class="col-md-8">
               <h3>TEAM LEAD</h3>
               <div class="mobile_view">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   alt="TEAM LEAD"
-                  src="https://www.logicspice.com/app/webroot/img/images/Web-Developer.png"
+                  src="/img/hiredevelopers/Web-Developer.png"
+
                 />
               </div>
               <p></p>
@@ -209,8 +216,6 @@ const page = () => {
               class="btn btn-primary"
               data-toggle="modal"
               data-target="#popup_sc_request"
-              onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frmC").html("Request Free Consultation");
-                            $("#contact_frC").val("Free Consultation For Hire Developers");'
             >
               Request Free Consultation
             </a>
@@ -230,9 +235,11 @@ const page = () => {
           </p>
           <div class="row">
             <div class="col-md-6">
-              <img
+              <Image
+                 width={800}
+                 height={500 / (100 / 100)}
                 alt="app development"
-                src="https://www.logicspice.com/app/webroot/img/images/yt-dev-home-dev-stories.png"
+                src="/img/hiredevelopers/yt-dev-home-dev-stories.png"
               />
             </div>
             <div class="col-md-6">
@@ -265,9 +272,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Qualified, Experienced resources"
-                    src="https://www.logicspice.com/app/webroot/img/images/experience_icon.png"
+                    src="/img/hiredevelopers/experience_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -281,9 +290,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Flexible Hiring Models - Logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/search_icon.png"
+                    src="/img/hiredevelopers/search_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">Flexible Hiring Models</div>
@@ -295,9 +306,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Rapid and Effective development - logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/rapid_icon.png"
+                    src="/img/hiredevelopers/rapid_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -311,9 +324,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Monitor team’s performance"
-                    src="https://www.logicspice.com/app/webroot/img/images/monitor_icon.png"
+                    src="/img/hiredevelopers/monitor_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -327,9 +342,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Track Progress with Project Management"
-                    src="https://www.logicspice.com/app/webroot/img/images/progress_icon.png"
+                    src="/img/hiredevelopers/progress_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -343,9 +360,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Fast and easy communication"
-                    src="https://www.logicspice.com/app/webroot/img/images/comunication_icon.png"
+                    src="/img/hiredevelopers/comunication_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -359,9 +378,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Flexible Timing - Logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/timing_icon.png"
+                    src="/img/hiredevelopers/timing_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">Flexible Timing</div>
@@ -373,9 +394,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Cost-efficient development - logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/cost_icon.png"
+                    src="/img/hiredevelopers/cost_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">Cost-efficient</div>
@@ -387,9 +410,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Consistent Technical and Administrative support"
-                    src="https://www.logicspice.com/app/webroot/img/images/technical_icon.png"
+                    src="/img/hiredevelopers/technical_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -403,9 +428,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Highly Secured Development - Logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/highly_icon.png"
+                    src="/img/hiredevelopers/highly_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -419,9 +446,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Dependable supervision and execution"
-                    src="https://www.logicspice.com/app/webroot/img/images/dependabe_icon.png"
+                    src="/img/hiredevelopers/dependabe_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -435,9 +464,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Optimized Coding - Logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/code_icon.png"
+                    src="/img/hiredevelopers/code_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">Optimized Coding</div>
@@ -449,9 +480,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="deadlines developers"
-                    src="https://www.logicspice.com/app/webroot/img/images/calendar_icon.png"
+                    src="/img/hiredevelopers/calendar_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -465,9 +498,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Project confidentiality - Logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/nda_icon.png"
+                    src="/img/hiredevelopers/nda_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -481,9 +516,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="moneyback gurantee - Logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/gaurantee_icon.png"
+                    src="/img/hiredevelopers/gaurantee_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">100% moneyback gurantee</div>
@@ -495,9 +532,11 @@ const page = () => {
                 data-aos="fade-up"
               >
                 <div class="box_icon_top">
-                  <img
+                  <Image
+                    width={70}
+                    height={100}
                     alt="Availability and scope of expansion - logicspice"
-                    src="https://www.logicspice.com/app/webroot/img/images/scope_icon.png"
+                    src="/img/hiredevelopers/scope_icon.png"
                   />
                 </div>
                 <div class="developer_box_content">
@@ -517,7 +556,7 @@ const page = () => {
             any other specialized skills, our Indian developers are ready to
             bring your vision to life. With extensive expertise and a track
             record of delivering exceptional results, you can trust our team to
-            drive your project's success. Hire Indian developers today and
+            drive your project&apos;s success. Hire Indian developers today and
             experience the Logicspice difference.
           </p>
           <p>
@@ -532,7 +571,7 @@ const page = () => {
             Logicspice has a remarkable footprint among the{" "}
             <a
               target="_blank"
-              href="https://www.logicspice.com/mobile-app-development"
+              href="/mobile-app-development"
             >
               top mobile app development companies
             </a>{" "}
@@ -566,15 +605,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-python-developers">
-                          <img
+                        <a href="/hire-python-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire Python Developers - Logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/python-hire-logo.png"
+                            src="/img/hiredevelopers/python-hire-logo.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-python-developers">
+                        <a href="/hire-python-developers">
                           Hire Python Developers
                         </a>
                       </div>
@@ -592,15 +633,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-reactjs-developers">
-                          <img
+                        <a href="/hire-reactjs-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire ReactJS Developers - Logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/reactjs-hire-logo.png"
+                            src="/img/hiredevelopers/reactjs-hire-logo.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-reactjs-developers">
+                        <a href="/hire-reactjs-developers">
                           Hire ReactJS Developers
                         </a>
                       </div>
@@ -618,15 +661,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-react-native-developers">
-                          <img
+                        <a href="/hire-react-native-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire React Native Developers - Logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/reactjs-hire-logo.png"
+                            src="/img/hiredevelopers/reactjs-hire-logo.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-react-native-developers">
+                        <a href="/hire-react-native-developers">
                           Hire React Native Developers
                         </a>
                       </div>
@@ -644,15 +689,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-android-app-developers">
-                          <img
+                        <a href="/hire-android-app-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire Android App Developer - Logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/andoird_icon.png"
+                            src="/img/hiredevelopers/andoird_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-android-app-developers">
+                        <a href="/hire-android-app-developers">
                           Hire Android App Developer
                         </a>
                       </div>
@@ -670,15 +717,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-ios-app-developers">
-                          <img
+                        <a href="/hire-ios-app-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire iOS/ iPhone App Developer"
-                            src="https://www.logicspice.com/app/webroot/img/images/apple_phn_icon.png"
+                            src="/img/hiredevelopers/apple_phn_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-ios-app-developers">
+                        <a href="/hire-ios-app-developers">
                           Hire iOS App Developer
                         </a>
                       </div>
@@ -696,15 +745,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-web-developers">
-                          <img
+                        <a href="/hire-web-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire Dphp-developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/web_developer_icon.png"
+                            src="/img/hiredevelopers/web_developer_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-web-developers">
+                        <a href="/hire-web-developers">
                           Hire Web Developer
                         </a>
                       </div>
@@ -722,15 +773,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-php-developers">
-                          <img
+                        <a href="/hire-php-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire Dphp-developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/php_icon.png"
+                            src="/img/hiredevelopers/php_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-php-developers">
+                        <a href="/hire-php-developers">
                           Hire PHP Developer
                         </a>
                       </div>
@@ -748,15 +801,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-cakephp-developers">
-                          <img
+                        <a href="/hire-cakephp-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire Cake PHP Developer Logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/cake_icon.png"
+                            src="/img/hiredevelopers/cake_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-cakephp-developers">
+                        <a href="/hire-cakephp-developers">
                           Hire CakePHP Developer
                         </a>
                       </div>
@@ -774,15 +829,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-wordpress-experts">
-                          <img
+                        <a href="/hire-wordpress-experts">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="Hire Wordpress Developer - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/wp_icon.png"
+                            src="/img/hiredevelopers/wp_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-wordpress-experts">
+                        <a href="/hire-wordpress-experts">
                           Hire Wordpress Developer
                         </a>
                       </div>
@@ -801,15 +858,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-magento-experts">
-                          <img
+                        <a href="/hire-magento-experts">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire magento developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/magento_icon.png"
+                            src="/img/hiredevelopers/magento_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-magento-experts">
+                        <a href="/hire-magento-experts">
                           Hire Magento Developer
                         </a>
                       </div>
@@ -828,15 +887,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-laravel-developers">
-                          <img
+                        <a href="/hire-laravel-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire laravel developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/larvel_icon.png"
+                            src="/img/hiredevelopers/larvel_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-laravel-developers">
+                        <a href="/hire-laravel-developers">
                           Hire Laravel Developers
                         </a>
                       </div>
@@ -854,15 +915,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-codeigniter-developers">
-                          <img
+                        <a href="/hire-codeigniter-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire codeigniter developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/codenator_icon.png"
+                            src="/img/hiredevelopers/codenator_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-codeigniter-developers">
+                        <a href="/hire-codeigniter-developers">
                           Hire Codeigniter Developers
                         </a>
                       </div>
@@ -880,15 +943,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-node-js-experts">
-                          <img
+                        <a href="/hire-node-js-experts">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire node-js-experts developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/node_icon.png"
+                            src="/img/hiredevelopers/node_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-node-js-experts">
+                        <a href="/hire-node-js-experts">
                           Hire Node.js
                           <br />
                           Experts
@@ -908,15 +973,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-angular-js-developers">
-                          <img
+                        <a href="/hire-angular-js-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire angular-js-developers developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/angular_icon.png"
+                            src="/img/hiredevelopers/angular_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-angular-js-developers">
+                        <a href="/hire-angular-js-developers">
                           Hire Angular JS developers{" "}
                         </a>
                       </div>
@@ -934,15 +1001,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-yii-developers">
-                          <img
+                        <a href="/hire-yii-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire yii developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/yii_icon.png"
+                            src="/img/hiredevelopers/yii_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-yii-developers">
+                        <a href="/hire-yii-developers">
                           Hire Yii
                           <br />
                           Developers{" "}
@@ -962,15 +1031,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-opencart-developers">
-                          <img
+                        <a href="/hire-opencart-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire opencart developers - logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/operat_icon.png"
+                            src="/img/hiredevelopers/operat_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-opencart-developers">
+                        <a href="/hire-opencart-developers">
                           Hire Opencart Developers{" "}
                         </a>
                       </div>
@@ -988,15 +1059,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer">
-                          <img
+                        <a href="/hire-hybrid-mobile-app-developer">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire hybrid mobile app developers at logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/hydribd_icon.png"
+                            src="/img/hiredevelopers/hydribd_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer">
+                        <a href="/hire-hybrid-mobile-app-developer">
                           Hire Hybrid mobile app developer
                         </a>
                       </div>
@@ -1014,15 +1087,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-quality-analyst">
-                          <img
+                        <a href="/hire-quality-analyst">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire quality analyst at logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/quality_icon.png"
+                            src="/img/hiredevelopers/quality_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-quality-analyst">
+                        <a href="/hire-quality-analyst">
                           Hire Quality Analyst
                         </a>
                       </div>
@@ -1040,15 +1115,17 @@ const page = () => {
                   >
                     <div class="dedicated_develop_col_inner">
                       <div class="dedicated_develop_icon_box">
-                        <a href="https://www.logicspice.com/hire-shopify-developers">
-                          <img
+                        <a href="/hire-shopify-developers">
+                          <Image
+                            width={60}
+                            height={100}
                             alt="hire shopify developers at logicspice"
-                            src="https://www.logicspice.com/app/webroot/img/images/shopify_icon.png"
+                            src="/img/hiredevelopers/shopify_icon.png"
                           />
                         </a>
                       </div>
                       <div class="dedicated_develop_title_box">
-                        <a href="https://www.logicspice.com/hire-shopify-developers">
+                        <a href="/hire-shopify-developers">
                           Hire Shopify Developers
                         </a>
                       </div>
@@ -1070,58 +1147,15 @@ const page = () => {
           <Certificationtabs />
         </div>
       </section>
-      {/* <section className="working_with">
-        <div className="container">
-          <h3 className="title_heading title_heading_bgg">
-            Worked with 1500+ companies worldwide, from startups to enterprises.
-          </h3>
 
-          <Workingwith />
-        </div>
-      </section> */}
-
-      {/* <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
-              <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
-                {
-                  <Enquirymodal
-                    modalStatus={showModal}
-                    toggle={openModal}
-                    title="Software development"
-                  />
-                }
-              </div>
-              <Link
-                href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
-                target="_blank"
-              >
-                <div class="WhatsappIcon">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section class="requirement_section">
         <div class="container">
           <div class="requir_title">
             Talk to us Now!! even if you have very short term requirement.
           </div>
-          <div class="requirment_btn">
-            <a
-            
-              onclick ={toggleModal}
-              class="btn btn-primary"
-            >
+          <div class="requirment_btn" onclick={toggleModal}>
+            <a  class="btn btn-primary">
               Enquire Now
             </a>
           </div>
@@ -1129,25 +1163,84 @@ const page = () => {
       </section>
       <section class="how_to_hire">
         <div class="container">
-            <div class ="row">
-
+          <div class="row">
             <div class="col-sm-6 col-md-8">
-                <h2 class="title_heading">Hire Developer in 5 Easy Steps</h2>
-                <div class="clearfix"></div>
-                <ul>
-                    <li><span><img src="https://www.logicspice.com/img/images/hire/HI1.png" alt="HI1"/></span> Raise Your Request</li>
-                    <li><span><img src="https://www.logicspice.com/img/images/hire/HI2.png" alt="HI2"/></span> Discuss Your Requirment</li>
-                    <li><span><img src="https://www.logicspice.com/img/images/hire/HI3.png" alt="HI3"/></span> Select Experts</li>
-                    <li><span><img src="https://www.logicspice.com/img/images/hire/HI4.png" alt="HI4"/></span> Finalize the Terms</li>
-                    <li><span><img src="https://www.logicspice.com/img/images/hire/HI5.png" alt="HI5"/></span> Assign and kick start</li>
-                </ul>
+              <h2 class="title_heading">Hire Developer in 5 Easy Steps</h2>
+              <div class="clearfix"></div>
+              <ul>
+                <li>
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/hiredevelopers/HI1.png"
+                      alt="HI1"
+                    />
+                  </span>{" "}
+                  Raise Your Request
+                </li>
+                <li>
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/hiredevelopers/HI2.png"
+                      alt="HI2"
+                    />
+                  </span>{" "}
+                  Discuss Your Requirment
+                </li>
+                <li>
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/hiredevelopers/HI3.png"
+                      alt="HI3"
+                    />
+                  </span>{" "}
+                  Select Experts
+                </li>
+                <li>
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/hiredevelopers/HI4.png"
+                      alt="HI4"
+                    />
+                  </span>{" "}
+                  Finalize the Terms
+                </li>
+                <li>
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/hiredevelopers/HI5.png"
+                      alt="HI5"
+                    />
+                  </span>{" "}
+                  Assign and kick start
+                </li>
+              </ul>
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <div class="form_quote">
-                    <form action="/pages/requestquote" enctype="multipart/form-data" name="requestquote" id="requestquote" method="post" accept-charset="utf-8"><div style={{display: "none"}}><input type="hidden" name="_method" value="POST"/></div>
-                    <h4>Get a Quote</h4>
-                    {/* <div class="form-group">
+              <div class="form_quote">
+                <form
+                  action="/pages/requestquote"
+                  enctype="multipart/form-data"
+                  name="requestquote"
+                  id="requestquote"
+                  method="post"
+                  accept-charset="utf-8"
+                >
+                  <div style={{ display: "none" }}>
+                    <input type="hidden" name="_method" value="POST" />
+                  </div>
+                  <h4>Get a Quote</h4>
+                  {/* <div class="form-group">
                         <input name="data[User][name]" placeholder="Your Full Name*" value="" size="40" class="form-control required" type="text" id="UserName"/>                    </div>
                     <div class="form-group">
                         <input name="data[User][email]" placeholder="Email*" value="" size="40" class="form-control required email" type="text" id="UserEmail"/>                    </div>
@@ -1170,30 +1263,32 @@ const page = () => {
                     </div>
                     <div class="form-group">
                         <input id="submitquote" title="Submit" class="btn btn-primary" size="30" label="" type="submit" value="Submit"/> 
-                        <div class="loadloader side_page" id="loadloaderH"><img src="/img/loading-old.gif" alt=""/></div>
+                        <div class="loadloader side_page" id="loadloaderH"><Image width={100} height ={100} src="/img/loading-old.gif" alt=""/></div>
                     </div> */}
-                    </form>                
-                </div>
+                </form>
+              </div>
             </div>
-
-            </div>
-
-
+          </div>
         </div>
-    </section>
-    <section class="contact_now">
+      </section>
+      <section class="contact_now">
         <div class="container">
-            <div class="contact_now_wraper">
-                <div data-aos="fade-right" class="contact_now_btn aos-init aos-animate">
-                    <a class="btn btn-primary" id="inquirenow" data-toggle="modal" data-target="#contactFix">
-                        Contact Now &nbsp; <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-                <div class="conatct_title">                 
-                    Let's have a quick call to better understand about your idea of application.</div>
+          <div class="contact_now_wraper">
+            <div data-aos="fade-right" class="contact_now_btn  ">
+              <a
+                class="btn btn-primary"
+                onClick={toggleModal}
+              >
+                Contact Now &nbsp; <i class="fa fa-angle-right"></i>
+              </a>
             </div>
+            <div class="conatct_title">
+              Let's have a quick call to better understand about your idea of
+              application.
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
       <section className="quoue_box_full_sec">
         <div className="whatsapp-call">
@@ -1201,7 +1296,12 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -1210,13 +1310,8 @@ const page = () => {
       </section>
 
       <Footer />
-
-     
-     
-
-      
     </>
   );
 };
 
-export default page;
+export default Page;

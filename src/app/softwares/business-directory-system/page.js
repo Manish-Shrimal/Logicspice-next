@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "@/app/softwares/softwares.css";
 import Link from "next/link";
 import Footer from "@/app/Components/Footer";
@@ -16,9 +16,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
-
-
-
+import Image from "next/image";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 import {
@@ -29,16 +33,33 @@ import {
 } from "mdb-react-ui-kit";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import { Modal, ModalBody } from "react-bootstrap";
-
-
-
-const page = () => {
-    const [sellerTab, setSellerTab] = useState(true);
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
+  const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [buyjobportal, setBuyJobportal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/business-directory-system"
+      );
+      // console.log(response.data.data);
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   var settings = {
     dots: true,
@@ -51,38 +72,40 @@ const page = () => {
     autoplaySpeed: 3000,
   };
 
-
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
 
-
   const handleSellerTab = () => {
     setSellerTab(true);
     setBuyerTab(false);
-   
+
     setAdminTab(false);
+  };
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   const handleBuyerTab = () => {
     setSellerTab(false);
     setBuyerTab(true);
-   
+
     setAdminTab(false);
   };
   const handleAdminTab = () => {
     setSellerTab(false);
     setBuyerTab(false);
-   
+
     setAdminTab(true);
   };
 
- 
   const [showInfo, setShowInfo] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
-
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -96,38 +119,74 @@ const page = () => {
     setShowModal(!showModal);
   };
 
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
 
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor:
+      theme.palette.mode === "dark"
+        ? "rgba(255, 255, 255, .05)"
+        : "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
 
   return (
     <>
       <Navbar />
-      <section class="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign BusinessDirectoryBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-md-7">
+      <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign BusinessDirectoryBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7 col-md-7">
               <h1>LS Bunet - PHP Business Directory Software</h1>
-              <div class="both-left-p-sec">
+              <div className="both-left-p-sec">
                 <h2>Similar to Yellow Pages &amp; Yelp</h2>
               </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
-                        <img
-                          src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                        <Image
+                          src="/img/softwares-banner-img/more-info.png"
                           alt=""
+                          width={100}
+                          height={100}
                         />
                       </i>
                       <p>Limited Period Offer for First Year</p>
                     </span>
-                    <span class="AppPrice" style={{ display: "none" }}>
+                    <span className="AppPrice" style={{ display: "none" }}>
                       <a
-                        class="text-primary js-anchor-link"
+                        className="text-primary js-anchor-link"
                         href="#subscriptionmodel"
                       >
                         More Details
@@ -135,10 +194,10 @@ const page = () => {
                     </span>
                   </div>
                 </div>
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                 
-                   <div className="btn btn-get" onClick={openModal}>
+
+                  <div className="btn btn-get" onClick={openModal}>
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -151,64 +210,68 @@ const page = () => {
                   </div>
 
                   <Link
-                    class="btn fiverr-buys"
+                    className="btn fiverr-buys"
                     href="https://www.logicspice.com/softwares/buynow/business-directory-system"
                     id="buy_now_1"
                   >
                     Buy Now
                   </Link>
                 </div>
-                <div class="SubscriptionPrice">
-                  <div class="DeliSou" style={{ display: "none" }}>
+                <div className="SubscriptionPrice">
+                  <div className="DeliSou" style={{ display: "none" }}>
                     <span>For</span> Delivered Solution{" "}
                     <a href="#subscriptionprice">click here</a>
                   </div>{" "}
-                  <div class="line-border NewLineBoader">
-                    <img
+                  <div className="line-border NewLineBoader">
+                    <Image
                       src="/img/jobboard/stars.png"
                       alt=""
-                      class="lazy"
+                      className="lazy"
+                      width={100}
+                      height={100}
                     />
                     <p>26 Reviews</p>
                   </div>
                 </div>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
-                <li>
+              <div className="jocpp">
+                <ul className="job-pr-icon">
+                  <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-5 col-md-5">
-              <div class="por-mobile-new">
-                <img
+            <div className="col-sm-5 col-md-5">
+              <div className="por-mobile-new">
+                <Image
                   src="/img/businessdirectory/Business_Directory_Banner_Img.png"
                   alt="business-directory-system"
+                  width={500}
+                  height={100}
                 />
               </div>
             </div>
           </div>
-          <div class="job-portal-banner-link">
-            <div aria-label="breadcrumb" class="my-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+          <div className="job-portal-banner-link">
+            <div aria-label="breadcrumb" className="my-breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <Link href="/softwares">Softwares</Link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   Business Directory System
                 </li>
               </ol>
@@ -216,8 +279,8 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job-section-top-new JobBoardSectionNew">
-        <div class="container">
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
           <p>
             LS Bunet is an online classified like directory software and is
             basically for listing businesses and their products &amp; services
@@ -232,12 +295,12 @@ const page = () => {
       </section>
 
       <section
-        class="client-say crowdfunding-say"
+        className="client-say crowdfunding-say"
         style={{ backgroundColor: "#fff" }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 job-video">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 job-video">
               <iframe
                 width="100%"
                 height="312"
@@ -248,8 +311,8 @@ const page = () => {
                 allowfullscreen=""
               ></iframe>
             </div>
-            <div class="col-md-6">
-              <div class="service-market-ttd">
+            <div className="col-md-6">
+              <div className="service-market-ttd">
                 <ul>
                   <li>
                     Business owners can create their business profiles through
@@ -283,12 +346,12 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_portal_area">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">LS Bunet Features</h2>
+      <section className="job_portal_area">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">LS Bunet Features</h2>
           </div>
-          <div class="tatxt_txt_job">
+          <div className="tatxt_txt_job">
             This Business Directory software is similar to Yellow Pages,
             provides customers with a platform where they can list their entire
             business details about their products &amp; services, and post
@@ -296,8 +359,8 @@ const page = () => {
             websites along with contact details of their business and hence
             showcase their entire business online for future growth.
           </div>
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job">
               <ul>
                 <li
                   id="tab1_li"
@@ -310,12 +373,14 @@ const page = () => {
                 </li>
                 <li
                   id="tab2_li"
-                  className={`business-directory-system ddlj ${buyerTab ? "active" : ""}`}
+                  className={`business-directory-system ddlj ${
+                    buyerTab ? "active" : ""
+                  }`}
                   onClick={() => handleBuyerTab()}
                 >
                   <a>Vendor Panel </a>
                 </li>
-              
+
                 <li
                   id="tab3_li"
                   className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
@@ -326,308 +391,671 @@ const page = () => {
               </ul>
             </div>
 
-            <div class="tab_contant">
+            <div className="tab_contant">
               {sellerTab && (
                 <>
                   <div className="row">
-                  <div className="col-lg-4 col-md-3">
-                    <div className="costomer_tab_right costomer_tab_rightleft">
-                      <img
-                        src="/img/businessdirectory/business-directory_user_mobile.png"
-                        alt="User"
-                      />
+                    <div className="col-lg-4 col-md-3">
+                      <div className="costomer_tab_right costomer_tab_rightleft">
+                        <Image
+                          src="/img/businessdirectory/business-directory_user_mobile.png"
+                          alt="User"
+                          width={400}
+                          height={400}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-8 col-md-9">
+                      <div className="costomer_tab_left costomer_tab_leftright">
+                        <ul>
+                          <li>
+                            <i>
+                              {" "}
+                              <Image
+                                src="/img/jobboard/manage_profile.png"
+                                alt="Business Search"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Profile
+                              <div className="product-idea">
+                                <p>
+                                  Customers are able to create their accounts
+                                  and are able to manage profiles.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              {" "}
+                              <Image
+                                src="/img/jobboard/send_mail.png"
+                                alt="Review Feature"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Send Enquiry
+                              <div className="product-idea">
+                                <p>
+                                  Customers can send inquiries about the
+                                  business which they want.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                src="/img/jobboard/review_feature.png"
+                                alt="Business Listing"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Sort Business
+                              <div className="product-idea">
+                                <p>
+                                  Customers are able to sort businesses by
+                                  categories, locations, business titles, etc.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              {" "}
+                              <Image
+                                src="/img/jobboard/manage_city.png"
+                                alt="Review Feature"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Browse Business By City
+                              <div className="product-idea">
+                                <p>
+                                  Customers can easily get the listing of the
+                                  business by cities.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              {" "}
+                              <Image
+                                src="/img/jobboard/reviews_ratings.png"
+                                alt="Offers Section"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Reviews & Rating Management
+                              <div className="product-idea">
+                                <p>
+                                  Customers are able to post reviews & ratings
+                                  for the business.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+
+                          <li>
+                            <i>
+                              {" "}
+                              <Image
+                                src="/img/jobboard/manage_news.png"
+                                alt="Business Detail"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Newsletter Subscription
+                              <div className="product-idea">
+                                <p>
+                                  Customers are able to subscribe to
+                                  newsletters. Browse Business by City:
+                                  Customers can easily get the listing of the
+                                  business by Cities.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-8 col-md-9">
-                    <div className="costomer_tab_left costomer_tab_leftright">
-                    <ul>
-                                       <li>
-                                        <i> <img src="/img/jobboard/manage_profile.png" alt="Business Search" /></i>
-                                        <span>Manage Profile
-                                         <div class="product-idea">
-                                                <p>Customers are able to create their accounts and are able to manage profiles.</p>
-                                            </div>
-                                        </span>
-                                    </li>   
-   <li>
-                                        <i>  <img src="/img/jobboard/send_mail.png" alt="Review Feature" /></i>
-                                        <span>Send Enquiry
-                                         <div class="product-idea">
-                                                 <p>Customers can send inquiries about the business which they want.</p>
-                                            </div>
-                                        </span>
-                                    </li>									
-                                         <li>
-                                        <i><img src="/img/jobboard/review_feature.png" alt="Business Listing" /></i>
-                                        <span>Sort Business
-                                         <div class="product-idea">
-                                                <p>Customers are able to sort businesses by categories, locations, business titles, etc.</p>
-                                            </div>
-                                        </span>
-                                    </li> 
-									 <li>
-                                        <i>  <img src="/img/jobboard/manage_city.png" alt="Review Feature" /></i>
-                                        <span>Browse Business By City
-                                         <div class="product-idea">
-                                                 <p>Customers can easily get the listing of the business by cities.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i>  <img src="/img/jobboard/reviews_ratings.png" alt="Offers Section" /></i>
-                                        <span>Reviews & Rating Management
-                                         <div class="product-idea">
-                                               <p>Customers are able to post reviews & ratings for the business.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                                                
-                                      <li>
-                                        <i> <img src="/img/jobboard/manage_news.png" alt="Business Detail" /></i>
-                                        <span>Newsletter Subscription
-                                         <div class="product-idea">
-                                                <p>Customers are able to subscribe to newsletters. Browse Business by City: Customers can easily get the listing of the business by Cities.</p>
-                                            </div>
-                                        </span>
-                                    </li> 
-                                    
-                                  
-                                    
-                                 
-                                 
-                                     
-                                </ul>
-                    </div>
-                  </div>
-                </div>
                 </>
               )}
 
               {buyerTab && (
                 <>
-                 <div className="row">
-                  <div className="col-lg-4 col-md-3">
-                    <div className="costomer_tab_right">
-                      <img
-                        src="/img/businessdirectory/business-directory_user_mobile.png"
-                        alt="User"
-                      />
-                      
+                  <div className="row">
+                    <div className="col-lg-4 col-md-3">
+                      <div className="costomer_tab_right">
+                        <Image
+                          src="/img/businessdirectory/business-directory_user_mobile.png"
+                          alt="User"
+                          width={400}
+                          height={400}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-8 col-md-9">
+                      <div className="costomer_tab_left">
+                        <ul>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/ragister-icon.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Create Account
+                              <div className="product-idea product-idea1">
+                                <p>
+                                  Vendor can register on the portal and create
+                                  listings for his business
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/create-project.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Add Business
+                              <div className="product-idea product-idea1">
+                                <p>
+                                  Vendors can manage their business, able to
+                                  Add, Edit, and Delete the Business.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/search_location.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Location Management
+                              <div className="product-idea">
+                                <p>
+                                  Vendors can add Locations for their business
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/crm-management.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              CRM Management
+                              <div className="product-idea product-idea1">
+                                <p>
+                                  Vendors are able to manage CRM, they can
+                                  manage Customers, Prospects, Emails, etc.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage-project.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Product Management
+                              <div className="product-idea">
+                                <p>
+                                  Vendors can add Products and are able to edit
+                                  and delete the products.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_services.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Services Management
+                              <div className="product-idea">
+                                <p>
+                                  Vendors can add Services and are able to edit
+                                  and delete the services.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/form-management.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Form Management
+                              <div className="product-idea">
+                                <p>
+                                  Vendors are able to create a particular form
+                                  for their business, this form can be displayed
+                                  on their business page. And also able to edit
+                                  and delete the forms and also able to see the
+                                  form entries.{" "}
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/enquiry-management.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Enquiry Management
+                              <div className="product-idea">
+                                <p>
+                                  Vendors are able to manage the queries
+                                  whatever posted by Enquiries.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/catalog-management.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Catalog Management
+                              <div className="product-idea">
+                                <p>
+                                  Vendors can add the catalog for their
+                                  business.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/fov_cant.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Favorites
+                              <div className="product-idea">
+                                <p>
+                                  Vendors can add Businesses, Products, and
+                                  Services to their favorite list.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_news.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Newsletter Feature
+                              <div className="product-idea">
+                                <p>
+                                  Vendors are able to add their email templates
+                                  and also able to Create and Import the mailing
+                                  listing, so they can send emails to the added
+                                  mailing listing.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_cat.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Videos
+                              <div className="product-idea">
+                                <p>
+                                  Vendors are able to upload their YouTube
+                                  videos that are related to their business and
+                                  also able to edit and delete the added videos.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-8 col-md-9">
-                    <div className="costomer_tab_left">
-                    <ul>
-                                    
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/ragister-icon.png" /></i>
-                                        <span>Create Account<div class="product-idea product-idea1">
-                                            <p>Vendor can register on the portal and create listings for his business</p>
-                                        </div></span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/create-project.png" /></i>
-                                        <span>Add Business<div class="product-idea product-idea1">
-                                            <p>Vendors can manage their business, able to Add, Edit, and Delete the Business.</p>
-                                        </div></span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/search_location.png" /></i>
-                                        <span>Location Management<div class="product-idea">
-                                            <p>Vendors can add Locations for their business</p>
-                                        </div></span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/crm-management.png" /></i>
-                                        <span>CRM Management<div class="product-idea product-idea1">
-                                            <p>Vendors are able to manage CRM, they can manage Customers, Prospects, Emails, etc.</p>
-                                        </div></span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage-project.png" /></i>
-                                        <span>Product Management<div class="product-idea">
-                                            <p>Vendors can add Products and are able to edit and delete the products.</p>
-                                        </div></span>
-                                    </li>
-                                    
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_services.png" /></i>
-                                        <span>Services Management<div class="product-idea">
-                                            <p>Vendors can add Services and are able to edit and delete the services.</p>
-                                        </div></span>
-                                    </li>  
-                                     <li>
-                                        <i><img alt="img" src="/img/jobboard/form-management.png" /></i>
-                                        <span>Form Management<div class="product-idea">
-                                            <p>Vendors are able to create a particular form for their business, this form can be displayed on their business page. And also able to edit and delete the forms and also able to see the form entries. </p>
-                                        </div></span>
-                                    </li>                                    
-                                      <li>
-                                        <i><img alt="img" src="/img/jobboard/enquiry-management.png" /></i>
-                                        <span>Enquiry Management<div class="product-idea">
-                                            <p>Vendors are able to manage the queries whatever posted by Enquiries.</p>
-                                        </div></span>
-                                    </li>
-                                   
-                                   <li>
-                                        <i><img alt="img" src="/img/jobboard/catalog-management.png" /></i>
-                                        <span>Catalog Management<div class="product-idea">
-                                            <p>Vendors can add the catalog for their business.</p>
-                                        </div></span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/fov_cant.png" /></i>
-                                        <span>Manage Favorites<div class="product-idea">
-                                            <p>Vendors can add Businesses, Products, and Services to their favorite list.</p>
-                                        </div></span>
-                                    </li>
-                                    
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_news.png" /></i>
-                                        <span>Newsletter Feature<div class="product-idea">
-                                            <p>Vendors are able to add their email templates and also able to Create and Import the mailing listing, so they can send emails to the added mailing listing.</p>
-                                        </div></span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_cat.png" /></i>
-                                        <span>Manage Videos<div class="product-idea">
-                                            <p>Vendors are able to upload their YouTube videos that are related to their business and also able to edit and delete the added videos.</p>
-                                        </div></span>
-                                    </li>
-                                </ul>
-                    </div>
-                  </div>
-                </div>
                 </>
               )}
-
 
               {adminTab && (
                 <>
                   <div className="row">
-                  <div className="col-lg-4 col-md-3 ">
-                    <div className="costomer_tab_right costomer_tab_rightleft2">
-                      <img
-                        src="/img/businessdirectory/business-directory-admin.png"
-                        alt="Admin Panel"
-                      />
+                    <div className="col-lg-4 col-md-3 ">
+                      <div className="costomer_tab_right costomer_tab_rightleft2">
+                        <Image
+                          src="/img/businessdirectory/business-directory-admin.png"
+                          alt="Admin Panel"
+                          width={400}
+                          height={400}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-8 col-md-9">
+                      <div className="costomer_tab_left costomer_tab_leftright2">
+                        <ul>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/secure_login.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Secure Login
+                              <div className="product-idea">
+                                <p>
+                                  Administrator is able to login securely over
+                                  the admin panel.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/admin_dash.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Dashboard
+                              <div className="product-idea">
+                                <p>
+                                  Admin can easily navigate to the listings and
+                                  they will get all the counts.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_user.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Users
+                              <div className="product-idea">
+                                <p>
+                                  Admin is able to manage all the basic details
+                                  of users(view, add, edit, and delete).
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/social_login.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Business Directory
+                              <div className="product-idea">
+                                <p>
+                                  Admin can manage and configure business
+                                  directory settings, able to Submit notes and
+                                  Emails.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage-project.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Products
+                              <div className="product-idea">
+                                <p>
+                                  Admin is able to manage the products, able to
+                                  edit, delete, activate, and deactivate the
+                                  products.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_services.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Services
+                              <div className="product-idea">
+                                <p>
+                                  Admin can manage services and is able to
+                                  submit notes and Emails. Also able to edit,
+                                  delete, activate, and deactivate the services.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/postan_ad.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Events
+                              <div className="product-idea">
+                                <p>
+                                  Admin is able to manage Events and is able to
+                                  Add, Edit, Delete, Activate & deactivate
+                                  Events.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_news.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Newsletters
+                              <div className="product-idea">
+                                <p>
+                                  Admin can Add Newsletters and is able to send
+                                  newsletters to the users according to admin.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/manage_plan.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Plans
+                              <div className="product-idea">
+                                <p>
+                                  Admin is able to Add Subscription Plans and is
+                                  able to Edit Plans.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/search_location.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Countries, State, And Cities
+                              <div className="product-idea">
+                                <p>
+                                  Admin can Add Countries and for those added
+                                  countries, admin can add states and cities.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/view_category.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Categories
+                              <div className="product-idea">
+                                <p>
+                                  Admin is able to Add, Edit, and Delete
+                                  Categories.
+                                </p>
+                              </div>
+                            </span>
+                          </li>
+                          <li>
+                            <i>
+                              <Image
+                                alt="img"
+                                src="/img/jobboard/send_mail.png"
+                                width={100}
+                                height={100}
+                              />
+                            </i>
+                            <span>
+                              Manage Emails
+                              <div className="product-idea">
+                                <p>Admin can send Emails to the users.</p>
+                              </div>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-8 col-md-9">
-                    <div className="costomer_tab_left costomer_tab_leftright2">
-                    <ul>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/secure_login.png" /></i>
-                                        <span>Secure Login
-                                         <div class="product-idea">
-                                                <p>Administrator is able to login securely over the admin panel.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/admin_dash.png" /></i>
-                                        <span>Manage Dashboard
-                                         <div class="product-idea">
-                                                <p>Admin can easily navigate to the listings and they will get all the counts.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_user.png" /></i>
-                                        <span>Manage Users
-                                        <div class="product-idea">
-                                                <p>Admin is able to manage all the basic details of users(view, add, edit, and delete).</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/social_login.png" /></i>
-                                        <span>Manage Business Directory
-                                         <div class="product-idea">
-                                                <p>Admin can manage and configure business directory settings, able to Submit notes and Emails.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage-project.png" /></i>
-                                        <span>Manage Products
-                                         <div class="product-idea">
-                                                <p>Admin is able to manage the products, able to edit, delete, activate, and deactivate the products.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_services.png" /></i>
-                                        <span>Manage Services
-                                         <div class="product-idea">
-                                                <p>Admin can manage services and is able to submit notes and Emails. Also able to edit, delete, activate, and deactivate the services.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/postan_ad.png" /></i>
-                                        <span>Manage Events
-                                         <div class="product-idea">
-                                                <p>Admin is able to manage Events and is able to Add, Edit, Delete, Activate & deactivate Events.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_news.png" /></i>
-                                        <span>Manage Newsletters
-                                         <div class="product-idea">
-                                                <p>Admin can Add Newsletters and is able to send newsletters to the users according to admin.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/manage_plan.png" /></i>
-                                        <span>Manage Plans
-                                         <div class="product-idea">
-                                                <p>Admin is able to Add Subscription Plans and is able to Edit Plans.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                   
-                                   <li>
-                                        <i><img alt="img" src="/img/jobboard/search_location.png" /></i>
-                                        <span>Manage Countries, State, And Cities
-                                         <div class="product-idea">
-                                                <p>Admin can Add Countries and for those added countries, admin can add states and cities.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                     <li>
-                                        <i><img alt="img" src="/img/jobboard/view_category.png" /></i>
-                                        <span>Manage Categories
-                                         <div class="product-idea">
-                                                <p>Admin is able to Add, Edit, and Delete Categories.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/jobboard/send_mail.png" /></i>
-                                        <span>Manage Emails
-                                         <div class="product-idea">
-                                                <p>Admin can send Emails to the users.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                </ul>
-                    </div>
-                  </div>
-                </div>
                 </>
               )}
             </div>
           </div>
         </div>
-
       </section>
-      <section class="job_product_page_header_in">
-        <div class="container">
-          <div class="whateissuprt">
-            <h2 class="headhs">
+      <section className="job_product_page_header_in">
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">
               What does our <span>What does our LS Bunet</span> offer you ?
             </h2>
             <p align="justify">
@@ -640,7 +1068,7 @@ const page = () => {
             <p align="justify">
               Our LS Bunet will allow the business owners to put the details of
               their business and create their business page which can be
-              searched by the customer. it's not limited to adding their
+              searched by the customer. it&apos;s not limited to adding their
               business only, they can add address, telephone number, business
               logo, images, website links, and also can list their business
               products and services on which they will receive reviews. Business
@@ -662,19 +1090,19 @@ const page = () => {
             <p align="justify">
               Our <strong>Business Listing software</strong> is a
               ready-to-install directory software so anyone can use it. Whether
-              it's related to a professional, a particular niche, a networking
-              company or organization, or any other business entity, who is
-              looking to launch their own business directory/classified web
-              application, can use this software without having any technical
-              knowledge.
+              it&apos;s related to a professional, a particular niche, a
+              networking company or organization, or any other business entity,
+              who is looking to launch their own business directory/classified
+              web application, can use this software without having any
+              technical knowledge.
             </p>
-            <p align="justify" class="new_red_food">
+            <p align="justify" className="new_red_food">
               Also, if you want some customization in this ready-to-use Business
               Directory Software or want to add some extra features, our team of
               expert web developers will be happy to do it for you.
             </p>
             <p align="justify">
-              Are you a non-technical person? Don't worry! We do free
+              Are you a non-technical person? Don&apos;t worry! We do free
               installation for the first time and if you need any help you can
               contact us anytime.
             </p>
@@ -682,15 +1110,15 @@ const page = () => {
         </div>
       </section>
       <section
-        class="SubscriptionModel"
+        className="SubscriptionModel"
         id="subscriptionmodel"
         style={{ background: "#f1f1f1" }}
       >
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Subscription Model</h2>
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
             <br />
-            <div class="SubscriptionModelBx">
+            <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
                 subscription-based hassle-free model, available at just{" "}
@@ -767,58 +1195,64 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section id="subscriptionprice" class="SubscriptionpriceSection">
-        <div class="container">
-          <h2 class="taxt_tt_job">Delivered Solution</h2>
-          <div class="SubscriptionModelPrice">
-            <div class="SubscriptionModelPriceBx">
+      <section id="subscriptionprice" className="SubscriptionpriceSection">
+        <div className="container">
+          <h2 className="taxt_tt_job">Delivered Solution</h2>
+          <div className="SubscriptionModelPrice">
+            <div className="SubscriptionModelPriceBx">
               <h4>
-                ₹88,156<span class="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
-              <strike class="srik_cls">
-                ₹147,748<span class="sml_labl"> INR</span>{" "}
+              <strike className="srik_cls">
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
-              <div class="SubscriptionModelPriceBtn">
-              <div className="btn btn-get" onClick={openModal}>
-                    <button>Get Demo Access!</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of PHP Business Directory Script
+              <div className="SubscriptionModelPriceBtn">
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of PHP Business Directory Script
                   .See how it work yourself!"
-                      />
-                    }
-                  </div>
+                    />
+                  }
+                </div>
                 <Link
-                  class="btn fiverr-buys"
+                  className="btn fiverr-buys"
                   href="https://www.logicspice.com/softwares/buynow/business-directory-system"
                   id="buy_now_1"
                 >
                   Buy Now
                 </Link>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
-                <li>
+              <div className="jocpp">
+                <ul className="job-pr-icon">
+                  <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
-                <div class="portel-btnbx">
-                  <div class="line-border NewLineBoader">
-                    <img
+                <div className="portel-btnbx">
+                  <div className="line-border NewLineBoader">
+                    <Image
                       src="/img/jobboard/stars.png"
                       alt=""
-                      class="lazy"
+                      className="lazy"
+                      width={100}
+                      height={100}
                     />
                     <p>26 Reviews</p>
                   </div>
@@ -826,7 +1260,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div class="SubscriptionModelBx">
+          <div className="SubscriptionModelBx">
             <p>
               The solution offered by Logicspice provides several advantages
               that can assist you in expanding your business within the
@@ -872,289 +1306,250 @@ const page = () => {
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <Link href="#" onClick={toggleModal}>
-                contact us
-              </Link>
-              .
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
       </section>
-      <section class="job_portal_area job_portal_area_food">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">
+      <section className="job_portal_area job_portal_area_food">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">
               Logicspice is the best partner for your LS Bunet solution!
             </h2>
             <br />
-            <div class="logic-parter">
-            <Link
-            href=""
-                class=""
+            <div className="logic-parter">
+              <Link
+                href=""
+                className=""
                 aria-controls="buyjobportal"
                 onClick={toggleBuyJobPortalModal}
               >
-                <i class="fa fa-building" aria-hidden="true"></i>
+                <i className="fa fa-building" aria-hidden="true"></i>
                 <span>Companies Using It</span>
               </Link>
-              <a onClick={toggleInfo} class="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
-                    src="https://www.logicspice.com/app/webroot/img/images/product_new/why-logic-icon.png"
+                  <Image
+                    src="/img/jobboard/why-logic-icon.png"
                     alt=""
-                    class=""
+                    className=""
+                    width={20}
+                    height={20}
                   />
                 </i>
                 <span>Why Logicspice</span>
               </a>
-              <Whylogicspice open={showInfo}  />
-
+              <Whylogicspice open={showInfo} />
             </div>
           </div>
-        
-         
         </div>
       </section>
 
       <Modal
-          show={buyjobportal}
-          onHide={toggleBuyJobPortalModal}
-          id="buyjobportal"
-          className="modal-service"
-        >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
-          <Modal.Body>
-            <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
+        show={buyjobportal}
+        onHide={toggleBuyJobPortalModal}
+        id="buyjobportal"
+        className="modal-service"
+      >
+        <Modal.Header
+          className="modal-dialog-service"
+          closeButton="close"
+        ></Modal.Header>
+        <Modal.Body>
+          <div id="jobboardclients" closeButton>
+            <Slider {...settings}>
+              <div className="SliderMainBx">
+                <div className="site-titles">
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://dishit.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
+                    dishit.org
                   </Link>
                 </div>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
+                <Link
+                  href="https://dishit.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/img/businessdirectory/dishit.jpg"
+                    alt="icon"
+                    title=""
+                    className="img-fluid"
+                    width={900}
+                    height={100}
+                  />
+                </Link>
+              </div>
+              <div className="SliderMainBx">
+                <div className="site-titles">
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://mexperts.co.in/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
+                    mexperts.co.in
                   </Link>
                 </div>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
+                <Link
+                  href="https://mexperts.co.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/img/businessdirectory/mexperts.jpg"
+                    alt="icon"
+                    title=""
+                    className="img-fluid"
+                    width={900}
+                    height={100}
+                  />
+                </Link>
+              </div>
+              <div className="SliderMainBx">
+                <div className="site-titles">
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://ummahvendors.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
+                    ummahvendors.com
                   </Link>
                 </div>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div class="SliderMainBx">
-                  <div class="feat-slide-img">
-                    <img
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
-                    />
-                  </div>
-                  <div class="hands-proved">
-                    <div class="titleof_scnew">Job Management</div>
-                    <div class="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
-                </div>
-                <div class="SliderMainBx">
-                  <div class="feat-slide-img">
-                    <img
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
-                    />
-                  </div>
-                  <div class="hands-proved">
-                    <div class="titleof_scnew">Membership Plan</div>
-                    <div class="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
-                </div>
-              </Slider>
-            </div>
-          </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
-      <section class="used_technology_section" id="technologies">
-        <div class="container">
-          <h4 class="title_main">
+                <Link
+                  href="https://ummahvendors.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/img/businessdirectory/salorapido.jpg"
+                    alt="icon"
+                    title=""
+                    className="img-fluid"
+                    width={100}
+                    height={100}
+                  />
+                </Link>
+              </div>
+              
+              
+            </Slider>
+           </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <button
+            className="btn btn-secondary"
+            onClick={toggleBuyJobPortalModal}
+          >
+            Close
+          </button>
+        </Modal.Footer>
+      </Modal>
+      <section className="used_technology_section" id="technologies">
+        <div className="container">
+          <h4 className="title_main">
             <span>Used Technologies</span> and Server Requirements
           </h4>
-          <div class="used_technology_section_dataa">
+          <div className="used_technology_section_dataa">
             <div className="row">
-              <div class="col-sm-6">
+              <div className="col-sm-6">
                 <ul>
-                  <li data-aos="fade-up" class="aos-init aos-animate">
-                    <div class="icntechimg">
-                      <img
+                  <li data-aos="fade-up" className="aos-init aos-animate">
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
+                        width={60}
+                        height={40}
                       />
                     </div>
-                    <div class="icntechimg_nm">CakePHP</div>
+                    <div className="icntechimg_nm">CakePHP</div>
                   </li>
-                  <li data-aos="fade-up" class="aos-init aos-animate">
-                    <div class="icntechimg">
-                      <img
+                  <li data-aos="fade-up" className="aos-init aos-animate">
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
+                        width={40}
+                        height={40}
                       />
                     </div>
-                    <div class="icntechimg_nm">HTML5</div>
+                    <div className="icntechimg_nm">HTML5</div>
                   </li>
-                  <li data-aos="fade-up" class="aos-init aos-animate">
-                    <div class="icntechimg">
-                      <img
+                  <li data-aos="fade-up" className="aos-init aos-animate">
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
+                        width={40}
+                        height={40}
                       />
                     </div>
-                    <div class="icntechimg_nm">MySQL</div>
+                    <div className="icntechimg_nm">MySQL</div>
                   </li>
-                  <li data-aos="fade-up" class="aos-init aos-animate">
-                    <div class="icntechimg">
-                      <img
+                  <li data-aos="fade-up" className="aos-init aos-animate">
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
+                        width={40}
+                        height={40}
                       />
                     </div>
-                    <div class="icntechimg_nm">Apache</div>
+                    <div className="icntechimg_nm">Apache</div>
                   </li>
-                  <li data-aos="fade-up" class="aos-init aos-animate">
-                    <div class="icntechimg">
-                      <img
+                  <li data-aos="fade-up" className="aos-init aos-animate">
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="iOS"
+                        width={40}
+                        height={40}
                       />
                     </div>
-                    <div class="icntechimg_nm">iOS</div>
+                    <div className="icntechimg_nm">iOS</div>
                   </li>
-                  <li data-aos="fade-up" class="aos-init aos-animate">
-                    <div class="icntechimg">
-                      <img
+                  <li data-aos="fade-up" className="aos-init aos-animate">
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
+                        width={40}
+                        height={40}
                       />
                     </div>
-                    <div class="icntechimg_nm">Android</div>
+                    <div className="icntechimg_nm">Android</div>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-6">
-                <ul class="list_detail">
-                  <li class="same aos-init aos-animate" data-aos="fade-up">
+              <div className="col-sm-6">
+                <ul className="list_detail">
+                  <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
                     Safari 5+, IE 9+
                   </li>
-                  <li class="same aos-init aos-animate" data-aos="fade-up">
+                  <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Framework - </b> CakePHP
                   </li>
-                  <li class="same aos-init aos-animate" data-aos="fade-up">
+                  <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Language - </b> PHP 5.4+, AJAX, jQuery
                   </li>
-                  <li class="other aos-init aos-animate" data-aos="fade-up">
+                  <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Design - </b> HTML 5, CSS 3, JavaScript
                   </li>
-                  <li class="other aos-init aos-animate" data-aos="fade-up">
+                  <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Database - </b> MySQL 5.5+{" "}
                   </li>
-                  <li class="other aos-init aos-animate" data-aos="fade-up">
+                  <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Server - </b> Apache 2.4+
                   </li>
-                  <li class="other aos-init aos-animate" data-aos="fade-up">
+                  <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>iOS - </b> xcode 11.3 and swift 5{" "}
                   </li>
-                  <li class="other aos-init aos-animate" data-aos="fade-up">
+                  <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Android - </b> java 9 and Android Studio 4.1
                   </li>
                 </ul>
@@ -1163,74 +1558,82 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="whatsupport_section" id="support">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="whatsupport_section" id="support">
+        <div className="container">
+          <h4 className="title_main">
             What <span>support</span> you will get?
           </h4>
-          <div class="supportsetting">
+          <div className="supportsetting">
             <ul>
-              <li data-aos="fade" class="aos-init aos-animate">
-                <div class="supportsetting_icn">
-                  <img
+              <li data-aos="fade" className="aos-init aos-animate">
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
+                    height={50}
+                    width={50}
                   />
                 </div>
-                <div class="supportsettingtext">Free Support</div>
+                <div className="supportsettingtext">Free Support</div>
               </li>
-              <li data-aos="fade" class="aos-init aos-animate">
-                <div class="supportsetting_icn">
-                  <img
+              <li data-aos="fade" className="aos-init aos-animate">
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
+                    height={50}
+                    width={50}
                   />
                 </div>
-                <div class="supportsettingtext">Free Brand Removal</div>
+                <div className="supportsettingtext">Free Brand Removal</div>
               </li>
-              <li data-aos="fade" class="aos-init aos-animate">
-                <div class="supportsetting_icn">
-                  <img
+              <li data-aos="fade" className="aos-init aos-animate">
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
+                    height={50}
+                    width={50}
                   />
                 </div>
-                <div class="supportsettingtext">Free Installation</div>
+                <div className="supportsettingtext">Free Installation</div>
               </li>
-              <li data-aos="fade" class="aos-init aos-animate">
-                <div class="supportsetting_icn">
-                  <img
+              <li data-aos="fade" className="aos-init aos-animate">
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
+                    height={50}
+                    width={50}
                   />
                 </div>
-                <div class="supportsettingtext">Easily scalable</div>
+                <div className="supportsettingtext">Easily scalable</div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="su_rev_section" id="reviews">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="title_main">Customer Reviews </h4>
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="outof_rating">
-                    <div class="main-rait">
+      <section className="su_rev_section" id="reviews">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h4 className="title_main">Customer Reviews </h4>
+              <div className="row">
+                <div className="col-md-5">
+                  <div className="outof_rating">
+                    <div className="main-rait">
                       <span>
-                        <i class="fa fa-star"></i>{" "}
+                        <i className="fa fa-star"></i>{" "}
                         <span>4.7 out of 5 stars</span>
                       </span>
                     </div>
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        5 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1238,16 +1641,16 @@ const page = () => {
                           style={{ width: "100%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">23</div>
+                      <div className="people_star_num">23</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        4 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        4 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1255,16 +1658,16 @@ const page = () => {
                           style={{ width: "10%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">3</div>
+                      <div className="people_star_num">3</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        3 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        3 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1272,16 +1675,16 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        2 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        2 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1289,16 +1692,16 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        1 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        1 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1306,116 +1709,119 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
                   </div>
                 </div>
-           
-                <div class="col-md-7">
-                  <a class="btn btn-primary" onClick={openReviewModel}>
+
+                <div className="col-md-7">
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
-                 
+
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title ="PHP Business Directory Script"
+                    title="PHP Business Directory Script"
                   />
                 </div>
-                <div class="col-md-12">
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "Great work - I installed this business directory software
-                      and it is working properly. I appreciate Logicspice and
-                      their support team, Thank you!"
+                <div className="col-md-12">
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                      &quot;Great work - I installed this business directory
+                      software and it is working properly. I appreciate
+                      Logicspice and their support team, Thank you!&quot;
                     </div>
                     <div
-                      class="who_ratset"
+                      className="who_ratset"
                       style={{ text: "right", paddingRight: "17px" }}
                     >
                       <span
-                        class="star_review_main"
+                        className="star_review_main"
                         style={{ paddingRight: "10px", color: "gold" }}
                       >
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Clark - Methew, Canada{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/canada_flag_img.png"
                           alt="mobile app development in Canada"
                           style={{ width: "20px", marginLeft: "3px" }}
+                          height={20}
+                          width={20}
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext" id="fiveer-clone">
-                      "I bought this software from logicspice and it has no
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext" id="fiveer-clone">
+                      &quot;I bought this software from logicspice and it has no
                       bugs. They provided me the full support, installed it for
                       me, and also fixed some issues related to my queries.
-                      Timely response to my emails. Worth for money."
+                      Timely response to my emails. Worth for money.&quot;
                     </div>
 
                     <div
-                      class="who_ratset"
+                      className="who_ratset"
                       style={{ text: "right", paddingRight: "17px" }}
                     >
                       <span
-                        class="star_review_main"
+                        className="star_review_main"
                         style={{ paddingRight: "10px", color: "gold" }}
                       >
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       <span id="client-name">
                         Rafish Saabdeen, Dubai [UAE]{" "}
                       </span>{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/german.png"
                           alt="mobile app development in Dubai"
+                          height={20}
+                          width={20}
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "We have tried several software for business directory
-                      purposes. They are full of bugs and some others are so
-                      slow but the logicspice business directory software is
-                      working very fast and accurately. It has all the features
-                      that a directory should have. I recommend logicspice for
-                      ready-made PHP software, professional & great customer
-                      service."
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                      &quot;We have tried several software for business
+                      directory purposes. They are full of bugs and some others
+                      are so slow but the logicspice business directory software
+                      is working very fast and accurately. It has all the
+                      features that a directory should have. I recommend
+                      logicspice for ready-made PHP software, professional &
+                      great customer service.&quot;
                     </div>
-                    <div
-                      class="who_ratset"
-                      style={{  paddingRight: "17px" }}
-                    >
+                    <div className="who_ratset" style={{ paddingRight: "17px" }}>
                       <span
-                        class="star_review_main"
+                        className="star_review_main"
                         style={{ paddingRight: "10px", color: "gold" }}
                       >
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Adom, USA{" "}
                       <span>
-                        <img
+                        <Image
                           src="/img/jobboard/uae_flag_iimg.png"
                           alt="mobile app development in USA"
                           style={{ width: "20px", marginLeft: "3px" }}
+                          height={20}
+                          width={20}
                         />
                       </span>
                     </div>
@@ -1423,10 +1829,10 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-6 Quick_FAQ">
-              <h4 class="title_main">FAQ's</h4>
-              <div class="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+            <div className="col-md-6 Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+              <div className="MainFaqBx">
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="How can a customer search for businesses around his location?"
                     collapseId="flush-collapse1"
@@ -1444,7 +1850,7 @@ const page = () => {
                   >
                     <p>
                       Yes, customer can give rating out of 5 even if they
-                      haven't visited the store. Customer can also write a
+                      haven&apos;t visited the store. Customer can also write a
                       review along with the rating.
                     </p>
                   </MDBAccordionItem>
@@ -1501,8 +1907,8 @@ const page = () => {
                     collapseId="flush-collapse8"
                   >
                     <p>
-                      No, You can't resell the software. All rights will remain
-                      with Logicspice only.
+                      No, You can&apos;t resell the software. All rights will
+                      remain with Logicspice only.
                     </p>
                   </MDBAccordionItem>
 
@@ -1532,15 +1938,135 @@ const page = () => {
                       secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      How can a customer search for businesses around his
+                      location?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      A Customer can enter his zip/postal code on the website
+                      and all the businesses that are around will be listed to
+                      the customer.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>
+                      Can the customer give rating to a business even if he
+                      hasn't visited the store?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, customer can give rating out of 5 even if they
+                      haven't visited the store. Customer can also write a
+                      review along with the rating.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      Can a business owner upload multiple services to the
+                      website?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, the business owner can upload multiple
+                      services/products that he deals in.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      How can a customer ensure the authenticity of the
+                      information of different businesses?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Whenever a business owner creates a page for his business,
+                      it has to be approved by the admin.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can a user view the contact information of the seller?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes. If a seller chooses to share his contact information
+                      on the website, the customer can see it.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Can I update some design and functionality in the
+                      application code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, You will have access to all the code.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="title_main">PHP Business Directory Software Features</h2>
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="title_main">PHP Business Directory Software Features</h2>
           <div id="equipment_sldier">
             <Swiper
               slidesPerView={1}
@@ -1554,60 +2080,68 @@ const page = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div class="feat-slide-img">
-                  <img
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/businessdirectory/BusinessDetails.png"
                     alt="Business Details"
+                    height={1075}
+                    width={1075}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Business Details</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Business Details</div>
+                  <div className="pro-feat-detai">
                     Business details like title, image, description, place,
                     categories, list of reviews and ratings.
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div class="feat-slide-img">
-                  <img
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/businessdirectory/BusinessListing.png"
                     alt="Business Listing"
+                    height={1075}
+                    width={1075}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Service Listing</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Service Listing</div>
+                  <div className="pro-feat-detai">
                     Users can view a list of business according to their search
                     criteria with the details of the business.
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div class="feat-slide-img">
-                  <img
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/businessdirectory/add-business-new.png"
                     alt="add-business"
+                    height={1075}
+                    width={1075}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Add Business</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Add Business</div>
+                  <div className="pro-feat-detai">
                     Users can view discount that is being offered and offer
                     title, image and description.{" "}
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div class="feat-slide-img">
-                  <img
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/businessdirectory/PopularPlacesNew.png"
                     alt="Popular Places"
+                    height={1075}
+                    width={1075}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Search Products</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Search Products</div>
+                  <div className="pro-feat-detai">
                     Users can see the popular businesses on the website and
                     sorted according to their rating and number of reviews.
                   </div>
@@ -1617,11 +2151,11 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -1635,27 +2169,29 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="latest_feature_product">
-        <div class="container">
-          <h2 class="title_main">Other Popular Softwares</h2>
-          <div class="other-product-box">
-            <div class="row">
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+      <section className="latest_feature_product">
+        <div className="container">
+          <h2 className="title_main">Other Popular Softwares</h2>
+          <div className="other-product-box">
+            <div className="row">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/classified-ads-script"
                   >
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Classified Ads Script</h3>
 
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/classified_logo_new.png"
                             alt="Classified Ads Script"
-                            class=""
+                            className=""
+                            height={200}
+                            width={200}
                           />
                         </div>
                         <p>
@@ -1666,22 +2202,24 @@ const page = () => {
                   </Link>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/fiverr-clone"
                   >
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
 
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
-                            class=""
+                            className=""
+                            height={200}
+                            width={200}
                           />
                         </div>
                         <p>
@@ -1692,22 +2230,24 @@ const page = () => {
                   </Link>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/job-board-software"
                   >
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
 
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
-                            class=""
+                            className=""
+                            height={200}
+                            width={200}
                           />
                         </div>
                         <p>
@@ -1728,9 +2268,11 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
+              height={50}
+              width={50}
             />
           </a>
         </div>
@@ -1743,4 +2285,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

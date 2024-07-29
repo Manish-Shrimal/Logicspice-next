@@ -9,7 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-const page = () => {
+const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
@@ -75,7 +75,7 @@ const page = () => {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="page_img">
-                <img
+                <Image
                   src="/img/nodejsdevelopment/node-js-img.png"
                   alt="Node JS Development Company"
                 />
@@ -90,7 +90,7 @@ const page = () => {
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div class="laravel_img">
-                <img
+                <Image
                   src="/img/nodejsdevelopment/node-js-logo-img.png"
                   alt="Node JS Development Company"
                 />
@@ -165,12 +165,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/nodejsdevelopment/node-js-new-icon1.png"
                         alt="Node JS Development Company"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/nodejsdevelopment/node-js-white-icon1.png"
                         alt="Node JS Development Company"
@@ -180,7 +180,7 @@ const page = () => {
                   </div>
                   <h3>API Development & Integration</h3>
                   <p>
-                    We are proficient in developing API's for web applications.
+                    We are proficient in developing API&apos;s for web applications.
                   </p>
                 </div>
               </div>
@@ -189,12 +189,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon2.png"
                         alt="Node JS Development Company"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon2.png"
                         alt="Node JS Development Company"
@@ -213,12 +213,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon3.png"
                         alt="Node JS Development Company"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon3.png"
                         alt="Node JS Development Company"
@@ -237,12 +237,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon4.png"
                         alt="Node JS Development Company"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon4.png"
                         alt="Node JS Development Company"
@@ -261,12 +261,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/nodejsdevelopment/node-js-new-icon2.png"
                         alt="Node JS Development Company"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/nodejsdevelopment/node-js-white-icon2.png"
                         alt="Node JS Development Company"
@@ -285,12 +285,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box6">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon6.png"
                         alt="Node JS Development Company"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon6.png"
                         alt="Node JS Development Company"
@@ -324,7 +324,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/nodejsdevelopment/nodajs_features_icon1.png"
                       alt="img1"
                     />
@@ -339,7 +339,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/nodejsdevelopment/nodajs_features_icon2.png"
                       alt="img4"
                     />
@@ -357,7 +357,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/nodejsdevelopment/nodajs_features_icon3.png"
                       alt="img2"
                     />
@@ -375,7 +375,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/nodejsdevelopment/nodajs_features_icon4.png"
                       alt="img5"
                     />
@@ -393,7 +393,7 @@ const page = () => {
               <div class="col-sm-12 col-md-12" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/nodejsdevelopment/nodajs_features_icon5.png"
                       alt="img3"
                     />
@@ -437,7 +437,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -453,4 +453,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

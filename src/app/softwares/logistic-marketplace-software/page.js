@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
 import "@fortawesome/fontawesome-free/css/all.css";
+import Image from "next/image";
+
 import {
   MDBAccordion,
   MDBAccordionItem,
@@ -20,8 +22,9 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [jobportal, setJobportal] = useState(false);
   const [buyjobportal, setBuyJobportal] = useState(false);
@@ -76,27 +79,47 @@ const page = () => {
     setBuyerTab(false);
     setAdminTab(true);
   };
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/logistic-marketplace-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <NavBar />
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign LogicticMarketplaceBanner">
         <div className="container">
           <div className="row">
-            <div class="col-sm-7 col-md-7">
+            <div className="col-sm-7 col-md-7">
               <h1>LS Shipper - Logistic Marketplace Software</h1>
-              <div class="both-left-p-sec">
+              <div className="both-left-p-sec">
                 <h2>Similar to Uship & Shiply</h2>
               </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -105,7 +128,7 @@ const page = () => {
                     </span>
                   </div>
                 </div>
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Get Demo Access!</button>
@@ -119,15 +142,17 @@ See how it work yourself!"
                     }
                   </div>
                   <Link
-                    class="btn fiverr-buys NewGreenBtnJob"
+                    className="btn fiverr-buys NewGreenBtnJob"
                     href="/softwares/logistic-marketplace-software"
                   >
                     Buy Now
                   </Link>
                 </div>
-                <div class="SubscriptionPrice">
-                  <div class="line-border NewLineBoader">
-                    <img
+                <div className="SubscriptionPrice">
+                  <div className="line-border NewLineBoader">
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -135,22 +160,27 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <ul class="job-pr-icon jobwidthauto">
+              <ul className="job-pr-icon jobwidthauto">
                 <li>
-                  <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+                  <i
+                    className="fa-solid fa-earth-americas"
+                    aria-hidden="true"
+                  ></i>
                 </li>
                 <li>
-                  <i class="fa-brands fa-android"></i>
+                  <i className="fa-brands fa-android"></i>
                 </li>
                 <li>
-                  <i class="fa-brands fa-apple"></i>
+                  <i className="fa-brands fa-apple"></i>
                 </li>
               </ul>
             </div>
 
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                <Image
+                  width={450}
+                  height={100 / (100 / 100)}
                   className="lazy"
                   src="/img/logisticmarketplace/logctic-banner-img.png"
                   alt="Logistic_Marketplace_Software_script"
@@ -202,13 +232,13 @@ See how it work yourself!"
               <div className="service-market-ttd JobBoardServiceMarketFeatures ServiceMarketFeaturesFull">
                 <ul>
                   <li>
-                    Choose from multiple requests : Users can check the multiple
-                    quotations received for their enquiry and communicate with
-                    them.
+                    Choose from multiple requests &#58; Users can check the
+                    multiple quotations received for their enquiry and
+                    communicate with them.
                   </li>
                   <li>
-                    Push notification with direct reply : When any transporter
-                    and user send message to each other.
+                    Push notification with direct reply &#58; When any
+                    transporter and user send message to each other.
                   </li>
                   <li
                     style={{
@@ -219,12 +249,13 @@ See how it work yourself!"
                     }}
                   ></li>
                   <li>
-                    Communicate with the service provider online : Customer can
-                    communicate with the transporter through the chat process.
+                    Communicate with the service provider online :&#58; Customer
+                    can communicate with the transporter through the chat
+                    process.
                   </li>
                   <li>
-                    Track the shipping process : Customer can track their
-                    shipment in either it's shipped, packed or more.
+                    Track the shipping process &#58; Customer can track their
+                    shipment in either it&apos;s shipped&rsquo; packed or more.
                   </li>
                   <li>Responsive website (mobile friendly)</li>
                   <li>White-labeled software</li>
@@ -248,8 +279,8 @@ See how it work yourself!"
             right place at the right time very effectively.
           </div>
 
-          <div class="tab_bbx_job ">
-            <div class="tab_bbx_top_job">
+          <div className="tab_bbx_job ">
+            <div className="tab_bbx_top_job">
               <ul>
                 <li
                   id="tab1_li"
@@ -279,13 +310,15 @@ See how it work yourself!"
               </ul>
             </div>
 
-            <div class="tab_contant">
+            <div className="tab_contant">
               {sellerTab && (
                 <>
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right costomer_tab_rightleft">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/logisticmarketplace/logistic_customer.png"
                           alt="Customer"
                         />
@@ -296,7 +329,9 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/ragister-icon.png"
                               />
@@ -313,7 +348,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-dashboard.png"
                               />
@@ -331,7 +368,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_shipments.png"
                               />
@@ -342,14 +381,17 @@ See how it work yourself!"
                                 <p>
                                   Customer can manage (update & delete) the
                                   shipment which are already posted and can
-                                  change the location, name, weight, etc.
+                                  change the location&rsquo; name&rsquo;
+                                  weight&rsquo; etc.
                                 </p>
                               </div>
                             </span>
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/truck_shipments.png"
                               />
@@ -366,7 +408,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/search_enquires.png"
                               />
@@ -385,7 +429,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_messages.png"
                               />
@@ -404,7 +450,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/accepet_reject_reque.png"
                               />
@@ -422,7 +470,12 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img alt="img" src="/img/jobboard/add_post.png" />
+                              <Image
+                                width={100}
+                                height={100}
+                                alt="img"
+                                src="/img/jobboard/add_post.png"
+                              />
                             </i>
                             <span>
                               Add Post
@@ -436,7 +489,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/promo_codes.png"
                               />
@@ -454,7 +509,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_news.png"
                               />
@@ -471,7 +528,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-notifi.png"
                               />
@@ -485,7 +544,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/post_management.png"
                               />
@@ -511,7 +572,9 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/logisticmarketplace/logistic-transporters.png"
                           alt="Transporters"
                         />
@@ -522,7 +585,9 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/ragister-icon.png"
                               />
@@ -540,7 +605,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage-dashboard.png"
                               />
@@ -549,16 +616,18 @@ See how it work yourself!"
                               Transporter Dashboard
                               <div className="product-idea">
                                 <p>
-                                  Transporter can view all their Journeys,
-                                  Trucks, Drivers & Quote List on the Dashboard
-                                  page.
+                                  Transporter can view all their Journeys&rsquo;
+                                  Trucks&rsquo; Drivers & Quote List on the
+                                  Dashboard page.
                                 </p>
                               </div>
                             </span>
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_user_acc.png"
                               />
@@ -576,7 +645,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_journeys.png"
                               />
@@ -598,7 +669,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/subscription_plans.png"
                               />
@@ -616,7 +689,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/view-blogs.png"
                               />
@@ -634,7 +709,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/search_enquires.png"
                               />
@@ -644,10 +721,11 @@ See how it work yourself!"
                               <div className="product-idea">
                                 <p>
                                   Transporter can search for enquiries by
-                                  applying a filter such as Keyword, Select
-                                  category, Pickup place, Pickup date, and
-                                  Destination place which will show the relevant
-                                  search as per their requirement.
+                                  applying a filter such as Keyword&rsquo;
+                                  Select category&rsquo; Pickup place&rsquo;
+                                  Pickup date&rsquo; and Destination place which
+                                  will show the relevant search as per their
+                                  requirement.
                                 </p>
                               </div>
                             </span>
@@ -655,7 +733,9 @@ See how it work yourself!"
 
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/view_gig_detail.png"
                               />
@@ -673,7 +753,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/payment_history.png"
                               />
@@ -690,7 +772,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/reviews_ratings.png"
                               />
@@ -708,7 +792,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/search-transporter.png"
                               />
@@ -725,7 +811,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/add-quote.png"
                               />
@@ -754,7 +842,9 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3 ">
                       <div className="costomer_tab_right costomer_tab_rightleft2">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/logisticmarketplace/logistic_admin_mac.png"
                           alt="Admin Panel"
                         />
@@ -765,7 +855,9 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/configuration.png"
                               />
@@ -774,17 +866,19 @@ See how it work yourself!"
                               Configuration
                               <div className="product-idea">
                                 <p>
-                                  Admin can update Username, Email, Password,
-                                  Set Contact Us Address, Transporter Cities,
-                                  Server Configuration Path, PayPal Updates,
-                                  etc.
+                                  Admin can update Username&rsquo; Email&rsquo;
+                                  Password&rsquo; Set Contact Us Address&rsquo;
+                                  Transporter Cities&rsquo; Server Configuration
+                                  Path&rsquo; PayPal Updates&rsquo; etc.
                                 </p>
                               </div>
                             </span>
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/admin_dash.png"
                               />
@@ -795,15 +889,18 @@ See how it work yourself!"
                                 <p>
                                   Admin can view Statistics & Graph on the
                                   Dashboard. It shows the total count of
-                                  Shipment Jobs, Customers, Transporters, Truck
-                                  Types, Trucks, etc. on the Dashboard page.
+                                  Shipment Jobs&rsquo; Customers&rsquo;
+                                  Transporters&rsquo; Truck Types&rsquo;
+                                  Trucks&rsquo; etc. on the Dashboard page.
                                 </p>
                               </div>
                             </span>
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_customers.png"
                               />
@@ -822,7 +919,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_transporter.png"
                               />
@@ -841,7 +940,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_trucks.png"
                               />
@@ -858,7 +959,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_journeys.png"
                               />
@@ -877,7 +980,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_category.png"
                               />
@@ -896,7 +1001,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/view-blogs.png"
                               />
@@ -915,7 +1022,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_review_list.png"
                               />
@@ -931,7 +1040,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_content.png"
                               />
@@ -941,7 +1052,7 @@ See how it work yourself!"
                               <div className="product-idea">
                                 <p>
                                   Admin will be able to manage(add/edit/delete)
-                                  all the Content(text, images & videos)
+                                  all the Content(text&rsquo; images & videos)
                                   displayed on the Front end.
                                 </p>
                               </div>
@@ -949,7 +1060,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/manage_news.png"
                               />
@@ -958,7 +1071,6 @@ See how it work yourself!"
                               Manage Newsletters
                               <div className="product-idea">
                                 <p>
-                                  {" "}
                                   Admin can view the list of Newsletters added
                                   in the Front End. Admin can
                                   manage(add/edit/delete) Newsletter.
@@ -968,7 +1080,9 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 alt="img"
                                 src="/img/jobboard/reviews_ratings.png"
                               />
@@ -1003,10 +1117,10 @@ See how it work yourself!"
             <p align="justify">
               A transportation management system is an online platform that
               helps businesses to streamline their shipping process. With
-              logicspice's online transportation booking software, you can start
-              your own online portal like any other popular transportation
-              system by providing a high-value fleet management platform to your
-              transport businesses.
+              logicspice&apos;s online transportation booking software&rsquo;
+              you can start your own online portal like any other popular
+              transportation system by providing a high-value fleet management
+              platform to your transport businesses.
             </p>
             <p align="justify">
               We have a ready-to-use LS Shipper that you can use to create a
@@ -1019,23 +1133,25 @@ See how it work yourself!"
               </strong>{" "}
               to make transportation easy for people across the world.
               Transportation management system is the synonym for moving
-              anything and everything. On these websites, people can list their
-              transport, get bidders, and choose the best out of all.
+              anything and everything. On these websites&rsquo; people can list
+              their transport&rsquo; get bidders&rsquo; and choose the best out
+              of all.
             </p>
             <p align="justify">
-              Our ready-made LS Shipper, a cargo booking software has a unique
-              set of features that help shippers manage their fleet operations
-              easily and can save more time to achieve their mission. This
-              transport logistic software helps businesses in shipping,
-              tracking, and delivering their freight from one place to another
+              Our ready-made LS Shipper&rsquo; a cargo booking software has a
+              unique set of features that help shippers manage their fleet
+              operations easily and can save more time to achieve their mission.
+              This transport logistic software helps businesses in
+              shipping&rsquo; tracking&rsquo; and delivering their freight from
+              one place to another
             </p>
             <p align="justify">
-              Using this transport management software, the transporter can
-              choose their jobs, bid for deliveries, and communicate with the
-              client. Companies are already generating big profits in the
-              shipping industry like shiply. Logicspice offers a feature-rich
-              transport marketplace with a unique set of features and
-              functionality.
+              Using this transport management software&rsquo; the transporter
+              can choose their jobs&rsquo; bid for deliveries&rsquo; and
+              communicate with the client. Companies are already generating big
+              profits in the shipping industry like shiply. Logicspice offers a
+              feature-rich transport marketplace with a unique set of features
+              and functionality.
             </p>
             <p align="justify">
               We at Logicspice are a{" "}
@@ -1058,71 +1174,71 @@ See how it work yourself!"
             <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
-                subscription-based hassle-free model, available at just USD 145
-                per month.
+                subscription-based hassle-free model&rsquo; available at just
+                USD 145 per month.
               </p>
-              <p>Key Benefits:</p>
+              <p>Key Benefits&#58;</p>
               <ul>
                 <li>
                   <span>
-                    Lifetime Updates: Enjoy complimentary updates for your
+                    Lifetime Updates&#58; Enjoy complimentary updates for your
                     software version throughout its lifespan.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Timely Upgrades: Seamlessly transition to upgraded versions
-                    at regular intervals, all at no extra cost.
+                    Timely Upgrades&#58; Seamlessly transition to upgraded
+                    versions at regular intervals&rsquo; all at no extra cost.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Zero Setup Fees:- There are no additional charges for the
-                    setup and installation of the software, making it easier for
-                    customers to get started.
+                    Zero Setup Fees&#58; There are no additional charges for the
+                    setup and installation of the software&rsquo; making it
+                    easier for customers to get started.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Unlimited Shipment Postings: Post as many shipments as you
-                    need without any limitations.
+                    Unlimited Shipment Postings&#58; Post as many shipments as
+                    you need without any limitations.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Enhanced Communication: Avail yourself of 5 domain-based
+                    Enhanced Communication&#58; Avail yourself of 5 domain-based
                     email accounts to enhance your professional communication.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Mobile Apps: Stay perpetually connected with Android and
-                    iPhone apps, available for an additional USD 45 per month
-                    for each, android or iPhone. These apps will be launched
-                    through your dedicated developer accounts on Google Play and
-                    the Apple App Store.
+                    Mobile Apps&#58; Stay perpetually connected with Android and
+                    iPhone apps&rsquo; available for an additional USD 45 per
+                    month for each&rsquo; android or iPhone. These apps will be
+                    launched through your dedicated developer accounts on Google
+                    Play and the Apple App Store.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Effortless Program Operation: Revel in robust bandwidth that
-                    guarantees your program runs flawlessly, supported by
-                    resources allocated to your subscription model. Any increase
-                    in allocated resources will incur additional charges beyond
-                    the standard subscription model.
+                    Effortless Program Operation&#58; Revel in robust bandwidth
+                    that guarantees your program runs flawlessly&rsquo;
+                    supported by resources allocated to your subscription model.
+                    Any increase in allocated resources will incur additional
+                    charges beyond the standard subscription model.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Enduring Support: We are committed to providing lifelong
+                    Enduring Support&#58; We are committed to providing lifelong
                     assistance through our subscription model. If any software
-                    issues arise, our dedicated technical team will promptly
-                    address them during office hours.
+                    issues arise&rsquo; our dedicated technical team will
+                    promptly address them during office hours.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Personalized Customization Assistance: Delivering Custom
+                    Personalized Customization Assistance&#58; Delivering Custom
                     Features According to Client Requirements at additional
                     cost.
                   </span>
@@ -1137,18 +1253,22 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section id="subscriptionprice" class="SubscriptionpriceSection">
-        <div class="container">
-          <h2 class="taxt_tt_job">Delivered Solution</h2>
-          <div class="SubscriptionModelPrice">
-            <div class="SubscriptionModelPriceBx">
+      <section id="subscriptionprice" className="SubscriptionpriceSection">
+        <div className="container">
+          <h2 className="taxt_tt_job">Delivered Solution</h2>
+          <div className="SubscriptionModelPrice">
+            <div className="SubscriptionModelPriceBx">
               <h4>
-                ₹88,190<span class="sml_labl"> INR</span>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
-              <strike class="srik_cls">
-                ₹147,805<span class="sml_labl"> INR</span>
+              <strike className="srik_cls">
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
-              <div class="SubscriptionModelPriceBtn">
+              <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
@@ -1161,41 +1281,47 @@ See how it work yourself!"
                   }
                 </div>
                 <Link
-                  class="btn fiverr-buys"
+                  className="btn fiverr-buys"
                   href="/softwares/logistic-marketplace-software"
                 >
                   Buy Now
                 </Link>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
                     <i
-                      class="fa-solid fa-earth-americas"
+                      className="fa-solid fa-earth-americas"
                       aria-hidden="true"
                     ></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-android"></i>
+                    <i className="fa-brands fa-android"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-apple"></i>
+                    <i className="fa-brands fa-apple"></i>
                   </li>
                 </ul>
-                <div class="portel-btnbx">
-                  <div class="line-border NewLineBoader">
-                    <img src="/img/jobboard/stars.png" alt="" class="lazy" />
+                <div className="portel-btnbx">
+                  <div className="line-border NewLineBoader">
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>173 Reviews</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="SubscriptionModelBx">
+          <div className="SubscriptionModelBx">
             <p>
               The solution offered by Logicspice provides several advantages
               that can assist you in expanding your business within the
-              competitive market. Here are some key benefits outlined below:
+              competitive market. Here are some key benefits outlined below&#58;
             </p>
 
             <ul>
@@ -1213,13 +1339,13 @@ See how it work yourself!"
               <li>
                 <span>
                   Benefit from a white-labelled solution featuring your
-                  branding, logo, and content at no additional cost.
+                  branding&rsquo; logo&rsquo; and content at no additional cost.
                 </span>
               </li>
               <li>
                 <span>
                   Access custom features according to your specific
-                  requirements, available at an additional charge.
+                  requirements&rsquo; available at an additional charge.
                 </span>
               </li>
               <li>
@@ -1230,18 +1356,15 @@ See how it work yourself!"
               </li>
               <li>
                 <span>
-                  Experience efficient communication channels via email,
-                  WhatsApp, Google Meet, Skype, Zoom and Teams.
+                  Experience efficient communication channels via email&rsquo;
+                  WhatsApp&rsquo; Google Meet&rsquo; Skype&rsquo; Zoom and
+                  Teams.
                 </span>
               </li>
             </ul>
             <p>
-              For details on an Enterprise license, please{" "}
-              <a  onClick={toggleModal}>
-                contact us
-           
-              </a>
-              .
+              For details on an Enterprise license&rsquo; please{" "}
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
@@ -1253,75 +1376,76 @@ See how it work yourself!"
             <br />
             <div className="script-update_title">
               <p>
-                V1.1 - September 20th, 2022 - PHP version update and other major
-                improvements!
+                V1.1 - September 20th&rsquo; 2022 - PHP version update and other
+                major improvements!
               </p>
               <ul>
                 <li>
-                  <span>PHP version updated from 7.3.13 to 7.4.30.</span>{" "}
+                  <span>PHP version updated from 7.3.13 to 7.4.30.</span>
                 </li>
                 <li>
                   <span>
                     Added country and state fields at the time of registration
                     of transporter and customer.
-                  </span>{" "}
+                  </span>
                 </li>
                 <li>
                   <span>
-                    Transporter's mobile and address verification by the admin.
-                  </span>{" "}
+                    Transporter&apos;s mobile and address verification by the
+                    admin.
+                  </span>
                 </li>
                 <li>
                   <span>
                     Stripe payment gateway integration for purchasing membership
                     plans as a transporter.
-                  </span>{" "}
+                  </span>
                 </li>
                 <li>
                   <span>
                     Invoice feature for the payment received over the portal.
-                  </span>{" "}
+                  </span>
                 </li>
                 <li>
                   <span>
-                    Added French, Arabic language for the web version of the
-                    software.
-                  </span>{" "}
+                    Added French&rsquo; Arabic language for the web version of
+                    the software.
+                  </span>
                 </li>
                 <li>
                   <span>
                     Search by Radius feature while the transporter searches the
                     jobs.
-                  </span>{" "}
+                  </span>
                 </li>
                 <li>
-                  <span>Newsletter module integration on the admin side.</span>{" "}
+                  <span>Newsletter module integration on the admin side.</span>
                 </li>
                 <li>
                   <span>
                     Payment process integrated while accepting the Quote.
-                  </span>{" "}
+                  </span>
                 </li>
                 <li>
                   <span>
                     Email notifications to the transporters for the jobs which
                     are matching to their category.
-                  </span>{" "}
+                  </span>
                 </li>
                 <li>
                   <span>
                     Displaying the number of active transporters and active
                     shipments to the visitors.
-                  </span>{" "}
+                  </span>
                 </li>
               </ul>
               <p>
-                V1.0 - January 09th, 2020 - PHP version update and other small
-                improvements!
+                V1.0 - January 09th&rsquo; 2020 - PHP version update and other
+                small improvements!
               </p>
               <ul>
                 <li>
-                  <span>PHP version updated from 5.6.40 to 7.3.13 </span>{" "}
+                  <span>PHP version updated from 5.6.40 to 7.3.13 </span>
                 </li>
                 <li>
                   <span>Performance improvements</span>
@@ -1361,7 +1485,9 @@ See how it work yourself!"
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1383,7 +1509,9 @@ See how it work yourself!"
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <img
+            <Image
+              width={100}
+              height={100}
               src="/img/logisticmarketplace/logistics_marketplace.jpg"
               alt="icon"
               title=""
@@ -1428,7 +1556,9 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1451,7 +1581,9 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1474,7 +1606,9 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1497,7 +1631,9 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1507,7 +1643,9 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
                       alt="Job Management"
                     />
@@ -1523,7 +1661,9 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
                       alt="Membership Plan"
                     />
@@ -1561,7 +1701,9 @@ See how it work yourself!"
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/tech_cakephp_icon.png"
                       alt="CakePHP Development"
                     />
@@ -1570,19 +1712,31 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="HTML5"
+                    />
                   </div>
                   <div className="icntechimg_nm">HTML5</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img src="/img/jobboard/tech_mysql_icon.png" alt="MySQL" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/tech_mysql_icon.png"
+                      alt="MySQL"
+                    />
                   </div>
                   <div className="icntechimg_nm">MySQL</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
                     />
@@ -1591,7 +1745,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/apple_phn_icon.png"
                       alt="MySQL"
                       className="lazy"
@@ -1601,7 +1757,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/andoird_icon.png"
                       alt="Apache"
                       className="lazy"
@@ -1614,17 +1772,17 @@ See how it work yourself!"
             <div className="col-sm-6">
               <ul className="list_detail">
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
-                  Safari 5+, IE 9+
+                  <b>Browsers - </b> Firefox 32.6+&rsquo; Chrome 20.0+&rsquo;
+                  Opera 30.0+&rsquo; Safari 5+&rsquo; IE 9+
                 </li>
                 <li className="same aos-init aos-animate" data-aos="fade-up">
                   <b>Framework - </b> Cakephp
                 </li>
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Language - </b> PHP 7.4.30, AJAX, jQuery
+                  <b>Language - </b> PHP 7.4.30&rsquo; AJAX&rsquo; jQuery
                 </li>
                 <li className="other aos-init aos-animate" data-aos="fade-up">
-                  <b>Design - </b> HTML 5, CSS 3, JavaScript
+                  <b>Design - </b> HTML 5&rsquo; CSS 3&rsquo; JavaScript
                 </li>
                 <li className="other aos-init" data-aos="fade-up">
                   <b>Database – </b> MySQL 5.5+{" "}
@@ -1653,7 +1811,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1662,7 +1822,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1674,13 +1836,20 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1792,7 +1961,7 @@ See how it work yourself!"
                   </div>
                 </div>
                 <div className="col-md-7">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1807,9 +1976,9 @@ See how it work yourself!"
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
 
                     <div className="customer_review_stext">
-                      "We needed a customized logistic booking system for our
-                      logistics business to manage our users. Logicspice has
-                      provided us with the right online solution.- Thanks!"
+                      &quot;We needed a customized logistic booking system for
+                      our logistics business to manage our users. Logicspice has
+                      provided us with the right online solution.- Thanks!&quot;
                     </div>
                     <div
                       className="who_ratset"
@@ -1825,9 +1994,11 @@ See how it work yourself!"
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
-                      Kunal S., India{" "}
+                      Kunal S.&rsquo; India{" "}
                       <span>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/india_flag_img.png"
                           alt="mobile app development in India"
                           style={{ width: "20px", marginLeft: "3px" }}
@@ -1838,11 +2009,11 @@ See how it work yourself!"
                   <div className="customers_review_sec_row">
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext" id="fiveer-clone">
-                      "Recently I bought this software to launch my own logistic
-                      marketplace software from Logicspice and it worked really
-                      nice. Buying this software is worth for money as they gave
-                      me the full source code and I can customize it. Highly
-                      recommended."
+                      &quot;Recently I bought this software to launch my own
+                      logistic marketplace software from Logicspice and it
+                      worked really nice. Buying this software is worth for
+                      money as they gave me the full source code and I can
+                      customize it. Highly recommended.&quot;
                     </div>
 
                     <div
@@ -1859,9 +2030,11 @@ See how it work yourself!"
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
-                      <span id="client-name">Alena, USA</span>{" "}
+                      <span id="client-name">Alena&rsquo; USA</span>{" "}
                       <span>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1871,11 +2044,11 @@ See how it work yourself!"
                   <div className="customers_review_sec_row">
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext">
-                      "Fast and effective PHP software for my logistic business.
-                      They are professional, always put in extra effort, and
-                      have technically strong knowledge. One of the best
-                      software providers. Will continue to work with them for an
-                      upcoming project."
+                      &quot;Fast and effective PHP software for my logistic
+                      business. They are professional&rsquo; always put in extra
+                      effort&rsquo; and have technically strong knowledge. One
+                      of the best software providers. Will continue to work with
+                      them for an upcoming project.&quot;
                     </div>
                     <div
                       className="who_ratset"
@@ -1891,9 +2064,11 @@ See how it work yourself!"
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
-                      Mohammed Shozeb, UAE{" "}
+                      Mohammed Shozeb&rsquo; UAE{" "}
                       <span>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/uae_flag_iimg.png"
                           alt="mobile app development in UAE"
                           style={{ width: "20px", marginLeft: "3px" }}
@@ -1905,7 +2080,7 @@ See how it work yourself!"
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ's</h4>
+              <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
@@ -1913,9 +2088,9 @@ See how it work yourself!"
                     collapseId="flush-collapse1"
                   >
                     <p>
-                      Yes, most of the software is completely flexible and
+                      Yes&rsquo; most of the software is completely flexible and
                       client can customize it as per their requirements.
-                      However, some parts of it are encoded.
+                      However&rsquo; some parts of it are encoded.
                     </p>
                   </MDBAccordionItem>
 
@@ -1935,9 +2110,9 @@ See how it work yourself!"
                     collapseId="flush-collapse3"
                   >
                     <p>
-                      We will communicate with you via chat, phone call, skype,
-                      and email during our business hours and try to solve your
-                      problem as soon as possible.
+                      We will communicate with you via chat&rsquo; phone
+                      call&rsquo; skype&rsquo; and email during our business
+                      hours and try to solve your problem as soon as possible.
                     </p>
                   </MDBAccordionItem>
 
@@ -1946,7 +2121,8 @@ See how it work yourself!"
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      Yes, we are providing free 3 months technical support.
+                      Yes&rsquo; we are providing free 3 months technical
+                      support.
                     </p>
                   </MDBAccordionItem>
 
@@ -1955,19 +2131,19 @@ See how it work yourself!"
                     collapseId="flush-collapse5"
                   >
                     <p>
-                      Yes, you will own the license to use it for the domain you
-                      purchased for.
+                      Yes&rsquo; you will own the license to use it for the
+                      domain you purchased for.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Do I need to provide a Google Maps API key? If yes, how to generate a Google Map API key?"
+                    headerTitle="Do I need to provide a Google Maps API key? If yes&rsquo; how to generate a Google Map API key?"
                     collapseId="flush-collapse6"
                   >
                     <p>
-                      Yes, you need to provide a map API key. Please follow the
-                      steps mentioned in the below URL to generate the Google
-                      map API key:
+                      Yes&rsquo; you need to provide a map API key. Please
+                      follow the steps mentioned in the below URL to generate
+                      the Google map API key:
                       https://developers.google.com/maps/documentation/javascript/get-api-key.
                       You need to set up your billing details over that.
                     </p>
@@ -1977,16 +2153,16 @@ See how it work yourself!"
                     headerTitle="Can I update some design and functionality in the application code myself?"
                     collapseId="flush-collapse7"
                   >
-                    <p>Yes, You will have access to all the code.</p>
+                    <p>Yes&rsquo; You will have access to all the code.</p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Will I be able to use it on multiple domains, after I purchase this software?"
+                    headerTitle="Will I be able to use it on multiple domains&rsquo; after I purchase this software?"
                     collapseId="flush-collapse8"
                   >
                     <p>
-                      You will be licensed to use it only for the domain, you
-                      purchased for.
+                      You will be licensed to use it only for the domain&rsquo;
+                      you purchased for.
                     </p>
                   </MDBAccordionItem>
 
@@ -1995,7 +2171,7 @@ See how it work yourself!"
                     collapseId="flush-collapse9"
                   >
                     <p>
-                      No, You can\92t resell the software. All rights will
+                      No&rsquo; You can\92t resell the software. All rights will
                       remain with Logicspice only.
                     </p>
                   </MDBAccordionItem>
@@ -2005,24 +2181,24 @@ See how it work yourself!"
                     collapseId="flush-collapse10"
                   >
                     <p>
-                      Yes, we offer 30 days money-back guarantee to ensure
+                      Yes&rsquo; we offer 30 days money-back guarantee to ensure
                       customer satisfaction with our software. If for any
-                      reason, you wish to discontinue using the product, you can
-                      ask us for a refund. We will refund your total money
-                      except the installation and configuration charges, which
-                      is USD 65 or 20% of the application cost, whichever is
-                      greater.
+                      reason&rsquo; you wish to discontinue using the
+                      product&rsquo; you can ask us for a refund. We will refund
+                      your total money except the installation and configuration
+                      charges&rsquo; which is USD 65 or 20% of the application
+                      cost&rsquo; whichever is greater.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
+                    headerTitle="Along with hosting server details&rsquo; what other recommendations?"
                     collapseId="flush-collapse12"
                   >
                     <p>
                       We recommend you purchase an SSL certificate along with a
-                      hosting server, considering that an SSL certificate is
-                      necessary for all websites these days and it provides a
+                      hosting server&rsquo; considering that an SSL certificate
+                      is necessary for all websites these days and it provides a
                       secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
@@ -2036,88 +2212,14 @@ See how it work yourself!"
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="title_main">Logistic Marketplace Software Features</h2>
-          {/* <div id="joblboardslide" className="owl-carousel hidedot">
-            <div>
-              <div className="feat-slide-img">
-                <img
-                  src="/img/logisticmarketplace/add_shipment.png"
-                  alt="Add Shipment"
-                />
-              </div>
-              <div className="hands-proved">
-                <div className="titleof_scnew">Add Shipment </div>
-                <div className="pro-feat-detai">
-                  Add all the shipment details like image, description, weight,
-                  quantity, type, pickup point, delivery point.
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="feat-slide-img">
-                <img
-                  src="/img/logisticmarketplace/search_for_transporters.png"
-                  alt="Search for transporters"
-                />
-              </div>
-              <div className="hands-proved">
-                <div className="titleof_scnew">Search for transporters</div>
-                <div className="pro-feat-detai">
-                  Search by keyword, category,departure city, destination city
-                  and state.
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="feat-slide-img">
-                <img
-                  src="/img/logisticmarketplace/search_inquiries.png"
-                  alt="Search enquiries"
-                />
-              </div>
-              <div className="hands-proved">
-                <div className="titleof_scnew">Search enquiries</div>
-                <div className="pro-feat-detai">
-                  Transport can search for the listed enquiries item,
-                  collection, delivery.
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="feat-slide-img">
-                <img
-                  src="/img/logisticmarketplace/submit_quote.png"
-                  alt="Submit quote"
-                />
-              </div>
-              <div className="hands-proved">
-                <div className="titleof_scnew">Submit quote</div>
-                <div className="pro-feat-detai">
-                  User can check the transporter details and get their contact
-                  details.
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="feat-slide-img">
-                <img
-                  src="/img/logisticmarketplace/transporter_details.png"
-                  alt="Transporter details"
-                />
-              </div>
-              <div className="hands-proved">
-                <div className="titleof_scnew">Transporter details</div>
-                <div className="pro-feat-detai">
-                  Borrower can search for equipment to rent and purchase using
-                  categories, subcategories and keyword.
-                </div>
-              </div>
-            </div>
-          </div> */}
+
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/logisticmarketplace/add_shipment.png"
                     alt="Add Shipment"
                   />
@@ -2125,14 +2227,17 @@ See how it work yourself!"
                 <div className="hands-proved">
                   <div className="titleof_scnew">Add Shipment </div>
                   <div className="pro-feat-detai">
-                    Add all the shipment details like image, description,
-                    weight, quantity, type, pickup point, delivery point.
+                    Add all the shipment details like image&rsquo;
+                    description&rsquo; weight&rsquo; quantity&rsquo; type&rsquo;
+                    pickup point&rsquo; delivery point.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/logisticmarketplace/search_for_transporters.png"
                     alt="Search for transporters"
                   />
@@ -2140,14 +2245,16 @@ See how it work yourself!"
                 <div className="hands-proved">
                   <div className="titleof_scnew">Search for transporters</div>
                   <div className="pro-feat-detai">
-                    Search by keyword, category,departure city, destination city
-                    and state.
+                    Search by keyword&rsquo; category&rsquo;departure
+                    city&rsquo; destination city and state.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/logisticmarketplace/search_inquiries.png"
                     alt="Search enquiries"
                   />
@@ -2155,14 +2262,16 @@ See how it work yourself!"
                 <div className="hands-proved">
                   <div className="titleof_scnew">Search enquiries</div>
                   <div className="pro-feat-detai">
-                    Transport can search for the listed enquiries item,
-                    collection, delivery.
+                    Transport can search for the listed enquiries item&rsquo;
+                    collection&rsquo; delivery.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/logisticmarketplace/submit_quote.png"
                     alt="Submit quote"
                   />
@@ -2175,9 +2284,11 @@ See how it work yourself!"
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
+              <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/logisticmarketplace/transporter_details.png"
                     alt="Transporter details"
                   />
@@ -2186,7 +2297,7 @@ See how it work yourself!"
                   <div className="titleof_scnew">Transporter details</div>
                   <div className="pro-feat-detai">
                     Borrower can search for equipment to rent and purchase using
-                    categories, subcategories and keyword.
+                    categories&rsquo; subcategories and keyword.
                   </div>
                 </div>
               </div>
@@ -2200,7 +2311,7 @@ See how it work yourself!"
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -2231,7 +2342,9 @@ See how it work yourself!"
                         <h3>Freelancer Clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/freelancer_logo_new.png"
                             alt="Freelancer Clone"
                             className=""
@@ -2260,7 +2373,9 @@ See how it work yourself!"
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
                             className=""
@@ -2286,7 +2401,9 @@ See how it work yourself!"
                         <h3>WhatsApp Clone App</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
                             className=""
@@ -2314,7 +2431,9 @@ See how it work yourself!"
         className="modal-service"
       >
         <MDBModalBody>
-          <img
+          <Image
+            width={100}
+            height={100}
             src="/img/logisticmarketplace/logistics_marketplace.jpg"
             alt="icon"
             title=""
@@ -2338,7 +2457,9 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://loadboard.trucking21.com/" target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/logisticmarketplace/loadboard.jpg"
                   alt="banner"
                   title=""
@@ -2353,7 +2474,9 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://loadmoversgh.com/" target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/logisticmarketplace/loadmoversgh.jpg"
                   alt="banner"
                   title=""
@@ -2367,7 +2490,9 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://fletes24.com/" target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/logisticmarketplace/fletes24.jpg"
                   alt="banner"
                   title=""
@@ -2381,7 +2506,9 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://logistics.onestop.global/" target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/logisticmarketplace/logisticsonestop.jpg"
                   alt="banner"
                   title=""
@@ -2395,7 +2522,9 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://afodel.com/" target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/logisticmarketplace/afodel.jpg"
                   alt="banner"
                   title=""
@@ -2409,7 +2538,9 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="http://esseltransport.co.ke/" target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/logisticmarketplace/esseltransport.jpg"
                   alt="banner"
                   title=""
@@ -2423,10 +2554,12 @@ See how it work yourself!"
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&rsquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
+              width={100}
+              height={100}
               src="https://www.logicspice.com/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -2440,4 +2573,4 @@ See how it work yourself!"
   );
 };
 
-export default page;
+export default Page;

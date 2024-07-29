@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 import "slick-carousel/slick/slick-theme.css";
-const page = () => {
+const Page = () => {
   var settings = {
     dots: true,
     arrows: true,
@@ -42,22 +42,32 @@ const page = () => {
   };
   return (
     <>
-    <Navbar/>
-  <section class="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg BlogScriptBanner">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-7 col-md-7">
-                <h1>Blog Script</h1>
-                <div class="both-left-p-sec">
-                    <h2>Create And Manage Your Own Blog With Our Readymade Blog Software</h2>                      
-                </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
-                <div class="free-img"><img src="/img/blogscript/free-img.png" alt="" title="Website"/></div>
+      <Navbar />
+      <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg BlogScriptBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7 col-md-7">
+              <h1>Blog Script</h1>
+              <div className="both-left-p-sec">
+                <h2>
+                  Create And Manage Your Own Blog With Our Readymade Blog
+                  Software
+                </h2>
+              </div>
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
+                  <div className="free-img">
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/blogscript/free-img.png"
+                      alt=""
+                      title="Website"
+                    />
+                  </div>
                 </div>
 
-
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
                   <Link
@@ -77,9 +87,11 @@ const page = () => {
                     Download
                   </Link>
                 </div>
-                <div class="SubscriptionPrice">
-                  <div class="line-border NewLineBoader">
-                    <img
+                <div className="SubscriptionPrice">
+                  <div className="line-border NewLineBoader">
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -88,48 +100,58 @@ const page = () => {
                 </div>
               </div>
 
-              
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
-                    <i class="fa-solid fa-earth-americas"></i>
+                    <i className="fa-solid fa-earth-americas"></i>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-5 col-md-5">
-              <div class="por-mobile-new">
-                <img
+            <div className="col-sm-5 col-md-5">
+              <div className="por-mobile-new">
+                <Image
+                  width={400}
+                  height={100 / (100 / 100)}
                   alt="blog-script-mobile"
                   src="/img/softwares-banner-img/blog-banner-img.png"
                 />
               </div>
             </div>
           </div>
-          <div class="job-portal-banner-link">
-            <div aria-label="breadcrumb" class="my-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+          <div className="job-portal-banner-link">
+            <div aria-label="breadcrumb" className="my-breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <a href="">Home</a>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <a href="/softwares">Softwares</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                Blog Script
+                <li className="breadcrumb-item active" aria-current="page">
+                  Blog Script
                 </li>
               </ol>
             </div>
           </div>
         </div>
       </section>
-      
-      <section class="job-section-top-new JobBoardSectionNew">
-    <div class="container">
-        <p>We provide the best Blog Script which allows you to setup your own blog on the Web by providing an interface to manage your posts in an easy way. Our web blog software script installation is one step simple process to create a new blog or add the blog module to your existing website. </p>
-    </div>
-</section>
-<section className="client-say WhatsaapCliets" style={{ backgroundColor: "#fff" }}>
+
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
+          <p>
+            We provide the best Blog Script which allows you to setup your own
+            blog on the Web by providing an interface to manage your posts in an
+            easy way. Our web blog software script installation is one step
+            simple process to create a new blog or add the blog module to your
+            existing website.{" "}
+          </p>
+        </div>
+      </section>
+      <section
+        className="client-say WhatsaapCliets"
+        style={{ backgroundColor: "#fff" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -160,15 +182,17 @@ const page = () => {
           </div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job tab_bbx_job_classified">
-            <ul className="">
+              <ul className="">
                 <li
                   id="tab1_li"
-                  className={`jobseeker_app_job ddlj ${sellerTab ? "active" : ""}`}
+                  className={`jobseeker_app_job ddlj ${
+                    sellerTab ? "active" : ""
+                  }`}
                   onClick={() => handleSellerTab()}
                 >
                   <a>User</a>
                 </li>
-                
+
                 <li
                   id="tab3_li"
                   className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
@@ -177,285 +201,324 @@ const page = () => {
                   <a>Admin Panel</a>
                 </li>
               </ul>
-              
             </div>
             <div className="tab_contant">
-            {sellerTab && (
+              {sellerTab && (
                 <>
-              <div className="costomer_tab rj " id="tab2">
-                <div className="row">
-                  <div className="col-lg-4 col-md-3">
-                    <div className="costomer_tab_right">
-                      <img
-                        src="/img/blogscript/blogscript-user.png"
-                        alt="User"
-                      />
+                  <div className="costomer_tab rj " id="tab2">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right">
+                          <Image
+                            width={300}
+                            height={100}
+                            src="/img/blogscript/blogscript-user.png"
+                            alt="User"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright">
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/tickets_list.png"
+                                />
+                              </i>
+                              <span>
+                                Blog Listing
+                                <div className="product-idea">
+                                  <p>
+                                    Blog listing are all different in some way
+                                    and all bring something unique to their
+                                    readers & subscribers.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/recent-blog.png"
+                                />
+                              </i>
+                              <span>
+                                Recent Blogs
+                                <div className="product-idea">
+                                  <p>
+                                    Displaying recent posts helps visitors to
+                                    find best blog easily.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/equipment_search.png"
+                                />
+                              </i>
+                              <span>
+                                Search & Filter Blogs
+                                <div className="product-idea">
+                                  <p>
+                                    Visitors can search blogs by entering a
+                                    subject, tags and category.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/social_login.png"
+                                />
+                              </i>
+                              <span>
+                                Category Listing Blogs
+                                <div className="product-idea">
+                                  <p>
+                                    Website blog visitors can search blog from
+                                    category listing.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_cat.png"
+                                />
+                              </i>
+                              <span>
+                                Blog Subscribers
+                                <div className="product-idea">
+                                  <p>
+                                    Blog Subscribing is one of the most common
+                                    ways for readers to subscribe to blogs.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_blog.png"
+                                />
+                              </i>
+                              <span>
+                                Blog Comments
+                                <div className="product-idea">
+                                  <p>
+                                    User can submit comments regarding any blog
+                                    with user information.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-8 col-md-9">
-                    <div className="costomer_tab_left costomer_tab_leftright">
-                      <ul>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/tickets_list.png"
-                            />
-                          </i>
-                          <span>
-                            Blog Listing
-                            <div className="product-idea">
-                              <p>
-                                Blog listing are all different in some way and
-                                all bring something unique to their readers &
-                                subscribers.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/recent-blog.png"
-                            />
-                          </i>
-                          <span>
-                            Recent Blogs
-                            <div className="product-idea">
-                              <p>
-                                Displaying recent posts helps visitors to find
-                                best blog easily.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/equipment_search.png"
-                            />
-                          </i>
-                          <span>
-                            Search & Filter Blogs
-                            <div className="product-idea">
-                              <p>
-                                Visitors can search blogs by entering a subject,
-                                tags and category.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/social_login.png"
-                            />
-                          </i>
-                          <span>
-                            Category Listing Blogs
-                            <div className="product-idea">
-                              <p>
-                                Website blog visitors can search blog from
-                                category listing.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img alt="img" src="/img/jobboard/manage_cat.png" />
-                          </i>
-                          <span>
-                            Blog Subscribers
-                            <div className="product-idea">
-                              <p>
-                                Blog Subscribing is one of the most common ways
-                                for readers to subscribe to blogs.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/manage_blog.png"
-                            />
-                          </i>
-                          <span>
-                            Blog Comments
-                            <div className="product-idea">
-                              <p>
-                                User can submit comments regarding any blog with
-                                user information.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </>
+                </>
               )}
               {adminTab && (
                 <>
-              <div className="costomer_tab rj" id="tab3">
-                <div className="row">
-                  <div className="col-lg-4 col-md-3 ">
-                    <div className="costomer_tab_right costomer_tab_rightleft2">
-                      <img
-                        src="/img/blogscript/blogscrit_admin_mac.png"
-                        alt="Admin Panel"
-                      />
+                  <div className="costomer_tab rj" id="tab3">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3 ">
+                        <div className="costomer_tab_right costomer_tab_rightleft2">
+                          <Image
+                            width={300}
+                            height={100}
+                            src="/img/blogscript/blogscrit_admin_mac.png"
+                            alt="Admin Panel"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright2">
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                />
+                              </i>
+                              <span>
+                                Secure Login
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can login securely in Admin Panel.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_user.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Blog
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view a list of all blogs and can
+                                    manage (add/edit/delete) all blogs.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/equipment_search.png"
+                                />
+                              </i>
+                              <span>
+                                Search & Filter Feature
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can search blogs by entering a subject
+                                    or created date. Admin can apply filters
+                                    using a date.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/configuration.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Configuration
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can change a username, password,
+                                    email, set contact address & can do site
+                                    settings.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_category.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Category
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view and manage (add/edit/delete)
+                                    all categories.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_cat.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Subscribers
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view and manage (delete) all blog
+                                    subscribers.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_bookings.png"
+                                />
+                              </i>
+                              <span>
+                                View and Manage Comments
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view and manage (edit/delete) all
+                                    blog comments. Admin can search blog
+                                    comments by entering a comment keyword.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/active_deactive.png"
+                                />
+                              </i>
+                              <span>
+                                Activate/Deactivate Categories
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can activate & deactivate the
+                                    categories.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="col-lg-8 col-md-9">
-                    <div className="costomer_tab_left costomer_tab_leftright2">
-                      <ul>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/secure_login.png"
-                            />
-                          </i>
-                          <span>
-                            Secure Login
-                            <div className="product-idea">
-                              <p>Admin can login securely in Admin Panel.</p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/manage_user.png"
-                            />
-                          </i>
-                          <span>
-                            Manage Blog
-                            <div className="product-idea">
-                              <p>
-                                Admin can view a list of all blogs and can
-                                manage (add/edit/delete) all blogs.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/equipment_search.png"
-                            />
-                          </i>
-                          <span>
-                            Search & Filter Feature
-                            <div className="product-idea">
-                              <p>
-                                Admin can search blogs by entering a subject or
-                                created date. Admin can apply filters using a
-                                date.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/configuration.png"
-                            />
-                          </i>
-                          <span>
-                            Manage Configuration
-                            <div className="product-idea">
-                              <p>
-                                Admin can change a username, password, email,
-                                set contact address & can do site settings.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/manage_category.png"
-                            />
-                          </i>
-                          <span>
-                            Manage Category
-                            <div className="product-idea">
-                              <p>
-                                Admin can view and manage (add/edit/delete) all
-                                categories.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img alt="img" src="/img/jobboard/manage_cat.png" />
-                          </i>
-                          <span>
-                            Manage Subscribers
-                            <div className="product-idea">
-                              <p>
-                                Admin can view and manage (delete) all blog
-                                subscribers.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/manage_bookings.png"
-                            />
-                          </i>
-                          <span>
-                            View and Manage Comments
-                            <div className="product-idea">
-                              <p>
-                                Admin can view and manage (edit/delete) all blog
-                                comments. Admin can search blog comments by
-                                entering a comment keyword.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                        <li>
-                          <i>
-                            <img
-                              alt="img"
-                              src="/img/jobboard/active_deactive.png"
-                            />
-                          </i>
-                          <span>
-                            Activate/Deactivate Categories
-                            <div className="product-idea">
-                              <p>
-                                Admin can activate & deactivate the categories.
-                              </p>
-                            </div>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-              </>
+                </>
               )}
             </div>
           </div>
@@ -514,13 +577,15 @@ const page = () => {
               Best Partner Company For Your Technological Solutions!
             </h2>
             <br />
-            <div class="logic-parter">
-              <a href="javascript:void(0);" class="ylogicspice">
+            <div className="logic-parter">
+              <a href="javascript:void(0);" className="ylogicspice">
                 <i>
-                  <img
+                  <Image
+                    width={20}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
-                    class=""
+                    className=""
                   />
                 </i>
                 <span>Why Logicspice</span>
@@ -534,7 +599,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx1">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/coding.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/coding.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Optimized Code with proper commenting</h3>
                       <p>
@@ -550,7 +620,9 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx2">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/data-complexity.png"
                           alt="img"
                         />
@@ -570,7 +642,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx3">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/coordinate.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/coordinate.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>
                         Quick Response and
@@ -590,7 +667,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx4">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/customize.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/customize.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Customization at affordable price</h3>
                       <p>
@@ -605,7 +687,9 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx5">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/smartphone-icon.png"
                           alt="img"
                         />
@@ -623,7 +707,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-bx6">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/data.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/data.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Dedicated Support Team</h3>
                       <p>
@@ -640,7 +729,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/web-icon.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/web-icon.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Global company with agile development approach</h3>
                       <p>
@@ -659,7 +753,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/encrypted.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/encrypted.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>
                         Customer information and application level security
@@ -677,7 +776,12 @@ const page = () => {
                   <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/history-icon.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/history-icon.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Experienced workforce with 3000+ project history</h3>
                       <p>
@@ -695,7 +799,9 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/seouser-friendly.png"
                           alt="img"
                         />
@@ -713,7 +819,9 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/one-stop-solution.png"
                           alt="img"
                         />
@@ -731,7 +839,9 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/third-party-api.png"
                           alt="img"
                         />
@@ -749,7 +859,12 @@ const page = () => {
                   <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                     <div className="caption">
                       <div className="best-partner-img-bx">
-                        <img src="/img/jobboard/cost-effective.png" alt="img" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/jobboard/cost-effective.png"
+                          alt="img"
+                        />
                       </div>
                       <h3>Cost Effective</h3>
                       <p>
@@ -776,7 +891,9 @@ const page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="Laravel Development"
                       className="lazy"
@@ -786,19 +903,31 @@ const page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="HTML5"
+                    />
                   </div>
                   <div className="icntechimg_nm">HTML5</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img src="/img/jobboard/tech_mysql_icon.png" alt="MySQL" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/tech_mysql_icon.png"
+                      alt="MySQL"
+                    />
                   </div>
                   <div className="icntechimg_nm">MySQL</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
                     />
@@ -843,7 +972,9 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -852,7 +983,9 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -861,13 +994,20 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -992,9 +1132,9 @@ const page = () => {
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
 
                     <div className="customer_review_stext">
-                      "Professional, Always put in extra effort, Good Knowledge.
-                      One of the best Developer. Will continue to work with them
-                      with upcoming project."
+                      &quot;Professional, Always put in extra effort, Good
+                      Knowledge. One of the best Developer. Will continue to
+                      work with them with upcoming project.&quot;
                     </div>
                     <div
                       className="who_ratset"
@@ -1012,7 +1152,9 @@ const page = () => {
                       </span>
                       Adam Wilson, USA{" "}
                       <span>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1022,13 +1164,13 @@ const page = () => {
                   <div className="customers_review_sec_row">
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext" id="fiveer-clone">
-                      "website interface design and back-end business
-                      implementation using php."
+                      &quot;website interface design and back-end business
+                      implementation using php.&quot;
                     </div>
 
                     <div
                       className="who_ratset"
-                      style={{  paddingRight: "17px" }}
+                      style={{ paddingRight: "17px" }}
                     >
                       <span
                         className="star_review_main"
@@ -1042,7 +1184,9 @@ const page = () => {
                       </span>
                       <span id="client-name">Jason Dinsmore, Germany</span>{" "}
                       <span>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
                         />
@@ -1052,10 +1196,10 @@ const page = () => {
                   <div className="customers_review_sec_row">
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext">
-                      "The word "perfect" is not enough to describe the
-                      capability of Logicspice. They are just wonderful and
-                      willing to extend the effort until the customer satisfied,
-                      definitely will re-hire them."
+                      &quot;The word &quot;perfect&quot; is not enough to
+                      describe the capability of Logicspice. They are just
+                      wonderful and willing to extend the effort until the
+                      customer satisfied, definitely will re-hire them.&quot;
                     </div>
                     <div
                       className="who_ratset"
@@ -1073,7 +1217,9 @@ const page = () => {
                       </span>
                       Emma Davis, AUS{" "}
                       <span>
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1084,7 +1230,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ's</h4>
+              <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
@@ -1123,8 +1269,8 @@ const page = () => {
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      Yes, We deliver the exact product. We don't compromise
-                      with quality at all.
+                      Yes, We deliver the exact product. We don&apos;t
+                      compromise with quality at all.
                     </p>
                   </MDBAccordionItem>
 
@@ -1157,41 +1303,47 @@ const page = () => {
         </div>
       </section>
 
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="title_main">Blog Script Features</h2>
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="title_main">Blog Script Features</h2>
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
-              <div class="feat-slide-img"><img
-                  src="/img/blogscript/blog-banners1.jpg"
-                  alt="Post Classified"
-                /></div>
-                    <div class="hands-proved">
-                    <div className="titleof_scnew">Blog Script List</div>
-                     </div>
-              </div>
-         
-
-              <div class="SliderMainBx">
-              <div class="feat-slide-img"> <img
-                  src="/img/blogscript/blog-banners2.jpg"
-                  alt="Classifieds Management"
-                /></div>
-                    <div class="hands-proved">
-                    <div className="titleof_scnew">Blog Script List</div>  </div>
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/blogscript/blog-banners1.jpg"
+                    alt="Post Classified"
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Blog Script List</div>
+                </div>
               </div>
 
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  {" "}
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/blogscript/blog-banners2.jpg"
+                    alt="Classifieds Management"
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Blog Script List</div>{" "}
+                </div>
+              </div>
             </Slider>
           </div>
         </div>
       </section>
 
-
-
-      <Footer /> 
+      <Footer />
     </>
   );
 };
 
-export default page;
+export default Page;

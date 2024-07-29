@@ -15,7 +15,7 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 
-const page = () => {
+const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
@@ -110,9 +110,11 @@ const page = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <img
+                    <Image
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
+                      width={100}
+                      height={100}
                     />
                     <p>15 Reviews</p>
                   </div>
@@ -131,9 +133,11 @@ const page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <img
+                <Image
                   alt="Ebay Clone"
                   src="/img/softwares-banner-img/ebaybanner-img.png"
+                  width={450}
+                  height={500 / (100 / 100)}
                 />
               </div>
             </div>
@@ -285,9 +289,11 @@ const page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <img
+                          <Image
                             src="/img/ebay/ebay_User_website.jpg"
                             alt="Customer Panel"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
@@ -296,9 +302,11 @@ const page = () => {
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -314,9 +322,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_restaurants.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -333,9 +343,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -351,9 +363,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_customers.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -369,9 +383,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_cuisines.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -387,7 +403,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_1.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_1.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 Place Order
@@ -402,7 +423,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_1.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_1.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 View Orders
@@ -417,7 +443,12 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_3.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_3.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -432,7 +463,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_5.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_5.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -448,9 +484,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -467,9 +505,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/eBay_10.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -485,9 +525,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -515,9 +557,11 @@ const page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <img
+                          <Image
                             src="/img/ebay/ebay_User.png"
                             alt="Store Vendors Panel"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
@@ -526,9 +570,11 @@ const page = () => {
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -545,9 +591,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/received-orders.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -562,9 +610,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/delivery-Charges.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -579,9 +629,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/kitchen-staff.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -597,9 +649,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/delivery-person.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -615,9 +669,11 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/order-status.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -634,9 +690,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -652,7 +710,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_6.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_6.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 Store Payment Settings
@@ -668,7 +731,12 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_3.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_3.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -683,9 +751,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -702,7 +772,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_7.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_7.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 Customer Support Settings
@@ -716,7 +791,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_6.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_6.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 View Payment History
@@ -730,9 +810,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/eBay_11.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -748,9 +830,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/eBay_10.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -766,7 +850,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_5.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_5.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -792,9 +881,11 @@ const page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                          <Image
                             src="/img/ebay/ebay_admin.png"
                             alt="Admin Panel"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
@@ -803,9 +894,11 @@ const page = () => {
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -820,9 +913,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/search_restaurant.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -838,9 +933,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/filter_restaurant.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -856,9 +953,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_restaurant_dtl.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -874,9 +973,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -893,9 +994,11 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
@@ -911,7 +1014,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_1.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_1.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 Manage Orders
@@ -926,7 +1034,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_2.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_2.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 Manage Coupons
@@ -941,7 +1054,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_3.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_3.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 Manage Shipping Methods
@@ -957,7 +1075,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_4.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_4.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -974,7 +1097,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_6.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_6.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -991,7 +1119,12 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_5.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_5.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -1007,7 +1140,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_7.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_7.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -1024,7 +1162,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_9.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_9.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -1040,7 +1183,12 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img alt="img" src="/img/jobboard/eBay_8.png" />
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/eBay_8.png"
+                                  width={100}
+                                  height={100}
+                                />
                               </i>
                               <span>
                                 {" "}
@@ -1192,7 +1340,13 @@ const page = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img src="/img/jobboard/why-logic-icon.png" alt="" className="" />
+                  <Image
+                    src="/img/jobboard/why-logic-icon.png"
+                    alt=""
+                    className=""
+                    width={20}
+                    height={100}
+                  />
                 </i>
                 <span>Why Logicspice</span>
               </a>
@@ -1212,33 +1366,44 @@ const page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Wordpress</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                        width={40}
+                        height={100}
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
@@ -1281,33 +1446,44 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                    width={50}
+                    height={100}
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
+                    width={40}
+                    height={100}
                   />
                 </div>
                 <div className="supportsettingtext">Easily scalable</div>
@@ -1431,9 +1607,9 @@ const page = () => {
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "Perfect eBay clone script to launch Multi Vendor
+                      &quot;Perfect eBay clone script to launch Multi Vendor
                       Ecommerce Software This script is embedded with awesome
-                      features. Thank you guys."
+                      features. Thank you guys.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1446,18 +1622,20 @@ const page = () => {
                       </span>
                       <span id="client-name">Jack caron, UK</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <img
+                        <Image
                           src="/img/jobboard/uk_flag_img.png"
                           alt="mobile app development in UK"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "An extremely quick and helpful solution for online
+                      &quot;An extremely quick and helpful solution for online
                       ecommerce business startup similar to eBay. Thanks to
-                      Logicspice team for their timely support services."
+                      Logicspice team for their timely support services.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1470,19 +1648,22 @@ const page = () => {
                       </span>
                       W. Desuza, USA{" "}
                       <span className="ConuntryFlagIcon">
-                        <img
+                        <Image
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      "I wanted to build a site like eBay & Etsy for E-commerce
-                      platform. I bought this eBay clone script because it has
-                      many features similar to what I was expecting. It was very
-                      easy to install and works GREAT. Thank you Logicspice."
+                      &quot;I wanted to build a site like eBay & Etsy for
+                      E-commerce platform. I bought this eBay clone script
+                      because it has many features similar to what I was
+                      expecting. It was very easy to install and works GREAT.
+                      Thank you Logicspice.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1495,9 +1676,11 @@ const page = () => {
                       </span>
                       Marian Keli, Belgium{" "}
                       <span className="ConuntryFlagIcon">
-                        <img
+                        <Image
                           src="/img/jobboard/belgium_flag_img.png"
                           alt="mobile app development in Belgium"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
@@ -1506,7 +1689,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ's</h4>
+              <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
@@ -1557,9 +1740,9 @@ const page = () => {
                     collapseId="flush-collapse6"
                   >
                     <p>
-                      No. we don't have any type of hidden charges and after
-                      buying a product, installation will be done from our end
-                      which will be free.{" "}
+                      No. we don&apos;t have any type of hidden charges and
+                      after buying a product, installation will be done from our
+                      end which will be free.{" "}
                     </p>
                   </MDBAccordionItem>
                   <MDBAccordionItem
@@ -1567,9 +1750,9 @@ const page = () => {
                     collapseId="flush-collapse7"
                   >
                     <p>
-                      No. You don't have the right to resell script. All rights
-                      will remain with Logicspice only. You can sell the vendor
-                      panel that too on subscription basis{" "}
+                      No. You don&apos;t have the right to resell script. All
+                      rights will remain with Logicspice only. You can sell the
+                      vendor panel that too on subscription basis{" "}
                     </p>
                   </MDBAccordionItem>
                   <MDBAccordionItem
@@ -1595,8 +1778,8 @@ const page = () => {
                     collapseId="flush-collapse10"
                   >
                     <p>
-                      No, You can't resell the script. All rights will remain
-                      with Logicspice only.
+                      No, You can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
                     </p>
                   </MDBAccordionItem>
 
@@ -1638,40 +1821,53 @@ const page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/ebay/ebay01.jpg"
                     alt="Add Menu For Restaurants"
+                    width={1075}
+                    height={100}
                   />
                 </div>
               </div>
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/ebay/ebay02.jpg"
                     alt="List/Filter/Sort Restaurants"
+                    width={1075}
+                    height={100}
                   />
                 </div>
               </div>
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/ebay/ebay03.jpg"
                     alt="Menu Management For Restaurant"
+                    width={1075}
+                    height={100}
                   />
                 </div>
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img src="/img/ebay/ebay04.jpg" alt="View Received Orders" />
+                  <Image
+                    src="/img/ebay/ebay04.jpg"
+                    alt="View Received Orders"
+                    width={1075}
+                    height={100}
+                  />
                 </div>
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <img
+                  <Image
                     src="/img/ebay/ebay05.jpg"
                     alt="View Restaurant Detail"
+                    width={1075}
+                    height={100}
                   />
                 </div>
               </div>
@@ -1704,14 +1900,20 @@ const page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/softwares/whatsapp-clone" title="View Detail" target="_blank">
+                  <Link
+                    href="/softwares/whatsapp-clone"
+                    title="View Detail"
+                    target="_blank"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>whatsapp clone</h3>
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
+                            width={250}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -1724,15 +1926,21 @@ const page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/softwares/fiverr-clone" title="View Detail" target="_blank">
+                  <Link
+                    href="/softwares/fiverr-clone"
+                    title="View Detail"
+                    target="_blank"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
+                            width={250}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -1745,15 +1953,21 @@ const page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href ="/softwares/logistic-marketplace-software" title="View Detail" target="_blank">
+                  <Link
+                    href="/softwares/logistic-marketplace-software"
+                    title="View Detail"
+                    target="_blank"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <img
+                          <Image
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
+                            width={250}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -1774,9 +1988,11 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+            <Image
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
+              width={50}
+              height={50}
             />
           </a>
         </div>
@@ -1789,4 +2005,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

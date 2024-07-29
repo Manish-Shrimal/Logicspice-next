@@ -7,7 +7,7 @@ import "@/app/company/company.css";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const page = () => {
+const Page = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -554,4 +554,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

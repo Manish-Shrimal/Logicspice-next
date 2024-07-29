@@ -11,7 +11,7 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 
-const page = () => {
+const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
  
@@ -27,7 +27,7 @@ const page = () => {
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <img
+        <Image width={100} height={100}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -75,7 +75,7 @@ const page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <img src="/img/jobboard/stars.png" alt="stars" className="" />
+              <Image width={100} height={100} src="/img/jobboard/stars.png" alt="stars" className="" />
               <p>12 Reviews</p>
             </div>
             <Link className="btn btn-primary" href="#">
@@ -97,7 +97,7 @@ const page = () => {
                   <i className="question_icon"></i>
                   <span className="tool_lgn">
                     {" "}
-                    It's required to login in admin panel.
+                    It&lsquo;s required to login in admin panel.
                   </span>
                 </div>
               </span>
@@ -127,7 +127,7 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <img
+                      <Image width={100} height={100}
                         className="media-object"
                         src="/img/leadgeneration/unique_signupicon.png"
                         alt="Easy Registration"
@@ -146,7 +146,7 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <img
+                      <Image width={100} height={100}
                         className="media-object"
                         src="/img/leadgeneration/great_profile_managment_icon.png"
                         alt="Great Profile Management"
@@ -166,7 +166,7 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <img
+                      <Image width={100} height={100}
                         className="media-object"
                         src="/img/leadgeneration/fully_responsive_icon.png"
                         alt="Fully Responsive"
@@ -176,7 +176,7 @@ const page = () => {
                   <div className="media-body">
                     <h3 className="media-heading">Fully Responsive</h3>
                     <p>
-                      Themes with 'fit-all-screen' compatibility allow user to
+                      Themes with &lsquo;fit-all-screen&lsquo; compatibility allow user to
                       access from mobile as well as tablet.
                     </p>
                   </div>
@@ -186,7 +186,7 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <img
+                      <Image width={100} height={100}
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Lost Password Recovery"
@@ -206,7 +206,7 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <img
+                      <Image width={100} height={100}
                         className="media-object"
                         src="/img/leadgeneration/search_filter_icon.png"
                         alt="Search Filter"
@@ -226,7 +226,7 @@ const page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <img
+                      <Image width={100} height={100}
                         className="media-object"
                         src="/img/leadgeneration/payment_options_icon.png"
                         alt="Payment Options"
@@ -292,7 +292,7 @@ const page = () => {
                         href="javascript:void(0);"
                       >
                         <span>
-                          <img
+                          <Image width={100} height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
                           />
@@ -334,25 +334,25 @@ const page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/apple_phn_icon.png" alt="iOS" />
+                  <Image width={100} height={100} src="/img/jobboard/apple_phn_icon.png" alt="iOS" />
                 </div>
                 <div className="icntechimg_nm">iOS</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/tech_java_icon.png" alt="Java" />
+                  <Image width={100} height={100} src="/img/jobboard/tech_java_icon.png" alt="Java" />
                 </div>
                 <div className="icntechimg_nm">Java</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/andoird_icon.png" alt="Android" />
+                  <Image width={100} height={100} src="/img/jobboard/andoird_icon.png" alt="Android" />
                 </div>
                 <div className="icntechimg_nm">Android</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
                   />
@@ -361,7 +361,7 @@ const page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
                   />
@@ -370,13 +370,13 @@ const page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <img src="/img/jobboard/bootstrap.png" alt="manager_icn" />
+                  <Image width={100} height={100} src="/img/jobboard/bootstrap.png" alt="manager_icn" />
                 </div>
                 <div className="icntechimg_nm">Bootstrap</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
                   />
@@ -385,7 +385,7 @@ const page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
                   />
@@ -405,7 +405,7 @@ const page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -414,7 +414,7 @@ const page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -563,7 +563,7 @@ const page = () => {
                     </div>
                     <div className="who_ratset">Emsall</div>
                     <div className="customer_review_stext">
-                      The word "perfect" is not enough to describe the
+                      The word &apos;perfect&apos; is not enough to describe the
                       capability of Logicspice. They are just wonderful and
                       willing to extend the effort until the customer satisfied,
                       definitely will re-hire them
@@ -625,7 +625,7 @@ const page = () => {
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      Yes, We deliver the exact product. We don't compromise
+                      Yes, We deliver the exact product. We don&lsquo;t compromise
                       with quality at all.
                     </p>
                   </MDBAccordionItem>
@@ -648,7 +648,7 @@ const page = () => {
                     <p>
                       You are allowed to modify the script. You can remove our
                       company information and put yours. But you cannot put
-                      "copyright by" because only we own the copyrights for our
+                      &apos;copyright by&apos; because only we own the copyrights for our
                       products.{" "}
                     </p>
                   </MDBAccordionItem>
@@ -664,7 +664,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image width={100} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -676,4 +676,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

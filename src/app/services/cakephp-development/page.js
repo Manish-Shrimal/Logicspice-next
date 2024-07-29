@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-const page = () => {
+const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
@@ -69,7 +69,7 @@ const page = () => {
                     }
                   </div>
                   <Link
-                    href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+                    href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
                     <div class="WhatsappIcon">
@@ -85,7 +85,7 @@ const page = () => {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="page_img">
-                <img
+                <Image
                   src="/img/cakephpdevelopment/cakephp-banner-img.png"
                   alt="Cakephp web development"
                 />
@@ -100,7 +100,7 @@ const page = () => {
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div class="laravel_img">
-                <img
+                <Image
                   src="/img/cakephpdevelopment/caclphp-logo-img.png"
                   alt="laravel web development"
                 />
@@ -115,7 +115,7 @@ const page = () => {
                 <p>
                   CakePHP has emerged as a well known platform for the PHP
                   development due to its flexibility and a number of
-                  capabilities. Inspired by Ruby on Rails, CakePHP has become
+                  capabilities. Inspired by Ruby on Rails&sbquo; CakePHP has become
                   one of the commonly used development systems. Our team of
                   expert cakePHP developers build the scalable applications and
                   websites such as e-commerce sites and complex web applications
@@ -123,10 +123,10 @@ const page = () => {
                 </p>
                 <p>
                   CakePHP framework has always been the first choice for many
-                  professional developers and business houses, because of its
-                  extraordinary features & simple interface to use it. So, if
+                  professional developers and business houses&sbquo; because of its
+                  extraordinary features & simple interface to use it. So&sbquo; if
                   you are looking for professional CakePHP development services
-                  and customized solutions, modified as per your needs, then
+                  and customized solutions&sbquo; modified as per your needs&sbquo; then
                   your search ends here. We are a leading
                   <b>CakePHP development company </b>
                   which excels in offering world class and complex web
@@ -143,14 +143,14 @@ const page = () => {
                 </p>
 
                 <p>
-                  Our packages for CakePHP development include perfect Admin,
-                  sub-admin and user dashboard in the backend. In the front end,
+                  Our packages for CakePHP development include perfect Admin&sbquo;
+                  sub-admin and user dashboard in the backend. In the front end&sbquo;
                   there could be various types of interface and functionality
-                  which may relate to Dating Websites, online shopping cart,
-                  booking application, social media web development etc. One can
+                  which may relate to Dating Websites&sbquo; online shopping cart&sbquo;
+                  booking application&sbquo; social media web development etc. One can
                   hire the CakePHP programmers from{" "}
                   <strong>best cakephp web development company</strong> for
-                  consultancy, customization and development regarding their
+                  consultancy&sbquo; customization and development regarding their
                   applications.
                 </p>
               </div>
@@ -165,7 +165,7 @@ const page = () => {
           <p class="laravel_core_sub2">
             CakePHP framework has always been the first choice for many
             professional
-            <br /> developers and business houses, because of its interface to
+            <br /> developers and business houses&sbquo; because of its interface to
             use it.
           </p>
           <div class="laravel-services-bx-top">
@@ -174,12 +174,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/cakephpdevelopment/laravel-new-icon1.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/cakephpdevelopment/laravel-white-icon1.png"
                         alt="laravel web development"
@@ -199,12 +199,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/cakephpdevelopment/cackphp-new-icon2.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/cakephpdevelopment/cackphp-white-icon2.png"
                         alt="laravel web development"
@@ -223,12 +223,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/cakephpdevelopment/cackphp-new-icon3.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/cakephpdevelopment/cackphp-white-icon3.png"
                         alt="laravel web development"
@@ -247,12 +247,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/cakephpdevelopment/cackphp-new-icon4.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/cakephpdevelopment/cackphp-white-icon4.png"
                         alt="laravel web development"
@@ -271,12 +271,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/cakephpdevelopment/cackphp-new-icon5.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/cakephpdevelopment/cackphp-white-icon5.png"
                         alt="laravel web development"
@@ -296,12 +296,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box6">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/cakephpdevelopment/cackphp-new-icon6.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/cakephpdevelopment/cackphp-white-icon6.png"
                         alt="laravel web development"
@@ -311,7 +311,7 @@ const page = () => {
                   </div>
                   <h3>CakePHP shopping</h3>
                   <p>
-                    We also offer CakePHP shopping cart application, which is
+                    We also offer CakePHP shopping cart application&sbquo; which is
                     really efficient in offering instant checkouts. It supports
                     smooth payment for users from all parts of the world.
                   </p>
@@ -328,7 +328,7 @@ const page = () => {
           <p class="laravel_core_sub">
             CakePHP framework has always been the first choice for many
             professional
-            <br /> developers and business houses, because of its interface to
+            <br /> developers and business houses&sbquo; because of its interface to
             use it.
           </p>
           <div class="laravel_core_features_bx">
@@ -336,7 +336,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/core_features_icon1.png"
                       alt="img1"
                     />
@@ -351,7 +351,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp_features_icon4.png"
                       alt="img4"
                     />
@@ -369,7 +369,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp_features_icon2.png"
                       alt="img2"
                     />
@@ -383,7 +383,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp_features_icon5.png"
                       alt="img5"
                     />
@@ -391,7 +391,7 @@ const page = () => {
                   <div class="laravel_core_features_detail">
                     <h3>Emerging platform</h3>
                     <p>
-                      It offers instant execution of RSS, Ajax and many others
+                      It offers instant execution of RSS&sbquo; Ajax and many others
                     </p>
                   </div>
                 </div>
@@ -399,7 +399,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp_features_icon3.png"
                       alt="img3"
                     />
@@ -407,7 +407,7 @@ const page = () => {
                   <div class="laravel_core_features_detail">
                     <h3>Structure </h3>
                     <p>
-                      It features architecture (MVC), which provides scalable,
+                      It features architecture (MVC)&sbquo; which provides scalable&sbquo;
                       efficient and quick functioning
                     </p>
                   </div>
@@ -417,7 +417,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp_features_icon6.png"
                       alt="img6"
                     />
@@ -445,7 +445,7 @@ const page = () => {
           <p class="laravel_core_sub2">
             CakePHP framework has always been the first choice for many
             professional
-            <br /> developers and business houses, because of its interface to
+            <br /> developers and business houses&sbquo; because of its interface to
             use it.
           </p>
           <div class="laravel_choose_features_bx">
@@ -453,7 +453,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp-why-icon1.png"
                       alt="img1"
                     />
@@ -461,8 +461,8 @@ const page = () => {
                   <div class="laravel_choose_details">
                     <h3>Language selection</h3>
                     <p>
-                      Most of the frameworks work on default language, i.e.
-                      English, but with <b>CakePHP website development</b>, the
+                      Most of the frameworks work on default language&sbquo; i.e.
+                      English&sbquo; but with <b>CakePHP website development</b>&sbquo; the
                       language is selected by its developer.{" "}
                     </p>
                   </div>
@@ -472,7 +472,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp-why-icon2.png"
                       alt="img1"
                     />
@@ -491,7 +491,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp-why-icon3.png"
                       alt="img1"
                     />
@@ -500,8 +500,8 @@ const page = () => {
                     <h3>Ease of management</h3>
                     <p>
                       You can easily represent your relations between tables
-                      which can be further used for main records. Hence, with
-                      CakePHP save yourself from writing SQLâ€™s for many
+                      which can be further used for main records. Hence&sbquo; with
+                      CakePHP save yourself from writing SQL&apos;s for many
                       projects.
                     </p>
                   </div>
@@ -511,7 +511,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp-why-icon4.png"
                       alt="img1"
                     />
@@ -519,7 +519,7 @@ const page = () => {
                   <div class="laravel_choose_details">
                     <h3>Open Source Framework</h3>
                     <p>
-                      Being an open source customization, CakePHP offers a lot
+                      Being an open source customization&sbquo; CakePHP offers a lot
                       of <b>experimentation and innovation</b> for developers.
                       One can alter codes and UI as per their need and can
                       create new and improved applications.
@@ -531,7 +531,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp-why-icon5.png"
                       alt="img1"
                     />
@@ -540,7 +540,7 @@ const page = () => {
                     <h3>Architecture support</h3>
                     <p>
                       It features on <b>MVC structure</b> which offers instant
-                      functioning, especially in the case of large codes.{" "}
+                      functioning&sbquo; especially in the case of large codes.{" "}
                     </p>
                   </div>
                 </div>
@@ -549,7 +549,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image
                       src="/img/cakephpdevelopment/cackphp-why-icon6.png"
                       alt="img1"
                     />
@@ -558,7 +558,7 @@ const page = () => {
                     <h3>Unit testing</h3>
                     <p>
                       CakePHP enables you to create your own tests to examine
-                      the doubts. The tests can either be core or customized, as
+                      the doubts. The tests can either be core or customized&sbquo; as
                       per your requirements.
                     </p>
                   </div>
@@ -588,7 +588,7 @@ const page = () => {
             <Slider {...settings}>
               <div class="php-item">
                 <a href="https://racingcartel.com.au/" target="_blank">
-                  <img
+                  <Image
                     src="/img/cakephpdevelopment/racingcartel-banner.png"
                     alt="img13"
                   />
@@ -604,7 +604,7 @@ const page = () => {
 
               <div class="php-item">
                 <a href="https://www.iamcleaning.co.za/" target="_blank">
-                  <img
+                  <Image
                     src="/img/cakephpdevelopment/iamcleaning-banner.png"
                     alt="img15"
                   />
@@ -619,7 +619,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <a href="https://afodel.com/" target="_blank">
-                  <img
+                  <Image
                     src="/img/cakephpdevelopment/afodel-banner.png"
                     alt="img16"
                   />
@@ -634,7 +634,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <a href="https://az360jobs.com/" target="_blank">
-                  <img
+                  <Image
                     src="/img/cakephpdevelopment/az360jobs-banner.png"
                     alt="img16"
                   />
@@ -654,10 +654,10 @@ const page = () => {
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -675,4 +675,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

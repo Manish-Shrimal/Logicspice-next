@@ -10,9 +10,9 @@ import Workingwith from "./Components/Workingwith";
 import Certificationtabs from "./Components/Certificationtabs";
 import Customizeweb from "./Components/Customizeweb";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import "./resposive.css";
+
 // import React, { useState } from "react";
-
-
 
 const Page = () => {
   // const [modalOpen, setModalOpen] = useState(false);
@@ -728,7 +728,7 @@ const Page = () => {
       </section>
 
       <section className="customize-top">
-      <div id="particles-js2"></div>
+        <div id="particles-js2"> </div>
         <div className="container">
           <div className="headings headings_white">
             <h1>CUSTOMISED WEB AND MOBILE APP DEVELOPMENT</h1>
@@ -737,11 +737,12 @@ const Page = () => {
               creating world-class user experiences across web, Android and
               iPhone apps.
             </p>
-          </div>
-          <div>
-          <Customizeweb />
 
-            </div>
+           
+          </div>
+       
+          <Customizeweb />
+          
         </div>
       </section>
       <section className="client-say">
@@ -766,9 +767,9 @@ const Page = () => {
               <p>
                 Logicspice offers <span>Cost Effective</span> Solution and the{" "}
                 <span>quality</span> of their work is very good. Logicspice has
-                very <span>good reviews</span> and 100's of different project of
-                different areas and work with detailed feedback about our
-                request with very <span>standardized process.</span>{" "}
+                very <span>good reviews</span> and 100&apos;s of different
+                project of different areas and work with detailed feedback about
+                our request with very <span>standardized process.</span>{" "}
               </p>
               <p>
                 Very friendly environment and I highly recommend Logicspice for

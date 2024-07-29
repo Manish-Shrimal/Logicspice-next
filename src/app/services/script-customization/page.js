@@ -1,0 +1,227 @@
+"use client";
+import React, { useState } from "react";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/services/services.css";
+import Image from "next/image";
+import Link from "next/link";
+import "@fortawesome/fontawesome-free/css/all.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import "../../resposive.css";
+const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
+  return (
+    <>
+      <NavBar />
+      <section class="modifications">
+        <div class="container">
+          <h1>Script Modification</h1>
+          <p class="txt-hdng">
+            We are ready to do custom modification on all our softwares
+          </p>
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <img
+                src="/img/scriptcustomization/imageScriptModifications.png"
+                alt="script modification"
+              />
+            </div>
+            <div class="col-md-6">
+              <p>
+                Our all the scripts are ready to go for custom modification to
+                meet your business requirement. We are well aware that every
+                business has its own requirement and taste and we can not meet
+                all the requirements with single standard software solution.
+                This is the reason we offer script modification.{" "}
+              </p>
+
+              <p>
+                We can use latest approaches in script modification by using
+                latest technology and functional accommodations. You can
+                customize the script by your own as well; it is totally your
+                choice. Our main motive regarding customization is that the
+                script matches your specific business need.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="customization">
+        <div class="container">
+          <h2>How the script customization works?</h2>
+
+          <div class="step-customized">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="step1">
+                  <div class="step-content">
+                    <p data-aos="fade-right">
+                      Get in touch with us and share your requirement
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6 col-sm-offset-6">
+                <div class="step2">
+                  <div class="step-content">
+                    <p data-aos="fade-left">
+                      We will discuss your project requirements in detail.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="step1">
+                  <div class="step-content">
+                    <p data-aos="fade-right">
+                      With some token money&sbquo; documentation will be done.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6 col-sm-offset-6">
+                <div class="step2">
+                  <div class="step-content">
+                    <p data-aos="fade-left">
+                      We will share our proposal with you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="step1">
+                  <div class="step-content">
+                    <p data-aos="fade-right">
+                      With your approval on the proposal&sbquo; we will work on coding
+                      milestone by milestone.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"></div>
+
+              <div class="col-sm-6 col-sm-offset-6">
+                <div class="step2">
+                  <div class="step-content">
+                    <p data-aos="fade-left">
+                      We will ask you to test customized script on our demo
+                      server.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="step1">
+                  <div class="step-content">
+                    <p data-aos="fade-right">
+                      We will fix bugs&sbquo; issues if any occurs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"></div>
+              <div class="col-sm-6 col-sm-offset-6">
+                <div class="step2">
+                  <div class="step-content">
+                    <p data-aos="fade-left">
+                      Will seek your approval and payment
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="step1">
+                  <div class="step-content">
+                    <p data-aos="fade-right">
+                      We will deliver and install the application code.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="custo_btn text-center">
+            <a class="btn btn-primary">Ready Made Softwares</a>
+          </div>
+        </div>
+      </section>
+      <section class="software_custom">
+        <div class="container">
+          <h2>Custom Mobile & Web Applications</h2>
+          <p>
+            If you did not found any suitable ready made solution for your
+            business then you can ask us for custom solution. We are expert in
+            developing booking solution&sbquo; CRM software&sbquo; rental software and many
+            more. Chat with us for more details.
+          </p>
+          <p>
+            Our team of developers&sbquo; designers&sbquo; testers assure to deliver high
+            quality product to you. Get in touch with us for best solution for
+            your business.
+          </p>
+          <div class="custo_btn text-center">
+            <a
+              href="https://www.logicspice.com/custom-solutions/"
+              class="btn btn-primary"
+            >
+              Custom Solutions
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+};
+
+export default Page;

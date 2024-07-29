@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-const page = () => {
+const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
@@ -50,13 +50,13 @@ const page = () => {
 
       <section class="laravel-banner LaravelBanners">
         <div class="LaravelLeftImg">
-          <img
+          <Image
             src="/img/laraveldevelopment/laravel-left-img.png"
             alt="laravel web development"
           />
         </div>
         <div class="LaravelRightImg">
-          <img
+          <Image
             src="/img/laraveldevelopment/laravel-right-img.png"
             alt="laravel web development"
           />
@@ -115,7 +115,7 @@ const page = () => {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="page_img LaravelBannerImg">
-                <img
+                <Image
                   src="/img/laraveldevelopment/laravel-new-icon.png"
                   alt="laravel web development"
                 />
@@ -124,31 +124,31 @@ const page = () => {
             <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="CertificationsLaravel">
                 <a href="#" class="LaravelGuarantee">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/clutch-logo.jpg"
                     alt="laravel web development"
                   />
                 </a>
                 <a href="#" class="LaravelGuarantee">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/goodfirms.jpg"
                     alt="laravel web development"
                   />
                 </a>
                 <a href="#" class="LaravelGuarantee">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/appfutura.jpg"
                     alt="laravel web development"
                   />
                 </a>
                 <a href="#" class="LaravelGuarantee">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/money_back_guarantee.png"
                     alt="laravel web development"
                   />
                 </a>
                 <a href="#" class="LaravelGuarantee">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/satisfaction-guarantee.jpg"
                     alt="laravel web development"
                   />
@@ -164,7 +164,7 @@ const page = () => {
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div class="laravel_img">
-                <img
+                <Image
                   src="/img/laraveldevelopment/laravel-logo-img.png"
                   alt="laravel web development"
                 />
@@ -254,7 +254,7 @@ const page = () => {
                   Within our Laravel app development company, we boast
                   developers armed with extensive experience in crafting
                   exceptional Laravel app development services. Their profound
-                  understanding of Laravel's core features equips them to
+                  understanding of Laravel&apos;s core features equips them to
                   construct <i>robust and scalable web applications</i> that
                   stand the test of time.
                 </p>
@@ -278,9 +278,9 @@ const page = () => {
             <p>
               Unlock the full potential of Laravel development with our suite of
               ready-made solutions designed to upgrade and enhance your
-              business. Whether you're in need of a robust Job Board, efficient
+              business. Whether you&apos;re in need of a robust Job Board, efficient
               Logistic Management System, or optimized Recruitment Management
-              System, these software's offer powerful solutions which can be
+              System, these software&apos;s offer powerful solutions which can be
               further customized to your requirements as well.
             </p>
           </div>
@@ -288,7 +288,7 @@ const page = () => {
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="ReadyMadeScriptBx">
                 <div class="ReadyMadeScriptImg">
-                  <img
+                  <Image
                     class=""
                     src="/img/laraveldevelopment/job-board-product-img.png"
                     alt="Job Board Software"
@@ -308,7 +308,7 @@ const page = () => {
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="ReadyMadeScriptBx">
                 <div class="ReadyMadeScriptImg">
-                  <img
+                  <Image
                     class=""
                     src="/img/laraveldevelopment/logisticsoftware-product-img.png"
                     alt="Logistic Software"
@@ -328,7 +328,7 @@ const page = () => {
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="ReadyMadeScriptBx">
                 <div class="ReadyMadeScriptImg">
-                  <img
+                  <Image
                     class=""
                     src="/img/laraveldevelopment/rms-product-img.png"
                     alt="Recruitment Management Software"
@@ -357,12 +357,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/laraveldevelopment/laravel-new-icon1.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/laraveldevelopment/laravel-white-icon1.png"
                         alt="laravel web development"
@@ -382,12 +382,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/laraveldevelopment/laravel-new-icon2.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/laraveldevelopment/laravel-white-icon2.png"
                         alt="laravel web development"
@@ -407,12 +407,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/laraveldevelopment/laravel-new-icon3.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/laraveldevelopment/laravel-white-icon3.png"
                         alt="laravel web development"
@@ -431,12 +431,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/laraveldevelopment/laravel-new-icon4.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/laraveldevelopment/laravel-white-icon4.png"
                         alt="laravel web development"
@@ -456,12 +456,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/laraveldevelopment/laravel-new-icon5.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/laraveldevelopment/laravel-white-icon5.png"
                         alt="laravel web development"
@@ -481,12 +481,12 @@ const page = () => {
                 <div class="laravel_service_box ">
                   <div class="laravel-services-icon laravel_service_box6">
                     <i>
-                      <img
+                      <Image
                         class="widout-hover"
                         src="/img/laraveldevelopment/laravel-new-icon6.png"
                         alt="laravel web development"
                       />
-                      <img
+                      <Image
                         class="on-hover"
                         src="/img/laraveldevelopment/laravel-white-icon6.png"
                         alt="laravel web development"
@@ -520,7 +520,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/core_features_icon1.png"
                       alt="img1"
                     />
@@ -539,7 +539,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/core_features_icon4.png"
                       alt="img4"
                     />
@@ -557,7 +557,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/core_features_icon2.png"
                       alt="img2"
                     />
@@ -575,7 +575,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/core_features_icon5.png"
                       alt="img5"
                     />
@@ -592,7 +592,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/core_features_icon3.png"
                       alt="img3"
                     />
@@ -610,7 +610,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="laravel_core_featureBox">
                   <div class="laravel_core_features_img">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/core_features_icon6.png"
                       alt="img6"
                     />
@@ -645,7 +645,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-why-icon1.png"
                       alt="img1"
                     />
@@ -664,7 +664,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-why-icon2.png"
                       alt="img1"
                     />
@@ -684,7 +684,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-why-icon3.png"
                       alt="img1"
                     />
@@ -704,7 +704,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-why-icon4.png"
                       alt="img1"
                     />
@@ -723,7 +723,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-right">
                 <div class="libraries_laravel_choose">
                   <div class="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-why-icon5.png"
                       alt="img1"
                     />
@@ -743,7 +743,7 @@ const page = () => {
               <div class="col-sm-6 col-md-6" data-aos="fade-left">
                 <div class="libraries_laravel_choose libraries_laravel_choose-right">
                   <div class="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-why-icon6.png"
                       alt="img1"
                     />
@@ -782,7 +782,7 @@ const page = () => {
             <Slider {...settings}>
               <div class="php-item SalesagySite">
                 <a href="https://salesagy.com/" target="_blank">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/salesagy-banner.png"
                     alt="salesagy"
                   />
@@ -797,7 +797,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <a href="https://iepwritingcollaborative.com/" target="_blank">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/iep-banner-new.png"
                     alt="IEP Jobs"
                   />
@@ -812,7 +812,7 @@ const page = () => {
               </div>
               <div class="php-item">
                 <a href="https://www.designerstrends.com/" target="_blank">
-                  <img
+                  <Image
                     src="/img/laraveldevelopment/designerstrends-banner-new.png"
                     alt="designerstrends"
                   />
@@ -838,7 +838,7 @@ const page = () => {
               <Slider {...clientfeadback}>
                 <div class="LaravelTestimonialBx">
                   <div class="QuotesLaravel">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-quotes.png"
                       alt="quotes"
                     />
@@ -847,7 +847,7 @@ const page = () => {
                     <p>
                       Our experience with Logicspice in providing services in
                       our existing project has been nothing short of
-                      exceptional. The team's expertise and dedication to our
+                      exceptional. The team&apos;s expertise and dedication to our
                       project were evident from day one. They translated our
                       requirements into a robust and scalable solution. The open
                       communication and regular updates kept us in the loop,
@@ -862,7 +862,7 @@ const page = () => {
 
                 <div class="LaravelTestimonialBx">
                   <div class="QuotesLaravel">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-quotes.png"
                       alt="quotes"
                     />
@@ -870,7 +870,7 @@ const page = () => {
                   <div class="LaravelTestimonial">
                     <p>
                       Choosing Logicspice for our webservices API development
-                      was a game changer for us. Their team's proficiency in
+                      was a game changer for us. Their team&apos;s proficiency in
                       Laravel, coupled with their commitment to client
                       satisfaction, resulted in an innovative solution for our
                       business. From intricate functionalities to a
@@ -886,20 +886,20 @@ const page = () => {
 
                 <div class="LaravelTestimonialBx">
                   <div class="QuotesLaravel">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-quotes.png"
                       alt="quotes"
                     />
                   </div>
                   <div class="LaravelTestimonial">
                     <p>
-                      We extend our sincere thanks to Logicspice. The team's
+                      We extend our sincere thanks to Logicspice. The team&apos;s
                       technical knowledge and attention to detail were evident
                       throughout the project. They not only delivered a
                       high-performing Laravel based website but also showcased
                       flexibility in accommodating changes and providing timely
-                      updates. It's rare to find a team that combines skill with
-                      such a client-centric approach. We're delighted with the
+                      updates. It&apos;s rare to find a team that combines skill with
+                      such a client-centric approach. We&apos;re delighted with the
                       results and would recommend Logicspice without hesitation.
                     </p>
                     <h4>Mohammad Ahmed</h4>
@@ -909,7 +909,7 @@ const page = () => {
 
                 <div class="LaravelTestimonialBx">
                   <div class="QuotesLaravel">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-quotes.png"
                       alt="quotes"
                     />
@@ -917,11 +917,11 @@ const page = () => {
                   <div class="LaravelTestimonial">
                     <p>
                       Working with Logicspice to develop a dynamic website was a
-                      strategic decision for our company. Their team's depth of
+                      strategic decision for our company. Their team&apos;s depth of
                       knowledge in Laravel, coupled with their professionalism,
                       ensured the success of our project. The final product
                       exceeded our expectations, and the ongoing support
-                      provided post-launch has been invaluable. If you're in
+                      provided post-launch has been invaluable. If you&apos;re in
                       search of a reliable partner, Logicspice is the way to go.
                     </p>
                     <h4>Maria Rodriguez</h4>
@@ -931,7 +931,7 @@ const page = () => {
 
                 <div class="LaravelTestimonialBx">
                   <div class="QuotesLaravel">
-                    <img
+                    <Image
                       src="/img/laraveldevelopment/laravel-quotes.png"
                       alt="quotes"
                     />
@@ -941,7 +941,7 @@ const page = () => {
                       Our experience with Logicspice has been truly remarkable.
                       Their ability to develop complex projects combined
                       technical excellence with a collaborative approach. The
-                      team's ability to understand and implement our vision was
+                      team&apos;s ability to understand and implement our vision was
                       commendable. The end result was a sophisticated solution
                       that has greatly contributed to our business objectives.
                       We appreciate the hard work and dedication of the entire
@@ -967,7 +967,7 @@ const page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <img
+                  <Image
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
@@ -983,7 +983,7 @@ const page = () => {
                       <p>
                         Laravel is a PHP web application framework that provides
                         a simple and elegant syntax for developing modern,
-                        robust, and scalable web applications. Laravel's
+                        robust, and scalable web applications. Laravel&apos;s
                         popularity comes from its unique features like modular
                         packaging system, easy database migrations, and built-in
                         authentication.
@@ -1022,7 +1022,7 @@ const page = () => {
                     >
                       <p>
                         The cost of hiring a Laravel development company can
-                        vary depending on the company's location, size, and
+                        vary depending on the company&apos;s location, size, and
                         experience. Generally, the cost of hiring a Laravel
                         development company can range from $25 to $150 per hour,
                         depending on the scope of the project and the complexity
@@ -1051,8 +1051,8 @@ const page = () => {
                       <p>
                         With an extra charge for that, you are allowed to modify
                         the branding there. You can remove our company
-                        information and put yours. But you cannot put "copyright
-                        by" because only Logicspice owns the copyrights for our
+                        information and put yours. But you cannot put &quot;copyright
+                        by&quot; because only Logicspice owns the copyrights for our
                         softwares.
                       </p>
                     </MDBAccordionItem>
@@ -1069,7 +1069,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
@@ -1082,4 +1082,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

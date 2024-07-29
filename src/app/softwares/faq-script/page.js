@@ -11,13 +11,10 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 
-
-
-const page = () => {
+const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
-  
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -29,7 +26,7 @@ const page = () => {
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
- 
+
   const [activeTab, setActiveTab] = useState("tab1");
   const [userfeaturesTab, setUserFeaturesTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
@@ -52,15 +49,19 @@ const page = () => {
       <NavBar />
       <section className="FaqBannerSection">
         <div className="FaqBannerLeftImg">
-          <img
+          <Image
             src="/img/faqscript/faqbanner-leftimg.png"
             alt="icon"
+            width={35}
+            height={100}
           />
         </div>
         <div className="FaqBannerRightImg">
-          <img
+          <Image
             src="/img/faqscript/faqbanner-rightimg.png"
             alt="icon"
+            width={100}
+            height={100}
           />
         </div>
         <div className="container">
@@ -71,34 +72,33 @@ const page = () => {
                   LS Asker / FAQ <span>Script</span>
                 </h1>
                 <h2>
-                  Solve Commonly Asked Questions of Your <strong style={{ color: "#fe8620" }}> Website Visitors &amp; Clients</strong>{" "}by Adding FAQ Section In Your{" "}<strong>Software Application.</strong>
+                  Solve Commonly Asked Questions of Your{" "}
+                  <strong style={{ color: "#fe8620" }}>
+                    {" "}
+                    Website Visitors &amp; Clients
+                  </strong>{" "}
+                  by Adding FAQ Section In Your{" "}
+                  <strong>Software Application.</strong>
                 </h2>
-                {/* <a
-                  id=""
-                  data-toggle="modal"
-                  data-target="#popup_sc_product"
-                  className="btn btn-primary"
-                  onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("FAQ Script");
-                        $("#contact_fr").val("FAQ Script");'
-                >
-                  GET DEMO ACCESS!
-                </a> */}
+
                 <div className="btn btn-primary" onClick={openModal}>
-                    <button>Get Demo Access!</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="FAQ Script"
-                      />
-                    }
-                  </div>
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="FAQ Script"
+                    />
+                  }
+                </div>
               </div>
             </div>
             <div className="col-xs-12 col-sm-5 col-md-5">
               <div className="FaqBannerImgTop">
-                <img
+                <Image
                   src="/img/faqscript/faqbannerimg.png"
+                  width={300}
+                  height={500 / (100 / 100)}
                   alt="banner"
                 />
               </div>
@@ -112,12 +112,12 @@ const page = () => {
       >
         <div className="container">
           We provide the <strong>Best FAQ Software</strong> which allows you to
-          set up your own FAQ's on your web application by providing an
-          interface to manage your FAQ's in an easy way. Our web FAQ script
-          installation is a one step simple process to create new FAQ's or user
-          suggested FAQ'S also welcomed and that can be also displayed on the
-          script. You can integrate our FAQ software in your website to get
-          hassle from common questions asked by your clients.
+          set up your own FAQ&apos;s on your web application by providing an
+          interface to manage your FAQ&apos;s in an easy way. Our web FAQ script
+          installation is a one step simple process to create new FAQ&apos;s or
+          user suggested FAQ&apos;S also welcomed and that can be also displayed
+          on the script. You can integrate our FAQ software in your website to
+          get hassle from common questions asked by your clients.
         </div>
       </section>
       <section className="FaqLatestFeaturesSection" id="features">
@@ -134,15 +134,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon1.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon1hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -160,15 +164,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon2.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon2hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -186,15 +194,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon3.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon3hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -212,21 +224,25 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon4.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon4hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
                     <h3>FAQ Requests Welcomed</h3>
                     <p>
-                      User requested FAQ's are welcomed, and after admin
+                      User requested FAQ&apos;s are welcomed, and after admin
                       approval that will be displayed over the front end.
                     </p>
                   </div>
@@ -238,20 +254,24 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon5.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon5hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
-                    <h3>Subscribe for FAQ's</h3>
-                    <p>User are able to Subscribe for the FAQ's</p>
+                    <h3>Subscribe for FAQ&apos;s</h3>
+                    <p>User are able to Subscribe for the FAQ&apos;s</p>
                   </div>
                 </div>
               </div>
@@ -261,15 +281,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon6.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon6hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -284,15 +308,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon7.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon7hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -311,15 +339,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon9.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon9hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -337,15 +369,19 @@ const page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <img
+                    <Image
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon8.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
-                    <img
+                    <Image
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon8hover.png"
                       alt="FAQ Script"
+                      width={50}
+                      height={100}
                     />
                   </i>
                   <div className="FaqLatestFeaturesRight">
@@ -373,204 +409,292 @@ const page = () => {
           any screen with web, tablet and mobile view.
         </p>
         <div className="FaqScriptFeaturesTop">
-        <div className="container">
-        <ul className="FaqNavTabs">
-                <li
-                  id="tab1_li"
-                  className={` ${userfeaturesTab ? "active" : ""}`}
-                  onClick={() => handleUserFeaturesTab()}
-                >
-                  <a><i><img className="" src="/img/faqscript/FaqUserIcon.png" alt="FAQ Script"/></i><span>User Features</span></a>
-                </li>
-                
-                <li
-                  id="tab3_li"
-                  className={` ${adminTab ? "active" : ""}`}
-                  onClick={() => handleAdminTab()}
-                >
-                  <a><i><img className="FeaturesIcon" src="/img/faqscript/FaqAdminIcon.png" alt="FAQ Script"/></i><span>Admin Features</span></a>
-                </li>
-              </ul>
-          
-        </div>
-      
-        <div className="tab-content">
-        {userfeaturesTab && (
-                <>
-            <div  className="costomer_tab active" id="tab1">
-                <div className="UserFeaturesBx">
+          <div className="container">
+            <ul className="FaqNavTabs">
+              <li
+                id="tab1_li"
+                className={` ${userfeaturesTab ? "active" : ""}`}
+                onClick={() => handleUserFeaturesTab()}
+              >
+                <a>
+                  <i>
+                    <Image
+                      className=""
+                      src="/img/faqscript/FaqUserIcon.png"
+                      alt="FAQ Script"
+                      width={200}
+                      height={100}
+                    />
+                  </i>
+                  <span>User Features</span>
+                </a>
+              </li>
+
+              <li
+                id="tab3_li"
+                className={` ${adminTab ? "active" : ""}`}
+                onClick={() => handleAdminTab()}
+              >
+                <a>
+                  <i>
+                    <Image
+                      className="FeaturesIcon"
+                      src="/img/faqscript/FaqAdminIcon.png"
+                      alt="FAQ Script"
+                      width={50}
+                      height={100}
+                    />
+                  </i>
+                  <span>Admin Features</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="tab-content">
+            {userfeaturesTab && (
+              <>
+                <div className="costomer_tab active" id="tab1">
+                  <div className="UserFeaturesBx">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-xs-12 col-sm-6 col-md-5">
-                                <div className="FaqUserImg"><img className="FeaturesIcon" src="/img/faqscript/FaqUserimg.jpg" alt="FAQ Script"/></div>
-                            </div>
-                            <div className="col-xs-12 col-sm-6 col-md-7">
-                                <div className="FaqScriptFeaturesMainBx">
-                                    <div className="FaqScriptFeaturesMain">
-                                        <div className="row">
-                                            <div className="col-xs-12 col-sm-6 col-md-6">
-                                                <div className="FaqScriptFeaturesBx">
-                                                    <h3>FAQ Listing</h3>
-                                                    <p>Users will be able to view the FAQ's added by the admin.</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-xs-12 col-sm-6 col-md-6">
-                                                <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
-                                                    <h3>Request FAQ</h3>
-                                                    <p>Users are able to suggest FAQ's which they want should be present in the script.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="FaqScriptFeaturesMain">
-                                        <div className="row">
-                                            <div className="col-xs-12 col-sm-6 col-md-6">
-                                                <div className="FaqScriptFeaturesBx">
-                                                    <h3>FAQ Category Listing</h3>
-                                                    <p>Users will be able to view Category wise FAQ.</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-xs-12 col-sm-6 col-md-6">
-                                                <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
-                                                    <h3>Send Enquiry</h3>
-                                                    <p>Users are able to send enquiry to the<br/> admin.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="FaqScriptFeaturesMain FaqScriptFeaturesMainLast">
-                                        <div className="row">
-                                            <div className="col-xs-12 col-sm-6 col-md-6">
-                                                <div className="FaqScriptFeaturesBx">
-                                                    <h3>FAQ Subscriber</h3>
-                                                    <p>Users can subscribe to receive FAQ email notifications for the newly added FAQ's.</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-xs-12 col-sm-6 col-md-6 FaqScriptFeaturesBxRight">
-                                                <div className="FaqScriptFeaturesBx">
-                                                    <h3>Share FAQ</h3>
-                                                    <p>Users are also able to <br/>
-                                                        share FAQ's.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                      <div className="row">
+                        <div className="col-xs-12 col-sm-6 col-md-5">
+                          <div className="FaqUserImg">
+                            <Image
+                              className="FeaturesIcon"
+                              src="/img/faqscript/FaqUserimg.jpg"
+                              alt="FAQ Script"
+                              width={100}
+                              height={100}
+                            />
+                          </div>
                         </div>
+                        <div className="col-xs-12 col-sm-6 col-md-7">
+                          <div className="FaqScriptFeaturesMainBx">
+                            <div className="FaqScriptFeaturesMain">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>FAQ Listing</h3>
+                                    <p>
+                                      Users will be able to view the FAQ&apos;s
+                                      added by the admin.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
+                                    <h3>Request FAQ</h3>
+                                    <p>
+                                      Users are able to suggest FAQ&apos;s which
+                                      they want should be present in the script.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="FaqScriptFeaturesMain">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>FAQ Category Listing</h3>
+                                    <p>
+                                      Users will be able to view Category wise
+                                      FAQ.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
+                                    <h3>Send Enquiry</h3>
+                                    <p>
+                                      Users are able to send enquiry to the
+                                      <br /> admin.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="FaqScriptFeaturesMain FaqScriptFeaturesMainLast">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>FAQ Subscriber</h3>
+                                    <p>
+                                      Users can subscribe to receive FAQ email
+                                      notifications for the newly added
+                                      FAQ&apos;s.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-xs-12 col-sm-6 col-md-6 FaqScriptFeaturesBxRight">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>Share FAQ</h3>
+                                    <p>
+                                      Users are also able to <br />
+                                      share FAQ&apos;s.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-            </>
-              )}
+              </>
+            )}
             {adminTab && (
-                <>
-            <div className="costomer_tab" id="tab3">
-                <div className="AdminFeaturesBx">
+              <>
+                <div className="costomer_tab" id="tab3">
+                  <div className="AdminFeaturesBx">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-xs-12 col-sm-6 col-md-7">
-                               <div className="FaqScriptFeaturesMainBx FaqScriptFeaturesMainAdmin">
-                                            <div className="FaqScriptFeaturesMain">
-                                                <div className="row">
-                                                   
-                                                    <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx">
-                                                            <h3>Manage Configuration</h3>
-                                                            <p>Admin can update Username, Password, Email, Contact Us Address, Logo, Favicon, etc</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
-                                                            <h3>Manage Categories</h3>
-                                                            <p>Admin can view list of categories & can manage(view/add/edit/delete) ca. Admin can activate/ deactivate Categories.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="FaqScriptFeaturesMain">
-                                                <div className="row">
-                                                       <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx">
-                                                            <h3>Search & Filter</h3>
-                                                            <p>Admin is able to search FAQ's, Enquiries, Subscribers etc.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
-                                                            <h3>Manage FAQ's</h3>
-                                                            <p>Admin can view the list of added FAQ's and can manage(view/edit/delete) the FAQ's.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="FaqScriptFeaturesMain ">
-                                                <div className="row">
-                                                 
-                                                    <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx">
-                                                            <h3>Manage Enquiries</h3>
-                                                            <p>Admin is able to view and delete the enquiries sent by users.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
-                                                            <h3>Manage Subscribers</h3>
-                                                            <p>Admin is able to view Subscribers list who are subscribed for the FAQ's email notifications.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="FaqScriptFeaturesMain ">
-                                                <div className="row">
-                                                    <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx">
-                                                            <h3>Manage User Requested FAQ's</h3>
-                                                            <p>Admin is able to view the User Requested FAQ's and also able to activate, deactivate, delete, edit it. The activated FAQ's will be displayed over the frontend.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-xs-12 col-sm-12 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
-                                                            <h3>Activate/Deactivate for Category, FAQ Listing</h3>
-                                                            <p>Admin is able to activate and deactivate the Categories, FAQ's added by admin, User Requested FAQ's etc</p>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div className="FaqScriptFeaturesMain FaqScriptFeaturesMainLast">
-                                                <div className="row">
-                                                         <div className="col-xs-12 col-sm-6 col-md-6">
-                                                        <div className="FaqScriptFeaturesBx">
-                                                            <h3>Secure Login</h3>
-                                                            <p>Admin can login securely in the FAQ script.</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                            </div>
-                            <div className="col-xs-12 col-sm-6 col-md-5">
-                                <div className="FaqUserImg"><img className="FeaturesIcon FeaturesImgDesktop" src="/img/faqscript/FaqAdminimg.jpg" alt="FAQ Script"/>
-                                <img className="FeaturesImgmobile" src="/img/faqscript/FaqAdminImgMobile.jpg" alt="FAQ Script"/>
+                      <div className="row">
+                        <div className="col-xs-12 col-sm-6 col-md-7">
+                          <div className="FaqScriptFeaturesMainBx FaqScriptFeaturesMainAdmin">
+                            <div className="FaqScriptFeaturesMain">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>Manage Configuration</h3>
+                                    <p>
+                                      Admin can update Username, Password,
+                                      Email, Contact Us Address, Logo, Favicon,
+                                      etc
+                                    </p>
+                                  </div>
                                 </div>
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
+                                    <h3>Manage Categories</h3>
+                                    <p>
+                                      Admin can view list of categories & can
+                                      manage(view/add/edit/delete) ca. Admin can
+                                      activate/ deactivate Categories.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
+                            <div className="FaqScriptFeaturesMain">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>Search & Filter</h3>
+                                    <p>
+                                      Admin is able to search FAQ&apos;s,
+                                      Enquiries, Subscribers etc.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
+                                    <h3>Manage FAQ&apos;s</h3>
+                                    <p>
+                                      Admin can view the list of added
+                                      FAQ&apos;s and can
+                                      manage(view/edit/delete) the FAQ&apos;s.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="FaqScriptFeaturesMain ">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>Manage Enquiries</h3>
+                                    <p>
+                                      Admin is able to view and delete the
+                                      enquiries sent by users.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
+                                    <h3>Manage Subscribers</h3>
+                                    <p>
+                                      Admin is able to view Subscribers list who
+                                      are subscribed for the FAQ&apos;s email
+                                      notifications.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="FaqScriptFeaturesMain ">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>Manage User Requested FAQ&apos;s</h3>
+                                    <p>
+                                      Admin is able to view the User Requested
+                                      FAQ&apos;s and also able to activate,
+                                      deactivate, delete, edit it. The activated
+                                      FAQ&apos;s will be displayed over the
+                                      frontend.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-xs-12 col-sm-12 col-md-6">
+                                  <div className="FaqScriptFeaturesBx FaqScriptFeaturesBxRight">
+                                    <h3>
+                                      Activate/Deactivate for Category, FAQ
+                                      Listing
+                                    </h3>
+                                    <p>
+                                      Admin is able to activate and deactivate
+                                      the Categories, FAQ&apos;s added by admin,
+                                      User Requested FAQ&apos;s etc
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="FaqScriptFeaturesMain FaqScriptFeaturesMainLast">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-6 col-md-6">
+                                  <div className="FaqScriptFeaturesBx">
+                                    <h3>Secure Login</h3>
+                                    <p>
+                                      Admin can login securely in the FAQ
+                                      script.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                        <div className="col-xs-12 col-sm-6 col-md-5">
+                          <div className="FaqUserImg">
+                            <Image
+                              className="FeaturesIcon FeaturesImgDesktop"
+                              src="/img/faqscript/FaqAdminimg.jpg"
+                              alt="FAQ Script"
+                              width={100}
+                              height={100}
+                            />
+                            <Image
+                              className="FeaturesImgmobile"
+                              src="/img/faqscript/FaqAdminImgMobile.jpg"
+                              alt="FAQ Script"
+                              width={100}
+                              height={100}
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-            </>
-              )}
-
-
-
+              </>
+            )}
+          </div>
         </div>
-    </div>
-
       </section>
-
 
       <section
         className="FaqScriptOfferSection aos-init aos-animate"
@@ -595,17 +719,17 @@ const page = () => {
                       to have an extensive FAQ section on your website.
                     </li>
                     <li>
-                      It has a robust admin panel to Manage FAQ's, Categories,
-                      User Requested FAQ's, FAQ Subscribers through a single
-                      dashboard. There isn't any limit for creating Categories,
-                      FAQs etc. In our script we have given the features of
-                      Subscribe for FAQ's so the subscriber will receive an
-                      email notification whenever any new FAQ is added by admin.
-                      We also have given the FAQ sharing feature and have
-                      allowed users to submit their requested FAQ's. And if the
-                      admin thinks that the user requested the FAQ is genuine
-                      they can add that in the FAQ listing and that will be
-                      displayed over the front end.
+                      It has a robust admin panel to Manage FAQ&apos;s,
+                      Categories, User Requested FAQ&apos;s, FAQ Subscribers
+                      through a single dashboard. There isn&apos;t any limit for
+                      creating Categories, FAQs etc. In our script we have given
+                      the features of Subscribe for FAQ&apos;s so the subscriber
+                      will receive an email notification whenever any new FAQ is
+                      added by admin. We also have given the FAQ sharing feature
+                      and have allowed users to submit their requested
+                      FAQ&apos;s. And if the admin thinks that the user
+                      requested the FAQ is genuine they can add that in the FAQ
+                      listing and that will be displayed over the front end.
                     </li>
                   </ul>
                 </div>
@@ -674,7 +798,7 @@ const page = () => {
                     Improvements!
                   </h3>
                   <ul>
-                    <li>Category addition for FAQ's</li>
+                    <li>Category addition for FAQ&apos;s</li>
                     <li>Made it Responsive</li>
                   </ul>
                 </div>
@@ -697,36 +821,44 @@ const page = () => {
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Laravel</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <img
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
+                        width={40}
+                        height={100}
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
@@ -766,9 +898,11 @@ const page = () => {
         data-aos="fade-up"
       >
         <div className="ecommerce_review__img">
-          <img
+          <Image
             src="/img/marketplacesoftware/faq-review-img.png"
             alt="Laravel Development"
+            width={500}
+            height={500 / (100 / 100)}
           />
         </div>
         <div className="container">
@@ -780,8 +914,9 @@ const page = () => {
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
                     I have taken this script and have integrated that with my
-                    own website. This was an easy task because of logicspice's
-                    free installation and support. Keep up the good work.{" "}
+                    own website. This was an easy task because of
+                    logicspice&apos;s free installation and support. Keep up the
+                    good work.{" "}
                   </div>
                   <div className="who_ratset">
                     <span
@@ -796,15 +931,15 @@ const page = () => {
                     </span>
                     Marcus Cruz, Canada
                     <span>
-                      <img
-                        src="/img/faqscript/canada-flag.png"
+                      <Image
+                        src="/img/jobboard/canada-flag.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
+                        width={27}
+                        height={100}
                       />
                     </span>
                   </div>
-
-                  
                 </div>
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
@@ -826,10 +961,12 @@ const page = () => {
                     </span>
                     <span id="client-name">Lisa Jonhathan, Switzerland</span>{" "}
                     <span>
-                      <img
-                        src="/img/faqscript/switzerland_flag_img.png"
+                      <Image
+                        src="/img/jobboard/switzerland_flag_img.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
+                        width={20}
+                        height={100}
                       />
                     </span>
                   </div>
@@ -839,7 +976,7 @@ const page = () => {
                     I bought this script from Logicspice and it worked really
                     nice, it helped to get hassle free from the commonly asked
                     questions of my clients. I recommend it to all who are
-                    looking for a FAQ script, it's really nice.
+                    looking for a FAQ script, it&apos;s really nice.
                   </div>
                   <div className="who_ratset">
                     <span
@@ -854,10 +991,12 @@ const page = () => {
                     </span>
                     <span id="client-name">John, USA</span>{" "}
                     <span>
-                      <img
-                        src="/img/faqscript/usa_flag_img.png"
+                      <Image
+                        src="/img/jobboard/usa_flag_img.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
+                        width={20}
+                        height={100}
                       />
                     </span>
                   </div>
@@ -953,7 +1092,7 @@ const page = () => {
                   </div>
                 </div>
                 <div className="ecommerce--review--btn ">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -965,7 +1104,8 @@ const page = () => {
                 </div>
                 <div className="main-rait">
                   <span>
-                    <i className="fa fa-star"></i> <span>4.7 out of 5 stars</span>
+                    <i className="fa fa-star"></i>{" "}
+                    <span>4.7 out of 5 stars</span>
                   </span>
                 </div>
               </div>
@@ -984,9 +1124,11 @@ const page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <img
+                  <Image
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
                     alt="laravel web development"
+                    width={300}
+                    height={500 / (100 / 100)}
                   />
                 </div>
               </div>
@@ -1029,8 +1171,8 @@ const page = () => {
                       collapseId="flush-collapse4"
                     >
                       <p>
-                        Yes, We deliver the exact product. We don't compromise
-                        with quality at all.
+                        Yes, We deliver the exact product. We don&apos;t
+                        compromise with quality at all.
                       </p>
                     </MDBAccordionItem>
 
@@ -1052,9 +1194,9 @@ const page = () => {
                       <p>
                         With an extra charge for that, you are allowed to modify
                         the branding there. You can remove our company
-                        information and put yours. But you cannot put "copyright
-                        by" because only Logicspice owns the copyrights for our
-                        softwares.
+                        information and put yours. But you cannot put
+                        &quot;copyright by&quot; because only Logicspice owns
+                        the copyrights for our softwares.
                       </p>
                     </MDBAccordionItem>
                   </MDBAccordion>
@@ -1070,9 +1212,11 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
+              width={50}
+              height={50}
             />
           </a>
         </div>
@@ -1085,4 +1229,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

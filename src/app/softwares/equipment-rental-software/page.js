@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -15,8 +15,9 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-
-const page = () => {
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+const Page = () => {
   var settings = {
     dots: true,
     arrows: true,
@@ -72,39 +73,60 @@ const page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async() => {
+    try {
+        const response = await axios.get(BaseAPI + '/product/Details/equipment-rental-software');
+        // console.log(response.data.data)
+        setPageData(response.data.data);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+
   return (
     <>
       <NavBar />
-      <section class="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg equipment-banner-new">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-md-7">
+      <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg equipment-banner-new">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7 col-md-7">
               <h1>Equipment Rental Script</h1>
-              <div class="both-left-p-sec">
+              <div className="both-left-p-sec">
                 <h2>
                   Best equipment rental management software for renting
                   equipment tools.
                 </h2>
               </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
+                          width={100}
+                          height={100}
                         />
                       </i>
                       <p>Limited Period Offer for First Year</p>
                     </span>
                   </div>
                 </div>
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
                   <div className="btn btn-get" onClick={openModal}>
@@ -119,49 +141,53 @@ const page = () => {
                     }
                   </div>
                   <Link
-                    class="btn fiverr-buys"
+                    className="btn fiverr-buys"
                     href="/softwares/equipment-rental-software"
                   >
                     Buy Now
                   </Link>
                 </div>
-                <div class="SubscriptionPrice">
-                  <div class="line-border NewLineBoader">
-                    <img
+                <div className="SubscriptionPrice">
+                  <div className="line-border NewLineBoader">
+                    <Image
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
+                      width={100}
+                      height={100}
                     />
                     <p>38 Reviews</p>
                   </div>
                 </div>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
-                    <i class="fa-solid fa-earth-americas"></i>
+                    <i className="fa-solid fa-earth-americas"></i>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-5 col-md-5">
-              <div class="por-mobile-new">
-                <img
+            <div className="col-sm-5 col-md-5">
+              <div className="por-mobile-new">
+                <Image
                   alt="Equipment Rental"
                   src="/img/softwares-banner-img/equipment-banner-img.png"
+                  width={400}
+                  height={500 / (100 / 100)}
                 />
               </div>
             </div>
           </div>
-          <div class="job-portal-banner-link">
-            <div aria-label="breadcrumb" class="my-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+          <div className="job-portal-banner-link">
+            <div aria-label="breadcrumb" className="my-breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <Link href="">Home</Link>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <Link href="/softwares">Softwares</Link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   Equipment Rental Script
                 </li>
               </ol>
@@ -169,8 +195,8 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job-section-top-new JobBoardSectionNew">
-        <div class="container">
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
           <p>
             Take our online equipment rental management software application on
             your smart mobile phones. Mobile application will provide all the
@@ -180,10 +206,10 @@ const page = () => {
           </p>
         </div>
       </section>
-      <section class="client-say crowdfunding-say">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 job-video">
+      <section className="client-say crowdfunding-say">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 job-video">
               <iframe
                 src="https://player.vimeo.com/video/794842326?h=daac5fd3fb&loop=1&color=451095&byline=0"
                 width="100%"
@@ -193,8 +219,8 @@ const page = () => {
                 allowfullscreen
               ></iframe>
             </div>
-            <div class="col-md-6">
-              <div class="service-market-ttd">
+            <div className="col-md-6">
+              <div className="service-market-ttd">
                 <ul>
                   <li>
                     Charge borrower for renting the equipment on weekly, daily
@@ -229,21 +255,21 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_portal_area">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Equipment Rental Script Features</h2>
+      <section className="job_portal_area">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Equipment Rental Script Features</h2>
           </div>
 
-          <div class="tatxt_txt_job">
+          <div className="tatxt_txt_job">
             We can provide customized android & ios app for equipment rental
             management as per your business requirement. Our equipment rental
             software application will let customers borrow equipment easily and
             renter can manage equipment very effectively.
           </div>
 
-          <div class="tab_bbx_job">
-            <div class="tab_bbx_top_job">
+          <div className="tab_bbx_job">
+            <div className="tab_bbx_top_job">
               <ul className="">
                 <li
                   id="tab1_li"
@@ -270,67 +296,75 @@ const page = () => {
                 </li>
               </ul>
             </div>
-            <div class="tab_contant">
+            <div className="tab_contant">
               {renterTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab1">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right costomer_tab_rightleft">
-                          <img
+                  <div className="costomer_tab rj" id="tab1">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right costomer_tab_rightleft">
+                          <Image
                             src="/img/equipment-rental/equipment-renter.webp"
                             alt="Renter"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Renter Registration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can register on the portal for
-                                    selling equipment's or machines.{" "}
+                                    selling equipment&apos;s or machines.{" "}
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/find-hire-fre.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Hire Operator
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
-                                    Renter can hire Operators for Equipment's &
-                                    Machines by viewing their profile,
-                                    experience & salary expected
+                                    Renter can hire Operators for
+                                    Equipment&apos;s & Machines by viewing their
+                                    profile, experience & salary expected
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/borrow_request.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Order Request
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can view the details of Order Request
                                     which are accepted. Renter can send dispute
@@ -341,33 +375,37 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/search_machine_location.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Search machine by location
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
-                                    Renter can manage status of equipment's or
-                                    machines as available or not available which
-                                    will get reflected to front end equipment
-                                    listing.
+                                    Renter can manage status of equipment&apos;s
+                                    or machines as available or not available
+                                    which will get reflected to front end
+                                    equipment listing.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_messages.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Message Section
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter & Borrower can communicate with each
                                     other using Equipment Rental Application.
@@ -377,14 +415,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_user_acc.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Post Equipment
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can post a new equipment from the
                                     manage equipment page by entering required
@@ -395,14 +435,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_user_machine.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Equipment Management
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can manage all his machines at one
                                     place which includes adding, editing or
@@ -413,14 +455,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_user_req.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage machine request
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can manage multiple requests for
                                     multiple equipments at one place.
@@ -430,14 +474,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Accept/Reject Request
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can see a list of requests received
                                     for a equipment by the borrowers.
@@ -447,14 +493,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/Ser_provider_ragis.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Notifications and send message
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter and Borrower can receive automatic
                                     notifications and emails regarding their
@@ -465,14 +513,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/get_paid.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 payment gateway
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter can pay for the purchased items by
                                     paying safely through an integrated payment
@@ -483,17 +533,19 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_order.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Cart
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
-                                    Renter can also purchase the equipment's or
-                                    machines if needed
+                                    Renter can also purchase the
+                                    equipment&apos;s or machines if needed
                                   </p>
                                 </div>
                               </span>
@@ -507,29 +559,33 @@ const page = () => {
               )}
               {borrowerTab && (
                 <>
-                  <div class="costomer_tab rj active" id="tab2">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3">
-                        <div class="costomer_tab_right">
-                          <img
+                  <div className="costomer_tab rj active" id="tab2">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3">
+                        <div className="costomer_tab_right">
+                          <Image
                             src="/img/equipment-rental/equipment-borrower.webp"
                             alt="Borrower"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Borrower Dashboard
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can manage their account settings
                                     and see their personal info over the
@@ -540,14 +596,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage own profile
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can view their profile & can also
                                     manage(add/edit/delete) their profile.
@@ -557,14 +615,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/borrow_request.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Borrow Request
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can send borrow request from
                                     equipment detail page by choose the dates of
@@ -575,18 +635,20 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_detail.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 View request
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can view all request for
-                                    equipment's done by them. Borrower can view
-                                    the status of the request as its
+                                    equipment&apos;s done by them. Borrower can
+                                    view the status of the request as its
                                     pending/accepted etc.
                                   </p>
                                 </div>
@@ -594,14 +656,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/chace_notifications.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Check Notifications
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Renter and borrower can get notified about
                                     their important update on their dashboard.
@@ -611,32 +675,36 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_wishlist.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage wishlist
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can add the equipment in the
-                                    Wish-list and can remove the equipment's
-                                    from wish-list.
+                                    Wish-list and can remove the
+                                    equipment&apos;s from wish-list.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_order.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Cart
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can add the equipment into the cart
                                     which can be manage(add/edit/delete) by
@@ -647,14 +715,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Borrow Listings
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can view the list of his borrow
                                     requests and current status of the requested
@@ -666,14 +736,16 @@ const page = () => {
 
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/search_machine.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Equipment Search
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can search for equipment to rent
                                     and purchase using categories, subcategories
@@ -684,33 +756,37 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/search_machine_location.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Search machine by location
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can apply search with filters which
                                     will provide the best output for their
                                     equipment search. Borrower can apply sorting
-                                    on the equipment's.
+                                    on the equipment&apos;s.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_machine.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Equipment Detail
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can see equipment details like
                                     title, categories, subcategories, Images,
@@ -721,14 +797,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Review & Rating
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Borrower can rate a machine, writing a
                                     review and also browse through previously
@@ -746,29 +824,33 @@ const page = () => {
               )}
               {adminTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab3">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-3 ">
-                        <div class="costomer_tab_right costomer_tab_rightleft2">
-                          <img
+                  <div className="costomer_tab rj" id="tab3">
+                    <div className="row">
+                      <div className="col-lg-4 col-md-3 ">
+                        <div className="costomer_tab_right costomer_tab_rightleft2">
+                          <Image
                             src="/img/equipment-rental/equipment_admin_mac.webp"
                             alt="Admin Panel"
+                            width={400}
+                            height={100}
                           />
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-9">
-                        <div class="costomer_tab_left costomer_tab_leftright2">
+                      <div className="col-lg-8 col-md-9">
+                        <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Secure Login
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can login securely on Equipment Rental
                                     Portal. Admin can reset password & can do
@@ -779,14 +861,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_configur.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Mange Configuration
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can configure the app/website through
                                     the configuration section.
@@ -796,14 +880,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Dashboard
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can access dashboard where admin can
                                     manage Renter, Borrower and Operator.
@@ -813,14 +899,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_renter.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Renter
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of renters & can
                                     manage (add/edit/delete)all Renters which
@@ -831,14 +919,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_borrowers.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Borrowers
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of borrowers & can
                                     manage (add/edit/delete)all Borrowers which
@@ -849,14 +939,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_machine.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Machine
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage the list of machines
                                     displayed on the website/app and
@@ -867,14 +959,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Order Request
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can see the Orders which are placed by
                                     Borrower from Front End.
@@ -884,14 +978,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Rating
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view a list of reviews that were
                                     given to the Renter and delete them if they
@@ -902,48 +998,55 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Mange Category
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can manage(add/edit/delete) the
-                                    category's of equipment/machine.
+                                    category&apos;s of equipment/machine.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/post_management.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Post Management
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
-                                    Admin can view the post of new equipment's
-                                    which are available with them.
+                                    Admin can view the post of new
+                                    equipment&apos;s which are available with
+                                    them.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_service.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Operator Management
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin can view the list of operators & can
                                     manage (add/edit/delete)all Operators.
@@ -953,14 +1056,16 @@ const page = () => {
                             </li>
                             <li>
                               <i>
-                                <img
+                                <Image
                                   alt="img"
                                   src="/img/jobboard/manage_contents.png"
+                                  width={100}
+                                  height={100}
                                 />
                               </i>
                               <span>
                                 Manage Contents
-                                <div class="product-idea">
+                                <div className="product-idea">
                                   <p>
                                     Admin will be able to
                                     manage(add/edit/delete) all the
@@ -981,10 +1086,10 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_product_page_header_in">
-        <div class="container">
-          <div class="whateissuprt">
-            <h2 class="headhs">
+      <section className="job_product_page_header_in">
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">
               What does our <span>Equipment Rental Management Software</span>{" "}
               offer you ?
             </h2>
@@ -1029,12 +1134,12 @@ const page = () => {
         </div>
       </section>
 
-      <section class="SubscriptionModel" id="subscriptionmodel">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Subscription Model</h2>
+      <section className="SubscriptionModel" id="subscriptionmodel">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
             <br />
-            <div class="SubscriptionModelBx">
+            <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
                 subscription-based hassle-free model, available at just{" "}
@@ -1102,18 +1207,18 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section id="subscriptionprice" class="SubscriptionpriceSection">
-        <div class="container">
-          <h2 class="taxt_tt_job">Delivered Solution</h2>
-          <div class="SubscriptionModelPrice">
-            <div class="SubscriptionModelPriceBx">
-              <h4>
-                ₹88,190<span class="sml_labl"> INR</span>
+      <section id="subscriptionprice" className="SubscriptionpriceSection">
+        <div className="container">
+          <h2 className="taxt_tt_job">Delivered Solution</h2>
+          <div className="SubscriptionModelPrice">
+            <div className="SubscriptionModelPriceBx">
+            <h4>
+                {pageData.currency_symbol}{pageData.price}<span className="sml_labl"> {pageData.name}</span>
               </h4>
-              <strike class="srik_cls">
-                ₹147,805<span class="sml_labl"> INR</span>
+              <strike className="srik_cls">
+                {pageData.currency_symbol}{pageData.other_price}<span className="sml_labl"> {pageData.name}</span>
               </strike>
-              <div class="SubscriptionModelPriceBtn">
+              <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
@@ -1126,28 +1231,34 @@ const page = () => {
                   }
                 </div>
                 <Link
-                  class="btn fiverr-buys"
+                  className="btn fiverr-buys"
                   href="/softwares/equipment-rental-software"
                 >
                   Buy Now
                 </Link>
               </div>
-              <div class="jocpp">
-                <ul class="job-pr-icon">
+              <div className="jocpp">
+                <ul className="job-pr-icon">
                   <li>
-                    <i class="fa-solid fa-earth-americas"></i>
+                    <i className="fa-solid fa-earth-americas"></i>
                   </li>
                 </ul>
-                <div class="portel-btnbx">
-                  <div class="line-border NewLineBoader">
-                    <img src="/img/jobboard/stars.png" alt="" class="lazy" />
+                <div className="portel-btnbx">
+                  <div className="line-border NewLineBoader">
+                    <Image
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                      width={100}
+                      height={100}
+                    />
                     <p>38 Reviews</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="SubscriptionModelBx">
+          <div className="SubscriptionModelBx">
             <p>
               The solution offered by Logicspice provides several advantages
               that can assist you in expanding your business within the
@@ -1201,12 +1312,12 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="job_portal_area script-update-bg">
-        <div class="container">
-          <div class="job_or_title">
-            <h2 class="taxt_tt_job">Script Update History</h2>
+      <section className="job_portal_area script-update-bg">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Script Update History</h2>
             <br />
-            <div class="script-update_title">
+            <div className="script-update_title">
               <p>
                 V1.0 - March 28th, 2022 - Major updates and improvements
                 completed!
@@ -1237,8 +1348,9 @@ const page = () => {
                 </li>
                 <li>
                   <span>
-                    Separate listing of equipment requests like 'Accepted' or
-                    'In progress', 'Completed' and 'Pending'.
+                    Separate listing of equipment requests like
+                    &apos;Accepted&apos; or &apos;In progress&apos;,
+                    &apos;Completed&apos; and &apos;Pending&apos;.
                   </span>
                 </li>
                 <li>
@@ -1252,7 +1364,7 @@ const page = () => {
           </div>
         </div>
       </section>
- 
+
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
           <div className="job_or_title">
@@ -1262,24 +1374,30 @@ const page = () => {
             <br />
             <div className="logic-parter">
               <a
-                class=""
+                className=""
                 aria-controls="jobportal"
                 onClick={toggleJobPortalModal}
               >
-                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <i className="fa fa-cogs" aria-hidden="true"></i>
                 <span>How It Works</span>
               </a>
               <a
-                class=""
+                className=""
                 aria-controls="buyjobportal"
                 onClick={toggleBuyJobPortalModal}
               >
-                <i class="fa fa-building" aria-hidden="true"></i>
+                <i className="fa fa-building" aria-hidden="true"></i>
                 <span>Companies Using It</span>
               </a>
-              <a onClick={toggleInfo} class="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <img src="/img/images/why-logic-icon.png" alt="" class="" />
+                  <Image
+                    src="/img/images/why-logic-icon.png"
+                    alt=""
+                    className=""
+                    width={20}
+                    height={100}
+                  />
                 </i>
                 <span>Why Logicspice</span>
               </a>
@@ -1300,11 +1418,13 @@ const page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <img
+            <Image
               src="/img/fiverrclone/gigger-how-it-works.jpg"
               alt="icon"
               title=""
               className="img-fluid"
+              width={900}
+              height={100}
             />
           </Modal.Body>
           <Modal.Footer>
@@ -1330,130 +1450,82 @@ const page = () => {
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...settings}>
-                <div class="SliderMainBx">
+                <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://www.simplax.com.br/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                    simplax.com.br
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://www.simplax.com.br/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
-                <div class="SliderMainBx">
+                <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="http://www.waku.ro/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      waku.ro
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="http://www.waku.ro/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
-                <div class="SliderMainBx">
+                <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://yelloh.co.za/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      yelloh.co.za
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://yelloh.co.za/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
+                      width={900}
+                      height={100}
                     />
                   </Link>
                 </div>
-                <div class="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div class="SliderMainBx">
-                  <div class="feat-slide-img">
-                    <img
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
-                    />
-                  </div>
-                  <div class="hands-proved">
-                    <div class="titleof_scnew">Job Management</div>
-                    <div class="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
-                </div>
-                <div class="SliderMainBx">
-                  <div class="feat-slide-img">
-                    <img
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
-                    />
-                  </div>
-                  <div class="hands-proved">
-                    <div class="titleof_scnew">Membership Plan</div>
-                    <div class="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
-                </div>
+                
               </Slider>
             </div>
           </Modal.Body>
@@ -1467,69 +1539,80 @@ const page = () => {
           </Modal.Footer>
         </Modal>
       </div>
-      <section class="used_technology_section" id="technologies">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="used_technology_section" id="technologies">
+        <div className="container">
+          <h4 className="title_main">
             <span>Used Technologies</span> and Server Requirements
           </h4>
-          <div class="used_technology_section_dataa">
-            <div class="row">
-              <div class="col-sm-6">
+          <div className="used_technology_section_dataa">
+            <div className="row">
+              <div className="col-sm-6">
                 <ul>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
+                        width={40}
+                        height={100}
                       />
                     </div>
-                    <div class="icntechimg_nm">Laravel</div>
+                    <div className="icntechimg_nm">Laravel</div>
                   </li>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img src="/img/jobboard/html-5.png" alt="HTML5" />
+                    <div className="icntechimg">
+                      <Image
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                        width={40}
+                        height={100}
+                      />
                     </div>
-                    <div class="icntechimg_nm">HTML5</div>
+                    <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
+                        width={40}
+                        height={100}
                       />
                     </div>
-                    <div class="icntechimg_nm">MySQL</div>
+                    <div className="icntechimg_nm">MySQL</div>
                   </li>
                   <li data-aos="fade-up">
-                    <div class="icntechimg">
-                      <img
+                    <div className="icntechimg">
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
+                        width={40}
+                        height={100}
                       />
                     </div>
-                    <div class="icntechimg_nm">Apache</div>
+                    <div className="icntechimg_nm">Apache</div>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-6">
-                <ul class="list_detail">
-                  <li class="same aos-init aos-animate" data-aos="fade-up">
+              <div className="col-sm-6">
+                <ul className="list_detail">
+                  <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
                     Safari 5+, IE 9+
                   </li>
-                  <li class="same aos-init aos-animate" data-aos="fade-up">
+                  <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Framework - </b> Laravel 5.5.41
                   </li>
-                  <li class="same aos-init aos-animate" data-aos="fade-up">
+                  <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Language - </b> PHP 7 Supported, AJAX, jQuery
                   </li>
-                  <li class="other aos-init aos-animate" data-aos="fade-up">
+                  <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap 3.3.6, JavaScript
                   </li>
-                  <li class="other aos-init" data-aos="fade-up">
+                  <li className="other aos-init" data-aos="fade-up">
                     <b>Database - </b> MySQL 5.5+{" "}
                   </li>
-                  <li class="other aos-init" data-aos="fade-up">
+                  <li className="other aos-init" data-aos="fade-up">
                     <b>Server - </b> Apache 2.4+
                   </li>
                 </ul>
@@ -1538,71 +1621,82 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="whatsupport_section" id="support">
-        <div class="container">
-          <h4 class="title_main">
+      <section className="whatsupport_section" id="support">
+        <div className="container">
+          <h4 className="title_main">
             What <span>support</span> you will get?
           </h4>
-          <div class="supportsetting">
+          <div className="supportsetting">
             <ul>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
-                <div class="supportsettingtext">Free Support</div>
+                <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
+                    width={50}
+                    height={100}
                   />
                 </div>
-                <div class="supportsettingtext">Free Brand Removal</div>
+                <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                <div className="supportsetting_icn">
+                  <Image
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                    width={50}
+                    height={100}
+                  />
                 </div>
-                <div class="supportsettingtext">Free Installation</div>
+                <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
-                <div class="supportsetting_icn">
-                  <img
+                <div className="supportsetting_icn">
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
+                    width={40}
+                    height={100}
                   />
                 </div>
-                <div class="supportsettingtext">Easily scalable</div>
+                <div className="supportsettingtext">Easily scalable</div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="su_rev_section" id="reviews">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="title_main">Customer Reviews </h4>
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="outof_rating">
-                    <div class="main-rait">
+      <section className="su_rev_section" id="reviews">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <h4 className="title_main">Customer Reviews </h4>
+              <div className="row">
+                <div className="col-md-5">
+                  <div className="outof_rating">
+                    <div className="main-rait">
                       <span>
-                        <i class="fa fa-star"></i>{" "}
+                        <i className="fa fa-star"></i>{" "}
                         <span>4.8 out of 5 stars</span>
                       </span>
                     </div>
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        5 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1610,16 +1704,16 @@ const page = () => {
                           style={{ width: "90%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">33</div>
+                      <div className="people_star_num">33</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        4 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        4 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1627,16 +1721,16 @@ const page = () => {
                           style={{ width: "10%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">5</div>
+                      <div className="people_star_num">5</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        5 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1644,16 +1738,16 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        2 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        2 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1661,16 +1755,16 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
 
-                    <div class="review_rating_fjs">
-                      <div class="star_num">
-                        1 <i class="fa fa-star"></i>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        1 <i className="fa fa-star"></i>
                       </div>
-                      <div class="progress">
+                      <div className="progress">
                         <div
-                          class="progress-bar progress-bar-danger progress-bar-striped"
+                          className="progress-bar progress-bar-danger progress-bar-striped"
                           role="progressbar"
                           aria-valuenow="70"
                           aria-valuemin="0"
@@ -1678,12 +1772,12 @@ const page = () => {
                           style={{ width: "0%" }}
                         ></div>
                       </div>
-                      <div class="people_star_num">0</div>
+                      <div className="people_star_num">0</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-7">
-                  <a class="btn btn-primary" onClick={openReviewModel}>
+                <div className="col-md-7">
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1693,79 +1787,85 @@ const page = () => {
                     title="PHP Business Directory Script"
                   />
                 </div>
-                <div class="col-md-12">
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "We needed a customized rental booking system for our
+                <div className="col-md-12">
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                      &quot;We needed a customized rental booking system for our
                       rental business to manage our rentals. Logicspice has
-                      provided us the right online solution.- Thanks!"
+                      provided us the right online solution.- Thanks!&quot;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star-half" aria-hidden="true"></i>
                       </span>
                       <span id="client-name">Kunal S., India</span>{" "}
-                      <span class="ConuntryFlagIcon">
-                        <img
+                      <span className="ConuntryFlagIcon">
+                        <Image
                           src="/img/jobboard/india_flag_img.png"
                           alt="mobile app development in INDIA"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "Recently I bought this script to launch my own equipment
-                      rental management portal from logicspice and it worked
-                      really nice. Buying this script is worth for money as they
-                      gave me the full source code and I can customize it.
-                      Highly recommended."
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                      &quot;Recently I bought this script to launch my own
+                      equipment rental management portal from logicspice and it
+                      worked really nice. Buying this script is worth for money
+                      as they gave me the full source code and I can customize
+                      it. Highly recommended.&quot;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Alena, USA{" "}
-                      <span class="ConuntryFlagIcon">
-                        <img
+                      <span className="ConuntryFlagIcon">
+                        <Image
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
                   </div>
-                  <div class="customers_review_sec_row">
-                    <div class="customer_review_stext">
-                      "Fast and effective PHP script for my rental business.
-                      They are professional, always put in extra effort and
-                      technically strong knowledge. One of the best script
-                      providers. Will continue to work with them for an upcoming
-                      project."
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext">
+                      &quot;Fast and effective PHP script for my rental
+                      business. They are professional, always put in extra
+                      effort and technically strong knowledge. One of the best
+                      script providers. Will continue to work with them for an
+                      upcoming project.&quot;
                     </div>
 
-                    <div class="who_ratset">
-                      <span class="star_review_main">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div className="who_ratset">
+                      <span className="star_review_main">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
                       Mohammed Shozeb, UAE{" "}
-                      <span class="ConuntryFlagIcon">
-                        <img
+                      <span className="ConuntryFlagIcon">
+                        <Image
                           src="/img/jobboard/uae_flag_iimg.png"
                           alt="mobile app development in UAE"
+                          width={20}
+                          height={100}
                         />
                       </span>
                     </div>
@@ -1773,9 +1873,9 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-md-6 Quick_FAQ">
-              <h4 class="title_main">FAQ's</h4>
-              <div class="MainFaqBx">
+            <div className="col-md-6 Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+              <div className="MainFaqBx">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Can borrower give a review/rating even if they have not rented the equipment?"
@@ -1855,8 +1955,8 @@ const page = () => {
                     collapseId="flush-collapse9"
                   >
                     <p>
-                      No, You can't resell the script. All rights will remain
-                      with Logicspice only.
+                      No, You can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
                     </p>
                   </MDBAccordionItem>
 
@@ -1891,116 +1991,130 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="title_main">Equipment Rental Software Features</h2>
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="title_main">Equipment Rental Software Features</h2>
           <div id="joblboardslide">
             <Slider {...settings}>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/Manage_Equipment.webp"
                     alt="Equipment Management"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Equipment Management</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Equipment Management</div>
+                  <div className="pro-feat-detai">
                     Renter can manage all his machines at one place which
                     includes adding, editing or deleting equipments.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/post-equipment.webp"
                     alt="Post Equipment"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Post Equipment</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Post Equipment</div>
+                  <div className="pro-feat-detai">
                     Renter can post a new equipment from the manage equipment
                     page by entering following details : Title, Categories,
                     Images.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/Accept_Reject_Request.webp"
                     alt="Accept/Reject Request"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Accept/Reject Request</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Accept/Reject Request</div>
+                  <div className="pro-feat-detai">
                     Renter can see a list of requests received for a equipment
                     by the borrowers.Renter can accept or reject any request.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/Automatic_Email.webp"
                     alt="Notifications and Emails"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Notifications and Emails</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Notifications and Emails</div>
+                  <div className="pro-feat-detai">
                     Renter and Borrower can receive automatic notifications and
                     emails regarding their activities.
                   </div>
                 </div>
               </div>
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/Search_Equipment_List_Equipment.webp"
                     alt="Search Equipment/ List Equipment"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">
                     Search Equipment/ List Equipment
                   </div>
-                  <div class="pro-feat-detai">
+                  <div className="pro-feat-detai">
                     Borrower can search for equipment to rent and purchase using
                     categories, subcategories and keyword.
                   </div>
                 </div>
               </div>
 
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/Equipment_Detail.webp"
                     alt="Equipment Detail"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Equipment Detail</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Equipment Detail</div>
+                  <div className="pro-feat-detai">
                     Borrower can see equipment details like title, categories,
                     subcategories, Images, description etc. over the website.
                   </div>
                 </div>
               </div>
 
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/Borrow_Listings.webp"
                     alt="Borrow Listings"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Borrow Listings</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Borrow Listings</div>
+                  <div className="pro-feat-detai">
                     Borrower can view the list of his borrow requests that they
                     has sent. Customer can see current status of the requested
                     for equipment.
@@ -2008,16 +2122,18 @@ const page = () => {
                 </div>
               </div>
 
-              <div class="SliderMainBx">
-                <div class="feat-slide-img">
-                  <img
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
                     src="/img/equipment-rental/review_rating.webp"
                     alt="Review Feature"
+                    width={1075}
+                    height={100}
                   />
                 </div>
-                <div class="hands-proved">
-                  <div class="titleof_scnew">Review Feature</div>
-                  <div class="pro-feat-detai">
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Review Feature</div>
+                  <div className="pro-feat-detai">
                     Borrower can rate a machine, writing a review and also
                     browse through previously given reviews.
                   </div>
@@ -2027,10 +2143,10 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
@@ -2045,22 +2161,24 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section class="latest_feature_product">
-        <div class="container">
-          <h2 class="title_main">Other Popular Softwares</h2>
-          <div class="other-product-box">
-            <div class="row">
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+      <section className="latest_feature_product">
+        <div className="container">
+          <h2 className="title_main">Other Popular Softwares</h2>
+          <div className="other-product-box">
+            <div className="row">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <a title="View Detail" target="_blank">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Crowdfunding</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/crowdfunding_new.png"
                             alt="Crowdfunding"
-                            class=""
+                            className=""
+                            width={250}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -2074,17 +2192,19 @@ const page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <a title="View Detail" target="_blank">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>WhatsApp Clone App</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
-                            class=""
+                            className=""
+                            width={250}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -2095,17 +2215,19 @@ const page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+              <div className="col-sm-6 col-md-4">
+                <div className="thumbnail">
                   <a title="View Detail" target="_blank">
-                    <div class="caption">
-                      <div class="other-caption-bx">
+                    <div className="caption">
+                      <div className="other-caption-bx">
                         <h3>Groupon clone</h3>
-                        <div class="other-project-logo">
-                          <img
+                        <div className="other-project-logo">
+                          <Image
                             src="/img/jobboard/groupon-clone-logo.png"
                             alt="Groupon clone"
-                            class=""
+                            className=""
+                            width={250}
+                            height={100}
                           />
                         </div>
                         <p>
@@ -2126,9 +2248,11 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
+              width={50}
+              height={50}
             />
           </a>
         </div>
@@ -2141,4 +2265,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

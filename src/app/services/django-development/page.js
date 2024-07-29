@@ -10,7 +10,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-const page = () => {
+const Page = () => {
 
 
   const [showModal, setShowModal] = useState(false);
@@ -80,7 +80,7 @@ const page = () => {
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
-                    <div class="page_img"><img src="/img/djangodevelopment/django-banner-img.png" alt="Django Web Development Services" /></div>  
+                    <div class="page_img"><Image src="/img/djangodevelopment/django-banner-img.png" alt="Django Web Development Services" /></div>  
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@ const page = () => {
         <div class="container">
             <div class="row">
                  <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-                    <div class="laravel_img"><img src="/img/djangodevelopment/django-logo-img.png" alt="Django Web Development Services" /></div>  
+                    <div class="laravel_img"><Image src="/img/djangodevelopment/django-logo-img.png" alt="Django Web Development Services" /></div>  
                 </div>
                 <div class="col-sm-6 col-md-6 pull-left">
                     <div class="laravel-descriptions-bx">
@@ -123,8 +123,8 @@ const page = () => {
                       <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box7">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon6.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon6.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon6.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon6.png" alt="Django Web Development Services" />
                                 <div class="mask"></div>
                                 </i>
                             </div>
@@ -135,8 +135,8 @@ const page = () => {
                      <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box8">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon5.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon5.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon5.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon5.png" alt="Django Web Development Services" />
                                 <div class="mask"></div>
                                 </i>
                             </div>
@@ -148,8 +148,8 @@ const page = () => {
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box1">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon3.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon3.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon3.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon3.png" alt="Django Web Development Services" />
                                 <div class="mask"></div>
                                 </i>
                             </div>
@@ -161,8 +161,8 @@ const page = () => {
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box4">
                                 <i>
-                                    <img class="widout-hover" src="/img/djangodevelopment/django-new-icon4.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon4.png" alt="Django Web Development Services" />
+                                    <Image class="widout-hover" src="/img/djangodevelopment/django-new-icon4.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon4.png" alt="Django Web Development Services" />
                                      <div class="mask"></div>
                                 </i>
                             </div>
@@ -175,8 +175,8 @@ const page = () => {
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box2">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon7.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon7.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon7.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon7.png" alt="Django Web Development Services" />
                                 <div class="mask"></div>
                                 </i>
                             </div>
@@ -187,8 +187,8 @@ const page = () => {
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box5">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon8.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon8.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon8.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon8.png" alt="Django Web Development Services" />
                                 <div class="mask"></div>
                                 </i>
                             </div>
@@ -199,8 +199,8 @@ const page = () => {
                      <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box3">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon1.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon1.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon1.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon1.png" alt="Django Web Development Services" />
                                     <div class="mask"></div></i>
                                 
                             </div>
@@ -211,8 +211,8 @@ const page = () => {
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="laravel_service_box ">
                             <div class="laravel-services-icon laravel_service_box6">
-                                <i><img class="widout-hover" src="/img/djangodevelopment/django-new-icon2.png" alt="Django Web Development Services" />
-                                    <img class="on-hover" src="/img/djangodevelopment/django-white-icon2.png" alt="Django Web Development Services" />
+                                <i><Image class="widout-hover" src="/img/djangodevelopment/django-new-icon2.png" alt="Django Web Development Services" />
+                                    <Image class="on-hover" src="/img/djangodevelopment/django-white-icon2.png" alt="Django Web Development Services" />
                                 <div class="mask"></div>
                                 </i>
                             </div>
@@ -233,7 +233,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-right">
                         <div class="laravel_core_featureBox">
                             <div class="laravel_core_features_img">
-                                <img src="/img/djangodevelopment/core_features_icon1.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/core_features_icon1.png" alt="img1" />
                             </div>
                             <div class="laravel_core_features_detail">
                                 <h3>Full-Featured Framework</h3>
@@ -244,7 +244,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-left">
                         <div class="laravel_core_featureBox">
                             <div class="laravel_core_features_img">
-                                <img src="/img/djangodevelopment/core_features_icon4.png" alt="img4" />
+                                <Image src="/img/djangodevelopment/core_features_icon4.png" alt="img4" />
                             </div>
                             <div class="laravel_core_features_detail">
                                 <h3>Fast Development</h3>
@@ -255,7 +255,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-right">
                         <div class="laravel_core_featureBox">
                             <div class="laravel_core_features_img">
-                                <img src="/img/djangodevelopment/core_features_icon2.png" alt="img2" />
+                                <Image src="/img/djangodevelopment/core_features_icon2.png" alt="img2" />
                             </div>
                             <div class="laravel_core_features_detail">
                                 <h3>High Scalability</h3>
@@ -266,7 +266,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-left">
                         <div class="laravel_core_featureBox">
                             <div class="laravel_core_features_img">
-                                <img src="/img/djangodevelopment/core_features_icon5.png" alt="img5" />
+                                <Image src="/img/djangodevelopment/core_features_icon5.png" alt="img5" />
                             </div>
                             <div class="laravel_core_features_detail">
                                 <h3>Robust Security</h3>
@@ -277,7 +277,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-right">
                         <div class="laravel_core_featureBox">
                             <div class="laravel_core_features_img">
-                                <img src="/img/djangodevelopment/core_features_icon3.png" alt="img3" />
+                                <Image src="/img/djangodevelopment/core_features_icon3.png" alt="img3" />
                             </div>
                             <div class="laravel_core_features_detail">
                                 <h3>Customizable Platform</h3>
@@ -288,7 +288,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-left">
                         <div class="laravel_core_featureBox">
                             <div class="laravel_core_features_img">
-                                <img src="/img/djangodevelopment/core_features_icon6.png" alt="img6" />
+                                <Image src="/img/djangodevelopment/core_features_icon6.png" alt="img6" />
                             </div>
                             <div class="laravel_core_features_detail">
                                 <h3>Seamless Integration</h3>
@@ -309,7 +309,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-right">
                         <div class="libraries_laravel_choose">
                             <div class="laravel_choose_features_img laravel_choose_features_img1">
-                                <img src="/img/djangodevelopment/django-why-icon1.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/django-why-icon1.png" alt="img1" />
                             </div>
                             <div class="laravel_choose_details">
                                 <h3>Speedy Development</h3>
@@ -320,7 +320,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-left">
                         <div class="libraries_laravel_choose libraries_laravel_choose-right">
                             <div class="laravel_choose_features_img laravel_choose_features_img2">
-                                <img src="/img/djangodevelopment/django-why-icon2.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/django-why-icon2.png" alt="img1" />
                             </div>
                             <div class="laravel_choose_details">
                                 <h3>High Security</h3>
@@ -331,7 +331,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6 " data-aos="fade-right">
                         <div class="libraries_laravel_choose">
                             <div class="laravel_choose_features_img laravel_choose_features_img3">
-                                <img src="/img/djangodevelopment/django-why-icon3.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/django-why-icon3.png" alt="img1" />
                             </div>
                             <div class="laravel_choose_details">
                                 <h3>Versatile</h3>
@@ -342,7 +342,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-left">
                         <div class="libraries_laravel_choose libraries_laravel_choose-right">
                             <div class="laravel_choose_features_img laravel_choose_features_img4">
-                                <img src="/img/djangodevelopment/django-why-icon4.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/django-why-icon4.png" alt="img1" />
                             </div>
                             <div class="laravel_choose_details">
                                 <h3>Scalability</h3>
@@ -353,7 +353,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-right">
                         <div class="libraries_laravel_choose">
                             <div class="laravel_choose_features_img laravel_choose_features_img5">
-                                <img src="/img/djangodevelopment/django-why-icon5.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/django-why-icon5.png" alt="img1" />
                             </div>
                             <div class="laravel_choose_details">
                                 <h3>Integrated Solutions</h3>
@@ -364,7 +364,7 @@ const page = () => {
                     <div class="col-sm-6 col-md-6" data-aos="fade-left">
                         <div class="libraries_laravel_choose libraries_laravel_choose-right">
                             <div class="laravel_choose_features_img laravel_choose_features_img6">
-                                <img src="/img/djangodevelopment/django-why-icon6.png" alt="img1" />
+                                <Image src="/img/djangodevelopment/django-why-icon6.png" alt="img1" />
                             </div>
                             <div class="laravel_choose_details">
                                 <h3>Expert Support</h3>
@@ -441,7 +441,7 @@ const page = () => {
                 <div class=" row ecommerce__Quick_FAQ">
                 <div class="col-md-5">
                     <h4 class="title_main">Frequently <br />Asked Questions</h4>
-                    <div class="FaqImgBx"><img src="/img/laraveldevelopment/FaqLaravelImg.png" alt="laravel web development" /></div>
+                    <div class="FaqImgBx"><Image src="/img/laraveldevelopment/FaqLaravelImg.png" alt="laravel web development" /></div>
                 </div>
                     <div class="col-md-7">
                     
@@ -450,7 +450,7 @@ const page = () => {
                           headerTitle="How can a Django development company improve the security of my website?"
                           collapseId="flush-collapse1"
                         >
-                            <p>A Django development company can leverage Django's built-in security features to protect your site from common web threats.</p>
+                            <p>A Django development company can leverage Django&apos;s built-in security features to protect your site from common web threats.</p>
                         </MDBAccordionItem>
                         
                         <MDBAccordionItem
@@ -464,7 +464,7 @@ const page = () => {
                           headerTitle="What should I look for when I want to hire Django developer?"
                           collapseId="flush-collapse3"
                         >
-                         <p>When hiring a Django developer, consider their experience, understanding of Django's security features, ability to handle integrations, and project delivery speed.</p>
+                         <p>When hiring a Django developer, consider their experience, understanding of Django&apos;s security features, ability to handle integrations, and project delivery speed.</p>
                         </MDBAccordionItem>
                         
                         <MDBAccordionItem
@@ -496,7 +496,7 @@ const page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
@@ -514,4 +514,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

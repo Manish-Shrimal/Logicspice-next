@@ -8,7 +8,7 @@ import React from "react";
 import Blogslider from "../../Components/Blogslider";
 import Ourclient from "../../Components/Ourclient";
 
-const page = () => {
+const Page = () => {
 
   return (
     <>
@@ -82,5 +82,5 @@ const page = () => {
   
 }
 
-export default page
+export default Page
 
