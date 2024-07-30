@@ -60,11 +60,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="yellow_slider">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="slidere-tittle">
+      <section className="yellow_slider">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="slidere-tittle">
                 <h1>SaaS Software Development</h1>
                 <p>
                   Saas (Software as a service) is a way of distribution of web
@@ -91,7 +91,7 @@ const Page = () => {
                   and services.
                 </p>
               </div>
-              <div class="btn_align aos-init aos-animate" data-aos="fade-up">
+              <div className="btn_align aos-init aos-animate" data-aos="fade-up">
                 <div className="btn btn-primary" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -106,19 +106,21 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="images-section">
+            <div className="col-md-6">
+              <div className="images-section">
                 <Image
+                  width={600}
+                  height={500 / (100 / 100)}
                   src="/img/saassoftwaredevelopment/mt-1378-home3-header-icon12.png"
                   alt="SaaS_Software_Development"
                 />
@@ -127,11 +129,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="resources-banner our-sass">
-        <div class="container">
+      <section className="resources-banner our-sass">
+        <div className="container">
           <h2>Our SaaS Development Services </h2>
-          <div class="resources-bx-top">
-            <ul class="resources-tabs">
+          <div className="resources-bx-top">
+            <ul className="resources-tabs">
               <li
                 id="tab1_li"
                 className={`ddlj ${saascmsTab ? "active" : ""}`}
@@ -140,6 +142,8 @@ const Page = () => {
                 <a>
                   <i>
                     <Image
+                      width={80}
+                      height={100}
                       src="/img/saassoftwaredevelopment/project-img.png"
                       alt="logo"
                     />
@@ -155,6 +159,8 @@ const Page = () => {
                 <a>
                   <i>
                     <Image
+                      width={80}
+                      height={100}
                       src="/img/saassoftwaredevelopment/client-need-img.png"
                       alt="logo"
                     />
@@ -170,6 +176,8 @@ const Page = () => {
                 <a>
                   <i>
                     <Image
+                      width={80}
+                      height={100}
                       src="/img/saassoftwaredevelopment/client-approval-img.png"
                       alt="logo"
                     />
@@ -185,6 +193,8 @@ const Page = () => {
                 <a>
                   <i>
                     <Image
+                      width={80}
+                      height={100}
                       src="/img/saassoftwaredevelopment/quality-img.png"
                       alt="logo"
                     />
@@ -194,11 +204,11 @@ const Page = () => {
               </li>
             </ul>
 
-            <div class="tab-content">
+            <div className="tab-content">
               {saascmsTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab1">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj" id="tab1">
+                    <div className="resources-contan">
                       <p>
                         We develop cloud-based headless Content Management
                         System extensible and flexible.{" "}
@@ -209,8 +219,8 @@ const Page = () => {
               )}
               {saascrmTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab2">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab2">
+                    <div className="resources-contan">
                       <p>
                         Our SaaS CRM (Customer Relationship Management ) assured
                         24/7 access, backups and security. Your customers do not
@@ -224,8 +234,8 @@ const Page = () => {
               )}
               {customecommerceTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab3">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab3">
+                    <div className="resources-contan">
                       <p>
                         We provide Ecommerce SaaS solutions suitable for your
                         online business goals, which will allow you to decide
@@ -238,8 +248,8 @@ const Page = () => {
               )}
               {missolutionTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab4">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab4">
+                    <div className="resources-contan">
                       <p>
                         We build SaaS MIS( Management Information System) which
                         will help to build long term partnership with your
@@ -255,11 +265,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="sasss-middle-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="sa_t">
+      <section className="sasss-middle-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="sa_t">
                 <p>
                   As a <span>saas software development company</span>, we assist
                   our clients to bring their application to SaaS model. We are
@@ -281,10 +291,12 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-6"></div>
+            <div className="col-md-6"></div>
           </div>
-          <div class="img_saaa">
+          <div className="img_saaa">
             <Image
+              width={700}
+              height={500 / (100 / 100)}
               src="/img/saassoftwaredevelopment/saaa_img.png"
               alt="saaa_img"
             />
@@ -292,21 +304,23 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="new-why-choose-section sass_title">
-        <div class="container">
+      <section className="new-why-choose-section sass_title">
+        <div className="container">
           <h2>
             Why choose Logicspice <span>for Web Development?</span>
           </h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="new_libraries">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
+              <div className="new_libraries">
                 <i>
                   <Image
+                    width={50}
+                    height={100}
                     src="/img/saassoftwaredevelopment/new_development_icon1.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Best Technology Offering</h3>
                   <p>
                     We offer powerful and latest technologies to build SaaS
@@ -315,15 +329,17 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="new_libraries">
+            <div className="col-sm-6 col-md-6">
+              <div className="new_libraries">
                 <i>
                   <Image
+                    width={50}
+                    height={100}
                     src="/img/saassoftwaredevelopment/new_development_icon2.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Unperturbed Support</h3>
                   <p>
                     We provide you with full customer support. Thanks to our
@@ -332,15 +348,17 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="new_libraries">
+            <div className="col-sm-6 col-md-6">
+              <div className="new_libraries">
                 <i>
                   <Image
+                    width={50}
+                    height={100}
                     src="/img/saassoftwaredevelopment/new_development_icon3.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Secure</h3>
                   <p>
                     The SaaS is recognized as an authorized tool. It supports
@@ -349,15 +367,17 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="new_libraries">
+            <div className="col-sm-6 col-md-6">
+              <div className="new_libraries">
                 <i>
                   <Image
+                    width={50}
+                    height={100}
                     src="/img/saassoftwaredevelopment/new_development_icon4.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Dedicated team of experts</h3>
                   <p>
                     Our website development company has dedicated and efficient
@@ -367,15 +387,17 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="new_libraries">
+            <div className="col-sm-6 col-md-6">
+              <div className="new_libraries">
                 <i>
                   <Image
+                    width={50}
+                    height={100}
                     src="/img/saassoftwaredevelopment/new_development_icon5.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>100% Client Satisfaction</h3>
                   <p>
                     Our first priority is always a client. We believe in
@@ -384,15 +406,17 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="new_libraries">
+            <div className="col-sm-6 col-md-6">
+              <div className="new_libraries">
                 <i>
                   <Image
+                    width={50}
+                    height={100}
                     src="/img/saassoftwaredevelopment/new_development_icon6.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>SEO friendly websites</h3>
                   <p>
                     In today&apos;s era, it has become important for any company
@@ -407,16 +431,16 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="testing-statred-section resources-statred-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12">
-              <h2 class="sas12">Enquiry Now</h2>
+      <section className="testing-statred-section resources-statred-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12">
+              <h2 className="sas12">Enquiry Now</h2>
               <a
                 id=""
                 data-toggle="modal"
                 data-target="#contactFix"
-                class="btn btn-primary sas13"
+                className="btn btn-primary sas13"
               >
                 Get a Free Quote
               </a>
@@ -431,7 +455,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

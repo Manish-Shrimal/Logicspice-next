@@ -61,8 +61,8 @@ const Page = () => {
     <>
       <NavBar />
 
-      <section class="country_head">
-        <div class="container">
+      <section className="country_head">
+        <div className="container">
           <h1>Support &amp; Maintenance</h1>
           <p>
             <Link href="/" target="_blank" style={{ color: "#fff" }}>
@@ -72,10 +72,10 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section class="support-det-ail">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7">
+      <section className="support-det-ail">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7">
               <p>
                 For software to be exceptional, it needs to be backed up by
                 reliable software support and maintenance service. Since user
@@ -124,7 +124,7 @@ const Page = () => {
                 software.
               </p>
             </div>
-            <div class="col-sm-5 text-right hidden-xs">
+            <div className="col-sm-5 text-right hidden-xs">
               <Image
                 src="/img/softwaremaintenancesupport/support.png"
                 alt="Support &amp; Maintainence"
@@ -133,42 +133,42 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="offered-sup">
-        <div class="container">
+      <section className="offered-sup">
+        <div className="container">
           <h2>A quick glance at services offered by us</h2>
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="quick-glan">
+          <div className="row">
+            <div className="col-md-3 col-sm-6">
+              <div className="quick-glan">
                 <p>Customisation of application functionality</p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="quick-glan">
+            <div className="col-md-3 col-sm-6">
+              <div className="quick-glan">
                 <p>Bug fixing and effective troubleshooting</p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="quick-glan">
+            <div className="col-md-3 col-sm-6">
+              <div className="quick-glan">
                 <p>Making available upgrades and patches deployment</p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="quick-glan">
+            <div className="col-md-3 col-sm-6">
+              <div className="quick-glan">
                 <p>Workaround provisioning and security audits</p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="quick-glan">
+            <div className="col-md-3 col-sm-6">
+              <div className="quick-glan">
                 <p>Diagnosis and analysis</p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="quick-glan">
+            <div className="col-md-3 col-sm-6">
+              <div className="quick-glan">
                 <p>New release updates and hotfixes</p>
               </div>
             </div>
-            <div class="col-md-6 col-sm-12">
-              <div class="quick-glan">
+            <div className="col-md-6 col-sm-12">
+              <div className="quick-glan">
                 <p>
                   Carry over the number of hours to next regular tenure of
                   support.{" "}
@@ -179,23 +179,23 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="soft-maintain">
-        <div class="">
+      <section className="soft-maintain">
+        <div className="">
           <h2>Our Software & Maintenance Services Includes</h2>
-          <div class="serv-ices-includes">
-            <div class="row m-0">
-              <div class="col-md-6 col-sm-12 p-0">
-                <div class="row m-0">
-                  <div class="col-md-6 col-sm-4 p-0">
-                    <div class="servin-img">
+          <div className="serv-ices-includes">
+            <div className="row m-0">
+              <div className="col-md-6 col-sm-12 p-0">
+                <div className="row m-0">
+                  <div className="col-md-6 col-sm-4 p-0">
+                    <div className="servin-img">
                       <Image
                         src="/img/softwaremaintenancesupport/cl2.png"
                         alt="Adjustable Maintenance and support"
                       />
                     </div>
                   </div>
-                  <div class="col-md-6 col-sm-8 p-0">
-                    <div class="servin-content">
+                  <div className="col-md-6 col-sm-8 p-0">
+                    <div className="servin-content">
                       <h3>Adjustable Maintenance and support</h3>
                       <Image
                         src="/img/softwaremaintenancesupport/clArrow.png"
@@ -213,18 +213,18 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-md-6 col-sm-12 p-0">
-                <div class="row m-0">
-                  <div class="col-md-6 col-sm-4 p-0">
-                    <div class="servin-img">
+              <div className="col-md-6 col-sm-12 p-0">
+                <div className="row m-0">
+                  <div className="col-md-6 col-sm-4 p-0">
+                    <div className="servin-img">
                       <Image
                         src="/img/softwaremaintenancesupport/cl3.png"
                         alt="Corrective maintenance"
                       />
                     </div>
                   </div>
-                  <div class="col-md-6 col-sm-8 p-0">
-                    <div class="servin-content">
+                  <div className="col-md-6 col-sm-8 p-0">
+                    <div className="servin-content">
                       <h3>Corrective maintenance</h3>
                       <Image
                         src="/img/softwaremaintenancesupport/clArrow.png"
@@ -243,18 +243,18 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-md-6 col-sm-12 p-0" style={{ direction: "rtl" }}>
-                <div class="row m-0">
-                  <div class="col-md-6  col-sm-4 pull-right p-0">
-                    <div class="servin-img">
+              <div className="col-md-6 col-sm-12 p-0" style={{ direction: "rtl" }}>
+                <div className="row m-0">
+                  <div className="col-md-6  col-sm-4 pull-right p-0">
+                    <div className="servin-img">
                       <Image
                         src="/img/softwaremaintenancesupport/cl1.png"
                         alt="Preventive software maintenance service"
                       />
                     </div>
                   </div>
-                  <div class="col-md-6  col-sm-8 pull-left p-0">
-                    <div class="servin-content">
+                  <div className="col-md-6  col-sm-8 pull-left p-0">
+                    <div className="servin-content">
                       <h3>Preventive software maintenance service</h3>
                       <Image
                         src="/img/softwaremaintenancesupport/clArrow.png"
@@ -271,18 +271,18 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-md-6 col-sm-12 p-0" style={{ direction: "rtl" }}>
-                <div class="row m-0">
-                  <div class="col-md-6 col-sm-4 pull-right p-0">
-                    <div class="servin-img">
+              <div className="col-md-6 col-sm-12 p-0" style={{ direction: "rtl" }}>
+                <div className="row m-0">
+                  <div className="col-md-6 col-sm-4 pull-right p-0">
+                    <div className="servin-img">
                       <Image
                         src="/img/softwaremaintenancesupport/cl4.png"
                         alt="Organized maintenance and support"
                       />
                     </div>
                   </div>
-                  <div class="col-md-6 col-sm-8 pull-left p-0">
-                    <div class="servin-content">
+                  <div className="col-md-6 col-sm-8 pull-left p-0">
+                    <div className="servin-content">
                       <h3>Organized maintenance and support</h3>
                       <Image
                         src="/img/softwaremaintenancesupport/clArrow.png"
@@ -305,18 +305,18 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="we-pro-as">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-5">
+      <section className="we-pro-as">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-5">
               <h2>We promise and assure</h2>
               <Image
                 src="/img/softwaremaintenancesupport/promise.png"
                 alt="We promise and assure"
               />
             </div>
-            <div class="col-sm-7">
-              <ul class="round-list">
+            <div className="col-sm-7">
+              <ul className="round-list">
                 <li>
                   <strong>1</strong>{" "}
                   <span>
@@ -358,45 +358,45 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="set-a-part">
-        <div class="container">
+      <section className="set-a-part">
+        <div className="container">
           <h2>What sets us apart</h2>
-          <div class="row">
-            <div class="col-md-4 col-sm-6">
-              <div class="part-set">
-                <i class="fa fa-sitemap"></i>
+          <div className="row">
+            <div className="col-md-4 col-sm-6">
+              <div className="part-set">
+                <i className="fa fa-sitemap"></i>
                 <p>Enhanced stability</p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="part-set">
-                <i class="fa fa-rocket"></i>
+            <div className="col-md-4 col-sm-6">
+              <div className="part-set">
+                <i className="fa fa-rocket"></i>
                 <p>Better Returns on investments</p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="part-set">
-                <i class="fa fa-money"></i>
+            <div className="col-md-4 col-sm-6">
+              <div className="part-set">
+                <i className="fa fa-money"></i>
                 <p>Reduction in TCO (Total cost of ownership )</p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="part-set">
-                <i class="fa fa-clipboard"></i>
+            <div className="col-md-4 col-sm-6">
+              <div className="part-set">
+                <i className="fa fa-clipboard"></i>
                 <p>
                   Application integration with advanced and newer technologies
                 </p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="part-set">
-                <i class="fa fa-bar-chart"></i>
+            <div className="col-md-4 col-sm-6">
+              <div className="part-set">
+                <i className="fa fa-bar-chart"></i>
                 <p>Improvement in efficiency and software performance </p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="part-set">
-                <i class="fa fa-question-circle"></i>
+            <div className="col-md-4 col-sm-6">
+              <div className="part-set">
+                <i className="fa fa-question-circle"></i>
                 <p>
                   Reliable and best quality support in the form of preventive,
                   adaptive and perfective{" "}
@@ -406,10 +406,10 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
             <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -424,11 +424,11 @@ const Page = () => {
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
               >
-                <div class="WhatsappIcon">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
+                <div className="WhatsappIcon">
+                  <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div className="coccoc-alo-ph-circle"></div>
+                    <div className="coccoc-alo-ph-circle-fill"></div>
+                    <div className="coccoc-alo-ph-img-circle"></div>
                   </div>
                 </div>
               </Link>

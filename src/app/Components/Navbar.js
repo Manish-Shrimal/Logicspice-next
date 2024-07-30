@@ -17,11 +17,17 @@ import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
   const [dropdown3, setDropdown3] = useState(false);
   const [dropdown4, setDropdown4] = useState(false);
   const [dropdown5, setDropdown5] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
@@ -37,13 +43,14 @@ const NavBar = () => {
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
+            onClick={toggleMenu}
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}id="navbarNav">
             <ul className="nav navbar-nav navbar-right ms-auto top-main-menu">
               <li className="dropdown mega-menu-fw">
                 <a

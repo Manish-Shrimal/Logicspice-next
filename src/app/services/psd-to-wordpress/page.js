@@ -30,9 +30,9 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="slider_img">
-        <div class="container">
-          <div class="slider_inner_img">
+      <section className="slider_img">
+        <div className="container">
+          <div className="slider_inner_img">
             <img
               alt="PSD to Wordpress Conversion Services"
               src="/img/psdtowordpress/img_psdto_wordpress.png"
@@ -40,63 +40,63 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="our_adeptness_section">
-        <div class="container">
-          <h1 class="main-heading">PSD to Wordpress Conversion</h1>
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="adeptness_mid_block_inner">
-                <div class="adeptness_icon_top">
+      <section className="our_adeptness_section">
+        <div className="container">
+          <h1 className="main-heading">PSD to Wordpress Conversion</h1>
+          <div className="row">
+            <div className="col-md-3 col-sm-6">
+              <div className="adeptness_mid_block_inner">
+                <div className="adeptness_icon_top">
                   <img
                     alt="convert PSD to Wordpress"
                     src="/img/psdtowordpress/pstowp.png"
                   />
                 </div>
-                <div class="adeptness_box_content">PSD to WordPress</div>
+                <div className="adeptness_box_content">PSD to WordPress</div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="adeptness_mid_block_inner">
-                <div class="adeptness_icon_top">
+            <div className="col-md-3 col-sm-6">
+              <div className="adeptness_mid_block_inner">
+                <div className="adeptness_icon_top">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/migration-maintence.png"
                   />
                 </div>
-                <div class="adeptness_box_content">24*7 Technical Support</div>
+                <div className="adeptness_box_content">24*7 Technical Support</div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="adeptness_mid_block_inner">
-                <div class="adeptness_icon_top">
+            <div className="col-md-3 col-sm-6">
+              <div className="adeptness_mid_block_inner">
+                <div className="adeptness_icon_top">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/wordpressthemeicon.png"
                   />
                 </div>
-                <div class="adeptness_box_content">
+                <div className="adeptness_box_content">
                   {" "}
                   Wordpress Theme Development
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="adeptness_mid_block_inner">
-                <div class="adeptness_icon_top">
+            <div className="col-md-3 col-sm-6">
+              <div className="adeptness_mid_block_inner">
+                <div className="adeptness_icon_top">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/customwordpressicon.png"
                   />
                 </div>
-                <div class="adeptness_box_content">
+                <div className="adeptness_box_content">
                   Wordpress Module Installation
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="adeptness_content">
-          <div class="container">
+        <div className="adeptness_content">
+          <div className="container">
             <p>
               <b>Logicspice</b> employs expert developers and designers to
               create the best product out of your PSD. We excel in HTML&sbquo; Joomla&sbquo;
@@ -127,16 +127,16 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="slider_section slider_sectionsetbgs">
-        <div class="container">
-          <h2 class="title_setof_nav">
+      <section className="slider_section slider_sectionsetbgs">
+        <div className="container">
+          <h2 className="title_setof_nav">
             Our Process to convert <span>PSD to Wordpress</span>
           </h2>
-          <div class="slider_wrapper">
-            <div class="slider_wrapper_inner">
-              <div class="slider_wrapper_inner_content_in">
-                <div class="slider_wrapper_inner_content">
-                  <div id="processslide" class="owl-carousel hidedot">
+          <div className="slider_wrapper">
+            <div className="slider_wrapper_inner">
+              <div className="slider_wrapper_inner_content_in">
+                <div className="slider_wrapper_inner_content">
+                  <div id="processslide" className="owl-carousel hidedot">
 
                   <Processconvert />
                   </div>
@@ -146,9 +146,9 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="wordpress_to_psd">
-        <div class="container">
-          <div class="title-sec">
+      <section className="wordpress_to_psd">
+        <div className="container">
+          <div className="title-sec">
             <h2>
               Why Our <span>PSD to Wordpress</span> Conversion is Best?
             </h2>
@@ -157,229 +157,229 @@ const Page = () => {
               from us. What we give to our clients-
             </p>
           </div>
-          <div class="row">
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+          <div className="row">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/pixcel_perfect_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Pixel perfect design</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Pixel perfect design</h3>
+                <div className="adeptness_psd_content_box">
                   We offer pixel perfect wordpress conversion that ensure 100%
                   similar website to the original PSD.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/compability_all_browsers_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">
+                <h3 className="adeptness_psd_title_box">
                   Highly compatible all browsers
                 </h3>
-                <div class="adeptness_psd_content_box">
+                <div className="adeptness_psd_content_box">
                   Highly compatible with all the browsers i.e. Google Chrome&sbquo;
                   Firefox&sbquo; Internet Browser etc.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/w3c_validator_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">
+                <h3 className="adeptness_psd_title_box">
                   W3 validation with HTML &amp; CSS markup
                 </h3>
-                <div class="adeptness_psd_content_box">
+                <div className="adeptness_psd_content_box">
                   We believe in well written &amp; clean code for better
                   readability and easy maintenance.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_responsive_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Fully responsive</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Fully responsive</h3>
+                <div className="adeptness_psd_content_box">
                   Keeping in mind the rising number of mobile users&sbquo; we convert
                   PSD to wordpress&sbquo; which can run smoothly on all the gadgets.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_optimised_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Optimized Images</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Optimized Images</h3>
+                <div className="adeptness_psd_content_box">
                   After optimization&sbquo;it will load faster - Faster the page load
                   time&sbquo; better is the user experience.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_efficient_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Smooth integration</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Smooth integration</h3>
+                <div className="adeptness_psd_content_box">
                   Whenever you need something to add or integrate. With our
                   smooth integration&sbquo; we can easily do this.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_theme_customization_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Highly interactive</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Highly interactive</h3>
+                <div className="adeptness_psd_content_box">
                   You have only 3 seconds to convert your users to the customer.
                   This can only done by making your website interactive.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/admin_interface_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Admin Interface</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Admin Interface</h3>
+                <div className="adeptness_psd_content_box">
                   Complete control at your admin panel section.Easy to use
                   integration board.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_fast_loading_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">High Speed Loading</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">High Speed Loading</h3>
+                <div className="adeptness_psd_content_box">
                   The faster your website is&sbquo; the more customer you will
                   attract.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/privacy_support_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Privacy Support</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Privacy Support</h3>
+                <div className="adeptness_psd_content_box">
                   We respect your privacy and we will never try to contact your
                   client.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_searchengine_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">SEO Friendly</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">SEO Friendly</h3>
+                <div className="adeptness_psd_content_box">
                   We understand the importance of seo friendly feature and make
                   sure that your website will be search engine friendly.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_widget_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Widget Compatible</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Widget Compatible</h3>
+                <div className="adeptness_psd_content_box">
                   We know how important widgets are for wordpress theme. Drag
                   which widget you want to use.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_best_price_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Affordable</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Affordable</h3>
+                <div className="adeptness_psd_content_box">
                   We offer the best price for our services.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_outstanding_icon.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Maintenance Support</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Maintenance Support</h3>
+                <div className="adeptness_psd_content_box">
                   Our high experienced team will give you support anytime.
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="adeptness_psd_col_inner">
-                <div class="adeptness_psd_icon_box">
+            <div className="col-md-4 col-sm-6">
+              <div className="adeptness_psd_col_inner">
+                <div className="adeptness_psd_icon_box">
                   <img
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/security_icon_psd.png"
                   />
                 </div>
-                <h3 class="adeptness_psd_title_box">Security</h3>
-                <div class="adeptness_psd_content_box">
+                <h3 className="adeptness_psd_title_box">Security</h3>
+                <div className="adeptness_psd_content_box">
                   Your website will be full secured so no need to worry about
                   this.
                 </div>
@@ -388,12 +388,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="requirement_section">
-        <div class="container">
-          <div class="requir_title">
+      <section className="requirement_section">
+        <div className="container">
+          <div className="requir_title">
             Our Efforts Reflects from Our Portfolio
           </div>
-          <p class="sbucint">
+          <p className="sbucint">
             Logicspice helps you bring your creativity to fruition. If you have
             any idea in your mind which you want to present before the world as
             your business&sbquo; you are not late.{" "}
@@ -402,9 +402,9 @@ const Page = () => {
             </a>{" "}
             from our experienced team and give a start to your business.
           </p>
-          <div class="requirment_btn">
+          <div className="requirment_btn">
             <a
-              class="btn btn-primary"
+              className="btn btn-primary"
               data-aos="fade-right"
               id="inquirenow"
               href="https://www.logicspice.com/portfolio/"
@@ -414,13 +414,13 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="expert_mind">
-        <h2 class="title_setof_nav">
+      <section className="expert_mind">
+        <h2 className="title_setof_nav">
           Hire <span>Expert Minds</span> For Different Platform
         </h2>
-        <div class="container">
-          <div class="expert_minds">
-            <div class="expert_minds_con">
+        <div className="container">
+          <div className="expert_minds">
+            <div className="expert_minds_con">
               <p>
                 If you are good at designing&sbquo; we are good at developing. We can
                 help you to create a WordPress theme out of the design you
@@ -429,95 +429,95 @@ const Page = () => {
                 theme as imagined by you.
               </p>
             </div>
-            <div class="different_experts">
-              <ul class="different_experts_member">
-                <li class="different_experts_name">
+            <div className="different_experts">
+              <ul className="different_experts_member">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-android-app-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Android App Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-ios-app-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     iOS App Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-cakephp-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Cake PHP Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-wordpress-experts/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Wordpress Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-drupal-experts/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Drupal Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-magento-experts/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Magento Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-zencart-experts/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Zencart Developer
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-shopify-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Shopify Developers
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-laravel-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Laravel Developers
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-codeigniter-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Codeigniter Developers
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-node-js-experts/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Node.Js Experts
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-angular-js-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Angular jS Developers
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-yii-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Yii Developers
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-opencart-developers/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Opencart Developers
                   </a>
                 </li>
-                <li class="different_experts_name">
+                <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer/">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i> Hire
+                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
                     Hybrid mobile app Developer
                   </a>
                 </li>
@@ -527,7 +527,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="testimonial-hire">
+      <section className="testimonial-hire">
         <div className="container">
           <div>
             <Ourclient />

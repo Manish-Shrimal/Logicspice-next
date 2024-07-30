@@ -164,22 +164,22 @@ const Page = () => {
           </div>
         </div>
       </section> */}
-      <section class="job-portal-banner job-portal-bg NewJobSiteDesign fiverr-new-banner JobBoardNewDesign HotelBookingSoftwareBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-md-7">
+      <section className="job-portal-banner job-portal-bg NewJobSiteDesign fiverr-new-banner JobBoardNewDesign HotelBookingSoftwareBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-7 col-md-7">
               <h1>LS Room Reserver - Hotel Booking Software</h1>
-              <div class="both-left-p-sec">
+              <div className="both-left-p-sec">
                 <h2>Software Excellence for Superior Stays!</h2>
               </div>
-              <div class="job-valu">
-                <div class="portal-price NewPriceDesign">
+              <div className="job-valu">
+                <div className="portal-price NewPriceDesign">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
-                  <div class="OfferPriceProduct">
-                    <strike class="srik_cls">$175 USD</strike>
-                    <span class="MoreInfo">
+                  <div className="OfferPriceProduct">
+                    <strike className="srik_cls">$175 USD</strike>
+                    <span className="MoreInfo">
                       <i>
                         <img
                           src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
@@ -188,9 +188,9 @@ const Page = () => {
                       </i>
                       <p>Limited Period Offer for First Year</p>
                     </span>
-                    <span class="AppPrice" style={{ display: "none" }}>
+                    <span className="AppPrice" style={{ display: "none" }}>
                       <a
-                        class="text-primary js-anchor-link"
+                        className="text-primary js-anchor-link"
                         href="#subscriptionmodel"
                       >
                         More Details
@@ -199,7 +199,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div class="job-valu-btn">
+                <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Enquiry Now</button>
@@ -212,30 +212,30 @@ const Page = () => {
                     }
                   </div>
                 </div>
-                <div class="jocpp">
-                  <ul class="job-pr-icon" style={{ display: "none" }}>
+                <div className="jocpp">
+                  <ul className="job-pr-icon" style={{ display: "none" }}>
                     <li>
-                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
                     <li>
-                      <i class="fa fa-android" aria-hidden="true"></i>
+                      <i className="fa fa-android" aria-hidden="true"></i>
                     </li>
                     <li>
-                      <i class="fa fa-apple" aria-hidden="true"></i>
+                      <i className="fa fa-apple" aria-hidden="true"></i>
                     </li>
                   </ul>
-                  <div class="portel-btnbx">
-                    <div class="line-border">
+                  <div className="portel-btnbx">
+                    <div className="line-border">
                       <img
                         src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
                         alt=""
-                        class="lazy"
+                        className="lazy"
                       />
                       <p>228 Reviews</p>
                     </div>
 
                     <a
-                      class="btn text-primary jobportal-btn js-anchor-link"
+                      className="btn text-primary jobportal-btn js-anchor-link"
                       style={{ display: "none" }}
                       href="#subscriptionmodel"
                     >
@@ -251,25 +251,25 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-5 col-md-5 noposition">
-              <div class="por-mobile-new">
+            <div className="col-sm-5 col-md-5 noposition">
+              <div className="por-mobile-new">
                 <img
                   src="/img/hotelbooking/hotelbooking-banner-img.png"
                   alt="hotel booking"
-                  class="lazy"
+                  className="lazy"
                 />
               </div>
             </div>
-            <div class="job-portal-banner-link">
-              <div aria-label="breadcrumb" class="my-breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
+            <div className="job-portal-banner-link">
+              <div aria-label="breadcrumb" className="my-breadcrumb">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
                     <a href="https://www.logicspice.com">Home</a>
                   </li>
-                  <li class="breadcrumb-item">
+                  <li className="breadcrumb-item">
                     <a href="https://www.logicspice.com/softwares">Softwares</a>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     Hotel Booking Software
                   </li>
                 </ol>
@@ -292,10 +292,10 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-5 job-video">
-            <img src="/img/hotelbooking/hotelbooking-img.png" alt="hotel booking" class="lazy"/>
+            <img src="/img/hotelbooking/hotelbooking-img.png" alt="hotel booking" className="lazy"/>
             </div>
             <div className="col-md-7">
-            <div class="OrderManagementSoftwareFeatures HotelBokingSoftwareFeatures">
+            <div className="OrderManagementSoftwareFeatures HotelBokingSoftwareFeatures">
                     <ul>
                         <li>Online Booking Management</li>
                         <li>Inventory Tracking System</li>
@@ -360,74 +360,74 @@ const Page = () => {
                         <div className="costomer_tab_left costomer_tab_leftright">
                         <ul>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/efficient-reservation-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/efficient-reservation-icon.png" className="lazy" /></i>
                                         <span>Efficient Reservation Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Easily manage reservations, including booking, modifying, and canceling rooms.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/room-availability-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/room-availability-icon.png" className="lazy" /></i>
                                         <span>Room Availability
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Keep track of real time room availability to avoid overbooking and optimize occupancy.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/relationship-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/relationship-icon.png" className="lazy" /></i>
                                         <span>Customer Relationship Management (CRM)
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Manage guest interactions, preferences, and feedback to provide personalized experiences and improve guest satisfaction.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/payment-processing-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/payment-processing-icon.png" className="lazy" /></i>
                                         <span>Payment Processing
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Securely process payments for reservations, offering convenience to guests and ensuring smooth transactions.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/reporting-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/reporting-icon.png" className="lazy" /></i>
                                         <span>Reporting and Analytics
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Access detailed reports and analytics on bookings, revenue, and occupancy rates to make informed decisions.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/inventory-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/inventory-icon.png" className="lazy" /></i>
                                         <span>Inventory Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Manage room inventory effectively, ensuring rooms are available when needed and maximizing revenue.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/mobile-compatibility-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/mobile-compatibility-icon.png" className="lazy" /></i>
                                         <span>Mobile Compatibility
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Access the software and manage bookings from mobile devices, providing flexibility and convenience to access software with any type of mobile devices.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/booking-rules-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/booking-rules-icon.png" className="lazy" /></i>
                                         <span>Customizable Booking Rules
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Set rules for minimum stays, maximum occupancy, and other parameters to optimize room utilization and revenue.</p>
                                             </div>
                                         </span>
                                     </li>
                                     
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/user-friendly-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/user-friendly-icon.png" className="lazy" /></i>
                                         <span>User-Friendly Interface
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Easy-to-use interface for efficient management of hotel bookings and operations.</p>
                                             </div>
                                         </span>
@@ -448,73 +448,73 @@ const Page = () => {
                         <div className="costomer_tab_left">
                         <ul>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/easy-booking-icon.png " class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/easy-booking-icon.png " className="lazy" /></i>
                                         <span>Easy Booking Process
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Simplified and user-friendly booking interface for quick and hassle-free reservations.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/real-time-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/real-time-icon.png" className="lazy" /></i>
                                         <span>Real-Time Availability
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Instant access to room availability, ensuring customers can book their preferred dates.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/secure-payment-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/secure-payment-icon.png" className="lazy" /></i>
                                         <span>Secure Payment Options
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Safe and secure online payment processing for booking confirmation.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/search-filters-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/search-filters-icon.png" className="lazy" /></i>
                                         <span>Flexible Search Filters
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Customizable search filters to find the perfect room based on preferences like price, amenities, and location.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/room-information-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/room-information-icon.png" className="lazy" /></i>
                                         <span>Detailed Room Information
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Comprehensive room descriptions, images, and amenities lists to help customers make informed decisions.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/special-offers-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/special-offers-icon.png" className="lazy" /></i>
                                         <span>Special Offers and Discounts
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Access to exclusive deals, discounts, and promotional offers for cost-effective bookings.</p>
                                             </div>
                                         </span>
                                     </li>                                    
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/booking-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/booking-icon.png" className="lazy" /></i>
                                         <span>Booking Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Ability to manage bookings, including modifications and cancellations, conveniently through the platform.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/social-media-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/social-media-icon.png" className="lazy" /></i>
                                         <span>Social Media Integration
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Allow customers to share their booking or hotel experience on social media, helping to promote your property organically.</p>
                                             </div>
                                         </span>
                                     </li>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/room-customization-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/room-customization-icon.png" className="lazy" /></i>
                                         <span>Room Customization
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p> Allow customers to customize their room selection by choosing specific room features, such as a view, bed type, or floor level.</p>
                                             </div>
                                         </span>
@@ -536,73 +536,73 @@ const Page = () => {
                         <div className="costomer_tab_left costomer_tab_leftright2">
                         <ul>
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/dashboard-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/dashboard-icon.png" className="lazy" /></i>
                                         <span>Dashboard
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>A comprehensive dashboard providing an overview of key metrics, such as bookings, revenue, and occupancy rates, as well as quick access to important functionalities.</p>
                                             </div>
                                         </span>
                                     </li>                               
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/user-management-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/user-management-icon.png" className="lazy" /></i>
                                         <span>User Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Manage user accounts and permissions, including adding new users, assigning roles, and monitoring user activity.</p>
                                             </div>
                                         </span>
                                     </li>                               
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/inventory-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/inventory-icon.png" className="lazy" /></i>
                                         <span>Inventory Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Manage room inventory, including adding new rooms, updating room details, and setting availability.</p>
                                             </div>
                                         </span>
                                     </li>                               
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/booking-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/booking-icon.png" className="lazy" /></i>
                                         <span>Booking Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>View, modify, and cancel bookings, as well as manage waitlists and room assignments.</p>
                                             </div>
                                         </span>
                                     </li>                               
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/task-management-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/task-management-icon.png" className="lazy" /></i>
                                         <span>Task Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Assign tasks to staff members, track task progress, and ensure efficient management of daily operations.</p>
                                             </div>
                                         </span>
                                     </li>                               
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/payment-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/payment-icon.png" className="lazy" /></i>
                                         <span>Payment Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Monitor and manage payments, including processing refunds, viewing payment history, and generating financial reports.</p>
                                             </div>
                                         </span>
                                     </li>    
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/relationship-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/relationship-icon.png" className="lazy" /></i>
                                         <span>Customer Relationship Management (CRM)
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Manage guest profiles, preferences, and feedback to personalize guest experiences and improve satisfaction.</p>
                                             </div>
                                         </span>
                                     </li>    
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/email-campaigns-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/email-campaigns-icon.png" className="lazy" /></i>
                                         <span>Email Campaigns
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Create and send targeted email campaigns to guests based on their booking history, preferences, or special occasions. Admins can use this feature to promote special offers, events, and loyalty programs, and stay connected with guests.</p>
                                             </div>
                                         </span>
                                     </li>    
                                     <li>
-                                        <i><img alt="img" src="/img/hotelbooking/rate-management-icon.png" class="lazy" /></i>
+                                        <i><img alt="img" src="/img/hotelbooking/rate-management-icon.png" className="lazy" /></i>
                                         <span>Rate Management
-                                            <div class="product-idea">
+                                            <div className="product-idea">
                                                 <p>Manage room rates, including setting seasonal pricing, discounts, and special offers to maximize revenue.</p>
                                             </div>
                                         </span>
@@ -619,12 +619,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="SubscriptionModel" id="subscriptionmodel" style={{ backgroundColor: "#f5f5f5"}}>
-    <div class="container">	
+      <section className="SubscriptionModel" id="subscriptionmodel" style={{ backgroundColor: "#f5f5f5"}}>
+    <div className="container">	
        
-        <div class="job_or_title">
-            <h2 class="taxt_tt_job">Subscription Model</h2><br />
-            <div class="SubscriptionModelBx">
+        <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2><br />
+            <div className="SubscriptionModelBx">
                 <p>Key Benefits:</p>
                 <ul>
                     <li><span>Lifetime Updates: Enjoy complimentary updates for your software version throughout its lifespan, including <strong>Free bug & security fixes</strong> under the subscription model.</span></li>
@@ -1088,29 +1088,29 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="CustomerReviewsSections">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
-              <div class="CustomerReviewsImg">
+      <section className="CustomerReviewsSections">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
+              <div className="CustomerReviewsImg">
                  <img
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
                 />
               </div>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-6">
-              <div class="CustomerReviews">
-                <div class="CustomerReviewsBxMain">
+            <div className="col-xs-12 col-md-6 col-lg-6">
+              <div className="CustomerReviews">
+                <div className="CustomerReviewsBxMain">
                   <h2>Customer Reviews</h2>
-                  <div class="CustomerReviewsMainBx">
-                    <div class="CustomerReviewsBx">
+                  <div className="CustomerReviewsMainBx">
+                    <div className="CustomerReviewsBx">
                       <p>
                       LS Room Reserver has simplified our hotel booking process. The software is user-friendly, and the customization options provided by Logicspice are 
                       excellent. The support team is also very responsive and helpful.
                       </p>
                     </div>
-                    <div class="CustomerReviewsClient">
+                    <div className="CustomerReviewsClient">
                       <i>
                          <img
                           alt="customer-reviews"
@@ -1119,7 +1119,7 @@ const Page = () => {
                       </i>
                       <span>
                       John D. (Canada)
-                        <i class="contry-flag">
+                        <i className="contry-flag">
                            <img
                             alt="customer-reviews"
                             src="/img/jobboard/canada_flag_img.png"
@@ -1128,14 +1128,14 @@ const Page = () => {
                       </span>
                     </div>
                   </div>
-                  <div class="CustomerReviewsMainBx">
-                    <div class="CustomerReviewsBx">
+                  <div className="CustomerReviewsMainBx">
+                    <div className="CustomerReviewsBx">
                       <p>
                       We have been using LS Room Reserver for over a year now, and it has greatly improved our efficiency. The software is feature-rich and easy to use. 
                       Logicspice has done a great job with this product.
                       </p>
                     </div>
-                    <div class="CustomerReviewsClient">
+                    <div className="CustomerReviewsClient">
                       <i>
                          <img
                           alt="customer-reviews"
@@ -1144,7 +1144,7 @@ const Page = () => {
                       </i>
                       <span>
                       Sarah K. (UK)
-                        <i class="contry-flag">
+                        <i className="contry-flag">
                            <img
                             alt="customer-reviews"
                             src="/img/jobboard/uk_flag_img.png"
@@ -1153,14 +1153,14 @@ const Page = () => {
                       </span>
                     </div>
                   </div>
-                  <div class="CustomerReviewsMainBx">
-                    <div class="CustomerReviewsBx">
+                  <div className="CustomerReviewsMainBx">
+                    <div className="CustomerReviewsBx">
                       <p>
                       Logicspice's LS Room Reserver has been a game-changer for our hotel. The software is robust, and the team at Logicspice has been very supportive 
                       throughout the implementation process. Highly recommended.
                       </p>
                     </div>
-                    <div class="CustomerReviewsClient">
+                    <div className="CustomerReviewsClient">
                       <i>
                          <img
                           alt="customer-reviews"
@@ -1169,7 +1169,7 @@ const Page = () => {
                       </i>
                       <span>
                       Michael P. (Australia)
-                        <i class="contry-flag">
+                        <i className="contry-flag">
                            <img
                             alt="customer-reviews"
                             src="/img/jobboard/australia_flag_img.png"
@@ -1181,16 +1181,16 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-md-4 col-lg-3">
-              <div class="ecommerce--review--point ">
-                <div class="outof_rating">
-                  <div class="review_rating_fjs">
-                    <div class="star_num">
-                      5 <i class="fa fa-star"></i>
+            <div className="col-xs-12 col-md-4 col-lg-3">
+              <div className="ecommerce--review--point ">
+                <div className="outof_rating">
+                  <div className="review_rating_fjs">
+                    <div className="star_num">
+                      5 <i className="fa fa-star"></i>
                     </div>
-                    <div class="progress">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-danger progress-bar-striped"
+                        className="progress-bar progress-bar-danger progress-bar-striped"
                         role="progressbar"
                         aria-valuenow="70"
                         aria-valuemin="0"
@@ -1198,15 +1198,15 @@ const Page = () => {
                         style={{ width: "100%" }}
                       ></div>
                     </div>
-                    <div class="people_star_num">200</div>
+                    <div className="people_star_num">200</div>
                   </div>
-                  <div class="review_rating_fjs">
-                    <div class="star_num">
-                      4 <i class="fa fa-star"></i>
+                  <div className="review_rating_fjs">
+                    <div className="star_num">
+                      4 <i className="fa fa-star"></i>
                     </div>
-                    <div class="progress">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-danger progress-bar-striped"
+                        className="progress-bar progress-bar-danger progress-bar-striped"
                         role="progressbar"
                         aria-valuenow="70"
                         aria-valuemin="0"
@@ -1214,15 +1214,15 @@ const Page = () => {
                         style={{ width: "30%" }}
                       ></div>
                     </div>
-                    <div class="people_star_num">28</div>
+                    <div className="people_star_num">28</div>
                   </div>
-                  <div class="review_rating_fjs">
-                    <div class="star_num">
-                      3 <i class="fa fa-star"></i>
+                  <div className="review_rating_fjs">
+                    <div className="star_num">
+                      3 <i className="fa fa-star"></i>
                     </div>
-                    <div class="progress">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-danger progress-bar-striped"
+                        className="progress-bar progress-bar-danger progress-bar-striped"
                         role="progressbar"
                         aria-valuenow="70"
                         aria-valuemin="0"
@@ -1230,15 +1230,15 @@ const Page = () => {
                         style={{ width: "0%" }}
                       ></div>
                     </div>
-                    <div class="people_star_num">0</div>
+                    <div className="people_star_num">0</div>
                   </div>
-                  <div class="review_rating_fjs">
-                    <div class="star_num">
-                      2 <i class="fa fa-star"></i>
+                  <div className="review_rating_fjs">
+                    <div className="star_num">
+                      2 <i className="fa fa-star"></i>
                     </div>
-                    <div class="progress">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-danger progress-bar-striped"
+                        className="progress-bar progress-bar-danger progress-bar-striped"
                         role="progressbar"
                         aria-valuenow="70"
                         aria-valuemin="0"
@@ -1246,15 +1246,15 @@ const Page = () => {
                         style={{ width: "0%" }}
                       ></div>
                     </div>
-                    <div class="people_star_num">0</div>
+                    <div className="people_star_num">0</div>
                   </div>
-                  <div class="review_rating_fjs">
-                    <div class="star_num">
-                      1 <i class="fa fa-star"></i>
+                  <div className="review_rating_fjs">
+                    <div className="star_num">
+                      1 <i className="fa fa-star"></i>
                     </div>
-                    <div class="progress">
+                    <div className="progress">
                       <div
-                        class="progress-bar progress-bar-danger progress-bar-striped"
+                        className="progress-bar progress-bar-danger progress-bar-striped"
                         role="progressbar"
                         aria-valuenow="70"
                         aria-valuemin="0"
@@ -1262,10 +1262,10 @@ const Page = () => {
                         style={{ width: "0%" }}
                       ></div>
                     </div>
-                    <div class="people_star_num">0</div>
+                    <div className="people_star_num">0</div>
                   </div>
                 </div>
-                <div class="ecommerce--review--btn ">
+                <div className="ecommerce--review--btn ">
                   <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
@@ -1276,9 +1276,9 @@ const Page = () => {
                     title=" Free Script"
                   />
                 </div>
-                <div class="main-rait">
+                <div className="main-rait">
                   <span>
-                    <i class="fa fa-star"></i> <span>4.7 out of 5 stars</span>
+                    <i className="fa fa-star"></i> <span>4.7 out of 5 stars</span>
                   </span>
                 </div>
               </div>
@@ -1286,24 +1286,24 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="ecommerce_faq_section" id="faq">
-        <div class="container">
-          <div class="CustomQuickFAQScript">
-            <div class="row">
-              <div class="col-md-5">
-                <h4 class="title_main">
+      <section className="ecommerce_faq_section" id="faq">
+        <div className="container">
+          <div className="CustomQuickFAQScript">
+            <div className="row">
+              <div className="col-md-5">
+                <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
-                <div class="FaqImgBx">
+                <div className="FaqImgBx">
                    <img
                     src="/img/ordermanagement/freescript-faq.png"
                     alt="Free Script"
                   />
                 </div>
               </div>
-              <div class="col-md-7">
-                <div class="panel-group faq_quick_sec" id="accordion">
+              <div className="col-md-7">
+                <div className="panel-group faq_quick_sec" id="accordion">
                   <MDBAccordion v-model="activeItem" borderless>
                     <MDBAccordionItem
                       headerTitle="What is LS Room Reserver?"

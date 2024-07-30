@@ -4803,7 +4803,10 @@ before {
 .caption-bx .btn-primary i {
 	margin-right: 10px;
 }
-
+.new-products-tab {
+	text-align: center;
+  display: inline-block; width: 100%;
+}
 .new-products-tab {
 	border: none;
 	margin: 40px 0 0;
@@ -4815,6 +4818,7 @@ before {
 	text-align: center;
 	padding: 0 10px;
 	width: 19%;
+  display: inline-block; 
 }
 
 .new-products-tab li>a {
@@ -4828,6 +4832,7 @@ before {
 	display: block;
 	background: #4a11a0;
 	transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
 .new-products-tab li>a span {
@@ -4922,6 +4927,9 @@ before {
 	display: inline-block;
 	vertical-align: middle;
 	padding-right: 20px;
+}
+.new-products-tab {
+	text-align: center;
 }
 
 

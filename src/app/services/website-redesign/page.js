@@ -41,11 +41,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="WebDevelopmentBanner WebsiteRedesignBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="WebDevelopmentBannerBx">
+      <section className="WebDevelopmentBanner WebsiteRedesignBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="WebDevelopmentBannerBx">
                 <h2>Website Redesign</h2>
                 <p>
                 In the current dynamic market place&sbquo; change is inevitable. If someone ignores these changes and refuses to adapt 
@@ -65,11 +65,11 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
@@ -79,8 +79,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="WebDevelopmentClients">
-        <div class="container">
+      <section className="WebDevelopmentClients">
+        <div className="container">
           <ul>
             <li>
               <span>Our Clients</span>
@@ -112,11 +112,11 @@ const Page = () => {
           </ul>
         </div>
       </section>
-      <section class="WebDevelopmentApplication">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="WebDevelopmentApplicationBx">
+      <section className="WebDevelopmentApplication">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="WebDevelopmentApplicationBx">
               <h2>Website Redesign <span>Services</span></h2>
               <p>In the current dynamic market place&sbquo; change is inevitable. If someone ignores these changes and refuses to adapt to the fresh perspectives then they are bound 
                 to impart with some of their efficiency. Constant updates and developments keep an enterprise at par with the trends and maintain their market share. 
@@ -132,8 +132,8 @@ const Page = () => {
                 operations.</p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="WebDevelopmentApplicationImg">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="WebDevelopmentApplicationImg">
                 <img
                   src="/img/webdevelopment/redesign-img.png"
                   alt="Website Redesign Services"
@@ -143,15 +143,15 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="WebDesignDevelopmentSection">
-        <div class="container">
-          <div class="TopHadding">
+      <section className="WebDesignDevelopmentSection">
+        <div className="container">
+          <div className="TopHadding">
           <h2>Website <span>Redesign Service</span></h2>
           </div>
-          <div class="WebDesignDevelopment">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+          <div className="WebDesignDevelopment">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon1.png"
@@ -162,8 +162,8 @@ const Page = () => {
                 <p>The website redesign proposal provided through our services is up to date and in sync with the current trends.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon2.png"
@@ -175,8 +175,8 @@ const Page = () => {
                         </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon5.png"
@@ -188,8 +188,8 @@ Navigation</h3>
                         <p>Navigation in the pages rendered by our web redesign Company support transparent navigation system.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon7.png"
@@ -201,8 +201,8 @@ Perspective</h3>
                         <p>Client&apos;s creativity is also considered by our developers through redesigning website <br />portals.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon3.png"
@@ -214,8 +214,8 @@ Compatibility</h3>
                         <p>Web page redesign is done with compatibility of the page across different platforms in mind.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon4.png"
@@ -227,8 +227,8 @@ Web Designs</h3>
                         <p>Adequate care is given to make sites interactive. Our designers role in this field is recommendable.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon6.png"
@@ -240,8 +240,8 @@ Optimization</h3>
                         <p>Our web pages are made search engine friendly as per the client&apos;s requirements.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon8.png"
@@ -257,11 +257,11 @@ And Layouts</h3>
           </div>
         </div>
       </section>
-      <section class="WebFeaturesSection WebsiteRedesignServiceSection">
+      <section className="WebFeaturesSection WebsiteRedesignServiceSection">
     
-    <div class="row m-0">
-        <div class="col-sm-12 col-md-6 p-0">
-            <div class="WebsiteRedesignServiceImg">
+    <div className="row m-0">
+        <div className="col-sm-12 col-md-6 p-0">
+            <div className="WebsiteRedesignServiceImg">
             <img
                       src="/img/webdevelopment/website-redesign-img.jpg"
                       alt="Website Redesign Services"
@@ -269,9 +269,9 @@ And Layouts</h3>
                 
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 p-0">
-            <div class="WebsiteRedesignServicecontainer">
-            <div class="TopHadding WebFeaturesRight">
+        <div className="col-sm-12 col-md-6 p-0">
+            <div className="WebsiteRedesignServicecontainer">
+            <div className="TopHadding WebFeaturesRight">
                 <h2>Why Go For<br /><span>Website Redesign Service?</span></h2>
                 <ul>
                     <li>Using Outdated Technologies</li>
@@ -296,18 +296,18 @@ And Layouts</h3>
 
 
      
-      <section class="WebLatestProjectsSection">
-        <div class="container">
-          <div class="TopHadding">
+      <section className="WebLatestProjectsSection">
+        <div className="container">
+          <div className="TopHadding">
             <h2>
               Latest <span>Projects</span>
             </h2>
           </div>
-          <div class="WebLatestProjects">
-            <div class="" id="slide-latestproducts">
+          <div className="WebLatestProjects">
+            <div className="" id="slide-latestproducts">
               <Slider {...settings}>
-                <div class="WebLatestProjectsSlide WebLatestGreen">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestGreen">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/goodluck-logo.png"
                       alt="Website Redesign Services"
@@ -317,38 +317,38 @@ And Layouts</h3>
                     Create your profile&sbquo; showcasing your experience&sbquo; skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://www.goodlucknc.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/goodluck-img.png"
                         alt="Website Redesign Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
                     />
                   </div>
                 </div>
-                <div class="WebLatestProjectsSlide WebLatestRed">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestRed">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/salesagy-logo.png"
                       alt="Website Redesign Services"
@@ -358,32 +358,32 @@ And Layouts</h3>
                     Create your profile&sbquo; showcasing your experience&sbquo; skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
-                      <i class="fa-brands fa-android" aria-hidden="true"></i>
-                      <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                      <i className="fa-brands fa-android" aria-hidden="true"></i>
+                      <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/salesagy-img.png"
                         alt="Website Redesign Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -391,8 +391,8 @@ And Layouts</h3>
                   </div>
                 </div>
 
-                <div class="WebLatestProjectsSlide WebLatestJobatHome">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestJobatHome">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/jobathome-logo.png"
                       alt="Website Redesign Services"
@@ -402,38 +402,38 @@ And Layouts</h3>
                     Create your profile&sbquo; showcasing your experience&sbquo; skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/jobathome-img.png"
                         alt="Website Redesign Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
                     />
                   </div>
                 </div>
-                <div class="WebLatestProjectsSlide WebLatestGreen">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestGreen">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/fundcareusa-logo.png"
                       alt="Website Redesign Services"
@@ -443,30 +443,30 @@ And Layouts</h3>
                     Create your profile&sbquo; showcasing your experience&sbquo; skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/fundcareusa-img.png"
                         alt="Website Redesign Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -474,8 +474,8 @@ And Layouts</h3>
                   </div>
                 </div>
 
-                <div class="WebLatestProjectsSlide WebLatestTacksm">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestTacksm">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/tacksm-logo.png"
                       alt="Website Redesign Services"
@@ -485,30 +485,30 @@ And Layouts</h3>
                     Create your profile&sbquo; showcasing your experience&sbquo; skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/tacksm-img.png"
                         alt="Website Redesign Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -516,8 +516,8 @@ And Layouts</h3>
                   </div>
                 </div>
 
-                <div class="WebLatestProjectsSlide WebLatestVanessajo">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestVanessajo">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/vanessajo-logo.png"
                       alt="Website Redesign Services"
@@ -527,30 +527,30 @@ And Layouts</h3>
                     Create your profile&sbquo; showcasing your experience&sbquo; skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/vanessajo-img.png"
                         alt="Website Redesign Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -563,98 +563,98 @@ And Layouts</h3>
         </div>
       </section>
 
-      <section class="laravel_choose_features_section">
-        <div class="container">
-          <div class="TopHadding">
+      <section className="laravel_choose_features_section">
+        <div className="container">
+          <div className="TopHadding">
           <h2>Why Choose <span>Logicspice For Web Design Service?</span></h2>
           </div>
-          <div class="laravel_choose_features_bx WebProjectInfoChooseFeaturesBx">
-            <div class="row">
+          <div className="laravel_choose_features_bx WebProjectInfoChooseFeaturesBx">
+            <div className="row">
               <div
-                class="col-sm-6 col-md-6 aos-init aos-animate"
+                className="col-sm-6 col-md-6 aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                             <h3>User Friendly Layout</h3>
                             <p>We ensure the integration of the latest technological advancements in our web app development processes.</p>
                         </div>
                 </div>
               </div>
               <div
-                class="col-sm-6 col-md-6 aos-init aos-animate"
+                className="col-sm-6 col-md-6 aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                             <h3>Dedicated Developers</h3>
                             <p>The website re-designers understand the importance of their job and perform it perfectly.</p>
                         </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                             <h3>Cost Effective</h3>
                             <p>Redesigning your website from logicspice is an inexpensive procedure.</p>
                         </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                             <h3>Effectively Design</h3>
                             <p>While redesigning website&sbquo; every move and shift is done purposely.</p>
                         </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon5.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                             <h3>Transparent Services</h3>
                             <p>Things are clear and visible&sbquo; as it is redesigned as per your<br /> requirement.</p>
                         </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon6.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                             <h3>Minimum Loading Time</h3>
                             <p>While redesigning website&sbquo; we try to minimize loading time as much as possible for richer user experience.</p>
                         </div>
@@ -664,10 +664,10 @@ And Layouts</h3>
           </div>
         </div>
         
-        <div class="WebSiteRedesignEnqury">
-         <div class="container">
+        <div className="WebSiteRedesignEnqury">
+         <div className="container">
         <p>For the most comprehensive consultation on optimizing your current website&sbquo; please reach out to us for a free assessment.</p>
-        <a href="#" class="btn btn-primary">Contact US</a>
+        <a href="#" className="btn btn-primary">Contact US</a>
     </div>
     </div>
       </section>

@@ -237,14 +237,14 @@ const Page = () => {
         </div>
       </div>
 
-      <div class="demand_app">
-        <div class="container">
+      <div className="demand_app">
+        <div className="container">
           <h2>Key Benefits of Our Custom Car Rental App Development</h2>
 
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -252,18 +252,18 @@ const Page = () => {
                     alt="icon5"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Own business page</h3>
                   <p>
                     Yes, the business owner can design his or her own business
                     page to list cars and all the required information
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -271,18 +271,18 @@ const Page = () => {
                     alt="icon6"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Add Products/Services</h3>
                   <p>
                     The owners can list new services or products on their car
                     rental systems to promote their business
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -290,17 +290,17 @@ const Page = () => {
                     alt="icon7"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Review column</h3>
                   <p>
                     The owners can receive the reviews from their customers
                     about their car rental services.
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
-            <div class="col-sm-4 center_image">
+            <div className="col-sm-4 center_image">
               <Image
                 height={100}
                 width={250}
@@ -308,16 +308,16 @@ const Page = () => {
                 alt="icon8"
               />
             </div>
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Security</h3>
                   <p>
                     We verify the information, on behalf of the business owners
                     before it is posted for the customers
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -325,18 +325,18 @@ const Page = () => {
                     alt="icon9"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Local Payments Support</h3>
                   <p>
                     Accept payments anywhere seamlessly with integration support
                     for payment gateways of your choice.
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -344,18 +344,18 @@ const Page = () => {
                     alt="icon10"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Global Solution</h3>
                   <p>
                     Operate your business in multiple locations with built-in
                     support for multiple language and currencies.
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -363,7 +363,7 @@ const Page = () => {
                     alt="icon11"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
           </div>
@@ -387,8 +387,8 @@ const Page = () => {
       </div>
 
       <div className="clearfix"></div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
@@ -456,10 +456,10 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

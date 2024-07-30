@@ -65,7 +65,7 @@ const Page = () => {
       <section class="product-new-page">
         <div class="container">
           <div class="new-product-bx product_abs_and_all">
-            <ul className="nav nav-tabs new-products-tab" role="tablist">
+            <ul className="nav-tabs new-products-tab" role="tablist">
               <li
                 id="tab1_li"
                 className={activeTab === "tab1" ? "active" : ""}

@@ -27,22 +27,22 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="ReactNavtiveAppBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="laravel-banner-txt">
+      <section className="ReactNavtiveAppBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="laravel-banner-txt">
                 <h1>
                   React Native App
                   <br /> <span>Development Services</span>
                 </h1>
-                <div class="LaravelText">
+                <div className="LaravelText">
                   Logicspice provides top-notch and reliable services in React
                   Native application development worldwide, delivering highly
                   functional and feature-packed solutions.
                 </div>
 
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Hire Now</button>
                     {
@@ -67,20 +67,22 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="page_img">
                 <Image
+                  width={650}
+                  height={500 / (100 / 100)}
                   src="/img/reactnativeappdevelopment/ReactImg.png"
                   alt="React Native App Development Services"
                 />
@@ -89,19 +91,21 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-descriptions ReactNavtive-descriptions">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions ReactNavtive-descriptions">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <Image
+                width={350}
+                height={500 / (100 / 100)}
                   src="/img/reactnativeappdevelopment/react-logo-img.png"
                   alt="React Native App Development Services"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>
                   React Native Application
                   <br /> Development
@@ -146,26 +150,30 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-devlopments-services ReactNativeServices">
-        <div class="container">
+      <section className="laravel-devlopments-services ReactNativeServices">
+        <div className="container">
           <h2>React Native Application Development Services</h2>
-          <div class="laravel-services-bx-top">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+          <div className="laravel-services-bx-top">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon1.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon1.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Custom App Development</h3>
@@ -177,21 +185,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon2.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon2.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Migration Services</h3>
@@ -202,21 +214,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon3.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon3.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>UI/UX Design</h3>
@@ -227,21 +243,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box6">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon4.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon4.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>API Integration</h3>
@@ -253,21 +273,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon5.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon5.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>App Testing and QA</h3>
@@ -277,21 +301,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon6.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon6.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Support and Maintenance</h3>
@@ -301,21 +329,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box7">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon7.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon7.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Performance Optimization</h3>
@@ -326,21 +358,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/reactnativeappdevelopment/react-new-icon8.png"
                         alt="React Native App Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/reactnativeappdevelopment/react-white-icon8.png"
                         alt="React Native App Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Business Applications</h3>
@@ -355,20 +391,22 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section">
+        <div className="container">
           <h2>Core Features Of React Native App Development</h2>
-          <div class="laravel_core_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/reactnativeappdevelopment/core_features_icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Cross-Platform Development</h3>
                     <p>
                       Develop apps for iOS and Android using a single codebase.
@@ -377,30 +415,34 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/reactnativeappdevelopment/core_features_icon4.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Personalised Applications</h3>
                     <p>The entire application is customisable.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/reactnativeappdevelopment/core_features_icon2.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Performance</h3>
                     <p>
                       Utilize native components for faster and smoother app
@@ -409,15 +451,17 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/reactnativeappdevelopment/core_features_icon5.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>JavaScript Framework</h3>
                     <p>
                       Leverage the popular and versatile JavaScript language for
@@ -426,15 +470,17 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/reactnativeappdevelopment/core_features_icon3.png"
                       alt="img3"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Reusable Components</h3>
                     <p>
                       Speed up development with reusable and interchangeable UI
@@ -444,15 +490,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/reactnativeappdevelopment/core_features_icon6.png"
                       alt="img6"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Diversity of Skill Set Among Developers</h3>
                     <p>
                       Our React Native app developers have adapted themselves to
@@ -467,20 +515,22 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section">
-        <div class="container">
+      <section className="laravel_choose_features_section">
+        <div className="container">
           <h2>Benefits Of React Native App Development</h2>
-          <div class="laravel_choose_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+          <div className="laravel_choose_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/reactnativeappdevelopment/react-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Code Reusability</h3>
                     <p>
                       Write once, use everywhere-speed up development by reusing
@@ -490,15 +540,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/reactnativeappdevelopment/react-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Cost Efficiency</h3>
                     <p>
                       Single codebase reduces development time, thus lowering
@@ -508,15 +560,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/reactnativeappdevelopment/react-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Performance</h3>
                     <p>
                       Direct interaction with native APIs ensures high
@@ -526,15 +580,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/reactnativeappdevelopment/react-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Faster Time to Market</h3>
                     <p>
                       Quicker development process enables faster product
@@ -544,15 +600,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/reactnativeappdevelopment/react-why-icon5.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Offer On Multiple Stages</h3>
                     <p>
                       A single React Native app can be launched on Google
@@ -562,15 +620,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/reactnativeappdevelopment/react-why-icon6.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Better User Experience</h3>
                     <p>
                       React Native apps offer an enhanced user experience on
@@ -584,17 +644,17 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section LaravelChooseFeaturesSection">
-        <div class="container">
+      <section className="laravel_choose_features_section LaravelChooseFeaturesSection">
+        <div className="container">
           <h2>
             Why Choose Logicspice For React Native <br />
             App Development?
           </h2>
-          <div class="laravel_choose_features_bx ReactJsChooseFeaturesBx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_details">
+          <div className="laravel_choose_features_bx ReactJsChooseFeaturesBx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_details">
                     <p>
                       We have worked in this industry for 18+ years with 1900+
                       clients across 15 countries.
@@ -603,9 +663,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_details">
                     <p>
                       We promise the best available technological advancement
                       through our applications.
@@ -614,9 +674,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_details">
                     <p>
                       Our service stands out in terms of quality and being
                       cost-effective.
@@ -625,9 +685,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_details">
                     <p>
                       Logicspice maintains seamless communication with clients
                       to develop applications that meet their unique needs.
@@ -636,9 +696,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_details">
                     <p>
                       Our developers and design team always focus on client
                       satisfaction through dedicated customer support service
@@ -648,7 +708,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 main_btn_hire">
+            <div className="col-sm-12 main_btn_hire">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Hire Now</button>
                 {
@@ -664,23 +724,25 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="ecommerce_faq_section NewFaqDesignSection">
-        <div class="container">
-          <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
-              <div class="col-md-5">
-                <h4 class="title_main">
+      <section className="ecommerce_faq_section NewFaqDesignSection">
+        <div className="container">
+          <div className="row">
+            <div className=" row ecommerce__Quick_FAQ">
+              <div className="col-md-5">
+                <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
-                <div class="FaqImgBx">
+                <div className="FaqImgBx">
                   <Image
+                     width={650}
+                     height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
                 </div>
               </div>
-              <div class="col-md-7">
+              <div className="col-md-7">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="What is React Native App Development?"
@@ -751,7 +813,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

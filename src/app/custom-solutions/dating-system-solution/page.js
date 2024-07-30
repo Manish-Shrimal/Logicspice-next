@@ -63,10 +63,10 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div class="top-head-custom Dating-System">
-        <div class="container">
-          <div class="col-md-8">
-            <div class="head-enquiry">
+      <div className="top-head-custom Dating-System">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="head-enquiry">
               <h1>Custom Dating App Development</h1>
               <p>
                 Get the best dating mobile apps (Android and iphone) or web
@@ -91,30 +91,30 @@ const Page = () => {
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
               >
-                <div class="WhatsappIcon WhatsappIconCustom">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
+                <div className="WhatsappIcon WhatsappIconCustom">
+                  <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div className="coccoc-alo-ph-circle"></div>
+                    <div className="coccoc-alo-ph-circle-fill"></div>
+                    <div className="coccoc-alo-ph-img-circle"></div>
                   </div>
                 </div>
               </Link>
             </div>
-            <ul class="head-feature">
+            <ul className="head-feature">
               <li>Flexible modalities</li>
               <li>Budget Utilization</li>
               <li>highly creative team for a dynamic digital presence</li>
               <li>Intelligent Design</li>
             </ul>
-            <div aria-label="breadcrumb" class="my-breadcrumb ">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+            <div aria-label="breadcrumb" className="my-breadcrumb ">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <Link href="/custom-solutions">Custom Solutions</Link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   Dating App
                 </li>
               </ol>
@@ -122,12 +122,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="BFC_logic">
-        <div class="container">
+      <div className="BFC_logic">
+        <div className="container">
           <h2>Why logicspice is Best For Custom App/Web Development?</h2>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -143,8 +143,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -160,8 +160,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -176,8 +176,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -195,12 +195,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="SBC_logic">
-        <div class="container">
+      <div className="SBC_logic">
+        <div className="container">
           <h2>Custom Dating System Software Development</h2>
         </div>
-        <div class="inner_content_SBG">
-          <div class="container">
+        <div className="inner_content_SBG">
+          <div className="container">
             <p>
               The Dating System development will enable the user to create their
               free account over website by submitting their email id and can
@@ -225,17 +225,17 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="demand_app">
-        <div class="container">
+      <div className="demand_app">
+        <div className="container">
           <h2>Key Benefits of Our Custom Dating App Development</h2>
 
-          {/* <div class="row">
-            <div class="col-sm-4">
+          {/* <div className="row">
+            <div className="col-sm-4">
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -243,7 +243,7 @@ const Page = () => {
                     alt="img5"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>User Profile Integration</h3>
                   <p>
                     User can easily register &amp; login with one step by giving
@@ -251,14 +251,14 @@ const Page = () => {
                     registration &amp; login.
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -266,7 +266,7 @@ const Page = () => {
                     alt="img6"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Manage Request Services</h3>
                   <p>
                     Manage all the bookings at your fingertips with mobility
@@ -274,14 +274,14 @@ const Page = () => {
                     users.
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -289,17 +289,17 @@ const Page = () => {
                     alt="img7"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Fully Responsive</h3>
                   <p>
                     Themes with ‘fit-all-screen’ compatibility allow user to
                     access from mobile as well as tablet.
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
-            <div class="col-sm-4 center_image">
+            <div className="col-sm-4 center_image">
               <Image
                 height={100}
                 width={250}
@@ -307,19 +307,19 @@ const Page = () => {
                 alt="img8"
               />
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Lost Password Recovery</h3>
                   <p>
                     This feature allows customers to reset their password with
                     the ease of customized password resetter.
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -327,21 +327,21 @@ const Page = () => {
                     alt="img9"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Search Filter</h3>
                   <p>
                     This allows to search a keyword and give relevant result
                     back to the user.
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -349,14 +349,14 @@ const Page = () => {
                     alt="img10"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Unified payment methods</h3>
                   <p>
                     Get the secured and efficient payment gateway and offer
@@ -364,7 +364,7 @@ const Page = () => {
                     banking.
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -372,17 +372,17 @@ const Page = () => {
                     alt="img11"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
           </div> */}
-          <div class="row">
-            <div class="col-sm-4">
+          <div className="row">
+            <div className="col-sm-4">
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -390,21 +390,21 @@ const Page = () => {
                     alt="img5"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Subscribe to Upgrade</h3>
                   <p>
                     Users can stand out of the crowd by subscribing to premium
                     memberships
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -412,7 +412,7 @@ const Page = () => {
                     alt="img6"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Profile Completeness </h3>
                   <p>
                     {" "}
@@ -420,14 +420,14 @@ const Page = () => {
                     find their correct date{" "}
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -435,17 +435,17 @@ const Page = () => {
                     alt="img7"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Messages </h3>
                   <p>
                     User will be able to view the message sent to them by other
                     users in their in-box
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
-            <div class="col-sm-4 center_image">
+            <div className="col-sm-4 center_image">
               <Image
                 height={100}
                 width={250}
@@ -453,12 +453,12 @@ const Page = () => {
                 alt="img8"
               />
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Privacy Settings </h3>
                   <p>
                     {" "}
@@ -466,7 +466,7 @@ const Page = () => {
                     profile is only visible to specific people
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -474,21 +474,21 @@ const Page = () => {
                     alt="img9"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Advanced Filters</h3>
                   <p>
                     Users will able to filter the search for date using more
                     than 20 options
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -496,21 +496,21 @@ const Page = () => {
                     alt="img10"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
               <div
-                class="demand-card aos-init aos-animate"
+                className="demand-card aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Over 300+ Questions</h3>
                   <p>
                     User can answer multiple questions according to which
                     potential dates will be listed for him/her
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -518,21 +518,21 @@ const Page = () => {
                     alt="img11"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="titlesettop titlesettop_mar">
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="titlesettop titlesettop_mar">
             Dating App/Web Development Features
           </h2>
 
-          <div class="features-tab">
-            <div class="clearfix">
-              <ul class="nav nav-tabs" role="tablist">
+          <div className="features-tab">
+            <div className="clearfix">
+              <ul className="nav nav-tabs" role="tablist">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -553,13 +553,13 @@ const Page = () => {
                 </li>
               </ul>
 
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+              <div className="tab-content">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {sellerTab && (
                     <>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -573,7 +573,7 @@ const Page = () => {
                               the auction winner.
                             </p>
                           </div>
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -588,8 +588,8 @@ const Page = () => {
                             </p>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -603,7 +603,7 @@ const Page = () => {
                             </p>
                           </div>
 
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -617,8 +617,8 @@ const Page = () => {
                             </p>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -632,7 +632,7 @@ const Page = () => {
                               add/edit/delete store.
                             </p>
                           </div>
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -646,8 +646,8 @@ const Page = () => {
                             </p>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -662,7 +662,7 @@ const Page = () => {
                             </p>
                           </div>
 
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                             <Image
                               height={100}
                               width={60}
@@ -681,12 +681,12 @@ const Page = () => {
                     </>
                   )}
                 </div>
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {buyerTab && (
                     <>
                       <div>
                         <Slider {...settings}>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/Search_Module.jpg"
@@ -698,7 +698,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/Profile-Listing-Module.jpg"
@@ -710,7 +710,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/Advance_search.jpg"
@@ -722,7 +722,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/Chat-module.jpg"
@@ -744,25 +744,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div class="app_solution">
-        <div class="container">
+      <div className="app_solution">
+        <div className="container">
           <h2>Custom CRM App Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
       </div>
 
       {/*  */}
-      <section class="ecommerce_faq_section CustomSolutionFaqSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 class="title_main">Quick FAQ</h4>
+      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12 ecommerce__Quick_FAQ">
+                    <h4 className="title_main">Quick FAQ</h4>
                     <MDBAccordion v-model="activeItem" borderless>
               <MDBAccordionItem
                 headerTitle="How can a customer search for businesses around his location?"
@@ -875,10 +875,10 @@ const Page = () => {
         </div>
     </section>
      
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

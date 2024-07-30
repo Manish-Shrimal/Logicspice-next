@@ -10,6 +10,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 
 const Page = () => {
   var settings = {
@@ -33,6 +34,11 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
   const [modalOpen, setModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(!showModal);
+  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -40,53 +46,68 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="iphone_template_header environment">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="iphone_template_header_left">
+      <section className="iphone_template_header environment">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
+              <div className="iphone_template_header_left">
                 <Image
-                  class="normal_logo"
+                  width={500}
+                  height={500 / (100 / 100)}
+                  className="normal_logo"
                   alt="Android Applications Developmenr Company"
                   src="/img/iosappdevelopment/android-phone.png"
                 />
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="iphone_template_header_right">
-                <div class="iphone_template_header_rightwh">
+            <div className="col-sm-6">
+              <div className="iphone_template_header_right">
+                <div className="iphone_template_header_rightwh">
                   We have developed expertise in developing wide range of{" "}
-                  <span class="cussizeset">iPhone applications</span>
+                  <span className="cussizeset">iPhone applications</span>
                 </div>
-                <div class="clearfix"></div>
-                <div class="line_iptemp"></div>
-                <div class="clearfix"></div>
-                <div class="portfolio_button">
-                  <Link
-                    href="#"
-                    id=""
-                    class="btn btn-primary"
-                    onClick={() => openEnquiryModal()}
-                  >
-                    <span>Portfolio</span>
-                  </Link>
-                  <Link
+                <div className="clearfix"></div>
+                <div className="line_iptemp"></div>
+                <div className="clearfix"></div>
+                <div className="portfolio_button">
+                  {/* <Link
                     href="#"
                     id=""
                     className="btn btn-primary"
-                    onClick={() => toggleModal()}
+                    onClick={() => openEnquiryModal()}
                   >
-                    Enquire Now
-                  </Link>
+                    <span>Portfolio</span>
+                  </Link> */}
+                  <div className="btn btn-primary" onClick={openModal}>
+                    <button>Portfolio</button>
+                    {
+                      <Enquirymodal
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="IOS Developer"
+                      />
+                    }
+                  </div>
+                  <div className="btn btn-primary" onClick={openModal}>
+                    <button>Enquiry Now</button>
+                    {
+                      <Enquirymodal
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="IOS Developer"
+                      />
+                    }
+                  </div>
+
                   <Link
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
@@ -96,16 +117,16 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="iphone_template_header_bottom_cont">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 offset-sm-6">
-              <div class="cont_rihss">
+      <section className="iphone_template_header_bottom_cont">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 offset-sm-6">
+              <div className="cont_rihss">
                 Logicspice has been awarded one of the most reliable
                 <h1 style={{ paddingLeft: 0 }}>
-                  <a href="https://www.logicspice.com">
+                  <Link href="/">
                     iphone app development company
-                  </a>
+                  </Link>
                 </h1>{" "}
                 by different platforms like clutch, Top freelancer etc.
               </div>
@@ -114,34 +135,44 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="scroll_sec">
-        <div class="bestheating">
-          <div class="apps_portfolioshowe bestheating-slider-wrap best-heating-wrap">
-            <div class="home-projects">
+      <section className="scroll_sec">
+        <div className="bestheating">
+          <div className="apps_portfolioshowe bestheating-slider-wrap best-heating-wrap">
+            <div className="home-projects">
               <div
                 data-home-project="1"
-                class="apps_portfolioshowe_sections home-project home-project--android none"
+                className="apps_portfolioshowe_sections home-project home-project--android none"
               >
                 <div
                   style={{
                     backgroundImage: "url('/img/iosappdevelopment/uuuga.png')",
                   }}
-                  class="apps_portfolioshowe_sections_image"
+                  className="apps_portfolioshowe_sections_image"
                 ></div>
-                <div class="apps_portfolioshowe_sections_container">
-                  <div class="home-project__inner first-slide bdr_block">
-                    <div class="home-project__clip">
-                      <div class="home-project__phone">
-                        <div data-reveal-bg="1" class="responsive__bg__wrap">
+                <div className="apps_portfolioshowe_sections_container">
+                  <div className="home-project__inner first-slide bdr_block">
+                    <div className="home-project__clip">
+                      <div className="home-project__phone">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
-                        <div class="phone__reveal">
-                          <div data-reveal-wrap="1" class="phone__reveal__wrap">
+                        <div className="phone__reveal">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="UUUga"
                               src="/img/iosappdevelopment/uuuga_profile.png"
                             />
@@ -149,26 +180,30 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="wrap">
-                      <div class="apps_portfolioshowe_right_wrap">
-                        <div class="apps_portfolioshowe_right_wrap_in">
-                          <div class="apps_portfolioshowe_top">
-                            <div class="apps_portfolioshowe_topleft">
-                              <div class="apps_portfolioshowe_top_icon">
+                    <div className="wrap">
+                      <div className="apps_portfolioshowe_right_wrap">
+                        <div className="apps_portfolioshowe_right_wrap_in">
+                          <div className="apps_portfolioshowe_top">
+                            <div className="apps_portfolioshowe_topleft">
+                              <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/apps-logicspice.png"
                                 />
                               </div>
-                              <div class="apps_portfolioshowe_top_name">
+                              <div className="apps_portfolioshowe_top_name">
                                 UUUga
                               </div>
                             </div>
-                            <div class="apps_portfolioshowe_topright">
+                            <div className="apps_portfolioshowe_topright">
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -177,6 +212,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -185,27 +222,27 @@ const Page = () => {
                               </ul>
                             </div>
                           </div>
-                          <div class="details_of_appdesc">
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                          <div className="details_of_appdesc">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 SYSTEM:
                               </div>
                               <span>iOS, Android</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 WE MAKE:
                               </div>
                               <span>UI/ UX design, development</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TIME TAKE:
                               </div>
                               <span>30 Days to build</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TEAM:
                               </div>
                               <span>
@@ -213,8 +250,8 @@ const Page = () => {
                                 Analyst
                               </span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 ABOUT APP:
                               </div>
                               <span>
@@ -239,22 +276,32 @@ const Page = () => {
               </div>
               <div
                 data-home-project="2"
-                class="apps_portfolioshowe_sections home-project home-project--android"
+                className="apps_portfolioshowe_sections home-project home-project--android"
               >
-                <div class="apps_portfolioshowe_sections_container">
-                  <div class="home-project__inner home-project__inner--quizup">
-                    <div class="home-project__clip">
-                      <div class="home-project__phone">
-                        <div data-reveal-bg="1" class="responsive__bg__wrap">
+                <div className="apps_portfolioshowe_sections_container">
+                  <div className="home-project__inner home-project__inner--quizup">
+                    <div className="home-project__clip">
+                      <div className="home-project__phone">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
-                        <div class="phone__reveal">
-                          <div data-reveal-wrap="1" class="phone__reveal__wrap">
+                        <div className="phone__reveal">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Localgenii"
                               src="/img/iosappdevelopment/localgenii_in.jpg"
                             />
@@ -262,26 +309,30 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="wrap">
-                      <div class="apps_portfolioshowe_right_wrap">
-                        <div class="apps_portfolioshowe_right_wrap_in">
-                          <div class="apps_portfolioshowe_top">
-                            <div class="apps_portfolioshowe_topleft">
-                              <div class="apps_portfolioshowe_top_icon">
+                    <div className="wrap">
+                      <div className="apps_portfolioshowe_right_wrap">
+                        <div className="apps_portfolioshowe_right_wrap_in">
+                          <div className="apps_portfolioshowe_top">
+                            <div className="apps_portfolioshowe_topleft">
+                              <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/BusinesS-Apps-Development.png"
                                 />
                               </div>
-                              <div class="apps_portfolioshowe_top_name">
+                              <div className="apps_portfolioshowe_top_name">
                                 Localgenii
                               </div>
                             </div>
-                            <div class="apps_portfolioshowe_topright">
+                            <div className="apps_portfolioshowe_topright">
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -290,6 +341,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -298,27 +351,27 @@ const Page = () => {
                               </ul>
                             </div>
                           </div>
-                          <div class="details_of_appdesc">
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                          <div className="details_of_appdesc">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 SYSTEM:
                               </div>
                               <span>iOS, Android</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 WE MAKE:
                               </div>
                               <span>UI/ UX design, development</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TIME TAKE:
                               </div>
                               <span>30 Days to build</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TEAM:
                               </div>
                               <span>
@@ -326,8 +379,8 @@ const Page = () => {
                                 Analyst
                               </span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 ABOUT APP:
                               </div>
                               <span>
@@ -350,22 +403,32 @@ const Page = () => {
               </div>
               <div
                 data-home-project="3"
-                class="apps_portfolioshowe_sections home-project home-project--android"
+                className="apps_portfolioshowe_sections home-project home-project--android"
               >
-                <div class="apps_portfolioshowe_sections_container">
-                  <div class="home-project__inner home-project__inner--quizup">
-                    <div class="home-project__clip">
-                      <div class="home-project__phone">
-                        <div data-reveal-bg="1" class="responsive__bg__wrap">
+                <div className="apps_portfolioshowe_sections_container">
+                  <div className="home-project__inner home-project__inner--quizup">
+                    <div className="home-project__clip">
+                      <div className="home-project__phone">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
-                        <div class="phone__reveal">
-                          <div data-reveal-wrap="1" class="phone__reveal__wrap">
+                        <div className="phone__reveal">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Martgram"
                               src="/img/iosappdevelopment/martgram_in.jpg"
                             />
@@ -373,26 +436,30 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="wrap">
-                      <div class="apps_portfolioshowe_right_wrap">
-                        <div class="apps_portfolioshowe_right_wrap_in">
-                          <div class="apps_portfolioshowe_top">
-                            <div class="apps_portfolioshowe_topleft">
-                              <div class="apps_portfolioshowe_top_icon">
+                    <div className="wrap">
+                      <div className="apps_portfolioshowe_right_wrap">
+                        <div className="apps_portfolioshowe_right_wrap_in">
+                          <div className="apps_portfolioshowe_top">
+                            <div className="apps_portfolioshowe_topleft">
+                              <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/mobile-Apps.png"
                                 />
                               </div>
-                              <div class="apps_portfolioshowe_top_name">
+                              <div className="apps_portfolioshowe_top_name">
                                 Martgram
                               </div>
                             </div>
-                            <div class="apps_portfolioshowe_topright">
+                            <div className="apps_portfolioshowe_topright">
                               <ul>
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -401,6 +468,8 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       target="_blank"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -410,27 +479,27 @@ const Page = () => {
                               </ul>
                             </div>
                           </div>
-                          <div class="details_of_appdesc">
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                          <div className="details_of_appdesc">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 SYSTEM:
                               </div>
                               <span>iOS, Android</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 WE MAKE:
                               </div>
                               <span>UI/ UX design, development</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TIME TAKE:
                               </div>
                               <span>30 Days to build</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TEAM:
                               </div>
                               <span>
@@ -438,8 +507,8 @@ const Page = () => {
                                 Analyst
                               </span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 ABOUT APP:
                               </div>
                               <span>
@@ -463,29 +532,39 @@ const Page = () => {
               </div>
               <div
                 data-home-project="4"
-                class="apps_portfolioshowe_sections home-project home-project--android"
+                className="apps_portfolioshowe_sections home-project home-project--android"
               >
                 <div
                   style={{
                     backgroundImage:
                       "url('/img/iosappdevelopment/favorit.png')",
                   }}
-                  class="apps_portfolioshowe_sections_image"
+                  className="apps_portfolioshowe_sections_image"
                 ></div>
-                <div class="apps_portfolioshowe_sections_container">
-                  <div class="home-project__inner home-project__inner--quizup">
-                    <div class="home-project__clip">
-                      <div class="home-project__phone">
-                        <div data-reveal-bg="1" class="responsive__bg__wrap">
+                <div className="apps_portfolioshowe_sections_container">
+                  <div className="home-project__inner home-project__inner--quizup">
+                    <div className="home-project__clip">
+                      <div className="home-project__phone">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
-                        <div class="phone__reveal">
-                          <div data-reveal-wrap="1" class="phone__reveal__wrap">
+                        <div className="phone__reveal">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Favor It"
                               src="/img/iosappdevelopment/favorit_it_in.png"
                             />
@@ -493,26 +572,30 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="wrap">
-                      <div class="apps_portfolioshowe_right_wrap">
-                        <div class="apps_portfolioshowe_right_wrap_in">
-                          <div class="apps_portfolioshowe_top">
-                            <div class="apps_portfolioshowe_topleft">
-                              <div class="apps_portfolioshowe_top_icon">
+                    <div className="wrap">
+                      <div className="apps_portfolioshowe_right_wrap">
+                        <div className="apps_portfolioshowe_right_wrap_in">
+                          <div className="apps_portfolioshowe_top">
+                            <div className="apps_portfolioshowe_topleft">
+                              <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business_Developers.png"
                                 />
                               </div>
-                              <div class="apps_portfolioshowe_top_name">
+                              <div className="apps_portfolioshowe_top_name">
                                 Favor It
                               </div>
                             </div>
-                            <div class="apps_portfolioshowe_topright">
+                            <div className="apps_portfolioshowe_topright">
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -521,6 +604,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -529,27 +614,27 @@ const Page = () => {
                               </ul>
                             </div>
                           </div>
-                          <div class="details_of_appdesc">
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                          <div className="details_of_appdesc">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 SYSTEM:
                               </div>
                               <span>iOS, Android</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 WE MAKE:
                               </div>
                               <span>UI/ UX design, development</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TIME TAKE:
                               </div>
                               <span>30 Days to build</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TEAM:
                               </div>
                               <span>
@@ -557,8 +642,8 @@ const Page = () => {
                                 Analyst
                               </span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 ABOUT APP:
                               </div>
                               <span>
@@ -584,22 +669,32 @@ const Page = () => {
               </div>
               <div
                 data-home-project="5"
-                class="apps_portfolioshowe_sections home-project home-project--android"
+                className="apps_portfolioshowe_sections home-project home-project--android"
               >
-                <div class="apps_portfolioshowe_sections_container">
-                  <div class="home-project__inner home-project__inner--quizup">
-                    <div class="home-project__clip">
-                      <div class="home-project__phone">
-                        <div data-reveal-bg="1" class="responsive__bg__wrap">
+                <div className="apps_portfolioshowe_sections_container">
+                  <div className="home-project__inner home-project__inner--quizup">
+                    <div className="home-project__clip">
+                      <div className="home-project__phone">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
-                        <div class="phone__reveal">
-                          <div data-reveal-wrap="1" class="phone__reveal__wrap">
+                        <div className="phone__reveal">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Klick"
                               src="/img/iosappdevelopment/klick_in.jpg"
                             />
@@ -607,26 +702,30 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="wrap">
-                      <div class="apps_portfolioshowe_right_wrap">
-                        <div class="apps_portfolioshowe_right_wrap_in">
-                          <div class="apps_portfolioshowe_top">
-                            <div class="apps_portfolioshowe_topleft">
-                              <div class="apps_portfolioshowe_top_icon">
+                    <div className="wrap">
+                      <div className="apps_portfolioshowe_right_wrap">
+                        <div className="apps_portfolioshowe_right_wrap_in">
+                          <div className="apps_portfolioshowe_top">
+                            <div className="apps_portfolioshowe_topleft">
+                              <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business-Service.png"
                                 />
                               </div>
-                              <div class="apps_portfolioshowe_top_name">
+                              <div className="apps_portfolioshowe_top_name">
                                 Klick
                               </div>
                             </div>
-                            <div class="apps_portfolioshowe_topright">
+                            <div className="apps_portfolioshowe_topright">
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -635,6 +734,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -643,27 +744,27 @@ const Page = () => {
                               </ul>
                             </div>
                           </div>
-                          <div class="details_of_appdesc">
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                          <div className="details_of_appdesc">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 SYSTEM:
                               </div>
                               <span>iOS, Android</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 WE MAKE:
                               </div>
                               <span>UI/ UX design, development</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TIME TAKE:
                               </div>
                               <span>30 Days to build</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TEAM:
                               </div>
                               <span>
@@ -671,8 +772,8 @@ const Page = () => {
                                 Analyst
                               </span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 ABOUT APP:
                               </div>
                               <span>
@@ -681,12 +782,12 @@ const Page = () => {
                                 to be prepared for shipment to his residence.
                                 User will send payment to Apple inc. Then Apple
                                 inc. will send the amount after fee deduction to
-                                admin&apos;s paypal account. After purchasing the
-                                item from the store, end user will collect the
-                                receipt from the item provider and place a
-                                shipment using the &quot;Klick&quot; app. User also need
-                                to choose the shipping method provided by
-                                courier company.
+                                admin&apos;s paypal account. After purchasing
+                                the item from the store, end user will collect
+                                the receipt from the item provider and place a
+                                shipment using the &quot;Klick&quot; app. User
+                                also need to choose the shipping method provided
+                                by courier company.
                               </span>
                             </div>
                           </div>
@@ -698,29 +799,39 @@ const Page = () => {
               </div>
               <div
                 data-home-project="6"
-                class="apps_portfolioshowe_sections home-project home-project--android"
+                className="apps_portfolioshowe_sections home-project home-project--android"
               >
                 <div
                   style={{
                     backgroundImage:
                       "url('/img/iosappdevelopment/raydaar_img.png')",
                   }}
-                  class="apps_portfolioshowe_sections_image"
+                  className="apps_portfolioshowe_sections_image"
                 ></div>
-                <div class="apps_portfolioshowe_sections_container">
-                  <div class="home-project__inner last-slide slide-last-bdr">
-                    <div class="home-project__clip">
-                      <div class="home-project__phone">
-                        <div data-reveal-bg="1" class="responsive__bg__wrap">
+                <div className="apps_portfolioshowe_sections_container">
+                  <div className="home-project__inner last-slide slide-last-bdr">
+                    <div className="home-project__clip">
+                      <div className="home-project__phone">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
-                        <div class="phone__reveal">
-                          <div data-reveal-wrap="1" class="phone__reveal__wrap">
+                        <div className="phone__reveal">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Raydaar"
                               src="/img/iosappdevelopment/tc_in.jpg"
                             />
@@ -728,26 +839,30 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="wrap">
-                      <div class="apps_portfolioshowe_right_wrap">
-                        <div class="apps_portfolioshowe_right_wrap_in">
-                          <div class="apps_portfolioshowe_top">
-                            <div class="apps_portfolioshowe_topleft">
-                              <div class="apps_portfolioshowe_top_icon">
+                    <div className="wrap">
+                      <div className="apps_portfolioshowe_right_wrap">
+                        <div className="apps_portfolioshowe_right_wrap_in">
+                          <div className="apps_portfolioshowe_top">
+                            <div className="apps_portfolioshowe_topleft">
+                              <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business-Apps.png"
                                 />
                               </div>
-                              <div class="apps_portfolioshowe_top_name">
+                              <div className="apps_portfolioshowe_top_name">
                                 Raydaar
                               </div>
                             </div>
-                            <div class="apps_portfolioshowe_topright">
+                            <div className="apps_portfolioshowe_topright">
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -759,6 +874,8 @@ const Page = () => {
                                     href="https://play.google.com/store/apps/details?id=com.logicspice.raydaar&amp;hl=en"
                                   >
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -767,27 +884,27 @@ const Page = () => {
                               </ul>
                             </div>
                           </div>
-                          <div class="details_of_appdesc">
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                          <div className="details_of_appdesc">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 SYSTEM:
                               </div>
                               <span>iOS, Android</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 WE MAKE:
                               </div>
                               <span>UI/ UX design, development</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TIME TAKE:
                               </div>
                               <span>30 Days to build</span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 TEAM:
                               </div>
                               <span>
@@ -795,8 +912,8 @@ const Page = () => {
                                 Analyst
                               </span>
                             </div>
-                            <div class="details_of_appdesc_row">
-                              <div class="details_of_appdesc_row_title">
+                            <div className="details_of_appdesc_row">
+                              <div className="details_of_appdesc_row_title">
                                 ABOUT APP:
                               </div>
                               <span>
@@ -815,51 +932,53 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="nav--home-projects  best-heating">
-                <a class="" href="javascript:void(0);">
+              <div className="nav--home-projects  best-heating">
+                <a className="" href="javascript:void(0);">
                   Link
                 </a>
-                <a class="" href="javascript:void(0);">
+                <a className="" href="javascript:void(0);">
                   Link
                 </a>
-                <a class="" href="javascript:void(0);">
+                <a className="" href="javascript:void(0);">
                   Link
                 </a>
-                <a class="" href="javascript:void(0);">
+                <a className="" href="javascript:void(0);">
                   Link
                 </a>
-                <a class="" href="javascript:void(0);">
+                <a className="" href="javascript:void(0);">
                   Link
                 </a>
-                <a class="" href="javascript:void(0);">
+                <a className="" href="javascript:void(0);">
                   Link
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <section class="set_casestudysedc">
-          <div class="container">
-            <div class="row">
-              <div class="set_casestudysedc_left col-md-6">
-                <div class="title_of_casesetif">
+        <section className="set_casestudysedc">
+          <div className="container">
+            <div className="row">
+              <div className="set_casestudysedc_left col-md-6">
+                <div className="title_of_casesetif">
                   <h2>LET OUR WORK SPEAK: CASE STUDY</h2>
                 </div>
-                <div class="title_of_casesetif_sm">
+                <div className="title_of_casesetif_sm">
                   We have developed number of mobile applications for Android
                   and iPhone platform. Our softwares &amp; services have helped
-                  plenty of businesses and teams get work done. We&apos;re not just
-                  building applications, we&apos;re building an experience. And we
-                  want that to be a meaningful and lasting one. View our
+                  plenty of businesses and teams get work done. We&apos;re not
+                  just building applications, we&apos;re building an experience.
+                  And we want that to be a meaningful and lasting one. View our
                   featured case studies to get a glimpse into the successful
                   digital experiences we create with our clients and the
                   business results we help them achieve.
                 </div>
-                <div class="casestudy_avards">
+                <div className="casestudy_avards">
                   <ul>
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_1.png"
                         />
@@ -868,6 +987,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={200}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_2.png"
                         />
@@ -876,6 +997,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={200}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_3.png"
                         />
@@ -884,6 +1007,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_4.png"
                         />
@@ -892,6 +1017,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_5.png"
                         />
@@ -900,47 +1027,52 @@ const Page = () => {
                   </ul>
                 </div>
               </div>
-              <div class="set_casestudysedc_right col-md-6">
-                <div class="casestudy_sider">
-                  <div class="owl-carousel hidedot" id="casestudy_carousel">
+              <div className="set_casestudysedc_right col-md-6">
+                <div className="casestudy_sider">
+                  <div className="owl-carousel hidedot" id="casestudy_carousel">
                     <Slider {...casestudy}>
                       <div>
-                        <div class="casestudy_mobimg">
+                        <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/Martgramcase.png"
                           />
                         </div>
-                        <div class="casestudy_mobcontent">
+                        <div className="casestudy_mobcontent">
                           <span>
-                            <a
-                              href="https://www.logicspice.com/case-study/martgram-app/"
+                            <Link
+                              href="/case-study/martgram-app/"
                               target="_blank"
                             >
                               Martgram
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             Martgram app that we are scoping will serves as
-                            &quot;Online Marketplace Android &amp; iPhone app&quot;...
+                            &quot;Online Marketplace Android &amp; iPhone
+                            app&quot;...
                           </p>
                         </div>
                       </div>
                       <div>
-                        <div class="casestudy_mobimg">
+                        <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/beanocase.png"
                           />
                         </div>
-                        <div class="casestudy_mobcontent">
+                        <div className="casestudy_mobcontent">
                           <span>
-                            <a
-                              href="https://www.logicspice.com/case-study/beano-app/"
+                            <Link
+                              href="/case-study/beano-app/"
                               target="_blank"
                             >
                               Beano
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &quot;Beano: Coffee ordering&quot; is an interactive
@@ -949,204 +1081,241 @@ const Page = () => {
                         </div>
                       </div>
                       <div>
-                        <div class="casestudy_mobimg">
+                        <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/Social-Securitas.png"
                           />
                         </div>
-                        <div class="casestudy_mobcontent">
+                        <div className="casestudy_mobcontent">
                           <span>
-                            <a
-                              href="https://www.logicspice.com/case-study/social-securites/"
+                            <Link
+                              href="/case-study/social-securites/"
                               target="_blank"
                             >
                               Social Securites
-                            </a>
+                            </Link>
                           </span>
                           <p>
-                            Social Securites app that will scoping for &quot;Video
-                            Sharing Apps (Android &amp; iPhone)&quot; that will...
+                            Social Securites app that will scoping for
+                            &quot;Video Sharing Apps (Android &amp;
+                            iPhone)&quot; that will...
                           </p>
                         </div>
                       </div>
                       <div>
-                        <div class="casestudy_mobimg">
+                        <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/MyUtrack.png"
                           />
                         </div>
-                        <div class="casestudy_mobcontent">
+                        <div className="casestudy_mobcontent">
                           <span>
-                            <a
-                              href="https://www.logicspice.com/case-study/utrack-app/"
+                            <Link
+                              href="/case-study/utrack-app/"
                               target="_blank"
                             >
                               Utrack
-                            </a>
+                            </Link>
                           </span>
                           <p>
-                          &quot;Utrack&quot; app facilitates the students to live stress
-                            free by consolidating student&apos;s class schedules...
+                            &quot;Utrack&quot; app facilitates the students to
+                            live stress free by consolidating student&apos;s
+                            class schedules...
                           </p>
                         </div>
                       </div>
                       <div>
-                        <div class="casestudy_mobimg">
+                        <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/bestcit.png"
                           />
                         </div>
-                        <div class="casestudy_mobcontent">
+                        <div className="casestudy_mobcontent">
                           <span>
-                            <a
-                              href="https://www.logicspice.com/case-study/bestcit-app/"
+                            <Link
+                              href="/case-study/bestcit-app/"
                               target="_blank"
                             >
                               Bestcit
-                            </a>
+                            </Link>
                           </span>
                           <p>
-                            &quot;Aphorism&quot; app is a hub where user can find a huge
-                            quantity of aphorisms, literary quotes...
+                            &quot;Aphorism&quot; app is a hub where user can
+                            find a huge quantity of aphorisms, literary
+                            quotes...
                           </p>
                         </div>
                       </div>
                     </Slider>
                   </div>
                 </div>
-                <div class="more_btn more_btnrevercebn">
-                  <a
-                    class="btn btn-primary"
-                    href="https://www.logicspice.com/case-study/"
+                <div className="more_btn more_btnrevercebn">
+                  <Link
+                    className="btn btn-primary"
+                    href="/case-study/"
                   >
                     <span>Featured Case Studies</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </section>
-      <section class="satisfied_clients">
-        <div class="container">
-          <div class="headings">
+      <section className="satisfied_clients">
+        <div className="container">
+          <div className="headings">
             <h2>Our Clients</h2>
             <p>We love what we do and our clients know about this</p>
           </div>
-          <div class="clearfix"></div>
-          <div class="" id="satisfying_clients">
+          <div className="clearfix"></div>
+          <div className="" id="satisfying_clients">
             <Slider {...settings}>
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/Business-Apps.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/mobile-Apps.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/BusinesS-Apps-Development.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/Business-Service.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/Business_Developers.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/app-development.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/application-developers.jpg"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/mobile-apps-logicspice.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/app-development-services.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/expert-app-developers.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/android-apps-development.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/mobile-apps-development.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/affordable-apps.png"
                 />
               </div>
 
-              <div class="satisfied_clients_logo ">
+              <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
-                  class="lazy"
+                  className="lazy"
                   src="/img/mobileappdevelopment/apps-logicspice.png"
                 />
               </div>
@@ -1154,26 +1323,28 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="industryblock">
-        <div class="container">
-          <div class="block-industry-new">
-            <div class="row">
-              <div class="industryblock_left col-md-5">
+      <section className="industryblock">
+        <div className="container">
+          <div className="block-industry-new">
+            <div className="row">
+              <div className="industryblock_left col-md-5">
                 <Image
+                  width={450}
+                  height={500 / (100 / 100)}
                   alt="iPhone/ iOS app development services for industries - logicspice"
                   src="/img/iosappdevelopment/industry_lfimg.png"
                 />
               </div>
-              <div class="col-md-7">
-                <div class="industryblock_right">
-                  <div class="industryblock_right_title">
+              <div className="col-md-7">
+                <div className="industryblock_right">
+                  <div className="industryblock_right_title">
                     <h3>
                       Based on the many years of experience and highly qualified
                       development team we are able to serve nearly every
                       industry
                     </h3>
                   </div>
-                  <div class="indsubcnt">
+                  <div className="indsubcnt">
                     At Logicspice we serve various industries including Hotels,
                     Transport, School and Education, Ideas and Business Concept,
                     Health Care, Accounts and Financial Services, Commercial and
@@ -1184,17 +1355,14 @@ const Page = () => {
                     qualified and business centric solutions in an impressive
                     range of sectors.
                   </div>
-                  <div class="viewall_ind">
+                  <div className="viewall_ind">
                     <span>Some Industries We Serve and able to Serve</span>
-                    <div class="lin_hr"></div>
-                    <div class="clear"></div>
-                    <div class="seall_btn">
-                      <a
-                        class="btn btn-primary"
-                        href="https://www.logicspice.com/industries/"
-                      >
+                    <div className="lin_hr"></div>
+                    <div className="clear"></div>
+                    <div className="seall_btn">
+                      <Link className="btn btn-primary" href="/industries/">
                         View
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -1209,7 +1377,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

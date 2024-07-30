@@ -38,11 +38,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="laravel-banner advanced-web-banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="laravel-banner-txt">
+      <section className="laravel-banner advanced-web-banner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="laravel-banner-txt">
                 <h1>
                   Advanced Web Application <br />
                   Development
@@ -53,7 +53,7 @@ const Page = () => {
                   <li>Shopping Cart Service</li>
                   <li>Plug-in Development</li>
                 </ul>
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -68,19 +68,19 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="page_img">
                 <img
                   src="/img/advancedwebprogramming/advanced-web-development-img.png"
                   alt="Advanced Web Application Development"
@@ -90,19 +90,19 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-descriptions advanced-descriptions">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions advanced-descriptions">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <img
                   src="/img/advancedwebprogramming/advanced-logo-img.png"
                   alt="Advanced Web Application Development"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>
                   Advanced Web <br />
                   Application Development
@@ -136,31 +136,31 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-devlopments-services">
-        <div class="container">
+      <section className="laravel-devlopments-services">
+        <div className="container">
           <h2>Advanced Web Application Development</h2>
-          <p class="laravel_core_sub2">
+          <p className="laravel_core_sub2">
             Advanced website development is the need of the hour pertaining to
             the neck
             <br /> and throat competition in the market.
           </p>
-          <div class="laravel-services-bx-top advanced_web_service_bx">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+          <div className="laravel-services-bx-top advanced_web_service_bx">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon1.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/advanced-web-white-icon1.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -174,21 +174,21 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon2.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/advanced-web-white-icon2.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -202,21 +202,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon3.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/advanced-web-white-icon3.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -230,21 +230,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/codeigniter-new-icon3.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/codeigniter-white-icon3.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -257,21 +257,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/codeigniter-new-icon4.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/codeigniter-white-icon4.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -285,21 +285,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/codeigniter-new-icon5.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/codeigniter-white-icon5.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -313,21 +313,21 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box7">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon4.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/codeigniter-white-icon4.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -341,21 +341,21 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon5.png"
                         alt="Advanced Web Application Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/advancedwebprogramming/advanced-web-white-icon5.png"
                         alt="Advanced Web Application Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>
@@ -372,25 +372,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel_core_features_section advanced_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section advanced_core_features_section">
+        <div className="container">
           <h2>Core Features Of Advanced Web Programming</h2>
-          <p class="laravel_core_sub">
+          <p className="laravel_core_sub">
             Advanced website development is the need of the hour pertaining to
             the neck
             <br /> and throat competition in the market.
           </p>
-          <div class="laravel_core_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/advancedwebprogramming/cackphp_features_icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Advanced framework</h3>
                     <p>
                       It provides the user with easy access and management of
@@ -400,15 +400,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/advancedwebprogramming/advanced_features_icon1.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Multi level management </h3>
                     <p>
                       We provide you with efficient management at all critical
@@ -418,15 +418,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/advancedwebprogramming/advanced_features_icon2.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Colossal Database</h3>
                     <p>
                       With enormous database&sbquo; it allows you to store data
@@ -435,15 +435,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/advancedwebprogramming/advanced_features_icon3.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Synchronization</h3>
                     <p>
                       It is well synchronized with the trends of the internet to
@@ -452,15 +452,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/advancedwebprogramming/advanced_features_icon4.png"
                       alt="img3"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>SEO friendly</h3>
                     <p>
                       This is another thing which makes the advanced framework a
@@ -470,15 +470,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/advancedwebprogramming/core_features_icon6.png"
                       alt="img6"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Smooth content addition</h3>
                     <p>
                       It provides you with facility to add the content with
@@ -491,23 +491,23 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel_choose_features_section">
-        <div class="container">
+      <section className="laravel_choose_features_section">
+        <div className="container">
           <h2>
             Why Choose Advanced
             <br /> Web Programming And Services?
           </h2>
-          <div class="laravel_choose_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+          <div className="laravel_choose_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <img
                       src="/img/advancedwebprogramming/advances-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>User rich experience</h3>
                     <p>
                       It offers enhanced experience to users making the websites
@@ -517,15 +517,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <img
                       src="/img/advancedwebprogramming/advances-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Easy editing</h3>
                     <p>
                       You can easily edit the website without having any kind of
@@ -535,15 +535,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <img
                       src="/img/advancedwebprogramming/cackphp-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Security</h3>
                     <p>
                       The websites are also highly secure and free from any kind
@@ -553,15 +553,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <img
                       src="/img/advancedwebprogramming/codeigniter-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Customization of themes</h3>
                     <p>
                       One of the most eminent features is its excellent
@@ -571,15 +571,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <img
                       src="/img/advancedwebprogramming/advances-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Plug-ins</h3>
                     <p>
                       There is availability of multiple plug-INS to add to user
@@ -589,15 +589,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <img
                       src="/img/advancedwebprogramming/advances-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>SEO friendly</h3>
                     <p>
                       Being SEO friendly&sbquo; they can easily climb up the Google&apos;s
@@ -607,7 +607,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 main_btn_hire">
+            <div className="col-sm-12 main_btn_hire">
             <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {

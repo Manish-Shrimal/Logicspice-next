@@ -2,15 +2,18 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Link from "next/link";
-
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
 const Contactusmodel = ({ modalStatus, toggle }) => {
-  const [popupScProductContacts, setPopupScProductContacts] = useState(modalStatus);
+  const [popupScProductContacts, setPopupScProductContacts] =
+    useState(modalStatus);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone_no: "",
     message: "",
+    // post_url: window.location.pathname,
   });
   const [resultSuccess, setResultSuccess] = useState(false);
   const [errors, setErrors] = useState({
@@ -49,6 +52,16 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
     e.stopPropagation();
   };
 
+  const handleClick = async () => {
+    console.log(formData);
+    // return;
+    try {
+      const response = await axios.post(BaseAPI + "/pages/contact", formData);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div style={{ display: modalStatus ? "block" : "none" }}>
       <div onClick={close}>
@@ -60,7 +73,11 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
           className="contact-modal"
           onHide={close}
         >
-          <div className="modal-dialog ContactModalDialog" role="document" onClick={stopPropagation}>
+          <div
+            className="modal-dialog ContactModalDialog"
+            role="document"
+            onClick={stopPropagation}
+          >
             <div className="modal-content ContactModalContent">
               <button
                 type="button"
@@ -77,19 +94,19 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                     <>
                       <div className="modal-header">
                         <h4 className="modal-title" id="myModalLabel">
-                        contact us
+                          contact us
                           <span>
                             <img src="https://www.logicspice.com/app/webroot/img/images/contact-img.png" />
                           </span>
                         </h4>
                       </div>
                       <form
-                        onSubmit={handleSubmit}
-                        enctype="multipart/form-data"
-                        name="contact"
-                        id="slide_contact"
-                        acceptCharset="utf-8"
-                        noValidate
+                      // onSubmit={handleSubmit}
+                      // enctype="multipart/form-data"
+                      // name="contact"
+                      // id="slide_contact"
+                      // acceptCharset="utf-8"
+                      // noValidate
                       >
                         <div style={{ display: "none" }}>
                           <input type="hidden" name="_method" value="POST" />
@@ -186,10 +203,11 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 name="data[User][post_url]"
                               />
                               <input
-                                type="submit"
+                                type="button"
                                 id="googletrack"
                                 className="btn btn-primary"
-                                value="SEND YOUR INQUIRY"
+                                onClick={handleClick}
+                                value="Submit your query"
                               />
                               {loader && (
                                 <div className="side_page" id="loadloader6">
@@ -314,4 +332,3 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
 };
 
 export default Contactusmodel;
-

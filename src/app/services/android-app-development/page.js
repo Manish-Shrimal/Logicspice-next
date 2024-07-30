@@ -46,6 +46,8 @@ const Page = () => {
             <div className="col-sm-6">
               <div className="iphone_template_header_left">
                 <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                   className="normal_logo"
                   alt="Android Applications Developmenr Company"
                   src="/img/iosappdevelopment/android-phone.png"
@@ -129,16 +131,26 @@ const Page = () => {
                   <div className="home-project__inner first-slide bdr_block">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={400}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="UUUga"
                               src="/img/iosappdevelopment/uuuga_profile.png"
                             />
@@ -153,6 +165,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/apps-logicspice.png"
                                 />
@@ -166,6 +180,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -174,6 +190,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -206,8 +224,8 @@ const Page = () => {
                                 TEAM:
                               </div>
                               <span>
-                                1 Project Manager&sbquo; 3 Developer &amp; 1 Quality
-                                Analyst
+                                1 Project Manager&sbquo; 3 Developer &amp; 1
+                                Quality Analyst
                               </span>
                             </div>
                             <div className="details_of_appdesc_row">
@@ -242,16 +260,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={400}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Localgenii"
                               src="/img/iosappdevelopment/localgenii_in.jpg"
                             />
@@ -266,6 +294,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/BusinesS-Apps-Development.png"
                                 />
@@ -279,6 +309,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -287,6 +319,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -319,8 +353,8 @@ const Page = () => {
                                 TEAM:
                               </div>
                               <span>
-                                1 Project Manager&sbquo; 3 Developer &amp; 1 Quality
-                                Analyst
+                                1 Project Manager&sbquo; 3 Developer &amp; 1
+                                Quality Analyst
                               </span>
                             </div>
                             <div className="details_of_appdesc_row">
@@ -353,16 +387,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={400}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Martgram"
                               src="/img/iosappdevelopment/martgram_in.jpg"
                             />
@@ -377,6 +421,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/mobile-Apps.png"
                                 />
@@ -390,6 +436,8 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -398,6 +446,8 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       target="_blank"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -431,8 +481,8 @@ const Page = () => {
                                 TEAM:
                               </div>
                               <span>
-                                1 Project Manager&sbquo; 3 Developer &amp; 1 Quality
-                                Analyst
+                                1 Project Manager&sbquo; 3 Developer &amp; 1
+                                Quality Analyst
                               </span>
                             </div>
                             <div className="details_of_appdesc_row">
@@ -473,16 +523,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={400}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Favor It"
                               src="/img/iosappdevelopment/favorit_it_in.png"
                             />
@@ -497,6 +557,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business_Developers.png"
                                 />
@@ -510,6 +572,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -518,6 +582,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -550,8 +616,8 @@ const Page = () => {
                                 TEAM:
                               </div>
                               <span>
-                                1 Project Manager&sbquo; 3 Developer &amp; 1 Quality
-                                Analyst
+                                1 Project Manager&sbquo; 3 Developer &amp; 1
+                                Quality Analyst
                               </span>
                             </div>
                             <div className="details_of_appdesc_row">
@@ -567,9 +633,9 @@ const Page = () => {
                                 listings. They will also be able to select any
                                 favor which they wish to complete and can accept
                                 the favor or message the taskers. Once they
-                                complete favor&sbquo; both will be able to mark the
-                                favor as completed and payment can be made over
-                                the app.
+                                complete favor&sbquo; both will be able to mark
+                                the favor as completed and payment can be made
+                                over the app.
                               </span>
                             </div>
                           </div>
@@ -587,16 +653,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={400}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Klick"
                               src="/img/iosappdevelopment/klick_in.jpg"
                             />
@@ -611,6 +687,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business-Service.png"
                                 />
@@ -624,6 +702,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -632,6 +712,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -664,8 +746,8 @@ const Page = () => {
                                 TEAM&#58;
                               </div>
                               <span>
-                                1 Project Manager&sbquo; 3 Developer &amp; 1 Quality
-                                Analyst
+                                1 Project Manager&sbquo; 3 Developer &amp; 1
+                                Quality Analyst
                               </span>
                             </div>
                             <div className="details_of_appdesc_row">
@@ -678,12 +760,12 @@ const Page = () => {
                                 to be prepared for shipment to his residence.
                                 User will send payment to Apple inc. Then Apple
                                 inc. will send the amount after fee deduction to
-                                admin&apos;s paypal account. After purchasing the
-                                item from the store&sbquo; end user will collect the
-                                receipt from the item provider and place a
-                                shipment using the &quot;Klick&quot; app. User also need
-                                to choose the shipping method provided by
-                                courier company.
+                                admin&apos;s paypal account. After purchasing
+                                the item from the store&sbquo; end user will
+                                collect the receipt from the item provider and
+                                place a shipment using the &quot;Klick&quot;
+                                app. User also need to choose the shipping
+                                method provided by courier company.
                               </span>
                             </div>
                           </div>
@@ -708,16 +790,26 @@ const Page = () => {
                   <div className="home-project__inner last-slide slide-last-bdr">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={400}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Raydaar"
                               src="/img/iosappdevelopment/tc_in.jpg"
                             />
@@ -732,6 +824,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business-Apps.png"
                                 />
@@ -745,6 +839,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -756,6 +852,8 @@ const Page = () => {
                                     href="https://play.google.com/store/apps/details?id=com.logicspice.raydaar&amp;hl=en"
                                   >
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -788,8 +886,8 @@ const Page = () => {
                                 TEAM&#58;
                               </div>
                               <span>
-                                1 Project Manager&sbquo; 3 Developer &amp; 1 Quality
-                                Analyst
+                                1 Project Manager&sbquo; 3 Developer &amp; 1
+                                Quality Analyst
                               </span>
                             </div>
                             <div className="details_of_appdesc_row">
@@ -800,9 +898,9 @@ const Page = () => {
                                 Raydaar is the field extension of the Raydaar
                                 software platform and connects the office and
                                 field in real time to provide businesses more
-                                value&sbquo; transparency and efficiency in recording&sbquo;
-                                tracking&sbquo; maintaining and transferring all
-                                things assigned to employees.
+                                value&sbquo; transparency and efficiency in
+                                recording&sbquo; tracking&sbquo; maintaining and
+                                transferring all things assigned to employees.
                               </span>
                             </div>
                           </div>
@@ -845,18 +943,20 @@ const Page = () => {
                 <div className="title_of_casesetif_sm">
                   We have developed number of mobile applications for Android
                   and iPhone platform. Our softwares &amp; services have helped
-                  plenty of businesses and teams get work done. We&apos;re not just
-                  building applications&sbquo; we&apos;re building an experience. And we
-                  want that to be a meaningful and lasting one. View our
-                  featured case studies to get a glimpse into the successful
-                  digital experiences we create with our clients and the
-                  business results we help them achieve.
+                  plenty of businesses and teams get work done. We&apos;re not
+                  just building applications&sbquo; we&apos;re building an
+                  experience. And we want that to be a meaningful and lasting
+                  one. View our featured case studies to get a glimpse into the
+                  successful digital experiences we create with our clients and
+                  the business results we help them achieve.
                 </div>
                 <div className="casestudy_avards">
                   <ul>
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_1.png"
                         />
@@ -865,6 +965,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={200}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_2.png"
                         />
@@ -873,6 +975,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={200}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_3.png"
                         />
@@ -881,6 +985,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_4.png"
                         />
@@ -889,6 +995,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_5.png"
                         />
@@ -904,6 +1012,8 @@ const Page = () => {
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/Martgramcase.png"
                           />
@@ -919,13 +1029,16 @@ const Page = () => {
                           </span>
                           <p>
                             Martgram app that we are scoping will serves as
-                            &rdquo;Online Marketplace Android &amp; iPhone app&rdquo;...
+                            &rdquo;Online Marketplace Android &amp; iPhone
+                            app&rdquo;...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/beanocase.png"
                           />
@@ -940,14 +1053,17 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                          &rdquo;Beano: Coffee ordering&rdquo; is an interactive
-                            application for customers to find nearby coffee...
+                            &rdquo;Beano: Coffee ordering&rdquo; is an
+                            interactive application for customers to find nearby
+                            coffee...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/Social-Securitas.png"
                           />
@@ -962,14 +1078,17 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                            Social Securites app that will scoping for &quot;Video
-                            Sharing Apps (Android &amp; iPhone)&quot; that will...
+                            Social Securites app that will scoping for
+                            &quot;Video Sharing Apps (Android &amp;
+                            iPhone)&quot; that will...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/MyUtrack.png"
                           />
@@ -984,14 +1103,17 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                          &rdquo;Utrack&rdquo; app facilitates the students to live stress
-                            free by consolidating student&apos;s className schedules...
+                            &rdquo;Utrack&rdquo; app facilitates the students to
+                            live stress free by consolidating student&apos;s
+                            className schedules...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={800}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/bestcit.png"
                           />
@@ -1006,8 +1128,9 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                          &rdquo;Aphorism&rdquo; app is a hub where user can find a huge
-                            quantity of aphorisms&rsquo; literary quotes...
+                            &rdquo;Aphorism&rdquo; app is a hub where user can
+                            find a huge quantity of aphorisms&rsquo; literary
+                            quotes...
                           </p>
                         </div>
                       </div>
@@ -1038,6 +1161,8 @@ const Page = () => {
             <Slider {...settings}>
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/Business-Apps.png"
@@ -1046,6 +1171,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/mobile-Apps.png"
@@ -1054,6 +1181,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/BusinesS-Apps-Development.png"
@@ -1062,6 +1191,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/Business-Service.png"
@@ -1070,6 +1201,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/Business_Developers.png"
@@ -1078,6 +1211,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/app-development.png"
@@ -1086,6 +1221,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/application-developers.jpg"
@@ -1094,6 +1231,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/mobile-apps-logicspice.png"
@@ -1102,6 +1241,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/app-development-services.png"
@@ -1110,6 +1251,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/expert-app-developers.png"
@@ -1118,6 +1261,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/android-apps-development.png"
@@ -1126,6 +1271,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/mobile-apps-development.png"
@@ -1134,6 +1281,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/affordable-apps.png"
@@ -1142,6 +1291,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/apps-logicspice.png"
@@ -1157,6 +1308,8 @@ const Page = () => {
             <div className="row">
               <div className="industryblock_left col-md-5">
                 <Image
+                  width={400}
+                  height={500 / (100 / 100)}
                   alt="iPhone/ iOS app development services for industries - logicspice"
                   src="/img/iosappdevelopment/industry_lfimg.png"
                 />
@@ -1171,9 +1324,10 @@ const Page = () => {
                     </h3>
                   </div>
                   <div className="indsubcnt">
-                    At Logicspice we serve various industries including Hotels&sbquo;
-                    Transport&sbquo; School and Education&sbquo; Ideas and Business Concept&sbquo;
-                    Health Care&sbquo; Accounts and Financial Services&sbquo; Commercial and
+                    At Logicspice we serve various industries including
+                    Hotels&sbquo; Transport&sbquo; School and Education&sbquo;
+                    Ideas and Business Concept&sbquo; Health Care&sbquo;
+                    Accounts and Financial Services&sbquo; Commercial and
                     Residential Estate and many more. We&apos;ve serviced over
                     1&sbquo;000 customers across different countries. Our highly
                     experienced team bring each client a deep industry knowledge
@@ -1206,7 +1360,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

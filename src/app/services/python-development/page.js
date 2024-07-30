@@ -27,22 +27,22 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="PythonBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-8">
-              <div class="laravel-banner-txt">
+      <section className="PythonBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-8">
+              <div className="laravel-banner-txt">
                 <h1>
                   Python
                   <br /> <span>Development Services</span>
                 </h1>
-                <div class="LaravelText">
+                <div className="LaravelText">
                   Logicspice offers top-tier and dependable Python Development
                   Services worldwide, delivering highly functional and
                   feature-rich solutions.
                 </div>
 
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Hire Python Developers</button>
                     {
@@ -67,20 +67,22 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-4">
+              <div className="page_img">
                 <Image
+                width={650}
+                height={500 / (100 / 100)}
                   src="/img/pythondevelopment/python-icon.png"
                   alt="Python Development Services"
                 />
@@ -89,19 +91,21 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-descriptions python-descriptions">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions python-descriptions">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <Image
+                 width={350}
+                 height={500 / (100 / 100)}
                   src="/img/pythondevelopment/python-logo-img.png"
                   alt="Python Development Services"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>
                   Python Application
                   <br /> Development
@@ -142,26 +146,30 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-devlopments-services">
-        <div class="container">
+      <section className="laravel-devlopments-services">
+        <div className="container">
           <h2>Python Application Development Services</h2>
-          <div class="laravel-services-bx-top">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+          <div className="laravel-services-bx-top">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon1.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon1.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Custom Python Development</h3>
@@ -172,21 +180,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon2.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon2.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Web Development with Django/Flask</h3>
@@ -197,21 +209,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon3.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon3.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Machine Learning and AI Solutions</h3>
@@ -222,21 +238,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box6">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon4.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon4.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Data Analysis and Visualization</h3>
@@ -246,21 +266,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon5.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon5.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Python API Development</h3>
@@ -270,21 +294,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon6.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon6.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Python Support and Maintenance</h3>
@@ -294,21 +322,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box7">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon7.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon7.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Python Migration Services</h3>
@@ -319,21 +351,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/pythondevelopment/python-new-icon8.png"
                         alt="Python Development Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/pythondevelopment/python-white-icon8.png"
                         alt="Python Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Python Testing Services</h3>
@@ -349,20 +385,22 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section">
+        <div className="container">
           <h2>Core Features Of Python Application Development</h2>
-          <div class="laravel_core_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/pythondevelopment/core_features_icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Readability</h3>
                     <p>
                       {" "}
@@ -373,15 +411,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
-                      src="./img/pythondevelopment/core_features_icon4.png"
+                      width={50}
+                      height={100}
+                      src="/img/pythondevelopment/core_features_icon4.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Dynamic Typing</h3>
                     <p>
                       Allows variable type changes anytime, increasing language
@@ -391,15 +431,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/pythondevelopment/core_features_icon2.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Extensive Libraries</h3>
                     <p>
                       Python&apos;s wide-ranging libraries expedite various
@@ -408,15 +450,17 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/pythondevelopment/core_features_icon5.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Compatibility</h3>
                     <p>
                       Supports multiple platforms and systems, enhancing
@@ -425,15 +469,17 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/pythondevelopment/core_features_icon3.png"
                       alt="img3"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>High-Level Language</h3>
                     <p>
                       Handles complex tasks with simplified syntax and commands.
@@ -442,15 +488,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/pythondevelopment/core_features_icon6.png"
                       alt="img6"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Strong Integration</h3>
                     <p>
                       Facilitates seamless integration with other languages and
@@ -464,20 +512,22 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section">
-        <div class="container">
+      <section className="laravel_choose_features_section">
+        <div className="container">
           <h2>Benefits Of Python Application Development</h2>
-          <div class="laravel_choose_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+          <div className="laravel_choose_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/pythondevelopment/python-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Simplified Syntax</h3>
                     <p>
                       Easy readability enhances maintainability and reduces
@@ -487,15 +537,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/pythondevelopment/python-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Dynamic Nature</h3>
                     <p>
                       Allows for high adaptability and flexibility in coding.
@@ -504,15 +556,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/pythondevelopment/python-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Versatile Libraries</h3>
                     <p>
                       Streamline development tasks and speed up the process.
@@ -521,30 +575,34 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/pythondevelopment/python-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Cross-Platform Compatibility</h3>
                     <p>Enables applications to run across various platforms.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/pythondevelopment/python-why-icon5.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Efficient Integration</h3>
                     <p>
                       Facilitates smooth integration with other languages and
@@ -554,15 +612,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/pythondevelopment/python-why-icon6.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Community Support</h3>
                     <p>
                       Provides access to ample resources and quick issue
@@ -576,17 +636,17 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section LaravelChooseFeaturesSection">
-        <div class="container">
+      <section className="laravel_choose_features_section LaravelChooseFeaturesSection">
+        <div className="container">
           <h2>
             Why Choose Logicspice For Python <br />
             Application Development?
           </h2>
-          <div class="laravel_choose_features_bx ReactJsChooseFeaturesBx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_details">
+          <div className="laravel_choose_features_bx ReactJsChooseFeaturesBx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_details">
                     <p>
                       We have worked in this industry for 18+ years with 1900+
                       clients across 15 countries.
@@ -595,9 +655,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_details">
                     <p>
                       Logicspice delivers projects within the agreed timeframe,
                       ensuring business continuity.
@@ -605,9 +665,9 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_details">
                     <p>
                       We offer comprehensive post-deployment support and
                       maintenance services for seamless application <br />
@@ -617,9 +677,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_details">
                     <p>
                       Our developers and design team always focus on client
                       satisfaction through customer support service and other
@@ -628,9 +688,9 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_details">
                     <p>
                       We provide tailored Python application development
                       solutions catering to unique business needs.
@@ -638,9 +698,9 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_details">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_details">
                     <p>
                       Logicspice follows rigorous testing and quality assurance
                       protocols to ensure high-performing, bug-free
@@ -650,7 +710,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 main_btn_hire">
+            <div className="col-sm-12 main_btn_hire">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Hire Python Developers</button>
                 {
@@ -665,23 +725,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="ecommerce_faq_section NewFaqDesignSection">
-        <div class="container">
-          <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
-              <div class="col-md-5">
-                <h4 class="title_main">
+      <section className="ecommerce_faq_section NewFaqDesignSection">
+        <div className="container">
+          <div className="row">
+            <div className=" row ecommerce__Quick_FAQ">
+              <div className="col-md-5">
+                <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
-                <div class="FaqImgBx">
+                <div className="FaqImgBx">
                   <Image
+                   width={650}
+                   height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
                 </div>
               </div>
-              <div class="col-md-7">
+              <div className="col-md-7">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Why should I hire Python developers for my project?"
@@ -752,7 +814,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

@@ -11,18 +11,18 @@ const Page = () => {
     <>
       <NavBar />
 
-      <section class="d-framework d-framework1 none_space">
-        <div class="page_img">
+      <section className="d-framework d-framework1 none_space">
+        <div className="page_img">
           <img
             src="/img/businesssupportservices/business-banner.png"
             alt="Best Business Support Services for Small & Medium Enterprises"
           />
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-8">
-              <h1 class="main--title">Business Support Services</h1>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 col-md-8">
+              <h1 className="main--title">Business Support Services</h1>
               <p>
                 Business support services become the most important aspect of
                 businesses from small to large enterprises. Having a reliable
@@ -64,74 +64,74 @@ const Page = () => {
                 with the tedious support services that we are best at serving.
               </p>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="form_quote form_top">
+            <div className="col-sm-6 col-md-4">
+              <div className="form_quote form_top">
                 <form>
                   <h4>Get a Quote</h4>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       name="data[User][name]"
                       placeholder="Your Full Name*"
                       value=""
                       size="40"
-                      class="form-control required"
+                      className="form-control required"
                       type="text"
                       id="UserName"
                     />{" "}
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       name="data[User][email]"
                       placeholder="Email*"
                       value=""
                       size="40"
-                      class="form-control required email"
+                      className="form-control required email"
                       type="text"
                       id="UserEmail"
                     />{" "}
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       name="data[User][phone_no]"
                       placeholder="Phone Number"
                       value=""
                       size="40"
-                      class="form-control"
+                      className="form-control"
                       type="text"
                       id="UserPhoneNo"
                     />{" "}
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       name="data[User][company]"
                       placeholder="Company Name"
                       value=""
                       size="40"
-                      class="form-control"
+                      className="form-control"
                       type="text"
                       id="UserCompany"
                     />{" "}
                   </div>
 
-                  <div class="form-group">
+                  <div className="form-group">
                     <textarea
                       name="data[User][message]"
                       placeholder="Your Message*"
                       size="40"
-                      class="form-control required"
+                      className="form-control required"
                       id="UserMessage"
                     ></textarea>{" "}
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <div id="recaptchaq"></div>
                   </div>
                   <div id="captcha_msg_contact2"></div>
 
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
                       id="submitquote"
                       title="Submit"
-                      class="btn btn-primary btn-block"
+                      className="btn btn-primary btn-block"
                       size="30"
                       label=""
                       type="submit"
@@ -145,12 +145,12 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="d-services d-services1">
-        <div class="container">
+      <section className="d-services d-services1">
+        <div className="container">
           <h2>Our Business Support Services</h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box Application1 ">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box Application1 ">
                 <h3>Customer Support Service</h3>
                 <p>
                   We provide the best Customer support service from small to
@@ -161,7 +161,7 @@ const Page = () => {
                   interactions and them satisfied and happy.{" "}
                 </p>
               </div>
-              <div class="service_box Application2">
+              <div className="service_box Application2">
                 <h3>Virtual Assistant Services</h3>
                 <p>
                   We offer the best online virtual assistant services can
@@ -173,8 +173,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box Application3">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box Application3">
                 <h3>Technical Support Services</h3>
                 <p>
                   We provide expert IT Technical Support and maintenance service
@@ -185,7 +185,7 @@ const Page = () => {
                   the committed smooth functioning of your IT infrastructure.{" "}
                 </p>
               </div>
-              <div class="service_box Application4">
+              <div className="service_box Application4">
                 <h3>Call Center Services</h3>
                 <p>
                   Our call center services can provide the effortless solutions
@@ -200,12 +200,12 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="d-features">
-        <div class="container">
+      <section className="d-features">
+        <div className="container">
           <h2>Why Go For Business Support Services?</h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-4">
-              <div class="featureBox">
+          <div className="row">
+            <div className="col-sm-6 col-md-4">
+              <div className="featureBox">
                 <img
                   src="/img/businesssupportservices/lara_icon1.png"
                   alt="img1"
@@ -217,8 +217,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="featureBox">
+            <div className="col-sm-6 col-md-4">
+              <div className="featureBox">
                 <img
                   src="/img/businesssupportservices/lara_icon5.png"
                   alt="img2"
@@ -230,8 +230,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="featureBox">
+            <div className="col-sm-6 col-md-4">
+              <div className="featureBox">
                 <img
                   src="/img/businesssupportservices/lara_icon4.png"
                   alt="img3"
@@ -243,8 +243,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="featureBox">
+            <div className="col-sm-6 col-md-4">
+              <div className="featureBox">
                 <img
                   src="/img/businesssupportservices/lara_icon6.png"
                   alt="img4"
@@ -256,8 +256,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="featureBox">
+            <div className="col-sm-6 col-md-4">
+              <div className="featureBox">
                 <img
                   src="/img/businesssupportservices/lara_icon3.png"
                   alt="img5"
@@ -269,8 +269,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="featureBox">
+            <div className="col-sm-6 col-md-4">
+              <div className="featureBox">
                 <img
                   src="/img/businesssupportservices/lara_icon2.png"
                   alt="img6"
@@ -282,49 +282,49 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="d-choose">
-        <div class="container">
+      <section className="d-choose">
+        <div className="container">
           <h2>Why Choose Logicspice For Technical Support Services?</h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-6 text-right">
-              <div class="libraries" data-aos="fade-right">
+          <div className="row">
+            <div className="col-sm-6 col-md-6 text-right">
+              <div className="libraries" data-aos="fade-right">
                 <h3>
                   We have a team of experienced support experts&sbquo; account
                   managers&sbquo; callers and other staff.
                 </h3>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="libraries" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+              <div className="libraries" data-aos="fade-left">
                 <h3>
                   Our clients are fully satisfied with our Business Support
                   services.
                 </h3>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 text-right">
-              <div class="libraries" data-aos="fade-right">
+            <div className="col-sm-6 col-md-6 text-right">
+              <div className="libraries" data-aos="fade-right">
                 <h3>
                   We work with productivity&sbquo; efficiency&sbquo; save time & cost and
                   deliver quality work.
                 </h3>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="libraries" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+              <div className="libraries" data-aos="fade-left">
                 <h3>We can resolve the issues in the expedited time frame.</h3>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 text-right">
-              <div class="libraries" data-aos="fade-right">
+            <div className="col-sm-6 col-md-6 text-right">
+              <div className="libraries" data-aos="fade-right">
                 <h3>
                   We are also very peculiar about our services and available to
                   our clients 24/7.
                 </h3>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="libraries" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+              <div className="libraries" data-aos="fade-left">
                 <h3>Our services are fully secured.</h3>
               </div>
             </div>

@@ -27,27 +27,32 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="inner-qa-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
+      <section className="inner-qa-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
               <h1>
                 Software <br />
                 Testing Services
               </h1>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="qa-img">
-                <Image src="/img/softwaretestingservices/qa-img.png" alt="QA" />
+            <div className="col-sm-6 col-md-6">
+              <div className="qa-img">
+                <Image
+                  width={300}
+                  height={500 / (100 / 100)}
+                  src="/img/softwaretestingservices/qa-img.png"
+                  alt="QA"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="about-qa-section" data-aos="fade-up">
-        <div class="container">
-          <div class="jumbotron">
+      <section className="about-qa-section" data-aos="fade-up">
+        <div className="container">
+          <div className="jumbotron">
             <h2>Software Quality Assurance and Testing Services </h2>
             <p>
               Software testing is a quality assurance (QA) process in which we
@@ -78,16 +83,18 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="testing-qa-section" data-aos="fade-up">
-        <div class="container">
+      <section className="testing-qa-section" data-aos="fade-up">
+        <div className="container">
           <h2>Types of Software Testing</h2>
-          <div class="testin-bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="tesitng-fild">
-                  <div class="testing-top">
+          <div className="testin-bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="tesitng-fild">
+                  <div className="testing-top">
                     <i>
                       <Image
+                       width={50}
+                       height={500 / (100 / 100)}
                         src="/img/softwaretestingservices/qa-icon1.png"
                         alt="QA-Icon"
                       />
@@ -110,10 +117,12 @@ const Page = () => {
                     acceptance testing etc.{" "}
                   </p>
                 </div>
-                <div class="tesitng-fild">
-                  <div class="testing-top">
+                <div className="tesitng-fild">
+                  <div className="testing-top">
                     <i>
                       <Image
+                        width={50}
+                        height={100}
                         src="/img/softwaretestingservices/qa-icon2.png"
                         alt="QA-Icon"
                       />
@@ -130,9 +139,11 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="testing-img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="testing-img">
                   <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                     src="/img/softwaretestingservices/qa-img2.png"
                     alt="testing-img"
                   />
@@ -143,29 +154,29 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="testing-services-section" data-aos="fade-up">
-        <div class="container">
+      <section className="testing-services-section" data-aos="fade-up">
+        <div className="container">
           <h2>Software Testing Services To Enhance Customer Experience</h2>
-          <div class="testin-sercvies">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="testin-sercvies-bx">
+          <div className="testin-sercvies">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="testin-sercvies-bx">
                   <h3>Our Areas of Expertise</h3>
-                  <ul class="list-group">
-                    <li class="list-group-item">Functional Testing </li>
-                    <li class="list-group-item">Compatibility testing </li>
-                    <li class="list-group-item">Mobile Testing</li>
-                    <li class="list-group-item">Performance Testing </li>
-                    <li class="list-group-item">Regression Testing</li>
-                    <li class="list-group-item">Cross browser testing </li>
-                    <li class="list-group-item">Security Testing </li>
-                    <li class="list-group-item">Usability Testing </li>
+                  <ul className="list-group">
+                    <li className="list-group-item">Functional Testing </li>
+                    <li className="list-group-item">Compatibility testing </li>
+                    <li className="list-group-item">Mobile Testing</li>
+                    <li className="list-group-item">Performance Testing </li>
+                    <li className="list-group-item">Regression Testing</li>
+                    <li className="list-group-item">Cross browser testing </li>
+                    <li className="list-group-item">Security Testing </li>
+                    <li className="list-group-item">Usability Testing </li>
                   </ul>
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="form_quote form_testing">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="form_quote form_testing">
                   <form
                     action="/pages/quote"
                     enctype="multipart/form-data"
@@ -175,78 +186,78 @@ const Page = () => {
                     accept-charset="utf-8"
                   >
                     <h4>Get a Quote</h4>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
                         name="data[User][name]"
                         placeholder="Your Full Name*"
                         value=""
                         size="40"
-                        class="form-control required"
+                        className="form-control required"
                         type="text"
                         id="UserName"
                       />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
                         name="data[User][email]"
                         placeholder="Email*"
                         value=""
                         size="40"
-                        class="form-control required email"
+                        className="form-control required email"
                         type="text"
                         id="UserEmail"
                       />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
                         name="data[User][phone_no]"
                         placeholder="Phone Number"
                         value=""
                         size="40"
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         id="UserPhoneNo"
                       />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
                         name="data[User][company]"
                         placeholder="Company Name"
                         value=""
                         size="40"
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         id="UserCompany"
                       />
                     </div>
 
-                    <div class="form-group">
+                    <div className="form-group">
                       <textarea
                         name="data[User][message]"
                         placeholder="Your Message*"
-                        class="form-control required"
+                        className="form-control required"
                         id="UserMessage"
                       ></textarea>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <div id="recaptchaq"></div>
                     </div>
                     <div id="captcha_msg_contact2"></div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <div
-                        class="display_success_message"
+                        className="display_success_message"
                         id="quote1_success_message"
                       ></div>
                       <div
-                        class="display_error_message"
+                        className="display_error_message"
                         id="quote1_error_message"
                       ></div>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <input
                         id="submitquote"
                         title="Submit"
-                        class="btn  btn-primary btn-block"
+                        className="btn  btn-primary btn-block"
                         type="submit"
                         value="Submit"
                       />
@@ -258,8 +269,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="qatesting-services-section" data-aos="fade-up">
-        <div class="container">
+      <section className="qatesting-services-section" data-aos="fade-up">
+        <div className="container">
           <h2>Why Logicspice for QA Testing Services? </h2>
           <p>
             At Logicspice, we offer independent software testing services to
@@ -268,62 +279,62 @@ const Page = () => {
             program/application/product meets the business and technical
             requirements of the application.{" "}
           </p>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <ul className="list-group">
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>
                 Enhanced user experience with optimum QA strategy
               </span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>
                 We use creative, smart and effective testing techniques
               </span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>10+ Years in providing QA testing services</span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>Skilled & knowledgeable QA engineers</span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>offshore & on-site testing models</span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>Dedicated Team to work exclusively</span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>Ensure maximum return on your investments.</span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>100% Working Transparency</span>{" "}
             </li>
-            <li class="list-group-item">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <li className="list-group-item">
+              <i className="fa fa-check-circle" aria-hidden="true"></i>
               <span>Timely delivery at an affordable price</span>{" "}
             </li>
           </ul>
         </div>
       </section>
-      <section class="testing-statred-section" data-aos="fade-up">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
+      <section className="testing-statred-section" data-aos="fade-up">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
               <h2>Let&apos;s Get Started! -</h2>
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div className="col-sm-6 col-md-6">
               <a
                 id=""
                 data-toggle="modal"
                 data-target="#contactFix"
-                class="btn btn-primary"
+                className="btn btn-primary"
               >
                 Get a Free Quote
               </a>
@@ -337,7 +348,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

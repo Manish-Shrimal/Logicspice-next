@@ -51,11 +51,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="yellow_slider web-cloning_slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="slidere-tittle">
+      <section className="yellow_slider web-cloning_slider">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="slidere-tittle">
                         <h1>Tailor Made Website Cloning Service</h1>
                         <p>Logicspice offers website cloning services focusing on helping with low cost readymade solutions in various fields respectively.</p>
     					<h3>About Our Services</h3>
@@ -80,17 +80,17 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
                 </div>
-                <div class="col-md-6">
-                    <div class="images-section">
+                <div className="col-md-6">
+                    <div className="images-section">
                         <img src="/img/websitecloningservice/website-cloning-service.png" alt="website_cloning_service" />
                     </div>
                 </div>
@@ -99,11 +99,11 @@ const Page = () => {
     </section>
       
       
-      <section class="resources-banner our-sass">
-        <div class="container">
+      <section className="resources-banner our-sass">
+        <div className="container">
         <h2>Advantages Of Website Cloning Services</h2>
-          <div class="resources-bx-top">
-            <ul class="resources-tabs">
+          <div className="resources-bx-top">
+            <ul className="resources-tabs">
               <li
                 id="tab1_li"
                 className={`ddlj ${saascmsTab ? "active" : ""}`}
@@ -152,11 +152,11 @@ const Page = () => {
               
             </ul>
 
-            <div class="tab-content">
+            <div className="tab-content">
               {saascmsTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab1">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj" id="tab1">
+                    <div className="resources-contan">
                     <p>At Logicspice, you are offered custom built scalability, attractive designing that are able to utilise a wide 
                         array of robust features. These features encourage brand new and existing organizations to reward their 
                         consumers to make them come back every time they need the service.</p>
@@ -166,8 +166,8 @@ const Page = () => {
               )}
               {saascrmTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab2">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab2">
+                    <div className="resources-contan">
                     <p>Logicspice aims at building a customer engagement machine for your organizations. We offer customized website 
                         cloning service for your organizations in accordance with your organizational requirements. We make the 
                         customer service more engaging for your website by developing top notch interactive cloning.</p>
@@ -177,8 +177,8 @@ const Page = () => {
               )}
               {customecommerceTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab3">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab3">
+                    <div className="resources-contan">
                     <p>Unlike other available cloning services, Logicspice offers adaptability for every client covering from features 
                         to modified designing as they focus on creating customized clones. These help custom made cloning services 
                         from scratch to illustrate and expand the brand.</p>
@@ -191,11 +191,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="sasss-middle-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="sa_t">
+      <section className="sasss-middle-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="sa_t">
               <p>We offer an effective website cloning service in a way that allows entrepreneurs to imply their thoughts within the 
                 process. We do our best with some fresh improvements in basic ideas of solution, through proper research and development.</p>
              <p>The entire process is executed with a technological holistic approach and our ready-made customized cloning services 
@@ -210,9 +210,9 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-6"></div>
+            <div className="col-md-6"></div>
           </div>
-          <div class="img_saaa">
+          <div className="img_saaa">
             <img
               src="/img/saassoftwaredevelopment/saaa_img.png"
               alt="saaa_img"
@@ -221,44 +221,44 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="new-why-choose-section sass_title">
-        <div class="container">
+      <section className="new-why-choose-section sass_title">
+        <div className="container">
             <h2>Reasons To Choose Logicspice <span>For Website Cloning Services</span></h2>
-    		<p class="new-choice-text">Logicspice offers high quality website cloning services & development using updated technology. We create websites using upgraded technologies and latest coding practices. We use a wide range of php frameworks. Like CodeIgniter, Zend, Laravel, Cake PHP, Custom PHP, WordPress are on our list of coding languages for website cloning service development.</p>
-            <div class="row">
-            <div class="col-sm-6 col-md-6 aos-init aos-animate" data-aos="fade-right">
-                <div class="new_libraries">
+    		<p className="new-choice-text">Logicspice offers high quality website cloning services & development using updated technology. We create websites using upgraded technologies and latest coding practices. We use a wide range of php frameworks. Like CodeIgniter, Zend, Laravel, Cake PHP, Custom PHP, WordPress are on our list of coding languages for website cloning service development.</p>
+            <div className="row">
+            <div className="col-sm-6 col-md-6 aos-init aos-animate" data-aos="fade-right">
+                <div className="new_libraries">
                     <i><img src="/img/websitecloningservice/responsiveness-imgs.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Responsiveness</h3>
                         <p>Responsive website is one of the most common things for nowadays and our team of qualified experts provide effective alluring design with mobile friendly design and development process.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-left">
                     <i><img src="/img/websitecloningservice/seo-friendly-imgs.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>SEO Friendly</h3>
                         <p>Every solution we offer from our custom designed website, mobile app development to website cloning services are tailor made. All 
     					the services are SEO friendly in order to make a good presence of the application over the internet.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-right">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-right">
                     <i><img src="/img/websitecloningservice/documentation-imgs.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Documentation</h3>
                         <p>Logicspice offers all the documentations including user manual, product guidelines, online help documents for software documentation services.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-left">
                     <i><img src="/img/websitecloningservice/support-imgs.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Support</h3>
                         <p>At Logicspice, we understand and value every aspect of our clients. For that reason, we offer a complete service before, during, and after the project delivery.</p>
                     </div>
@@ -269,16 +269,16 @@ const Page = () => {
         </div>
     </section>
 
-    <section class="testing-statred-section resources-statred-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12">
-              <h2 class="sas12">Enquiry Now</h2>
+    <section className="testing-statred-section resources-statred-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12">
+              <h2 className="sas12">Enquiry Now</h2>
               <a
                 id=""
                 data-toggle="modal"
                 data-target="#contactFix"
-                class="btn btn-primary sas13"
+                className="btn btn-primary sas13"
               >
                 Get a Free Quote
               </a>

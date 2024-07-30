@@ -538,8 +538,8 @@ const Page = () => {
 </div>--> */}
       <div className="clearfix"></div>
       <div className="clearfix"></div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
@@ -625,10 +625,10 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

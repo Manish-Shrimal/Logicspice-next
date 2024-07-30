@@ -47,11 +47,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="laravel-banner custom-wordpress-banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="laravel-banner-txt">
+      <section className="laravel-banner custom-wordpress-banner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="laravel-banner-txt">
                 <h1>
                   Custom
                   <br />
@@ -63,7 +63,7 @@ const Page = () => {
                   <li>Shopping Cart Development</li>
                   <li>Plugin Development</li>
                 </ul>
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -78,19 +78,19 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="page_img">
                 <img
                   src="/img/wordpresswebdevelopment/custom-wordpress-development-img.png"
                   alt="Custom Wordpress Development"
@@ -100,19 +100,19 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-descriptions custom-wordpress-descriptions">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions custom-wordpress-descriptions">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <img
                   src="/img/wordpresswebdevelopment/custom-wordpress-logo-img.png"
                   alt="Custom Wordpress Development"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>
                   Custom
                   <br /> Wordpress Development
@@ -156,31 +156,31 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-devlopments-services">
-        <div class="container">
+      <section className="laravel-devlopments-services">
+        <div className="container">
           <h2>WordPress Development Services</h2>
-          <p class="laravel_core_sub2">
+          <p className="laravel_core_sub2">
             WordPress is one of the most prominent platforms when it comes to
             Open <br />
             Source content development system in the world.
           </p>
-          <div class="laravel-services-bx-top advanced_web_service_bx">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+          <div className="laravel-services-bx-top advanced_web_service_bx">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/laravel-new-icon1.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/laravel-white-icon1.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>WordPress web solutions</h3>
@@ -192,21 +192,21 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon1.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon1.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>WordPress Solutions for Migration</h3>
@@ -216,21 +216,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon2.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon2.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Plug&ndash;in Development</h3>
@@ -241,21 +241,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-new-icon3.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-white-icon3.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Third Party Application Integration</h3>
@@ -265,21 +265,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon3.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon3.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>WordPress CMS</h3>
@@ -290,21 +290,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-new-icon5.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-white-icon5.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Design And Theme Integration</h3>
@@ -315,21 +315,21 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box7">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon4.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon4.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>WordPress shopping cart development</h3>
@@ -341,21 +341,21 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-new-icon7.png"
                         alt="Custom Wordpress Development"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-white-icon7.png"
                         alt="Custom Wordpress Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Customer Support and Maintenance</h3>
@@ -369,25 +369,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel_core_features_section advanced_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section advanced_core_features_section">
+        <div className="container">
           <h2>Core Features of WordPress Development</h2>
-          <p class="laravel_core_sub">
+          <p className="laravel_core_sub">
             WordPress is one of the most prominent platforms when it comes to
             Open <br />
             Source content development system in the world.
           </p>
-          <div class="laravel_core_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/wordpresswebdevelopment/wordpres_features_icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Advanced User framework</h3>
                     <p>
                       WordPress is featured with highly developed user
@@ -397,15 +397,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/wordpresswebdevelopment/wordpres_features_icon2.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Syndication</h3>
                     <p>
                       It offers dynamic and active syndications to the users.
@@ -414,15 +414,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/wordpresswebdevelopment/wordpres_features_icon3.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Newsfeed</h3>
                     <p>
                       It is fast&sbquo; easier to manage the newsfeed for your
@@ -431,15 +431,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/wordpresswebdevelopment/wordpres_features_icon4.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Database</h3>
                     <p>
                       WordPress offer a clear and smooth working environment
@@ -448,15 +448,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/wordpresswebdevelopment/wordpres_features_icon5.png"
                       alt="img3"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Additional content</h3>
                     <p>
                       WordPress provides instant editing facility as topic can
@@ -466,15 +466,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/wordpresswebdevelopment/wordpres_features_icon6.png"
                       alt="img6"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Multi level management</h3>
                     <p>
                       It features a well-organized management system at all
@@ -487,28 +487,28 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel_choose_features_section">
-        <div class="container">
+      <section className="laravel_choose_features_section">
+        <div className="container">
           <h2>
             Why Choose WordPress Development Services <br /> For Web
             Development?
           </h2>
-          <p class="laravel_core_sub2">
+          <p className="laravel_core_sub2">
             WordPress is one of the most prominent platforms when it comes to
             Open <br />
             Source content development system in the world.
           </p>
-          <div class="laravel_choose_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+          <div className="laravel_choose_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <img
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>WordPress Editing</h3>
                     <p>
                       WordPress enables its users to edit and update the content
@@ -518,15 +518,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <img
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>WordPress Access</h3>
                     <p>
                       WordPress development services is highly secured and user
@@ -537,15 +537,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <img
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>WordPress Plug&ndash;in</h3>
                     <p>
                       WordPress offers an extensive plugins directory for its
@@ -555,15 +555,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <img
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>WordPress Framework</h3>
                     <p>
                       WordPress provides powerful and easy to use and administer
@@ -573,15 +573,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <img
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon5.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>WordPress Consulting</h3>
                     <p>
                       WordPress provides 24x7 inclusive maintenance & assistance
@@ -591,15 +591,15 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <img
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon6.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Customized Themes & Layouts</h3>
                     <p>
                       WordPress offers appealing theme designs which are vibrant
@@ -609,7 +609,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 main_btn_hire">
+            <div className="col-sm-12 main_btn_hire">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
@@ -625,12 +625,12 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-portfolio-php-dev">
+      <section className="laravel-portfolio-php-dev">
         <h2>Our WordPress Portfolio</h2>
-        <div class="laravel-slider-bx">
-          <div id="laravel-slader" class="">
+        <div className="laravel-slider-bx">
+          <div id="laravel-slader" className="">
             <Slider {...settings}>
-              <div class="php-item">
+              <div className="php-item">
                 <a href="https://mastercutmyanmar.com/" target="_blank">
                   <img
                     src="/img/wordpresswebdevelopment/mastercutmyanmar-banner.png"
@@ -640,12 +640,12 @@ const Page = () => {
                 <a
                   href="https://mastercutmyanmar.com/"
                   target="_blank"
-                  class="visit-site"
+                  className="visit-site"
                 >
                   VISIT SITE
                 </a>
               </div>
-              <div class="php-item">
+              <div className="php-item">
                 <a href="https://nayasawera.org/" target="_blank">
                   <img
                     src="/img/wordpresswebdevelopment/nayasawera-banner.png"
@@ -655,12 +655,12 @@ const Page = () => {
                 <a
                   href="https://nayasawera.org/"
                   target="_blank"
-                  class="visit-site"
+                  className="visit-site"
                 >
                   VISIT SITE
                 </a>
               </div>
-              <div class="php-item">
+              <div className="php-item">
                 <a href="https://haitisupermarket.com/" target="_blank">
                   <img
                     src="/img/wordpresswebdevelopment/haitisupermarket-banner.png"
@@ -670,7 +670,7 @@ const Page = () => {
                 <a
                   href="https://haitisupermarket.com/"
                   target="_blank"
-                  class="visit-site"
+                  className="visit-site"
                 >
                   VISIT SITE
                 </a>

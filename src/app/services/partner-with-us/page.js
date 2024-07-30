@@ -26,9 +26,9 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="header-partnership">
-        <div class="container">
-          <div class="col-sm-12 text-center">
+      <section className="header-partnership">
+        <div className="container">
+          <div className="col-sm-12 text-center">
             <h2>Partner With us </h2>
             <p>
               Businesses once grew by one of two ways; grass roots up&sbquo; or by
@@ -39,8 +39,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="partnership-content">
-        <div class="container">
+      <section className="partnership-content">
+        <div className="container">
           <h1>A global network of mobile & web experts </h1>
           <p>
             Logicspice is a leading mobile & web development company with over
@@ -60,11 +60,11 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section class="type-of-partnership">
-        <div class="business-partner ">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
+      <section className="type-of-partnership">
+        <div className="business-partner ">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
                 <h2>Business Partner</h2>
                 <p>
                   We always ready to work with small&sbquo; medium or large
@@ -80,7 +80,7 @@ const Page = () => {
                   about the client project.{" "}
                 </p>
               </div>
-              <div class="col-sm-6 text-center">
+              <div className="col-sm-6 text-center">
                 <img
                   src="/img/partnerwithus/Business-Partner.png"
                   alt="Business Partner"
@@ -90,17 +90,17 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div class="reselling-partnership">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
+        <div className="reselling-partnership">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
                 <img
                   src="/img/partnerwithus/reseller.jpg"
                   alt="Reselling Partnership"
                   data-aos="fade-right"
                 />
               </div>
-              <div class="col-sm-6">
+              <div className="col-sm-6">
                 <h2>Reselling Partnership</h2>
                 <p>
                   We have numerous softwares and services and if you are
@@ -117,10 +117,10 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div class="business-partner">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
+        <div className="business-partner">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
                 <h2>Referral Partner</h2>
                 <p>
                   Referral partner is functional middleman who brings the buyer
@@ -133,7 +133,7 @@ const Page = () => {
                   opportunity.
                 </p>
               </div>
-              <div class="col-sm-6 text-center">
+              <div className="col-sm-6 text-center">
                 <img
                   src="/img/partnerwithus/referral.png"
                   alt="Referral Partner"
@@ -144,23 +144,23 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="why-partner">
-        <div class="container">
+      <section className="why-partner">
+        <div className="container">
           <h3>Why Partner With Us?</h3>
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
+          <div className="row">
+            <div className="col-md-3 col-sm-6">
               <img src="/img/partnerwithus/icon1.png" alt="" />
               <h4>Low cost & timely delivery</h4>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div className="col-md-3 col-sm-6">
               <img src="/img/partnerwithus/icon2.png" alt="" />
               <h4>Great Technical Support</h4>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div className="col-md-3 col-sm-6">
               <img src="/img/partnerwithus/icon3.png" alt="" />
               <h4>Complete transparency in work</h4>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div className="col-md-3 col-sm-6">
               <img src="/img/partnerwithus/icon4.png" alt="" />
               <h4>Assurance of confidentiality</h4>
             </div>

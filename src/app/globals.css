@@ -153,12 +153,19 @@ left: 190px;
   display: inline-block;
   font-size: 14px;
   margin-left: 8px;
-}
+  vertical-align: middle;
 
+}
+.InfoLogicspice img {
+	width: 140px;
+}
 .company_informetion {
   margin-bottom: 10px;
 }
-
+.company_informetion i {
+	display: inline-block;
+	vertical-align: middle;
+}
 .company_informetion a {
   color: #fff;
   display: inline-block;
@@ -510,7 +517,9 @@ bread-top {
   width: 510px;
   z-index: 99;
 }
-
+.countrys_menu:hover .countrys_menus {
+	display: block !important;
+}
 .country_col_set,
 .country_row_set,
 .country_tab_set {
@@ -534,7 +543,33 @@ bread-top {
   margin-left: 0;
   width: 132px;
 }
-
+.countrys_menus span.country_nm a img {
+	width: 20px;
+	display: inline-block;
+}
+.counlistshow {
+	display: block;
+	overflow: hidden;
+	padding-top: 3px;
+	width: auto;
+}
+.counlistshow span::after {
+	background: #555 none repeat scroll 0 0;
+	border-radius: 50%;
+	content: "";
+	height: 6px;
+	left: -7px;
+	position: absolute;
+	top: 10px;
+	width: 6px;
+}
+.countrys_menus span a {
+	font-size: 13px;
+	text-transform: capitalize;
+	color: #000;
+	padding-left: 5px;
+  display: inline-block;
+}
 .countrys_menus span {
   position: relative;
 }

@@ -421,15 +421,15 @@ const Page = () => {
         </div>
       </div>
 
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="titlesettop titlesettop_mar">
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="titlesettop titlesettop_mar">
             Delivery Management Software Feature
           </h2>
 
-          <div class="features-tab">
-            <div class="clearfix">
-              <ul class="nav nav-tabs" role="tablist">
+          <div className="features-tab">
+            <div className="clearfix">
+              <ul className="nav nav-tabs" role="tablist">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -450,8 +450,8 @@ const Page = () => {
                 </li>
               </ul>
 
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+              <div className="tab-content">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {sellerTab && (
                     <>
                       <div className="row">
@@ -632,12 +632,12 @@ const Page = () => {
                     </>
                   )}
                 </div>
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {buyerTab && (
                     <>
                       <div>
                         <Slider {...settings}>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/Delivery-software-Admin-control.jpg"
@@ -649,7 +649,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/delivery-software-track-your-driver.jpg"
@@ -661,7 +661,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/delivery-software-status.jpg"
@@ -673,7 +673,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/delivery-software-Route-Map-Integration.jpg"
@@ -706,8 +706,8 @@ const Page = () => {
       </div>
 
       <div className="clearfix"></div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
@@ -773,10 +773,10 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

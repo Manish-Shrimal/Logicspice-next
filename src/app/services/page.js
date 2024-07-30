@@ -16,7 +16,6 @@ import "../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
 const Page = () => {
@@ -49,8 +48,8 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section class="our-services-new">
-        <div class="container">
+      <section className="our-services-new">
+        <div className="container">
           <h1>Our Services</h1>
           <p>
             We belong to the heart of the digital world and this is how we are
@@ -60,34 +59,34 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section class="service-boxes-new" data-aos="fade-up">
-        <div class="container">
-          <div class="serv-div_new s">
-            <div class="row">
-              <div class="col-md-4 col-sm-4 padding-no">
+      <section className="service-boxes-new" data-aos="fade-up">
+        <div className="container">
+          <div className="serv-div_new s">
+            <div className="row">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/mobile-app-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_4.png" alt="serv_4" />
                     </div>
                     <h2>Mobile App Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/web-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_1.png" alt="serv_1" />
                     </div>
                     <h2>Web Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/big-data-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/big-data-development.png"
                         alt="Big Data Development"
@@ -97,10 +96,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/devops-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/devops-development.png"
                         alt="DevOps Development"
@@ -110,10 +109,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/web-hosting">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/webhostin_icon.png"
                         alt="serv_3"
@@ -123,10 +122,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/django-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/DjangoIcon.png"
                         alt="contract hire"
@@ -136,10 +135,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/contract-hire">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/ContractIcon.png"
                         alt="contract hire"
@@ -149,10 +148,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/angular-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/AngularLogo.png"
                         alt="Angular Development"
@@ -162,10 +161,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/python-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/PythonLogo.png"
                         alt="Python Development"
@@ -175,10 +174,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/reactjs-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/ReactJSLogo.png"
                         alt="React JS Development"
@@ -188,10 +187,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/react-native-app-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/ReactJSLogo.png"
                         alt="React Native App Development"
@@ -201,10 +200,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/artificial-intelligence">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/ArtificialLogo.png"
                         alt="Artificial Intelligence Services"
@@ -215,170 +214,170 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/digital-marketing">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_3.png" alt="serv_3" />
                     </div>
                     <h2>Digital Marketing</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/software-testing-services">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_5.png" alt="serv_5" />
                     </div>
                     <h2>Testing Services</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/software-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_2.png" alt="serv_2" />
                     </div>
                     <h2>Software Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/support">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_6.png" alt="serv_6" />
                     </div>
                     <h2>Support & Maintenance</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/php-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_8.png" alt="serv_8" />
                     </div>
                     <h2>PHP Web Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/cakephp-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_9.png" alt="serv_9" />
                     </div>
                     <h2>Cakephp Web Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/codeigniter-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_10.png" alt="serv_10" />
                     </div>
                     <h2>CodeIgniter Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/nodejs-development-company">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_11.png" alt="serv_10" />
                     </div>
                     <h2>Node.JS Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/opencart-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_12.png" alt="serv_10" />
                     </div>
                     <h2>OpenCart Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/magento-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_13.png" alt="serv_10" />
                     </div>
                     <h2>Magento Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/laravel-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_04.png" alt="serv_10" />
                     </div>
                     <h2>Laravel Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/ecommerce-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_15.png" alt="serv_10" />
                     </div>
                     <h2>eCommerce Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/wordpress-web-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_16.png" alt="serv_10" />
                     </div>
                     <h2>Wordpress Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/advanced-web-programming">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_17.png" alt="serv_10" />
                     </div>
                     <h2>Advanced Web Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/open-source-cms">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_18.png" alt="serv_10" />
                     </div>
                     <h2>Open Source CMS Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/ios-app-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_19.png" alt="serv_10" />
                     </div>
                     <h2>iPhone Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/android-app-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_20.png" alt="serv_10" />
                     </div>
                     <h2>Android App Development</h2>
@@ -386,10 +385,10 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/hybrid-app-development">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_21.png" alt="serv_10" />
                     </div>
                     <h2>Hybrid Development</h2>
@@ -397,10 +396,10 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/website-design">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_22.png" alt="serv_10" />
                     </div>
                     <h2>Website Design</h2>
@@ -408,10 +407,10 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/https://design.logicspice.com/website-design-packages/">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_23.png" alt="serv_10" />
                     </div>
                     <h2>Website Design Packages</h2>
@@ -419,20 +418,20 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/website-redesign">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_24.png" alt="serv_10" />
                     </div>
                     <h2>Website Redesign Company</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/responsive-web-design">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_25.png" alt="serv_10" />
                     </div>
                     <h2>Responsive Website</h2>
@@ -440,30 +439,30 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/landing-page-design">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_26.png" alt="serv_10" />
                     </div>
                     <h2>Landing Page Design</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/website-cloning-service">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_27.png" alt="serv_10" />
                     </div>
                     <h2>Website Cloning Service</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/saas-software-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_28.png" alt="serv_10" />
                     </div>
                     <h2>Saas Software Development</h2>
@@ -471,10 +470,10 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/psd-to-wordpress">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_29.png" alt="serv_10" />
                     </div>
                     <h2>Psd to Wordpress</h2>
@@ -482,30 +481,30 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/psd-to-html">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_30.png" alt="serv_10" />
                     </div>
                     <h2>Psd to HTML</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/psd-to-shopify">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_31.png" alt="serv_10" />
                     </div>
                     <h2>Psd to Shopify</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/script-customization">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_32.png" alt="serv_10" />
                     </div>
                     <h2>Script Customization</h2>
@@ -513,10 +512,10 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/software-testing-services">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_33.png" alt="serv_10" />
                     </div>
                     <h2>Software Testing</h2>
@@ -524,50 +523,50 @@ const Page = () => {
                 </Link>
               </div>
 
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/progressive-web-app-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_34.png" alt="serv_10" />
                     </div>
                     <h2>Progressive Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/business-support-services">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_35.png" alt="serv_10" />
                     </div>
                     <h2>Business Support Services</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/social-media-optimization-services">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_36.png" alt="serv_10" />
                     </div>
                     <h2>Social Media Optimization</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/shopify-development">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img src="/img/services/serv_37.png" alt="serv_10" />
                     </div>
                     <h2>Shopify Development</h2>
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/shopify-development-packages">
-                  <div class="our-services-bx">
-                    <div class="our-services-img">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/shopifypackages-img.png"
                         alt="Shopify Development Packages"
@@ -577,10 +576,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/startup-mobile-app-development-company">
-                  <div class="our-services-bx right-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/startup-img.png"
                         alt="Startup App Development"
@@ -590,10 +589,10 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div class="col-md-4 col-sm-4 padding-no">
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/services/partner-with-us">
-                  <div class="our-services-bx botton-none">
-                    <div class="our-services-img">
+                  <div className="our-services-bx botton-none">
+                    <div className="our-services-img">
                       <img
                         src="/img/services/partner-img.png"
                         alt="Partner With us"
@@ -607,11 +606,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="technologies_section" data-aos="fade-up">
-        <div class="container">
+      <section className="technologies_section" data-aos="fade-up">
+        <div className="container">
           <h2>Technologies Which We Are Using For Our Services</h2>
-          <div class="technologies_bx">
-            <ul class="ourservices-tab" role="tablist">
+          <div className="technologies_bx">
+            <ul className="ourservices-tab" role="tablist">
               <li
                 id="tab1_li"
                 className={`ddlj ${activeTab === "tab1" ? "active" : ""}`}
@@ -635,14 +634,14 @@ const Page = () => {
               </li>
             </ul>
 
-            <div class="tab-content">
+            <div className="tab-content">
               {activeTab === "tab1" && (
-                <div class=" rj" id="tab1">
-                  <div class="technologi-bx">
+                <div className=" rj" id="tab1">
+                  <div className="technologi-bx">
                     <ul>
                       <li>
                         <Link href="/services/ios-app-development">
-                          <span class="circle_icon andri-img">
+                          <span className="circle_icon andri-img">
                             <img
                               src="/img/services/android-img.png"
                               alt="android-img"
@@ -653,7 +652,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/android-app-development">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/iPhone-img.png"
                               alt="iPhone-img"
@@ -664,7 +663,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/hybrid-app-development">
-                          <span class="circle_icon hybirds-img">
+                          <span className="circle_icon hybirds-img">
                             <img
                               src="/img/services/hybrid-img.png"
                               alt="hybrid-img"
@@ -678,12 +677,12 @@ const Page = () => {
                 </div>
               )}
               {activeTab === "tab2" && (
-                <div class=" rj" id="tab2">
-                  <div class="technologi-bx">
+                <div className=" rj" id="tab2">
+                  <div className="technologi-bx">
                     <ul>
                       <li>
                         <Link href="/services/cakephp-development">
-                          <span class="circle_icon hybirds-img">
+                          <span className="circle_icon hybirds-img">
                             <img
                               src="/img/services/cake-img.png"
                               alt="cake-img"
@@ -694,7 +693,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/codeigniter-development">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/codeigniter-img.png"
                               alt="codeigniter-img"
@@ -705,7 +704,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/laravel-development">
-                          <span class="circle_icon hybirds-img">
+                          <span className="circle_icon hybirds-img">
                             <img
                               src="/img/services/laravel-img.png"
                               alt="laravel-img"
@@ -716,7 +715,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/wordpress-web-development">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/wordpress-img.png"
                               alt="wordpress-img"
@@ -727,7 +726,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/magento-development">
-                          <span class="circle_icon magentos-img">
+                          <span className="circle_icon magentos-img">
                             <img
                               src="/img/services/magento-img.png"
                               alt="magento-img"
@@ -738,7 +737,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/opencart-development">
-                          <span class="circle_icon opne-img">
+                          <span className="circle_icon opne-img">
                             <img
                               src="/img/services/opencart-img.png"
                               alt="opencart-img"
@@ -749,7 +748,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/php-programing">
-                          <span class="circle_icon hybirds-img">
+                          <span className="circle_icon hybirds-img">
                             <img
                               src="/img/services/php-img.png"
                               alt="php-img"
@@ -760,7 +759,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/website-design">
-                          <span class="circle_icon webdesign-img">
+                          <span className="circle_icon webdesign-img">
                             <img
                               src="/img/services/webdesign-img.png"
                               alt="webdesign-img"
@@ -771,7 +770,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/website-redesign">
-                          <span class="circle_icon redesign-img">
+                          <span className="circle_icon redesign-img">
                             <img
                               src="/img/services/redesign-img.png"
                               alt="redesign-img"
@@ -782,7 +781,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/responsive-web-design">
-                          <span class="circle_icon responsive-img">
+                          <span className="circle_icon responsive-img">
                             <img
                               src="/img/services/responsive-img.png"
                               alt="responsive-img"
@@ -793,7 +792,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/landing-page-design">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/panding-img.png"
                               alt="panding-img"
@@ -807,7 +806,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/advanced-web-programming">
-                          <span class="circle_icon adprograming-img">
+                          <span className="circle_icon adprograming-img">
                             <img
                               src="/img/services/ad-progra-img.png"
                               alt="ad-progra-img"
@@ -821,7 +820,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/open-source-cms">
-                          <span class="circle_icon responsive-img">
+                          <span className="circle_icon responsive-img">
                             <img
                               src="/img/services/opensource-img.png"
                               alt="opensource-img"
@@ -832,7 +831,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/devops-services">
-                          <span class="circle_icon hybirds-img">
+                          <span className="circle_icon hybirds-img">
                             <img
                               src="/img/services/devops-img.png"
                               alt="DevOps Services"
@@ -846,12 +845,12 @@ const Page = () => {
                 </div>
               )}
               {activeTab === "tab3" && (
-                <div class=" rj" id="tab3">
-                  <div class="technologi-bx">
+                <div className=" rj" id="tab3">
+                  <div className="technologi-bx">
                     <ul>
                       <li>
                         <Link href="/services/software-development">
-                          <span class="circle_icon responsive-img">
+                          <span className="circle_icon responsive-img">
                             <img
                               src="/img/services/softdevelop-img.png"
                               alt="softdevelop-img"
@@ -865,7 +864,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/digital-marketing">
-                          <span class="circle_icon opne-img">
+                          <span className="circle_icon opne-img">
                             <img
                               src="/img/services/digital-img.png"
                               alt="digital-img"
@@ -880,7 +879,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/software-maintenance-support">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/support-img.png"
                               alt="support-img"
@@ -894,7 +893,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/psd-to-wordpress">
-                          <span class="circle_icon webdesign-img">
+                          <span className="circle_icon webdesign-img">
                             <img
                               src="/img/services/psdwordpress-img.png"
                               alt="psdwordpress-img"
@@ -909,7 +908,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/psd-to-html">
-                          <span class="circle_icon redesign-img">
+                          <span className="circle_icon redesign-img">
                             <img
                               src="/img/services/psdhtml-img.png"
                               alt="psdhtml-img"
@@ -924,7 +923,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/psd-to-shopify">
-                          <span class="circle_icon opne-img">
+                          <span className="circle_icon opne-img">
                             <img
                               src="/img/services/psdshopify-img.png"
                               alt="psdshopify-img"
@@ -939,7 +938,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/script-customization">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/script-img.png"
                               alt="script-img"
@@ -954,7 +953,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/software-testing-services">
-                          <span class="circle_icon magentos-img">
+                          <span className="circle_icon magentos-img">
                             <img
                               src="/img/services/softtesting-img.png"
                               alt="softtesting-img"
@@ -969,7 +968,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/progressive-web-page-development">
-                          <span class="circle_icon iPhone-img">
+                          <span className="circle_icon iPhone-img">
                             <img
                               src="/img/services/progressive-img.png"
                               alt="progressive-img"
@@ -984,7 +983,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/business-support-services">
-                          <span class="circle_icon hybirds-img">
+                          <span className="circle_icon hybirds-img">
                             <img
                               src="/img/services/business-img.png"
                               alt="business-img"
@@ -999,7 +998,7 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/services/salesforce_development_company">
-                          <span class="circle_icon adprograming-img">
+                          <span className="circle_icon adprograming-img">
                             <img
                               src="/img/services/salesforce-img.png"
                               alt="business-img"
@@ -1020,10 +1019,10 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="clients_slide clients_slide_new" data-aos="fade-up">
-        <div class="container">
+      <section className="clients_slide clients_slide_new" data-aos="fade-up">
+        <div className="container">
           <h2>working with international clients</h2>
-          <div class="our-services-sliders">
+          <div className="our-services-sliders">
             <Slider {...settings}>
               <div>
                 <li>
@@ -1179,10 +1178,10 @@ const Page = () => {
       </section>
 
       <section
-        class="serv_professional serv_professional_new"
+        className="serv_professional serv_professional_new"
         data-aos="fade-up"
       >
-        <div class="container">
+        <div className="container">
           <h2>Professional Mobile Apps and Web Application Development</h2>
           <p>
             Logicspice is specialized in customized web and mobile application
@@ -1237,14 +1236,14 @@ const Page = () => {
         </div>
       </section>
 
-      <section class=" readyToStart_new">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-9">
+      <section className=" readyToStart_new">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-9">
               <h2>Ready to start your project? Let&apos;s make it happen!</h2>
             </div>
-            <div class="col-sm-3 text-right">
-              <a href="" class="btn btn-primary">
+            <div className="col-sm-3 text-right">
+              <a href="" className="btn btn-primary">
                 Click Here
               </a>
             </div>

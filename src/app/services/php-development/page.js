@@ -14,7 +14,6 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 
-
 const Page = () => {
   var settings = {
     dots: false,
@@ -25,8 +24,6 @@ const Page = () => {
   };
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-
-  
 
   const openModal = () => {
     console.log(showModal);
@@ -40,11 +37,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="laravel-banner phpweb-banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="laravel-banner-txt">
+      <section className="laravel-banner phpweb-banner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="laravel-banner-txt">
                 <h1>PHP Development Company</h1>
                 <ul>
                   <li>Framework Proficiency</li>
@@ -53,16 +50,16 @@ const Page = () => {
                   <li>Third Party API Integration Capability</li>
                   <li>Security Measures Implementation</li>
                 </ul>
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   {/* <Link
                     href="#"
                     id=""
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     onClick={() => openEnquiryModal()}
                   >
                     Enquire Now
                   </Link> */}
-                   <div className="btn btn-primary" onClick={openModal}>
+                  <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
                       <Enquirymodal
@@ -76,20 +73,22 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="page_img">
                 <Image
+                   width={300}
+                   height={500 / (100 / 100)}
                   src="/img/phpdevelopment/php-web-img.png"
                   alt="PHP Web Development Services"
                 />
@@ -99,19 +98,21 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-descriptions phpweb-descriptions">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions phpweb-descriptions">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <Image
+                  width={350}
+                  height={500 / (100 / 100)}
                   src="/img/phpdevelopment/phpweb-logo-img.png"
                   alt="Node JS Development Company"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>
                   PHP Web
                   <br /> Development Services
@@ -133,9 +134,9 @@ const Page = () => {
                   frameworks including Laravel, Cakephp, Yii, Codeigniter, and
                   so on along with latest client side technologies including
                   HTML, Bootstrap, jQuery, Ajax, CSS etc. With our highly
-                  professionals&apos; team and latest tools, we promise to deliver
-                  efficient application development at an affordable price
-                  range.
+                  professionals&apos; team and latest tools, we promise to
+                  deliver efficient application development at an affordable
+                  price range.
                 </p>
                 <p>
                   Logicspice has harnessed a team of highly qualified
@@ -154,31 +155,35 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-devlopments-services">
-        <div class="container">
+      <section className="laravel-devlopments-services">
+        <div className="container">
           <h2>PHP Development Services</h2>
-          <p class="laravel_core_sub2">
+          <p className="laravel_core_sub2">
             PHP is highly appreciated and widely used web programming and
             scripting <br />
             language that helps empower your websites.
           </p>
-          <div class="laravel-services-bx-top advanced_web_service_bx">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+          <div className="laravel-services-bx-top advanced_web_service_bx">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/phpweb-web-new-icon1.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/phpweb-white-icon1.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP Content Management System</h3>
@@ -189,21 +194,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/advanced-web-new-icon2.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/advanced-web-white-icon2.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP E-commerce</h3>
@@ -214,21 +223,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/advanced-web-new-icon3.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/advanced-web-white-icon3.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP Open Source Framework</h3>
@@ -239,21 +252,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon3.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon3.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP Programming For Shopping Cart</h3>
@@ -265,21 +282,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon4.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon4.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Social Networking Solutions</h3>
@@ -291,21 +312,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon5.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon5.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP Design And Theme Integration</h3>
@@ -316,21 +341,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box7">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/advanced-web-new-icon4.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/advanced-web-white-icon4.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP Migration Services</h3>
@@ -340,27 +369,32 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/phpdevelopment/codeigniter-new-icon7.png"
                         alt="OpenCart Framework Development"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/phpdevelopment/codeigniter-white-icon7.png"
                         alt="OpenCart Framework Development"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>PHP Customer Relationship Management</h3>
                   <p>
-                    What&apos;s more satisfying than managing customer relationships
-                    in a professional way? We can guarantee you that.
+                    What&apos;s more satisfying than managing customer
+                    relationships in a professional way? We can guarantee you
+                    that.
                   </p>
                 </div>
               </div>
@@ -370,25 +404,27 @@ const Page = () => {
         {/* </div> */}
       </section>
 
-      <section class="laravel_core_features_section advanced_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section advanced_core_features_section">
+        <div className="container">
           <h2>PHP Frameworks</h2>
-          <p class="laravel_core_sub">
+          <p className="laravel_core_sub">
             PHP is highly appreciated and widely used web programming and
             scripting <br />
             language that helps empower your websites.
           </p>
-          <div class="laravel_core_features_bx phpweb_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx phpweb_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/phpdevelopment/phpwebt_features_icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Cakephp Framework</h3>
                     <p>
                       Due to its flexibility and it&apos;s effective features,
@@ -401,15 +437,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/phpdevelopment/phpwebt_features_icon2.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Codeigniter Framework</h3>
                     <p>
                       Codeigniter development is SEO and user friendly. It
@@ -422,15 +460,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/phpdevelopment/phpwebt_features_icon3.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Laravel Framework</h3>
                     <p>
                       Laravel is renowned as an open source platform
@@ -441,15 +481,17 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/phpdevelopment/phpwebt_features_icon4.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Yii Framework</h3>
                     <p>
                       We offer highly effective Yii framework development
@@ -465,25 +507,27 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section">
-        <div class="container">
+      <section className="laravel_choose_features_section">
+        <div className="container">
           <h2>Why PHP for Web Development?</h2>
-          <p class="laravel_core_sub2">
+          <p className="laravel_core_sub2">
             PHP is highly appreciated and widely used web programming and
             scripting <br />
             language that helps empower your websites.
           </p>
-          <div class="laravel_choose_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+          <div className="laravel_choose_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/phpdevelopment/cackphp-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Assured Confidentiality</h3>
                     <p>
                       We follow an encrypted system to respect and protect your
@@ -493,15 +537,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/phpdevelopment/advances-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Optimized Performance</h3>
                     <p>
                       With our PHP development solutions, experience an
@@ -511,15 +557,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/phpdevelopment/phpweb-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Cost Effective</h3>
                     <p>
                       When you are choosing PHP development, we can assure you
@@ -530,15 +578,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/phpdevelopment/opencart-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Framework</h3>
                     <p>
                       In PHP development frameworks, you will be able to choose
@@ -548,15 +598,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/phpdevelopment/opencart-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Consultancy Services</h3>
                     <p>
                       Experience a complete guidance from our professionals in
@@ -566,15 +618,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/phpdevelopment/phpweb-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Seamless Communication Service</h3>
                     <p>
                       With us, smooth and quick communication in every need, is
@@ -584,30 +638,32 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 main_btn_hire">
-            <div className="btn btn-primary" onClick={openModal}>
-                    <button>Enquire Now</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="PHP Web Development Services"
-                      />
-                    }
-                  </div>
+            <div className="col-sm-12 main_btn_hire">
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="PHP Web Development Services"
+                  />
+                }
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="laravel-portfolio-php-dev">
+      <section className="laravel-portfolio-php-dev">
         <h2>Our PHP Portfolio</h2>
-        <div class="laravel-slider-bx">
-          <div id="laravel-slader" class="">
+        <div className="laravel-slider-bx">
+          <div id="laravel-slader" className="">
             <Slider {...settings}>
-              <div class="php-item">
+              <div className="php-item">
                 <Link href="https://www.yourpension.ch/" target="_blank">
                   <Image
+                    width={900}
+                    height={500 / (100 / 100)}
                     src="/img/phpdevelopment/yourpension-banner.png"
                     alt="img13"
                   />
@@ -615,26 +671,33 @@ const Page = () => {
                 <Link
                   href="https://www.yourpension.ch/"
                   target="_blank"
-                  class="visit-site"
+                  className="visit-site"
                 >
                   VISIT SITE
                 </Link>
               </div>
-              <div class="php-item">
+              <div className="php-item">
                 <Link href="http://www.uloan.club/" target="_blank">
-                  <Image src="/img/phpdevelopment/uloan-banner.png" alt="img14" />
+                  <Image
+                     width={900}
+                     height={500 / (100 / 100)}
+                    src="/img/phpdevelopment/uloan-banner.png"
+                    alt="img14"
+                  />
                 </Link>
                 <Link
                   href="http://www.uloan.club/"
                   target="_blank"
-                  class="visit-site"
+                  className="visit-site"
                 >
                   VISIT SITE
                 </Link>
               </div>
-              <div class="php-item">
+              <div className="php-item">
                 <Link href="https://www.altijdbon.nl/" target="_blank">
                   <Image
+                    width={900}
+                    height={500 / (100 / 100)}
                     src="/img/phpdevelopment/altijdbon-banner.png"
                     alt="img15"
                   />
@@ -642,7 +705,7 @@ const Page = () => {
                 <Link
                   href="https://www.altijdbon.nl/"
                   target="_blank"
-                  class="visit-site"
+                  className="visit-site"
                 >
                   VISIT SITE
                 </Link>
@@ -658,16 +721,17 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              width={50}
+              height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
-        <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />   
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div>
-      
 
       <Footer />
     </>

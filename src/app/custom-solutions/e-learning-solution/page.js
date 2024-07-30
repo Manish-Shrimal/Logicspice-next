@@ -63,13 +63,13 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div class="top-head-custom E-learning-System">
-        <div class="container">
-          <div class="col-md-8">
-            <div class="head-enquiry">
+      <div className="top-head-custom E-learning-System">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="head-enquiry">
               <h1>Custom Elearning System Development</h1>
               <p>Custom Elearning System Development</p>
-              <p class="sml_txt">
+              <p className="sml_txt">
                 Rapid customization, because of our team&apos;s past experience
                 over similar solutions.
               </p>
@@ -88,30 +88,30 @@ const Page = () => {
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
               >
-                <div class="WhatsappIcon WhatsappIconCustom">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
+                <div className="WhatsappIcon WhatsappIconCustom">
+                  <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div className="coccoc-alo-ph-circle"></div>
+                    <div className="coccoc-alo-ph-circle-fill"></div>
+                    <div className="coccoc-alo-ph-img-circle"></div>
                   </div>
                 </div>
               </Link>
             </div>
-            <ul class="head-feature">
+            <ul className="head-feature">
               <li>Highly Recommendable</li>
               <li>Powerful Built-in Solution</li>
               <li>Long Term Development Solution</li>
               <li>Convert Your Business Idea into a Life</li>
             </ul>
-            <div aria-label="breadcrumb" class="my-breadcrumb ">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+            <div aria-label="breadcrumb" className="my-breadcrumb ">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <Link href="/custom-solutions">Custom Solutions</Link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   Elearning System
                 </li>
               </ol>
@@ -119,12 +119,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="BFC_logic">
-        <div class="container">
+      <div className="BFC_logic">
+        <div className="container">
           <h2>Why logicspice is Best For Custom App/Web Development?</h2>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -140,8 +140,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -157,8 +157,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -173,8 +173,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -192,12 +192,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="SBC_logic">
-        <div class="container">
+      <div className="SBC_logic">
+        <div className="container">
           <h2>Custom Elearning System Development</h2>
         </div>
-        <div class="inner_content_SBG">
-          <div class="container">
+        <div className="inner_content_SBG">
+          <div className="container">
             <p>
               This E-Learning system development that will serve as an
               attractive medium for students to search and book teachers based
@@ -227,14 +227,14 @@ const Page = () => {
         </div>
       </div>
 
-      <div class="demand_app">
-        <div class="container">
+      <div className="demand_app">
+        <div className="container">
           <h2>Key Benefits of Our On Demand Elearning System Development</h2>
 
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -242,18 +242,18 @@ const Page = () => {
                     alt="icon5"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Rating Feature</h3>
                   <p>
                     Students can view ratings given to teachers by other
                     students and rate them themselves
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -261,7 +261,7 @@ const Page = () => {
                     alt="icon6"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Message Feature </h3>
                   <p>
                     {" "}
@@ -269,11 +269,11 @@ const Page = () => {
                     problems regarding the information provided by them{" "}
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -281,17 +281,17 @@ const Page = () => {
                     alt="icon7"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Social Media Sign Up </h3>
                   <p>
                     Students/Teachers can use their social media accounts like
                     Facebook and Google Plus to sign up to the website
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
-            <div class="col-sm-4 center_image">
+            <div className="col-sm-4 center_image">
               <Image
                 height={100}
                 width={250}
@@ -299,9 +299,9 @@ const Page = () => {
                 alt="icon8"
               />
             </div>
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Availability Management </h3>
                   <p>
                     {" "}
@@ -309,7 +309,7 @@ const Page = () => {
                     on a calendar
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -317,11 +317,11 @@ const Page = () => {
                     alt="icon9"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Request Management</h3>
                   <p>
                     Teachers can see the class booking requests that are
@@ -329,7 +329,7 @@ const Page = () => {
                     the request
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -337,18 +337,18 @@ const Page = () => {
                     alt="icon10"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Easy Payment</h3>
                   <p>
                     Students can easily pay for the classes they have booked
                     with the teachers using an integrated payment gateway
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -356,21 +356,21 @@ const Page = () => {
                     alt="icon11"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="titlesettop titlesettop_mar">
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="titlesettop titlesettop_mar">
             Dating App/Web Development Features
           </h2>
 
-          <div class="features-tab">
-            <div class="clearfix">
-              <ul class="nav nav-tabs" role="tablist">
+          <div className="features-tab">
+            <div className="clearfix">
+              <ul className="nav nav-tabs" role="tablist">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -391,14 +391,14 @@ const Page = () => {
                 </li>
               </ul>
 
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+              <div className="tab-content">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {sellerTab && (
                     <>
 
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -412,7 +412,7 @@ const Page = () => {
                               code).
                             </p>
                           </div>
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -426,8 +426,8 @@ const Page = () => {
                             </p>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -442,7 +442,7 @@ const Page = () => {
                             </p>
                           </div>
 
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -456,8 +456,8 @@ const Page = () => {
                             </p>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -470,7 +470,7 @@ const Page = () => {
                               tutors can send messages to students.
                             </p>
                           </div>
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -484,8 +484,8 @@ const Page = () => {
                             </p>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="ftr-detail">
+                        <div className="col-sm-3">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -500,7 +500,7 @@ const Page = () => {
                             </p>
                           </div>
 
-                          <div class="ftr-detail">
+                          <div className="ftr-detail">
                              <Image
                               height={100}
                               width={60}
@@ -519,12 +519,12 @@ const Page = () => {
                     </>
                   )}
                 </div>
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {buyerTab && (
                     <>
                       <div>
                         <Slider {...settings}>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/booking-calander.jpg"
@@ -536,7 +536,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/booking-management-elearning.jpg"
@@ -548,7 +548,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/search-for-tutor.jpg"
@@ -560,7 +560,7 @@ const Page = () => {
                               />
                             </a>
                           </div>
-                          <div class="SliderMainBx">
+                          <div className="SliderMainBx">
                             <a>
                               <Image
                                 src="/img/customsolutions/tutor-listing.jpg"
@@ -583,25 +583,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div class="app_solution">
-        <div class="container">
+      <div className="app_solution">
+        <div className="container">
           <h2>E-Learning System Custom Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
       </div>
 
       {/*  */}
-      <section class="ecommerce_faq_section CustomSolutionFaqSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 class="title_main">Quick FAQ</h4>
+      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12 ecommerce__Quick_FAQ">
+                    <h4 className="title_main">Quick FAQ</h4>
                     <MDBAccordion v-model="activeItem" borderless>
               <MDBAccordionItem
                 headerTitle="How can a customer search for businesses around his location?"
@@ -714,10 +714,10 @@ const Page = () => {
         </div>
     </section>
    
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

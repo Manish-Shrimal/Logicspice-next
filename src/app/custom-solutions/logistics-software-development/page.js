@@ -32,19 +32,19 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div class="top-head-custom jewellery-e-commerce CustomLogicsticsSoftwareBanner DefoutEcommerceBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-7 col-md-8">
-              <div class="head-enquiry">
+      <div className="top-head-custom jewellery-e-commerce CustomLogicsticsSoftwareBanner DefoutEcommerceBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-7 col-md-8">
+              <div className="head-enquiry">
                 <h1>Custom Logistics Software Development</h1>
-                <ul class="head-feature">
+                <ul className="head-feature">
                   <li>Best customized solutions for logistic Business.</li>
                   <li>Transform and reshape supply chain operations.</li>
                   <li>Enhance operational efficiency & reduce costs.</li>
                 </ul>
               </div>
-              <div class="JewelleryBtbBx">
+              <div className="JewelleryBtbBx">
                 <div className="btn btn-primary" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -69,22 +69,22 @@ const Page = () => {
                   </div>
                 </a>
               </div>
-              <div aria-label="breadcrumb" class="my-breadcrumb ">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
+              <div aria-label="breadcrumb" className="my-breadcrumb ">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
                     <a>Home</a>
                   </li>
-                  <li class="breadcrumb-item">
+                  <li className="breadcrumb-item">
                     <a>Custom Solutions</a>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">
+                  <li className="breadcrumb-item active" aria-current="page">
                     Custom Logistics Software
                   </li>
                 </ol>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-5 col-md-4">
-              <div class="CustomLogicsticsBannerImg">
+            <div className="col-xs-12 col-sm-5 col-md-4">
+              <div className="CustomLogicsticsBannerImg">
                 <Image width={557} height={421}
                   src="/img/logisticssoftwaredevelopment/custom-logicstics-software-img.png"
                   alt="Custom Logistics Software Development"
@@ -94,15 +94,15 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="BFC_logic BFC_CustomLogicstics">
-        <div class="container">
-          <h2 class="CustomSolutionHadding">
+      <div className="BFC_logic BFC_CustomLogicstics">
+        <div className="container">
+          <h2 className="CustomSolutionHadding">
             Why Choose Our Logistic Software Solutions?
           </h2>
-          <div class="CustomLogicsticsWhyChoose">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="BestCustomDevelopment">
+          <div className="CustomLogicsticsWhyChoose">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="BestCustomDevelopment">
                 <Image width={128} height={128}
                     src="/img/logisticssoftwaredevelopment/customized-development-icon.png"
                     alt="Customized Development"
@@ -116,8 +116,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="BestCustomDevelopment">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="BestCustomDevelopment">
                 <Image width={128} height={128}
                     src="/img/logisticssoftwaredevelopment/improved-efficiency-icon.png"
                     alt="Improved Efficiency"
@@ -132,8 +132,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="BestCustomDevelopment">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="BestCustomDevelopment">
                 <Image width={128} height={128}
                     src="/img/logisticssoftwaredevelopment/scalable-options-icon.png"
                     alt="Scalable Options"
@@ -148,8 +148,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="BestCustomDevelopment">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="BestCustomDevelopment">
                 <Image width={128} height={128}
                     src="/img/logisticssoftwaredevelopment/real-time-monitoring-icon.png"
                     alt="Real-time Monitoring"
@@ -165,8 +165,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="BestCustomDevelopment">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="BestCustomDevelopment">
                 <Image width={128} height={128}
                     src="/img/logisticssoftwaredevelopment/integration-flexibility-icon.png"
                     alt="Integration Flexibility"
@@ -181,8 +181,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="BestCustomDevelopment">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="BestCustomDevelopment">
                   <Image width={128} height={128}
                     src="/img/logisticssoftwaredevelopment/strong-security-icon.png"
                     alt="Strong Security Protocols"
@@ -202,12 +202,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="SBC_logic CustomLogicsticsSBC_logic">
-        <div class="container">
+      <div className="SBC_logic CustomLogicsticsSBC_logic">
+        <div className="container">
           <h2>Connect with Us for Custom Logistic Software Solutions</h2>
         </div>
-        <div class="inner_content_SBG">
-          <div class="container">
+        <div className="inner_content_SBG">
+          <div className="container">
             <p>
               Are you ready to improve your logistics operations with customized
               software solutions? Contact us to discuss how our logistic
@@ -228,26 +228,26 @@ const Page = () => {
         </div>
       </div>
       <section
-        class="JewelryEcommerceFeatureBxSection CustomLogisticFeatureBxSection"
+        className="JewelryEcommerceFeatureBxSection CustomLogisticFeatureBxSection"
         id="features"
       >
-        <div class="container">
-          <h2 class="CustomSolutionHadding">
+        <div className="container">
+          <h2 className="CustomSolutionHadding">
             Key Features of Our Custom Logistic Software Solutions
           </h2>
-          <div class="features-tab">
-            <div class="JewelryEcommerceDevelopmentFeature CustomLogicsticsDevelopmentFeature">
-              <div class="JewelryEcommerceFeatureTop">
-                <div class="row">
-                  <div class="col-sm-6 col-md-6">
-                    <div class="JewelryEcommerceFeature">
+          <div className="features-tab">
+            <div className="JewelryEcommerceDevelopmentFeature CustomLogicsticsDevelopmentFeature">
+              <div className="JewelryEcommerceFeatureTop">
+                <div className="row">
+                  <div className="col-sm-6 col-md-6">
+                    <div className="JewelryEcommerceFeature">
                       <i>
                       <Image width={64} height={64}
                           src="/img/logisticssoftwaredevelopment/user-profiles-icon.png"
                           alt="User Profiles and Managment"
                         />
                       </i>
-                      <div class="JewelryEcommerceFeatureBx">
+                      <div className="JewelryEcommerceFeatureBx">
                         <h3>User Profiles & Management</h3>
                         <p>
                           Experience comprehensive functionality for managing
@@ -262,15 +262,15 @@ const Page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-6">
-                    <div class="JewelryEcommerceFeature">
+                  <div className="col-sm-6 col-md-6">
+                    <div className="JewelryEcommerceFeature">
                       <i>
                       <Image width={64} height={64}
                           src="/img/logisticssoftwaredevelopment/scalability-flexibility-icon.png"
                           alt="Scalability and Flexibility"
                         />
                       </i>
-                      <div class="JewelryEcommerceFeatureBx">
+                      <div className="JewelryEcommerceFeatureBx">
                         <h3>Scalability & Flexibility</h3>
                         <p>
                           Our logistic software solutions adapt and grow with
@@ -284,15 +284,15 @@ const Page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-6">
-                    <div class="JewelryEcommerceFeature">
+                  <div className="col-sm-6 col-md-6">
+                    <div className="JewelryEcommerceFeature">
                       <i>
                       <Image width={64} height={64}
                           src="/img/logisticssoftwaredevelopment/shipment-management-icon.png"
                           alt="Shipment Management"
                         />
                       </i>
-                      <div class="JewelryEcommerceFeatureBx">
+                      <div className="JewelryEcommerceFeatureBx">
                         <h3>Shipment Management</h3>
                         <p>
                           Efficiently oversee and track shipments throughout
@@ -307,15 +307,15 @@ const Page = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-6">
-                    <div class="JewelryEcommerceFeature">
+                  <div className="col-sm-6 col-md-6">
+                    <div className="JewelryEcommerceFeature">
                       <i>
                       <Image width={64} height={64}
                           src="/img/logisticssoftwaredevelopment/reviews-ratings-icon.png"
                           alt="Reviews and Ratings"
                         />
                       </i>
-                      <div class="JewelryEcommerceFeatureBx">
+                      <div className="JewelryEcommerceFeatureBx">
                         <h3>Reviews & Ratings</h3>
                         <p>
                           Promote transparency and enhance the user experience
@@ -336,21 +336,21 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="demand_app BenefitsLogisticSoftwareSection">
-        <div class="container">
+      <section className="demand_app BenefitsLogisticSoftwareSection">
+        <div className="container">
           <h2>Benefits of Our Logistic Software Development Services</h2>
-          <div class="BenefitsLogisticSoftwareMain">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="BenefitsLogisticCard">
-                  <div class="BenefitsLogisticCardImg">
+          <div className="BenefitsLogisticSoftwareMain">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="BenefitsLogisticCard">
+                  <div className="BenefitsLogisticCardImg">
                   <Image width={64} height={64}
                       src="/img/logisticssoftwaredevelopment/data-driven-insights-icon.png"
                       alt="Data-Driven Insights"
                     />
                   </div>
                   <h3>Data-Driven Insights</h3>
-                  <div class="BenefitsLogisticCardContent">
+                  <div className="BenefitsLogisticCardContent">
                     <p>
                       Leverage the capabilities of advanced analytics to extract
                       valuable insights from your logistics data. Our services
@@ -362,16 +362,16 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="BenefitsLogisticCard">
-                  <div class="BenefitsLogisticCardImg">
+              <div className="col-sm-6">
+                <div className="BenefitsLogisticCard">
+                  <div className="BenefitsLogisticCardImg">
                   <Image width={64} height={64}
                       src="/img/logisticssoftwaredevelopment/real-time-icon.png"
                       alt="Real-time Visibility"
                     />
                   </div>
                   <h3>Real-time Visibility</h3>
-                  <div class="BenefitsLogisticCardContent">
+                  <div className="BenefitsLogisticCardContent">
                     <p>
                       Experience immediate insights into the status of
                       shipments&sbquo; current inventory levels&sbquo; and ongoing logistics
@@ -383,16 +383,16 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="BenefitsLogisticCard">
-                  <div class="BenefitsLogisticCardImg">
+              <div className="col-sm-6">
+                <div className="BenefitsLogisticCard">
+                  <div className="BenefitsLogisticCardImg">
                   <Image width={64} height={64}
                       src="/img/logisticssoftwaredevelopment/cost-savings-icon.png"
                       alt="Cost Savings"
                     />
                   </div>
                   <h3>Cost Savings</h3>
-                  <div class="BenefitsLogisticCardContent">
+                  <div className="BenefitsLogisticCardContent">
                     <p>
                       Achieve cost savings through our optimization strategies.
                       We specialize in optimizing routes&sbquo; managing inventory
@@ -403,16 +403,16 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="BenefitsLogisticCard">
-                  <div class="BenefitsLogisticCardImg">
+              <div className="col-sm-6">
+                <div className="BenefitsLogisticCard">
+                  <div className="BenefitsLogisticCardImg">
                   <Image width={64} height={64}
                       src="/img/logisticssoftwaredevelopment/enhanced-operational-icon.png"
                       alt="Enhanced Operational Efficiency"
                     />
                   </div>
                   <h3>Enhanced Operational Efficiency</h3>
-                  <div class="BenefitsLogisticCardContent">
+                  <div className="BenefitsLogisticCardContent">
                     <p>
                       Our services are dedicated to optimizing logistics
                       processes&sbquo; effectively minimizing errors&sbquo; and enhancing
@@ -423,16 +423,16 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="BenefitsLogisticCard">
-                  <div class="BenefitsLogisticCardImg">
+              <div className="col-sm-6">
+                <div className="BenefitsLogisticCard">
+                  <div className="BenefitsLogisticCardImg">
                     <Image width={64} height={64}
                       src="/img/logisticssoftwaredevelopment/improved-customer-icon.png"
                       alt="Improved Customer Experience"
                     />
                   </div>
                   <h3>Improved Customer Experience</h3>
-                  <div class="BenefitsLogisticCardContent">
+                  <div className="BenefitsLogisticCardContent">
                     <p>
                       Elevate the quality of service&sbquo; enhance delivery accuracy&sbquo;
                       and improve communication channels. Our logistic software
@@ -448,24 +448,24 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div class="clearfix"></div>
-      <div class="app_solution eCommerceAppSolution">
-        <div class="container">
-          <h2 class="CustomSolutionHadding">
+      <div className="clearfix"></div>
+      <div className="app_solution eCommerceAppSolution">
+        <div className="container">
+          <h2 className="CustomSolutionHadding">
             Our Approach to Custom Logistics Software Development
           </h2>
-          <div class="EcommerceJewellerySolutionBx CustomLogicsticsSolutionBx">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="EcommerceJewellerySolutionImg">
+          <div className="EcommerceJewellerySolutionBx CustomLogicsticsSolutionBx">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="EcommerceJewellerySolutionImg">
                   <Image width={500} height={397}
                     src="/img/logisticssoftwaredevelopment/logicstics-solution-img.jpg"
                     alt="Custom Logistics Software Development"
                   />
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryIdeaBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryIdeaBx">
                   <i>
                   <Image width={26} height={26}
                       src="/img/logisticssoftwaredevelopment/idea-icon.png"
@@ -483,8 +483,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryConceptBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryConceptBx">
                   <i>
                   <Image width={26} height={26}
                       src="/img/logisticssoftwaredevelopment/concept-icon.png"
@@ -502,8 +502,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryImplementBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryImplementBx">
                   <i>
                   <Image width={26} height={26}
                       src="/img/logisticssoftwaredevelopment/implement-icon.png"
@@ -521,8 +521,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryTestingBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryTestingBx">
                   <i>
                   <Image width={26} height={26}
                       src="/img/logisticssoftwaredevelopment/software-testing.png"
@@ -540,8 +540,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewellerySupportBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewellerySupportBx">
                   <i>
                     <Image width={26} height={26}
                       src="/img/logisticssoftwaredevelopment/support-icon.png"
@@ -565,12 +565,12 @@ const Page = () => {
           <div></div>
         </div>
       </div>
-      <div class="clearfix"></div>
-      <div class="support_logic eCommerceSupportLogic CustomLogisticsSupportLogic">
-        <div class="container">
-          <h2 class="CustomSolutionHadding">What Support You Will Get?</h2>
-          <div class="row">
-            <div class="col-sm-4">
+      <div className="clearfix"></div>
+      <div className="support_logic eCommerceSupportLogic CustomLogisticsSupportLogic">
+        <div className="container">
+          <h2 className="CustomSolutionHadding">What Support You Will Get?</h2>
+          <div className="row">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup1.png"
                 alt="Idea Exchange"
@@ -581,7 +581,7 @@ const Page = () => {
                 and us&sbquo; we come up with great idea.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup2.png"
                 alt="Documentation Plan"
@@ -592,7 +592,7 @@ const Page = () => {
                 on a code.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup3.png"
                 alt="Plan With Prototype"
@@ -603,7 +603,7 @@ const Page = () => {
                 same will be used in order to develop & test.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup4.png"
                 alt="Regular updated Progress"
@@ -614,7 +614,7 @@ const Page = () => {
                 we move forward.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup5.png"
                 alt="Payment in Milestone"
@@ -625,7 +625,7 @@ const Page = () => {
                 payment will get released after completion of each milestone.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup6.png"
                 alt="First Installation Free"
@@ -636,7 +636,7 @@ const Page = () => {
                 and if you are going for second time&sbquo; it is chargeable.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup7.png"
                 alt="Post Delivery Support"
@@ -644,7 +644,7 @@ const Page = () => {
               <h3>Post Delivery Support</h3>
               <p>We give free support for the next 6 months.</p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
             <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup8.png"
                 alt="Long Term Maintenance"
@@ -655,7 +655,7 @@ const Page = () => {
                 always available if you are looking for future extendibility.
               </p>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image width={95} height={95}
                 src="/img/logisticssoftwaredevelopment/sup9.png"
                 alt="Third Party Support"
@@ -669,14 +669,14 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="faq_logic faq_logic_marketplace CustomLogisticsFaq">
-        <div class="container">
-          <div class="JewelleryEcommerceFAQ">
-            <h4 class="title_main">
+      <div className="faq_logic faq_logic_marketplace CustomLogisticsFaq">
+        <div className="container">
+          <div className="JewelleryEcommerceFAQ">
+            <h4 className="title_main">
               Frequently <br />
               Asked Questions
             </h4>
-            <div class="FrequentlyQuestions">
+            <div className="FrequentlyQuestions">
               <MDBAccordion v-model="activeItem" borderless>
                 <MDBAccordionItem
                   headerTitle="What Does Custom Logistic Software Development Involve?"
@@ -745,10 +745,10 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

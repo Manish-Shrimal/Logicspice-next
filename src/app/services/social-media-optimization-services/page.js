@@ -51,11 +51,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="yellow_slider social_media_slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="slidere-tittle">
+      <section className="yellow_slider social_media_slider">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-7">
+                    <div className="slidere-tittle">
                         <h1>Social Media Optimization Services</h1>
                         <p>Social media has become an intrinsic part of our daily life&sbquo; as our day to day life is governed by the presence & 
                             dominance of social media reason being&sbquo; millions of people are engaging with different social media platforms. So&sbquo; 
@@ -72,7 +72,7 @@ const Page = () => {
                         </p>
                         <h3>Want to boost your brand awareness?</h3>
                     </div>
-                    <div class="btn_align aos-init aos-animate" data-aos="fade-up">
+                    <div className="btn_align aos-init aos-animate" data-aos="fade-up">
                     <div className="btn btn-primary" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -87,19 +87,19 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
                                            
                                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="images-section">
+                <div className="col-md-5">
+                    <div className="images-section">
                         <img src="/img/socialmediaoptimizationservices/smo-img.png" alt="Social_Media_Optimization_Services" />
                     </div>
                 </div>
@@ -107,11 +107,11 @@ const Page = () => {
         </div>
     </section>
       
-      <section class="resources-banner our-sass">
-        <div class="container">
+      <section className="resources-banner our-sass">
+        <div className="container">
         <h2>Our SMO Services</h2>
-          <div class="resources-bx-top">
-            <ul class="resources-tabs">
+          <div className="resources-bx-top">
+            <ul className="resources-tabs">
               <li
                 id="tab1_li"
                 className={`ddlj ${saascmsTab ? "active" : ""}`}
@@ -160,11 +160,11 @@ const Page = () => {
               
             </ul>
 
-            <div class="tab-content">
+            <div className="tab-content">
               {saascmsTab && (
                 <>
-                  <div class="costomer_tab rj" id="tab1">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj" id="tab1">
+                    <div className="resources-contan">
                     <p>We can create your business profile on reputed online social & professional networking sites. </p>
                     </div>
                   </div>
@@ -172,8 +172,8 @@ const Page = () => {
               )}
               {saascrmTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab2">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab2">
+                    <div className="resources-contan">
                     <p>Our creative writers can create catchy content and talented designers can design engaging creatives (images & infographics) for Facebook&sbquo; Twitter&sbquo; LinkedIn&sbquo; Pinterest&sbquo; Instagram and more.</p>
                     </div>
                   </div>
@@ -181,8 +181,8 @@ const Page = () => {
               )}
               {customecommerceTab && (
                 <>
-                  <div class="costomer_tab rj " id="tab3">
-                    <div class="resources-contan">
+                  <div className="costomer_tab rj " id="tab3">
+                    <div className="resources-contan">
                     <p>Our experts can review your current presence over social media and can plan the SMO strategy according to competitors to give you a competitive edge in your field. Similarly&sbquo; respective account managers can execute the strategy.</p>
                     </div>
                   </div>
@@ -193,11 +193,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="sasss-middle-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="sa_t">
+      <section className="sasss-middle-section">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6">
+                    <div className="sa_t">
                         <p>We help our clients to sustain their existing clients & target their prospective customers considering the large number of audience available on social media. We take full responsibility for enhancing communication with your customers so they can get the update of your current offers and updates about your products / services.  Our experts can comment&sbquo; tweet or retweet your post for engaging your audiences and collect the perspective of your customers about your products and services&sbquo; which will help you to cater your customers with the best solutions.</p>
                         <p>We ensure you to develop a unique strategy to promote your business organically over the social media 
                             networks. During the optimization process we execute all the efforts on social sharing&sbquo; groups posting&sbquo; 
@@ -209,68 +209,68 @@ const Page = () => {
                        
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div className="col-md-6">
                 </div>
             </div>
-            <div class="img_saaa">
+            <div className="img_saaa">
                 <img src="/img/socialmediaoptimizationservices/smo-bg.png" alt="Social_Media_Optimization_Services" />
             </div>
             </div>
     </section>
 
-    <section class="new-why-choose-section sass_title">
-        <div class="container">
+    <section className="new-why-choose-section sass_title">
+        <div className="container">
             <h2>Why choose Logicspice <span>for Social Media Optimization?</span></h2>
-            <div class="row">
-            <div class="col-sm-6 col-md-6 aos-init aos-animate" data-aos="fade-right">
-                <div class="new_libraries">
+            <div className="row">
+            <div className="col-sm-6 col-md-6 aos-init aos-animate" data-aos="fade-right">
+                <div className="new_libraries">
                     <i><img src="/img/socialmediaoptimizationservices/new_development_icon1.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Best Technology Offering</h3>
                         <p>We offer powerful and latest technologies and tools.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-left">
                     <i><img src="/img/socialmediaoptimizationservices/new_development_icon2.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Quick Support</h3>
                         <p>We provide our customers with full support to their queries and in this regards we are available over call and email to solve their problems.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-right">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-right">
                     <i><img src="/img/socialmediaoptimizationservices/new_development_icon4.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Easy Hiring Process</h3>
                         <p>Just fill the contact form and select the best package as per your requirement.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-left">
                     <i><img src="/img/socialmediaoptimizationservices/new_development_icon3.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Secure</h3>
                         <p>We keep your information (Id&sbquo; Password&sbquo; Leads and other) confidential.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-right">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-right">
                     <i><img src="/img/socialmediaoptimizationservices/new_development_icon6.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>Dedicated team of experts</h3>
                         <p>You can get the personal account manager for your social media accounts that are always there to provide you with the best possible service in the industry.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-                <div class="new_libraries aos-init aos-animate" data-aos="fade-left">
+            <div className="col-sm-6 col-md-6">
+                <div className="new_libraries aos-init aos-animate" data-aos="fade-left">
                     <i><img src="/img/socialmediaoptimizationservices/new_development_icon5.png" alt="Web development" /></i>
-                    <div class="new-libra-bx">
+                    <div className="new-libra-bx">
                         <h3>100% Client Satisfaction & Cost-Effective Solution</h3>
                         <p>We at Logicspice are pledged to give our customer first priority for their needs and wants. We ensure to provide our customers with 100% satisfaction for our services and products.</p>
                     </div>
@@ -280,16 +280,16 @@ const Page = () => {
         </div>
     </section>
 
-      <section class="testing-statred-section resources-statred-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12">
-              <h2 class="sas12">Enquiry Now</h2>
+      <section className="testing-statred-section resources-statred-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12">
+              <h2 className="sas12">Enquiry Now</h2>
               <a
                 id=""
                 data-toggle="modal"
                 data-target="#contactFix"
-                class="btn btn-primary sas13"
+                className="btn btn-primary sas13"
               >
                 Get a Free Quote
               </a>

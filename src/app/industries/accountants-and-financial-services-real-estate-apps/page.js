@@ -208,7 +208,7 @@ const Page = () => {
                   </div>
                   <div className="portfolio_button_center">
                     <div id="inquirenow" className="enquire-btn">
-                      <a class="btn btn-primary" onClick={toggleModal}>
+                      <a className="btn btn-primary" onClick={toggleModal}>
                         Enquire Now
                       </a>
                     </div>
@@ -246,7 +246,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <div class="hotel_description_image">
+              <div className="hotel_description_image">
                 <Image
                   width={400}
                   height={100 / 100 / 10}
@@ -258,13 +258,13 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="mobile">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="app_shown_describe_left">
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+      <section className="mobile">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="app_shown_describe_left">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -272,13 +272,13 @@ const Page = () => {
                       src="/img/globalpages/icn_an.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     User Friendly
                     <br /> Layouts
                   </div>
                 </div>
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -286,13 +286,13 @@ const Page = () => {
                       src="/img/globalpages/navigate_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Easy To
                     <br /> Navigate
                   </div>
                 </div>
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -300,19 +300,19 @@ const Page = () => {
                       src="/img/globalpages/security_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Highly Secured
                     <br /> App
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
-              <div class="mobile-screen-splash">
-                <div class="mobile-screen-sizee">
+            <div className="col-sm-4">
+              <div className="mobile-screen-splash">
+                <div className="mobile-screen-sizee">
                  
                   <Slider {...date}>
-                  <div class="SiteFriendyBx">
+                  <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -320,7 +320,7 @@ const Page = () => {
                         src="/img/globalpages/raydaar_img.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -328,7 +328,7 @@ const Page = () => {
                         src="/img/globalpages/martgram.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -336,7 +336,7 @@ const Page = () => {
                         src="/img/globalpages/localgenii.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -344,7 +344,7 @@ const Page = () => {
                         src="/img/globalpages/klick.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -352,7 +352,7 @@ const Page = () => {
                         src="/img/globalpages/tc.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -360,7 +360,7 @@ const Page = () => {
                         src="/img/globalpages/fubmle.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -368,7 +368,7 @@ const Page = () => {
                         src="/img/globalpages/social_securitas.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -376,7 +376,7 @@ const Page = () => {
                         src="/img/globalpages/sweepstakes.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -384,7 +384,7 @@ const Page = () => {
                         src="/img/globalpages/bestcit.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -400,10 +400,10 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-sm-4">
-              <div class="app_shown_describe_right">
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+            <div className="col-sm-4">
+              <div className="app_shown_describe_right">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -411,13 +411,13 @@ const Page = () => {
                       src="/img/globalpages/icon_ac.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Unique
                     <br /> Designs
                   </div>
                 </div>
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -425,13 +425,13 @@ const Page = () => {
                       src="/img/globalpages/customiziable_app_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Customizable
                     <br /> App
                   </div>
                 </div>
-                <div class="app_shown_describe_bxt aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bxt aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -439,7 +439,7 @@ const Page = () => {
                       src="/img/globalpages/userinterface_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Simple Attractive UI
                     <br /> Interface
                   </div>
@@ -981,7 +981,7 @@ const Page = () => {
               </div>
             )}
             {selectedTab === "why_we_need" && (
-              <div role="tabpanel" className="tab-pane" id="why_we_need">
+              <div role="tabpanel" className="tab-pane active" id="why_we_need">
                 <div className="tab_para">
                   <p>
                     There are many benefits of having an mobile application for

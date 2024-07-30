@@ -47,11 +47,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="laravel-banner magento-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <div class="laravel-banner-txt">
+      <section className="laravel-banner magento-banner">
+        <div className="container">
+            <div className="row">
+                <div className="col-xs-12 col-sm-6 col-md-6">
+                    <div className="laravel-banner-txt">
                         <h1>Magento <br />
                             Web Development</h1>
                         <ul>
@@ -60,7 +60,7 @@ const Page = () => {
                             <li>Shopping Cart Service</li>
                             <li>Extension and Attachements</li>
                         </ul>
-                        <div class="laravel-anquire">
+                        <div className="laravel-anquire">
                         <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -75,32 +75,32 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <div class="page_img"><img src="/img/magentodevelopment/magento-banner-img.png" alt="Magento Web Development" /></div>  
+                <div className="col-xs-12 col-sm-6 col-md-6">
+                    <div className="page_img"><img src="/img/magentodevelopment/magento-banner-img.png" alt="Magento Web Development" /></div>  
                 </div>
             </div>
         </div>
     </section>
-    <section class="laravel-descriptions megento-descriptions">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-                    <div class="laravel_img"><img src="/img/magentodevelopment/magento-logo-img.png" alt="Magento Web Development" /></div>  
+    <section className="laravel-descriptions megento-descriptions">
+        <div className="container">
+            <div className="row">
+                <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+                    <div className="laravel_img"><img src="/img/magentodevelopment/magento-logo-img.png" alt="Magento Web Development" /></div>  
                 </div>
-                <div class="col-sm-6 col-md-6 pull-left">
+                <div className="col-sm-6 col-md-6 pull-left">
     
-                    <div class="laravel-descriptions-bx">
+                    <div className="laravel-descriptions-bx">
                         <h2>Magento <br />
                             Web Development</h2>
                         <p>Magento is an astounding open source ecommerce development platform. The developers of Magento provide a significant addition to their users with an assortment of 
@@ -126,30 +126,30 @@ const Page = () => {
             </div>
         </div>
     </section>
-    <section class="laravel-devlopments-services">
-        <div class="container">
+    <section className="laravel-devlopments-services">
+        <div className="container">
             <h2>Magento Web Development Services</h2>
-            <p class="laravel_core_sub2">Magento is an astounding open source ecommerce development platform. The<br /> developers of Magento provide a significant addition to their users.</p>
-            <div class="laravel-services-bx-top advanced_web_service_bx">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box4">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/codeigniter-new-icon3.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/codeigniter-white-icon3.png" alt="Magento Web Development" />
-                                    <div class="mask"></div>
+            <p className="laravel_core_sub2">Magento is an astounding open source ecommerce development platform. The<br /> developers of Magento provide a significant addition to their users.</p>
+            <div className="laravel-services-bx-top advanced_web_service_bx">
+                <div className="row">
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box4">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/codeigniter-new-icon3.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/codeigniter-white-icon3.png" alt="Magento Web Development" />
+                                    <div className="mask"></div>
                                 </i>
                             </div>
                             <h3>Magento Extension and<br /> Attachments</h3>
                             <p>Magento tunes your ecommerce with extension and attachment development offers.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box1">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/magento-new-icon1.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/magento-white-icon1.png" alt="Magento Web Development" />
-                                    <div class="mask"></div></i>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box1">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/magento-new-icon1.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/magento-white-icon1.png" alt="Magento Web Development" />
+                                    <div className="mask"></div></i>
     
                             </div>
                             <h3>Magento Customization<br /> Services</h3>
@@ -157,12 +157,12 @@ const Page = () => {
                         </div>
                     </div>
     
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box4">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/advanced-web-new-icon2.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/advanced-web-white-icon2.png" alt="Magento Web Development" />
-                                    <div class="mask"></div>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box4">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/advanced-web-new-icon2.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/advanced-web-white-icon2.png" alt="Magento Web Development" />
+                                    <div className="mask"></div>
                                 </i>
                             </div>
                             <h3>Shopping Cart<br /> Service</h3>
@@ -171,12 +171,12 @@ const Page = () => {
                     </div>
     
      
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box3">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/opencart-new-icon2.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/opencart-white-icon2.png" alt="Magento Web Development" />
-                                    <div class="mask"></div>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box3">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/opencart-new-icon2.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/opencart-white-icon2.png" alt="Magento Web Development" />
+                                    <div className="mask"></div>
                                 </i>
                             </div>
                             <h3>Magento Webpage<br /> Development</h3>
@@ -188,12 +188,12 @@ const Page = () => {
     
     
     
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box2">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/codeigniter-new-icon5.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/codeigniter-white-icon5.png" alt="Magento Web Development" />
-                                    <div class="mask"></div>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box2">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/codeigniter-new-icon5.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/codeigniter-white-icon5.png" alt="Magento Web Development" />
+                                    <div className="mask"></div>
                                 </i>
                             </div>
                             <h3>Theme and Design<br /> integration</h3>
@@ -201,35 +201,35 @@ const Page = () => {
                         </div>
                     </div>
     
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box7">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/magento-new-icon3.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/magento-white-icon3.png" alt="Magento Web Development" />
-                                    <div class="mask"></div></i>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box7">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/magento-new-icon3.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/magento-white-icon3.png" alt="Magento Web Development" />
+                                    <div className="mask"></div></i>
                             </div>
                             <h3>3rd Party Application<br /> Integration</h3>
                             <p>By integrating your business webpage with 3rd party APIs and other magento web development services&sbquo; we ensure steady and efficient performance of your business application.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box5">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/magento-new-icon2.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/magento-white-icon2.png" alt="Magento Web Development" />
-                                    <div class="mask"></div>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box5">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/magento-new-icon2.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/magento-white-icon2.png" alt="Magento Web Development" />
+                                    <div className="mask"></div>
                                 </i>
                             </div>
                             <h3>Magento speed <br />maximization</h3>
                             <p>Your ecommerce will support highest of the renderings in no time after a speed optimization by Magento ecommerce development services.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="laravel_service_box ">
-                            <div class="laravel-services-icon laravel_service_box8">
-                                <i><img class="widout-hover" src="/img/magentodevelopment/magento-new-icon4.png" alt="Magento Web Development" />
-                                    <img class="on-hover" src="/img/magentodevelopment/magento-white-icon4.png" alt="Magento Web Development" />
-                                    <div class="mask"></div>
+                    <div className="col-xs-12 col-sm-6 col-md-3">
+                        <div className="laravel_service_box ">
+                            <div className="laravel-services-icon laravel_service_box8">
+                                <i><img className="widout-hover" src="/img/magentodevelopment/magento-new-icon4.png" alt="Magento Web Development" />
+                                    <img className="on-hover" src="/img/magentodevelopment/magento-white-icon4.png" alt="Magento Web Development" />
+                                    <div className="mask"></div>
                                 </i>
                             </div>
                             <h3>Magento Migration<br /> Services</h3>
@@ -242,75 +242,75 @@ const Page = () => {
             </div>
         </div>
     </section>
-    <section class="laravel_core_features_section advanced_core_features_section">
-        <div class="container">
+    <section className="laravel_core_features_section advanced_core_features_section">
+        <div className="container">
             <h2>Core Features Of Magento Web Development</h2>
-            <p class="laravel_core_sub">Magento is an astounding open source ecommerce development platform. The<br /> developers of Magento provide a significant addition to their users.</p>
-            <div class="laravel_core_features_bx">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                        <div class="laravel_core_featureBox">
-                            <div class="laravel_core_features_img">
+            <p className="laravel_core_sub">Magento is an astounding open source ecommerce development platform. The<br /> developers of Magento provide a significant addition to their users.</p>
+            <div className="laravel_core_features_bx">
+                <div className="row">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                        <div className="laravel_core_featureBox">
+                            <div className="laravel_core_features_img">
                                 <img src="/img/magentodevelopment/advanced_features_icon1.png" alt="img1" />
                             </div>
-                            <div class="laravel_core_features_detail">
+                            <div className="laravel_core_features_detail">
                                 <h3>Wide Scoped Catalog Management</h3>
                                 <p>Improvised management of the catalog at every level.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                        <div class="laravel_core_featureBox">
-                            <div class="laravel_core_features_img">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                        <div className="laravel_core_featureBox">
+                            <div className="laravel_core_features_img">
                                 <img src="/img/magentodevelopment/opencart_features_icon2.png" alt="img4" />
                             </div>
-                            <div class="laravel_core_features_detail">
+                            <div className="laravel_core_features_detail">
                                 <h3>One Webpage Checkout</h3>
                                 <p>Simple and hassle free check out facility available.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                        <div class="laravel_core_featureBox">
-                            <div class="laravel_core_features_img">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                        <div className="laravel_core_featureBox">
+                            <div className="laravel_core_features_img">
                                 <img src="/img/magentodevelopment/magento_features_icon1.png" alt="img2" />
                             </div>
-                            <div class="laravel_core_features_detail">
+                            <div className="laravel_core_features_detail">
                                 <h3>Feature-full Accounts</h3>
                                 <p>Well maintained and featured accounts are provided.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                        <div class="laravel_core_featureBox">
-                            <div class="laravel_core_features_img">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                        <div className="laravel_core_featureBox">
+                            <div className="laravel_core_features_img">
                                 <img src="/img/magentodevelopment/magento_features_icon2.png" alt="img5" />
                             </div>
-                            <div class="laravel_core_features_detail">
+                            <div className="laravel_core_features_detail">
                                 <h3>Extensive Browsing Support</h3>
                                 <p>24 x 7 good quality browsing support.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6" data-aos="fade-right">
-                        <div class="laravel_core_featureBox">
-                            <div class="laravel_core_features_img">
+                    <div className="col-sm-12 col-md-6" data-aos="fade-right">
+                        <div className="laravel_core_featureBox">
+                            <div className="laravel_core_features_img">
                                 <img src="/img/magentodevelopment/magento_features_icon3.png" alt="img3" />
                             </div>
-                            <div class="laravel_core_features_detail">
+                            <div className="laravel_core_features_detail">
                                 <h3>Search Engine Friendly</h3>
                                 <p>The Magento platform is known for its SEO friendly and smooth framework.</p>
                             </div>
                         </div>
                     </div>
-    <div class="col-sm-12 col-md-6" data-aos="fade-left">
-                        <div class="laravel_core_featureBox">
-                            <div class="laravel_core_features_img">
+    <div className="col-sm-12 col-md-6" data-aos="fade-left">
+                        <div className="laravel_core_featureBox">
+                            <div className="laravel_core_features_img">
                                 <img src="/img/magentodevelopment/magento_features_icon4.png" alt="img3" />
                             </div>
-                            <div class="laravel_core_features_detail">
+                            <div className="laravel_core_features_detail">
                                 <h3>Marketing&sbquo; Promotion and Advertisement Tools</h3>
                                 <p>All types of tools as per business needs are offered.</p>
                             </div>
@@ -321,86 +321,86 @@ const Page = () => {
             </div>
         </div>
     </section>
-    <section class="laravel_choose_features_section">
-        <div class="container">
+    <section className="laravel_choose_features_section">
+        <div className="container">
             <h2>Why Choose Our Magento Web Development Services <br /> 
     For Your Ecommerce Website?</h2>
-            <p class="laravel_core_sub2">Magento is an astounding open source ecommerce development platform. The<br /> developers of Magento provide a significant addition to their users.</p>
-            <div class="laravel_choose_features_bx">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                        <div class="libraries_laravel_choose">
-                            <div class="laravel_choose_features_img laravel_choose_features_img1">
+            <p className="laravel_core_sub2">Magento is an astounding open source ecommerce development platform. The<br /> developers of Magento provide a significant addition to their users.</p>
+            <div className="laravel_choose_features_bx">
+                <div className="row">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                        <div className="libraries_laravel_choose">
+                            <div className="laravel_choose_features_img laravel_choose_features_img1">
                                 <img src="/img/magentodevelopment/codeigniter-why-icon1.png" alt="img1" />
                             </div>
-                            <div class="laravel_choose_details">
+                            <div className="laravel_choose_details">
                                 <h3>Integration of customizable themes & layouts</h3>
                                 <p>Magento web designing services offers alluring theme designs.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                        <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                            <div class="laravel_choose_features_img laravel_choose_features_img2">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                        <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                            <div className="laravel_choose_features_img laravel_choose_features_img2">
                                 <img src="/img/magentodevelopment/magento-why-icon1.png" alt="img1" />
                             </div>
-                            <div class="laravel_choose_details">
+                            <div className="laravel_choose_details">
                                 <h3>Magento speed optimization</h3>
                                 <p>Magento offers a speedy portal and shopping cart checkout system.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                        <div class="libraries_laravel_choose">
-                            <div class="laravel_choose_features_img laravel_choose_features_img3">
+                    <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                        <div className="libraries_laravel_choose">
+                            <div className="laravel_choose_features_img laravel_choose_features_img3">
                                 <img src="/img/magentodevelopment/magento-why-icon2.png" alt="img1" />
                             </div>
-                            <div class="laravel_choose_details">
+                            <div className="laravel_choose_details">
                                 <h3>Secured Magento web page access</h3>
                                 <p>Magento web pages are highly secured and user friendly.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                        <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                            <div class="laravel_choose_features_img laravel_choose_features_img4">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                        <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                            <div className="laravel_choose_features_img laravel_choose_features_img4">
                                 <img src="/img/magentodevelopment/magento-why-icon3.png" alt="img1" />
                             </div>
-                            <div class="laravel_choose_details">
+                            <div className="laravel_choose_details">
                                 <h3>Magento framework</h3>
                                 <p>Magento provides steady and stable framework for easy administration.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                        <div class="libraries_laravel_choose">
-                            <div class="laravel_choose_features_img laravel_choose_features_img5">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                        <div className="libraries_laravel_choose">
+                            <div className="laravel_choose_features_img laravel_choose_features_img5">
                                 <img src="/img/magentodevelopment/magento-why-icon4.png" alt="img1" />
                             </div>
-                            <div class="laravel_choose_details">
+                            <div className="laravel_choose_details">
                                 <h3>Solicitation over migration&sbquo; hiring & other choice based portals</h3>
                                 <p>Magento web developers cater with a 24x7 maintenance & solicitation services.</p>
                             </div>
                         </div>
                     </div>
     
-                    <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                        <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                            <div class="laravel_choose_features_img laravel_choose_features_img6">
+                    <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                        <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                            <div className="laravel_choose_features_img laravel_choose_features_img6">
                                 <img src="/img/magentodevelopment/magento-why-icon5.png" alt="img1" />
                             </div>
-                            <div class="laravel_choose_details">
+                            <div className="laravel_choose_details">
                                 <h3>Magento editing service</h3>
                                 <p>Magento enables its clients to edit and re-edit the overview as per their regulations and requirements.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 main_btn_hire">
+                <div className="col-sm-12 main_btn_hire">
                 <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -415,22 +415,22 @@ const Page = () => {
             </div>
         </div>
     </section>
-    <section class="laravel-portfolio-php-dev">
+    <section className="laravel-portfolio-php-dev">
         <h2>Our Magento Portfolio</h2>
-        <div class="laravel-slider-bx">
-            <div id="laravel-slader" class="">
+        <div className="laravel-slider-bx">
+            <div id="laravel-slader" className="">
             <Slider {...settings}>
-                <div class="php-item">
+                <div className="php-item">
                     <a href="https://xagshop.logicspice.com/" target="_blank" ><img src="/img/magentodevelopment/xagshop-banner.png" alt="img13" /></a>
-                    <a href="https://xagshop.logicspice.com/" target="_blank" class="visit-site">VISIT SITE</a>
+                    <a href="https://xagshop.logicspice.com/" target="_blank" className="visit-site">VISIT SITE</a>
                 </div>
-                <div class="php-item">
+                <div className="php-item">
                     <a href="https://www.regenepure.com/" target="_blank"><img src="/img/magentodevelopment/regenepure-banner.png " alt="img14" /></a>
-                    <a href="https://www.regenepure.com/" target="_blank" class="visit-site">VISIT SITE</a>
+                    <a href="https://www.regenepure.com/" target="_blank" className="visit-site">VISIT SITE</a>
                 </div>
-                <div class="php-item">
+                <div className="php-item">
                     <a href="http://www.biggerboatdistribution.com/" target="_blank" ><img src="/img/magentodevelopment/biggerboatdistribution-banner.png" alt="img15" /></a>
-                    <a href="http://www.biggerboatdistribution.com/" target="_blank" class="visit-site">VISIT SITE</a>
+                    <a href="http://www.biggerboatdistribution.com/" target="_blank" className="visit-site">VISIT SITE</a>
                 </div>
                 </Slider>
             </div>

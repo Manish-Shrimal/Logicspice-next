@@ -1,10 +1,7 @@
-
-
-
 "use client";
 import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+import 'react-tabs/style/react-tabs.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -338,13 +335,116 @@ const Customizeweb = () => {
       </TabPanel>
 
       <TabPanel>
-        <div className="tab-cw-content">
+        <div className="why-choose-us">
           <div className="row">
-            <div className="col-sm-12">
-              <h3>Enhance The Chances Of Getting The Best Website</h3>
-              <p>
-                The knowledge of modern technology is as important as you know what your customer wants, Our custom web development services increase the chances of achieving the best website as per your demand. Our service features are the key factor which distinguishes us from other competitors.
-              </p>
+            <div className="col-md-6">
+              <div className="media">
+                <div className="media-left">
+                  <span>
+                    {loadImage && (
+                      <img
+                        className="media-object"
+                        src="https://www.logicspice.com/img/images/house_icon.png"
+                        alt="..."
+                      />
+                    )}
+                  </span>
+                </div>
+                <div className="media-body">
+                  <h4 className="media-heading">
+                    Fast, easy, and <b>affordable</b>
+                  </h4>
+                  <p>
+                    For the first, Logicspice is capable to deliver you the
+                    astounding and professionally developed web designs and
+                    development services. Our consultants and IT professional
+                    are the best in the industry, and are fully proficient with
+                    all of the latest IT technologies, techniques and
+                    developments.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="media">
+                <div className="media-left">
+                  <span>
+                    {loadImage && (
+                      <img
+                        className="media-object"
+                        src="https://www.logicspice.com/img/images/lappy_icon.png"
+                        alt="..."
+                      />
+                    )}
+                  </span>
+                </div>
+                <div className="media-body">
+                  <h4 className="media-heading">
+                    We CARE About <b>Your Business</b>
+                  </h4>
+                  <p>
+                    At Logicspice, Our experts work quickly to help you and
+                    tries to complete the given task in given time. At our
+                    creative and digital workshop we implement the optimal
+                    approach with latest technolgy and plateform in an nominal
+                    range.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="media">
+                <div className="media-left">
+                  <span>
+                    {loadImage && (
+                      <img
+                        className="media-object"
+                        src="https://www.logicspice.com/img/images/clip_board.png"
+                        alt="..."
+                      />
+                    )}
+                  </span>
+                </div>
+                <div className="media-body">
+                  <h4 className="media-heading">
+                    <b>15+ Years of Experience</b> In This Field
+                  </h4>
+                  <p>
+                    We are working in this industry for more than a decade now
+                    and we are molding up to be the best service provider
+                    online. We work towards the ultimate goal of each and every
+                    business, making them a name to incorporate in todays
+                    competitive world.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="media">
+                <div className="media-left">
+                  <span>
+                    {loadImage && (
+                      <img
+                        className="media-object"
+                        src="https://www.logicspice.com/img/images/mind.png"
+                        alt="..."
+                      />
+                    )}
+                  </span>
+                </div>
+                <div className="media-body">
+                  <h4 className="media-heading">
+                    Our <b>Approach</b>
+                  </h4>
+                  <p>
+                    Our IT Professionals at Logicspice sincerely cares about
+                    every clients need and these values make us different from
+                    others. We Provide all web development and mobile
+                    application development services without sacrificing
+                    quality.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

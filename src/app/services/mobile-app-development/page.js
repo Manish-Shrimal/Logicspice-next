@@ -51,138 +51,252 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <div class="mobileapp-deve_header environment">
-        <div class="mobileapp_dev_bg_set"></div>
-        <div class="mobileapp-deve_header_in">
-            <div class="image_of_inhand"><Image alt="mobile app development compnay - logicspice" src="/img/mobileappdevelopment/phone_inhand_img.png" /></div>
+      <div className="mobileapp-deve_header environment">
+        <div className="mobileapp_dev_bg_set"></div>
+        <div className="mobileapp-deve_header_in">
+          <div className="image_of_inhand">
+            <Image
+            width={650}
+            height={500 / (100 / 100)}
+              alt="mobile app development compnay - logicspice"
+              src="/img/mobileappdevelopment/phone_inhand_img.png"
+            />
+          </div>
         </div>
-    </div>
-    
-    <div class="mobileapp-deve_bottom MobileAppDevelopment ">
-    	<div class="wrapper">
-    		<div class="mobileapp-deve_bottom_contop">
-    			<h1 class="mobileapp-deve_bottom_contopsm">Mobile App Development Company</h1>
-    			<div class="mobileapp-deve_bottom_contop_title">Stay Ahead of Competition</div>
-    			<div class="mobileapp-deve_bottom_contop_desc">We deliver custom mobile application development services ranging from small businesses to medium Enterprises. 
-    				We develop native Android and iPhone apps customized to client requirements and current market trends.
-    				Logicspice is an <a target="_blank" href="https://www.logicspice.com">app development company</a> that focuses on delivering our promises with the best planning 
-    				and transparency. We work for some awesome clients like Cisco NHS, Johnson &amp; Johnson etc.
-    			</div>
-    		</div>
-    		<div class="BestMobileAppDevelopmentCompany">
-    			<div class="wrapper">
-    				<p>The mobile phones have changed the landscape of the market and this is why it has become important for every company to have its own mobile application. We at 
-    					LogicSpice can help you with different types of mobile apps for both Android and iPhone users. We are the top <b>mobile app development company</b> in India that has 
-    					been developing quality apps for the past few years. We have a broad clientele base that includes several hotels, pubs, medicine companies, finance companies, 
-    					ecommerce stores, transport companies, and many other industry verticals. We have dedicated and dignified <b>mobile app developers</b> that help you to build any 
-    					type of mobile app. We have a very robust framework and seamless solution for your brand. We have a client base of more than 800 companies from different fields 
-    					and we have helped them to create a difference.
-    				</p>
-    				<p>Logicspice is the leading <b>Mobile app development</b> company when you talk about the native android & iphone application development. We provide you with robust 
-    					quality of solutions and highly scalable mobile apps at very affordable prices. We know about the needs and demands of the modern generation and come up with apps 
-    					that match up to their needs.
-    				</p>
-    				<h2>Best Mobile App Development Company</h2>
-    				<p>One of our prime aims is to come up with customized and easily accessible apps to make a solid impression on the clients. We are also very peculiar about the graphics 
-    					and interface of the app. We have an expert team of developers that have experience of working on different types of apps and can help you with different varieties no 
-    					matter what your business is. <b>Hire mobile app developers</b> who have served in the industries like restaurant, hotels, medicine, transport, garments and various 
-    					others. We also keep coming up with new updates to keep the users engaged.
-    				</p>
-    				<p>We are amongst the top <b>mobile app development companies</b> because we focus on compact and user-friendly apps that can make an impact. We focus very extensively 
-    					on the crawling through the pages so that users find it easier to navigate within the app. Our qualified team of developers also put their focus on adding maximum 
-    					icons on the home page to make things simpler for users. We also focus on creating apps that do not disturb your budget by a great deal and make a positive impact. 
-    				</p>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <div class="mobileapp-deve_bottom known-iphone">
-    	<div class="wrapper">
-    		<div class="devide_secs">
-    			<div class="devide_secs_icn"><Image alt="ios app development" src="/img/mobileappdevelopment/icon_bgicon.png" /></div>
-    			<div class="devide_secs_right">
-    				<h2 class="devide_secs_title"><a href="https://www.logicspice.com/ios-app-development/">iPhone &amp; iPad App Development</a></h2>
-    				<p>Logicspice is a well known iphone app development company & specialized in building iPhone/iPad apps with great functional capabilities, meeting the ultimate objective of clients. With a team of highly experienced <strong>iPhone app developers</strong> for the UI&apos;s, development, testing and deployment. We are serving to all the major streams including business, entertainment, education, arts, education, e-commerce and others. <a href="https://www.logicspice.com/ios-app-development/">Read More</a></p>
-    			</div>
-    		</div>
-    		<div class="devide_secs devide_secs_rrf">
-    			<div class="devide_secs_icn"><Image alt="Android App Development - logicspice" src="/img/mobileappdevelopment/icn_androidicn.png" /></div>
-    			<div class="devide_secs_right">
-    				<h2 class="devide_secs_title"><a href="https://www.logicspice.com/android-app-development/">Android App Development</a></h2>
-    				<p>Logicspice is a leading android application development company across the globe and consistantly offering robust and scalable android application development services at low costs. Our team of expert <strong>android app developers</strong> is having the requisite tools and best design model to create, test and deploy apps. We are serving to all the major streams including business, entertainment, education, arts, education, e-commerce and others. <a href="https://www.logicspice.com/android-app-development/">Read More</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <div class="SatisfyDemandModernBusiness1">
+      </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-12">
-            <h2>Mobile App Solution To Satisfy Demand of Modern Business Era</h2>
-        </div>
-        <div class="col-sm-12 col-md-9 position-relative">
-            <div class="mobil-bg_h">
-                <Image alt="mobil-bg" src="/img/mobileappdevelopment/mobil-bg_h.png" />
+      <div className="mobileapp-deve_bottom MobileAppDevelopment ">
+        <div className="wrapper">
+          <div className="mobileapp-deve_bottom_contop">
+            <h1 className="mobileapp-deve_bottom_contopsm">
+              Mobile App Development Company
+            </h1>
+            <div className="mobileapp-deve_bottom_contop_title">
+              Stay Ahead of Competition
             </div>
-            <div class="" id="satisfying_clients1">
-            <Slider {...satisfying}>
-                <div class="satisfied_clients_logo1">
-                    <div class="icon_mobil">
-                        <i class="fa fa-map" aria-hidden="true"></i>
+            <div className="mobileapp-deve_bottom_contop_desc">
+              We deliver custom mobile application development services ranging
+              from small businesses to medium Enterprises. We develop native
+              Android and iPhone apps customized to client requirements and
+              current market trends. Logicspice is an{" "}
+              <a target="_blank" href="https://www.logicspice.com">
+                app development company
+              </a>{" "}
+              that focuses on delivering our promises with the best planning and
+              transparency. We work for some awesome clients like Cisco NHS,
+              Johnson &amp; Johnson etc.
+            </div>
+          </div>
+          <div className="BestMobileAppDevelopmentCompany">
+            <div className="wrapper">
+              <p>
+                The mobile phones have changed the landscape of the market and
+                this is why it has become important for every company to have
+                its own mobile application. We at LogicSpice can help you with
+                different types of mobile apps for both Android and iPhone
+                users. We are the top <b>mobile app development company</b> in
+                India that has been developing quality apps for the past few
+                years. We have a broad clientele base that includes several
+                hotels, pubs, medicine companies, finance companies, ecommerce
+                stores, transport companies, and many other industry verticals.
+                We have dedicated and dignified <b>mobile app developers</b>{" "}
+                that help you to build any type of mobile app. We have a very
+                robust framework and seamless solution for your brand. We have a
+                client base of more than 800 companies from different fields and
+                we have helped them to create a difference.
+              </p>
+              <p>
+                Logicspice is the leading <b>Mobile app development</b> company
+                when you talk about the native android & iphone application
+                development. We provide you with robust quality of solutions and
+                highly scalable mobile apps at very affordable prices. We know
+                about the needs and demands of the modern generation and come up
+                with apps that match up to their needs.
+              </p>
+              <h2>Best Mobile App Development Company</h2>
+              <p>
+                One of our prime aims is to come up with customized and easily
+                accessible apps to make a solid impression on the clients. We
+                are also very peculiar about the graphics and interface of the
+                app. We have an expert team of developers that have experience
+                of working on different types of apps and can help you with
+                different varieties no matter what your business is.{" "}
+                <b>Hire mobile app developers</b> who have served in the
+                industries like restaurant, hotels, medicine, transport,
+                garments and various others. We also keep coming up with new
+                updates to keep the users engaged.
+              </p>
+              <p>
+                We are amongst the top <b>mobile app development companies</b>{" "}
+                because we focus on compact and user-friendly apps that can make
+                an impact. We focus very extensively on the crawling through the
+                pages so that users find it easier to navigate within the app.
+                Our qualified team of developers also put their focus on adding
+                maximum icons on the home page to make things simpler for users.
+                We also focus on creating apps that do not disturb your budget
+                by a great deal and make a positive impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mobileapp-deve_bottom known-iphone">
+        <div className="wrapper">
+          <div className="devide_secs">
+            <div className="devide_secs_icn">
+              <Image
+                width={70}
+                height={100}
+                alt="ios app development"
+                src="/img/mobileappdevelopment/icon_bgicon.png"
+              />
+            </div>
+            <div className="devide_secs_right">
+              <h2 className="devide_secs_title">
+                <a href="https://www.logicspice.com/ios-app-development/">
+                  iPhone &amp; iPad App Development
+                </a>
+              </h2>
+              <p>
+                Logicspice is a well known iphone app development company &
+                specialized in building iPhone/iPad apps with great functional
+                capabilities, meeting the ultimate objective of clients. With a
+                team of highly experienced{" "}
+                <strong>iPhone app developers</strong> for the UI&apos;s,
+                development, testing and deployment. We are serving to all the
+                major streams including business, entertainment, education,
+                arts, education, e-commerce and others.{" "}
+                <a href="https://www.logicspice.com/ios-app-development/">
+                  Read More
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="devide_secs devide_secs_rrf">
+            <div className="devide_secs_icn">
+              <Image
+                width={70}
+                height={100}
+                alt="Android App Development - logicspice"
+                src="/img/mobileappdevelopment/icn_androidicn.png"
+              />
+            </div>
+            <div className="devide_secs_right">
+              <h2 className="devide_secs_title">
+                <a href="https://www.logicspice.com/android-app-development/">
+                  Android App Development
+                </a>
+              </h2>
+              <p>
+                Logicspice is a leading android application development company
+                across the globe and consistantly offering robust and scalable
+                android application development services at low costs. Our team
+                of expert <strong>android app developers</strong> is having the
+                requisite tools and best design model to create, test and deploy
+                apps. We are serving to all the major streams including
+                business, entertainment, education, arts, education, e-commerce
+                and others.{" "}
+                <a href="https://www.logicspice.com/android-app-development/">
+                  Read More
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="SatisfyDemandModernBusiness1">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3 col-sm-12">
+              <h2>
+                Mobile App Solution To Satisfy Demand of Modern Business Era
+              </h2>
+            </div>
+            <div className="col-sm-12 col-md-9 position-relative">
+              <div className="mobil-bg_h">
+                <Image
+                  width={200}
+                  height={100}
+                  alt="mobil-bg"
+                  src="/img/mobileappdevelopment/mobil-bg_h.png"
+                />
+              </div>
+              <div className="" id="satisfying_clients1">
+                <Slider {...satisfying}>
+                  <div className="satisfied_clients_logo1">
+                    <div className="icon_mobil">
+                      <i className="fa fa-map" aria-hidden="true"></i>
                     </div>
                     <h6>Easiest Navigation</h6>
-                    <p>We provide user friendly navigation to increase the readability of the mobile app which is tied to call to action.</p>
-                </div>
-                
-                <div class="satisfied_clients_logo1">
-                    <div class="icon_mobil">
-                    <i class="fa fa-brands fa-stumbleupon"></i>
+                    <p>
+                      We provide user friendly navigation to increase the
+                      readability of the mobile app which is tied to call to
+                      action.
+                    </p>
+                  </div>
+
+                  <div className="satisfied_clients_logo1">
+                    <div className="icon_mobil">
+                      <i className="fa fa-brands fa-stumbleupon"></i>
                     </div>
                     <h6>Powerful Backend</h6>
-                    <p>Our developed backend is robust & secure so you can keep your data protected.</p>
-                </div>
-                
-                <div class="satisfied_clients_logo1">
-                    <div class="icon_mobil">
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <p>
+                      Our developed backend is robust & secure so you can keep
+                      your data protected.
+                    </p>
+                  </div>
+
+                  <div className="satisfied_clients_logo1">
+                    <div className="icon_mobil">
+                      <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <h6>Attractive Elements</h6>
-                    <p>Our mobile app elements are well designed meet all the standard requirement without any compromise.</p>
-                </div>
-                
-                <div class="satisfied_clients_logo1">
-                    <div class="icon_mobil">
-                        <i class="fa fa-map" aria-hidden="true"></i>
+                    <p>
+                      Our mobile app elements are well designed meet all the
+                      standard requirement without any compromise.
+                    </p>
+                  </div>
+
+                  <div className="satisfied_clients_logo1">
+                    <div className="icon_mobil">
+                      <i className="fa fa-map" aria-hidden="true"></i>
                     </div>
                     <h6>Interactive Designs</h6>
-                    <p>We have a experienced designers who create unique and eye catching designs so more users can get engaged to your mobile app.</p>
-                </div>
-                
-                <div class="satisfied_clients_logo1">
-                    <div class="icon_mobil">
-                    <i class="fa fa-brands fa-stumbleupon"></i>
+                    <p>
+                      We have a experienced designers who create unique and eye
+                      catching designs so more users can get engaged to your
+                      mobile app.
+                    </p>
+                  </div>
+
+                  <div className="satisfied_clients_logo1">
+                    <div className="icon_mobil">
+                      <i className="fa fa-brands fa-stumbleupon"></i>
                     </div>
                     <h6>Modern UI</h6>
-                    <p>We design attractive and eye catchy interface with the combination of your requirement and user requirement.</p>
-                </div>
-                
-                <div class="satisfied_clients_logo1">
-                    <div class="icon_mobil">
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <p>
+                      We design attractive and eye catchy interface with the
+                      combination of your requirement and user requirement.
+                    </p>
+                  </div>
+
+                  <div className="satisfied_clients_logo1">
+                    <div className="icon_mobil">
+                      <i className="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <h6>User Experience on Prior (UX)</h6>
-                    <p>Our designers have a great knowlegde in their field, they integrate your idea and user experience together on your mobile app.</p>
-                </div>
+                    <p>
+                      Our designers have a great knowlegde in their field, they
+                      integrate your idea and user experience together on your
+                      mobile app.
+                    </p>
+                  </div>
                 </Slider>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-
-
-</div>
-
+      </div>
 
       <section className="scroll_sec">
         <div className="bestheating">
@@ -202,16 +316,26 @@ const Page = () => {
                   <div className="home-project__inner first-slide bdr_block">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="UUUga"
                               src="/img/iosappdevelopment/uuuga_profile.png"
                             />
@@ -226,6 +350,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={70}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/apps-logicspice.png"
                                 />
@@ -239,6 +365,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -247,6 +375,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -315,16 +445,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={450}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={450}
+                              height={500 / (100 / 100)}
                               alt="Localgenii"
                               src="/img/iosappdevelopment/localgenii_in.jpg"
                             />
@@ -339,6 +479,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={500 / (100 / 100)}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/BusinesS-Apps-Development.png"
                                 />
@@ -352,6 +494,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={500 / (100 / 100)}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -360,6 +504,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={500 / (100 / 100)}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -426,16 +572,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={450}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={100}
+                              height={100}
                               alt="Martgram"
                               src="/img/iosappdevelopment/martgram_in.jpg"
                             />
@@ -450,6 +606,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/mobile-Apps.png"
                                 />
@@ -463,6 +621,8 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -471,6 +631,8 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       target="_blank"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -546,16 +708,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={450}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                              width={450}
+                              height={500 / (100 / 100)}
                               alt="Favor It"
                               src="/img/iosappdevelopment/favorit_it_in.png"
                             />
@@ -570,6 +742,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={500 / (100 / 100)}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business_Developers.png"
                                 />
@@ -583,6 +757,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -591,6 +767,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -660,16 +838,26 @@ const Page = () => {
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                         width={450}
+                         height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                             width={450}
+                             height={500 / (100 / 100)}
                               alt="Klick"
                               src="/img/iosappdevelopment/klick_in.jpg"
                             />
@@ -684,6 +872,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business-Service.png"
                                 />
@@ -697,6 +887,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -705,6 +897,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -751,12 +945,12 @@ const Page = () => {
                                 to be prepared for shipment to his residence.
                                 User will send payment to Apple inc. Then Apple
                                 inc. will send the amount after fee deduction to
-                                admin&apos;s paypal account. After purchasing the
-                                item from the store, end user will collect the
-                                receipt from the item provider and place a
-                                shipment using the &quot;Klick&quot; app. User also need
-                                to choose the shipping method provided by
-                                courier company.
+                                admin&apos;s paypal account. After purchasing
+                                the item from the store, end user will collect
+                                the receipt from the item provider and place a
+                                shipment using the &quot;Klick&quot; app. User
+                                also need to choose the shipping method provided
+                                by courier company.
                               </span>
                             </div>
                           </div>
@@ -781,16 +975,26 @@ const Page = () => {
                   <div className="home-project__inner last-slide slide-last-bdr">
                     <div className="home-project__clip">
                       <div className="home-project__phone">
-                        <div data-reveal-bg="1" className="responsive__bg__wrap">
+                        <div
+                          data-reveal-bg="1"
+                          className="responsive__bg__wrap"
+                        >
                           <Image
+                            width={450}
+                            height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
                             aria-hidden="true"
                             alt="iPhone app development services"
                           />
                         </div>
                         <div className="phone__reveal">
-                          <div data-reveal-wrap="1" className="phone__reveal__wrap">
+                          <div
+                            data-reveal-wrap="1"
+                            className="phone__reveal__wrap"
+                          >
                             <Image
+                             width={450}
+                             height={500 / (100 / 100)}
                               alt="Raydaar"
                               src="/img/iosappdevelopment/tc_in.jpg"
                             />
@@ -805,6 +1009,8 @@ const Page = () => {
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
                                 <Image
+                                  width={100}
+                                  height={100}
                                   alt="iPhone App Development Company"
                                   src="/img/iosappdevelopment/Business-Apps.png"
                                 />
@@ -818,6 +1024,8 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
                                     />
@@ -829,6 +1037,8 @@ const Page = () => {
                                     href="https://play.google.com/store/apps/details?id=com.logicspice.raydaar&amp;hl=en"
                                   >
                                     <Image
+                                      width={30}
+                                      height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
                                     />
@@ -918,9 +1128,9 @@ const Page = () => {
                 <div className="title_of_casesetif_sm">
                   We have developed number of mobile applications for Android
                   and iPhone platform. Our softwares &amp; services have helped
-                  plenty of businesses and teams get work done. We&apos;re not just
-                  building applications, we&apos;re building an experience. And we
-                  want that to be a meaningful and lasting one. View our
+                  plenty of businesses and teams get work done. We&apos;re not
+                  just building applications, we&apos;re building an experience.
+                  And we want that to be a meaningful and lasting one. View our
                   featured case studies to get a glimpse into the successful
                   digital experiences we create with our clients and the
                   business results we help them achieve.
@@ -930,6 +1140,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_1.png"
                         />
@@ -938,6 +1150,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={200}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_2.png"
                         />
@@ -946,6 +1160,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={200}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_3.png"
                         />
@@ -954,6 +1170,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_4.png"
                         />
@@ -962,6 +1180,8 @@ const Page = () => {
                     <li>
                       <span>
                         <Image
+                          width={100}
+                          height={100}
                           alt="icons"
                           src="/img/iosappdevelopment/icn_5.png"
                         />
@@ -977,6 +1197,8 @@ const Page = () => {
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={650}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/Martgramcase.png"
                           />
@@ -992,13 +1214,16 @@ const Page = () => {
                           </span>
                           <p>
                             Martgram app that we are scoping will serves as
-                            &quot;Online Marketplace Android &amp; iPhone app&quot;...
+                            &quot;Online Marketplace Android &amp; iPhone
+                            app&quot;...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={650}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/beanocase.png"
                           />
@@ -1021,6 +1246,8 @@ const Page = () => {
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                          width={650}
+                          height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/Social-Securitas.png"
                           />
@@ -1035,14 +1262,17 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                            Social Securites app that will scoping for &quot;Video
-                            Sharing Apps (Android &amp; iPhone)&quot; that will...
+                            Social Securites app that will scoping for
+                            &quot;Video Sharing Apps (Android &amp;
+                            iPhone)&quot; that will...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                            width={650}
+                            height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/MyUtrack.png"
                           />
@@ -1057,14 +1287,17 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                            &quot;Utrack&quot; app facilitates the students to live stress
-                            free by consolidating student&apos;s className schedules...
+                            &quot;Utrack&quot; app facilitates the students to
+                            live stress free by consolidating student&apos;s
+                            className schedules...
                           </p>
                         </div>
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
                           <Image
+                           width={650}
+                           height={500 / (100 / 100)}
                             alt="app image"
                             src="/img/iosappdevelopment/bestcit.png"
                           />
@@ -1079,8 +1312,9 @@ const Page = () => {
                             </a>
                           </span>
                           <p>
-                            &quot;Aphorism&quot; app is a hub where user can find a huge
-                            quantity of aphorisms, literary quotes...
+                            &quot;Aphorism&quot; app is a hub where user can
+                            find a huge quantity of aphorisms, literary
+                            quotes...
                           </p>
                         </div>
                       </div>
@@ -1100,20 +1334,37 @@ const Page = () => {
           </div>
         </section>
       </section>
-      <section class="industry_block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Based on the many years of experience and highly qualified development team we are able to serve nearly every industry</h4>
-                    <p>At Logicspice we serve various industries including Hotels, Transport, School and Education, Ideas and Business Concept, Health Care, Accounts and Financial Services, Commercial and Residential Estate and many more. Weâ€™ve serviced over 1,000 customers across different countries. Our highly experienced team bring each client a deep industry knowledge and expert perspectives to offer them professionally qualified and business centric solutions in an impressive range of sectors.</p>
-                    <h6>Some Industries We Serve and able to Serve</h6>
-                    <div class="industru_btn">
-                     <a class="btn btn-primary" href="https://www.logicspice.com/industries/">VIEW ALL</a> 
-                    </div>
-                </div>
+      <section className="industry_block">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <h4>
+                Based on the many years of experience and highly qualified
+                development team we are able to serve nearly every industry
+              </h4>
+              <p>
+                At Logicspice we serve various industries including Hotels,
+                Transport, School and Education, Ideas and Business Concept,
+                Health Care, Accounts and Financial Services, Commercial and
+                Residential Estate and many more. Weâ€™ve serviced over 1,000
+                customers across different countries. Our highly experienced
+                team bring each client a deep industry knowledge and expert
+                perspectives to offer them professionally qualified and business
+                centric solutions in an impressive range of sectors.
+              </p>
+              <h6>Some Industries We Serve and able to Serve</h6>
+              <div className="industru_btn">
+                <a
+                  className="btn btn-primary"
+                  href="https://www.logicspice.com/industries/"
+                >
+                  VIEW ALL
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
       <section className="satisfied_clients">
         <div className="container">
           <div className="headings">
@@ -1125,6 +1376,8 @@ const Page = () => {
             <Slider {...settings}>
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/Business-Apps.png"
@@ -1133,6 +1386,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/mobile-Apps.png"
@@ -1141,6 +1396,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/BusinesS-Apps-Development.png"
@@ -1149,6 +1406,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/Business-Service.png"
@@ -1157,6 +1416,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/Business_Developers.png"
@@ -1165,6 +1426,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/app-development.png"
@@ -1173,6 +1436,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/application-developers.jpg"
@@ -1181,6 +1446,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/mobile-apps-logicspice.png"
@@ -1189,6 +1456,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/app-development-services.png"
@@ -1197,6 +1466,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/expert-app-developers.png"
@@ -1205,6 +1476,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/android-apps-development.png"
@@ -1213,6 +1486,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/mobile-apps-development.png"
@@ -1221,6 +1496,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/affordable-apps.png"
@@ -1229,6 +1506,8 @@ const Page = () => {
 
               <div className="satisfied_clients_logo ">
                 <Image
+                  width={100}
+                  height={100}
                   alt="client"
                   className="lazy"
                   src="/img/mobileappdevelopment/apps-logicspice.png"
@@ -1238,14 +1517,19 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={50}
+              height={50}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

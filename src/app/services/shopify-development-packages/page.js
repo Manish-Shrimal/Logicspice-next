@@ -31,11 +31,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="yellow_slider ShopofDevelopmentBanners ShopifyDevelopmentPackages">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="slidere-tittle">
+      <section className="yellow_slider ShopofDevelopmentBanners ShopifyDevelopmentPackages">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-7">
+              <div className="slidere-tittle">
                 <h1>Shopify Website Development Company</h1>
                 <p>
                   Obtain a quote instantly for your Shopify Website Development.
@@ -52,7 +52,7 @@ const Page = () => {
                   &sbquo; which are modular&sbquo; efficient&sbquo; and secure.
                 </p>
               </div>
-              <div class="btn_align aos-init aos-animate" data-aos="fade-up">
+              <div className="btn_align aos-init aos-animate" data-aos="fade-up">
                 <div className="btn btn-primary" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -67,18 +67,18 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="images-section">
+            <div className="col-md-5">
+              <div className="images-section">
                 <img
                   src="/img/shopifydevelopmentpackages/ShopifyPackagesBanner.png"
                   alt="SaaS_Software_Development"
@@ -88,8 +88,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="OurShopifyDevelopment">
-        <div class="container">
+      <section className="OurShopifyDevelopment">
+        <div className="container">
           <h2>Hire Expert Shopify Developers</h2>
           <p>
             When it comes to pre-built themes&sbquo; Shopify tops the list. We help
@@ -115,15 +115,15 @@ const Page = () => {
           </p>
           <h4>Shopify.com offers ecommerce website packages packages like:</h4>
           <ul>
-            <li class="BasicShopifyBg">1. Basic Shopify</li>
-            <li class="AdvancedShopifyBg">2. Advanced Shopify</li>
-            <li class="BasicShopifyPlusBg">3. Shopify Plus</li>
+            <li className="BasicShopifyBg">1. Basic Shopify</li>
+            <li className="AdvancedShopifyBg">2. Advanced Shopify</li>
+            <li className="BasicShopifyPlusBg">3. Shopify Plus</li>
           </ul>
         </div>
       </section>
-      <section class="ExpertiseShopifyDevelopment">
-        <div class="container">
-          <div class="ExpertiseShopifyeCommerce">
+      <section className="ExpertiseShopifyDevelopment">
+        <div className="container">
+          <div className="ExpertiseShopifyeCommerce">
             <h3>Expertise in the development of Shopify eCommerce Website</h3>
             <p>
               LogicSpice offers a wide range of services for building Shopify
@@ -132,8 +132,8 @@ const Page = () => {
               modern Shopify stores. We offer web design packages starting from
               $595 and include the following services.
             </p>
-            <div class="ExpertiseShopifyedevelopment">
-              <div class="ExpertiseShopifyebx">
+            <div className="ExpertiseShopifyedevelopment">
+              <div className="ExpertiseShopifyebx">
                 <strong>
                   Shopify Store <br />
                   Development
@@ -144,7 +144,7 @@ const Page = () => {
                   application setup.
                 </span>
               </div>
-              <div class="ExpertiseShopifyebx">
+              <div className="ExpertiseShopifyebx">
                 <strong>
                   Shopify Theme <br /> Development
                 </strong>
@@ -154,7 +154,7 @@ const Page = () => {
                   Shopify development.
                 </span>
               </div>
-              <div class="ExpertiseShopifyebx">
+              <div className="ExpertiseShopifyebx">
                 <strong>
                   Shopify Mobile <br />
                   Website
@@ -165,7 +165,7 @@ const Page = () => {
                   smartphones and tablet computers.
                 </span>
               </div>
-              <div class="ExpertiseShopifyebx">
+              <div className="ExpertiseShopifyebx">
                 <strong>
                   Shopify Store <br />
                   Migration Services
@@ -176,7 +176,7 @@ const Page = () => {
                   platform.
                 </span>
               </div>
-              <div class="ExpertiseShopifyebx">
+              <div className="ExpertiseShopifyebx">
                 <strong>
                   Shopify Customer <br />
                   Service & Support
@@ -190,11 +190,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="ShopifyDevelopment-middle-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="sa_t">
+      <section className="ShopifyDevelopment-middle-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="sa_t">
                 <h2>Why Work with our Shopify Development Company?</h2>
                 <p>
                   If you&apos;re looking for a reliable Shopify website development
@@ -219,9 +219,9 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-md-6"></div>
+            <div className="col-md-6"></div>
           </div>
-          <div class="img_saaa">
+          <div className="img_saaa">
             <img
               src="/img/shopifydevelopmentpackages/ShopifyBannerImg.png"
               alt="saaa_img"
@@ -229,12 +229,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="ecommerce_faq_section JobBoardFaqSection">
-        <div class="container">
-          <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
-              <div class="col-md-12 ecommerce__Quick_FAQ">
-                <h4 class="title_main">FAQs on Shopify Website Development</h4>
+      <section className="ecommerce_faq_section JobBoardFaqSection">
+        <div className="container">
+          <div className="row">
+            <div className=" row ecommerce__Quick_FAQ">
+              <div className="col-md-12 ecommerce__Quick_FAQ">
+                <h4 className="title_main">FAQs on Shopify Website Development</h4>
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="01. Should I hire a developer to create my Shopify website?"

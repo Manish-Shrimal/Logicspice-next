@@ -45,16 +45,16 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section class="school-banner">
-        <div class="hotel-background-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="country_header_secton_mobile_screen">
-                  <div class="country_header_secton_mobile_screen_data">
+      <section className="school-banner">
+        <div className="hotel-background-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <div className="country_header_secton_mobile_screen">
+                  <div className="country_header_secton_mobile_screen_data">
                     <ul>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -64,7 +64,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -74,7 +74,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -84,7 +84,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -94,7 +94,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -104,7 +104,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -114,7 +114,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -124,7 +124,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -134,7 +134,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -144,7 +144,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -154,7 +154,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -164,7 +164,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -174,7 +174,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -184,7 +184,7 @@ const Page = () => {
                         </div>
                       </li>
                       <li>
-                        <div class="country_icon_screen">
+                        <div className="country_icon_screen">
                           <Image
                             width={100}
                             height={100}
@@ -197,19 +197,19 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 text-center">
-                <div class="text-center hotel-info">
-                  <div class="outstanding">Outstanding</div>
-                  <div class="Business">Business Apps</div>
+              <div className="col-md-6 text-center">
+                <div className="text-center hotel-info">
+                  <div className="outstanding">Outstanding</div>
+                  <div className="Business">Business Apps</div>
 
-                  <div class="for">for</div>
-                  <div class="Travel_and">ONLINE EDUCATION</div>
-                  <div class="Enhance_Business">
+                  <div className="for">for</div>
+                  <div className="Travel_and">ONLINE EDUCATION</div>
+                  <div className="Enhance_Business">
                     Enhance Your Business With Innovative Mobile Apps
                   </div>
-                  <div class="portfolio_button_center">
-                    <div id="inquirenow" class="enquire-btn">
-                      <a class="btn btn-primary" onClick={toggleModal}>
+                  <div className="portfolio_button_center">
+                    <div id="inquirenow" className="enquire-btn">
+                      <a className="btn btn-primary" onClick={toggleModal}>
                         Enquire Now
                       </a>
                     </div>
@@ -220,12 +220,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="hotel_description">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="hotel_description_content">
-                <h1 class="hotel_description_title">
+      <section className="hotel_description">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8">
+              <div className="hotel_description_content">
+                <h1 className="hotel_description_title">
                   Mobile App Development Services For
                   <span> Online Education </span>
                 </h1>
@@ -246,8 +246,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="hotel_description_image">
+            <div className="col-md-4">
+              <div className="hotel_description_image">
                 <Image
                   width={400}
                   height={100 / 100 / 10}
@@ -259,13 +259,13 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="mobile">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="app_shown_describe_left">
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+      <section className="mobile">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="app_shown_describe_left">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -273,13 +273,13 @@ const Page = () => {
                       src="/img/globalpages/icn_an.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     User Friendly
                     <br /> Layouts
                   </div>
                 </div>
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -287,13 +287,13 @@ const Page = () => {
                       src="/img/globalpages/navigate_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Easy To
                     <br /> Navigate
                   </div>
                 </div>
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -301,19 +301,19 @@ const Page = () => {
                       src="/img/globalpages/security_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Highly Secured
                     <br /> App
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
-              <div class="mobile-screen-splash">
-                <div class="mobile-screen-sizee">
+            <div className="col-sm-4">
+              <div className="mobile-screen-splash">
+                <div className="mobile-screen-sizee">
                  
                   <Slider {...date}>
-                  <div class="SiteFriendyBx">
+                  <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -321,7 +321,7 @@ const Page = () => {
                         src="/img/globalpages/raydaar_img.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -329,7 +329,7 @@ const Page = () => {
                         src="/img/globalpages/martgram.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -337,7 +337,7 @@ const Page = () => {
                         src="/img/globalpages/localgenii.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -345,7 +345,7 @@ const Page = () => {
                         src="/img/globalpages/klick.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -353,7 +353,7 @@ const Page = () => {
                         src="/img/globalpages/tc.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -361,7 +361,7 @@ const Page = () => {
                         src="/img/globalpages/fubmle.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -369,7 +369,7 @@ const Page = () => {
                         src="/img/globalpages/social_securitas.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -377,7 +377,7 @@ const Page = () => {
                         src="/img/globalpages/sweepstakes.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -385,7 +385,7 @@ const Page = () => {
                         src="/img/globalpages/bestcit.png"
                       />
                     </div>
-                    <div class="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -401,10 +401,10 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-sm-4">
-              <div class="app_shown_describe_right">
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+            <div className="col-sm-4">
+              <div className="app_shown_describe_right">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -412,13 +412,13 @@ const Page = () => {
                       src="/img/globalpages/icon_ac.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Unique
                     <br /> Designs
                   </div>
                 </div>
-                <div class="app_shown_describe_bx aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bx aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -426,13 +426,13 @@ const Page = () => {
                       src="/img/globalpages/customiziable_app_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Customizable
                     <br /> App
                   </div>
                 </div>
-                <div class="app_shown_describe_bxt aos-init aos-animate ">
-                  <div class="app_shown_describe_bx_icn">
+                <div className="app_shown_describe_bxt aos-init aos-animate ">
+                  <div className="app_shown_describe_bx_icn">
                     <Image
                       width={30}
                       height={100}
@@ -440,7 +440,7 @@ const Page = () => {
                       src="/img/globalpages/userinterface_icon.png"
                     />
                   </div>
-                  <div class="app_shown_describe_bx_label">
+                  <div className="app_shown_describe_bx_label">
                     Simple Attractive UI
                     <br /> Interface
                   </div>
@@ -451,8 +451,8 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="section3">
-        <div class="container">
+      <section className="section3">
+        <div className="container">
           <ul className="nav nav-tabs" role="tablist">
             <li
               role="presentation"
@@ -478,7 +478,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <div class="tab-content">
+          <div className="tab-content">
             <div
               role="tabpanel"
               className={`tab-pane ${
@@ -486,11 +486,11 @@ const Page = () => {
               }`}
               id="case-study"
             >
-              <div class="row">
-                <div class="col-md-3 col-sm-4">
-                  <div class="casestudy-col">
-                    <div class="casestudy-row" id="post-3343">
-                      <div class="case-col-img">
+              <div className="row">
+                <div className="col-md-3 col-sm-4">
+                  <div className="casestudy-col">
+                    <div className="casestudy-row" id="post-3343">
+                      <div className="case-col-img">
                         <Image
                           width={300}
                           height={100}
@@ -498,14 +498,14 @@ const Page = () => {
                           alt="FourStrokesCoaching - logicspice"
                         />
                       </div>
-                      <div class="case-col-detail">
-                        <h3 class="casestudy-title">
+                      <div className="case-col-detail">
+                        <h3 className="casestudy-title">
                           <a href="">
                             <span>FourStrokesCoaching</span>
                           </a>
                         </h3>
 
-                        <div class="casestudy-details-para">
+                        <div className="casestudy-details-para">
                           <p>
                             Four strokes coaching is an online website to
                             provide tutorials for the swimming. It provide user
@@ -518,10 +518,10 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="casestudy-col">
-                    <div class="casestudy-row" id="post-3343">
-                      <div class="case-col-img">
+                <div className="col-md-3 col-sm-4">
+                  <div className="casestudy-col">
+                    <div className="casestudy-row" id="post-3343">
+                      <div className="case-col-img">
                         <Image
                           width={300}
                           height={100}
@@ -529,14 +529,14 @@ const Page = () => {
                           alt="AskOurEinstein - logicspice"
                         />
                       </div>
-                      <div class="case-col-detail">
-                        <h3 class="casestudy-title">
+                      <div className="case-col-detail">
+                        <h3 className="casestudy-title">
                           <a href="">
                             <span>AskOurEinstein</span>
                           </a>
                         </h3>
 
-                        <div class="casestudy-details-para">
+                        <div className="casestudy-details-para">
                           <p>
                             &quot;AskOurEinstein&quot; is a tutoring website,
                             which will provide tutoring service. Tutors from all
@@ -550,10 +550,10 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="casestudy-col">
-                    <div class="casestudy-row" id="post-3343">
-                      <div class="case-col-img">
+                <div className="col-md-3 col-sm-4">
+                  <div className="casestudy-col">
+                    <div className="casestudy-row" id="post-3343">
+                      <div className="case-col-img">
                         <Image
                           width={300}
                           height={100}
@@ -561,14 +561,14 @@ const Page = () => {
                           alt="Utrack APP - logicspice"
                         />
                       </div>
-                      <div class="case-col-detail">
-                        <h3 class="casestudy-title">
+                      <div className="case-col-detail">
+                        <h3 className="casestudy-title">
                           <a href="">
                             <span>Utrack APP</span>
                           </a>
                         </h3>
 
-                        <div class="casestudy-details-para">
+                        <div className="casestudy-details-para">
                           <p>
                             &quot;Utrack&quot; app facilitates the students to
                             live stress free by consolidating student&apos;s
@@ -802,15 +802,15 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="blog_sections">
-        <div class="container">
-          <div class="blog_heading text-center">Blog&apos;s</div>
+      <section className="blog_sections">
+        <div className="container">
+          <div className="blog_heading text-center">Blog&apos;s</div>
 
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="blogstudy-th">
-                <div class="blog_head" id="post-3498">
-                  <div class="blog_head_img">
+          <div className="row">
+            <div className="col-sm-6">
+              <div className="blogstudy-th">
+                <div className="blog_head" id="post-3498">
+                  <div className="blog_head_img">
                     <Image
                       width={700}
                       height={100}
@@ -818,27 +818,27 @@ const Page = () => {
                       alt=" Catching Up With Wordpress Development"
                     />
                   </div>
-                  <div class="blog_head_detail">
-                    <h3 class="heading_subsiti">
+                  <div className="blog_head_detail">
+                    <h3 className="heading_subsiti">
                       <a href="">
                         <span> Catching Up With Wordpress Development </span>
                       </a>
                     </h3>
-                    <div class="method_blog">
+                    <div className="method_blog">
                       <ul>
                         <li>
-                          <i class="fa fa-calendar"></i>
+                          <i className="fa fa-calendar"></i>
                           <span>May 26, 2014</span>
                         </li>
                         <li>
-                          <i class="fa fa-folder-open"></i>
+                          <i className="fa fa-folder-open"></i>
                           <span>
                             <a href="">web development</a>,
                             <a href="">Wordpress</a>
                           </span>
                         </li>
                         <li>
-                          <i class="fa fa-tag" aria-hidden="true"></i>
+                          <i className="fa fa-tag" aria-hidden="true"></i>
                           <span>
                             <a href="" title="">
                               web development company
@@ -859,12 +859,12 @@ const Page = () => {
                         </li>
                       </ul>
                     </div>
-                    <div class="blog_details">
+                    <div className="blog_details">
                       WordPress is one of the most popular and growing content
                       management systems for enterprises to design their
                       websites and as an open source blogging systems for
                       individuals to manage their blogs.
-                      <a href="" class="blog_read_more" title="read more">
+                      <a href="" className="blog_read_more" title="read more">
                         read more
                       </a>
                     </div>
@@ -872,10 +872,10 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="casestudyshoen_bx_col_th">
-                <div class="blog_head" id="post-3498">
-                  <div class="blog_head_img">
+            <div className="col-sm-6">
+              <div className="casestudyshoen_bx_col_th">
+                <div className="blog_head" id="post-3498">
+                  <div className="blog_head_img">
                     <Image
                       width={700}
                       height={100}
@@ -883,8 +883,8 @@ const Page = () => {
                       alt=" How Much Does It Cost To Build An Educational App For Students ?"
                     />
                   </div>
-                  <div class="blog_head_detail">
-                    <h3 class="entry-title heading_subsiti">
+                  <div className="blog_head_detail">
+                    <h3 className="entry-title heading_subsiti">
                       <a href="">
                         <span>
                           How Much Does It Cost To Build An Educational App For
@@ -892,20 +892,20 @@ const Page = () => {
                         </span>
                       </a>
                     </h3>
-                    <div class="method_blog">
+                    <div className="method_blog">
                       <ul>
                         <li>
-                          <i class="fa fa-calendar"></i>
+                          <i className="fa fa-calendar"></i>
                           <span> May 01, 2017</span>
                         </li>
                         <li>
-                          <i class="fa fa-folder-open"></i>
+                          <i className="fa fa-folder-open"></i>
                           <span>
                             <a href="">Mobile Applications</a>
                           </span>
                         </li>
                         <li>
-                          <i class="fa fa-tag" aria-hidden="true"></i>
+                          <i className="fa fa-tag" aria-hidden="true"></i>
                           <span>
                             <a href="" title="education apps development">
                               education apps development
@@ -937,17 +937,17 @@ const Page = () => {
                         </li>
                       </ul>
                     </div>
-                    <div class="blog_details">
+                    <div className="blog_details">
                       An educational app can trigger the overall progression
                       rate of the students. It adds value to the educational
                       experience by simplifying the complex educational concepts
                       manifold. Today, we are
-                      <a href="" class="blog_read_more" title="read more">
+                      <a href="" className="blog_read_more" title="read more">
                         read more
                       </a>
                     </div>
                   </div>
-                  <footer class="entry-meta"></footer>
+                  <footer className="entry-meta"></footer>
                 </div>
               </div>
             </div>
@@ -955,8 +955,8 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="section3">
-        <div class="container">
+      <section className="section3">
+        <div className="container">
           <ul className="nav nav-tabs" role="tablist">
             <li
               role="presentation"
@@ -981,12 +981,12 @@ const Page = () => {
               </a>
             </li>
           </ul>
-          <div class="tab-content">
+          <div className="tab-content">
             {selectedTab === "about_app" && (
-              <div role="tabpanel" class="tab-pane active" id="about_app">
-                <div class="row">
-                  <div class="col-sm-7 contentarea">
-                    <div class="tabrightitle">
+              <div role="tabpanel" className="tab-pane active" id="about_app">
+                <div className="row">
+                  <div className="col-sm-7 contentarea">
+                    <div className="tabrightitle">
                       <h3>Be Straightforward And Loyal About Your App</h3>
                     </div>
                     <p>
@@ -1014,9 +1014,9 @@ const Page = () => {
                       Mobile Applications.
                     </p>
                   </div>
-                  <div class="col-sm-5 contentarea">
-                    <div class="about__text">
-                      <div class="img__about">
+                  <div className="col-sm-5 contentarea">
+                    <div className="about__text">
+                      <div className="img__about">
                         <Image
                           width={100}
                           height={100}
@@ -1024,9 +1024,9 @@ const Page = () => {
                           src="/img/globalpages/setting_icon.png"
                         />
                       </div>
-                      <div class="media-body">
-                        <div class="tabrightitle">
-                          <div class="rightssdsd">
+                      <div className="media-body">
+                        <div className="tabrightitle">
+                          <div className="rightssdsd">
                             <h3>Minimum Sustainable Functionality</h3>
                             <p>
                               Any app should include key features, relevant
@@ -1038,8 +1038,8 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="about__text">
-                      <div class="img__code">
+                    <div className="about__text">
+                      <div className="img__code">
                         <Image
                           width={100}
                           height={100}
@@ -1047,9 +1047,9 @@ const Page = () => {
                           src="/img/globalpages/code_icn.png"
                         />
                       </div>
-                      <div class="media-body">
-                        <div class="tabrightitle">
-                          <div class="rightssdsd">
+                      <div className="media-body">
+                        <div className="tabrightitle">
+                          <div className="rightssdsd">
                             <h3>Why Logicspice App Development Services</h3>
                             <p>
                               Stuck that how to choose an affordable and best
@@ -1070,14 +1070,14 @@ const Page = () => {
             )}
            {selectedTab === "why_we_need" && (
               <div role="tabpanel" className="tab-pane active" id="why_we_need">
-                <div class="tab_para">
+                <div className="tab_para">
                   <p>
                     There are many benefits of having an mobile application for
                     your business. Here are the some key points that why a
                     business should have an mobile app –
                   </p>
                   <p>&nbsp;</p>
-                  <ul class="listtupe">
+                  <ul className="listtupe">
                     <li>
                       <b>Increase Customer Engagement – </b>A mobile application
                       is the best way to increase customer engagement towards

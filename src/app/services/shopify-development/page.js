@@ -50,11 +50,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="yellow_slider pwa_developent_slider ShopofDevelopmentBanners">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="slidere-tittle">
+      <section className="yellow_slider pwa_developent_slider ShopofDevelopmentBanners">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="slidere-tittle">
                 <h1>Shopify Web Design & App Development Company</h1>
                 <p>
                   In this competitive environment there are several developing
@@ -72,7 +72,7 @@ const Page = () => {
                   business to the next level.
                 </p>
               </div>
-              <div class="btn_align">
+              <div className="btn_align">
                 <div className="btn btn-primary" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -87,18 +87,18 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="images-section">
+            <div className="col-md-6">
+              <div className="images-section">
                 <img
                   src="/img/shopifydevelopment/shopify-img2.png"
                   alt="Shopify_Development_Services"
@@ -110,14 +110,14 @@ const Page = () => {
       </section>
 
       <section
-        class="d-services d-services1 PrgressiveDeveFeatures"
+        className="d-services d-services1 PrgressiveDeveFeatures"
         style={{ backgroundColor: "#f1f1f1" }}
       >
-        <div class="container">
+        <div className="container">
           <h2>Features Of Shopify Ecommerce Web Development </h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="features_box">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
+              <div className="features_box">
                 <h3>Easy To Setup And Use</h3>
                 <p>
                   Shopify is a hassle free platform&sbquo; which is easy to set up and
@@ -127,8 +127,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="features_box">
+            <div className="col-sm-6 col-md-6">
+              <div className="features_box">
                 <h3>App Integrations</h3>
                 <p>
                   The platform boasts of amazing customization abilities as it
@@ -138,8 +138,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="features_box">
+            <div className="col-sm-6 col-md-6">
+              <div className="features_box">
                 <h3>Security and Reliability</h3>
                 <p>
                   Another benefit of Shopify is the security and reliability it
@@ -149,8 +149,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="features_box">
+            <div className="col-sm-6 col-md-6">
+              <div className="features_box">
                 <h3>Speed Optimization</h3>
                 <p>
                   Shopify has a reliable infrastructure along with optimized
@@ -160,8 +160,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="features_box">
+            <div className="col-sm-6 col-md-6">
+              <div className="features_box">
                 <h3>Mobile Responsiveness</h3>
                 <p>
                   Mobile responsiveness is the key to success of an e-commerce
@@ -171,8 +171,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="features_box">
+            <div className="col-sm-6 col-md-6">
+              <div className="features_box">
                 <h3>Shopify Speed Customization</h3>
                 <p>
                   Website performance represents all the technical and marketing
@@ -188,17 +188,17 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="d-services d-services1">
-        <div class="container">
+      <section className="d-services d-services1">
+        <div className="container">
           <h2>Shopify Ecommerce Development Services</h2>
-          <p class="text-center" style={{ padding: " 5px 0" }}>
+          <p className="text-center" style={{ padding: " 5px 0" }}>
             You can get various useful solutions for your e-commerce needs with
             our <b>Shopify Development Agency</b>. Our{" "}
             <b>Shopify development services</b> are designed to provide content,
             products and orders that allow you to take full control of the
             Shopify Store.{" "}
           </p>
-          <p class="text-center" style={{ padding: " 5px 0 30px" }}>
+          <p className="text-center" style={{ padding: " 5px 0 30px" }}>
             At Logicspice&sbquo; we offer a wide range of services including{" "}
             <b>Shopify Web Development Company</b>&sbquo; Shopify Custom Application
             Development&sbquo; Shopify Online Store System&sbquo; Customization&sbquo; Quality
@@ -206,9 +206,9 @@ const Page = () => {
             Improvement and Post-Final Management Services. Below is a list of
             our services.
           </p>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box progressive1">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box progressive1">
                 <h3>Shopping e-commerce development</h3>
                 <p>
                   Get comprehensive Shopify installation&sbquo; integration and
@@ -219,8 +219,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box responsive2">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box responsive2">
                 <h3>Shopify SEO</h3>
                 <p>
                   Our technical team provides search engine optimization
@@ -232,9 +232,9 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box userfriendly">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box userfriendly">
                 <h3>Shop for app development</h3>
                 <p>
                   Our Shopify Development team takes the guesswork out of
@@ -244,8 +244,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box uptodate">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box uptodate">
                 <h3>Shopify Maintenance Services</h3>
                 <p>
                   Whether it is a small bug or some big errors affects your e
@@ -256,9 +256,9 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box no-appstore">
+          <div className="row">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box no-appstore">
                 <h3>Show theme design and development</h3>
                 <p>
                   Our technical team of Logicspice mainly works on template
@@ -271,8 +271,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="service_box re-engaging">
+            <div className="col-sm-6 col-md-6">
+              <div className="service_box re-engaging">
                 <h3>Custom shop development</h3>
                 <p>
                   Share your ideas and get satisfactory Shopify development
@@ -285,11 +285,11 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="sasss-middle-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="sa_t">
+      <section className="sasss-middle-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="sa_t">
                 <p>
                   <b>Shopify app development</b> solution offered by Logicspice&sbquo;
                   can help you take full advantage of the site. From the outset&sbquo;
@@ -308,9 +308,9 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-6"></div>
+            <div className="col-md-6"></div>
           </div>
-          <div class="img_saaa">
+          <div className="img_saaa">
             <img
               src="/img/shopifydevelopment/shopify.jpg"
               alt="Shopify_Web_Development"
@@ -318,24 +318,24 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="new-why-choose-section sass_title">
-        <div class="container">
+      <section className="new-why-choose-section sass_title">
+        <div className="container">
           <h2>
             Why choose Logicspice <span>for Shopify Web App Development?</span>
           </h2>
-          <div class="row">
+          <div className="row">
             <div
-              class="col-sm-6 col-md-6 aos-init aos-animate"
+              className="col-sm-6 col-md-6 aos-init aos-animate"
               data-aos="fade-right"
             >
-              <div class="new_libraries">
+              <div className="new_libraries">
                 <i>
                   <img
                     src="/img/shopifydevelopment/new_development_icon1.png"
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Dedicated team of shopify experts</h3>
                   <p>
                     Our team of shopify web app developers are enriched with
@@ -346,9 +346,9 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div className="col-sm-6 col-md-6">
               <div
-                class="new_libraries aos-init aos-animate"
+                className="new_libraries aos-init aos-animate"
                 data-aos="fade-left"
               >
                 <i>
@@ -357,7 +357,7 @@ const Page = () => {
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Support and maintenance</h3>
                   <p>
                     Our team can assure you of direct management and support
@@ -368,9 +368,9 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div className="col-sm-6 col-md-6">
               <div
-                class="new_libraries aos-init aos-animate"
+                className="new_libraries aos-init aos-animate"
                 data-aos="fade-left"
               >
                 <i>
@@ -379,7 +379,7 @@ const Page = () => {
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Competitive price</h3>
                   <p>
                     Our team can look after and support customers throughout the
@@ -390,9 +390,9 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div className="col-sm-6 col-md-6">
               <div
-                class="new_libraries aos-init aos-animate"
+                className="new_libraries aos-init aos-animate"
                 data-aos="fade-right"
               >
                 <i>
@@ -401,7 +401,7 @@ const Page = () => {
                     alt="Web development"
                   />
                 </i>
-                <div class="new-libra-bx">
+                <div className="new-libra-bx">
                   <h3>Quality Assurance</h3>
                   <p>
                     We are responsible for providing consistent performance of{" "}
@@ -416,16 +416,16 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="testing-statred-section resources-statred-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12">
-              <h2 class="sas12">Enquiry Now</h2>
+      <section className="testing-statred-section resources-statred-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12">
+              <h2 className="sas12">Enquiry Now</h2>
               <a
                 id=""
                 data-toggle="modal"
                 data-target="#contactFix"
-                class="btn btn-primary sas13"
+                className="btn btn-primary sas13"
               >
                 Get a Free Quote
               </a>

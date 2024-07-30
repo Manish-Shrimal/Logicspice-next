@@ -38,22 +38,22 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="laravel-banner DevOpsBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="laravel-banner-txt">
+      <section className="laravel-banner DevOpsBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="laravel-banner-txt">
                 <h1>
-                  <strong class="LaravelBannerHadding">DevOps </strong>
+                  <strong className="LaravelBannerHadding">DevOps </strong>
                   Development Services
                 </h1>
-                <div class="LaravelText">
+                <div className="LaravelText">
                   Logicspice offers premier global DevOps services&sbquo;
                   providing robust and advanced solutions. We guarantee seamless
                   integration and swift delivery&sbquo; setting DevOps excellence
                   standards.
                 </div>
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -68,19 +68,19 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="page_img">
                 <img
                   src="/img/devopsdevelopment/devops-img.png"
                   alt="DevOps Development Services"
@@ -90,19 +90,19 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="laravel-descriptions cackphp-descriptions BigDataDescription DevOpsDescription">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions cackphp-descriptions BigDataDescription DevOpsDescription">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <img
                   src="/img/devopsdevelopment/devops-icon.png"
                   alt="DevOps Development Services"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>
                   <strong>DevOps</strong>
                   <br /> Development
@@ -141,28 +141,28 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-devlopments-services">
-        <div class="container">
+      <section className="laravel-devlopments-services">
+        <div className="container">
           <h2>
             <strong>DevOps</strong> Development Services
           </h2>
-          <div class="laravel-services-bx-top">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+          <div className="laravel-services-bx-top">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/containerization-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/containerization-icon-white.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Containerization</h3>
@@ -172,21 +172,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/cloud-automation-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/cloud-automation-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Cloud Automation</h3>
@@ -196,21 +196,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box7">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/deployment-automation-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/deployment-automation-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Deployment Automation</h3>
@@ -220,21 +220,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/infrastructure-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/infrastructure-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Infrastructure as Code</h3>
@@ -244,21 +244,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/infrastructure-automation-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/infrastructure-automation-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Infrastructure Automation</h3>
@@ -269,21 +269,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box6">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/monitoring-logging-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/monitoring-logging-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Monitoring and Logging Solutions</h3>
@@ -293,21 +293,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/security-compliance-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/security-compliance-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Security and Compliance</h3>
@@ -318,21 +318,21 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <img
-                        class="widout-hover"
+                        className="widout-hover"
                         src="/img/devopsdevelopment/configuration-management-icon.png"
                         alt="DevOps Development Services"
                       />
                       <img
-                        class="on-hover"
+                        className="on-hover"
                         src="/img/devopsdevelopment/configuration-management-white-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Configuration Management</h3>
@@ -347,22 +347,22 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section">
+        <div className="container">
           <h2>
             Core Features of Our <strong>DevOps</strong> Services
           </h2>
-          <div class="laravel_core_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/devopsdevelopment/operational-efficiency.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Operational Efficiency</h3>
                     <p>
                       Simplified workflows for faster&sbquo; error-free operations.
@@ -370,15 +370,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/devopsdevelopment/custom-infrastructure.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Custom Infrastructure</h3>
                     <p>
                       Bespoke solutions in tune with your DevOps services and
@@ -387,15 +387,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/devopsdevelopment/flexible-rates.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Flexible rates</h3>
                     <p>
                       The DevOps development can help you in getting more
@@ -404,29 +404,29 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/devopsdevelopment/scalable-architecture.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Scalable Architecture</h3>
                     <p>Infrastructure that grows with your needs.</p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/devopsdevelopment/real-time-reporting.png"
                       alt="img3"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Real-time Reporting</h3>
                     <p>
                       Immediate feedback for timely interventions and strategy
@@ -435,15 +435,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <img
                       src="/img/devopsdevelopment/diverse-expertise.png"
                       alt="img6"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Diverse Expertise</h3>
                     <p>
                       Our team is efficient across a broad spectrum of DevOps
@@ -457,22 +457,22 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section">
-        <div class="container">
+      <section className="laravel_choose_features_section">
+        <div className="container">
           <h2>
             Benefits of <strong>DevOps</strong> Development
           </h2>
-          <div class="laravel_choose_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+          <div className="laravel_choose_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <img
                       src="/img/devopsdevelopment/seamless-collaboration.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Seamless Collaboration</h3>
                     <p>
                       DevOps ensures unified operations&sbquo; leading to efficient
@@ -481,15 +481,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <img
                       src="/img/devopsdevelopment/swift-market.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Swift Market Launch</h3>
                     <p>
                       Frequent releases ensure your products hit the market
@@ -498,15 +498,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 " data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <img
                       src="/img/devopsdevelopment/peak-performance.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Peak Performance Levels</h3>
                     <p>
                       With DevOps&sbquo; systems are stable and reliable&sbquo; minimizing
@@ -515,15 +515,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <img
                       src="/img/devopsdevelopment/budget-friendly.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Budget-Friendly Fixes</h3>
                     <p>
                       Catch issues early&sbquo; leading to cost-effective solutions
@@ -532,15 +532,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <img
                       src="/img/devopsdevelopment/easy-scalability.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Easy Scalability</h3>
                     <p>
                       Adapting to growing demands is effortless&sbquo; as DevOps
@@ -549,15 +549,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <img
                       src="/img/devopsdevelopment/automated-quick.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <h3>Automated & Quick</h3>
                     <p>
                       A single DevOps pipeline enhances speed with integrated
@@ -570,23 +570,23 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="ecommerce_faq_section NewFaqDesignSection">
-        <div class="container">
-          <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
-              <div class="col-md-5">
-                <h4 class="title_main">
+      <section className="ecommerce_faq_section NewFaqDesignSection">
+        <div className="container">
+          <div className="row">
+            <div className=" row ecommerce__Quick_FAQ">
+              <div className="col-md-5">
+                <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
-                <div class="FaqImgBx">
+                <div className="FaqImgBx">
                   <img
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
                 </div>
               </div>
-              <div class="col-md-7">
+              <div className="col-md-7">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="What is DevOps&sbquo; and why are companies using it more nowadays?"

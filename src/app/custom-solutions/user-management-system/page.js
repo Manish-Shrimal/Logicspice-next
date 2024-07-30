@@ -349,8 +349,8 @@ const Page = () => {
                 </li>
               </ul>
 
-              <div class="costomer_tab tab-pane rj">
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+              <div className="costomer_tab tab-pane rj">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {sellerTab && (
                     <>
                       <div className="UserManagementFeatures">
@@ -529,7 +529,7 @@ const Page = () => {
                     </>
                   )}
                 </div>
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
                   {buyerTab && (
                     <>
                       <div className="UserManagementFeatures">

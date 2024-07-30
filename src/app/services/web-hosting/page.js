@@ -38,11 +38,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="laravel-banner cackphp-banner web-hosting-banner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="laravel-banner-txt">
+      <section className="laravel-banner cackphp-banner web-hosting-banner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="laravel-banner-txt">
                 <h1>Web Hosting</h1>
                 <h6>
                   Hosting services tailored to your exact requirement
@@ -56,7 +56,7 @@ const Page = () => {
                   <li>SSL Certificate</li>
                   <li>Fast & Secure</li>
                 </ul>
-                <div class="laravel-anquire">
+                <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -71,20 +71,22 @@ const Page = () => {
                     href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                     target="_blank"
                   >
-                    <div class="WhatsappIcon">
-                      <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                        <div class="coccoc-alo-ph-circle"></div>
-                        <div class="coccoc-alo-ph-circle-fill"></div>
-                        <div class="coccoc-alo-ph-img-circle"></div>
+                    <div className="WhatsappIcon">
+                      <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                        <div className="coccoc-alo-ph-circle"></div>
+                        <div className="coccoc-alo-ph-circle-fill"></div>
+                        <div className="coccoc-alo-ph-img-circle"></div>
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="page_img">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="page_img">
                 <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                   src="/img/webhosting/web-hosting-banner-img.png"
                   alt="Web Hosting"
                 />
@@ -94,19 +96,21 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-descriptions web-hosting-descriptions">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-              <div class="laravel_img">
+      <section className="laravel-descriptions web-hosting-descriptions">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+              <div className="laravel_img">
                 <Image
+                  width={350}
+                  height={500 / (100 / 100)}
                   src="/img/webhosting/web-hosting-logo-img.png"
                   alt="Web Hosting Services"
                 />
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 pull-left">
-              <div class="laravel-descriptions-bx">
+            <div className="col-sm-6 col-md-6 pull-left">
+              <div className="laravel-descriptions-bx">
                 <h2>Web Hosting</h2>
                 <p>
                   Our top-rated web hosts will provide you access to the
@@ -114,25 +118,26 @@ const Page = () => {
                 </p>
                 <p>
                   We offer you reliable web hosting to establish a presence on
-                  the web. With the middle ground&sbquo; web hosting services range
-                  from completely free to extremely pricey. Your hosting needs&sbquo;
-                  as well as your budget&sbquo; will determine which package is best
-                  for you. With the correct hosting package&sbquo; you&apos;ll have
-                  access to the resources you need to keep your site loading
-                  swiftly and consistently for your visitors.{" "}
+                  the web. With the middle ground&sbquo; web hosting services
+                  range from completely free to extremely pricey. Your hosting
+                  needs&sbquo; as well as your budget&sbquo; will determine
+                  which package is best for you. With the correct hosting
+                  package&sbquo; you&apos;ll have access to the resources you
+                  need to keep your site loading swiftly and consistently for
+                  your visitors.{" "}
                 </p>
                 <p>
-                  To illustrate&sbquo; consider the vast number of companies that now
-                  rely heavily on their websites for sales and new clientele.
-                  Unreliable websites won&apos;t keep visitors waiting&sbquo;
-                  they&apos;ll leave for a site that works well and meets their
-                  needs easily.
+                  To illustrate&sbquo; consider the vast number of companies
+                  that now rely heavily on their websites for sales and new
+                  clientele. Unreliable websites won&apos;t keep visitors
+                  waiting&sbquo; they&apos;ll leave for a site that works well
+                  and meets their needs easily.
                 </p>
                 <p>
                   Many companies have benefited from our Web hosting services
-                  and business-focused approach to web development&sbquo; allowing
-                  them to launch with an effective interface and powerful
-                  business system.
+                  and business-focused approach to web development&sbquo;
+                  allowing them to launch with an effective interface and
+                  powerful business system.
                 </p>
               </div>
             </div>
@@ -140,32 +145,36 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel-devlopments-services">
-        <div class="container">
+      <section className="laravel-devlopments-services">
+        <div className="container">
           <h2>Web Hosting Services</h2>
-          <p class="laravel_core_sub2">
+          <p className="laravel_core_sub2">
             It would be best if you had a reliable web host like Logicspice to
             put your content on the web for personal or professional reasons.
-            Dependability&sbquo; safety&sbquo; and a hassle-free experience are guaranteed
-            with any of our plans.
+            Dependability&sbquo; safety&sbquo; and a hassle-free experience are
+            guaranteed with any of our plans.
           </p>
-          <div class="laravel-services-bx-top">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box1">
+          <div className="laravel-services-bx-top">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon1.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon1.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Shared Hosting</h3>
@@ -176,21 +185,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon2.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon2.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Reseller Hosting</h3>
@@ -201,21 +214,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box3">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon3.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon3.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Email Hosting</h3>
@@ -226,21 +243,25 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box4">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon4.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon4.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>VPS</h3>
@@ -250,21 +271,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box5">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon5.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon5.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Dedicated Servers</h3>
@@ -274,21 +299,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box6">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon6.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon6.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Wordpress Hosting</h3>
@@ -299,21 +328,25 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box8">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon7.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon7.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>SSL Certificate</h3>
@@ -324,29 +357,34 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="laravel_service_box ">
-                  <div class="laravel-services-icon laravel_service_box2">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="laravel_service_box ">
+                  <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
-                        class="widout-hover"
+                        width={80}
+                        height={100}
+                        className="widout-hover"
                         src="/img/webhosting/web-hosting-icon8.png"
                         alt="Web Hosting Services"
                       />
                       <Image
-                        class="on-hover"
+                        width={80}
+                        height={100}
+                        className="on-hover"
                         src="/img/webhosting/web-hosting-white-icon8.png"
                         alt="Web Hosting Services"
                       />
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </i>
                   </div>
                   <h3>Website Backup Services</h3>
                   <p>
                     {" "}
                     We provide remote backup service. We protect website
-                    content&sbquo; emails&sbquo; customer data&sbquo; sales and financial details&sbquo;
-                    and inventory records on a regular basis.
+                    content&sbquo; emails&sbquo; customer data&sbquo; sales and
+                    financial details&sbquo; and inventory records on a regular
+                    basis.
                   </p>
                 </div>
               </div>
@@ -355,80 +393,89 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_core_features_section cackphp_core_features_section">
-        <div class="container">
+      <section className="laravel_core_features_section cackphp_core_features_section">
+        <div className="container">
           <h2>Logicspice Web Hosting Features</h2>
-          <p class="laravel_core_sub">
+          <p className="laravel_core_sub">
             Web Hosting has long been the preferred option for many
             professionals and businesses.
           </p>
-          <div class="laravel_core_features_bx">
-            <div class="row">
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+          <div className="laravel_core_features_bx">
+            <div className="row">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/webhosting/superlative_icon.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Superlative Results</h3>
                     <p>
-                      We are worried about your website&apos;s speed. So&sbquo; we use
-                      the most cutting-edge technology to run your website&sbquo; such
-                      as HTTP/3 and IPv6&sbquo; as well as LiteSpeed web servers and a
-                      content delivery network (CDN).
+                      We are worried about your website&apos;s speed. So&sbquo;
+                      we use the most cutting-edge technology to run your
+                      website&sbquo; such as HTTP/3 and IPv6&sbquo; as well as
+                      LiteSpeed web servers and a content delivery network
+                      (CDN).
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/webhosting/complete_safety_icon.png"
                       alt="img2"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Complete Safety </h3>
                     <p>
                       We prioritize web server safety. Our Linux container -
-                      based environment&sbquo; full DDoS protection&sbquo; automated website
-                      backups&sbquo; auto-updates&sbquo; and in-house designed setup will
-                      keep your website safe.
+                      based environment&sbquo; full DDoS protection&sbquo;
+                      automated website backups&sbquo; auto-updates&sbquo; and
+                      in-house designed setup will keep your website safe.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/webhosting/business_covered_icon.png"
                       alt="img4"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Got your Business Covered</h3>
                     <p>
                       In order to accommodate your expanding business and
-                      storage needs&sbquo; Logicspice offers the option to upgrade
-                      your current plan for an extra cost.
+                      storage needs&sbquo; Logicspice offers the option to
+                      upgrade your current plan for an extra cost.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/webhosting/availability_help.png"
                       alt="img6"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Constant Availability of Help</h3>
                     <p>
                       You may expect a quick response to your support tickets
@@ -439,15 +486,17 @@ const Page = () => {
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/webhosting/regulated_icon.png"
                       alt="img5"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Maximum Regulated</h3>
                     <p>
                       LogicSpice will keep your code and website safe from harm.
@@ -458,54 +507,68 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
                     <Image
+                      width={50}
+                      height={100}
                       src="/img/webhosting/facilitated_wordpress_icon.png"
                       alt="img3"
                     />
                   </div>
-                  <div class="laravel_core_features_detail">
+                  <div className="laravel_core_features_detail">
                     <h3>Facilitated Wordpress </h3>
                     <p>
                       Using or managing a WordPress site on the WordPress
                       hosting platform is unnecessary. With features like
-                      instant WordPress setup&sbquo; regular backups&sbquo; and expert
-                      assistance&sbquo; your WordPress site is in safe hands.
+                      instant WordPress setup&sbquo; regular backups&sbquo; and
+                      expert assistance&sbquo; your WordPress site is in safe
+                      hands.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-sm-6 col-md-6" data-aos="fade-left">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
-                    <Image src="/img/webhosting/staging_icon.png" alt="img6" />
+              <div className="col-sm-6 col-md-6" data-aos="fade-left">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
+                    <Image
+                      width={50}
+                      height={100}
+                      src="/img/webhosting/staging_icon.png"
+                      alt="img6"
+                    />
                   </div>
-                  <div class="laravel_core_features_detail new-hit">
+                  <div className="laravel_core_features_detail new-hit">
                     <h3>Wordpress Staging</h3>
                     <p>
                       It&apos;s not just about having a WordPress site managed
                       for you. Logicspice provides a staging environment for
                       your WordPress live site. You may create a duplicate of
-                      your website&sbquo; experiment with layouts&sbquo; content&sbquo; and more&sbquo;
-                      and only publish when ready.
+                      your website&sbquo; experiment with layouts&sbquo;
+                      content&sbquo; and more&sbquo; and only publish when
+                      ready.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6" data-aos="fade-right">
-                <div class="laravel_core_featureBox">
-                  <div class="laravel_core_features_img">
-                    <Image src="/img/webhosting/domain_icon.png" alt="img6" />
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="laravel_core_featureBox">
+                  <div className="laravel_core_features_img">
+                    <Image
+                      width={50}
+                      height={100}
+                      src="/img/webhosting/domain_icon.png"
+                      alt="img6"
+                    />
                   </div>
-                  <div class="laravel_core_features_detail new-hit">
+                  <div className="laravel_core_features_detail new-hit">
                     <h3>Domain Associated Email Address</h3>
                     <p>
                       Logicspice offers 3 email addresses associated with the
-                      cPanel hosting&sbquo; which can be increased as per specific
-                      requirements.
+                      cPanel hosting&sbquo; which can be increased as per
+                      specific requirements.
                     </p>
                   </div>
                 </div>
@@ -514,12 +577,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="ecommerce_faq_section JobBoardFaqSection">
-        <div class="container">
-          <div class="row">
-            <div class=" row ">
-              <div class="col-md-12 ecommerce__Quick_FAQ">
-                <h4 class="title_main">Quick FAQ</h4>
+      <section className="ecommerce_faq_section JobBoardFaqSection">
+        <div className="container">
+          <div className="row">
+            <div className=" row ">
+              <div className="col-md-12 ecommerce__Quick_FAQ">
+                <h4 className="title_main">Quick FAQ</h4>
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="01. What is web hosting ?"
@@ -541,15 +604,15 @@ const Page = () => {
                     <p>
                       Logicspice offers different types of hosting and provides
                       varying amounts of disc space for websites. Shared&sbquo;
-                      dedicated&sbquo; virtual private server&sbquo; and reseller hosting
-                      are the most common kinds of service. The server
-                      technology employed&sbquo; the extent of administration and the
-                      availability of ancillary services all play a part in
-                      setting these plans apart.
+                      dedicated&sbquo; virtual private server&sbquo; and
+                      reseller hosting are the most common kinds of service. The
+                      server technology employed&sbquo; the extent of
+                      administration and the availability of ancillary services
+                      all play a part in setting these plans apart.
                     </p>
                     <p>
-                      Today&sbquo; you may choose from thousands of unique web hosting
-                      packages from hundreds of different web hosts.
+                      Today&sbquo; you may choose from thousands of unique web
+                      hosting packages from hundreds of different web hosts.
                     </p>
                   </MDBAccordionItem>
 
@@ -558,19 +621,22 @@ const Page = () => {
                     collapseId="flush-collapse3"
                   >
                     <p>
-                      When you type a website address into your browser&sbquo; such as{" "}
+                      When you type a website address into your browser&sbquo;
+                      such as{" "}
                       <a href="https://www.logicspice.com" target="_blank">
                         https://www.logicspice.com
                       </a>
-                      &sbquo; the browser makes a domain name lookup&sbquo; in this case&sbquo; to
-                      the Logicspice.com servers. To access the data stored
-                      there&sbquo; a user launches their browser.
+                      &sbquo; the browser makes a domain name lookup&sbquo; in
+                      this case&sbquo; to the Logicspice.com servers. To access
+                      the data stored there&sbquo; a user launches their
+                      browser.
                     </p>
                     <p>
-                      Every website you frequent&sbquo; even those selling goods&sbquo; must
-                      have its domain name and space on a web server. The domain
-                      name is like the physical location&sbquo; whereas the hosting is
-                      like the building itself.
+                      Every website you frequent&sbquo; even those selling
+                      goods&sbquo; must have its domain name and space on a web
+                      server. The domain name is like the physical
+                      location&sbquo; whereas the hosting is like the building
+                      itself.
                     </p>
                   </MDBAccordionItem>
 
@@ -581,15 +647,16 @@ const Page = () => {
                     <p>
                       Users&apos; impressions of your website are the result of
                       assembling a large number of databases. Like most web
-                      hosts&sbquo; Logicspice hosts your website&apos;s files and
-                      databases on a shared server.
+                      hosts&sbquo; Logicspice hosts your website&apos;s files
+                      and databases on a shared server.
                     </p>
                     <p>
                       Whenever you enroll for a dedicated hosting plan with
                       Logicspice&sbquo; you&apos;ll be given access to your
                       account&apos;s control panel. The admin panel gives you
-                      complete command over your website&sbquo; allowing you to manage
-                      anything from domains and hosting to data and files.
+                      complete command over your website&sbquo; allowing you to
+                      manage anything from domains and hosting to data and
+                      files.
                     </p>
                   </MDBAccordionItem>
 
@@ -600,11 +667,12 @@ const Page = () => {
                     <p>
                       Your website cannot go live and become accessible to the
                       public without a hosting plan. Building a website without
-                      even a hosting service is doable&sbquo; but beginners should
-                      probably avoid doing so. If you&apos;re unsure how to
-                      configure your personal computer to function as a hosting
-                      server&sbquo; you may save money&sbquo; time&sbquo; and frustration by using
-                      Logicspice Web Hosting Services.
+                      even a hosting service is doable&sbquo; but beginners
+                      should probably avoid doing so. If you&apos;re unsure how
+                      to configure your personal computer to function as a
+                      hosting server&sbquo; you may save money&sbquo;
+                      time&sbquo; and frustration by using Logicspice Web
+                      Hosting Services.
                     </p>
                   </MDBAccordionItem>
 
@@ -616,12 +684,12 @@ const Page = () => {
                       The answer is yes. You can purchase domain names from a
                       different registrar and then direct them to your
                       Logicspice server. Suppose you want to have your domain
-                      and website hosted by the same company&sbquo; which we highly
-                      recommend for convenience and easy troubleshooting. In
-                      that case&sbquo; you can transfer your domain name to Logicspice
-                      without losing your current site&apos;s traffic. Get in
-                      touch with our helpful support staff&sbquo;, and they will be
-                      glad to help.
+                      and website hosted by the same company&sbquo; which we
+                      highly recommend for convenience and easy troubleshooting.
+                      In that case&sbquo; you can transfer your domain name to
+                      Logicspice without losing your current site&apos;s
+                      traffic. Get in touch with our helpful support
+                      staff&sbquo;, and they will be glad to help.
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
@@ -630,7 +698,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div class="col-sm-12 main_btn_hire WebHireBtn">
+      <div className="col-sm-12 main_btn_hire WebHireBtn">
         <div className="btn btn-primary" onClick={openModal}>
           <button>Enquire Now</button>
           {
@@ -648,7 +716,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

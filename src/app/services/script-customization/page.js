@@ -29,20 +29,20 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="modifications">
-        <div class="container">
+      <section className="modifications">
+        <div className="container">
           <h1>Script Modification</h1>
-          <p class="txt-hdng">
+          <p className="txt-hdng">
             We are ready to do custom modification on all our softwares
           </p>
-          <div class="row">
-            <div class="col-md-6 text-center">
+          <div className="row">
+            <div className="col-md-6 text-center">
               <img
                 src="/img/scriptcustomization/imageScriptModifications.png"
                 alt="script modification"
               />
             </div>
-            <div class="col-md-6">
+            <div className="col-md-6">
               <p>
                 Our all the scripts are ready to go for custom modification to
                 meet your business requirement. We are well aware that every
@@ -62,15 +62,15 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="customization">
-        <div class="container">
+      <section className="customization">
+        <div className="container">
           <h2>How the script customization works?</h2>
 
-          <div class="step-customized">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="step1">
-                  <div class="step-content">
+          <div className="step-customized">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="step1">
+                  <div className="step-content">
                     <p data-aos="fade-right">
                       Get in touch with us and share your requirement
                     </p>
@@ -78,11 +78,11 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6 col-sm-offset-6">
-                <div class="step2">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6 col-sm-offset-6">
+                <div className="step2">
+                  <div className="step-content">
                     <p data-aos="fade-left">
                       We will discuss your project requirements in detail.
                     </p>
@@ -90,10 +90,10 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="step1">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="step1">
+                  <div className="step-content">
                     <p data-aos="fade-right">
                       With some token money&sbquo; documentation will be done.
                     </p>
@@ -101,11 +101,11 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6 col-sm-offset-6">
-                <div class="step2">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6 col-sm-offset-6">
+                <div className="step2">
+                  <div className="step-content">
                     <p data-aos="fade-left">
                       We will share our proposal with you.
                     </p>
@@ -113,10 +113,10 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="step1">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="step1">
+                  <div className="step-content">
                     <p data-aos="fade-right">
                       With your approval on the proposal&sbquo; we will work on coding
                       milestone by milestone.
@@ -125,12 +125,12 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6"></div>
+            <div className="row">
+              <div className="col-sm-6"></div>
 
-              <div class="col-sm-6 col-sm-offset-6">
-                <div class="step2">
-                  <div class="step-content">
+              <div className="col-sm-6 col-sm-offset-6">
+                <div className="step2">
+                  <div className="step-content">
                     <p data-aos="fade-left">
                       We will ask you to test customized script on our demo
                       server.
@@ -139,10 +139,10 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="step1">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="step1">
+                  <div className="step-content">
                     <p data-aos="fade-right">
                       We will fix bugs&sbquo; issues if any occurs.
                     </p>
@@ -150,11 +150,11 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6 col-sm-offset-6">
-                <div class="step2">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6 col-sm-offset-6">
+                <div className="step2">
+                  <div className="step-content">
                     <p data-aos="fade-left">
                       Will seek your approval and payment
                     </p>
@@ -162,10 +162,10 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="step1">
-                  <div class="step-content">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="step1">
+                  <div className="step-content">
                     <p data-aos="fade-right">
                       We will deliver and install the application code.
                     </p>
@@ -175,13 +175,13 @@ const Page = () => {
             </div>
           </div>
 
-          <div class="custo_btn text-center">
-            <a class="btn btn-primary">Ready Made Softwares</a>
+          <div className="custo_btn text-center">
+            <a className="btn btn-primary">Ready Made Softwares</a>
           </div>
         </div>
       </section>
-      <section class="software_custom">
-        <div class="container">
+      <section className="software_custom">
+        <div className="container">
           <h2>Custom Mobile & Web Applications</h2>
           <p>
             If you did not found any suitable ready made solution for your
@@ -194,10 +194,10 @@ const Page = () => {
             quality product to you. Get in touch with us for best solution for
             your business.
           </p>
-          <div class="custo_btn text-center">
+          <div className="custo_btn text-center">
             <a
               href="https://www.logicspice.com/custom-solutions/"
-              class="btn btn-primary"
+              className="btn btn-primary"
             >
               Custom Solutions
             </a>

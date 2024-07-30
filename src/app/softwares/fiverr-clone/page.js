@@ -2834,7 +2834,7 @@ const Page = () => {
                         <h3>WhatsApp Clone App</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={250}
+                            width={150}
                             height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone"
@@ -2861,7 +2861,7 @@ const Page = () => {
                         <h3>Crowdfunding</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={250}
+                            width={280}
                             height={100}
                             src="/img/jobboard/crowdfunding_new.png"
                             alt="Crowdfunding Script"
@@ -2890,7 +2890,7 @@ const Page = () => {
                         <h3>Freelancer Clone</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={250}
+                            width={243}
                             height={100}
                             src="/img/jobboard/freelancer_logo_new.png"
                             alt="Freelancer Clone"

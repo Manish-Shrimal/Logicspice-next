@@ -37,15 +37,15 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div class="top-head-custom point-sale">
-        <div class="container">
-          <div class="col-md-8">
-            <div class="head-enquiry">
+      <div className="top-head-custom point-sale">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="head-enquiry">
               <h1>Custom Point of Sale Software Development</h1>
               <p>
               On demand mobile App or Web development solution for your business needs.
               </p>
-              <p class="sml_txt">
+              <p className="sml_txt">
               Rapid customization, because of our team's past experience over similar solutions.
               </p>
 
@@ -63,31 +63,31 @@ const Page = () => {
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
               >
-                <div class="WhatsappIcon WhatsappIconCustom">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
+                <div className="WhatsappIcon WhatsappIconCustom">
+                  <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div className="coccoc-alo-ph-circle"></div>
+                    <div className="coccoc-alo-ph-circle-fill"></div>
+                    <div className="coccoc-alo-ph-img-circle"></div>
                   </div>
                 </div>
               </Link>
             </div>
-            <ul class="head-feature">
+            <ul className="head-feature">
                 <li>Track Sales</li>
                 <li>Work Offline</li>
                 <li>Build Reports</li>
                 <li>Accept Payments</li>
 
             </ul>
-            <div aria-label="breadcrumb" class="my-breadcrumb ">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+            <div aria-label="breadcrumb" className="my-breadcrumb ">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <Link href="/custom-solutions">Custom Solutions</Link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                 Point of Sale Software
                 </li>
               </ol>
@@ -95,12 +95,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="BFC_logic">
-        <div class="container">
+      <div className="BFC_logic">
+        <div className="container">
           <h2>Why logicspice is Best For Custom App/Web Development?</h2>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -116,8 +116,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -133,8 +133,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -149,8 +149,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -168,12 +168,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="SBC_logic">
-    <div class="container">
+      <div className="SBC_logic">
+    <div className="container">
         <h2>Best POS Software</h2>
     </div>
-    <div class="inner_content_SBG"  >
-        <div class="container">
+    <div className="inner_content_SBG"  >
+        <div className="container">
             <p>Point of sale system have completely redefined the way you shop by allowing the customers to pay directly through debit and credit cards. It comprises of a cash 
                 register, card swiper, a printer for printing receipts and a cash drawer. It&apos;s a place where sales take place more like a checkout counter which has made the 
                 handling of transactions easier.</p>
@@ -191,14 +191,14 @@ const Page = () => {
     </div>
 </div>
    
-      {/* <div class="demand_app">
-        <div class="container">
+      {/* <div className="demand_app">
+        <div className="container">
           <h2>Key Benefits of Loan System On Demand Development</h2>
 
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -206,18 +206,18 @@ const Page = () => {
                     alt="img5"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Loan Application</h3>
                   <p>
                     borrower can create a loan application which will help him
                     get the loan from Lender
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -225,18 +225,18 @@ const Page = () => {
                     alt="img6"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Discreet Procedure </h3>
                   <p>
                     Borrowers can easily find lenders over the website without
                     any intervention
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -244,17 +244,17 @@ const Page = () => {
                     alt="img7"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Application Management</h3>
                   <p>
                     Borrower can manage all the applications that they have
                     created and track their loan status
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
-            <div class="col-sm-4 center_image">
+            <div className="col-sm-4 center_image">
               <Image
                 height={100}
                 width={250}
@@ -262,9 +262,9 @@ const Page = () => {
                 alt="img8"
               />
             </div>
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>More Secure</h3>
                   <p>
                     {" "}
@@ -272,7 +272,7 @@ const Page = () => {
                     can decide if they are a safe investment
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -280,11 +280,11 @@ const Page = () => {
                     alt="img9"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Easy Browsing</h3>
                   <p>
                     {" "}
@@ -292,7 +292,7 @@ const Page = () => {
                     that they find the correct borrower to lend money to
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -300,11 +300,11 @@ const Page = () => {
                     alt="img10"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Messaging</h3>
                   <p>
                     {" "}
@@ -312,7 +312,7 @@ const Page = () => {
                     loans to discuss the terms of transaction in detail
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -320,37 +320,37 @@ const Page = () => {
                     alt="img11"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
           </div>
         </div>
       </div> */}
-      <div class="demand_app">
-    <div class="container">
+      <div className="demand_app">
+    <div className="container">
         <h2>Retail POS Software For Any of These Businesses</h2>
-        <div class="pos-soft">
-            <div class="row">
+        <div className="pos-soft">
+            <div className="row">
                 
-                <div class="col-md-6">
+                <div className="col-md-6">
                     <ul>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Fashion Boutiques</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Hardware Stores</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Sports &amp; Outdoors</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Food &amp; Drink Retail</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Health &amp; Beauty Retail</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Bike Shops</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Electronics</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Shoe Stores</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Fitness &amp; Supplements</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Vape Stores</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Toys &amp; Hobbies</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Jewelry</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Pet Store</li>
-                        <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Non Profit</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Fashion Boutiques</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Hardware Stores</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Sports &amp; Outdoors</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Food &amp; Drink Retail</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Health &amp; Beauty Retail</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Bike Shops</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Electronics</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Shoe Stores</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Fitness &amp; Supplements</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Vape Stores</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Toys &amp; Hobbies</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Jewelry</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Pet Store</li>
+                        <li><i className="fa fa-arrow-circle-right" aria-hidden="true"></i> Non Profit</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div className="col-md-6">
                     <Image
                           height={100}
                           width={60} src="/img/customsolutions/pos.png" alt="Delivery Status"/>
@@ -359,16 +359,16 @@ const Page = () => {
         </div>
     </div>
 </div>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="titlesettop titlesettop_mar">
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="titlesettop titlesettop_mar">
             Custom Online Booking App/Web Development Features
           </h2>
 
-          <div class="features-tab">
-            <div class="clearfix">
-              <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">
+          <div className="features-tab">
+            <div className="clearfix">
+              <ul className="nav nav-tabs" role="tablist">
+                <li role="presentation" className="active">
                   <Link
                     href="#features-car1"
                     aria-controls="features-car"
@@ -380,12 +380,12 @@ const Page = () => {
                 </li>
               </ul>
 
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
+              <div className="tab-content">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
 
-                  {/* <div class="row">
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                  {/* <div className="row">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -398,7 +398,7 @@ const Page = () => {
                           Name, location, and can create a new loan application.
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -412,8 +412,8 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -426,7 +426,7 @@ const Page = () => {
                           and check the status of the application online.{" "}
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -440,8 +440,8 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -454,7 +454,7 @@ const Page = () => {
                           amount to borrow, loan purpose, and locan duration.
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -468,8 +468,8 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -484,23 +484,23 @@ const Page = () => {
                       </div>
                     </div>
                   </div> */}
-                  <div class="row">
-                        <div class="col-sm-3">
-                            <div class="ftr-detail">
+                  <div className="row">
+                        <div className="col-sm-3">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/sales-tracking.png" alt="Delivery Status"/>
                                 <h3>Sales tracking management</h3>
                                 <p> Our POS software help you to keep a track on your sales with ease and aplomb.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/sales-operations.png" alt="Smart Routing"/>
                                 <h3>Sales Operations</h3>
                                 <p>Make easy for customers for returns, refunds and email receipts by using this software.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/payments.png" alt="Automated Dispatching"/>
@@ -508,22 +508,22 @@ const Page = () => {
                                 <p>Accept payment through debit card, credit card and gift cards and go cashless with this digital system.</p>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="ftr-detail">
+                        <div className="col-sm-3">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/work-offline.png" alt="Partial & Failed Delivery Status"/>
                                 <h3>Work Offline</h3>
                                 <p>Continue your sales when internet goes down, it will automatically resync your sales when online.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/manage-product.png" alt="Real Time Information"/>
                                 <h3>Manage Product</h3>
                                 <p>Add products, Edit products, remove products, Edit title, include images & description.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/orders.png" alt="Push Notifications"/>
@@ -531,23 +531,23 @@ const Page = () => {
                                 <p>Use automated reordering, restocking, reorder points to manage everything automatically without any hassle.</p>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div className="col-sm-3">
                             
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/customers.png" alt="Admin Control"/>
                                 <h3>Customers</h3>
                                 <p>View purchase history, balance and make a group of those customers to communicate with them in future.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/users.png" alt="Ratings & Reviews"/>
                                 <h3>Users</h3>
                                 <p>Allow to make user account so they can manage their purchase and account details.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/build-reports.png" alt="Deliverer Account"/>
@@ -556,23 +556,23 @@ const Page = () => {
                             </div>
                             
                         </div>
-                        <div class="col-sm-3">
+                        <div className="col-sm-3">
                             
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/sale-target.png" alt="Track Sales"/>
                                 <h3>Sale Target</h3>
                                 <p>Set goals of selling and monitor the date that how much you have achieved at the end of month.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/add-ons.png" alt="Easy to Use"/>
                                 <h3>Add-Ons</h3>
                                 <p>Extend your operations by adding more add-ons on this POS software to give more ease to customers.</p>
                             </div>
-                            <div class="ftr-detail">
+                            <div className="ftr-detail">
                                 <Image
                           height={100}
                           width={60} src="/img/customsolutions/multi-currency.png" alt="Deliveries on Time"/>
@@ -588,25 +588,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div class="app_solution">
-        <div class="container">
+      <div className="app_solution">
+        <div className="container">
           <h2>Custom CRM App Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
       </div>
 
       {/*  */}
-      <section class="ecommerce_faq_section CustomSolutionFaqSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 class="title_main">Quick FAQ</h4>
+      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12 ecommerce__Quick_FAQ">
+                    <h4 className="title_main">Quick FAQ</h4>
                     <MDBAccordion v-model="activeItem" borderless>
               <MDBAccordionItem
                 headerTitle="How can a customer search for businesses around his location?"
@@ -719,10 +719,10 @@ const Page = () => {
         </div>
     </section>
       
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

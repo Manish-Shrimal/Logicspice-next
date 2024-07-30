@@ -26,10 +26,10 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div class="top-head-custom e-commerce DefoutEcommerceBanner E-commerceDevelopmentBanner">
-        <div class="container">
-          <div class="col-md-8">
-            <div class="head-enquiry">
+      <div className="top-head-custom e-commerce DefoutEcommerceBanner E-commerceDevelopmentBanner">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="head-enquiry">
               <h1>E-Commerce Custom Development</h1>
               <p>
                 Our custom Ecommerce mobile app development and web application
@@ -38,16 +38,16 @@ const Page = () => {
                 through a web application or mobile apps.{" "}
               </p>
             </div>
-            <ul class="head-feature">
+            <ul className="head-feature">
               <li>Flexible & robust system</li>
               <li>Easy to use and comprehensive</li>
               <li>An award winning platform for a successful business</li>
               <li>Sparkle your business with our ecommerce solution</li>
             </ul>
-            <div class="JewelleryBtbBx">
+            <div className="JewelleryBtbBx">
               <a
                 id=""
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={() => openEnquiryModal()}
               >
                 Enquire Now
@@ -57,24 +57,24 @@ const Page = () => {
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
               >
-                <div class="WhatsappIcon">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
+                <div className="WhatsappIcon">
+                  <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div className="coccoc-alo-ph-circle"></div>
+                    <div className="coccoc-alo-ph-circle-fill"></div>
+                    <div className="coccoc-alo-ph-img-circle"></div>
                   </div>
                 </div>
               </a>
             </div>
-            <div aria-label="breadcrumb" class="my-breadcrumb ">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
+            <div aria-label="breadcrumb" className="my-breadcrumb ">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li class="breadcrumb-item">
+                <li className="breadcrumb-item">
                   <Link href="/custom-solutions">Custom Solutions</Link>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   E-Commerce Custom
                 </li>
               </ol>
@@ -83,24 +83,24 @@ const Page = () => {
         </div>
       </div>
 
-      <div class="BFC_logic eCommerceBestAppLogic">
-        <div class="container">
-          <div class="eCommerceBestAppWeb">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="sr-our-expertise">
+      <div className="BFC_logic eCommerceBestAppLogic">
+        <div className="container">
+          <div className="eCommerceBestAppWeb">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="sr-our-expertise">
                   <h2>
                     Why logicspice is Best For Custom App/Web Development?
                   </h2>
-                  <p class="title-text">
+                  <p className="title-text">
                     Whether you are expanding a brick-and-mortar store, looking
                     to find an enterprise-level solution, or even starting a
                     business from scratch, your choice of eCommerce app
                     development services has a huge impact on the profitability
                     and stability of your business.
                   </p>
-                  <ul class="sr1-whyuslist">
-                    <li class="why1">
+                  <ul className="sr1-whyuslist">
+                    <li className="why1">
                       <i>
                         <Image
                           width={32}
@@ -111,7 +111,7 @@ const Page = () => {
                       </i>
                       Ready to Go for Development
                     </li>
-                    <li class="why2">
+                    <li className="why2">
                       <i>
                         <Image
                           width={32}
@@ -122,7 +122,7 @@ const Page = () => {
                       </i>
                       Support & Maintenance
                     </li>
-                    <li class="why3">
+                    <li className="why3">
                       <i>
                         <Image
                           width={32}
@@ -133,7 +133,7 @@ const Page = () => {
                       </i>
                       Cost- Efficient
                     </li>
-                    <li class="why4">
+                    <li className="why4">
                       <i>
                         <Image
                           width={32}
@@ -144,7 +144,7 @@ const Page = () => {
                       </i>
                       Future Extendibility
                     </li>
-                    <li class="why5">
+                    <li className="why5">
                       <i>
                         <Image
                           width={32}
@@ -155,7 +155,7 @@ const Page = () => {
                       </i>
                       Low Cost
                     </li>
-                    <li class="why6">
+                    <li className="why6">
                       <i>
                         <Image
                           width={32}
@@ -169,33 +169,33 @@ const Page = () => {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-6 LightBgAqua">
-                <h2 class="title-edp">
+              <div className="col-lg-6 LightBgAqua">
+                <h2 className="title-edp">
                   Select an appropriate eCommerce development platform
                 </h2>
-                <div class="ecommerce-process">
-                  <div class="ecpr-box bg-red ecpr1">
+                <div className="ecommerce-process">
+                  <div className="ecpr-box bg-red ecpr1">
                     Optimal eCommerce Development Procedure
                   </div>
-                  <div class="ecpr-box bg-orange ecpr2">
+                  <div className="ecpr-box bg-orange ecpr2">
                     Understand the client&apos;s business needs
                   </div>
-                  <div class="ecpr-box bg-sepia ecpr4">
+                  <div className="ecpr-box bg-sepia ecpr4">
                     Create a customized business model
                   </div>
-                  <div class="ecpr-box bg-blue ecpr6">
+                  <div className="ecpr-box bg-blue ecpr6">
                     Design the website layout
                   </div>
-                  <div class="ecpr-box bg-aqua ecpr8">
+                  <div className="ecpr-box bg-aqua ecpr8">
                     Establish a prototype for testing
                   </div>
-                  <div class="ecpr-box bg-gray ecpr7">
+                  <div className="ecpr-box bg-gray ecpr7">
                     Gather and analyze user feedback
                   </div>
-                  <div class="ecpr-box bg-green ecpr5">
+                  <div className="ecpr-box bg-green ecpr5">
                     Incorporate approved modifications
                   </div>
-                  <div class="ecpr-box bg-aqua ecpr3">
+                  <div className="ecpr-box bg-aqua ecpr3">
                     Advance to final website development
                   </div>
                 </div>
@@ -203,8 +203,8 @@ const Page = () => {
             </div>
           </div>
           <div style={{ display: "none" }}>
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   width={100}
                   height={100}
@@ -219,8 +219,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   width={100}
                   height={100}
@@ -235,8 +235,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   width={100}
                   height={100}
@@ -250,8 +250,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   width={100}
                   height={100}
@@ -270,12 +270,12 @@ const Page = () => {
         </div>
       </div>
 
-      <div class="SBC_logic">
-        <div class="container">
+      <div className="SBC_logic">
+        <div className="container">
           <h2>E-Commerce Custom Solution Development</h2>
         </div>
-        <div class="inner_content_SBG">
-          <div class="container">
+        <div className="inner_content_SBG">
+          <div className="container">
             <p>
               Our E-Commerce custom solution will facilitate the shoppers to buy
               various products online from the website. Customers will have the
@@ -301,13 +301,13 @@ const Page = () => {
         </div>
       </div>
 
-      <div class="demand_app">
-        <div class="container">
+      <div className="demand_app">
+        <div className="container">
           <h2>Key Benefits of Our E-Commerce on demand Development</h2>
-          <div class="EcommerceKeyBenefitsMain">
-            <div class="EcommerceKeyBenefitsBx">
-              <div class="EcommerceKeyBenefitsCard">
-                <div class="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg1">
+          <div className="EcommerceKeyBenefitsMain">
+            <div className="EcommerceKeyBenefitsBx">
+              <div className="EcommerceKeyBenefitsCard">
+                <div className="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg1">
                   <Image
                     width={64}
                     height={64}
@@ -315,14 +315,14 @@ const Page = () => {
                     alt="Social Media Sign Up"
                   />
                 </div>
-                <div class="EcommerceKeyBenefitsContent">
+                <div className="EcommerceKeyBenefitsContent">
                   <h3>Social Media Sign Up</h3>
                   <p>
                     Customers can use their social media accounts like Facebook
                     and Google Plus to sign up to the website
                   </p>
                 </div>
-                <div class="EcommerceKeyDotImag">
+                <div className="EcommerceKeyDotImag">
                   <Image
                     width={515}
                     height={68}
@@ -331,8 +331,8 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div class="EcommerceKeyBenefitsCard EcommerceKeyBenefitsCardRight">
-                <div class="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg2 pull-right">
+              <div className="EcommerceKeyBenefitsCard EcommerceKeyBenefitsCardRight">
+                <div className="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg2 pull-right">
                   <Image
                     width={64}
                     height={64}
@@ -340,7 +340,7 @@ const Page = () => {
                     alt="Easy Search"
                   />
                 </div>
-                <div class="EcommerceKeyBenefitsContent">
+                <div className="EcommerceKeyBenefitsContent">
                   <h3>Easy Search</h3>
                   <p>
                     Customers can easily search for their product by either
@@ -348,7 +348,7 @@ const Page = () => {
                     keywords
                   </p>
                 </div>
-                <div class="EcommerceKeyDotImag2">
+                <div className="EcommerceKeyDotImag2">
                   <Image
                     width={515}
                     height={68}
@@ -357,8 +357,8 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div class="EcommerceKeyBenefitsCard">
-                <div class="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg3">
+              <div className="EcommerceKeyBenefitsCard">
+                <div className="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg3">
                   <Image
                     width={64}
                     height={64}
@@ -366,14 +366,14 @@ const Page = () => {
                     alt="Review Feature"
                   />
                 </div>
-                <div class="EcommerceKeyBenefitsContent">
+                <div className="EcommerceKeyBenefitsContent">
                   <h3>Review Feature </h3>
                   <p>
                     Customers can view ratings and reviews of the products
                     before purchasing them
                   </p>
                 </div>
-                <div class="EcommerceKeyDotImag">
+                <div className="EcommerceKeyDotImag">
                   <Image
                     width={515}
                     height={68}
@@ -382,8 +382,8 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div class="EcommerceKeyBenefitsCard EcommerceKeyBenefitsCardRight">
-                <div class="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg4 pull-right">
+              <div className="EcommerceKeyBenefitsCard EcommerceKeyBenefitsCardRight">
+                <div className="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg4 pull-right">
                   <Image
                     width={64}
                     height={64}
@@ -391,7 +391,7 @@ const Page = () => {
                     alt="Order Tracking"
                   />
                 </div>
-                <div class="EcommerceKeyBenefitsContent">
+                <div className="EcommerceKeyBenefitsContent">
                   <h3>Order Tracking</h3>
                   <p>
                     {" "}
@@ -399,7 +399,7 @@ const Page = () => {
                     through the website
                   </p>
                 </div>
-                <div class="EcommerceKeyDotImag2">
+                <div className="EcommerceKeyDotImag2">
                   <Image
                     width={515}
                     height={68}
@@ -408,8 +408,8 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div class="EcommerceKeyBenefitsCard">
-                <div class="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg5">
+              <div className="EcommerceKeyBenefitsCard">
+                <div className="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg5">
                   <Image
                     width={64}
                     height={64}
@@ -417,14 +417,14 @@ const Page = () => {
                     alt="Quick Payment"
                   />
                 </div>
-                <div class="EcommerceKeyBenefitsContent">
+                <div className="EcommerceKeyBenefitsContent">
                   <h3>Quick Payment</h3>
                   <p>
                     Customers can easily pay for the purchased products using an
                     integrated payment gateway
                   </p>
                 </div>
-                <div class="EcommerceKeyDotImag">
+                <div className="EcommerceKeyDotImag">
                   <Image
                     width={515}
                     height={68}
@@ -433,8 +433,8 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div class="EcommerceKeyBenefitsCard EcommerceKeyBenefitsCardRight">
-                <div class="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg6 pull-right">
+              <div className="EcommerceKeyBenefitsCard EcommerceKeyBenefitsCardRight">
+                <div className="EcommerceKeyBenefitsCardImg EcommerceKeyBenefitsImg6 pull-right">
                   <Image
                     width={64}
                     height={64}
@@ -442,7 +442,7 @@ const Page = () => {
                     alt="Favorites Feature"
                   />
                 </div>
-                <div class="EcommerceKeyBenefitsContent">
+                <div className="EcommerceKeyBenefitsContent">
                   <h3>Favorites Feature</h3>
                   <p>
                     Customers can add their favorite items to a list so that
@@ -456,15 +456,15 @@ const Page = () => {
         </div>
       </div>
 
-      <section class="eCommerceCustomSolutionSection" id="features">
-        <div class="container">
-          <h2 class="CustomSolutionHadding">
+      <section className="eCommerceCustomSolutionSection" id="features">
+        <div className="container">
+          <h2 className="CustomSolutionHadding">
             E-Commerce Custom Development Features
           </h2>
-          <div class="eCommerceCustomFeatures">
-            <div class="row">
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+          <div className="eCommerceCustomFeatures">
+            <div className="row">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -478,8 +478,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -493,8 +493,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -508,8 +508,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -523,8 +523,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -538,8 +538,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -553,8 +553,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -568,8 +568,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="eCommerceCustomFeaturesBx">
+              <div className="col-sm-3">
+                <div className="eCommerceCustomFeaturesBx">
                   <Image
                     width={64}
                     height={64}
@@ -588,17 +588,17 @@ const Page = () => {
         </div>
       </section>
 
-      <div class="clearfix"></div>
+      <div className="clearfix"></div>
 
-      <div class="app_solution eCommerceAppSolution">
-        <div class="container">
-          <h2 class="CustomSolutionHadding">
+      <div className="app_solution eCommerceAppSolution">
+        <div className="container">
+          <h2 className="CustomSolutionHadding">
             E-Commerce Portal Custom Development Solution
           </h2>
-          <div class="EcommerceJewellerySolutionBx">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="EcommerceJewellerySolutionImg">
+          <div className="EcommerceJewellerySolutionBx">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="EcommerceJewellerySolutionImg">
                   <Image
                     width={533}
                     height={400}
@@ -607,8 +607,8 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryIdeaBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryIdeaBx">
                   <i>
                     <Image
                       width={26}
@@ -626,8 +626,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryConceptBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryConceptBx">
                   <i>
                     <Image
                       width={26}
@@ -645,8 +645,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryImplementBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryImplementBx">
                   <i>
                     <Image
                       width={26}
@@ -665,8 +665,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewelleryTestingBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewelleryTestingBx">
                   <i>
                     <Image
                       width={26}
@@ -684,8 +684,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="JewellerySolutionBx JewellerySupportBx">
+              <div className="col-xs-12 col-sm-6 col-md-4">
+                <div className="JewellerySolutionBx JewellerySupportBx">
                   <i>
                     <Image
                       width={26}
@@ -707,30 +707,30 @@ const Page = () => {
         </div>
       </div>
 
-      {/* <!--<div class="used_technology_section" id="technologies">
-    <div class="container">
-        <h4 class="titlesettop titlesettop_mar"><span>Used Technologies</span> and Server Requirements</h4>     
-        <div class="used_technology_section_dataa">
+      {/* <!--<div className="used_technology_section" id="technologies">
+    <div className="container">
+        <h4 className="titlesettop titlesettop_mar"><span>Used Technologies</span> and Server Requirements</h4>     
+        <div className="used_technology_section_dataa">
             <ul>
-                <li data-aos="fade-right"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_ios_icon.png" alt="iOS"/></div><div class="icntechimg_nm">iOS</div></li>
-                <li data-aos="fade-right"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_java_icon.png" alt="Java"/></div><div class="icntechimg_nm">Java</div></li>
-                <li data-aos="fade-right"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_android_icon.png" alt="Android"/></div><div class="icntechimg_nm">Android</div></li>
-                <li data-aos="fade-right"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_php_icon.png" alt="PHP"/></div><div class="icntechimg_nm">PHP</div></li>
-                <li data-aos="fade-left"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_cakephp_icon.png" alt="CakePHP"/></div><div class="icntechimg_nm">CakePHP</div></li>
-                <li data-aos="fade-left"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_bootstrap_icon.png" alt="Bootstrap"/></div><div class="icntechimg_nm">Bootstrap</div></li>
-                <li data-aos="fade-left"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_mysql_icon.png" alt="MySQL"/></div><div class="icntechimg_nm">MySQL</div></li>
-                <li data-aos="fade-left"><div class="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_apache_icon.png" alt="Apache"/></div><div class="icntechimg_nm">Apache</div></li>
+                <li data-aos="fade-right"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_ios_icon.png" alt="iOS"/></div><div className="icntechimg_nm">iOS</div></li>
+                <li data-aos="fade-right"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_java_icon.png" alt="Java"/></div><div className="icntechimg_nm">Java</div></li>
+                <li data-aos="fade-right"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_android_icon.png" alt="Android"/></div><div className="icntechimg_nm">Android</div></li>
+                <li data-aos="fade-right"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_php_icon.png" alt="PHP"/></div><div className="icntechimg_nm">PHP</div></li>
+                <li data-aos="fade-left"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_cakephp_icon.png" alt="CakePHP"/></div><div className="icntechimg_nm">CakePHP</div></li>
+                <li data-aos="fade-left"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_bootstrap_icon.png" alt="Bootstrap"/></div><div className="icntechimg_nm">Bootstrap</div></li>
+                <li data-aos="fade-left"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_mysql_icon.png" alt="MySQL"/></div><div className="icntechimg_nm">MySQL</div></li>
+                <li data-aos="fade-left"><div className="icntechimg"><Image width={100} height={100} src="/img/customsolutions/tech_apache_icon.png" alt="Apache"/></div><div className="icntechimg_nm">Apache</div></li>
             </ul>
         </div>
     </div>
 </div>--> */}
-      <div class="clearfix"></div>
-      <div class="support_logic eCommerceSupportLogic">
-        <div class="container">
+      <div className="clearfix"></div>
+      <div className="support_logic eCommerceSupportLogic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
 
-          <div class="row">
-            <div class="col-sm-4">
+          <div className="row">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -744,7 +744,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -758,7 +758,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -772,7 +772,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -786,7 +786,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -800,7 +800,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -814,7 +814,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -825,7 +825,7 @@ const Page = () => {
               <p>We give free support for the next 6 months.</p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -839,7 +839,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div class="col-sm-4">
+            <div className="col-sm-4">
               <Image
                 width={95}
                 height={95}
@@ -856,14 +856,14 @@ const Page = () => {
         </div>
       </div>
 
-      <div class="faq_logic faq_logic_marketplace">
-        <div class="container">
-          <div class="JewelleryEcommerceFAQ">
-            <h4 class="title_main">
+      <div className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="JewelleryEcommerceFAQ">
+            <h4 className="title_main">
               Frequently <br />
               Asked Questions
             </h4>
-            <div class="FrequentlyQuestions">
+            <div className="FrequentlyQuestions">
               <MDBAccordion v-model="activeItem" borderless>
                 <MDBAccordionItem
                   headerTitle="How can customers search for products?"
@@ -939,13 +939,13 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <a
                 id=""
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={() => openEnquiryModal()}
               >
                 Enquire Now

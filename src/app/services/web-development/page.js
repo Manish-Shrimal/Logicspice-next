@@ -41,11 +41,11 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section class="WebDevelopmentBanner">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-5">
-              <div class="WebDevelopmentBannerBx">
+      <section className="WebDevelopmentBanner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-5">
+              <div className="WebDevelopmentBannerBx">
                 <h1>Web Development Services</h1>
                 <p>
                   Turn your vision into reality with Logicspice&apos;s Web
@@ -66,18 +66,18 @@ const Page = () => {
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
                 >
-                  <div class="WhatsappIcon">
-                    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                      <div class="coccoc-alo-ph-circle"></div>
-                      <div class="coccoc-alo-ph-circle-fill"></div>
-                      <div class="coccoc-alo-ph-img-circle"></div>
+                  <div className="WhatsappIcon">
+                    <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                      <div className="coccoc-alo-ph-circle"></div>
+                      <div className="coccoc-alo-ph-circle-fill"></div>
+                      <div className="coccoc-alo-ph-img-circle"></div>
                     </div>
                   </div>
                 </Link>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-7">
-              <div class="WebDevelopmentBannerImg">
+            <div className="col-xs-12 col-sm-6 col-md-7">
+              <div className="WebDevelopmentBannerImg">
                 <img
                   src="/img/webdevelopment/web-development-img.png"
                   alt="Web Development Services"
@@ -87,8 +87,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="WebDevelopmentClients">
-        <div class="container">
+      <section className="WebDevelopmentClients">
+        <div className="container">
           <ul>
             <li>
               <span>Our Clients</span>
@@ -120,11 +120,11 @@ const Page = () => {
           </ul>
         </div>
       </section>
-      <section class="WebDevelopmentApplication">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="WebDevelopmentApplicationBx">
+      <section className="WebDevelopmentApplication">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="WebDevelopmentApplicationBx">
                 <h2>
                   Web <span>Development</span>
                 </h2>
@@ -164,8 +164,8 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="WebDevelopmentApplicationImg">
+            <div className="col-xs-12 col-sm-6 col-md-6">
+              <div className="WebDevelopmentApplicationImg">
                 <img
                   src="/img/webdevelopment/web-application-development-img.png"
                   alt="Web Development Services"
@@ -175,17 +175,17 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="WebDesignDevelopmentSection">
-        <div class="container">
-          <div class="TopHadding">
+      <section className="WebDesignDevelopmentSection">
+        <div className="container">
+          <div className="TopHadding">
             <h2>
               Web <span>Development Services</span>
             </h2>
           </div>
-          <div class="WebDesignDevelopment">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+          <div className="WebDesignDevelopment">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon1.png"
@@ -202,8 +202,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon2.png"
@@ -220,8 +220,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon3.png"
@@ -235,8 +235,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon4.png"
@@ -250,8 +250,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon5.png"
@@ -267,8 +267,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon6.png"
@@ -282,8 +282,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon7.png"
@@ -300,8 +300,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="WebDesignDevelopmentBx">
+              <div className="col-xs-12 col-sm-6 col-md-3">
+                <div className="WebDesignDevelopmentBx">
                   <i>
                     <img
                       src="/img/webdevelopment/web-design-icon8.png"
@@ -322,11 +322,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="WebFeaturesSection">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <div class="TopHadding">
+      <section className="WebFeaturesSection">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-6">
+              <div className="TopHadding">
                 <h2>
                   Core Features of{" "}
                   <span>
@@ -370,8 +370,8 @@ const Page = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="TopHadding WebFeaturesRight">
+            <div className="col-sm-12 col-md-6">
+              <div className="TopHadding WebFeaturesRight">
                 <h2>
                   Benefits of Web Design
                   <br />
@@ -414,18 +414,18 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section class="WebLatestProjectsSection">
-        <div class="container">
-          <div class="TopHadding">
+      <section className="WebLatestProjectsSection">
+        <div className="container">
+          <div className="TopHadding">
             <h2>
               Latest <span>Projects</span>
             </h2>
           </div>
-          <div class="WebLatestProjects">
-            <div class="" id="slide-latestproducts">
+          <div className="WebLatestProjects">
+            <div className="" id="slide-latestproducts">
               <Slider {...settings}>
-                <div class="WebLatestProjectsSlide WebLatestGreen">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestGreen">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/goodluck-logo.png"
                       alt="Web Development Services"
@@ -435,38 +435,38 @@ const Page = () => {
                     Create your profile, showcasing your experience, skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://www.goodlucknc.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/goodluck-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
                   </div>
                 </div>
-                <div class="WebLatestProjectsSlide WebLatestRed">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestRed">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/salesagy-logo.png"
                       alt="Web Development Services"
@@ -476,32 +476,32 @@ const Page = () => {
                     Create your profile, showcasing your experience, skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
-                      <i class="fa-brands fa-android" aria-hidden="true"></i>
-                      <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                      <i className="fa-brands fa-android" aria-hidden="true"></i>
+                      <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/salesagy-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -509,8 +509,8 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div class="WebLatestProjectsSlide WebLatestJobatHome">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestJobatHome">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/jobathome-logo.png"
                       alt="Web Development Services"
@@ -520,38 +520,38 @@ const Page = () => {
                     Create your profile, showcasing your experience, skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/jobathome-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
                   </div>
                 </div>
-                <div class="WebLatestProjectsSlide WebLatestGreen">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestGreen">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/fundcareusa-logo.png"
                       alt="Web Development Services"
@@ -561,30 +561,30 @@ const Page = () => {
                     Create your profile, showcasing your experience, skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/fundcareusa-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -592,8 +592,8 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div class="WebLatestProjectsSlide WebLatestTacksm">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestTacksm">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/tacksm-logo.png"
                       alt="Web Development Services"
@@ -603,30 +603,30 @@ const Page = () => {
                     Create your profile, showcasing your experience, skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/tacksm-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -634,8 +634,8 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div class="WebLatestProjectsSlide WebLatestVanessajo">
-                  <div class="WebProjectLogo">
+                <div className="WebLatestProjectsSlide WebLatestVanessajo">
+                  <div className="WebProjectLogo">
                     <img
                       src="/img/webdevelopment/vanessajo-logo.png"
                       alt="Web Development Services"
@@ -645,30 +645,30 @@ const Page = () => {
                     Create your profile, showcasing your experience, skills and
                     the markets you can reach.
                   </p>
-                  <div class="WebProjectInfo">
-                    <div class="WebProjectInfoLeft">
+                  <div className="WebProjectInfo">
+                    <div className="WebProjectInfoLeft">
                       <a href="https://salesagy.com/" target="_blank">
                         <i
-                          class="fa-solid fa-earth-americas"
+                          className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
                       </a>
                     </div>
-                    <div class="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" class="">
+                    <div className="WebProjectInfoView">
+                      <a href="https://www.logicspice.com/portfolio" className="">
                         View Portfolio
                       </a>
                     </div>
                   </div>
-                  <div class="WebProjectImg">
-                    <div class="WebProjectImgBx">
+                  <div className="WebProjectImg">
+                    <div className="WebProjectImgBx">
                       <img
                         src="/img/webdevelopment/vanessajo-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
-                  <div class="RingImg">
+                  <div className="RingImg">
                     <img
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -681,27 +681,27 @@ const Page = () => {
         </div>
       </section>
 
-      <section class="laravel_choose_features_section">
-        <div class="container">
-          <div class="TopHadding">
+      <section className="laravel_choose_features_section">
+        <div className="container">
+          <div className="TopHadding">
             <h2>
               Why Choose <span>Logicspice For Web Development?</span>
             </h2>
           </div>
-          <div class="laravel_choose_features_bx WebProjectInfoChooseFeaturesBx">
-            <div class="row">
+          <div className="laravel_choose_features_bx WebProjectInfoChooseFeaturesBx">
+            <div className="row">
               <div
-                class="col-sm-6 col-md-6 aos-init aos-animate"
+                className="col-sm-6 col-md-6 aos-init aos-animate"
                 data-aos="fade-right"
               >
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img1">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon1.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <p>
                       We ensure the integration of the latest technological
                       advancements in our web development processes.
@@ -710,17 +710,17 @@ const Page = () => {
                 </div>
               </div>
               <div
-                class="col-sm-6 col-md-6 aos-init aos-animate"
+                className="col-sm-6 col-md-6 aos-init aos-animate"
                 data-aos="fade-left"
               >
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img2">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon2.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <p>
                       With 18+ years of experience in the web development
                       industry, we have served 1900+ clients across 15
@@ -729,15 +729,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img3">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon3.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <p>
                       As a{" "}
                       <strong>
@@ -749,15 +749,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img4">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon4.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <p>
                       We prioritize seamless communication with clients to
                       create web applications that suit their unique
@@ -766,15 +766,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
-                <div class="libraries_laravel_choose">
-                  <div class="laravel_choose_features_img laravel_choose_features_img5">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
+                <div className="libraries_laravel_choose">
+                  <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon5.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <p>
                       Our{" "}
                       <a
@@ -790,15 +790,15 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
-                <div class="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div class="laravel_choose_features_img laravel_choose_features_img6">
+              <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <img
                       src="/img/webdevelopment/webdevelopment-why-icon6.png"
                       alt="img1"
                     />
                   </div>
-                  <div class="laravel_choose_details">
+                  <div className="laravel_choose_details">
                     <p>
                       Committed to delivering{" "}
                       <strong>custom website development</strong> services, our
@@ -811,33 +811,33 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div class="col-sm-12 main_btn_hire">
+        <div className="col-sm-12 main_btn_hire">
           <a
             href="https://www.logicspice.com/hire-web-developers"
-            class="btn btn-hire"
+            className="btn btn-hire"
           >
             Hire a Web Developer
           </a>
         </div>
       </section>
-      <section class="ecommerce_faq_section NewFaqDesignSection">
-        <div class="container">
-          <div class="row">
-            <div class="row ecommerce__Quick_FAQ">
-              <div class="col-md-5">
-                <h4 class="title_main">
+      <section className="ecommerce_faq_section NewFaqDesignSection">
+        <div className="container">
+          <div className="row">
+            <div className="row ecommerce__Quick_FAQ">
+              <div className="col-md-5">
+                <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
-                <div class="FaqImgBx">
+                <div className="FaqImgBx">
                   <img
                     src="/img/webdevelopment/FaqLaravelImg.png"
                     alt="Django Web Development Services"
                   />
                 </div>
               </div>
-              <div class="col-md-7">
-                <div class="panel-group faq_quick_sec" id="accordion">
+              <div className="col-md-7">
+                <div className="panel-group faq_quick_sec" id="accordion">
                   <MDBAccordion v-model="activeItem" borderless>
                     <MDBAccordionItem
                       headerTitle="What is web development?"

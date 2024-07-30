@@ -37,16 +37,16 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div class="top-head-custom Survey-App">
-        <div class="container">
-          <div class="col-md-8">
-            <div class="head-enquiry">
+      <div className="top-head-custom Survey-App">
+        <div className="container">
+          <div className="col-md-8">
+            <div className="head-enquiry">
               <h1>Custom Survey App Development</h1>
               <p>
                 On demand mobile App or Web development solution for your
                 business needs.
               </p>
-              <p class="sml_txt">
+              <p className="sml_txt">
                 Rapid customization, because of our team&apos;s past experience
                 over similar solutions.
               </p>
@@ -64,16 +64,16 @@ const Page = () => {
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
               >
-                <div class="WhatsappIcon WhatsappIconCustom">
-                  <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
-                    <div class="coccoc-alo-ph-circle"></div>
-                    <div class="coccoc-alo-ph-circle-fill"></div>
-                    <div class="coccoc-alo-ph-img-circle"></div>
+                <div className="WhatsappIcon WhatsappIconCustom">
+                  <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                    <div className="coccoc-alo-ph-circle"></div>
+                    <div className="coccoc-alo-ph-circle-fill"></div>
+                    <div className="coccoc-alo-ph-img-circle"></div>
                   </div>
                 </div>
               </Link>
             </div>
-            <ul class="head-feature">
+            <ul className="head-feature">
               <li>Powerful Solution</li>
               <li>Quality UI/UX</li>
               <li>High Engagement</li>
@@ -83,12 +83,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="BFC_logic">
-        <div class="container">
+      <div className="BFC_logic">
+        <div className="container">
           <h2>Why logicspice is Best For Custom App/Web Development?</h2>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -104,8 +104,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -121,8 +121,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -137,8 +137,8 @@ const Page = () => {
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="top-box-BFC">
+            <div className="col-md-3">
+              <div className="top-box-BFC">
                 <Image
                   height={100}
                   width={100}
@@ -156,12 +156,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div class="SBC_logic">
-        <div class="container">
+      <div className="SBC_logic">
+        <div className="container">
           <h2>Custom Survey App Development </h2>
         </div>
-        <div class="inner_content_SBG">
-          <div class="container">
+        <div className="inner_content_SBG">
+          <div className="container">
             <p>
               Our custom Survey app solution will serve as an attractive medium
               for surveyors to create new surveys that can be found by visitors
@@ -190,14 +190,14 @@ const Page = () => {
         </div>
       </div>
     
-      <div class="demand_app">
-        <div class="container">
+      <div className="demand_app">
+        <div className="container">
           <h2>Key Benefits Of Our On Demand Survey App Development</h2>
 
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -205,18 +205,18 @@ const Page = () => {
                     alt="img5"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Advance Search/Filters </h3>
                   <p>
                     Visitors can use the categories to search for surveys or
                     they can use keywords
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -224,18 +224,18 @@ const Page = () => {
                     alt="img6"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Survey Rating</h3>
                   <p>
                     Visitors can give rating to the surveys that they may have
                     taken which can be viewed by other visitors and the surveyor
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-right">
-                <div class="demand-img">
+              <div className="demand-card" data-aos="fade-right">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -243,7 +243,7 @@ const Page = () => {
                     alt="img7"
                   />
                 </div>
-                <div class="demand-content">
+                <div className="demand-content">
                   <h3>Social Media Sharing </h3>
                   <p>
                     {" "}
@@ -251,10 +251,10 @@ const Page = () => {
                     social media network
                   </p>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
-            <div class="col-sm-4 center_image">
+            <div className="col-sm-4 center_image">
               <Image
                 height={100}
                 width={250}
@@ -262,16 +262,16 @@ const Page = () => {
                 alt="img8"
               />
             </div>
-            <div class="col-sm-4">
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+            <div className="col-sm-4">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Survey Statistics</h3>
                   <p>
                     Surveyors can see detailed statistics of the survey which is
                     taken by the visitors
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -279,18 +279,18 @@ const Page = () => {
                     alt="img9"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Surveyor Public Profile</h3>
                   <p>
                     Surveyors can maintain their profile which can be seen by
                     the visitors who take the survey
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -298,18 +298,18 @@ const Page = () => {
                     alt="img10"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="demand-card" data-aos="fade-left">
-                <div class="demand-content">
+              <div className="demand-card" data-aos="fade-left">
+                <div className="demand-content">
                   <h3>Upgrade Membership</h3>
                   <p>
                     Surveyors can upgrade their membership to access more
                     detailed statistics of the app
                   </p>
                 </div>
-                <div class="demand-img">
+                <div className="demand-img">
                   <Image
                     height={100}
                     width={80}
@@ -317,22 +317,22 @@ const Page = () => {
                     alt="img11"
                   />
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section class="content_area feature_inner" id="features">
-        <div class="container">
-          <h2 class="titlesettop titlesettop_mar">
+      <section className="content_area feature_inner" id="features">
+        <div className="container">
+          <h2 className="titlesettop titlesettop_mar">
             Custom Online Booking App/Web Development Features
           </h2>
 
-          <div class="features-tab">
-            <div class="clearfix">
-              <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">
+          <div className="features-tab">
+            <div className="clearfix">
+              <ul className="nav nav-tabs" role="tablist">
+                <li role="presentation" className="active">
                   <Link
                     href="#features-car1"
                     aria-controls="features-car"
@@ -344,11 +344,11 @@ const Page = () => {
                 </li>
               </ul>
 
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="features-car1">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+              <div className="tab-content">
+                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                  <div className="row">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -361,7 +361,7 @@ const Page = () => {
                           update your details in dashboard.
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -375,8 +375,8 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -389,7 +389,7 @@ const Page = () => {
                           in the survey and the success rate of survey.
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -403,8 +403,8 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -417,7 +417,7 @@ const Page = () => {
                           includes every detail of the survey.
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -431,8 +431,8 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-3">
-                      <div class="ftr-detail">
+                    <div className="col-sm-3">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -445,7 +445,7 @@ const Page = () => {
                           them about the survey & it’s details.
                         </p>
                       </div>
-                      <div class="ftr-detail">
+                      <div className="ftr-detail">
                         <Image
                           height={100}
                           width={60}
@@ -466,25 +466,25 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div class="app_solution">
-        <div class="container">
+      <div className="app_solution">
+        <div className="container">
           <h2>Custom CRM App Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
-      <div class="support_logic">
-        <div class="container">
+      <div className="support_logic">
+        <div className="container">
           <h2>What Support You Will Get ?</h2>
           <Support />
         </div>
       </div>
 
       {/*  */}
-      <section class="ecommerce_faq_section CustomSolutionFaqSection">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 class="title_main">Quick FAQ</h4>
+      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12 ecommerce__Quick_FAQ">
+                    <h4 className="title_main">Quick FAQ</h4>
                     
                     <MDBAccordion v-model="activeItem" borderless>
               <MDBAccordionItem
@@ -598,10 +598,10 @@ const Page = () => {
         </div>
     </section>
       
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
