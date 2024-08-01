@@ -25,7 +25,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -35,7 +35,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -324,9 +324,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="mobile-screen-splash">
                 <div className="mobile-screen-sizee">
-                 
                   <Slider {...date}>
-                  <div className="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -406,10 +405,7 @@ const Page = () => {
                         src="/img/globalpages/uuuga.png"
                       />
                     </div>
-
-                    </Slider>
-                  
-                  
+                  </Slider>
                 </div>
               </div>
             </div>

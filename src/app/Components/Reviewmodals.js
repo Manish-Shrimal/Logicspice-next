@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 // import { MDBModal } from 'mdb-react-ui-kit';
 import { Modal, Button } from "react-bootstrap";
+import Image from "next/image";
 
 const Contactusmodel = ({ modalStatus, toggle, title }) => {
   const [popupScReview, setPopupScReview] = useState(modalStatus);
@@ -167,8 +168,8 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                       </div>
                       {loader && (
                         <div className="popup_loader">
-                          <img
-                            src="./assets/img/loading-old.gif"
+                          <Image width={100} height={100}
+                            src="/img/loading-old.gif"
                             alt="Loading..."
                           />
                         </div>

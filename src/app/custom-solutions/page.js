@@ -75,7 +75,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <a href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -88,7 +90,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/logistics-software-development-img.png"
                                 alt="Custom Logistics Software"
                                 className="img_prora"
@@ -109,7 +113,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <a href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -122,7 +128,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/booking_app_img.png"
                                 alt="Booking App"
                                 className="img_prora"
@@ -130,7 +138,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Booking Application</span>
+                            <span className="prdu-book">
+                              Booking Application
+                            </span>
                             <div className="buttons_of_products_new more_link"></div>
                           </div>
                         </div>
@@ -141,7 +151,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -154,7 +166,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/tablke_booing_img.png"
                                 alt="Table Booking System"
                                 className="img_prora"
@@ -162,7 +176,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Table Booking System</span>
+                            <span className="prdu-book">
+                              Table Booking System
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -172,17 +188,24 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
                         </Link>
                       </div>
-                      <Link className="" href="/custom-solutions/seat-booking-system">
+                      <Link
+                        className=""
+                        href="/custom-solutions/seat-booking-system"
+                      >
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/seat_book_img.png"
                                 alt="Seat Booking System"
                                 className="img_prora"
@@ -190,7 +213,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Seat Booking System</span>
+                            <span className="prdu-book">
+                              Seat Booking System
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -200,7 +225,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -213,7 +240,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/crm_solution_img.png"
                                 alt="CRM Solution"
                                 className="img_prora"
@@ -231,7 +260,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -244,7 +275,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/ecommerce_img.png"
                                 alt="Ecommerce Solutions"
                                 className="img_prora"
@@ -252,7 +285,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Ecommerce Solutions</span>
+                            <span className="prdu-book">
+                              Ecommerce Solutions
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -262,7 +297,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -275,7 +312,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/loan_system_img.png"
                                 alt="Loan System"
                                 className="img_prora"
@@ -294,7 +333,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -307,7 +348,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/online_test_img.png"
                                 alt="Online Exam App"
                                 className="img_prora"
@@ -325,7 +368,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -338,7 +383,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/survey_img.png"
                                 alt="Survey Software Development"
                                 className="img_prora"
@@ -357,7 +404,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -370,7 +419,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/dating_system_img.png"
                                 alt="Dating System Solution"
                                 className="img_prora"
@@ -391,7 +442,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -404,7 +457,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/jewellery_ecommerce_img.png"
                                 alt="Jewellery E-Commerce System Custom"
                                 className="img_prora"
@@ -425,17 +480,24 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
                         </Link>
                       </div>
-                      <Link className="" href="/custom-solutions/e-learning-solution">
+                      <Link
+                        className=""
+                        href="/custom-solutions/e-learning-solution"
+                      >
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/e-learning_img.png"
                                 alt="E-Learning App"
                                 className="img_prora"
@@ -453,7 +515,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -466,7 +530,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/event_booking_img.png"
                                 alt="Event Booking System"
                                 className="img_prora"
@@ -474,7 +540,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Event Booking System</span>
+                            <span className="prdu-book">
+                              Event Booking System
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -484,7 +552,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -497,7 +567,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/auction_img.png"
                                 alt="Auction System"
                                 className="img_prora"
@@ -515,7 +587,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={600}
+                            height={100 / 100 / 10}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -528,7 +602,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/gps_img.png"
                                 alt="GPS Vehicle Tracking System"
                                 className="img_prora"
@@ -536,7 +612,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">GPS Vehicle Tracking</span>
+                            <span className="prdu-book">
+                              GPS Vehicle Tracking
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -546,17 +624,24 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
                         </Link>
                       </div>
-                      <Link className="" href="/custom-solutions/car-rental-software">
+                      <Link
+                        className=""
+                        href="/custom-solutions/car-rental-software"
+                      >
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/car-rental-software_img.png"
                                 alt="Car Rental Software"
                                 className="img_prora"
@@ -564,7 +649,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Car Rental Software</span>
+                            <span className="prdu-book">
+                              Car Rental Software
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -574,7 +661,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -587,7 +676,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/delivery_management_system_img.png"
                                 alt="Delivery Management Software"
                                 className="img_prora"
@@ -595,7 +686,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Delivery Management</span>
+                            <span className="prdu-book">
+                              Delivery Management
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -605,7 +698,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -618,7 +713,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/point_of_sale_system_img.png"
                                 alt="Point Of Sale Software"
                                 className="img_prora"
@@ -626,7 +723,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">Point Of Sale System</span>
+                            <span className="prdu-book">
+                              Point Of Sale System
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -636,7 +735,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -649,7 +750,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/hotel_booking_software_img.png"
                                 alt="Hotel Booking Software"
                                 className="img_prora"
@@ -669,7 +772,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -682,7 +787,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/user_management_system_img.png"
                                 alt="User Management System"
                                 className="img_prora"
@@ -702,7 +809,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -715,7 +824,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/website_calculator_builder_img.png"
                                 alt="Website Calculator Builder"
                                 className="img_prora"
@@ -735,7 +846,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -748,7 +861,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/erp_system_developement_img.png"
                                 alt="ERP System Software "
                                 className="img_prora"
@@ -756,7 +871,9 @@ const Page = () => {
                             </span>
                           </div>
                           <div className="product_show_bx_name_new">
-                            <span className="prdu-book">ERP System Software </span>
+                            <span className="prdu-book">
+                              ERP System Software{" "}
+                            </span>
                           </div>
                         </div>
                       </Link>
@@ -766,7 +883,9 @@ const Page = () => {
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/customsolutionspage/chat.png"
                             alt="Chat"
                           />
@@ -779,7 +898,9 @@ const Page = () => {
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">
                             <span>
-                              <img
+                              <Image
+                                width={600}
+                                height={100 / 100 / 10}
                                 src="/img/customsolutionspage/social_integration_img.png"
                                 alt="Social Network Integration"
                                 className="img_prora"
@@ -808,7 +929,7 @@ const Page = () => {
             <span className="headSpan">
               Custom app development where customers can request for a product
               and we make it available for them with custom features and
-              integrations as per client's requirements.{" "}
+              integrations as per client&apos;s requirements.{" "}
             </span>
           </h2>
           <div className="BFC_logic_bg">
@@ -862,7 +983,9 @@ const Page = () => {
                 <div className="row">
                   <div className="col-xs-12 col-sm-3 col-md-3">
                     <div className="demand_img">
-                      <img
+                      <Image
+                        width={60}
+                        height={100}
                         src="/img/customsolutionspage/satisfied-client.png"
                         alt="#"
                       />
@@ -874,7 +997,9 @@ const Page = () => {
                   </div>
                   <div className="col-xs-12 col-sm-3 col-md-3">
                     <div className="demand_img">
-                      <img
+                      <Image
+                        width={60}
+                        height={100}
                         src="/img/customsolutionspage/projects-img.png"
                         alt="#"
                       />
@@ -886,7 +1011,9 @@ const Page = () => {
                   </div>
                   <div className="col-xs-12 col-sm-3 col-md-3">
                     <div className="demand_img">
-                      <img
+                      <Image
+                        width={60}
+                        height={100}
                         src="/img/customsolutionspage/mobile-app-img.png"
                         alt="#"
                       />
@@ -898,7 +1025,9 @@ const Page = () => {
                   </div>
                   <div className="col-xs-12 col-sm-3 col-md-3">
                     <div className="demand_img">
-                      <img
+                      <Image
+                        width={60}
+                        height={100}
                         src="/img/customsolutionspage/likes-img.png"
                         alt="#"
                       />
@@ -976,7 +1105,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
-              width={100}
+              width={50}
               height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"

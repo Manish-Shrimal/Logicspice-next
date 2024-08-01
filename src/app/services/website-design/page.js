@@ -6,14 +6,29 @@ import "@/app/services/services.css";
 import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
       <NavBar />
 
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
-          <img
+          <Image  width={500}
+                    height={100 / (100 / 100)}
             src="/img/websitedesign/web-designing-service.jpg"
             alt="web design service"
           />
@@ -233,7 +248,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img src="/img/websitedesign/lara_icon1.png" alt="icon1" />
+                <Image width={100} height={100} src="/img/websitedesign/lara_icon1.png" alt="icon1" />
                 <h3>Strategy </h3>
                 <p>
                   Our major concern is to identify your goal for integrating
@@ -243,7 +258,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img src="/img/websitedesign/lara_icon6.png" alt="icon2" />
+                <Image width={100} height={100} src="/img/websitedesign/lara_icon6.png" alt="icon2" />
                 <h3>Create Wireframes</h3>
                 <p>
                   After gathering all the required information we design sketch
@@ -253,7 +268,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img src="/img/websitedesign/lara_icon5.png" alt="icon3" />
+                <Image width={100} height={100} src="/img/websitedesign/lara_icon5.png" alt="icon3" />
                 <h3>Create Mockup</h3>
                 <p>
                   We create complete home page mockup with images&sbquo; content &
@@ -264,7 +279,7 @@ const Page = () => {
 
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img src="/img/websitedesign/lara_icon4.png" alt="icon4" />
+                <Image width={100} height={100} src="/img/websitedesign/lara_icon4.png" alt="icon4" />
                 <h3>Presentation</h3>
                 <p>
                   We present our home page mockup with complete explanation &
@@ -274,7 +289,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img src="/img/websitedesign/lara_icon3.png" alt="icon5" />
+                <Image width={100} height={100} src="/img/websitedesign/lara_icon3.png" alt="icon5" />
                 <h3>Support</h3>
                 <p>
                   We do the required changes in the mock up if you ask us to do
@@ -284,7 +299,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img src="/img/websitedesign/lara_icon2.png" alt="icon6" />
+                <Image width={100} height={100} src="/img/websitedesign/lara_icon2.png" alt="icon6" />
                 <h3>Approval</h3>
                 <p>
                   After your approval&sbquo; we proceed to the next step which is web
@@ -382,6 +397,24 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
 
       <Footer />
     </>

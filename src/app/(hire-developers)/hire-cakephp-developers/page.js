@@ -72,7 +72,7 @@ const Page = () => {
   ];
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section
         style={{}}
         class="hire_developer_back_iin otherhire_developer_back_iin"
@@ -105,7 +105,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="nt_cdl">
-                <a onClick={toggleModal} className="btn btn-primary">
+                  <a onClick={toggleModal} className="btn btn-primary">
                     <Contactusmodel
                       modalStatus={modalOpen}
                       toggle={toggleModal}
@@ -138,37 +138,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                      width={300}
+                      height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div class="hiring-sr">
             <div class="row">
               <div class="col-md-8">
@@ -442,330 +470,328 @@ const Page = () => {
         <div className="container">
           <Slider {...item}>
             <div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/6e72e_teacherpublisher.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/6e72e_teacherpublisher.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Teacher Publisher
-                  </li>
-                  <li>
-                    <b>Website URL:</b> http://teacherpublisher.com/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> Teacher Publisher Website
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </div>
-<div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/a544f_altijdbon.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Teacher Publisher
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://teacherpublisher.com/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Teacher Publisher Website
+                    </li>
+                  </ul>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Altijdbon
-                  </li>
-                  <li>
-                    <b>Website URL:</b> https://www.altijdbon.nl/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP-5, AJAX, Jquery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> Marketplace Site
-                  </li>
-                </ul>
               </div>
             </div>
-            </div>
-
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                     width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/a4221_uloan.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/a544f_altijdbon.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
                 </div>
-                <div class="portimagesec_shadow"></div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Altijdbon
+                    </li>
+                    <li>
+                      <b>Website URL:</b> https://www.altijdbon.nl/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP-5, AJAX, Jquery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Marketplace Site
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> uLoan
-                  </li>
-                  <li>
-                    <b>Website URL:</b> http://www.uloan.club/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> ooleys is a Job portal, it facilitates
-                    perfect platform for Recruiter to find the correct candidate
-                    for their company and candidate can also search for the jobs
-                    within different categories over the site. Recruiter will be
-                    able to post the job over the web
-                  </li>
-                </ul>
-              </div>
-            </div>
             </div>
 
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/6b36c_locumsite.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/a4221_uloan.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> LocumSite
-                  </li>
-                  <li>
-                    <b>Website URL:</b> http://www.locumsite.co.uk/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> Doctors/Medical Website
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </div>
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                     width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/694ce_your-pansion.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> uLoan
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.uloan.club/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> ooleys is a Job portal, it facilitates
+                      perfect platform for Recruiter to find the correct
+                      candidate for their company and candidate can also search
+                      for the jobs within different categories over the site.
+                      Recruiter will be able to post the job over the web
+                    </li>
+                  </ul>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> YourPension
-                  </li>
-                  <li>
-                    <b>Website URL:</b> http://www.yourpension.ch/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> The motto of "Pension Plan Management" web
-                    solution is to provide online viewing portfolio that will be
-                    offered by administrator that would be a User Centric, User
-                    Oriented and would be easy to navigate and use. The
-                    objective of the proposed web solution{" "}
-                  </li>
-                </ul>
               </div>
             </div>
-            </div>
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/3f714_shopbook.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
-                </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Shopbook
-                  </li>
-                  <li>
-                    <b>Website URL:</b> https://www.shopbook.co.za/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5.3.x, AJAX, jQuery, Java scripts,
-                    Codeigniter, XML
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> This website facilitates a shoppers to do
-                    shopping by choosing products as per the selected
-                    categories/store/vendors/brands, add products into a
-                    shopping cart and securely make payment for the products.
-                    The website/app will basically be an online shopping
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </div>
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                     width={808}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/90037_Iancooking-808px.png"
-                      alt="Logicspice cakephp portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
-                </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> iamcooking
-                  </li>
-                  <li>
-                    <b>Website URL:</b> https://www.iamcooking.co.za/
-                  </li>
-                  <li>
-                    <b>Framework:</b> CakePHP
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5.3.x, AJAX, jQuery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> Iamcooking that we are scoping will serves
-                    as Online Food Ordering Website using custom framework (PHP)
-                    that will facilitate a shoppers to do place order by
-                    choosing items as per the selected categories/store/chef,
-                    add products into a shopping cart and se
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </div>
-            </Slider>
 
-
-         
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/6b36c_locumsite.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> LocumSite
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.locumsite.co.uk/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Doctors/Medical Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/694ce_your-pansion.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> YourPension
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.yourpension.ch/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> The motto of &quot;Pension Plan
+                      Management&quot; web solution is to provide online viewing
+                      portfolio that will be offered by administrator that would
+                      be a User Centric, User Oriented and would be easy to
+                      navigate and use. The objective of the proposed web
+                      solution{" "}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/3f714_shopbook.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Shopbook
+                    </li>
+                    <li>
+                      <b>Website URL:</b> https://www.shopbook.co.za/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5.3.x, AJAX, jQuery, Java scripts,
+                      Codeigniter, XML
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> This website facilitates a shoppers to do
+                      shopping by choosing products as per the selected
+                      categories/store/vendors/brands, add products into a
+                      shopping cart and securely make payment for the products.
+                      The website/app will basically be an online shopping
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/90037_Iancooking-808px.png"
+                        alt="Logicspice cakephp portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> iamcooking
+                    </li>
+                    <li>
+                      <b>Website URL:</b> https://www.iamcooking.co.za/
+                    </li>
+                    <li>
+                      <b>Framework:</b> CakePHP
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5.3.x, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Iamcooking that we are scoping will
+                      serves as Online Food Ordering Website using custom
+                      framework (PHP) that will facilitate a shoppers to do
+                      place order by choosing items as per the selected
+                      categories/store/chef, add products into a shopping cart
+                      and se
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
       </section>
 

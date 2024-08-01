@@ -37,7 +37,9 @@ const Page = () => {
           </p>
           <div className="row">
             <div className="col-md-6 text-center">
-              <img
+              <Image
+                 width={450}
+                 height={500 / (100 / 100)}
                 src="/img/scriptcustomization/imageScriptModifications.png"
                 alt="script modification"
               />
@@ -118,8 +120,8 @@ const Page = () => {
                 <div className="step1">
                   <div className="step-content">
                     <p data-aos="fade-right">
-                      With your approval on the proposal&sbquo; we will work on coding
-                      milestone by milestone.
+                      With your approval on the proposal&sbquo; we will work on
+                      coding milestone by milestone.
                     </p>
                   </div>
                 </div>
@@ -186,13 +188,13 @@ const Page = () => {
           <p>
             If you did not found any suitable ready made solution for your
             business then you can ask us for custom solution. We are expert in
-            developing booking solution&sbquo; CRM software&sbquo; rental software and many
-            more. Chat with us for more details.
+            developing booking solution&sbquo; CRM software&sbquo; rental
+            software and many more. Chat with us for more details.
           </p>
           <p>
-            Our team of developers&sbquo; designers&sbquo; testers assure to deliver high
-            quality product to you. Get in touch with us for best solution for
-            your business.
+            Our team of developers&sbquo; designers&sbquo; testers assure to
+            deliver high quality product to you. Get in touch with us for best
+            solution for your business.
           </p>
           <div className="custo_btn text-center">
             <a
@@ -211,7 +213,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

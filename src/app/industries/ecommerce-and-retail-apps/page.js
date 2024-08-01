@@ -646,7 +646,9 @@ const Page = () => {
                       <div>
                         <div className="media">
                           <div className="media-left">
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               className="media-object"
                               src="https://www.logicspice.com/app/webroot/img/images/rajesh-kumar.jpg"
                               alt="dsherevk"
@@ -655,7 +657,7 @@ const Page = () => {
                           <div className="media-body">
                             <p>
                               Transitioning to digital was smooth with
-                              Logicspice. Our brand's essence is perfectly
+                              Logicspice. Our brand&apos;s essence is perfectly
                               captured in the app.
                             </p>
                             <div className="author_name">
@@ -1035,8 +1037,8 @@ const Page = () => {
                     </li>
                     <li>
                       <b>Augmented Reality (AR) Features – </b>AR lets users
-                      virtually "try" or "place" products, aiding purchase
-                      decisions.
+                      virtually &quot;try&quot; or &quot;place&quot; products,
+                      aiding purchase decisions.
                     </li>
                     <li>
                       <b>Integrated Payment Solutions – </b>Mobile apps can

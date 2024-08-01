@@ -13,7 +13,9 @@ const Page = () => {
 
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
-          <img
+          <Image
+            width={1400}
+            height={500 / (200 / 200)}
             src="/img/businesssupportservices/business-banner.png"
             alt="Best Business Support Services for Small & Medium Enterprises"
           />
@@ -32,36 +34,37 @@ const Page = () => {
                 outsource their support services to other companies on a
                 contract basis to maintain focus on their core business
                 operations. Business support assistant can understand your
-                business as a result&sbquo; you would see that all task are performed
-                well and it cut down an operational cost.
+                business as a result&sbquo; you would see that all task are
+                performed well and it cut down an operational cost.
               </p>
               <h2>The Best Business Support Services</h2>
               <p>
-                We at Logicspice&sbquo; offer the best business helping services for
-                all kind of enterprise to move their business to the next level.
-                It can support to keep all your customer support interactions in
-                a central place&sbquo; so communication is personal and effective.
-                Personal communication is most important for satisfied the
-                customers. Our experienced virtual assistant provides
-                administrative supports and completes the other day to day tasks
-                at a competitive cost to drive your business growth in a short
-                duration.
+                We at Logicspice&sbquo; offer the best business helping services
+                for all kind of enterprise to move their business to the next
+                level. It can support to keep all your customer support
+                interactions in a central place&sbquo; so communication is
+                personal and effective. Personal communication is most important
+                for satisfied the customers. Our experienced virtual assistant
+                provides administrative supports and completes the other day to
+                day tasks at a competitive cost to drive your business growth in
+                a short duration.
               </p>
               <p>
                 We have experienced tech experts and resources provide real-time
                 maintenance support to the committed smooth functioning of your
                 IT infrastructure. Documentation is a very important aspect of
-                business operation&sbquo; need to keep maintain it on regular basis.
-                We are not only responsible for documentation but also analysis
-                of your system to keep updated on regular basis.
+                business operation&sbquo; need to keep maintain it on regular
+                basis. We are not only responsible for documentation but also
+                analysis of your system to keep updated on regular basis.
               </p>
               <p>
-                We also work for Call Center Services&sbquo; Call Answering Service&sbquo;
-                online chat support and other related services to clients. Our
-                expert can advise the user in a proper way&sbquo; as a result&sbquo; clients
-                get the long-term business benefits. We help our clients to
-                focus on their business doing what they are good at and we deal
-                with the tedious support services that we are best at serving.
+                We also work for Call Center Services&sbquo; Call Answering
+                Service&sbquo; online chat support and other related services to
+                clients. Our expert can advise the user in a proper way&sbquo;
+                as a result&sbquo; clients get the long-term business benefits.
+                We help our clients to focus on their business doing what they
+                are good at and we deal with the tedious support services that
+                we are best at serving.
               </p>
             </div>
             <div className="col-sm-6 col-md-4">
@@ -166,10 +169,10 @@ const Page = () => {
                 <p>
                   We offer the best online virtual assistant services can
                   provide the effortless ways to work from home office. Our
-                  Virtual Assistants are professionally trained&sbquo; can easily
-                  understand and adapt your business process and maintain
-                  workflow efficiency and accuracy by saving your effort&sbquo; time
-                  and costs.
+                  Virtual Assistants are professionally trained&sbquo; can
+                  easily understand and adapt your business process and maintain
+                  workflow efficiency and accuracy by saving your effort&sbquo;
+                  time and costs.
                 </p>
               </div>
             </div>
@@ -189,10 +192,10 @@ const Page = () => {
                 <h3>Call Center Services</h3>
                 <p>
                   Our call center services can provide the effortless solutions
-                  for Call Answering Service&sbquo; online chat support and other
-                  related services to clients. Our expert can advise the user in
-                  a proper way&sbquo; as a result&sbquo; clients get the long-term business
-                  benefits.
+                  for Call Answering Service&sbquo; online chat support and
+                  other related services to clients. Our expert can advise the
+                  user in a proper way&sbquo; as a result&sbquo; clients get the
+                  long-term business benefits.
                 </p>
               </div>
             </div>
@@ -206,20 +209,25 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/businesssupportservices/lara_icon1.png"
                   alt="img1"
                 />
                 <h3>No office space required</h3>
                 <p>
-                  When you hire Business support services&sbquo; you won&apos;t have to
-                  provide office space&sbquo; desk&sbquo; computer&sbquo; phone and other things.
+                  When you hire Business support services&sbquo; you won&apos;t
+                  have to provide office space&sbquo; desk&sbquo;
+                  computer&sbquo; phone and other things.
                 </p>
               </div>
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/businesssupportservices/lara_icon5.png"
                   alt="img2"
                 />
@@ -232,7 +240,9 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/businesssupportservices/lara_icon4.png"
                   alt="img3"
                 />
@@ -245,7 +255,9 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/businesssupportservices/lara_icon6.png"
                   alt="img4"
                 />
@@ -258,7 +270,9 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/businesssupportservices/lara_icon3.png"
                   alt="img5"
                 />
@@ -271,7 +285,9 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/businesssupportservices/lara_icon2.png"
                   alt="img6"
                 />
@@ -305,8 +321,8 @@ const Page = () => {
             <div className="col-sm-6 col-md-6 text-right">
               <div className="libraries" data-aos="fade-right">
                 <h3>
-                  We work with productivity&sbquo; efficiency&sbquo; save time & cost and
-                  deliver quality work.
+                  We work with productivity&sbquo; efficiency&sbquo; save time &
+                  cost and deliver quality work.
                 </h3>
               </div>
             </div>

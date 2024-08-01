@@ -145,37 +145,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                      width={300}
+                      height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div className="hiring-sr">
             <div className="row">
               <div className="col-md-8">
@@ -245,7 +273,7 @@ const Page = () => {
                     customers across the globe. Hire PHP developer in India for
                     your project to get a competitive advantage for your project
                     and make your project a huge success. We have the best PHP
-                    programmers available for hire, whether you're in the USA,
+                    programmers available for hire, whether you&apos;re in the USA,
                     UK, Australia, or other European countries, ensuring
                     top-notch expertise and quality for your project.
                   </p>
@@ -253,7 +281,7 @@ const Page = () => {
                     The reason we are among the best companies to solve PHP
                     requirements is because of our highly skilled dedicated PHP
                     Programmers, having in-depth knowledge in their field which
-                    gives us a competitive edge in today's cut-throat
+                    gives us a competitive edge in today&apos;s cut-throat
                     competition. Hire dedicated php programmers from us as we
                     are having the best pool of talented php web developers to
                     handle the job-related responsibility to the best of their
@@ -507,7 +535,9 @@ const Page = () => {
                 <div className="col-md-6">
                   <div className="port_feat_img">
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/hiredevelopers/ahmadkadi.png"
                         alt="organicmoringaaustralia"
                       />
@@ -551,7 +581,9 @@ const Page = () => {
                 <div className="col-md-6">
                   <div className="port_feat_img">
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/hiredevelopers/sattvicsagesolutions.png"
                         alt="organicmoringaaustralia"
                       />
@@ -595,7 +627,9 @@ const Page = () => {
                 <div className="col-md-6">
                   <div className="port_feat_img">
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/hiredevelopers/Organic-Moringa.png"
                         alt="organicmoringaaustralia"
                       />

@@ -33,7 +33,9 @@ const Page = () => {
       <section className="slider_img">
         <div className="container">
           <div className="slider_inner_img">
-            <img
+            <Image
+              width={800}
+              height={500 / (100 / 100)}
               alt="PSD to Wordpress Conversion Services"
               src="/img/psdtowordpress/img_psdto_wordpress.png"
             />
@@ -47,7 +49,9 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     alt="convert PSD to Wordpress"
                     src="/img/psdtowordpress/pstowp.png"
                   />
@@ -58,18 +62,24 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <img
+                  <Image
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/migration-maintence.png"
                   />
                 </div>
-                <div className="adeptness_box_content">24*7 Technical Support</div>
+                <div className="adeptness_box_content">
+                  24*7 Technical Support
+                </div>
               </div>
             </div>
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <img
+                  <Image
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/wordpressthemeicon.png"
                   />
@@ -83,7 +93,9 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <img
+                  <Image
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/customwordpressicon.png"
                   />
@@ -99,10 +111,10 @@ const Page = () => {
           <div className="container">
             <p>
               <b>Logicspice</b> employs expert developers and designers to
-              create the best product out of your PSD. We excel in HTML&sbquo; Joomla&sbquo;
-              Magento&sbquo; Drupal and Wordpress development. You name the
-              technology&sbquo; and we will develop a website for the same. And all
-              this with just a PSD from your side. Our{" "}
+              create the best product out of your PSD. We excel in HTML&sbquo;
+              Joomla&sbquo; Magento&sbquo; Drupal and Wordpress development. You
+              name the technology&sbquo; and we will develop a website for the
+              same. And all this with just a PSD from your side. Our{" "}
               <b>PSD to wordpress service</b> is one of the best and we assure
               to maintain the quality of the work.
             </p>
@@ -110,19 +122,20 @@ const Page = () => {
             <p>
               Our PSD to Wordpress conversions are known to be seamless. We
               provide complete functionality whether it be an e commerce website
-              or a simple blog. With quite economical rates&sbquo; <b>Logicspice</b>{" "}
-              gives you the service like no other. And with professionals
-              working with us&sbquo; we create the best softwares out of scratch.
+              or a simple blog. With quite economical rates&sbquo;{" "}
+              <b>Logicspice</b> gives you the service like no other. And with
+              professionals working with us&sbquo; we create the best softwares
+              out of scratch.
             </p>
             <br />
             <p>
-              We also have an expert team of designers at our disposal&sbquo; so if
-              you do not have the resource to create a theme yourself&sbquo; we can
-              handle the task for you. We will create the theme for you and will
-              work our best to provide you with the product you imagined. So in
-              addition to <b>PSD to Wordpress theme</b> we build our own themes
-              as well. We can also edit an existing theme to suit your standards
-              or create a complete new product.
+              We also have an expert team of designers at our disposal&sbquo; so
+              if you do not have the resource to create a theme yourself&sbquo;
+              we can handle the task for you. We will create the theme for you
+              and will work our best to provide you with the product you
+              imagined. So in addition to <b>PSD to Wordpress theme</b> we build
+              our own themes as well. We can also edit an existing theme to suit
+              your standards or create a complete new product.
             </p>
           </div>
         </div>
@@ -137,8 +150,7 @@ const Page = () => {
               <div className="slider_wrapper_inner_content_in">
                 <div className="slider_wrapper_inner_content">
                   <div id="processslide" className="owl-carousel hidedot">
-
-                  <Processconvert />
+                    <Processconvert />
                   </div>
                 </div>
               </div>
@@ -153,20 +165,24 @@ const Page = () => {
               Why Our <span>PSD to Wordpress</span> Conversion is Best?
             </h2>
             <p>
-              In the terms of quality &amp; performance&sbquo; you can expect high
-              from us. What we give to our clients-
+              In the terms of quality &amp; performance&sbquo; you can expect
+              high from us. What we give to our clients-
             </p>
           </div>
           <div className="row">
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/pixcel_perfect_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Pixel perfect design</h3>
+                <h3 className="adeptness_psd_title_box">
+                  Pixel perfect design
+                </h3>
                 <div className="adeptness_psd_content_box">
                   We offer pixel perfect wordpress conversion that ensure 100%
                   similar website to the original PSD.
@@ -176,7 +192,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/compability_all_browsers_icon.png"
                   />
@@ -185,15 +203,17 @@ const Page = () => {
                   Highly compatible all browsers
                 </h3>
                 <div className="adeptness_psd_content_box">
-                  Highly compatible with all the browsers i.e. Google Chrome&sbquo;
-                  Firefox&sbquo; Internet Browser etc.
+                  Highly compatible with all the browsers i.e. Google
+                  Chrome&sbquo; Firefox&sbquo; Internet Browser etc.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/w3c_validator_icon.png"
                   />
@@ -210,37 +230,44 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_responsive_icon.png"
                   />
                 </div>
                 <h3 className="adeptness_psd_title_box">Fully responsive</h3>
                 <div className="adeptness_psd_content_box">
-                  Keeping in mind the rising number of mobile users&sbquo; we convert
-                  PSD to wordpress&sbquo; which can run smoothly on all the gadgets.
+                  Keeping in mind the rising number of mobile users&sbquo; we
+                  convert PSD to wordpress&sbquo; which can run smoothly on all
+                  the gadgets.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_optimised_icon.png"
                   />
                 </div>
                 <h3 className="adeptness_psd_title_box">Optimized Images</h3>
                 <div className="adeptness_psd_content_box">
-                  After optimization&sbquo;it will load faster - Faster the page load
-                  time&sbquo; better is the user experience.
+                  After optimization&sbquo;it will load faster - Faster the page
+                  load time&sbquo; better is the user experience.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_efficient_icon.png"
                   />
@@ -255,7 +282,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_theme_customization_icon.png"
                   />
@@ -270,7 +299,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/admin_interface_icon.png"
                   />
@@ -285,7 +316,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_fast_loading_icon.png"
                   />
@@ -300,7 +333,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/privacy_support_icon.png"
                   />
@@ -315,7 +350,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_searchengine_icon.png"
                   />
@@ -330,7 +367,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_widget_icon.png"
                   />
@@ -345,7 +384,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_best_price_icon.png"
                   />
@@ -359,7 +400,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_outstanding_icon.png"
                   />
@@ -373,7 +416,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/security_icon_psd.png"
                   />
@@ -422,103 +467,103 @@ const Page = () => {
           <div className="expert_minds">
             <div className="expert_minds_con">
               <p>
-                If you are good at designing&sbquo; we are good at developing. We can
-                help you to create a WordPress theme out of the design you
-                created. All we will need is your design in the PSD format and
-                we will provide code into HTML to provide you with a WordPress
-                theme as imagined by you.
+                If you are good at designing&sbquo; we are good at developing.
+                We can help you to create a WordPress theme out of the design
+                you created. All we will need is your design in the PSD format
+                and we will provide code into HTML to provide you with a
+                WordPress theme as imagined by you.
               </p>
             </div>
             <div className="different_experts">
               <ul className="different_experts_member">
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-android-app-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Android App Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Android App Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-ios-app-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    iOS App Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire iOS App Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-cakephp-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Cake PHP Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Cake PHP Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-wordpress-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Wordpress Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Wordpress Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-drupal-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Drupal Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Drupal Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-magento-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Magento Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Magento Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-zencart-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Zencart Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Zencart Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-shopify-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Shopify Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Shopify Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-laravel-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Laravel Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Laravel Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-codeigniter-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Codeigniter Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Codeigniter Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-node-js-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Node.Js Experts
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Node.Js Experts
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-angular-js-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Angular jS Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Angular jS Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-yii-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Yii Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Yii Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-opencart-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Opencart Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Opencart Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Hybrid mobile app Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Hybrid mobile app Developer
                   </a>
                 </li>
               </ul>
@@ -558,7 +603,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

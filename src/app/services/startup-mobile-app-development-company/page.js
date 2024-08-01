@@ -47,7 +47,9 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-4 col-md-3">
-              <img
+              <Image
+                width={300}
+                height={500 / (100 / 100)}
                 alt="Startup Solution"
                 src="/img/startupmobileappdevelopmentcompany/startup.png"
               />
@@ -58,20 +60,20 @@ const Page = () => {
                   You have Startup idea&sbquo; We have solution
                 </div>
                 <p>
-                  Do you have a wonderful idea for your startup&sbquo; but stuck to
-                  execute your idea? You need a team of creative designers and
-                  developers who had previously worked with startups and made
-                  them a successful business by providing them an effective
+                  Do you have a wonderful idea for your startup&sbquo; but stuck
+                  to execute your idea? You need a team of creative designers
+                  and developers who had previously worked with startups and
+                  made them a successful business by providing them an effective
                   solution for their startup business.{" "}
                 </p>
                 <p>
                   Logicspice have a team of web &{" "}
-                  <a
-                    href="https://www.logicspice.com/mobile-app-development"
+                  <Link
+                    href="/services/mobile-app-development"
                     target="_blank"
                   >
                     mobile app developers
-                  </a>{" "}
+                  </Link>{" "}
                   who can turn your idea into a successful business. Our team
                   consults with client to add more creativity in your startup
                   idea.{" "}
@@ -79,8 +81,8 @@ const Page = () => {
                 <p>
                   Logicspice is leading mobile & web development company who
                   worked as a tech partners with several startups from an idea
-                  to successful launch. We understand the startups inside out&sbquo;
-                  as were startup too.{" "}
+                  to successful launch. We understand the startups inside
+                  out&sbquo; as were startup too.{" "}
                 </p>
               </div>
             </div>
@@ -94,7 +96,9 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-4 col-md-6" data-aos="fade-left">
                 <div className="image_working right_img">
-                  <img
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
                     alt="Innovation as a Core Value -Logicspice"
                     src="/img/startupmobileappdevelopmentcompany/CoreValue.png"
                   />
@@ -104,10 +108,10 @@ const Page = () => {
                 <div className="idea_working">
                   <h3>Innovation as a Core Value</h3>
                   <p>
-                    We go beyond the challenges. Innovation is not just by word&sbquo;
-                    it is a daily work of our team. We have done it right from
-                    custom table to integrating IoT devices with mobile
-                    applications.
+                    We go beyond the challenges. Innovation is not just by
+                    word&sbquo; it is a daily work of our team. We have done it
+                    right from custom table to integrating IoT devices with
+                    mobile applications.
                   </p>
                 </div>
               </div>
@@ -116,7 +120,9 @@ const Page = () => {
           <div className="work_section">
             <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-left">
               <div className="image_working right_img">
-                <img
+                <Image
+                  width={300}
+                  height={500 / (100 / 100)}
                   alt="Stand Ahead From Competition"
                   src="/img/startupmobileappdevelopmentcompany/StandAheadFromCompetition.png"
                 />
@@ -126,10 +132,10 @@ const Page = () => {
               <div className="idea_working">
                 <h3>Stand Ahead From Competition</h3>
                 <p>
-                  The start business&sbquo; you are going to execute may be surrounded
-                  by high competitors who has been in the market for years. At
-                  Logicspice&sbquo; our developers and designers develop the IT
-                  solution so you can stand ahead of competition.
+                  The start business&sbquo; you are going to execute may be
+                  surrounded by high competitors who has been in the market for
+                  years. At Logicspice&sbquo; our developers and designers
+                  develop the IT solution so you can stand ahead of competition.
                 </p>
               </div>
             </div>
@@ -138,7 +144,9 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-4 col-md-6" data-aos="fade-left">
                 <div className="image_working right_img">
-                  <img
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
                     alt="Skilled Developers"
                     src="/img/startupmobileappdevelopmentcompany/SkilledDevelopers.png"
                   />
@@ -149,12 +157,12 @@ const Page = () => {
                   <h3>Skilled Developers</h3>
                   <p>
                     Logicspice has a team of skilled developers who develop the
-                    complete stack through the Cloud&sbquo; Business Logic&sbquo; API Layer
-                    and the front-end. Our team of dedicated developers
-                    specialized in Android&sbquo; iPhone &{" "}
-                    <a href="https://www.logicspice.com/services/website-development">
+                    complete stack through the Cloud&sbquo; Business
+                    Logic&sbquo; API Layer and the front-end. Our team of
+                    dedicated developers specialized in Android&sbquo; iPhone &{" "}
+                    <Link href="/services/website-development">
                       web development service
-                    </a>{" "}
+                    </Link>{" "}
                     has helped the startup to reach their goal with minimized
                     cost & time.
                   </p>
@@ -165,7 +173,9 @@ const Page = () => {
           <div className="work_section">
             <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-right">
               <div className="image_working">
-                <img
+                <Image
+                  width={300}
+                  height={500 / (100 / 100)}
                   alt="Interactive UI"
                   src="/img/startupmobileappdevelopmentcompany/InteractiveUI.png"
                 />
@@ -187,7 +197,9 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-4 col-md-6" data-aos="fade-right">
                 <div className="image_working">
-                  <img
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
                     alt="Flexibility in Execution"
                     src="/img/startupmobileappdevelopmentcompany/Flexibility-Execution.png"
                   />
@@ -198,8 +210,8 @@ const Page = () => {
                   <h3>Flexibility in Execution</h3>
                   <p>
                     We were also a startup so we understand the challenges which
-                    startup faces&sbquo; their requirements&sbquo; specifications and
-                    deliver a cutting edge solution.
+                    startup faces&sbquo; their requirements&sbquo;
+                    specifications and deliver a cutting edge solution.
                   </p>
                 </div>
               </div>
@@ -208,7 +220,9 @@ const Page = () => {
           <div className="work_section">
             <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-right">
               <div className="image_working">
-                <img
+                <Image
+                  width={300}
+                  height={500 / (100 / 100)}
                   alt="User-End Priority"
                   src="/img/startupmobileappdevelopmentcompany/UserEndPriority.png"
                 />
@@ -240,7 +254,9 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="enterprises-object"
                       src="/img/startupmobileappdevelopmentcompany/discuss.png"
                       alt="..."
@@ -250,8 +266,9 @@ const Page = () => {
                 <div className="enterprises-body">
                   <h3 className="enterprises-heading">Discuss Your Idea</h3>
                   <p>
-                    With over 10 years of experience&sbquo; we validate your idea&sbquo;
-                    discuss with our marketing experts and present a solution.
+                    With over 10 years of experience&sbquo; we validate your
+                    idea&sbquo; discuss with our marketing experts and present a
+                    solution.
                   </p>
                 </div>
               </div>
@@ -260,7 +277,9 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="enterprises-object"
                       src="/img/startupmobileappdevelopmentcompany/goal.png"
                       alt="..."
@@ -280,7 +299,9 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="enterprises-object"
                       src="/img/startupmobileappdevelopmentcompany/product.png"
                       alt="..."
@@ -300,7 +321,9 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="enterprises-object"
                       src="/img/startupmobileappdevelopmentcompany/relationship.png"
                       alt="..."
@@ -308,7 +331,9 @@ const Page = () => {
                   </a>
                 </div>
                 <div className="enterprises-body">
-                  <h3 className="enterprises-heading">Long Term Relationship</h3>
+                  <h3 className="enterprises-heading">
+                    Long Term Relationship
+                  </h3>
                   <p>
                     We are always ready to enhance your project by adding latest
                     features and technology.
@@ -336,92 +361,112 @@ const Page = () => {
             <div className="hire_s">
               <ul>
                 <li>
-                  <a href="https://www.logicspice.com/hire-android-app-developers">
+                  <Link href="/services/hire-android-app-developers">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-web-developer.png"
                         alt="hire web and app developers"
                       />
                     </div>
-                    <div className="hire_ex_txt">Hire Android App Developer</div>
-                  </a>
+                    <div className="hire_ex_txt">
+                      Hire Android App Developer
+                    </div>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-ios-app-developers">
+                  <Link href="/services/hire-ios-app-developers">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-ios-developer.png"
                         alt="hire web and app developers"
                       />
                     </div>
                     <div className="hire_ex_txt">Hire iOS App Developer</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-web-developers">
+                  <Link href="/hire-web-developers">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-developer.png"
                         alt="hire web and app developers"
                       />
                     </div>
                     <div className="hire_ex_txt">Hire Web Developer</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-cakephp-developers">
+                  <Link href="/hire-cakephp-developers">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-cakephp.png"
                         alt="hire web and app developers"
                       />
                     </div>
                     <div className="hire_ex_txt">Hire Cakephp Developer</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-wordpress-experts">
+                  <Link href="/hire-wordpress-experts">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-wordpress.png"
                         alt="hire web and app developers"
                       />
                     </div>
                     <div className="hire_ex_txt">Hire Wordpress Developer</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-laravel-developers">
+                  <Link href="/hire-laravel-developers">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-laraval.png"
                         alt="hire web and app developers"
                       />
                     </div>
                     <div className="hire_ex_txt">Hire Laravel Developer</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-codeigniter-developers">
+                  <Link href="/hire-codeigniter-developers">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-codeigniter.png"
                         alt="hire web and app developers"
                       />
                     </div>
-                    <div className="hire_ex_txt">Hire Codeigniter Developers</div>
-                  </a>
+                    <div className="hire_ex_txt">
+                      Hire Codeigniter Developers
+                    </div>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.logicspice.com/hire-magento-experts">
+                  <Link href="/hire-magento-experts">
                     <div className="hire_ex_img">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/startupmobileappdevelopmentcompany/hire-magento.png"
                         alt="hire web and app developers"
                       />
                     </div>
                     <div className="hire_ex_txt">Hire Magento Develop</div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -438,12 +483,12 @@ const Page = () => {
               </p>
             </div>
             <div className="col-sm-4">
-              <a
-                href="https://www.logicspice.com/contact-us/"
+              <Link
+                href="/contact-us/"
                 className="btn btn-primary"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -454,7 +499,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

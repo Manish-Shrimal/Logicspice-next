@@ -24,26 +24,43 @@ const Page = () => {
             <ul>
               <li>
                 <i>
-                  <img src="/img/technology/laravel-icon.png" alt="Laravel" />
-                  <Image />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/laravel-icon.png"
+                    alt="Laravel"
+                  />
+                  {/* <Image /> */}
                 </i>
                 <span>Laravel</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/react-icon.png" alt="React JS" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/react-icon.png"
+                    alt="React JS"
+                  />
                 </i>
                 <span>React JS</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/nodejs-icon.png" alt="Node js" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/nodejs-icon.png"
+                    alt="Node js"
+                  />
                 </i>
                 <span>Node js</span>
               </li>
               <li>
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/react-native-icon.png"
                     alt="React Native"
                   />
@@ -52,19 +69,31 @@ const Page = () => {
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/angular-icon.png" alt="Angular" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/angular-icon.png"
+                    alt="Angular"
+                  />
                 </i>
                 <span>Angular</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/swift-icon.png" alt="Swift" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/swift-icon.png"
+                    alt="Swift"
+                  />
                 </i>
                 <span>Swift</span>
               </li>
               <li>
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/bootstrap-icon.png"
                     alt="Bootstrap"
                   />
@@ -73,13 +102,20 @@ const Page = () => {
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/bigdata-icon.png" alt="Big Data" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/bigdata-icon.png"
+                    alt="Big Data"
+                  />
                 </i>
                 <span>Big Data</span>
               </li>
               <li class="DevOpsTechnologies">
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/devops-icon.png"
                     alt="DevOps Infrastructure"
                   />
@@ -92,43 +128,75 @@ const Page = () => {
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/ai-icon.png" alt="Ai" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/ai-icon.png"
+                    alt="Ai"
+                  />
                 </i>
                 <span>Ai</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/java-icon.png" alt="JAVA" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/java-icon.png"
+                    alt="JAVA"
+                  />
                 </i>
                 <span>JAVA</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/xcode-icon.png" alt="Xcode" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/xcode-icon.png"
+                    alt="Xcode"
+                  />
                 </i>
                 <span>Xcode</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/mysql-icon.png" alt="MY SQL" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/mysql-icon.png"
+                    alt="MY SQL"
+                  />
                 </i>
                 <span>MY SQL</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/mongodb-icon.png" alt="Mongo DB" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/mongodb-icon.png"
+                    alt="Mongo DB"
+                  />
                 </i>
                 <span>Mongo DB</span>
               </li>
               <li>
                 <i>
-                  <img src="/img/technology/php-icon.png" alt="PHP" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/php-icon.png"
+                    alt="PHP"
+                  />
                 </i>
                 <span>PHP</span>
               </li>
               <li>
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/codeigniter-icon.png"
                     alt="Codeigniter"
                   />
@@ -160,7 +228,9 @@ const Page = () => {
             <ul>
               <li>
                 <div class="use-icon">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/php-web-icon.png"
                     alt="PHP Development"
                   />
@@ -169,7 +239,9 @@ const Page = () => {
               </li>
               <li>
                 <div class="use-icon">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/xml-development-icon.png"
                     alt="XML Development"
                   />
@@ -178,7 +250,9 @@ const Page = () => {
               </li>
               <li>
                 <div class="use-icon">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/html-css-icon.png"
                     alt="HTML5/ CSS3"
                   />
@@ -187,7 +261,9 @@ const Page = () => {
               </li>
               <li>
                 <div class="use-icon">
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/technology/js-web-icon.png"
                     alt="JS Web Development"
                   />
@@ -213,37 +289,64 @@ const Page = () => {
               <ul>
                 <li>
                   <i>
-                    <img src="/img/technology/laravel-icon.png" alt="Laravel" />
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/technology/laravel-icon.png"
+                      alt="Laravel"
+                    />
                   </i>
                   <span>Laravel</span>
                 </li>
                 <li>
                   <i>
-                    <img src="/img/technology/nodejs-icon.png" alt="Node js" />
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/technology/nodejs-icon.png"
+                      alt="Node js"
+                    />
                   </i>
                   <span>Node js</span>
                 </li>
                 <li>
                   <i>
-                    <img src="/img/technology/cake-icon.png" alt="Cake PHP" />
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/technology/cake-icon.png"
+                      alt="Cake PHP"
+                    />
                   </i>
                   <span>Cake PHP</span>
                 </li>
                 <li>
                   <i>
-                    <img src="/img/technology/react-icon.png" alt="React JS" />
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/technology/react-icon.png"
+                      alt="React JS"
+                    />
                   </i>
                   <span>React JS</span>
                 </li>
                 <li>
                   <i>
-                    <img src="/img/technology/angular-icon.png" alt="Angular" />
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/technology/angular-icon.png"
+                      alt="Angular"
+                    />
                   </i>
                   <span>Angular</span>
                 </li>
                 <li>
                   <i>
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/technology/bootstrap-icon.png"
                       alt="Bootstrap"
                     />
@@ -252,13 +355,20 @@ const Page = () => {
                 </li>
                 <li>
                   <i>
-                    <img src="/img/technology/django-icon.png" alt="django" />
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/technology/django-icon.png"
+                      alt="django"
+                    />
                   </i>
                   <span>django</span>
                 </li>
                 <li>
                   <i>
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/technology/codeigniter-icon.png"
                       alt="Codeigniter"
                     />
@@ -284,7 +394,12 @@ const Page = () => {
             <ul>
               <li data-aos="fade-right">
                 <div class="TechnologiesMobileUseIcon">
-                  <img src="/img/technology/android-icon.png" alt="android" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/android-icon.png"
+                    alt="android"
+                  />
                 </div>
                 <h4>Android Platform</h4>
                 <h5>
@@ -293,7 +408,12 @@ const Page = () => {
               </li>
               <li data-aos="fade-left">
                 <div class="TechnologiesMobileUseIcon">
-                  <img src="/img/technology/apple-icon.png" alt="apple" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/apple-icon.png"
+                    alt="apple"
+                  />
                 </div>
                 <h4>iOS Platform</h4>
                 <h5>
@@ -302,7 +422,12 @@ const Page = () => {
               </li>
               <li data-aos="fade-left">
                 <div class="TechnologiesMobileUseIcon">
-                  <img src="/img/technology/hybrid.png" alt="Hybrid" />
+                  <Image
+                    width={60}
+                    height={100}
+                    src="/img/technology/hybrid.png"
+                    alt="Hybrid"
+                  />
                 </div>
                 <h4>Hybrid</h4>
                 <h5>
@@ -326,12 +451,22 @@ const Page = () => {
             <ul>
               <li data-aos="fade-right">
                 <div class="database-use-icon">
-                  <img src="/img/technology/mysol-icon.png" alt="mysol" />
+                  <Image
+                    width={200}
+                    height={100 / (100 / 100)}
+                    src="/img/technology/mysol-icon.png"
+                    alt="mysol"
+                  />
                 </div>
               </li>
               <li data-aos="fade-left">
                 <div class="database-use-icon database-mango-icon">
-                  <img src="/img/technology/mangodb-icon.png" alt="mangodb" />
+                  <Image
+                    width={200}
+                    height={100 / (100 / 100)}
+                    src="/img/technology/mangodb-icon.png"
+                    alt="mangodb"
+                  />
                 </div>
               </li>
             </ul>
@@ -346,7 +481,9 @@ const Page = () => {
               <a onClick={() => openmodelcontactus()} class="btn btn-info">
                 Get a Free Quote
                 <i>
-                  <img
+                  <Image
+                    width={20}
+                    height={100}
                     src="/img/technology/technologies-icon-arrow.png"
                     alt="mongodb"
                   />

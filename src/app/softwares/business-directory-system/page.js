@@ -197,7 +197,11 @@ const Page = () => {
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -1434,10 +1438,8 @@ const Page = () => {
                   />
                 </Link>
               </div>
-              
-              
             </Slider>
-           </div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <button
@@ -1803,7 +1805,10 @@ const Page = () => {
                       logicspice for ready-made PHP software, professional &
                       great customer service.&quot;
                     </div>
-                    <div className="who_ratset" style={{ paddingRight: "17px" }}>
+                    <div
+                      className="who_ratset"
+                      style={{ paddingRight: "17px" }}
+                    >
                       <span
                         className="star_review_main"
                         style={{ paddingRight: "10px", color: "gold" }}
@@ -1845,7 +1850,7 @@ const Page = () => {
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Can the customer give rating to a business even if he hasn't visited the store?"
+                    headerTitle="Can the customer give rating to a business even if he hasn&apos;t visited the store?"
                     collapseId="flush-collapse2"
                   >
                     <p>
@@ -1970,13 +1975,13 @@ const Page = () => {
                   >
                     <Typography>
                       Can the customer give rating to a business even if he
-                      hasn't visited the store?
+                      hasn&apos;t visited the store?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
                       Yes, customer can give rating out of 5 even if they
-                      haven't visited the store. Customer can also write a
+                      haven&apos;t visited the store. Customer can also write a
                       review along with the rating.
                     </Typography>
                   </AccordionDetails>
@@ -2066,7 +2071,9 @@ const Page = () => {
       </section>
       <section className="content_area feature_inner" id="features">
         <div className="container">
-          <h2 className="title_main">PHP Business Directory Software Features</h2>
+          <h2 className="title_main">
+            PHP Business Directory Software Features
+          </h2>
           <div id="equipment_sldier">
             <Swiper
               slidesPerView={1}

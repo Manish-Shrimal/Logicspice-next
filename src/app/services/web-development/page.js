@@ -58,7 +58,7 @@ const Page = () => {
                     <Enquirymodal
                       modalStatus={showModal}
                       toggle={openModal}
-                      title="Cakephp Web Development"
+                      title="Web Development Servicest"
                     />
                   }
                 </div>
@@ -78,7 +78,9 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-7">
               <div className="WebDevelopmentBannerImg">
-                <img
+                <Image
+                     width={450}
+                     height={500 / (100 / 100)}
                   src="/img/webdevelopment/web-development-img.png"
                   alt="Web Development Services"
                 />
@@ -94,25 +96,33 @@ const Page = () => {
               <span>Our Clients</span>
             </li>
             <li>
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/img/webdevelopment/client-logo-img1.png"
                 alt="Web Development Services"
               />
             </li>
             <li>
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/img/webdevelopment/client-logo-img2.png"
                 alt="Web Development Services"
               />
             </li>
             <li>
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/img/webdevelopment/client-logo-img3.png"
                 alt="Web Development Services"
               />
             </li>
             <li>
-              <img
+              <Image
+                    width={300}
+                    height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img4.png"
                 alt="Web Development Services"
               />
@@ -166,7 +176,9 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="WebDevelopmentApplicationImg">
-                <img
+                <Image
+                     width={500}
+                     height={500 / (100 / 100)}
                   src="/img/webdevelopment/web-application-development-img.png"
                   alt="Web Development Services"
                 />
@@ -187,7 +199,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon1.png"
                       alt="Web Development Services"
                     />
@@ -205,7 +219,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon2.png"
                       alt="Web Development Services"
                     />
@@ -223,7 +239,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon3.png"
                       alt="Web Development Services"
                     />
@@ -238,7 +256,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon4.png"
                       alt="Web Development Services"
                     />
@@ -253,7 +273,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon5.png"
                       alt="Web Development Services"
                     />
@@ -270,7 +292,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon6.png"
                       alt="Web Development Services"
                     />
@@ -285,7 +309,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon7.png"
                       alt="Web Development Services"
                     />
@@ -303,7 +329,9 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/web-design-icon8.png"
                       alt="Web Development Services"
                     />
@@ -426,7 +454,9 @@ const Page = () => {
               <Slider {...settings}>
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
-                    <img
+                    <Image
+                      width={60}
+                      height={500 / (100 / 100)}
                       src="/img/webdevelopment/goodluck-logo.png"
                       alt="Web Development Services"
                     />
@@ -445,21 +475,28 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" className="">
+                      <a
+                        href="https://www.logicspice.com/portfolio"
+                        className=""
+                      >
                         View Portfolio
                       </a>
                     </div>
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <img
+                      <Image
+                         width={400}
+                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/goodluck-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
                   <div className="RingImg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
@@ -467,7 +504,9 @@ const Page = () => {
                 </div>
                 <div className="WebLatestProjectsSlide WebLatestRed">
                   <div className="WebProjectLogo">
-                    <img
+                    <Image
+                       width={60}
+                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/salesagy-logo.png"
                       alt="Web Development Services"
                     />
@@ -484,25 +523,35 @@ const Page = () => {
                           aria-hidden="true"
                         ></i>
                       </a>
-                      <i className="fa-brands fa-android" aria-hidden="true"></i>
+                      <i
+                        className="fa-brands fa-android"
+                        aria-hidden="true"
+                      ></i>
                       <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" className="">
+                      <a
+                        href="https://www.logicspice.com/portfolio"
+                        className=""
+                      >
                         View Portfolio
                       </a>
                     </div>
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <img
+                      <Image
+                        width={400}
+                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/salesagy-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
                   <div className="RingImg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
@@ -511,7 +560,9 @@ const Page = () => {
 
                 <div className="WebLatestProjectsSlide WebLatestJobatHome">
                   <div className="WebProjectLogo">
-                    <img
+                    <Image
+                       width={60}
+                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/jobathome-logo.png"
                       alt="Web Development Services"
                     />
@@ -530,21 +581,28 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" className="">
+                      <a
+                        href="https://www.logicspice.com/portfolio"
+                        className=""
+                      >
                         View Portfolio
                       </a>
                     </div>
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <img
+                      <Image
+                       width={400}
+                       height={500 / (100 / 100)}
                         src="/img/webdevelopment/jobathome-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
                   <div className="RingImg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
@@ -552,7 +610,9 @@ const Page = () => {
                 </div>
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
-                    <img
+                    <Image
+                       width={60}
+                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/fundcareusa-logo.png"
                       alt="Web Development Services"
                     />
@@ -571,21 +631,28 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" className="">
+                      <a
+                        href="https://www.logicspice.com/portfolio"
+                        className=""
+                      >
                         View Portfolio
                       </a>
                     </div>
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <img
+                      <Image
+                         width={400}
+                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/fundcareusa-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
                   <div className="RingImg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
@@ -594,7 +661,9 @@ const Page = () => {
 
                 <div className="WebLatestProjectsSlide WebLatestTacksm">
                   <div className="WebProjectLogo">
-                    <img
+                    <Image
+                      width={60}
+                      height={500 / (100 / 100)}
                       src="/img/webdevelopment/tacksm-logo.png"
                       alt="Web Development Services"
                     />
@@ -613,21 +682,28 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" className="">
+                      <a
+                        href="https://www.logicspice.com/portfolio"
+                        className=""
+                      >
                         View Portfolio
                       </a>
                     </div>
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <img
+                      <Image
+                         width={400}
+                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/tacksm-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
                   <div className="RingImg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
@@ -636,7 +712,9 @@ const Page = () => {
 
                 <div className="WebLatestProjectsSlide WebLatestVanessajo">
                   <div className="WebProjectLogo">
-                    <img
+                    <Image
+                      width={60}
+                      height={500 / (100 / 100)}
                       src="/img/webdevelopment/vanessajo-logo.png"
                       alt="Web Development Services"
                     />
@@ -655,21 +733,28 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a href="https://www.logicspice.com/portfolio" className="">
+                      <a
+                        href="https://www.logicspice.com/portfolio"
+                        className=""
+                      >
                         View Portfolio
                       </a>
                     </div>
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <img
+                      <Image
+                        width={400}
+                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/vanessajo-img.png"
                         alt="Web Development Services"
                       />
                     </div>
                   </div>
                   <div className="RingImg">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
                     />
@@ -696,7 +781,9 @@ const Page = () => {
               >
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon1.png"
                       alt="img1"
                     />
@@ -715,7 +802,9 @@ const Page = () => {
               >
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon2.png"
                       alt="img1"
                     />
@@ -732,7 +821,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon3.png"
                       alt="img1"
                     />
@@ -752,7 +843,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon4.png"
                       alt="img1"
                     />
@@ -769,7 +862,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon5.png"
                       alt="img1"
                     />
@@ -793,7 +888,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon6.png"
                       alt="img1"
                     />
@@ -830,7 +927,9 @@ const Page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <img
+                  <Image
+                    width={450}
+                    height={500 / (100 / 100)}
                     src="/img/webdevelopment/FaqLaravelImg.png"
                     alt="Django Web Development Services"
                   />

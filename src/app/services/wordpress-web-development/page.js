@@ -17,7 +17,7 @@ const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 1.5,
+    slidesToShow: 2.35,
     centerMode: true,
     vertical: false,
   };
@@ -91,7 +91,9 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
-                <img
+                <Image
+                    width={500}
+                    height={100 / (100 / 100)}
                   src="/img/wordpresswebdevelopment/custom-wordpress-development-img.png"
                   alt="Custom Wordpress Development"
                 />
@@ -105,7 +107,9 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
-                <img
+                <Image
+                  width={350}
+                  height={100 / (100 / 100)}
                   src="/img/wordpresswebdevelopment/custom-wordpress-logo-img.png"
                   alt="Custom Wordpress Development"
                 />
@@ -170,12 +174,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/laravel-new-icon1.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/laravel-white-icon1.png"
                         alt="Custom Wordpress Development"
@@ -196,12 +204,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon1.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon1.png"
                         alt="Custom Wordpress Development"
@@ -220,12 +232,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon2.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon2.png"
                         alt="Custom Wordpress Development"
@@ -245,12 +261,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-new-icon3.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-white-icon3.png"
                         alt="Custom Wordpress Development"
@@ -269,12 +289,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon3.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon3.png"
                         alt="Custom Wordpress Development"
@@ -294,12 +318,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-new-icon5.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-white-icon5.png"
                         alt="Custom Wordpress Development"
@@ -319,12 +347,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/wordpres-web-icon4.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/wordpres-white-icon4.png"
                         alt="Custom Wordpress Development"
@@ -345,12 +377,16 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-new-icon7.png"
                         alt="Custom Wordpress Development"
                       />
-                      <img
+                      <Image
+                        width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/wordpresswebdevelopment/codeigniter-white-icon7.png"
                         alt="Custom Wordpress Development"
@@ -382,7 +418,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image
+                      width={50}
+                      height={100}
                       src="/img/wordpresswebdevelopment/wordpres_features_icon1.png"
                       alt="img1"
                     />
@@ -400,7 +438,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image
+                      width={50}
+                      height={100}
                       src="/img/wordpresswebdevelopment/wordpres_features_icon2.png"
                       alt="img4"
                     />
@@ -417,7 +457,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image
+                      width={50}
+                      height={100}
                       src="/img/wordpresswebdevelopment/wordpres_features_icon3.png"
                       alt="img2"
                     />
@@ -434,7 +476,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image
+                      width={50}
+                      height={100}
                       src="/img/wordpresswebdevelopment/wordpres_features_icon4.png"
                       alt="img5"
                     />
@@ -451,7 +495,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image
+                      width={50}
+                      height={100}
                       src="/img/wordpresswebdevelopment/wordpres_features_icon5.png"
                       alt="img3"
                     />
@@ -469,7 +515,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image
+                      width={50}
+                      height={100}
                       src="/img/wordpresswebdevelopment/wordpres_features_icon6.png"
                       alt="img6"
                     />
@@ -503,7 +551,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon1.png"
                       alt="img1"
                     />
@@ -521,7 +571,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon2.png"
                       alt="img1"
                     />
@@ -540,7 +592,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon3.png"
                       alt="img1"
                     />
@@ -558,7 +612,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon4.png"
                       alt="img1"
                     />
@@ -576,7 +632,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon5.png"
                       alt="img1"
                     />
@@ -594,7 +652,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image
+                      width={60}
+                      height={100}
                       src="/img/wordpresswebdevelopment/codeigniter-why-icon6.png"
                       alt="img1"
                     />
@@ -632,7 +692,9 @@ const Page = () => {
             <Slider {...settings}>
               <div className="php-item">
                 <a href="https://mastercutmyanmar.com/" target="_blank">
-                  <img
+                  <Image
+                    width={800}
+                    height={500 / (100 / 100)}
                     src="/img/wordpresswebdevelopment/mastercutmyanmar-banner.png"
                     alt="img13"
                   />
@@ -647,7 +709,9 @@ const Page = () => {
               </div>
               <div className="php-item">
                 <a href="https://nayasawera.org/" target="_blank">
-                  <img
+                  <Image
+                    width={800}
+                    height={500 / (100 / 100)}
                     src="/img/wordpresswebdevelopment/nayasawera-banner.png"
                     alt="img14"
                   />
@@ -662,7 +726,9 @@ const Page = () => {
               </div>
               <div className="php-item">
                 <a href="https://haitisupermarket.com/" target="_blank">
-                  <img
+                  <Image
+                    width={800}
+                    height={500 / (100 / 100)}
                     src="/img/wordpresswebdevelopment/haitisupermarket-banner.png"
                     alt="img15"
                   />
@@ -685,7 +751,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

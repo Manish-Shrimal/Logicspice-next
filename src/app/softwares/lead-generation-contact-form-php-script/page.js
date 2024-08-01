@@ -21,13 +21,9 @@ import React, { useRef, useState } from "react";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
-
-
-
 const Page = () => {
-    const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
-
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -42,9 +38,11 @@ const Page = () => {
   };
   return (
     <>
-  <NavBar />
+      <NavBar />
       <section className="product_top_sectins">
         <Image
+          width={100}
+          height={100}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -52,83 +50,120 @@ const Page = () => {
         <div className="container">
           <h1>LS Lead Generation Form</h1>
           <h2>Contact Form PHP Scrip</h2>
-         
-            <div className="both-left-p-sec">
-              <h3>
-                Attach contact form to your website to get connect with your
-                users and collect their information.
-              </h3>
-              <div className="left-p-sec">
-                <ul>
-                  <li>
-                    Cross Domain Compatible : The form can be easily integrated
-                    with any third party site without any hassle.
-                  </li>
-                  <li>
-                    No installation required. Add the HTMl/Javascript code
-                    directly to the site or page where form is required.
-                  </li>
-                  <li>
-                    Captcha validation included in contact form to make this
-                    form more secure and advance.
-                  </li>
-                </ul>
-              </div>
-              <div className="left-p-sec">
-                <ul>
-                  <li>
-                    Get the email with all the details when any user submit the
-                    form and respond to their query quickly.
-                  </li>
-                  <li>
-                    Form is compatible with any custom framework includes
-                    wordpress, joomla, cakephp, laravel.
-                  </li>
-                  <li>
-                    Form width is extended dynamically to the full width. It can
-                    be customized as per your requirement.
-                  </li>
-                </ul>
-              </div>
+
+          <div className="both-left-p-sec">
+            <h3>
+              Attach contact form to your website to get connect with your users
+              and collect their information.
+            </h3>
+            <div className="left-p-sec">
+              <ul>
+                <li>
+                  Cross Domain Compatible : The form can be easily integrated
+                  with any third party site without any hassle.
+                </li>
+                <li>
+                  No installation required. Add the HTMl/Javascript code
+                  directly to the site or page where form is required.
+                </li>
+                <li>
+                  Captcha validation included in contact form to make this form
+                  more secure and advance.
+                </li>
+              </ul>
             </div>
-            <div className="right-p-sec">
-              <h4>Free</h4>
-              <div className="line-border">
-                <Image src="/img/jobboard/stars.png" alt="stars" className="" />
-                <p>42 Reviews</p>
-              </div>
-              <Link className="btn btn-primary" href="#formbuilder">
-                DOWNLOAD
-              </Link>
+            <div className="left-p-sec">
+              <ul>
+                <li>
+                  Get the email with all the details when any user submit the
+                  form and respond to their query quickly.
+                </li>
+                <li>
+                  Form is compatible with any custom framework includes
+                  wordpress, joomla, cakephp, laravel.
+                </li>
+                <li>
+                  Form width is extended dynamically to the full width. It can
+                  be customized as per your requirement.
+                </li>
+              </ul>
             </div>
-        
+          </div>
+          <div className="right-p-sec">
+            <h4>Free</h4>
+            <div className="line-border">
+              <Image
+                width={100}
+                height={100}
+                src="/img/jobboard/stars.png"
+                alt="stars"
+                className=""
+              />
+              <p>42 Reviews</p>
+            </div>
+            <Link className="btn btn-primary" href="#formbuilder">
+              DOWNLOAD
+            </Link>
+          </div>
         </div>
       </section>
       <section className="product_page_header_in">
         <div className="container">
-        <div className="whateissuprt">
-            <div className="headhs"><strong>Lead Generation Form Builder</strong></div>
-            <p>This is an excellent way to customize your contact form with custom form fields like text fields, multiple choice check boxes, radio buttons, file attachment control, 
-                drop-down lists, and paragraph text controls on your form. You can generate the custom PHP form with dynamic fields for <strong>Lead Generation</strong> with our free 
-                contact form builder over an online platform. You can select the kind of validation you needed over the form fields so that it validates the data input by the user. 
-                You can also put the placeholder text over the form fields if you want to give extra guidance to the user. Once you customized your email/contact/lead generator 
-                form format, download it. It&apos;s easy and ready to install the contact forms PHP script for your website/webpage online.</p>
+          <div className="whateissuprt">
+            <div className="headhs">
+              <strong>Lead Generation Form Builder</strong>
+            </div>
+            <p>
+              This is an excellent way to customize your contact form with
+              custom form fields like text fields, multiple choice check boxes,
+              radio buttons, file attachment control, drop-down lists, and
+              paragraph text controls on your form. You can generate the custom
+              PHP form with dynamic fields for <strong>Lead Generation</strong>{" "}
+              with our free contact form builder over an online platform. You
+              can select the kind of validation you needed over the form fields
+              so that it validates the data input by the user. You can also put
+              the placeholder text over the form fields if you want to give
+              extra guidance to the user. Once you customized your
+              email/contact/lead generator form format, download it. It&apos;s
+              easy and ready to install the contact forms PHP script for your
+              website/webpage online.
+            </p>
 
-            <p>You can also put your own form title and description for the php contact form and can select the desired background color of the form and can change the placement of 
-                the form objects with a simple drag-and-drop control facility. You can choose the email ID you want to configure for your form to send email. You can change the 
-                label of each form field to make it easy to understand for the user.</p>
+            <p>
+              You can also put your own form title and description for the php
+              contact form and can select the desired background color of the
+              form and can change the placement of the form objects with a
+              simple drag-and-drop control facility. You can choose the email ID
+              you want to configure for your form to send email. You can change
+              the label of each form field to make it easy to understand for the
+              user.
+            </p>
 
-            <p>You can use this <strong>custom PHP form builder</strong> to generate the form for the purpose of creating a contact form, order inquiry form, or creating a form 
-                to collect different choices and preferences from your customers, maybe through your order form or over so many other places where you want to take input from 
-                your website visitors. You can use it online wherever you require a good customized contact form, which is ready-made and super easy to install.</p>
+            <p>
+              You can use this <strong>custom PHP form builder</strong> to
+              generate the form for the purpose of creating a contact form,
+              order inquiry form, or creating a form to collect different
+              choices and preferences from your customers, maybe through your
+              order form or over so many other places where you want to take
+              input from your website visitors. You can use it online wherever
+              you require a good customized contact form, which is ready-made
+              and super easy to install.
+            </p>
 
-            <p>This <strong>contact form PHP script</strong> is an excellent way of bringing in new customers online. This PHP form captures your website leads/inquiries with a 
-                simple contact/inquiry/lead form. It could help you in a big way to generate leads through your website. Lead generation can be significantly improved through 
-                having a professionally scripted form structure, which is easy to use and has a decent look and format. The flexibility in customizing this form allows you to 
-                conduct free-flowing communication and to develop a relationship with the prospect/visitor of your website or web form. We have used a captcha in the form for 
-                security purposes.</p>
-
-        </div>
+            <p>
+              This <strong>contact form PHP script</strong> is an excellent way
+              of bringing in new customers online. This PHP form captures your
+              website leads/inquiries with a simple contact/inquiry/lead form.
+              It could help you in a big way to generate leads through your
+              website. Lead generation can be significantly improved through
+              having a professionally scripted form structure, which is easy to
+              use and has a decent look and format. The flexibility in
+              customizing this form allows you to conduct free-flowing
+              communication and to develop a relationship with the
+              prospect/visitor of your website or web form. We have used a
+              captcha in the form for security purposes.
+            </p>
+          </div>
 
           <div className="clear"></div>
         </div>
@@ -149,53 +184,60 @@ const Page = () => {
                           <div className="ld_flist">
                             <ul>
                               <li
-                                onclick="loadTextBox(&apos;slt&apos;)"
+                                onclick="loadTextBox('slt')"
                                 className="lfsl"
                                 id="slt"
                               >
                                 Single Line Text
                               </li>
                               <li
-                                onclick="loadTextAreaBox(&apos;pt&apos;)"
+                                onclick="loadTextAreaBox('pt')"
                                 className="lfsl"
                                 id="pt"
                               >
                                 Paragraph Text
                               </li>
                               <li
-                                onclick="loadCheckBox(&apos;cb&apos;)"
+                                onclick="loadCheckBox('cb')"
                                 className="lfsl"
                                 id="cb"
                               >
                                 Checkboxes
                               </li>
                               <li
-                                onclick="loadRadioBtn(&apos;mc&apos;)"
+                                onclick="loadRadioBtn('mc')"
                                 className="lfsl"
                                 id="mc"
                               >
                                 Multiple Choice
                               </li>
                               <li
-                                onclick="loadDropdown(&apos;dd&apos;)"
+                                onclick="loadDropdown('dd')"
                                 className="lfsl"
                                 id="dd"
                               >
                                 Dropdown
                               </li>
                               <li
-                                onclick="loadfilebox(&apos;filebox&apos;)"
+                                onclick="loadfilebox('filebox')"
                                 className="lfsl"
                                 id="filebox"
                               >
                                 File Upload
                               </li>
-                              <li onclick="setFrom(&apos;fs&apos;)" className="lfsl" id="fs">
+                              <li
+                                onclick="setFrom('fs')"
+                                className="lfsl"
+                                id="fs"
+                              >
                                 Form Settings
                               </li>
                             </ul>
                           </div>
-                          <div className="showaddform" id="showformdields"></div>
+                          <div
+                            className="showaddform"
+                            id="showformdields"
+                          ></div>
                         </div>
                         <div className="ld_main_r">
                           <form
@@ -205,11 +247,18 @@ const Page = () => {
                             acceptCharset="utf-8"
                             target="_blank"
                           >
-                            <div className="lfha" id="frmId" onclick="setFrom(25)">
+                            <div
+                              className="lfha"
+                              id="frmId"
+                              onclick="setFrom(25)"
+                            >
                               <div className="formtitel" id="cfromttitle">
                                 Untitled Form
                               </div>
-                              <div className="formtitel_de" id="cfromdescription">
+                              <div
+                                className="formtitel_de"
+                                id="cfromdescription"
+                              >
                                 This is my form, please fill it.
                               </div>
                               <div
@@ -275,7 +324,7 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addfull_name2"
-                                onclick="editText(&apos;full_name2&apos;)"
+                                onclick="editText('full_name2')"
                               >
                                 <div className="af_la">
                                   Full Name <span className="reqstar">*</span>
@@ -303,10 +352,11 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addemail_address3"
-                                onclick="editText(&apos;email_address3&apos;)"
+                                onclick="editText('email_address3')"
                               >
                                 <div className="af_la">
-                                  Email Address <span className="reqstar">*</span>
+                                  Email Address{" "}
+                                  <span className="reqstar">*</span>
                                 </div>
                                 <div className="af_ra">
                                   <input
@@ -331,10 +381,11 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addcontact_number4"
-                                onclick="editText(&apos;contact_number4&apos;)"
+                                onclick="editText('contact_number4')"
                               >
                                 <div className="af_la">
-                                  Contact Number <span className="reqstar">*</span>
+                                  Contact Number{" "}
+                                  <span className="reqstar">*</span>
                                 </div>
                                 <div className="af_ra">
                                   <input
@@ -359,7 +410,7 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addcomment5"
-                                onclick="editTextArea(&apos;comment5&apos;)"
+                                onclick="editTextArea('comment5')"
                               >
                                 <div className="af_la">
                                   Comment <span className="reqstar">*</span>
@@ -460,7 +511,7 @@ const Page = () => {
                       </span>
                       <input
                         type="text"
-                        v-model="formData[&apos;your-name&apos;]"
+                        v-model="formData['your-name']"
                         className="form-control"
                         placeholder="Name*"
                         id="UserName"
@@ -477,7 +528,7 @@ const Page = () => {
                       </span>
                       <input
                         type="email"
-                        v-model="formData[&apos;your-email&apos;]"
+                        v-model="formData['your-email']"
                         className="form-control"
                         placeholder="Email*"
                         id="UserEmail"
@@ -494,7 +545,7 @@ const Page = () => {
                       </span>
                       <input
                         type="text"
-                        v-model="formData[&apos;your-phone&apos;]"
+                        v-model="formData['your-phone']"
                         className="form-control"
                         placeholder="Phone*"
                         id="UserPhone"
@@ -545,7 +596,12 @@ const Page = () => {
                       />
                     </div>
                     <div v-if="loader" id="loadloader">
-                      <Image src="/img/loading-old.gif" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/loading-old.gif"
+                        alt=""
+                      />
                     </div>
                   </div>
                   <div className="col-md-6 text-right">
@@ -579,6 +635,8 @@ const Page = () => {
                   <div className="media-left">
                     <Link href="#">
                       <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/customizable.png"
                         alt="..."
@@ -601,6 +659,8 @@ const Page = () => {
                   <div className="media-left">
                     <Link href="#">
                       <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/drag.png"
                         alt="..."
@@ -623,6 +683,8 @@ const Page = () => {
                   <div className="media-left">
                     <Link href="#">
                       <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/put-in-box.png"
                         alt="..."
@@ -645,6 +707,8 @@ const Page = () => {
                   <div className="media-left">
                     <Link href="#">
                       <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/email.png"
                         alt="..."
@@ -652,7 +716,9 @@ const Page = () => {
                     </Link>
                   </div>
                   <div className="media-body">
-                    <h4 className="media-heading">Email ID to send form values</h4>
+                    <h4 className="media-heading">
+                      Email ID to send form values
+                    </h4>
                     <p>
                       Update the email id and send the query at your business
                       email.
@@ -665,6 +731,8 @@ const Page = () => {
                   <div className="media-left">
                     <Link href="#">
                       <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/preview.png"
                         alt="..."
@@ -685,6 +753,8 @@ const Page = () => {
                   <div className="media-left">
                     <Link href="#">
                       <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/download-archive-tray.png"
                         alt="..."
@@ -754,6 +824,8 @@ const Page = () => {
                       >
                         <span>
                           <Image
+                            width={60}
+                            height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
                           />
@@ -812,25 +884,42 @@ const Page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image src="/img/jobboard/bootstrap.png" alt="manager_icn" />
+                    <Image
+                      width={40}
+                      height={100}
+                      src="/img/jobboard/bootstrap.png"
+                      alt="manager_icn"
+                    />
                   </div>
                   <div className="icntechimg_nm">Bootstrap</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image src="/img/jobboard/css.png" alt="manager_icn" />
+                    <Image
+                      width={40}
+                      height={100}
+                      src="/img/jobboard/css.png"
+                      alt="manager_icn"
+                    />
                   </div>
                   <div className="icntechimg_nm">CSS3</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image src="/img/jobboard/html-5.png" alt="manager_icn" />
+                    <Image
+                      width={40}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="manager_icn"
+                    />
                   </div>
                   <div className="icntechimg_nm">HTML5</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
+                      width={40}
+                      height={100}
                       src="/img/jobboard/tech_php_icon.png"
                       alt="manager_icn"
                     />
@@ -839,7 +928,12 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image src="/img/jobboard/javascript.png" alt="manager_icn" />
+                    <Image
+                      width={40}
+                      height={100}
+                      src="/img/jobboard/javascript.png"
+                      alt="manager_icn"
+                    />
                   </div>
                   <div className="icntechimg_nm">Javascript</div>
                 </li>
@@ -859,6 +953,8 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -868,6 +964,8 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -978,7 +1076,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="col-md-7">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1119,6 +1217,8 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              width={100}
+              height={100}
               src="https://www.logicspice.com/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />

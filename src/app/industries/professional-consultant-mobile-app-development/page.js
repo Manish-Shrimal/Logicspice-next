@@ -232,7 +232,7 @@ const Page = () => {
                   Mobile App Development Services For
                   <span>
                     {" "}
-                    Professionals CA's, Attorneys & Lawyers, Doctors and Job
+                    Professionals CA&apos;s, Attorneys & Lawyers, Doctors and Job
                     Consultants{" "}
                   </span>
                 </h1>

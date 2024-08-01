@@ -1562,6 +1562,7 @@ See how it work yourself!"
                     width={1075}
                     height={100}
                     src="/img/forum-script/fourms2.png"
+                    alt=""
                   />
                 </div>
                 <div className="hands-proved">
@@ -1575,6 +1576,7 @@ See how it work yourself!"
                     width={1075}
                     height={100}
                     src="/img/forum-script/fourms3.png"
+                    alt=""
                   />
                 </div>
                 <div className="hands-proved">
@@ -1588,6 +1590,7 @@ See how it work yourself!"
                     width={1075}
                     height={100}
                     src="/img/forum-script/fourms4.png"
+                    alt=""
                   />
                 </div>
                 <div className="hands-proved">

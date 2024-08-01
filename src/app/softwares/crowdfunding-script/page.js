@@ -136,7 +136,11 @@ const Page = () => {
                   >
                     Get Demo Access!
                   </Link> */}
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -1457,8 +1461,8 @@ const Page = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Image
-            width={900}
-            height={900}
+              width={900}
+              height={900}
               src="/img/crowdfunding/crowdfunding_for_page.jpg"
               alt="icon"
               title=""
@@ -1513,7 +1517,7 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-               
+
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
@@ -1521,7 +1525,7 @@ const Page = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                    chooseloveconcert.com
+                      chooseloveconcert.com
                     </Link>
                   </div>
                   <Link
@@ -1564,7 +1568,6 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-               
               </Slider>
             </div>
           </Modal.Body>

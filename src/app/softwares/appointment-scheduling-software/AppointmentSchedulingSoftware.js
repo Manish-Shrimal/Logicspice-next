@@ -136,7 +136,11 @@ const AppointmentSchedulingSoftware = () => {
                     Get Demo Access!
                   </Link> */}
 
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -1820,58 +1824,58 @@ const AppointmentSchedulingSoftware = () => {
         <div className="container">
           <h2 className="title_main">Appointment Scheduling Software</h2>
           <div id="joblboardslide">
-          <Slider {...settings} className="hidedot">
-          <div>
-            <div className="feat-slide-img">
-              <Image
-                src="/img/abs/SS1.jpg"
-                alt="Add Menu For Restaurants"
-                width={1075}
-                height={1075}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="feat-slide-img">
-              <Image
-                src="/img/abs/SS2.jpg"
-                alt="List/Filter/Sort Restaurants"
-                width={1075}
-                height={1075}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="feat-slide-img">
-              <Image
-                src="/img/abs/SS3.jpg"
-                alt="Menu Management For Restaurant"
-                width={1075}
-                height={1075}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="feat-slide-img">
-              <Image
-                src="/img/abs/SS4.jpg"
-                alt="View Received Orders"
-                width={1075}
-                height={1075}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="feat-slide-img">
-              <Image
-                src="/img/abs/SS5.jpg"
-                alt="View Restaurant Detail"
-                width={1075}
-                height={1075}
-              />
-            </div>
-          </div>
-        </Slider>
+            <Slider {...settings} className="hidedot">
+              <div>
+                <div className="feat-slide-img">
+                  <Image
+                    src="/img/abs/SS1.jpg"
+                    alt="Add Menu For Restaurants"
+                    width={1075}
+                    height={1075}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="feat-slide-img">
+                  <Image
+                    src="/img/abs/SS2.jpg"
+                    alt="List/Filter/Sort Restaurants"
+                    width={1075}
+                    height={1075}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="feat-slide-img">
+                  <Image
+                    src="/img/abs/SS3.jpg"
+                    alt="Menu Management For Restaurant"
+                    width={1075}
+                    height={1075}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="feat-slide-img">
+                  <Image
+                    src="/img/abs/SS4.jpg"
+                    alt="View Received Orders"
+                    width={1075}
+                    height={1075}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="feat-slide-img">
+                  <Image
+                    src="/img/abs/SS5.jpg"
+                    alt="View Restaurant Detail"
+                    width={1075}
+                    height={1075}
+                  />
+                </div>
+              </div>
+            </Slider>
           </div>
         </div>
       </section>

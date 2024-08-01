@@ -85,7 +85,11 @@ const Page = () => {
                 <div className="portal-price"></div>
                 <div className="ecommerce-valu-btn">
                   <div className="job-valu-btn">
-                    <div className="btn btn-get" onClick={openModal}>
+                    <div
+                      className=" btn-get"
+                      onClick={openModal}
+                      style={{ textAlign: "center" }}
+                    >
                       <button>Get Demo Access!</button>
                       {
                         <Enquirymodal
@@ -281,6 +285,7 @@ See how it work yourself!"
                             height={100}
                             src="/img/ecommercewebsite/ecommerce_customer_mobile.png"
                             className="lazy"
+                            alt=""
                           />
                         </div>
                       </div>
@@ -1143,8 +1148,8 @@ See how it work yourself!"
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
                       <Image
-                       width={800}
-                       height={500 / (100 / 100)}
+                        width={800}
+                        height={500 / (100 / 100)}
                         src="/img/ecommercewebsite/ecommerce-project-img2.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1181,8 +1186,8 @@ See how it work yourself!"
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
                       <Image
-                       width={800}
-                       height={500 / (100 / 100)}
+                        width={800}
+                        height={500 / (100 / 100)}
                         src="/img/ecommercewebsite/vanessajo-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1200,8 +1205,8 @@ See how it work yourself!"
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
                       <Image
-                         width={800}
-                         height={500 / (100 / 100)}
+                        width={800}
+                        height={500 / (100 / 100)}
                         src="/img/ecommercewebsite/la-maison-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1219,8 +1224,8 @@ See how it work yourself!"
                   <div className="ecommerce-projects--bx">
                     <div className="ecommerce-projects--img">
                       <Image
-                       width={800}
-                       height={500 / (100 / 100)}
+                        width={800}
+                        height={500 / (100 / 100)}
                         src="/img/ecommercewebsite/altijdbon-img.png"
                         alt="eCommerce Ultimate Package"
                         className=""
@@ -1252,8 +1257,8 @@ See how it work yourself!"
       <section className="ecommerce_review_section" id="reviews">
         <div className="ecommerce_review__img">
           <Image
-          width={500}
-          height={500 / (100 / 100)}
+            width={500}
+            height={500 / (100 / 100)}
             src="/img/ecommercewebsite/ecommerce-review-img.png"
             alt="eCommerce Ultimate Package"
             className=""

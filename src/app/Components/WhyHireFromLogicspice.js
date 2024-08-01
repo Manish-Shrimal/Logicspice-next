@@ -18,27 +18,27 @@ const WhyHireFromLogicspice = ({ testimonialData }) => {
   const workedWithData = [
     {
       id: 1,
-      image: "https://www.logicspice.com/img/images/look/iwork-logo.webp",
+      image: "/img/home/look/iwork-logo.webp",
       link: "https://iworks.sn/",
     },
     {
       id: 2,
-      image: "https://www.logicspice.com/img/images/look/logo-job-at-home.webp",
+      image: "/img/home/look/logo-job-at-home.webp",
       link: "https://jobathome.fr/",
     },
     {
       id: 3,
-      image: "https://www.logicspice.com/img/images/look/logo-we-do.webp",
+      image: "/img/home/look/logo-we-do.webp",
       link: "https://www.wedoitcheaper.com/",
     },
     {
       id: 4,
-      image: "https://www.logicspice.com/img/images/look/logo-gb-lancers.webp",
+      image: "/img/home/look/logo-gb-lancers.webp",
       link: "https://www.gblancers.com/",
     },
     {
       id: 5,
-      image: "https://www.logicspice.com/img/images/look/yp-logo.webp",
+      image: "/img/home/look/yp-logo.webp",
       link: "https://www.yourpension.ch/",
     },
     {
@@ -392,3 +392,9 @@ const WhyHireFromLogicspice = ({ testimonialData }) => {
 };
 
 export default WhyHireFromLogicspice;
+
+
+
+
+
+

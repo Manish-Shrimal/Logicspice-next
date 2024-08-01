@@ -134,7 +134,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">
@@ -142,18 +143,18 @@ const Page = () => {
                     <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div></div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
+                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Project Basis</div>
                     </div>
                 </div> 

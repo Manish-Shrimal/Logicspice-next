@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Certificationtabs = () => {
   const [activeTab, setActiveTab] = useState("Certifications");
@@ -20,7 +21,7 @@ const Certificationtabs = () => {
           style={{cursor: "pointer"}}
         >
           <a>
-            <img src="/img/customsolutions/idea.png" alt="#" /> Idea
+            <Image width={100} height={100} src="/img/customsolutions/idea.png" alt="#" /> Idea
           </a>
         </li>
         <li
@@ -31,7 +32,7 @@ const Certificationtabs = () => {
         >
           <a>
             <span>
-              <img src="/img/customsolutions/position.png" alt="#" />
+              <Image width={100} height={100} src="/img/customsolutions/position.png" alt="#" />
             </span>{" "}
             Concept
           </a>
@@ -44,7 +45,7 @@ const Certificationtabs = () => {
         >
           <a>
             <span>
-              <img
+              <Image width={100} height={100}
                 className="lazy"
                 src="/img/customsolutions/implement.png"
                 alt="affiliates_icon"
@@ -61,7 +62,7 @@ const Certificationtabs = () => {
         >
           <a>
             <span>
-              <img
+              <Image width={100} height={100}
                 className="lazy"
                 src="/img/customsolutions/implement.png"
                 alt="affiliates_icon"
@@ -78,7 +79,7 @@ const Certificationtabs = () => {
         >
           <a>
             <span>
-              <img
+              <Image width={100} height={100}
                 className="lazy"
                 src="/img/customsolutions/implement.png"
                 alt="affiliates_icon"

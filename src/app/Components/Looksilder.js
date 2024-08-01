@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const Looksilder = () => {
   const settings = {
@@ -20,7 +21,7 @@ const Looksilder = () => {
       <Slider {...settings}>
         <div class="row d-flex align-items-center">
           <div class="col-md-6">
-            <img
+            <Image  width={500} height ={100 / (100/100)}
               data-aos="fade-right"
               class="Zibjob aos-init aos-animate"
               src="https://www.logicspice.com/img/images/look/Zibzob.webp"
@@ -30,7 +31,7 @@ const Looksilder = () => {
 
           <div class="col-md-6">
             <div class="ClientLogoHome">
-              <img
+              <Image  width={200} height ={100 / (100/100)}
                 src="https://www.logicspice.com/img/images/look/zip-joblogo.webp"
                 data-original=""
                 alt="Zibzob"
@@ -62,7 +63,7 @@ const Looksilder = () => {
         </div>
         <div class="row d-flex align-items-center">
           <div class="col-md-6">
-            <img
+            <Image  width={500} height ={100 / (100/100)}
               data-aos="fade-right"
               class="Zibjob aos-init aos-animate"
               src="https://www.logicspice.com/img/images/look/Zibzob.webp"
@@ -72,7 +73,7 @@ const Looksilder = () => {
 
           <div class="col-md-6">
             <div class="ClientLogoHome">
-              <img
+              <Image  width={200} height ={100 / (100/100)}
                 src="https://www.logicspice.com/img/images/look/zip-joblogo.webp"
                 data-original=""
                 alt="Zibzob"

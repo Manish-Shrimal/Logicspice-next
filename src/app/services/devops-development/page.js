@@ -17,9 +17,11 @@ const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 1.5,
+    slidesToShow: 2.35,
     centerMode: true,
     vertical: false,
+    autoplay: true,
+    arrows: false,
   };
 
   const [showModal, setShowModal] = useState(false);
@@ -81,7 +83,8 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
-                <img
+                <Image width={600}
+                   height={500 / (100 / 100)}
                   src="/img/devopsdevelopment/devops-img.png"
                   alt="DevOps Development Services"
                 />
@@ -95,7 +98,8 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
-                <img
+                <Image width={600}
+                  height={500 / (100 / 100)}
                   src="/img/devopsdevelopment/devops-icon.png"
                   alt="DevOps Development Services"
                 />
@@ -152,12 +156,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/containerization-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/containerization-icon-white.png"
                         alt="DevOps Development Services"
@@ -176,12 +182,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/cloud-automation-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/cloud-automation-white-icon.png"
                         alt="DevOps Development Services"
@@ -200,12 +208,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/deployment-automation-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/deployment-automation-white-icon.png"
                         alt="DevOps Development Services"
@@ -224,12 +234,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/infrastructure-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/infrastructure-white-icon.png"
                         alt="DevOps Development Services"
@@ -248,12 +260,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/infrastructure-automation-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/infrastructure-automation-white-icon.png"
                         alt="DevOps Development Services"
@@ -273,12 +287,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/monitoring-logging-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/monitoring-logging-white-icon.png"
                         alt="DevOps Development Services"
@@ -297,12 +313,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/security-compliance-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/security-compliance-white-icon.png"
                         alt="DevOps Development Services"
@@ -322,12 +340,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/configuration-management-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <img
+                      <Image width={80}
+                        height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/configuration-management-white-icon.png"
                         alt="DevOps Development Services"
@@ -357,7 +377,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image width={50}
+                      height={100}
                       src="/img/devopsdevelopment/operational-efficiency.png"
                       alt="img1"
                     />
@@ -373,7 +394,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image width={50}
+                      height={100}
                       src="/img/devopsdevelopment/custom-infrastructure.png"
                       alt="img4"
                     />
@@ -390,7 +412,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image width={50}
+                      height={100}
                       src="/img/devopsdevelopment/flexible-rates.png"
                       alt="img2"
                     />
@@ -407,7 +430,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image width={50}
+                      height={100}
                       src="/img/devopsdevelopment/scalable-architecture.png"
                       alt="img5"
                     />
@@ -421,7 +445,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image width={50}
+                      height={100}
                       src="/img/devopsdevelopment/real-time-reporting.png"
                       alt="img3"
                     />
@@ -438,7 +463,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <img
+                    <Image width={50}
+                      height={100}
                       src="/img/devopsdevelopment/diverse-expertise.png"
                       alt="img6"
                     />
@@ -467,7 +493,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <img
+                    <Image width={60}
+                      height={100}
                       src="/img/devopsdevelopment/seamless-collaboration.png"
                       alt="img1"
                     />
@@ -484,7 +511,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <img
+                    <Image width={60}
+                      height={100}
                       src="/img/devopsdevelopment/swift-market.png"
                       alt="img1"
                     />
@@ -501,7 +529,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <img
+                    <Image width={60}
+                      height={100}
                       src="/img/devopsdevelopment/peak-performance.png"
                       alt="img1"
                     />
@@ -518,7 +547,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <img
+                    <Image width={60}
+                      height={100}
                       src="/img/devopsdevelopment/budget-friendly.png"
                       alt="img1"
                     />
@@ -535,7 +565,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <img
+                    <Image width={60}
+                      height={100}
                       src="/img/devopsdevelopment/easy-scalability.png"
                       alt="img1"
                     />
@@ -552,7 +583,8 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <img
+                    <Image width={60}
+                      height={100}
                       src="/img/devopsdevelopment/automated-quick.png"
                       alt="img1"
                     />
@@ -580,7 +612,7 @@ const Page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <img
+                  <Image width={500} height={100}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
@@ -666,7 +698,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image width={50} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

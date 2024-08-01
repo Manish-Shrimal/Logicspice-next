@@ -142,7 +142,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">
@@ -150,18 +151,18 @@ const Page = () => {
                     <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div></div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
+                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Project Basis</div>
                     </div>
                 </div> 
@@ -178,15 +179,15 @@ const Page = () => {
             <h2>Hire ReactJS Expert</h2>
             <p>
               Businesses aiming for unparalleled digital growth need only
-              specialists' expertise. We support businesses to grow by
+              specialists&apos; expertise. We support businesses to grow by
               connecting them with top-tier ReactJS Experts. Choosing ReactJS is
               a strategic decision, given its capacity to deliver dynamic web
               solutions.
             </p>
             <p>
               ReactJS stands as a superior framework geared towards designing
-              immersive web experiences. If you're considering using the ReactJS
-              ecosystem for your web interface, we're here to introduce you to
+              immersive web experiences. If you&apos;re considering using the ReactJS
+              ecosystem for your web interface, we&apos;re here to introduce you to
               the ReactJS experts.
             </p>
             <p>
@@ -341,7 +342,7 @@ const Page = () => {
                     <div class="custom-ser-txt">
                 <h3>6. Web Extension Development</h3>
                 <p>
-                  Strengthen the website's functionality with additional
+                  Strengthen the website&apos;s functionality with additional
                   features and tools carefully designed by our ReactJS experts.
                 </p>
               </div>
@@ -491,7 +492,7 @@ const Page = () => {
               collapseId="flush-collapse2"
             >
               <p>
-                Logicspice's ReactJS developers are experienced professionals
+                Logicspice&apos;s ReactJS developers are experienced professionals
                 known for creating efficient, responsive web apps tailored for
                 your enterprise.
               </p>
@@ -513,8 +514,8 @@ const Page = () => {
               collapseId="flush-collapse4"
             >
               <p>
-                At Logicspice, client confidentiality is our priority. We're
-                committed to ensuring your project's confidentiality via NDAs
+                At Logicspice, client confidentiality is our priority. We&apos;re
+                committed to ensuring your project&apos;s confidentiality via NDAs
                 etc.
               </p>
             </MDBAccordionItem>

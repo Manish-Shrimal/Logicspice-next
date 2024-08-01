@@ -4932,5 +4932,17 @@ before {
 	text-align: center;
 }
 
-
+.content_left_bar ul.ul_bullet li, .content_left_bar ul.webvevone li, .content_left_bar ul.webvevtwo li, .new_sid ul li {
+  background: url("/img/icn_list_detail.png") no-repeat scroll 0 2px;
+  float: left;
+  font-size: 17px;
+  margin-bottom: 15px;
+  padding-left: 24px;
+  padding-top: 0px;
+  width: 100%;
+}
+.content_area.content_left_bar.pursue p {
+  margin-bottom: 20px;
+  color: #3F3F3F;
+}
 

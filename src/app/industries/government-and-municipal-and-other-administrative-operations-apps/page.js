@@ -511,8 +511,8 @@ const Page = () => {
                         </h3>
                         <div className="casestudy-details-para">
                           <p>
-                            Simpleshark is an "Employee Shift Management Site
-                            and Mobile Application for Employee” that will
+                            Simpleshark is an &quot;Employee Shift Management Site
+                            and Mobile Application for Employee&quot; that will
                             facilitate the employers register over website and
                             add the employee and create their acc...
                           </p>

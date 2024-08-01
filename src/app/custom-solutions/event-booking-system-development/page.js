@@ -210,13 +210,13 @@ const Page = () => {
             <p>
               {" "}
               With the help of our on demand online event registration software,
-              they can go through any of the vendor's details that they prefer
+              they can go through any of the vendor&apos;s details that they prefer
               from the listing. Customers can also create their own event and
               share it other people using their email.
             </p>
             <p>
               Event booking website development allow vendors to set up and
-              manage their "Store" over the website by uploading
+              manage their &quot;Store&quot; over the website by uploading
               products/service in different different categories in their
               account. While adding their services vendors can put them into
               proper categories and upload images to display their work to their
@@ -308,7 +308,7 @@ const Page = () => {
                   <h3>Store Management </h3>
                   <p>
                     {" "}
-                    Vendors can set up and manage their "Store" over the website
+                    Vendors can set up and manage their &quot;Store&quot; over the website
                     easily providing their contact information
                   </p>
                 </div>
@@ -327,7 +327,7 @@ const Page = () => {
                 <div className="demand-content">
                   <h3>Services/Product Management </h3>
                   <p>
-                    Vendors can add products/services in their "Store" along
+                    Vendors can add products/services in their &quot;Store&quot; along
                     with pictures to show their previous work
                   </p>
                 </div>
@@ -438,7 +438,7 @@ const Page = () => {
                             <h3>Manage Services</h3>
                             <p>
                               Vendors can manage products/ services in their
-                              "Store" and will be able to add/ edit/ update/
+                              &quot;Store&quot; and will be able to add/ edit/ update/
                               delete them.
                             </p>
                           </div>
@@ -482,7 +482,7 @@ const Page = () => {
                             />
                             <h3>Vendor Details</h3>
                             <p>
-                              Customer can view details like his "Store" name,
+                              Customer can view details like his &quot;Store&quot; name,
                               pictures of his previous work, services provided
                               and more.
                             </p>
@@ -498,7 +498,7 @@ const Page = () => {
                             />
                             <h3>Store Setup For Vendor</h3>
                             <p>
-                              Vendors can set up and manage their "Store" by
+                              Vendors can set up and manage their &quot;Store&quot; by
                               uploading products/service in different
                               categories.{" "}
                             </p>
@@ -614,7 +614,7 @@ const Page = () => {
                        <MDBAccordionItem
                           headerTitle="Can a Vendor upload multiple products/services to the website?"
                           collapseId="flush-collapse4">
-                          <p>Yes, Vendors can add products/services in their "Store" along with multiple pictures to show their previous work.</p>
+                          <p>Yes, Vendors can add products/services in their &quot;Store&quot; along with multiple pictures to show their previous work.</p>
                         </MDBAccordionItem>
         
         

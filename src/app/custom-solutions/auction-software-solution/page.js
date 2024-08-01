@@ -210,7 +210,7 @@ const Page = () => {
 
             <p>
               On this on demand auction software, sellers can set up and manage
-              their "Store" over the website by uploading products in suitable
+              their &quot;Store&quot; over the website by uploading products in suitable
               categories in their account over the site. They can view the bid
               offers posted over their products listed. They will be able to
               view the bid amount of the highest bidder i.e. highest bidder will

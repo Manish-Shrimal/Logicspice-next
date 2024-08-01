@@ -76,21 +76,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  const getData = async() => {
+  const getData = async () => {
     try {
-        const response = await axios.get(BaseAPI + '/product/Details/equipment-rental-software');
-        // console.log(response.data.data)
-        setPageData(response.data.data);
+      const response = await axios.get(
+        BaseAPI + "/product/Details/equipment-rental-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
     } catch (error) {
-        console.log(error.message);
+      console.log(error.message);
     }
-
-  }
+  };
 
   useEffect(() => {
     getData();
   }, []);
-
 
   return (
     <>
@@ -129,7 +129,11 @@ const Page = () => {
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -1212,11 +1216,15 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            <h4>
-                {pageData.currency_symbol}{pageData.price}<span className="sml_labl"> {pageData.name}</span>
+              <h4>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                {pageData.currency_symbol}{pageData.other_price}<span className="sml_labl"> {pageData.name}</span>
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
@@ -1457,7 +1465,7 @@ const Page = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                    simplax.com.br
+                      simplax.com.br
                     </Link>
                   </div>
                   <Link
@@ -1525,7 +1533,6 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-                
               </Slider>
             </div>
           </Modal.Body>

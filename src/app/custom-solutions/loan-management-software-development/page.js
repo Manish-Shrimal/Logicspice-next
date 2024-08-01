@@ -47,7 +47,7 @@ const Page = () => {
                 business needs.
               </p>
               <p className="sml_txt">
-                Rapid customization, because of our team's past experience over
+                Rapid customization, because of our team&apos;s past experience over
                 similar solutions.
               </p>
 

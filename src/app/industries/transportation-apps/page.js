@@ -539,7 +539,7 @@ const Page = () => {
                         <div className="blog_detail_sectc_bl">
                           <p>
                             &quot;Utrack&quot; app facilitates the students to
-                            live stress free by consolidating student's class
+                            live stress free by consolidating student&apos;s class
                             schedules, community events, and university
                             organization updates onto a calendar over the app.
                             W...

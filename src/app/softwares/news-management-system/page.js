@@ -1158,7 +1158,7 @@ See how it work yourself!"
           <div id="joblboardslide">
             <Slider {...settings}>
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><Image src="/img/news/lsnews-home.jpg" /></div>
+              <div className="feat-slide-img"><Image src="/img/news/lsnews-home.jpg" alt=""/></div>
                     <div className="hands-proved">
                         <div className="titleof_scnew">Home</div>
                     </div>
@@ -1166,14 +1166,14 @@ See how it work yourself!"
          
 
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><Image src="/img/news/lsnews-technology.jpg" /></div>
+              <div className="feat-slide-img"><Image src="/img/news/lsnews-technology.jpg" alt=""/></div>
                     <div className="hands-proved">
                         <div className="titleof_scnew">Technology News</div>
                     </div>
               </div>
 
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><Image src="/img/news/lsnews-internation.jpg" /></div>
+              <div className="feat-slide-img"><Image src="/img/news/lsnews-internation.jpg" alt=""/></div>
                     <div className="hands-proved">
                         <div className="titleof_scnew">International News</div>
                     </div>

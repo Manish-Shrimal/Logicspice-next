@@ -18,9 +18,11 @@ const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 1.5,
+    slidesToShow: 2.35,
     centerMode: true,
     vertical: false,
+    autoplay: true,
+    arrows: false,
   };
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -474,9 +476,9 @@ const Page = () => {
                     <h3>Laravel Framework</h3>
                     <p>
                       Laravel is renowned as an open source platform
-                      <br /> blessed on MVC architectural pattern. For best
-                      <br /> quality Laravel development, Logicspice
-                      <br /> is your most trusted ally.
+                     blessed on MVC architectural pattern. For best
+                      quality Laravel development, Logicspice
+                       is your most trusted ally.
                     </p>
                   </div>
                 </div>

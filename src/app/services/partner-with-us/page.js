@@ -31,10 +31,11 @@ const Page = () => {
           <div className="col-sm-12 text-center">
             <h2>Partner With us </h2>
             <p>
-              Businesses once grew by one of two ways; grass roots up&sbquo; or by
-              acquisition.Today they grow through alliances - all kinds of
+              Businesses once grew by one of two ways; grass roots up&sbquo; or
+              by acquisition.Today they grow through alliances - all kinds of
               dangerous alliances. Joint ventures and customer partnerings
-              which&sbquo; by the way&sbquo; very few people understand. &quot;Peter Drukwr&quot;
+              which&sbquo; by the way&sbquo; very few people understand.
+              &quot;Peter Drukwr&quot;
             </p>
           </div>
         </div>
@@ -45,8 +46,8 @@ const Page = () => {
           <p>
             Logicspice is a leading mobile & web development company with over
             18+ years experience working with clients globally. We offer
-            partnership to small&sbquo; medium and large businesses as well. We have
-            completed numerous outsourced projects in mobile apps & web
+            partnership to small&sbquo; medium and large businesses as well. We
+            have completed numerous outsourced projects in mobile apps & web
             development.
           </p>
           <p>
@@ -69,8 +70,8 @@ const Page = () => {
                 <p>
                   We always ready to work with small&sbquo; medium or large
                   businesses. If you have a great marketing capacity and rich in
-                  projects&sbquo; but lack of in-house resource&sbquo; logicspice is the
-                  best place to work out with.
+                  projects&sbquo; but lack of in-house resource&sbquo;
+                  logicspice is the best place to work out with.
                 </p>
                 <p>
                   {" "}
@@ -81,7 +82,9 @@ const Page = () => {
                 </p>
               </div>
               <div className="col-sm-6 text-center">
-                <img
+                <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                   src="/img/partnerwithus/Business-Partner.png"
                   alt="Business Partner"
                   data-aos="fade-left"
@@ -94,7 +97,9 @@ const Page = () => {
           <div className="container">
             <div className="row">
               <div className="col-sm-6">
-                <img
+                <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                   src="/img/partnerwithus/reseller.jpg"
                   alt="Reselling Partnership"
                   data-aos="fade-right"
@@ -108,10 +113,10 @@ const Page = () => {
                   always welcome.
                 </p>
                 <p>
-                  The sales partner will take part in negotiating a purchase&sbquo;
-                  getting the project requirements under your brand name.
-                  Contact us to know the detailed information about reselling
-                  partnership program.{" "}
+                  The sales partner will take part in negotiating a
+                  purchase&sbquo; getting the project requirements under your
+                  brand name. Contact us to know the detailed information about
+                  reselling partnership program.{" "}
                 </p>
               </div>
             </div>
@@ -134,7 +139,9 @@ const Page = () => {
                 </p>
               </div>
               <div className="col-sm-6 text-center">
-                <img
+                <Image
+                  width={500}
+                  height={500 / (100 / 100)}
                   src="/img/partnerwithus/referral.png"
                   alt="Referral Partner"
                   data-aos="fade-left"
@@ -149,19 +156,39 @@ const Page = () => {
           <h3>Why Partner With Us?</h3>
           <div className="row">
             <div className="col-md-3 col-sm-6">
-              <img src="/img/partnerwithus/icon1.png" alt="" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/partnerwithus/icon1.png"
+                alt=""
+              />
               <h4>Low cost & timely delivery</h4>
             </div>
             <div className="col-md-3 col-sm-6">
-              <img src="/img/partnerwithus/icon2.png" alt="" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/partnerwithus/icon2.png"
+                alt=""
+              />
               <h4>Great Technical Support</h4>
             </div>
             <div className="col-md-3 col-sm-6">
-              <img src="/img/partnerwithus/icon3.png" alt="" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/partnerwithus/icon3.png"
+                alt=""
+              />
               <h4>Complete transparency in work</h4>
             </div>
             <div className="col-md-3 col-sm-6">
-              <img src="/img/partnerwithus/icon4.png" alt="" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/partnerwithus/icon4.png"
+                alt=""
+              />
               <h4>Assurance of confidentiality</h4>
             </div>
           </div>
@@ -174,7 +201,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

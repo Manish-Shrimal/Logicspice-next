@@ -23,7 +23,7 @@ const Page = () => {
                 <section class="lstng-section">
                 <b class="ctname">MyMentions Website</b>
                 <hr class="dotted" />
-                <img src="https://www.logicspice.com/app/webroot/files/testimonial/full/Alanc13.png" alt="MyMentions Website" />
+                <Image width={100} height={100} src="https://www.logicspice.com/app/webroot/files/testimonial/full/Alanc13.png" alt="MyMentions Website" />
                 <p></p>
                 <p class="western" lang="en-US" align="justify"><span >MyMention website is a Social media site where users can create and manage profiles and search for other users. Here they can follow other users and tag pictures with them. This site also have other social features such as tagging(Javascript),POP up pictures, profile setting,background video ,Comment, like and share.</span></p>
                 <p class="western" lang="en-US" align="justify">You can also review the case study for the project over here: <a class="p_excerpt_url" href="https://www.logicspice.com/case-study/mymentions/">Case Study</a></p>

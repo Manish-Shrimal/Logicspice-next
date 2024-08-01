@@ -14,7 +14,6 @@ import Support from "@/app/Components/Support";
 import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";
 
 const Page = () => {
-
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -134,37 +133,65 @@ const Page = () => {
           </div>
         </section>
         <section class="dev_flexibility new-hirig-section HireFlexNewSection">
-        <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
+          <div class="container">
+            <div class="new-hiring-div">
+              <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                  <div class="HireFlexNewImg">
+                    <Image
+                        width={300}
+                        height={500 / (100 / 100)}
+                      alt="app development"
+                      src="/img/hiredevelopers/hire-women-img.png"
+                    />
+                  </div>
                 </div>
-                
+
                 <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
+                  <div class="title_heading">Hiring Model </div>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                      <div class="HireFlexNewTxt">
+                        <i>
+                          <Image
+                            width={41}
+                            height={100}
+                            alt="app development"
+                            src="/img/hiredevelopers/periodic-new-icon.png"
+                          />
+                        </i>
                         <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <div class="HireFlexNewTxt">
+                        <i>
+                          <Image
+                            width={27}
+                            height={100}
+                            alt="app development"
+                            src="/img/hiredevelopers/clock-new-icon.png"
+                          />
+                        </i>
                         <div class="HireFlexNewHeading">Hourly Basis</div>
+                      </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
+                    <div class="col-md-4 col-sm-4">
+                      <div class="HireFlexNewTxt">
+                        <i>
+                          <Image
+                            width={41}
+                            height={100}
+                            alt="app development"
+                            src="/img/hiredevelopers/checklist-new-icon.png"
+                          />
+                        </i>
                         <div class="HireFlexNewHeading">Project Basis</div>
+                      </div>
                     </div>
-                </div> 
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
             <div className="hiring-sr">
               <div className="row">
@@ -425,7 +452,11 @@ const Page = () => {
             </div>
             <div className="step-but">
               <a onClick={toggleModal} className="btn btn-primary">
-                <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} title="Hire AngularJS Developers"/>
+                <Contactusmodel
+                  modalStatus={modalOpen}
+                  toggle={toggleModal}
+                  title="Hire AngularJS Developers"
+                />
                 Hire Now!
               </a>
             </div>

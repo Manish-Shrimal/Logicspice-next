@@ -196,7 +196,11 @@ const Page = () => {
                   </h4>
                 </div>
                 <div className="job-valu-btn">
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal

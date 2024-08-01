@@ -144,7 +144,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">
@@ -178,7 +179,7 @@ const Page = () => {
                 <div class="jumbotron">
                   <h2>Hire Shopify Developers</h2>
                   <p>
-                    Hire Logicspice Shopify's developers to build your online
+                    Hire Logicspice Shopify&apos;s developers to build your online
                     shop. We assist you in creating the best online business
                     possible. When it comes to Shopify, our shopify experts can
                     do it all, from helping you set up your store from the
@@ -222,7 +223,7 @@ const Page = () => {
                   </li>
                   <li class="list-group-item">
                     <span>
-                      Have extensive experience dealing with the platform's APIs
+                      Have extensive experience dealing with the platform&apos;s APIs
                     </span>
                   </li>
                   <li class="list-group-item">
@@ -419,7 +420,7 @@ const Page = () => {
               Our Shopify programmers pass a rigorous application and interview
               procedure before joining our team. When you engage with us, you
               will have access to web engineering and design professionals who
-              have a thorough grasp of your business's aims, challenges, and
+              have a thorough grasp of your business&apos;s aims, challenges, and
               dynamics when it comes to Shopify.
             </h6>
           </div>
@@ -445,7 +446,7 @@ const Page = () => {
             <ul>
               <li>
                 Freedom to contact and collaborate directly with Logicspice
-                Shopify's developers.
+                Shopify&apos;s developers.
               </li>
               <li>
                 You have absolute control over the Shopify web development
@@ -454,7 +455,7 @@ const Page = () => {
               </li>
               <li>
                 Capability to add extra resources at any time to fulfil short
-                deadlines or alterations to the project's delivery timeline.
+                deadlines or alterations to the project&apos;s delivery timeline.
               </li>
               <li>
                 Employing a specialized Shopify development team ensures quality
@@ -476,9 +477,9 @@ const Page = () => {
             <h6>
               Shopify is a highly versatile and adaptive platform because of its
               app-based environment. Shopify can work with a wide variety of
-              third-party applications, improving your store's functionality and
+              third-party applications, improving your store&apos;s functionality and
               saving you time. Thanks to its extensive app store, Shopify can
-              support and integrate with all of your business's software, from
+              support and integrate with all of your business&apos;s software, from
               your accounting program to your email provider.
             </h6>
           </div>

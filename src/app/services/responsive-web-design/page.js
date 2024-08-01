@@ -13,7 +13,7 @@ const Page = () => {
 
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
-          <img
+          <Image width={100} height={100}
             src="/img/responsivewebdesign/responsive-design.jpg"
             alt="Responsive web design"
           />
@@ -177,14 +177,14 @@ const Page = () => {
             <div className="row">
             <div className="col-sm-6 col-md-4">
                 <div className="featureBox">
-                    <img src="/img/responsivewebdesign/lara_icon5.png" alt="icon1" />
+                    <Image width={100} height={100} src="/img/responsivewebdesign/lara_icon5.png" alt="icon1" />
                     <h3>Reduced Loading Time</h3>
                     <p>The loading time period is really less. </p>
                 </div>
             </div>
             <div className="col-sm-6 col-md-4">
                 <div className="featureBox">
-                    <img src="/img/responsivewebdesign/lara_icon1.png" alt="icon2" />
+                    <Image width={100} height={100} src="/img/responsivewebdesign/lara_icon1.png" alt="icon2" />
                     <h3>Mobile and Responsive Design</h3>
                     <p>The design are mobile friendly.</p>
                 </div>
@@ -192,28 +192,28 @@ const Page = () => {
             
             <div className="col-sm-6 col-md-4">
                 <div className="featureBox">
-                    <img src="/img/responsivewebdesign/lara_icon2.png" alt="icon3" />
+                    <Image width={100} height={100} src="/img/responsivewebdesign/lara_icon2.png" alt="icon3" />
                     <h3>Search Engine Friendly</h3>
                     <p>They are crafted in such a way that they get really SEO friendly.</p>
                 </div>
             </div>
             <div className="col-sm-6 col-md-4">
                 <div className="featureBox">
-                    <img src="/img/responsivewebdesign/lara_icon4.png" alt="icon4" />
+                    <Image width={100} height={100} src="/img/responsivewebdesign/lara_icon4.png" alt="icon4" />
                     <h3>Screen Adjustability</h3>
                     <p>Screen can be smoothly adjusted&sbquo; as per your needs.</p>
                 </div>
             </div>
             <div className="col-sm-6 col-md-4">
                 <div className="featureBox">
-                    <img src="/img/responsivewebdesign/lara_icon3.png" alt="icon5" />
+                    <Image width={100} height={100} src="/img/responsivewebdesign/lara_icon3.png" alt="icon5" />
                     <h3>Multiple Platform Access</h3>
                     <p>The responsive website gives access to multiple platforms. </p>
                 </div>
             </div>
             <div className="col-sm-6 col-md-4">
                 <div className="featureBox">
-                    <img src="/img/responsivewebdesign/lara_icon6.png" alt="icon6" />
+                    <Image width={100} height={100} src="/img/responsivewebdesign/lara_icon6.png" alt="icon6" />
                     <h3>Time Saving</h3>
                     <p>Responsive web design service offered by us reduce the development time and cost. You can optimize your business through a single website on various screens.</p>
                 </div>

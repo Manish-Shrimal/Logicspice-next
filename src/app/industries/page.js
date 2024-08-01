@@ -60,6 +60,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-development-ecommerce.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -82,6 +83,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-development-energy.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -103,6 +105,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-development-finance.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -124,6 +127,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-development-marketing.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -146,6 +150,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-development-accounts.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -167,6 +172,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/commercial-residential.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -188,6 +194,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-Development-government.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -208,6 +215,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/healthcare.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -226,6 +234,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/hotels-app-Development.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -244,6 +253,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/ideas-business.png"
+                  alt=""
                 />
               </div>
               <div className="service-title  ">
@@ -265,6 +275,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-Development-professionalcas.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -287,6 +298,7 @@ const Page = () => {
                   width={100}
                   height={100}
                   src="/img/Industry/app-Service-cleaning.png"
+                  alt=""
                 />
               </div>
               <div className="service-title">
@@ -310,6 +322,7 @@ const Page = () => {
                     width={100}
                     height={100}
                     src="/img/Industry/school-education.png"
+                    alt=""
                   />
                 </div>
                 <div className="service-title">
@@ -331,6 +344,7 @@ const Page = () => {
                     width={100}
                     height={100}
                     src="/img/Industry/Transportation-industry.png"
+                    alt=""
                   />
                 </div>
                 <div className="service-title">

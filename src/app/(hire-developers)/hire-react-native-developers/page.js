@@ -141,7 +141,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">
@@ -149,18 +150,18 @@ const Page = () => {
                     <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div></div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
+                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Project Basis</div>
                     </div>
                 </div> 
@@ -182,14 +183,14 @@ const Page = () => {
                   </p>
                   <p>
                     React Native is an exceptional framework designed for
-                    crafting seamless mobile applications. So, if you're
+                    crafting seamless mobile applications. So, if you&apos;re
                     thinking of utilizing the React Native framework for your
                     mobile application, we can connect you with the most
                     dedicated React Native experts.
                   </p>
                   <p>
                     Our freelance React Native developers boast years of
-                    experience, and it's undeniable that we stand as one of the
+                    experience, and it&apos;s undeniable that we stand as one of the
                     elite React Native service providers in the market. We
                     possess comprehensive expertise in mobile app development,
                     ensuring the creation of user-friendly, modern, and
@@ -324,7 +325,7 @@ const Page = () => {
                       <h3>5. Theme Design & Integration</h3>
                       <p>
                         Seamlessly integrate captivating themes and designs in
-                        your app with our skilled developers' support.
+                        your app with our skilled developers&apos; support.
                       </p>
                     </div>
                   </li>
@@ -341,7 +342,7 @@ const Page = () => {
                     <div class="custom-ser-txt">
                       <h3>6. App Extension Development</h3>
                       <p>
-                        Expand your app's capabilities as our team stands ready
+                        Expand your app&apos;s capabilities as our team stands ready
                         to assist in developing and integrating extensions.
                       </p>
                     </div>

@@ -7,12 +7,14 @@ import "@/app/company/company.css";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
+
 const Page = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -56,7 +58,9 @@ const Page = () => {
           <div class="team-director">
             <div class="row">
               <div class="col-md-6">
-                <img
+                <Image
+                  width={550}
+                  height={100 / 100 / 10}
                   alt="From The Director Desk - Logicspice"
                   src="/img/ourteam/director.png"
                 />
@@ -91,12 +95,19 @@ const Page = () => {
           <div class="row">
             <div class="col-md-6">
               <div class="team-img">
-                <img
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
                   alt="Android Team - Logicspice"
                   src="/img/ourteam/android-team.png"
                   class="img-thumbnail"
                 />
-                <img alt="img" src="/img/ourteam/shadow.png" />
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
+                  alt="img"
+                  src="/img/ourteam/shadow.png"
+                />
               </div>
             </div>
             <div class="col-md-6">
@@ -104,7 +115,12 @@ const Page = () => {
                 <h3>
                   Android Team{" "}
                   <span>
-                    <img alt="img" src="/img/ourteam/android-icon.png" />
+                    <Image
+                      width={100}
+                      height={100}
+                      alt="img"
+                      src="/img/ourteam/android-icon.png"
+                    />
                   </span>
                 </h3>
                 <p>
@@ -127,19 +143,31 @@ const Page = () => {
           <div class="row AboutLogocOurTeamRight">
             <div class="col-md-6 pull-right">
               <div class="team-img">
-                <img
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
                   alt="iPhone Team - Logicspice"
                   src="/img/ourteam/iphone-team.png"
                   class="img-thumbnail"
                 />
-                <img alt="img" src="/img/ourteam/shadow.png" />
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
+                  alt="img"
+                  src="/img/ourteam/shadow.png"
+                />
               </div>
             </div>
             <div class="col-md-6 pull-left">
               <div class="team-content text-right">
                 <h3>
                   <span>
-                    <img alt="img" src="/img/ourteam/iphone-icon.png" />
+                    <Image
+                      width={100}
+                      height={100}
+                      alt="img"
+                      src="/img/ourteam/iphone-icon.png"
+                    />
                   </span>{" "}
                   iPhone Team
                 </h3>
@@ -167,12 +195,19 @@ const Page = () => {
           <div class="row">
             <div class="col-md-6">
               <div class="team-img">
-                <img
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
                   alt="SEO Team - Logicspice"
                   src="/img/ourteam/SEO-team.png"
                   class="img-thumbnail"
                 />
-                <img alt="img" src="/img/ourteam/shadow.png" />
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
+                  alt="img"
+                  src="/img/ourteam/shadow.png"
+                />
               </div>
             </div>
             <div class="col-md-6">
@@ -180,7 +215,12 @@ const Page = () => {
                 <h3>
                   SEO Team{" "}
                   <span>
-                    <img alt="img" src="/img/ourteam/Seo_icon.png" />
+                    <Image
+                      width={100}
+                      height={100}
+                      alt="img"
+                      src="/img/ourteam/Seo_icon.png"
+                    />
                   </span>
                 </h3>
                 <p>
@@ -203,19 +243,31 @@ const Page = () => {
           <div class="row AboutLogocOurTeamRight">
             <div class="col-md-6 pull-right">
               <div class="team-img">
-                <img
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
                   alt="PHP Team - Logicspice"
                   src="/img/ourteam/php-team.png"
                   class="img-thumbnail"
                 />
-                <img alt="img" src="/img/ourteam/shadow.png" />
+                <Image
+                  width={400}
+                  height={100 / 100 / 100}
+                  alt="img"
+                  src="/img/ourteam/shadow.png"
+                />
               </div>
             </div>
             <div class="col-md-6 pull-left">
               <div class="team-content text-right">
                 <h3>
                   <span>
-                    <img alt="img" src="/img/ourteam/php-icon.png" />
+                    <Image
+                      width={100}
+                      height={100}
+                      alt="img"
+                      src="/img/ourteam/php-icon.png"
+                    />
                   </span>{" "}
                   PHP Team
                 </h3>
@@ -241,56 +293,61 @@ const Page = () => {
       </section>
 
       <section class="grow-to-bloom">
-        <div class="row">
-          <div class="col-md-7">
-            <img
-              alt="Grow to Bloom - Logicspice"
-              src="/img/ourteam/growToBloom.png"
-            />
-          </div>
-          <div class="col-md-5">
-            <div class="bloom-dev">
-              <h2>Grow to Bloom</h2>
-              <p>
-                The end to end development process starts from research and ends
-                with delivering the product. The major thing is delivering the
-                right product at the right time.
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    We take the initiative by submitting a detailed proposal of
-                    the project and wait for your approval and after approval we
-                    move forward to the next step.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    We design the wireframe and develop a proof of concept by
-                    designing mock up.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    We make it more and more attractive and fruitful by doing
-                    the required changes. The process takes time if we need a
-                    fruitful result.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Anything in excess is harmful; so we never delay our project
-                    before deliver anything, it is must to do proper testing so
-                    we test it thoroughly & remove the bugs if any occurs.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Our work doesn’t end here, after delivering the project
-                    successfully, we give 1 month free support.
-                  </span>
-                </li>
-              </ul>
+        <div className="container">
+          <div class="row">
+            <div class="col-md-7">
+              <Image
+                width={900}
+                height={100 / 100 / 100}
+                alt="Grow to Bloom - Logicspice"
+                src="/img/ourteam/growToBloom.png"
+              />
+            </div>
+            <div class="col-md-5">
+              <div class="bloom-dev">
+                <h2>Grow to Bloom</h2>
+                <p>
+                  The end to end development process starts from research and
+                  ends with delivering the product. The major thing is
+                  delivering the right product at the right time.
+                </p>
+                <ul>
+                  <li>
+                    <span>
+                      We take the initiative by submitting a detailed proposal
+                      of the project and wait for your approval and after
+                      approval we move forward to the next step.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      We design the wireframe and develop a proof of concept by
+                      designing mock up.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      We make it more and more attractive and fruitful by doing
+                      the required changes. The process takes time if we need a
+                      fruitful result.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Anything in excess is harmful; so we never delay our
+                      project before deliver anything, it is must to do proper
+                      testing so we test it thoroughly & remove the bugs if any
+                      occurs.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Our work doesn’t end here, after delivering the project
+                      successfully, we give 1 month free support.
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -304,12 +361,20 @@ const Page = () => {
               <a data-toggle="modal" data-target="#contactFix">
                 Get In Touch{" "}
                 <span>
-                  <img alt="img" src="/img/ourteam/getTouch.png" />
+                  <Image
+                    width={30}
+                    height={100 / 100 / 100}
+                    alt="img"
+                    src="/img/ourteam/getTouch.png"
+                    style={{ display: "inline-block" }}
+                  />
                 </span>
               </a>
             </div>
             <div class="col-sm-4">
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 alt="11+ Experince - Logicspice"
                 src="/img/ourteam/exp.png"
               />
@@ -324,7 +389,7 @@ const Page = () => {
             <li>
               <div class="event_gallery_colsshom_col_box_in">
                 <div class="img-event">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/ourteam/trip_photo.jpg"
                     alt="Office Trip 2019"
                     class="lazy"
@@ -338,7 +403,7 @@ const Page = () => {
             <li>
               <div class="event_gallery_colsshom_col_box_in">
                 <div class="img-event">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/ourteam/sunrise2019.jpg"
                     alt="Sunrise_Resort_2019img"
                     class="lazy"
@@ -352,7 +417,7 @@ const Page = () => {
             <li>
               <div class="event_gallery_colsshom_col_box_in">
                 <div class="img-event">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/ourteam/appu_ghar_2018img.jpg"
                     alt="appu_ghar_2018img"
                     class="lazy"
@@ -366,7 +431,7 @@ const Page = () => {
             <li>
               <div class="event_gallery_colsshom_col_box_in">
                 <div class="img-event">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/ourteam/plantation_2016img.png"
                     alt="plantation_2016img"
                     class="lazy"
@@ -380,7 +445,7 @@ const Page = () => {
             <li>
               <div class="event_gallery_colsshom_col_box_in">
                 <div class="img-event">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/ourteam/newyear_2017img.png"
                     alt="newyear_2017img"
                     class="lazy"
@@ -394,7 +459,7 @@ const Page = () => {
             <li>
               <div class="event_gallery_colsshom_col_box_in">
                 <div class="img-event">
-                  <img
+                  <Image width={100} height={100}
                     src="/img/ourteam/diwali_2016_img.png"
                     alt="diwali_2016_img"
                     class="lazy"
@@ -414,7 +479,9 @@ const Page = () => {
           <Slider {...settings}>
             {/* Slide 1 */}
             <div>
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 src="/img/ourteam/trip_photo.jpg"
                 alt="Office Trip 2019"
                 className="slider-image"
@@ -425,7 +492,9 @@ const Page = () => {
 
             {/* Slide 2 */}
             <div>
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 src="/img/ourteam/sunrise2019.jpg"
                 alt="Sunrise Resort 2019"
                 className="slider-image"
@@ -436,7 +505,9 @@ const Page = () => {
 
             {/* Slide 3 */}
             <div>
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 src="/img/ourteam/appu_ghar_2018img.jpg"
                 alt="Appu Ghar 2018"
                 className="slider-image"
@@ -447,7 +518,9 @@ const Page = () => {
 
             {/* Slide 4 */}
             <div>
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 src="/img/ourteam/plantation_2016img.png"
                 alt="Plantation 2016"
                 className="slider-image"
@@ -458,7 +531,9 @@ const Page = () => {
 
             {/* Slide 5 */}
             <div>
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 src="/img/ourteam/newyear_2017img.png"
                 alt="New Year Celebration 2016"
                 className="slider-image"
@@ -469,7 +544,9 @@ const Page = () => {
 
             {/* Slide 6 */}
             <div>
-              <img
+              <Image
+                width={300}
+                height={100 / 100 / 100}
                 src="/img/ourteam/diwali_2016_img.png"
                 alt="Diwali Celebration 2016"
                 className="slider-image"
@@ -492,7 +569,12 @@ const Page = () => {
         <div class="row m-0">
           <div class="col-sm-4 p-0">
             <div class="logic-fun-time">
-              <img alt="Outing - Logicspice" src="/img/ourteam/out1.png" />
+              <Image
+                width={500}
+                height={100 / 100 / 100}
+                alt="Outing - Logicspice"
+                src="/img/ourteam/out1.png"
+              />
               <p>
                 <span>Outing</span>
               </p>
@@ -500,7 +582,12 @@ const Page = () => {
           </div>
           <div class="col-sm-4 p-0">
             <div class="logic-fun-time">
-              <img alt="Plantation - Logicspice" src="/img/ourteam/out2.png" />
+              <Image
+                width={500}
+                height={100 / 100 / 100}
+                alt="Plantation - Logicspice"
+                src="/img/ourteam/out2.png"
+              />
               <p>
                 <span>Plantation</span>
               </p>
@@ -508,7 +595,12 @@ const Page = () => {
           </div>
           <div class="col-sm-4 p-0">
             <div class="logic-fun-time">
-              <img alt="Resort Trip - Logicspice" src="/img/ourteam/out3.png" />
+              <Image
+                width={500}
+                height={100 / 100 / 100}
+                alt="Resort Trip - Logicspice"
+                src="/img/ourteam/out3.png"
+              />
               <p>
                 <span>Resort Trip</span>
               </p>
@@ -516,7 +608,9 @@ const Page = () => {
           </div>
           <div class="col-sm-4 p-0">
             <div class="logic-fun-time">
-              <img
+              <Image
+                width={500}
+                height={100 / 100 / 100}
                 alt="Environmental Cause Activity - Logicspice"
                 src="/img/ourteam/out4.png"
               />
@@ -527,7 +621,9 @@ const Page = () => {
           </div>
           <div class="col-sm-4 p-0">
             <div class="logic-fun-time">
-              <img
+              <Image
+                width={500}
+                height={100 / 100 / 100}
                 alt="Diwali Celebration - Logicspice"
                 src="/img/ourteam/out5.png"
               />
@@ -538,7 +634,9 @@ const Page = () => {
           </div>
           <div class="col-sm-4 p-0">
             <div class="logic-fun-time">
-              <img
+              <Image
+                width={500}
+                height={100 / 100 / 100}
                 alt="Outdoor Activities - Logicspice"
                 src="/img/ourteam/out6.png"
               />

@@ -205,7 +205,7 @@ const Page = () => {
               The Dating System development will enable the user to create their
               free account over website by submitting their email id and can
               search for the other users through the search criteria defined
-              over website. Users can see other user's profile from the list
+              over website. Users can see other user&apos;s profile from the list
               that will be shown according to the criteria and can view his/her
               profile. By using this custom dating software like Tinder, users
               can answers the questions over the website that they can compare

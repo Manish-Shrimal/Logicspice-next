@@ -126,7 +126,11 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -197,8 +201,8 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={226}
+                  height={100 / (100 / 100)}
                   src="/img/freelancerclone/lsfreelancer-mobile.png"
                   alt="Freelancer_clone"
                 />
@@ -1864,7 +1868,7 @@ See how it work yourself!"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                     talent.shineywise.com
+                      talent.shineywise.com
                     </a>
                   </div>
                   <a

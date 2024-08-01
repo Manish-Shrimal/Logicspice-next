@@ -139,37 +139,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                      width={300}
+                      height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div class="hiring-sr">
             <div class="row">
               <div class="col-md-8">
@@ -460,7 +488,9 @@ const Page = () => {
                 <div class="col-md-6">
                   <div class="port_feat_img">
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/hiredevelopers/uavvision.png"
                         alt="Logicspice wordpress portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
@@ -501,7 +531,9 @@ const Page = () => {
                 <div class="col-md-6">
                   <div class="port_feat_img">
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/hiredevelopers/dagrella.png"
                         alt="Logicspice wordpress portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
@@ -542,7 +574,9 @@ const Page = () => {
                 <div class="col-md-6">
                   <div class="port_feat_img">
                     <span>
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/hiredevelopers/aikinnebandy.png"
                         alt="Logicspice wordpress portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
@@ -579,58 +613,90 @@ const Page = () => {
               </div>
             </div>
             <div>
-            <div class="row">
-        <div class="col-md-6">
-          <div class="port_feat_img">
-            <span>
-              <img
-                src="/img/hiredevelopers/nationalcleaninggroup--2-.png"
-                alt="Logicspice wordpress portfolio"
-                class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-              />
-            </span>
-          </div>
-          <div class="portimagesec_shadow"></div>
-        </div>
-        <div class="col-md-6">
-          <ul class="port_feat">
-            <li><b>Website Name:</b> National Cleaning Group</li>
-            <li><b>Website URL:</b> http://nationalcleaninggroup.com.au/</li>
-            <li><b>Framework:</b> Joomla</li>
-            <li><b>Language:</b> PHP5, AJAX, jQuery, Java scripts</li>
-            <li><b>Database:</b> MySQL</li>
-            <li><b>Server:</b> Apache</li>
-            <li><b>Overview:</b> Company/Informational Website</li>
-          </ul>
-        </div>
-      </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/hiredevelopers/nationalcleaninggroup--2-.png"
+                        alt="Logicspice wordpress portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> National Cleaning Group
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://nationalcleaninggroup.com.au/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Joomla
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Company/Informational Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div>
-            <div class="row">
-        <div class="col-md-6">
-          <div class="port_feat_img">
-            <span>
-              <img
-                src="/img/hiredevelopers/protroc.png"
-                alt="Logicspice wordpress portfolio"
-                class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-              />
-            </span>
-          </div>
-          <div class="portimagesec_shadow"></div>
-        </div>
-        <div class="col-md-6">
-          <ul class="port_feat">
-            <li><b>Website Name:</b> protroc</li>
-            <li><b>Website URL:</b> http://protroc.com/</li>
-            <li><b>Framework:</b> WordPress</li>
-            <li><b>Language:</b> PHP5, AJAX, jQuery, Java scripts</li>
-            <li><b>Database:</b> MySQL</li>
-            <li><b>Server:</b> Apache</li>
-            <li><b>Overview:</b> Classified Website</li>
-          </ul>
-        </div>
-      </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/hiredevelopers/protroc.png"
+                        alt="Logicspice wordpress portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> protroc
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://protroc.com/
+                    </li>
+                    <li>
+                      <b>Framework:</b> WordPress
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Classified Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </Slider>
         </div>

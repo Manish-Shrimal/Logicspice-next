@@ -79,91 +79,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      {/* <section className="job-portal-banner job-portal-bg NewJobSiteDesign fiverr-new-banner JobBoardNewDesign HotelBookingSoftwareBanner">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-7 col-md-7">
-              <h1>LS Room Reserver - Hotel Booking Software</h1>
-              <div className="both-left-p-sec">
-                <h2>Software Excellence for Superior Stays!</h2>
-              </div>
-              <div className="job-valu">
-                <div className="portal-price NewPriceDesign">
-                  <h4>
-                    $45 USD<small>/mo</small>{" "}
-                  </h4>
-                  <div className="OfferPriceProduct">
-                    <strike className="srik_cls">$175 USD</strike>
-                    <span className="MoreInfo">
-                      <i>
-                         <img
-                          src="/img/softwares-banner-img/more-info.png"
-                          alt=""
-                          width={100}
-                          height={100}
-                        />
-                      </i>
-                      <p>Limited Period Offer for First Year</p>
-                    </span>
-                  </div>
-                </div>
-                <div className="job-valu-btn">
-                  <span>Fill your basic details and</span>
-                  
-                  <div className="btn btn-get" onClick={openModal}>
-                    <button>Enquiry Now</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="LS Room Reserver - Hotel Booking Software"
-                      />
-                    }
-                  </div>
-                 
-                </div>
-                <div className="SubscriptionPrice">
-                  <div className="line-border NewLineBoader">
-                     <img
-                      alt="crowd_funding_script"
-                      src="/img/jobboard/stars.png"
-                      height={100}
-                      width={100}
-                    />
-                    <p>47 Reviews</p>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div className="col-sm-5 col-md-5">
-              <div className="por-mobile-new">
-                 <img
-                  alt="crowd_funding_script"
-                  src="/img/softwares-banner-img/crowdfunding-banner-img.png"
-                  width={280}
-                  height={500 / (100 / 100)}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="job-portal-banner-link">
-            <div aria-label="breadcrumb" className="my-breadcrumb">
-              <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                  <Link href="">Home</Link>
-                </li>
-                <li className="breadcrumb-item">
-                  <Link href="/softwares">Softwares</Link>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                Hotel Booking Software
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      
       <section className="job-portal-banner job-portal-bg NewJobSiteDesign fiverr-new-banner JobBoardNewDesign HotelBookingSoftwareBanner">
         <div className="container">
           <div className="row">
@@ -181,7 +97,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <img
+                        <Image
+                         width ={100}
+                          height={100}
                           src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
                           alt=""
                         />
@@ -226,7 +144,9 @@ const Page = () => {
                   </ul>
                   <div className="portel-btnbx">
                     <div className="line-border">
-                      <img
+                      <Image
+                       width ={100}
+                        height={100}
                         src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
                         alt=""
                         className="lazy"
@@ -240,7 +160,9 @@ const Page = () => {
                       href="#subscriptionmodel"
                     >
                       <i>
-                        <img
+                        <Image
+                         width ={100}
+                          height={100}
                           src="https://www.logicspice.com/app/webroot/img/images/product_new/subscription2.png"
                           alt="subscription"
                         />
@@ -253,7 +175,9 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5 noposition">
               <div className="por-mobile-new">
-                <img
+                <Image
+                   width={350}
+                   height={100 / 100 / 10}
                   src="/img/hotelbooking/hotelbooking-banner-img.png"
                   alt="hotel booking"
                   className="lazy"
@@ -280,33 +204,50 @@ const Page = () => {
       </section>
       <section className="job-section-top-new">
         <div className="container">
-        <p>Hotel booking software is a sophisticated system designed to facilitate booking acceptance and payment processing directly from the platform. This software opens up 
-            new sales channels and maximizes occupancy rates. It enhances online visibility, ultimately boosting revenues.<br />
-        For tourism businesses, having hotel management software is crucial to staying competitive. Logicspice can turn your hotel reservation business dream into reality. 
-        We developed the web version of software with the latest technologies and offer customization services to develop the optimal hotel booking software customize to your 
-        needs, with an additional cost.
-        </p>
+          <p>
+            Hotel booking software is a sophisticated system designed to
+            facilitate booking acceptance and payment processing directly from
+            the platform. This software opens up new sales channels and
+            maximizes occupancy rates. It enhances online visibility, ultimately
+            boosting revenues.
+            <br />
+            For tourism businesses, having hotel management software is crucial
+            to staying competitive. Logicspice can turn your hotel reservation
+            business dream into reality. We developed the web version of
+            software with the latest technologies and offer customization
+            services to develop the optimal hotel booking software customize to
+            your needs, with an additional cost.
+          </p>
         </div>
       </section>
-      <section className="client-say crowdfunding-say" style={{ backgroundColor: "#fff"}}>
+      <section
+        className="client-say crowdfunding-say"
+        style={{ backgroundColor: "#fff" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-5 job-video">
-            <img src="/img/hotelbooking/hotelbooking-img.png" alt="hotel booking" className="lazy"/>
+              <Image
+                width={400}
+                height={100}
+                src="/img/hotelbooking/hotelbooking-img.png"
+                alt="hotel booking"
+                className="lazy"
+              />
             </div>
             <div className="col-md-7">
-            <div className="OrderManagementSoftwareFeatures HotelBokingSoftwareFeatures">
-                    <ul>
-                        <li>Online Booking Management</li>
-                        <li>Inventory Tracking System</li>
-                        <li>Real Time Room Availability</li>
-                        <li>Integrated Booking Calendar</li>
-                        <li>Secure Payment Processing</li>
-                        <li>Automated Email Notifications</li>
-                        <li>Reservation Management Tools</li>
-                        <li>Flexible Cancellation Policies</li>
-                    </ul>
-                </div>
+              <div className="OrderManagementSoftwareFeatures HotelBokingSoftwareFeatures">
+                <ul>
+                  <li>Online Booking Management</li>
+                  <li>Inventory Tracking System</li>
+                  <li>Real Time Room Availability</li>
+                  <li>Integrated Booking Calendar</li>
+                  <li>Secure Payment Processing</li>
+                  <li>Automated Email Notifications</li>
+                  <li>Reservation Management Tools</li>
+                  <li>Flexible Cancellation Policies</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -314,14 +255,21 @@ const Page = () => {
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Exploring the Features of LS Room Reserver Software</h2>
+            <h2 className="taxt_tt_job">
+              Exploring the Features of LS Room Reserver Software
+            </h2>
           </div>
 
           <div className="tatxt_txt_job">
-          LS Room Reserver is a hotel booking software designed to simplify the reservation process. It offers features such as online 
-            booking management, real time room availability updates, secure payment processing, and efficient reservation management tools. With inventory tracking, 
-            reporting, and analytics features, LS Room Reserver provides valuable insights for hotel operations. Its mobile friendly interface ensures a smooth 
-            booking experience for customers, making it an ideal solution for hotels looking to enhance their booking process.
+            LS Room Reserver is a hotel booking software designed to simplify
+            the reservation process. It offers features such as online booking
+            management, real time room availability updates, secure payment
+            processing, and efficient reservation management tools. With
+            inventory tracking, reporting, and analytics features, LS Room
+            Reserver provides valuable insights for hotel operations. Its mobile
+            friendly interface ensures a smooth booking experience for
+            customers, making it an ideal solution for hotels looking to enhance
+            their booking process.
           </div>
 
           <div className="tab_bbx_job">
@@ -329,7 +277,9 @@ const Page = () => {
               <ul className="JobBoardNewtab">
                 <li
                   id="tab1_li"
-                  className={`jobseeker_app_job ddlj ${sellerTab ? "active" : ""}`}
+                  className={`jobseeker_app_job ddlj ${
+                    sellerTab ? "active" : ""
+                  }`}
                   onClick={() => handleSellerTab()}
                 >
                   <a>Hotel Owner</a>
@@ -355,84 +305,198 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj" id="tab1">
                     <div className="row">
-                     
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright">
-                        <ul>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/efficient-reservation-icon.png" className="lazy" /></i>
-                                        <span>Efficient Reservation Management
-                                            <div className="product-idea">
-                                                <p>Easily manage reservations, including booking, modifying, and canceling rooms.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/room-availability-icon.png" className="lazy" /></i>
-                                        <span>Room Availability
-                                            <div className="product-idea">
-                                                <p>Keep track of real time room availability to avoid overbooking and optimize occupancy.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/relationship-icon.png" className="lazy" /></i>
-                                        <span>Customer Relationship Management (CRM)
-                                            <div className="product-idea">
-                                                <p>Manage guest interactions, preferences, and feedback to provide personalized experiences and improve guest satisfaction.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/payment-processing-icon.png" className="lazy" /></i>
-                                        <span>Payment Processing
-                                            <div className="product-idea">
-                                                <p>Securely process payments for reservations, offering convenience to guests and ensuring smooth transactions.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/reporting-icon.png" className="lazy" /></i>
-                                        <span>Reporting and Analytics
-                                            <div className="product-idea">
-                                                <p>Access detailed reports and analytics on bookings, revenue, and occupancy rates to make informed decisions.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/inventory-icon.png" className="lazy" /></i>
-                                        <span>Inventory Management
-                                            <div className="product-idea">
-                                                <p>Manage room inventory effectively, ensuring rooms are available when needed and maximizing revenue.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/mobile-compatibility-icon.png" className="lazy" /></i>
-                                        <span>Mobile Compatibility
-                                            <div className="product-idea">
-                                                <p>Access the software and manage bookings from mobile devices, providing flexibility and convenience to access software with any type of mobile devices.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/booking-rules-icon.png" className="lazy" /></i>
-                                        <span>Customizable Booking Rules
-                                            <div className="product-idea">
-                                                <p>Set rules for minimum stays, maximum occupancy, and other parameters to optimize room utilization and revenue.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/user-friendly-icon.png" className="lazy" /></i>
-                                        <span>User-Friendly Interface
-                                            <div className="product-idea">
-                                                <p>Easy-to-use interface for efficient management of hotel bookings and operations.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/efficient-reservation-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Efficient Reservation Management
+                                <div className="product-idea">
+                                  <p>
+                                    Easily manage reservations, including
+                                    booking, modifying, and canceling rooms.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/room-availability-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Room Availability
+                                <div className="product-idea">
+                                  <p>
+                                    Keep track of real time room availability to
+                                    avoid overbooking and optimize occupancy.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/relationship-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Customer Relationship Management (CRM)
+                                <div className="product-idea">
+                                  <p>
+                                    Manage guest interactions, preferences, and
+                                    feedback to provide personalized experiences
+                                    and improve guest satisfaction.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/payment-processing-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Payment Processing
+                                <div className="product-idea">
+                                  <p>
+                                    Securely process payments for reservations,
+                                    offering convenience to guests and ensuring
+                                    smooth transactions.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/reporting-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Reporting and Analytics
+                                <div className="product-idea">
+                                  <p>
+                                    Access detailed reports and analytics on
+                                    bookings, revenue, and occupancy rates to
+                                    make informed decisions.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/inventory-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Inventory Management
+                                <div className="product-idea">
+                                  <p>
+                                    Manage room inventory effectively, ensuring
+                                    rooms are available when needed and
+                                    maximizing revenue.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/mobile-compatibility-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Mobile Compatibility
+                                <div className="product-idea">
+                                  <p>
+                                    Access the software and manage bookings from
+                                    mobile devices, providing flexibility and
+                                    convenience to access software with any type
+                                    of mobile devices.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/booking-rules-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Customizable Booking Rules
+                                <div className="product-idea">
+                                  <p>
+                                    Set rules for minimum stays, maximum
+                                    occupancy, and other parameters to optimize
+                                    room utilization and revenue.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/user-friendly-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                User-Friendly Interface
+                                <div className="product-idea">
+                                  <p>
+                                    Easy-to-use interface for efficient
+                                    management of hotel bookings and operations.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -443,84 +507,200 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj active" id="tab2">
                     <div className="row">
-                      
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left">
-                        <ul>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/easy-booking-icon.png " className="lazy" /></i>
-                                        <span>Easy Booking Process
-                                            <div className="product-idea">
-                                                <p>Simplified and user-friendly booking interface for quick and hassle-free reservations.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/real-time-icon.png" className="lazy" /></i>
-                                        <span>Real-Time Availability
-                                            <div className="product-idea">
-                                                <p>Instant access to room availability, ensuring customers can book their preferred dates.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/secure-payment-icon.png" className="lazy" /></i>
-                                        <span>Secure Payment Options
-                                            <div className="product-idea">
-                                                <p>Safe and secure online payment processing for booking confirmation.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/search-filters-icon.png" className="lazy" /></i>
-                                        <span>Flexible Search Filters
-                                            <div className="product-idea">
-                                                <p>Customizable search filters to find the perfect room based on preferences like price, amenities, and location.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/room-information-icon.png" className="lazy" /></i>
-                                        <span>Detailed Room Information
-                                            <div className="product-idea">
-                                                <p>Comprehensive room descriptions, images, and amenities lists to help customers make informed decisions.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/special-offers-icon.png" className="lazy" /></i>
-                                        <span>Special Offers and Discounts
-                                            <div className="product-idea">
-                                                <p>Access to exclusive deals, discounts, and promotional offers for cost-effective bookings.</p>
-                                            </div>
-                                        </span>
-                                    </li>                                    
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/booking-icon.png" className="lazy" /></i>
-                                        <span>Booking Management
-                                            <div className="product-idea">
-                                                <p>Ability to manage bookings, including modifications and cancellations, conveniently through the platform.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/social-media-icon.png" className="lazy" /></i>
-                                        <span>Social Media Integration
-                                            <div className="product-idea">
-                                                <p>Allow customers to share their booking or hotel experience on social media, helping to promote your property organically.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/room-customization-icon.png" className="lazy" /></i>
-                                        <span>Room Customization
-                                            <div className="product-idea">
-                                                <p> Allow customers to customize their room selection by choosing specific room features, such as a view, bed type, or floor level.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/easy-booking-icon.png "
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Easy Booking Process
+                                <div className="product-idea">
+                                  <p>
+                                    Simplified and user-friendly booking
+                                    interface for quick and hassle-free
+                                    reservations.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/real-time-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Real-Time Availability
+                                <div className="product-idea">
+                                  <p>
+                                    Instant access to room availability,
+                                    ensuring customers can book their preferred
+                                    dates.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/secure-payment-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Secure Payment Options
+                                <div className="product-idea">
+                                  <p>
+                                    Safe and secure online payment processing
+                                    for booking confirmation.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/search-filters-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Flexible Search Filters
+                                <div className="product-idea">
+                                  <p>
+                                    Customizable search filters to find the
+                                    perfect room based on preferences like
+                                    price, amenities, and location.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/room-information-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Detailed Room Information
+                                <div className="product-idea">
+                                  <p>
+                                    Comprehensive room descriptions, images, and
+                                    amenities lists to help customers make
+                                    informed decisions.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/special-offers-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Special Offers and Discounts
+                                <div className="product-idea">
+                                  <p>
+                                    Access to exclusive deals, discounts, and
+                                    promotional offers for cost-effective
+                                    bookings.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/booking-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Booking Management
+                                <div className="product-idea">
+                                  <p>
+                                    Ability to manage bookings, including
+                                    modifications and cancellations,
+                                    conveniently through the platform.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/social-media-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Social Media Integration
+                                <div className="product-idea">
+                                  <p>
+                                    Allow customers to share their booking or
+                                    hotel experience on social media, helping to
+                                    promote your property organically.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/room-customization-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Room Customization
+                                <div className="product-idea">
+                                  <p>
+                                    {" "}
+                                    Allow customers to customize their room
+                                    selection by choosing specific room
+                                    features, such as a view, bed type, or floor
+                                    level.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -531,84 +711,202 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj" id="tab3">
                     <div className="row">
-                     
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright2">
-                        <ul>
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/dashboard-icon.png" className="lazy" /></i>
-                                        <span>Dashboard
-                                            <div className="product-idea">
-                                                <p>A comprehensive dashboard providing an overview of key metrics, such as bookings, revenue, and occupancy rates, as well as quick access to important functionalities.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/user-management-icon.png" className="lazy" /></i>
-                                        <span>User Management
-                                            <div className="product-idea">
-                                                <p>Manage user accounts and permissions, including adding new users, assigning roles, and monitoring user activity.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/inventory-icon.png" className="lazy" /></i>
-                                        <span>Inventory Management
-                                            <div className="product-idea">
-                                                <p>Manage room inventory, including adding new rooms, updating room details, and setting availability.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/booking-icon.png" className="lazy" /></i>
-                                        <span>Booking Management
-                                            <div className="product-idea">
-                                                <p>View, modify, and cancel bookings, as well as manage waitlists and room assignments.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/task-management-icon.png" className="lazy" /></i>
-                                        <span>Task Management
-                                            <div className="product-idea">
-                                                <p>Assign tasks to staff members, track task progress, and ensure efficient management of daily operations.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/payment-icon.png" className="lazy" /></i>
-                                        <span>Payment Management
-                                            <div className="product-idea">
-                                                <p>Monitor and manage payments, including processing refunds, viewing payment history, and generating financial reports.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/relationship-icon.png" className="lazy" /></i>
-                                        <span>Customer Relationship Management (CRM)
-                                            <div className="product-idea">
-                                                <p>Manage guest profiles, preferences, and feedback to personalize guest experiences and improve satisfaction.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/email-campaigns-icon.png" className="lazy" /></i>
-                                        <span>Email Campaigns
-                                            <div className="product-idea">
-                                                <p>Create and send targeted email campaigns to guests based on their booking history, preferences, or special occasions. Admins can use this feature to promote special offers, events, and loyalty programs, and stay connected with guests.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><img alt="img" src="/img/hotelbooking/rate-management-icon.png" className="lazy" /></i>
-                                        <span>Rate Management
-                                            <div className="product-idea">
-                                                <p>Manage room rates, including setting seasonal pricing, discounts, and special offers to maximize revenue.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                       
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/dashboard-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Dashboard
+                                <div className="product-idea">
+                                  <p>
+                                    A comprehensive dashboard providing an
+                                    overview of key metrics, such as bookings,
+                                    revenue, and occupancy rates, as well as
+                                    quick access to important functionalities.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/user-management-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                User Management
+                                <div className="product-idea">
+                                  <p>
+                                    Manage user accounts and permissions,
+                                    including adding new users, assigning roles,
+                                    and monitoring user activity.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/inventory-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Inventory Management
+                                <div className="product-idea">
+                                  <p>
+                                    Manage room inventory, including adding new
+                                    rooms, updating room details, and setting
+                                    availability.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/booking-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Booking Management
+                                <div className="product-idea">
+                                  <p>
+                                    View, modify, and cancel bookings, as well
+                                    as manage waitlists and room assignments.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/task-management-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Task Management
+                                <div className="product-idea">
+                                  <p>
+                                    Assign tasks to staff members, track task
+                                    progress, and ensure efficient management of
+                                    daily operations.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/payment-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Payment Management
+                                <div className="product-idea">
+                                  <p>
+                                    Monitor and manage payments, including
+                                    processing refunds, viewing payment history,
+                                    and generating financial reports.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/relationship-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Customer Relationship Management (CRM)
+                                <div className="product-idea">
+                                  <p>
+                                    Manage guest profiles, preferences, and
+                                    feedback to personalize guest experiences
+                                    and improve satisfaction.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/email-campaigns-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Email Campaigns
+                                <div className="product-idea">
+                                  <p>
+                                    Create and send targeted email campaigns to
+                                    guests based on their booking history,
+                                    preferences, or special occasions. Admins
+                                    can use this feature to promote special
+                                    offers, events, and loyalty programs, and
+                                    stay connected with guests.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                 width ={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/hotelbooking/rate-management-icon.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Rate Management
+                                <div className="product-idea">
+                                  <p>
+                                    Manage room rates, including setting
+                                    seasonal pricing, discounts, and special
+                                    offers to maximize revenue.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -619,40 +917,88 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="SubscriptionModel" id="subscriptionmodel" style={{ backgroundColor: "#f5f5f5"}}>
-    <div className="container">	
-       
-        <div className="job_or_title">
-            <h2 className="taxt_tt_job">Subscription Model</h2><br />
+      <section
+        className="SubscriptionModel"
+        id="subscriptionmodel"
+        style={{ backgroundColor: "#f5f5f5" }}
+      >
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
+            <br />
             <div className="SubscriptionModelBx">
-                <p>Key Benefits:</p>
-                <ul>
-                    <li><span>Lifetime Updates: Enjoy complimentary updates for your software version throughout its lifespan, including <strong>Free bug & security fixes</strong> under the subscription model.</span></li>
-                    <li><span>Timely Upgrades: Seamlessly transition to upgraded versions at regular intervals, all at no extra cost.</span></li>
-                    <li><span><strong>Zero Setup Fees</strong>:- Customers can easily get started with the <strong>Search Engine Friendly</strong> software as there are no additional charges for setup and installation, ensuring a smooth onboarding experience.</span></li>
-                    <li><span>Effortless Program Operation: Revel in robust bandwidth that guarantees your program runs flawlessly, supported by resources allocated to your subscription model. Any increase in allocated resources will incur additional charges beyond the standard subscription model.</span></li>
-                    
-                    <li><span>Enduring Support: Our dedicated <strong>Customer Care team</strong> is dedicated to providing lifelong assistance through our subscription model. Any software issues that arise will be promptly addressed by our dedicated technical team during office hours.</span></li>
-                    
-                    <li><span>Personalized Customization Assistance: Delivering Custom Features According to Client Requirements at additional cost.</span></li>
-                    </ul>
-                <p>Discover a new era of convenience and efficiency with our subscription offering. Subscribe today and elevate your experience with our readymade solution!</p>
-            
-                
+              <p>Key Benefits:</p>
+              <ul>
+                <li>
+                  <span>
+                    Lifetime Updates: Enjoy complimentary updates for your
+                    software version throughout its lifespan, including{" "}
+                    <strong>Free bug & security fixes</strong> under the
+                    subscription model.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Timely Upgrades: Seamlessly transition to upgraded versions
+                    at regular intervals, all at no extra cost.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Zero Setup Fees</strong>:- Customers can easily get
+                    started with the <strong>Search Engine Friendly</strong>{" "}
+                    software as there are no additional charges for setup and
+                    installation, ensuring a smooth onboarding experience.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Effortless Program Operation: Revel in robust bandwidth that
+                    guarantees your program runs flawlessly, supported by
+                    resources allocated to your subscription model. Any increase
+                    in allocated resources will incur additional charges beyond
+                    the standard subscription model.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    Enduring Support: Our dedicated{" "}
+                    <strong>Customer Care team</strong> is dedicated to
+                    providing lifelong assistance through our subscription
+                    model. Any software issues that arise will be promptly
+                    addressed by our dedicated technical team during office
+                    hours.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    Personalized Customization Assistance: Delivering Custom
+                    Features According to Client Requirements at additional
+                    cost.
+                  </span>
+                </li>
+              </ul>
+              <p>
+                Discover a new era of convenience and efficiency with our
+                subscription offering. Subscribe today and elevate your
+                experience with our readymade solution!
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<section id="subscriptionprice" className="SubscriptionpriceSection">
+      </section>
+      <section id="subscriptionprice" className="SubscriptionpriceSection">
         <div className="container">
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
               <h4>
-              $895<span className="sml_labl"> INR</span>
+                $895<span className="sml_labl"> INR</span>
               </h4>
               <strike className="srik_cls">
-              $1500<span className="sml_labl"> USD</span>
+                $1500<span className="sml_labl"> USD</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
@@ -665,13 +1011,11 @@ const Page = () => {
                     />
                   }
                 </div>
-               
               </div>
               <div className="jocpp">
-                
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                     <img
+                    <Image
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -739,8 +1083,6 @@ const Page = () => {
         </div>
       </section>
 
-
-
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
           <div className="job_or_title">
@@ -751,7 +1093,7 @@ const Page = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                   <img
+                  <Image
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -766,194 +1108,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div>
-        <Modal
-          show={jobportal}
-          onHide={toggleJobPortalModal}
-          id="jobportal"
-          className="modal-service"
-        >
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Body>
-             <img
-              src="/img/fiverrclone/gigger-how-it-works.jpg"
-              alt="icon"
-              title=""
-              className="img-fluid"
-            />
-          </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
-
-        <Modal
-          show={buyjobportal}
-          onHide={toggleBuyJobPortalModal}
-          id="buyjobportal"
-          className="modal-service"
-        >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
-          <Modal.Body>
-            <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                     <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                      width={100}
-                      height={100}
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                     <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                      width={100}
-                      height={100}
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                     <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                      width={100}
-                      height={100}
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                     <img
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                      width={100}
-                      height={100}
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="feat-slide-img">
-                     <img
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Job Management</div>
-                    <div className="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="feat-slide-img">
-                     <img
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Membership Plan</div>
-                    <div className="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
-                </div>
-              </Slider>
-            </div>
-          </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
-      </div>
+      
       <section className="used_technology_section" id="technologies">
         <div className="container">
           <h4 className="title_main">
@@ -965,7 +1120,7 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                       <img
+                      <Image
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                         width={60}
@@ -976,7 +1131,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                       <img
+                      <Image
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         width={40}
@@ -987,7 +1142,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                       <img
+                      <Image
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         width={57}
@@ -998,7 +1153,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                       <img
+                      <Image
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         width={60}
@@ -1012,7 +1167,8 @@ const Page = () => {
               <div className="col-sm-6">
                 <ul className="list_detail">
                   <li className="same aos-init aos-animate" data-aos="fade-up">
-                    <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+, Safari 5+, IE 9+
+                    <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
+                    Safari 5+, IE 9+
                   </li>
                   <li className="same aos-init aos-animate" data-aos="fade-up">
                     <b>Framework - </b> Laravel 10.x
@@ -1026,7 +1182,6 @@ const Page = () => {
                   <li className="other aos-init" data-aos="fade-up">
                     <b>Database - </b> MySQL 5.5+{" "}
                   </li>
-                 
                 </ul>
               </div>
             </div>
@@ -1042,40 +1197,46 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                   <img
+                  <Image
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     width={50}
                     height={100}
                   />
                 </div>
-                <div className="supportsettingtext">3-Months of Free Support</div>
+                <div className="supportsettingtext">
+                  3-Months of Free Support
+                </div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                   <img
+                  <Image
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     width={50}
                     height={100}
                   />
                 </div>
-                <div className="supportsettingtext">Brand Removal at No Cost</div>
+                <div className="supportsettingtext">
+                  Brand Removal at No Cost
+                </div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                   <img
+                  <Image
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     width={50}
                     height={100}
                   />
                 </div>
-                <div className="supportsettingtext">Complimentary Installation</div>
+                <div className="supportsettingtext">
+                  Complimentary Installation
+                </div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                   <img
+                  <Image
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     width={40}
@@ -1093,7 +1254,9 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
-                 <img
+                <Image
+                 width ={100}
+                  height={100}
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
                 />
@@ -1106,21 +1269,28 @@ const Page = () => {
                   <div className="CustomerReviewsMainBx">
                     <div className="CustomerReviewsBx">
                       <p>
-                      LS Room Reserver has simplified our hotel booking process. The software is user-friendly, and the customization options provided by Logicspice are 
-                      excellent. The support team is also very responsive and helpful.
+                        LS Room Reserver has simplified our hotel booking
+                        process. The software is user-friendly, and the
+                        customization options provided by Logicspice are
+                        excellent. The support team is also very responsive and
+                        helpful.
                       </p>
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                         <img
+                        <Image
+                         width ={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
                       </i>
                       <span>
-                      John D. (Canada)
+                        John D. (Canada)
                         <i className="contry-flag">
-                           <img
+                          <Image
+                           width ={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/canada_flag_img.png"
                           />
@@ -1131,21 +1301,27 @@ const Page = () => {
                   <div className="CustomerReviewsMainBx">
                     <div className="CustomerReviewsBx">
                       <p>
-                      We have been using LS Room Reserver for over a year now, and it has greatly improved our efficiency. The software is feature-rich and easy to use. 
-                      Logicspice has done a great job with this product.
+                        We have been using LS Room Reserver for over a year now,
+                        and it has greatly improved our efficiency. The software
+                        is feature-rich and easy to use. Logicspice has done a
+                        great job with this product.
                       </p>
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                         <img
+                        <Image
+                         width ={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
                       </i>
                       <span>
-                      Sarah K. (UK)
+                        Sarah K. (UK)
                         <i className="contry-flag">
-                           <img
+                          <Image
+                           width ={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/uk_flag_img.png"
                           />
@@ -1156,21 +1332,27 @@ const Page = () => {
                   <div className="CustomerReviewsMainBx">
                     <div className="CustomerReviewsBx">
                       <p>
-                      Logicspice's LS Room Reserver has been a game-changer for our hotel. The software is robust, and the team at Logicspice has been very supportive 
-                      throughout the implementation process. Highly recommended.
+                        Logicspice&apos;s LS Room Reserver has been a game-changer
+                        for our hotel. The software is robust, and the team at
+                        Logicspice has been very supportive throughout the
+                        implementation process. Highly recommended.
                       </p>
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                         <img
+                        <Image
+                         width ={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
                       </i>
                       <span>
-                      Michael P. (Australia)
+                        Michael P. (Australia)
                         <i className="contry-flag">
-                           <img
+                          <Image
+                           width ={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/australia_flag_img.png"
                           />
@@ -1278,7 +1460,8 @@ const Page = () => {
                 </div>
                 <div className="main-rait">
                   <span>
-                    <i className="fa fa-star"></i> <span>4.7 out of 5 stars</span>
+                    <i className="fa fa-star"></i>{" "}
+                    <span>4.7 out of 5 stars</span>
                   </span>
                 </div>
               </div>
@@ -1296,7 +1479,9 @@ const Page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                   <img
+                  <Image
+                   width={350}
+                   height={100 / 100 / 10}
                     src="/img/ordermanagement/freescript-faq.png"
                     alt="Free Script"
                   />
@@ -1309,77 +1494,116 @@ const Page = () => {
                       headerTitle="What is LS Room Reserver?"
                       collapseId="flush-collapse1"
                     >
-                      <p>LS Room Reserver is a comprehensive hotel booking software developed by Logicspice. It helps hotels manage their room inventory, 
-                      bookings, and guest information efficiently.</p>
+                      <p>
+                        LS Room Reserver is a comprehensive hotel booking
+                        software developed by Logicspice. It helps hotels manage
+                        their room inventory, bookings, and guest information
+                        efficiently.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="What features does LS Room Reserver offer?"
                       collapseId="flush-collapse2"
                     >
-                      <p>LS Room Reserver offers a wide range of features, including online booking management, room availability tracking, guest management, 
-                      reporting and analytics, and customizable booking rules.</p>
+                      <p>
+                        LS Room Reserver offers a wide range of features,
+                        including online booking management, room availability
+                        tracking, guest management, reporting and analytics, and
+                        customizable booking rules.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="Is LS Room Reserver suitable for small hotels and large hotel chains?"
                       collapseId="flush-collapse3"
                     >
-                     <p>Yes, LS Room Reserver is designed to meet the needs of both small hotels and large hotel chains. It can be adapted to suit the 
-                     specific requirements of each property.</p>
+                      <p>
+                        Yes, LS Room Reserver is designed to meet the needs of
+                        both small hotels and large hotel chains. It can be
+                        adapted to suit the specific requirements of each
+                        property.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="How can hotels customize LS Room Reserver to meet their specific needs?"
                       collapseId="flush-collapse4"
                     >
-                      <p>LS Room Reserver offers a range of customization options, allowing hotels to tailor the software to their specific requirements. 
-                      This includes customizing booking rules, room rates, and guest preferences.</p>
+                      <p>
+                        LS Room Reserver offers a range of customization
+                        options, allowing hotels to tailor the software to their
+                        specific requirements. This includes customizing booking
+                        rules, room rates, and guest preferences.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="Can LS Room Reserver be accessed from mobile devices?"
                       collapseId="flush-collapse5"
                     >
-                      <p>Yes, LS Room Reserver is mobile-responsive, allowing users to access the software from their smartphones or tablets. This enables hotel 
-                      staff to manage bookings and guest information on-the-go, enhancing operational efficiency.</p>
+                      <p>
+                        Yes, LS Room Reserver is mobile-responsive, allowing
+                        users to access the software from their smartphones or
+                        tablets. This enables hotel staff to manage bookings and
+                        guest information on-the-go, enhancing operational
+                        efficiency.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="How user-friendly is the Hotel Booking Software?"
                       collapseId="flush-collapse6"
                     >
-                      <p>Look for intuitive interfaces, customizable features, and adequate training options to ensure a smooth onboarding process.</p>
+                      <p>
+                        Look for intuitive interfaces, customizable features,
+                        and adequate training options to ensure a smooth
+                        onboarding process.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="What kind of support is provided with the software?"
                       collapseId="flush-collapse7"
                     >
-                      <p>Check for customer service, training resources, and ongoing assistance to meet your business needs.</p>
+                      <p>
+                        Check for customer service, training resources, and
+                        ongoing assistance to meet your business needs.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="Am I permitted to eliminate your company's proprietary notices?"
                       collapseId="flush-collapse8"
                     >
-                      <p>You have the flexibility to modify the software by removing our company information and substituting it with yours. However, it is not 
-                      permissible to include "copyright by" since exclusive copyright ownership for the software rests with us.</p>
+                      <p>
+                        You have the flexibility to modify the software by
+                        removing our company information and substituting it
+                        with yours. However, it is not permissible to include
+                        &quot;copyright by&quot; since exclusive copyright ownership for
+                        the software rests with us.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="How long does it take to receive the software after I purchase it?"
                       collapseId="flush-collapse9"
                     >
-                      <p>It will take a minimum 48 hours after payment.You will receive an email message with login details for your personal account where the 
-                      software can be downloaded.</p>
+                      <p>
+                        It will take a minimum 48 hours after payment.You will
+                        receive an email message with login details for your
+                        personal account where the software can be downloaded.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
                       headerTitle="Will you deliver the exact product as shown in the demo?"
                       collapseId="flush-collapse10"
                     >
-                      <p>Yes, We deliver the exact product. We don't compromise with quality at all.</p>
+                      <p>
+                        Yes, We deliver the exact product. We don&apos;t compromise
+                        with quality at all.
+                      </p>
                     </MDBAccordionItem>
 
                     <MDBAccordionItem
@@ -1420,15 +1644,6 @@ const Page = () => {
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
       <section className="enq-section">
         <div className="container">
           <div className="row">
@@ -1461,16 +1676,18 @@ const Page = () => {
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
-                      <h3>Inventory Management Software</h3>
+                        <h3>Inventory Management Software</h3>
                         <div className="other-project-logo">
-                           <img
+                          <Image
                             src="/img/jobboard/inventory-management-logo.png"
                             alt="Inventory Management Software"
                             width={114}
                             height={100}
                           />
                         </div>
-                        <p><span>Efficient Inventory Control and Tracking</span> </p>
+                        <p>
+                          <span>Efficient Inventory Control and Tracking</span>{" "}
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -1485,17 +1702,19 @@ const Page = () => {
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
-                      <h3>Job Board Software</h3>
+                        <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                           <img
+                          <Image
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job Board Software"
                             width={259}
                             height={100}
                           />
                         </div>
-                        <p><span>Best white label job board software. </span></p>
+                        <p>
+                          <span>Best white label job board software. </span>
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -1510,17 +1729,22 @@ const Page = () => {
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
-                      <h3>Recruitment Management Software</h3>
+                        <h3>Recruitment Management Software</h3>
 
                         <div className="other-project-logo">
-                           <img
+                          <Image
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
                             width={253}
                             height={100}
                           />
                         </div>
-                        <p><span>Readymade recruitment management system that automates the hiring process.</span></p>
+                        <p>
+                          <span>
+                            Readymade recruitment management system that
+                            automates the hiring process.
+                          </span>
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -1536,7 +1760,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-             <img
+            <Image
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}

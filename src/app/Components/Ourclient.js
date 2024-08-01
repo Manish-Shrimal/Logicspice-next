@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const Ourclient = () => {
   var settings = {
@@ -20,7 +21,7 @@ const Ourclient = () => {
         <div>
           <div class="media">
             <div class="media-left">
-              <img
+              <Image width={100} height={100}
                 class="media-object"
                 src="https://www.logicspice.com/app/webroot/img/images/kesepara.jpg"
                 alt="..."
@@ -59,7 +60,7 @@ const Ourclient = () => {
         <div>
           <div class="media">
             <div class="media-left">
-              <img
+              <Image width={100} height={100}
                 class="media-object"
                 src="https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg"
                 alt="..."
@@ -90,7 +91,7 @@ const Ourclient = () => {
         <div>
           <div class="media">
             <div class="media-left">
-              <img
+              <Image width={100} height={100}
                 class="media-object"
                 src="https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg"
                 alt="..."
@@ -113,7 +114,7 @@ const Ourclient = () => {
         <div>
           <div class="media">
             <div class="media-left">
-              <img
+              <Image width={100} height={100}
                 class="media-object"
                 src="https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg"
                 alt="..."
@@ -130,7 +131,7 @@ const Ourclient = () => {
                 logicspice <a class="show_data">More...</a>
                 <span class="hidendata">
                   {" "}
-                  you don't just hire someone to execute your project
+                  you don&apos;t just hire someone to execute your project
                   specification but much more someone who helps you really make
                   good and sophisticated web project. The communication is
                   greate and feedback time very short. I really can&apos;t find
@@ -149,7 +150,7 @@ const Ourclient = () => {
         <div>
           <div class="media">
             <div class="media-left">
-              <img
+              <Image width={100} height={100}
                 class="media-object"
                 src="https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg"
                 alt="..."

@@ -135,7 +135,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">

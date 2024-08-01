@@ -11,6 +11,7 @@ import Certificationtabs from "./Components/Certificationtabs";
 import Customizeweb from "./Components/Customizeweb";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "./resposive.css";
+import Image from "next/image";
 
 // import React, { useState } from "react";
 
@@ -43,19 +44,34 @@ const Page = () => {
                   <span className="change color-blue">
                     Your vision, Our expertise, Live results
                     <i>
-                      <img src="/img/home/your-vision.png" alt="icon" />
+                      <Image
+                        width={300}
+                        height={100}
+                        src="/img/home/your-vision.png"
+                        alt="icon"
+                      />
                     </i>
                   </span>
                   <span className="change color-red">
                     Turning vision into apps
                     <i>
-                      <img src="img/home/turning-vision.png" alt="icon" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/home/turning-vision.png"
+                        alt="icon"
+                      />
                     </i>
                   </span>
                   <span className="change color-yellow">
                     Empower business solutions
                     <i>
-                      <img src="/img/home/empower-business.png" alt="icon" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/home/empower-business.png"
+                        alt="icon"
+                      />
                     </i>
                   </span>
                 </div>
@@ -83,19 +99,34 @@ const Page = () => {
                   <span className="change color-blue">
                     Seamless web: Design, function, UX
                     <i>
-                      <img src="/img/home/ux-design.png" alt="icon" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/home/ux-design.png"
+                        alt="icon"
+                      />
                     </i>
                   </span>
                   <span className="change color-red">
                     Turning ideas into responsive web
                     <i>
-                      <img src="/img/home/responsive-web.png" alt="icon" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/home/responsive-web.png"
+                        alt="icon"
+                      />
                     </i>
                   </span>
                   <span className="change color-yellow">
                     Laravel experts, web &amp; app solutions
                     <i>
-                      <img src="/img/home/laravel-experts.png" alt="icon" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/home/laravel-experts.png"
+                        alt="icon"
+                      />
                     </i>
                   </span>
                 </div>
@@ -120,7 +151,9 @@ const Page = () => {
               <span>
                 More Services
                 <i>
-                  <img
+                  <Image
+                    width={20}
+                    height={100}
                     src="/img/home/top-banner/rightArrowIcon.svg"
                     className="d-inline"
                     alt="icon"
@@ -166,7 +199,12 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img src="/img/images/gigger-product-img.webp" alt="gigger" />{" "}
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/images/gigger-product-img.webp"
+                    alt="gigger"
+                  />{" "}
                   <div className="abs-product">
                     <h3>Fiverr Clone</h3>
                     <p>White label fiverr clone php script</p>
@@ -180,13 +218,28 @@ const Page = () => {
                     <div className="product-review">553 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -199,7 +252,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/jobboard-product-img.webp"
                     alt="Job-board"
                   />{" "}
@@ -216,13 +271,28 @@ const Page = () => {
                     <div className="product-review">213 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -234,7 +304,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/servicemarket-product-img.webp"
                     alt="service-marketplace"
                   />{" "}
@@ -251,13 +323,28 @@ const Page = () => {
                     <div className="product-review">47 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -269,7 +356,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/freelancer-product-img.webp"
                     alt="freelancerclone"
                   />{" "}
@@ -286,13 +375,28 @@ const Page = () => {
                     <div className="product-review">124 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -304,7 +408,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/whatsapp-product-img.webp"
                     alt="whatsApp-clone"
                   />{" "}
@@ -321,13 +427,28 @@ const Page = () => {
                     <div className="product-review">23 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -339,7 +460,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/logisticr-product-img.webp"
                     alt="logistic-marketplace"
                   />{" "}
@@ -356,13 +479,28 @@ const Page = () => {
                     <div className="product-review">168 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -374,7 +512,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/foododer-product-img.webp"
                     alt="food-ordering"
                   />{" "}
@@ -391,13 +531,28 @@ const Page = () => {
                     <div className="product-review">31 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -409,7 +564,9 @@ const Page = () => {
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/appointment-product-img.webp"
                     alt="appointment-scheduling"
                   />{" "}
@@ -426,13 +583,28 @@ const Page = () => {
                     <div className="product-review">27 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -445,7 +617,9 @@ const Page = () => {
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/crowdfunding-product-img.webp"
                     alt="Crowdfunding Script"
                   />{" "}
@@ -462,7 +636,12 @@ const Page = () => {
                     <div className="product-review">45 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -475,7 +654,9 @@ const Page = () => {
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/equipment-product-img.webp"
                     alt="Equipment Rental Script"
                   />{" "}
@@ -495,7 +676,12 @@ const Page = () => {
                     <div className="product-review">37 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -508,7 +694,9 @@ const Page = () => {
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/groupon-product-img.webp"
                     alt="Groupon Clone Script"
                   />{" "}
@@ -525,13 +713,28 @@ const Page = () => {
                     <div className="product-review">26 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/android-new.webp" alt="android" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/android-new.webp"
+                          alt="android"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/apple.webp" alt="apple" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/apple.webp"
+                          alt="apple"
+                        />
                       </li>
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -544,7 +747,9 @@ const Page = () => {
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/images/recruitment-product-img.webp"
                     alt="Recruitment management software"
                   />{" "}
@@ -561,7 +766,12 @@ const Page = () => {
                     <div className="product-review">43 REVIEWS</div>
                     <ul className="make-style">
                       <li>
-                        <img src="/img/images/web_new.webp" alt="web" />
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/web_new.webp"
+                          alt="web"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -737,12 +947,9 @@ const Page = () => {
               creating world-class user experiences across web, Android and
               iPhone apps.
             </p>
-
-           
           </div>
-       
+
           <Customizeweb />
-          
         </div>
       </section>
       <section className="client-say">
@@ -955,7 +1162,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img
+            <Image width={100} height={100}
               src="/img/product-img/whatsapp.png"
               alt="whatsapp-icon"
             />

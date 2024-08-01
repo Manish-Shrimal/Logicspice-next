@@ -44,16 +44,17 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  const getData = async() => {
+  const getData = async () => {
     try {
-        const response = await axios.get(BaseAPI + '/product/Details/job-board-software');
-        // console.log(response.data.data)
-        setPageData(response.data.data);
+      const response = await axios.get(
+        BaseAPI + "/product/Details/job-board-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
     } catch (error) {
-        console.log(error.message);
+      console.log(error.message);
     }
-
-  }
+  };
 
   useEffect(() => {
     getData();
@@ -109,7 +110,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width ={100} height ={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
                           alt=""
                         />
@@ -129,7 +132,11 @@ const Page = () => {
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className="btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -158,7 +165,9 @@ const Page = () => {
                     <span className="AppPrice">
                       <span className="MoreInfo">
                         <i>
-                          <Image width ={100} height ={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
                             alt=""
                           />
@@ -183,7 +192,9 @@ const Page = () => {
                     <a href="#subscriptionprice">click here</a>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <Image width ={100} height ={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
                       alt=""
                       className="lazy"
@@ -207,8 +218,6 @@ const Page = () => {
                     </li>
                   </ul>
                   <div className="portel-btnbx">
-                  
-
                     <Link
                       href=""
                       className="StartFreeTrialBtn animate-charcter"
@@ -230,7 +239,9 @@ const Page = () => {
                       style={{ display: "none" }}
                     >
                       <i>
-                        <Image width ={100} height ={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="https://www.logicspice.com/app/webroot/img/images/product_new/subscription2.png"
                           alt="subscription"
                         />
@@ -243,7 +254,9 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width ={400} height ={100}
+                <Image
+                  width={400}
+                  height={100}
                   className="lazy"
                   src="https://www.logicspice.com/img/images/product_new/new-img-jobboard.png"
                   alt="Job_Board_Software"
@@ -255,10 +268,10 @@ const Page = () => {
             <div aria-label="breadcrumb" className="my-breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="https://www.logicspice.com">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="https://www.logicspice.com/softwares">Softwares</a>
+                  <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Job Board Software
@@ -300,11 +313,12 @@ const Page = () => {
             open positions. They can upload their resumes in different file
             formats, including video resumes (video CVs). LS Jobber is a
             white-label job board, which means companies can customize it to
-            match their own branding. It&apos;s a ready-to-use software that allows
-            businesses, organizations, recruitment agencies, and investors to
-            quickly set up their own white label job board website. Overall,
-            this Job board software is designed to make the job hiring process
-            smoother and more efficient for both employers and job seekers.
+            match their own branding. It&apos;s a ready-to-use software that
+            allows businesses, organizations, recruitment agencies, and
+            investors to quickly set up their own white label job board website.
+            Overall, this Job board software is designed to make the job hiring
+            process smoother and more efficient for both employers and job
+            seekers.
           </p>
         </div>
       </section>
@@ -410,7 +424,9 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
-                          <Image width ={300} height ={100}
+                          <Image
+                            width={300}
+                            height={100}
                             src="/img/jobboard/mobile-job-seeker.png"
                             alt="Jobseeker App Feature"
                           />
@@ -632,7 +648,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/ragister-icon.png"
                                   alt="Jobseeker App Feature"
@@ -650,7 +668,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/manage_alert.png"
                                   alt="Jobseeker App Feature"
@@ -670,7 +690,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/manage_profile.png"
                                   alt="Jobseeker App Feature"
@@ -689,7 +711,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/save_fav.png"
                                   alt="Jobseeker App Feature"
@@ -707,7 +731,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/apply_job.png"
                                   alt="Jobseeker App Feature"
@@ -725,7 +751,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/search_job.png"
                                   alt="Jobseeker App Feature"
@@ -744,7 +772,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/applied_job.png"
                                   alt="Jobseeker App Feature"
@@ -762,7 +792,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/share_job.png"
                                   alt="Jobseeker App Feature"
@@ -781,7 +813,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/manage_edu.png"
                                   alt="Jobseeker App Feature"
@@ -800,7 +834,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/manage_exp.png"
                                   alt="Jobseeker App Feature"
@@ -819,7 +855,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/genrate_cv.png"
                                   alt="Jobseeker App Feature"
@@ -839,7 +877,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/jobs_by.png"
                                   alt="Jobseeker App Feature"
@@ -858,7 +898,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/approve_tickets.png"
                                   alt="Jobseeker App Feature"
@@ -876,7 +918,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/manage_blog.png"
                                   alt="Jobseeker App Feature"
@@ -894,7 +938,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/send_mail.png"
                                   alt="Jobseeker App Feature"
@@ -912,7 +958,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/tickets_history.png"
                                   alt="Jobseeker App Feature"
@@ -930,7 +978,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/deletes_acc.png"
                                   alt="Jobseeker App Feature"
@@ -948,7 +998,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/upload-video.png"
                                   alt="Jobseeker App Feature"
@@ -967,7 +1019,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/categories-auto.png"
                                   alt="Jobseeker App Feature"
@@ -986,7 +1040,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/simple_application.png"
                                   alt="Jobseeker App Feature"
@@ -1017,7 +1073,9 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image width ={300} height ={100}
+                          <Image
+                            width={300}
+                            height={100}
                             src="/img/jobboard/emplyer-mobile.png"
                             alt="Buyer App Features"
                           />
@@ -1028,7 +1086,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -1045,9 +1105,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/membership_pur.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1063,9 +1126,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/fov_cant.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1081,9 +1147,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/create-project.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1102,9 +1171,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/manage_job.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1119,9 +1191,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/update_job.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1137,7 +1212,10 @@ const Page = () => {
 
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt=""
                                   className="lazy"
                                   src="/img/jobboard/manage_profile.png"
                                 />
@@ -1156,9 +1234,12 @@ const Page = () => {
 
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/count_search_view.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1173,9 +1254,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/count_job_view.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1190,9 +1274,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/payment_history.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1207,9 +1294,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="https://www.logicspice.com/img/images/product_new/manage_user_acc.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1224,7 +1314,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/manage_content.png"
                                   alt="Jobseeker App Feature"
@@ -1243,9 +1335,12 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   className="lazy"
                                   src="/img/jobboard/send_mail.png"
+                                  alt=""
                                 />
                               </i>
                               <span>
@@ -1272,7 +1367,9 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image width ={300} height ={100}
+                          <Image
+                            width={300}
+                            height={100}
                             src="/img/fiverrclone/gigger_deshboard.png"
                             alt="Admin Panel"
                           />{" "}
@@ -1283,7 +1380,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -1299,7 +1398,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                 />
@@ -1317,7 +1418,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
                                 />
@@ -1335,7 +1438,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_gig.png"
                                 />
@@ -1353,7 +1458,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_gig_order.png"
                                 />
@@ -1370,7 +1477,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_service.png"
                                 />
@@ -1387,7 +1496,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
                                 />
@@ -1405,7 +1516,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_skill.png"
                                 />
@@ -1422,7 +1535,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
                                 />
@@ -1441,7 +1556,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_countries.png"
                                 />
@@ -1459,7 +1576,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_testimonial.png"
                                 />
@@ -1476,7 +1595,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width ={100} height ={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
                                 />
@@ -1509,9 +1630,9 @@ const Page = () => {
             <h2 className="headhs">What does our LS Jobber do for you?</h2>
             <h3 className="Haeddinh2">Empowering Your Recruitment Journey</h3>
             <p>
-              Our exceptional job board advertising software doesn&apos;t just stop
-              at facilitating connections; it empowers you to craft your own
-              recruitment portal. This ready-to-deploy script,{" "}
+              Our exceptional job board advertising software doesn&apos;t just
+              stop at facilitating connections; it empowers you to craft your
+              own recruitment portal. This ready-to-deploy script,{" "}
               <strong>
                 <i>secure and responsive</i>
               </strong>
@@ -1528,14 +1649,14 @@ const Page = () => {
               mark favored job listings and apply directly or save them for
               future reference is just the tip of the iceberg. Sharing potential
               opportunities via social media and even generating CVs with the
-              &quot;Generate A CV?&quot; feature ensures a comprehensive experience. For
-              employers, our Job Board App offers an unparalleled arena to post
-              unlimited jobs and meticulously review prospective candidates.
-              Email notifications can be dispatched directly to job seekers,
-              while job statuses can be seamlessly updated. Employers can also
-              keep track of membership plans, payment history, email
-              correspondences, and job applications, all within a user-friendly
-              dashboard.
+              &quot;Generate A CV?&quot; feature ensures a comprehensive
+              experience. For employers, our Job Board App offers an
+              unparalleled arena to post unlimited jobs and meticulously review
+              prospective candidates. Email notifications can be dispatched
+              directly to job seekers, while job statuses can be seamlessly
+              updated. Employers can also keep track of membership plans,
+              payment history, email correspondences, and job applications, all
+              within a user-friendly dashboard.
             </p>
             <h3 className="Haeddinh2">Elevated Control with Admin Dashboard</h3>
             <p>
@@ -1550,16 +1671,16 @@ const Page = () => {
             </p>
             <h3 className="Haeddinh2">Global Reach of Our Solution</h3>
             <p>
-              Our cutting-edge white label job board software isn&apos;t confined to
-              geographical limits. From the vibrant landscapes of the UK and USA
-              to the diverse territories of Europe, Australia, India, and
-              beyond, our solution spans the globe. Whether you&apos;re an employer
-              aiming to streamline the recruitment process, a business seeking
-              efficient job posting and shortlisting, or a job consultant aiming
-              to manage a comprehensive candidate database, our feature-rich job
-              site software stands as your unwavering ally. Join us on the
-              journey to revolutionize recruitment and forge meaningful
-              professional connections.
+              Our cutting-edge white label job board software isn&apos;t
+              confined to geographical limits. From the vibrant landscapes of
+              the UK and USA to the diverse territories of Europe, Australia,
+              India, and beyond, our solution spans the globe. Whether
+              you&apos;re an employer aiming to streamline the recruitment
+              process, a business seeking efficient job posting and
+              shortlisting, or a job consultant aiming to manage a comprehensive
+              candidate database, our feature-rich job site software stands as
+              your unwavering ally. Join us on the journey to revolutionize
+              recruitment and forge meaningful professional connections.
             </p>
           </div>
         </div>
@@ -1720,11 +1841,15 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            <h4>
-                {pageData.currency_symbol}{pageData.price}<span className="sml_labl"> {pageData.name}</span>
+              <h4>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                {pageData.currency_symbol}{pageData.other_price}<span className="sml_labl"> {pageData.name}</span>
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
               </strike>
 
               <div className="SubscriptionModelPriceBtn">
@@ -1760,7 +1885,9 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width ={100} height ={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
                       alt=""
                       className="lazy"
@@ -1825,11 +1952,7 @@ const Page = () => {
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <a  onClick={toggleModal}>
-                contact us
-           
-              </a>
-              .
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
@@ -2072,7 +2195,9 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width ={20} height ={20}
+                  <Image
+                    width={20}
+                    height={20}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -2094,7 +2219,9 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image width ={900} height ={100}
+            <Image
+              width={900}
+              height={100}
               src="/img/jobboard/Job_board_for_page.jpg"
               alt="icon"
               title=""
@@ -2139,7 +2266,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width ={900} height ={100}
+                    <Image
+                      width={900}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2162,7 +2291,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width ={900} height ={100}
+                    <Image
+                      width={900}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2185,7 +2316,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width ={900} height ={100}
+                    <Image
+                      width={900}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2208,7 +2341,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width ={900} height ={100}
+                    <Image
+                      width={900}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -2218,7 +2353,9 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image width ={900} height ={100}
+                    <Image
+                      width={900}
+                      height={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
                       alt="Job Management"
                     />
@@ -2234,7 +2371,9 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image width ={900} height ={100}
+                    <Image
+                      width={900}
+                      height={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
                       alt="Membership Plan"
                     />
@@ -2272,7 +2411,9 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
                         alt="ReactJS Development"
                       />
@@ -2281,7 +2422,9 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -2290,13 +2433,20 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -2305,7 +2455,9 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -2314,7 +2466,9 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
                         className="lazy"
@@ -2324,7 +2478,9 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
                         className="lazy"
@@ -2370,7 +2526,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width ={60} height ={60}
+                  <Image
+                    width={60}
+                    height={60}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -2379,7 +2537,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width ={60} height ={60}
+                  <Image
+                    width={60}
+                    height={60}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -2388,13 +2548,20 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width ={60} height ={60} src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={60}
+                    height={60}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width ={50} height ={50}
+                  <Image
+                    width={50}
+                    height={50}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -2407,7 +2574,9 @@ const Page = () => {
       </section>
       <section className="ecommerce_review_section" id="reviews">
         <div className="ecommerce_review__img">
-          <Image width ={400} height ={100}
+          <Image
+            width={400}
+            height={100}
             src="https://www.logicspice.com/app/webroot/img/images/ecommerce/ecommerce-review-img.png"
             alt="eCommerce Ultimate Package"
             className=""
@@ -2422,9 +2591,9 @@ const Page = () => {
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
                     I have purchased this script and has constructed my own
-                    job-site. This was an easy task because of logicspice&apos;s free
-                    installation and support. Keep up the good work. I will be
-                    back for more in the future.
+                    job-site. This was an easy task because of logicspice&apos;s
+                    free installation and support. Keep up the good work. I will
+                    be back for more in the future.
                   </div>
                   <div className="who_ratset">
                     <span
@@ -2439,7 +2608,9 @@ const Page = () => {
                     </span>
                     John, USA
                     <span>
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="https://www.logicspice.com/img/images/usa_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
@@ -2467,7 +2638,9 @@ const Page = () => {
                     </span>
                     <span id="client-name">D. Smith, Germany in USA</span>{" "}
                     <span>
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="https://www.logicspice.com/img/images/german.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
@@ -2497,7 +2670,9 @@ const Page = () => {
                     </span>
                     <span id="client-name">mike wilshon, AUS</span>{" "}
                     <span>
-                      <Image width ={100} height ={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="https://www.logicspice.com/img/images/australia_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
@@ -2977,7 +3152,9 @@ const Page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width ={700} height ={100}
+                  <Image
+                    width={700}
+                    height={100}
                     src="/img/jobboard/job_portal_script_apply_jobs.png"
                     alt="Job Application"
                   />
@@ -2992,7 +3169,9 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width ={700} height ={100}
+                  <Image
+                    width={700}
+                    height={100}
                     src="/img/jobboard/Job_portal_script_create_job.png"
                     alt="Create New Job"
                   />
@@ -3007,7 +3186,9 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width ={700} height ={100}
+                  <Image
+                    width={700}
+                    height={100}
                     src="/img/jobboard/job_portal_system_search_jobs.png"
                     alt="Job Search"
                   />
@@ -3022,7 +3203,9 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width ={700} height ={100}
+                  <Image
+                    width={700}
+                    height={100}
                     src="/img/jobboard/make_a_cv_job_portal_app.png"
                     alt="Create CV"
                   />
@@ -3038,7 +3221,9 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width ={700} height ={100}
+                  <Image
+                    width={700}
+                    height={100}
                     src="/img/jobboard/Manage_jobs_job_portal_script.png"
                     alt="Job Management"
                   />
@@ -3053,7 +3238,9 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width ={700} height ={100}
+                  <Image
+                    width={700}
+                    height={100}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
                     alt="Membership Plan"
                   />
@@ -3121,7 +3308,9 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>
                         <div className="other-project-logo">
-                          <Image width ={200} height ={100}
+                          <Image
+                            width={200}
+                            height={100}
                             src="https://www.logicspice.com/app/webroot/img/images/product_img/udemy_new.png"
                             alt="Udemy Clone"
                             className=""
@@ -3140,16 +3329,18 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     className="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/recruitment-management-software"
+                    href="/softwares/recruitment-management-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image width ={200} height ={100}
+                          <Image
+                            width={200}
+                            height={100}
                             src="https://www.logicspice.com/app/webroot/img/images/product_img/rms_new.png"
                             alt="Recruitment Management Software"
                             className=""
@@ -3163,22 +3354,24 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/fiverr-clone"
+                    href="/softwares/fiverr-clone"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <Image width ={200} height ={100}
+                          <Image
+                            width={200}
+                            height={100}
                             src="https://www.logicspice.com/app/webroot/img/images/product_img/gigger_logo_new.png"
                             alt="fiverr-clone"
                             className=""
@@ -3189,7 +3382,7 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -3202,7 +3395,9 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width ={100} height ={100}
+            <Image
+              width={100}
+              height={100}
               src="https://www.logicspice.com/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />

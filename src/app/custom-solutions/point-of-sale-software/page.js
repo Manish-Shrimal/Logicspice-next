@@ -46,7 +46,7 @@ const Page = () => {
               On demand mobile App or Web development solution for your business needs.
               </p>
               <p className="sml_txt">
-              Rapid customization, because of our team's past experience over similar solutions.
+              Rapid customization, because of our team&apos;s past experience over similar solutions.
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>

@@ -58,11 +58,11 @@ const Page = () => {
                 <h1>Shopify Web Design & App Development Company</h1>
                 <p>
                   In this competitive environment there are several developing
-                  applications that are used to build some e-commerce stores&sbquo;
-                  and Shopify is one of them. More than 1 million businesses are
-                  using Shopify e-services. There are enormous opportunities it
-                  offers&sbquo; so today it is considered as Shopify means investing
-                  in growth.
+                  applications that are used to build some e-commerce
+                  stores&sbquo; and Shopify is one of them. More than 1 million
+                  businesses are using Shopify e-services. There are enormous
+                  opportunities it offers&sbquo; so today it is considered as
+                  Shopify means investing in growth.
                 </p>
                 <p>
                   Logicspice offers you the best e-commerce stores designed to
@@ -99,7 +99,9 @@ const Page = () => {
             </div>
             <div className="col-md-6">
               <div className="images-section">
-                <img
+                <Image
+                   width={650}
+                   height={500 / (100 / 100)}
                   src="/img/shopifydevelopment/shopify-img2.png"
                   alt="Shopify_Development_Services"
                 />
@@ -120,10 +122,10 @@ const Page = () => {
               <div className="features_box">
                 <h3>Easy To Setup And Use</h3>
                 <p>
-                  Shopify is a hassle free platform&sbquo; which is easy to set up and
-                  use. It is the best alternative for those who want a complete
-                  solution&sbquo; with no technicalities related to development and
-                  hosting of the online store.
+                  Shopify is a hassle free platform&sbquo; which is easy to set
+                  up and use. It is the best alternative for those who want a
+                  complete solution&sbquo; with no technicalities related to
+                  development and hosting of the online store.
                 </p>
               </div>
             </div>
@@ -166,8 +168,8 @@ const Page = () => {
                 <p>
                   Mobile responsiveness is the key to success of an e-commerce
                   store because the number of mobile shoppers is increasing by
-                  the day. The Shopify themes are mobile responsive&sbquo; which means
-                  that it can be used to avail mobile-optimized stores.
+                  the day. The Shopify themes are mobile responsive&sbquo; which
+                  means that it can be used to avail mobile-optimized stores.
                 </p>
               </div>
             </div>
@@ -176,12 +178,13 @@ const Page = () => {
                 <h3>Shopify Speed Customization</h3>
                 <p>
                   Website performance represents all the technical and marketing
-                  efforts used to acquire traffic&sbquo; engage consumers&sbquo; convert
-                  them into buyers&sbquo; using precise methods to achieve several
-                  predefined objectives. Website performance optimization refers
-                  to monitoring and analyzing the efficiency of your website and
-                  identifying ways to improve it in terms of speed&sbquo; features&sbquo;
-                  implementations&sbquo; design and digital marketing.
+                  efforts used to acquire traffic&sbquo; engage consumers&sbquo;
+                  convert them into buyers&sbquo; using precise methods to
+                  achieve several predefined objectives. Website performance
+                  optimization refers to monitoring and analyzing the efficiency
+                  of your website and identifying ways to improve it in terms of
+                  speed&sbquo; features&sbquo; implementations&sbquo; design and
+                  digital marketing.
                 </p>
               </div>
             </div>
@@ -200,11 +203,11 @@ const Page = () => {
           </p>
           <p className="text-center" style={{ padding: " 5px 0 30px" }}>
             At Logicspice&sbquo; we offer a wide range of services including{" "}
-            <b>Shopify Web Development Company</b>&sbquo; Shopify Custom Application
-            Development&sbquo; Shopify Online Store System&sbquo; Customization&sbquo; Quality
-            Analysis&sbquo; Website Migration&sbquo; and PSD for Shopping for Theme
-            Improvement and Post-Final Management Services. Below is a list of
-            our services.
+            <b>Shopify Web Development Company</b>&sbquo; Shopify Custom
+            Application Development&sbquo; Shopify Online Store System&sbquo;
+            Customization&sbquo; Quality Analysis&sbquo; Website
+            Migration&sbquo; and PSD for Shopping for Theme Improvement and
+            Post-Final Management Services. Below is a list of our services.
           </p>
           <div className="row">
             <div className="col-sm-6 col-md-6">
@@ -226,8 +229,8 @@ const Page = () => {
                   Our technical team provides search engine optimization
                   solutions for Shopify SEO and Shopify plus SEO. Our Experts at
                   Logicspice with SEO services deals with transparency&sbquo;
-                  dedication&sbquo; and detailed insight are the core fundamentals of
-                  our Shopify SEO agency.
+                  dedication&sbquo; and detailed insight are the core
+                  fundamentals of our Shopify SEO agency.
                 </p>
               </div>
             </div>
@@ -239,8 +242,8 @@ const Page = () => {
                 <p>
                   Our Shopify Development team takes the guesswork out of
                   ecommerce by harnessing data-driven insights to cut to the
-                  chase. This won&apos;t just save you time and money&sbquo; but it will
-                  ensure your customers get exactly what they want.
+                  chase. This won&apos;t just save you time and money&sbquo; but
+                  it will ensure your customers get exactly what they want.
                 </p>
               </div>
             </div>
@@ -249,9 +252,9 @@ const Page = () => {
                 <h3>Shopify Maintenance Services</h3>
                 <p>
                   Whether it is a small bug or some big errors affects your e
-                  Commerce store&apos;s performance as a whole&sbquo; our Shopify
-                  technical expert developers can provide you with the required
-                  technical assistance.
+                  Commerce store&apos;s performance as a whole&sbquo; our
+                  Shopify technical expert developers can provide you with the
+                  required technical assistance.
                 </p>
               </div>
             </div>
@@ -291,12 +294,13 @@ const Page = () => {
             <div className="col-md-6">
               <div className="sa_t">
                 <p>
-                  <b>Shopify app development</b> solution offered by Logicspice&sbquo;
-                  can help you take full advantage of the site. From the outset&sbquo;
-                  our motto is increase sales growth. We raise our standards and
-                  see to it that our developers meet these standards. Because of
-                  this&sbquo; we ensure that our team works with innovative
-                  capabilities and amazing experience.{" "}
+                  <b>Shopify app development</b> solution offered by
+                  Logicspice&sbquo; can help you take full advantage of the
+                  site. From the outset&sbquo; our motto is increase sales
+                  growth. We raise our standards and see to it that our
+                  developers meet these standards. Because of this&sbquo; we
+                  ensure that our team works with innovative capabilities and
+                  amazing experience.{" "}
                 </p>
                 <p>
                   Our dedicated team at Logicspice create a world-class online
@@ -311,7 +315,9 @@ const Page = () => {
             <div className="col-md-6"></div>
           </div>
           <div className="img_saaa">
-            <img
+            <Image
+               width={1075}
+               height={500 / (100 / 100)}
               src="/img/shopifydevelopment/shopify.jpg"
               alt="Shopify_Web_Development"
             />
@@ -330,7 +336,9 @@ const Page = () => {
             >
               <div className="new_libraries">
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/shopifydevelopment/new_development_icon1.png"
                     alt="Web development"
                   />
@@ -352,7 +360,9 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/shopifydevelopment/new_development_icon3.png"
                     alt="Web development"
                   />
@@ -363,7 +373,8 @@ const Page = () => {
                     Our team can assure you of direct management and support
                     along with project implementation. We provide regular
                     updates and website management with support for website
-                    layout&sbquo; HTML / CSS&sbquo; social media updates and enhancements.
+                    layout&sbquo; HTML / CSS&sbquo; social media updates and
+                    enhancements.
                   </p>
                 </div>
               </div>
@@ -374,7 +385,9 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/shopifydevelopment/new_development_icon2.png"
                     alt="Web development"
                   />
@@ -384,8 +397,8 @@ const Page = () => {
                   <p>
                     Our team can look after and support customers throughout the
                     project process. As an experienced Shopify development
-                    company&sbquo; we provide updates and maintenance that help us
-                    make consistent corrections.
+                    company&sbquo; we provide updates and maintenance that help
+                    us make consistent corrections.
                   </p>
                 </div>
               </div>
@@ -396,7 +409,9 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <i>
-                  <img
+                  <Image
+                    width={60}
+                    height={100}
                     src="/img/shopifydevelopment/new_development_icon4.png"
                     alt="Web development"
                   />
@@ -440,7 +455,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <img src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

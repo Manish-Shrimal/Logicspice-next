@@ -15,6 +15,7 @@ import Link from "next/link";
 //   Button,
 // } from '@mui/material';
 import MenuIcon from "@mui/icons-material/Menu";
+import Image from "next/image";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +36,7 @@ const NavBar = () => {
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">
-              <img src="/img/logo.png" alt="Logo" />
+              <Image width={272} height={100 / (100 / 100)} src="/img/logo.png" alt="Logo" />
             </Link>
           </div>
           <button
@@ -50,7 +51,10 @@ const NavBar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}id="navbarNav">
+          <div
+            className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+            id="navbarNav"
+          >
             <ul className="nav navbar-nav navbar-right ms-auto top-main-menu">
               <li className="dropdown mega-menu-fw">
                 <a
@@ -131,31 +135,39 @@ const NavBar = () => {
                       <div className="col-sm-6">
                         <ul>
                           <li className="img_web_app img_web_app_sk">
-                            <img
+                            <Image
+                              width={230}
+                              height={100}
                               src="/img/header/menu-x4.png"
                               alt="Website & App Development Company"
-                              width="230"
+                              // width="230"
                             />
                           </li>
                           <li className="img_web_app img_web_app_sk">
-                            <img
+                            <Image
+                              width={136}
+                              height={100}
                               src="/img/header/menu-x1.png"
                               alt="Website & App Development Company"
-                              width="136"
+                              // width="136"
                             />
                           </li>
                           <li className="img_web_app img_web_app_sk">
-                            <img
+                            <Image
+                              width={123}
+                              height={100}
                               src="/img/header/menu-x2.png"
                               alt="Website & App Development Company"
-                              width="123"
+                              // width="123"
                             />
                           </li>
                           <li className="img_web_app img_web_app_sk">
-                            <img
+                            <Image
+                              width={152}
+                              height={100}
                               src="/img/header/menu-x3.png"
                               alt="Website & App Development Company"
-                              width="152"
+                              // width="152"
                             />
                           </li>
                         </ul>
@@ -750,40 +762,52 @@ const NavBar = () => {
                         <p>For Sales Inquiry</p>
                         <ul class="sales_contact">
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/fleg_icon2.png"
                               alt="Logicspice Contact No. - USA"
                             />
                             <a href="tel:+1-616-929-4064">+1-616-929-4064</a>
                           </li>
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/fleg_icon1.png"
                               alt="Logicspice Contact No. - UK"
                             />
                             <a href="tel:+44782-404-8483">+44782-404-8483</a>
                           </li>
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/fleg_icon3.png"
                               alt="Logicspice Contact No. - India"
                             />
                             <a href="tel:+91-9829559922">+91-9829559922</a>
                           </li>
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/skya_icon.png"
                               alt="Logicspice Contact - Skype"
                             />
                             <span>logicspice</span>
                           </li>
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/count/mail.png"
                               alt="Logicspice Contact - Email"
                             />
                             <span>
-                              <img
+                              <Image
+                                width={100}
+                                height={100}
                                 src="https://www.logicspice.com/img/images/count/logicspice-mail.svg"
                                 alt="Logicspice Contact - Email"
                               />
@@ -801,14 +825,18 @@ const NavBar = () => {
                         <p>For HR Inquiry</p>
                         <ul class="sales_contact">
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/fleg_icon3.png"
                               alt="Logicspice Contact No. - India"
                             />{" "}
                             <a href="tel:+91-7727974242">+91-7727974242</a>
                           </li>
                           <li>
-                            <img
+                            <Image
+                              width={100}
+                              height={100}
                               src="https://www.logicspice.com/img/images/count/mail.png"
                               alt="Logicspice Contact - Email"
                             />{" "}

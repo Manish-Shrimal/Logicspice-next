@@ -146,7 +146,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">
@@ -154,18 +155,18 @@ const Page = () => {
                     <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div></div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
+                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
+                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
                         <div class="HireFlexNewHeading">Project Basis</div>
                     </div>
                 </div> 
@@ -275,7 +276,7 @@ const Page = () => {
                       <h3>2. Python Data Analysis Solutions</h3>
                       <p>
                         Our Python specialists deliver advanced data analysis
-                        solutions, harnessing Python's powerful data libraries
+                        solutions, harnessing Python&apos;s powerful data libraries
                         and tools.
                       </p>
                     </div>
@@ -511,8 +512,8 @@ const Page = () => {
                   >
                     <p>
                       The cost of hiring a Python developer can vary based on
-                      their experience level, the project's complexity, and the
-                      contract's duration. Logicspice offers competitive pricing
+                      their experience level, the project&apos;s complexity, and the
+                      contract&apos;s duration. Logicspice offers competitive pricing
                       for Python developers, ensuring you get the best value for
                       your investment.
                     </p>

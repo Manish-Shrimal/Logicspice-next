@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+
 const Testimonials = ({ testimonialData }) => {
   var settings = {
     dots: false,
@@ -11,7 +12,7 @@ const Testimonials = ({ testimonialData }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -20,8 +21,8 @@ const Testimonials = ({ testimonialData }) => {
     <>
       <div className="slider-container">
         <Slider {...settings}>
-          {testimonialData.map((item) => (
-            <div className="">
+          {testimonialData.map((item, index) => (
+            <div className="" key={index}>
               <div className="media">
                 <div className="media-left">
                   <Image
@@ -29,7 +30,7 @@ const Testimonials = ({ testimonialData }) => {
                     height={100}
                     className="media-object"
                     src={item.image}
-                    alt="..."
+                    alt={item.heading}
                   />
                 </div>
                 <div className="media-body">
@@ -44,12 +45,11 @@ const Testimonials = ({ testimonialData }) => {
                     </a>
                   </p>
                   <div className="author_name">
-                  <p>
-                    {item.name} {item.location}
-                  </p>
+                    <p>
+                      {item.name} {item.location}
+                    </p>
+                  </div>
                 </div>
-                </div>
-                
               </div>
             </div>
           ))}

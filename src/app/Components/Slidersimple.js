@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const Slidersimple = () => {
   var settings = {
@@ -23,14 +24,27 @@ const Slidersimple = () => {
               <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
                 <div class="HomeBannerImg">
                   <div class="LeftGolImg balloon">
-                    <img src="/img/home/top-banner/gol-img.webp" />
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
+                      src="/img/home/top-banner/gol-img.webp"
+                      alt=""
+                    />
                   </div>
                   <div class="LeftTxtImg">
-                    <img src="/img/home/top-banner/job-text-img.webp" />
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
+                      src="/img/home/top-banner/job-text-img.webp"
+                      alt=""
+                    />
                   </div>
-                  <img
+                  <Image
+                    width={500}
+                    height={100 / (100 / 100)}
                     class="AppDevelomentsImgHome"
                     src="/img/home/top-banner/app-development-banner.webp"
+                    alt=""
                   />
                 </div>
               </div>
@@ -65,24 +79,32 @@ const Slidersimple = () => {
               <div class="col-sm-12 col-md-6 pull-right">
                 <div class="HomeBannerImg">
                   <div class="GrouponIcons1">
-                    <img
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/groupon-icon1.webp"
                       alt="Groupon Clone"
                     />
                   </div>
                   <div class="GrouponIcons2">
-                    <img
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/groupon-icon2.webp"
                       alt="Groupon Clone"
                     />
                   </div>
                   <div class="GrouponIcons3">
-                    <img
+                    <Image
+                      width={500}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/groupon-icon3.webp"
                       alt="Groupon Clone"
                     />
                   </div>
-                  <img
+                  <Image
+                    width={500}
+                    height={100 / (100 / 100)}
                     src="/img/home/top-banner/groupon-development-banner.webp"
                     alt="Groupon Clone"
                   />
@@ -108,30 +130,40 @@ const Slidersimple = () => {
               <div class="col-sm-4 col-md-6 pull-right">
                 <div class="HomeBannerImg">
                   <div class="FivverIcons1">
-                    <img
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon1.webp"
                       alt="gigger"
                     />
                   </div>
                   <div class="FivverIcons2">
-                    <img
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon2.webp"
                       alt="gigger"
                     />
                   </div>
                   <div class="FivverIcons3">
-                    <img
+                    <Image
+                      width={500}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon3.webp"
                       alt="gigger"
                     />
                   </div>
                   <div class="FivverIcons4">
-                    <img
+                    <Image
+                      width={100}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon4.webp"
                       alt="gigger"
                     />
                   </div>
-                  <img
+                  <Image
+                    width={500}
+                    height={100 / (100 / 100)}
                     src="/img/home/top-banner/fivver-development-banner.webp"
                     alt="gigger"
                   />
@@ -159,36 +191,48 @@ const Slidersimple = () => {
                 <div class="col-sm-12 col-md-6 pull-right">
                   <div class="HomeBannerImg">
                     <div class="FreelancerIcons1">
-                      <img
+                      <Image
+                        width={100}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon1.webp"
                         alt="Freelancer Clone"
                       />
                     </div>
                     <div class="FreelancerIcons2">
-                      <img
+                      <Image
+                        width={100}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon2.webp"
                         alt="Freelancer Clone"
                       />
                     </div>
                     <div class="FreelancerIcons3">
-                      <img
+                      <Image
+                        width={100}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/fivver-icon4.webp"
                         alt="Freelancer Clone"
                       />
                     </div>
                     <div class="FreelancerIcons4">
-                      <img
+                      <Image
+                        width={500}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon2.webp"
                         alt="Freelancer Clone"
                       />
                     </div>
                     <div class="FreelancerIcons5">
-                      <img
+                      <Image
+                        width={100}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon3.webp"
                         alt="Freelancer Clone"
                       />
                     </div>
-                    <img
+                    <Image
+                      width={500}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/freelancer-development-banner.webp"
                       alt="Freelancer Clone"
                     />
@@ -214,7 +258,7 @@ const Slidersimple = () => {
             </div>
           </div>
         </div>
-        
+
         <div>
           <div class="HomeSlider HomeSliderJobSlide">
             <div class="container">
@@ -222,18 +266,24 @@ const Slidersimple = () => {
                 <div class="col-sm-12 col-md-6 pull-right">
                   <div class="HomeBannerImg">
                     <div class="LaravelIcons1">
-                      <img
+                      <Image
+                        width={500}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/laravel-icon1.webp"
                         alt="Laravel Development"
                       />
                     </div>
                     <div class="LaravelIcons2">
-                      <img
+                      <Image
+                        width={500}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/laravel-icon2.webp"
                         alt="Laravel Development"
                       />
                     </div>
-                    <img
+                    <Image
+                      width={500}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/laravel-development-banner.webp"
                       alt="Laravel Development"
                     />
@@ -267,18 +317,24 @@ const Slidersimple = () => {
                 <div class="col-sm-12 col-md-6 pull-right">
                   <div class="HomeBannerImg">
                     <div class="ClassifiedIcons1">
-                      <img
+                      <Image
+                        width={500}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/classified-icon1.webp"
                         alt="PHP Classified Ads Script"
                       />
                     </div>
                     <div class="ClassifiedIcons2">
-                      <img
+                      <Image
+                        width={500}
+                        height={100 / (100 / 100)}
                         src="/img/home/top-banner/classified-icon2.webp"
                         alt="PHP Classified Ads Script"
                       />
                     </div>
-                    <img
+                    <Image
+                      width={500}
+                      height={100 / (100 / 100)}
                       src="/img/home/top-banner/classified-development-banner.webp"
                       alt="PHP Classified Ads Script"
                     />
@@ -302,7 +358,6 @@ const Slidersimple = () => {
             </div>
           </div>
         </div>
-        
       </Slider>
     </>
   );

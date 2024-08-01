@@ -3,6 +3,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
+
 const WorkedWith = ({ workedWithData }) => {
   const settings = {
     dots: false,
@@ -18,14 +20,15 @@ const WorkedWith = ({ workedWithData }) => {
     <>
       <div className="slider-container">
         <Slider {...settings}>
-          {workedWithData.map((item) => (
-            <div class="client_logos ">
+          {workedWithData.map((item, index) => (
+            <div className="client_logos" key={index}>
               <a rel="nofollow" href={item.link} target="_blank">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={item.image}
-                  data-original="https://www.logicspice.com/img/images/look/iwork-logo.webp"
-                  class="lazy"
                   alt="client project logo - logicspice"
+                  className="lazy"
                   style={{
                     backgroundImage: `url(${item.image})`,
                   }}

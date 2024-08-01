@@ -4,6 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 import Link from "next/link";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Image from "next/image";
 
 const Contactusmodel = ({ modalStatus, toggle }) => {
   const [popupScProductContacts, setPopupScProductContacts] =
@@ -53,8 +54,6 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
   };
 
   const handleClick = async () => {
-    console.log(formData);
-    // return;
     try {
       const response = await axios.post(BaseAPI + "/pages/contact", formData);
     } catch (error) {
@@ -96,7 +95,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                         <h4 className="modal-title" id="myModalLabel">
                           contact us
                           <span>
-                            <img src="https://www.logicspice.com/app/webroot/img/images/contact-img.png" />
+                            <Image
+                              width={100}
+                              height={100}
+                              src="https://www.logicspice.com/app/webroot/img/images/contact-img.png"
+                              alt=""
+                            />
                           </span>
                         </h4>
                       </div>
@@ -115,7 +119,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <div className="form-group">
                             <div className="input-group">
                               <span className="input-group-addon">
-                                <img src="https://www.logicspice.com/app/webroot/img/images/con-user.png" />
+                                <Image
+                                  width={30}
+                                  height={100}
+                                  src="https://www.logicspice.com/app/webroot/img/images/con-user.png"
+                                  alt=""
+                                />
                               </span>
                               <input
                                 onChange={handleChange}
@@ -134,7 +143,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <div className="form-group">
                             <div className="input-group">
                               <span className="input-group-addon">
-                                <img src="https://www.logicspice.com/app/webroot/img/images/con-email.png" />
+                                <Image
+                                  width={30}
+                                  height={100}
+                                  src="https://www.logicspice.com/app/webroot/img/images/con-email.png"
+                                  alt=""
+                                />
                               </span>
                               <input
                                 onChange={handleChange}
@@ -151,7 +165,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <div className="form-group">
                             <div className="input-group">
                               <span className="input-group-addon">
-                                <img src="https://www.logicspice.com/app/webroot/img/images/con-phone.png" />
+                                <Image
+                                  width={30}
+                                  height={100}
+                                  src="https://www.logicspice.com/app/webroot/img/images/con-phone.png"
+                                  alt=""
+                                />
                               </span>
                               <input
                                 onChange={handleChange}
@@ -168,7 +187,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <div className="form-group">
                             <div className="input-group">
                               <span className="input-group-addon">
-                                <img src="https://www.logicspice.com/app/webroot/img/images/con-massege.png" />
+                                <Image
+                                  width={30}
+                                  height={100}
+                                  src="https://www.logicspice.com/app/webroot/img/images/con-massege.png"
+                                  alt=""
+                                />
                               </span>
                               <textarea
                                 onChange={handleChange}
@@ -211,8 +235,10 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                               />
                               {loader && (
                                 <div className="side_page" id="loadloader6">
-                                  <img
-                                    src="./assets/img/loading-old.gif"
+                                  <Image
+                                    width={100}
+                                    height={100}
+                                    src="/img/loading-old.gif"
                                     alt=""
                                   />
                                 </div>
@@ -268,7 +294,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 </a>
                                 <div className="ftt_lon">
                                   <a href="/" className="">
-                                    <img src="./assets/img/logo.png" alt="" />
+                                    <Image
+                                      width={100}
+                                      height={100}
+                                      src="./assets/img/logo.png"
+                                      alt=""
+                                    />
                                   </a>
                                 </div>
                               </div>
@@ -285,7 +316,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                       <label>MAIL US</label>
                       <div className="logicspice-mail">
                         <a href="mailto:info@logicspice.com">
-                          <img src="https://www.logicspice.com/app/webroot/img/images/logic-mail.png" />{" "}
+                          <Image
+                            width={100}
+                            height={100}
+                            src="https://www.logicspice.com/app/webroot/img/images/logic-mail.png"
+                            alt=""
+                          />{" "}
                           info@logicspice.com
                         </a>
                       </div>
@@ -294,7 +330,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                       <label>OUR SKYPE ID</label>
                       <div className="logicspice-mail">
                         <a href="skype:logicspice?call">
-                          <img src="https://www.logicspice.com/app/webroot/img/images/logic-skyap.png" />{" "}
+                          <Image
+                            width={100}
+                            height={100}
+                            src="https://www.logicspice.com/app/webroot/img/images/logic-skyap.png"
+                            alt=""
+                          />{" "}
                           logicspice
                         </a>
                       </div>
@@ -303,19 +344,34 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                       <label>CALL US</label>
                       <div className="logicspice-call-dtl">
                         <i>
-                          <img src="https://www.logicspice.com/app/webroot/img/images/count/usa.png" />
+                          <Image
+                            width={30}
+                            height={100}
+                            src="https://www.logicspice.com/app/webroot/img/images/count/usa.png"
+                            alt=""
+                          />
                         </i>
                         <span>+1-616-929-4064</span>
                       </div>
                       <div className="logicspice-call-dtl">
                         <i>
-                          <img src="https://www.logicspice.com/app/webroot/img/images/count/UK.png" />
+                          <Image
+                            width={30}
+                            height={100}
+                            src="https://www.logicspice.com/app/webroot/img/images/count/UK.png"
+                            alt=""
+                          />
                         </i>
                         <span>+44782-404-8483</span>
                       </div>
                       <div className="logicspice-call-dtl">
                         <i>
-                          <img src="https://www.logicspice.com/app/webroot/img/images/count/india.png" />
+                          <Image
+                            width={30}
+                            height={100}
+                            src="https://www.logicspice.com/app/webroot/img/images/count/india.png"
+                            alt=""
+                          />
                         </i>
                         <span>+91-9829559922</span>
                       </div>

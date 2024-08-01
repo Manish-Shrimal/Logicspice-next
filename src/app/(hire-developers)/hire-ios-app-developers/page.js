@@ -16,7 +16,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Page = () => {
-
   const [modalOpen, setModalOpen] = useState(false);
   const item = {
     dots: false,
@@ -28,7 +27,6 @@ const Page = () => {
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
-
   };
   const testimonialData = [
     {
@@ -75,7 +73,7 @@ const Page = () => {
   ];
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section
         style={{}}
         class="hire_developer_back_iin otherhire_developer_back_iin"
@@ -147,37 +145,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
+                </div>
+              </div>
 
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
-                </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><img width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><img width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div class="hiring-sr">
             <div class="row">
               <div class="col-md-8">
@@ -456,100 +482,97 @@ const Page = () => {
         <div className="container">
           <Slider {...item}>
             <div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={851}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/b1978_UUUga.jpg"
-                      alt="Logicspice iphone portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={851}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/b1978_UUUga.jpg"
+                        alt="Logicspice iphone portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
                 </div>
-                <div class="portimagesec_shadow"></div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Uuuga
+                    </li>
+                    <li>
+                      <b>Website URL:</b>{" "}
+                      https://itunes.apple.com/in/app/uuuga/id1235402695?mt=8
+                    </li>
+                    <li>
+                      <b>Framework:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Language:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Database:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Server:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Overview:</b>{" "}
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Uuuga
-                  </li>
-                  <li>
-                    <b>Website URL:</b>{" "}
-                    https://itunes.apple.com/in/app/uuuga/id1235402695?mt=8
-                  </li>
-                  <li>
-                    <b>Framework:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Language:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Database:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Server:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Overview:</b>{" "}
-                  </li>
-                </ul>
-              </div>
-            </div>
             </div>
 
             <div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={851}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/portfolio/full/21c14_Physical-EDGE.jpg"
-                      alt="Logicspice iphone portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={851}
+                        height={100}
+                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/21c14_Physical-EDGE.jpg"
+                        alt="Logicspice iphone portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Physical EDGE{" "}
-                  </li>
-                  <li>
-                    <b>Website URL:</b>{" "}
-                    https://itunes.apple.com/ca/app/physical-edge/id1222826539?mt=8
-                  </li>
-                  <li>
-                    <b>Framework:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Language:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Database:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Server:</b>{" "}
-                  </li>
-                  <li>
-                    <b>Overview:</b>{" "}
-                  </li>
-                </ul>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Physical EDGE{" "}
+                    </li>
+                    <li>
+                      <b>Website URL:</b>{" "}
+                      https://itunes.apple.com/ca/app/physical-edge/id1222826539?mt=8
+                    </li>
+                    <li>
+                      <b>Framework:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Language:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Database:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Server:</b>{" "}
+                    </li>
+                    <li>
+                      <b>Overview:</b>{" "}
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            </div>
-
-
           </Slider>
         </div>
       </section>
-  
 
       <WhyHireFromLogicspice testimonialData={testimonialData} />
       <div class="clearfix"></div>
@@ -571,7 +594,7 @@ const Page = () => {
           <h2 class="title_main">Other Popular Hire Developer</h2>
           <div class="other-product-box">
             <div class="row">
-              <div class="col-sm-6 col-md-4"> 
+              <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                   <a
                     title="View Detail"

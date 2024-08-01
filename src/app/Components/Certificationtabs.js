@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Certificationtabs = () => {
   const [activeTab, setActiveTab] = useState("Certifications");
@@ -23,7 +24,7 @@ const Certificationtabs = () => {
         >
           <a aria-controls="home" role="tab" data-toggle="tab">
             <span className="cer-icon">
-              <img
+              <Image width={25} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/certification_icon.webp"
                 alt="certification_icon"
@@ -40,7 +41,7 @@ const Certificationtabs = () => {
         >
           <a aria-controls="profile" role="tab" data-toggle="tab">
             <span className="cer-icon">
-              <img
+              <Image width={25} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/achivements_icon.webp"
                 alt="achivements_icon"
@@ -57,7 +58,7 @@ const Certificationtabs = () => {
         >
           <a aria-controls="messages" role="tab" data-toggle="tab">
             <span className="cer-icon">
-              <img
+              <Image width={25} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/affiliates_icon.webp"
                 alt="affiliates_icon"
@@ -71,56 +72,56 @@ const Certificationtabs = () => {
         <div role="tabpanel" className={`tab-pane ${activeTab === "Certifications" ? "active" : ""}`} id="Certifications">
           <ul>
             <li>
-              <img
+              <Image width={130} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/iso_logo.webp"
                 alt="iOS app development"
               />
             </li>
             <li>
-              <img
+              <Image width={210} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/freelancertopten.webp"
                 alt="freelancer web and app development"
               />
             </li>
             <li>
-              <img
+              <Image width={150} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/nasscom.webp"
                 alt="web and app development certification"
               />
             </li>
             <li>
-              <img
+              <Image width={210} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/applancer.webp"
                 alt="applancer certification"
               />
             </li>
             <li>
-              <img
+              <Image width={150} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/goodFirms.webp"
                 alt="Good Firms certification"
               />
             </li>
             <li>
-              <img
+              <Image width={210} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/extract.webp"
                 alt="Extract certification"
               />
             </li>
             <li>
-              <img
+              <Image width={120} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/appfutura.webp"
                 alt="appfutura certification"
               />
             </li>
             <li>
-              <img
+              <Image width={120} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/TAC-iphone.webp"
                 alt="topappcreators certification - logicspice"
@@ -131,28 +132,28 @@ const Certificationtabs = () => {
         <div role="tabpanel" className={`tab-pane ${activeTab === "Achievements" ? "active" : ""}`} id="Achievements">
           <ul>
             <li>
-              <img
+              <Image width={160} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/winner.webp"
                 alt="web and app development"
               />
             </li>
             <li>
-              <img
+              <Image width={100} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/bestwebdesign.webp"
                 alt="web and app development"
               />
             </li>
             <li>
-              <img
+              <Image width={100} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/clutch_logo.webp"
                 alt="website and app development company profile - clutch"
               />
             </li>
             <li>
-              <img
+              <Image width={210} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/siliconindia.webp"
                 alt="logicspice profile siliconindia"
@@ -163,21 +164,21 @@ const Certificationtabs = () => {
         <div role="tabpanel" className={`tab-pane ${activeTab === "Affiliates" ? "active" : ""}`} id="Affiliates">
           <ul>
             <li>
-              <img
+              <Image width={210} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/iwdro_logo.webp"
                 alt="website and app development"
               />
             </li>
             <li>
-              <img
+              <Image width={120} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/yellow-pages-logi.webp"
                 alt="web and app development"
               />
             </li>
             <li>
-              <img
+              <Image width={210} height={100}
                 className="lazy"
                 src="https://www.logicspice.com/img/images/logos/microsoftachivement.webp"
                 alt="web and app development"

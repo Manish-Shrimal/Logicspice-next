@@ -26,7 +26,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -37,7 +37,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -58,7 +58,9 @@ const Page = () => {
                     <ul>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="Business Apps"
                             src="/img/globalpages/Business-Apps.png"
                           />
@@ -66,7 +68,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="mobile Apps"
                             src="/img/globalpages/mobile-Apps.png"
                           />
@@ -74,7 +78,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="Business Apps Development"
                             src="/img/globalpages/BusinesS-Apps-Development.png"
                           />
@@ -82,7 +88,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="Business App Development Service"
                             src="/img/globalpages/Business-Service.png"
                           />
@@ -90,7 +98,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="Business App Developers"
                             src="/img/globalpages/Business_Developers.png"
                           />
@@ -98,7 +108,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="app-development"
                             src="/img/globalpages/app-development.png"
                           />
@@ -106,7 +118,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="application developers"
                             src="/img/globalpages/application-developers.jpg"
                           />
@@ -114,7 +128,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="mobile apps"
                             src="/img/globalpages/mobile-apps-logicspice.png"
                           />
@@ -122,7 +138,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="app development services"
                             src="/img/globalpages/app-development-services.png"
                           />
@@ -130,7 +148,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="expert app developers"
                             src="/img/globalpages/expert-app-developers.png"
                           />
@@ -138,7 +158,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="android apps development"
                             src="/img/globalpages/android-apps-development.png"
                           />
@@ -146,7 +168,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="mobile apps development"
                             src="/img/globalpages/mobile-apps-development.png"
                           />
@@ -154,7 +178,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="affordable apps"
                             src="/img/globalpages/affordable-apps.png"
                           />
@@ -162,7 +188,9 @@ const Page = () => {
                       </li>
                       <li>
                         <div className="country_icon_screen">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             alt="mobile apps-logicspice"
                             src="/img/globalpages/apps-logicspice.png"
                           />
@@ -223,7 +251,9 @@ const Page = () => {
             </div>
             <div className="col-md-4">
               <div className="hotel_description_image">
-                <img
+                <Image
+                  width={400}
+                  height={100 / 100 / 10}
                   alt="Accountants and Financial Industry Apps"
                   src="/img/globalpages/country_stepwisemobileapp.png"
                 />
@@ -284,9 +314,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="mobile-screen-splash">
                 <div className="mobile-screen-sizee">
-                 
                   <Slider {...date}>
-                  <div className="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -366,10 +395,7 @@ const Page = () => {
                         src="/img/globalpages/uuuga.png"
                       />
                     </div>
-
-                    </Slider>
-                  
-                  
+                  </Slider>
                 </div>
               </div>
             </div>
@@ -464,7 +490,9 @@ const Page = () => {
                   <div className="casestudy-col">
                     <div className="casestudy-row" id="post-3343">
                       <div className="case-col-img">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/globalpages/435a4_healthy_wealthy.png"
                           alt="Healthy Wealthy - logicspice"
                         />
@@ -493,7 +521,9 @@ const Page = () => {
                   <div className="casestudy-col">
                     <div className="casestudy-row" id="post-3343">
                       <div className="case-col-img">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/globalpages/93ec5_emergencyservicebenefits.png"
                           alt="Emergrncy - logicspice"
                         />
@@ -522,7 +552,9 @@ const Page = () => {
                   <div className="casestudy-col">
                     <div className="casestudy-row" id="post-3343">
                       <div className="case-col-img">
-                        <img
+                        <Image
+                          width={300}
+                          height={100}
                           src="/img/globalpages/1d608_amcs.png"
                           alt="AMCS - logicspice"
                         />
@@ -563,7 +595,9 @@ const Page = () => {
                     <div>
                       <div className="media">
                         <div className="media-left">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             className="media-object"
                             src="https://www.logicspice.com/app/webroot/img/images/kesepara.jpg"
                             alt="..."
@@ -616,7 +650,9 @@ const Page = () => {
                     <div>
                       <div className="media">
                         <div className="media-left">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             className="media-object"
                             src="https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg"
                             alt="..."
@@ -657,7 +693,9 @@ const Page = () => {
                     <div>
                       <div className="media">
                         <div className="media-left">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             className="media-object"
                             src="https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg"
                             alt="..."
@@ -681,7 +719,9 @@ const Page = () => {
                     <div>
                       <div className="media">
                         <div className="media-left">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             className="media-object"
                             src="https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg"
                             alt="..."
@@ -726,7 +766,9 @@ const Page = () => {
                     <div>
                       <div className="media">
                         <div className="media-left">
-                          <img
+                          <Image
+                            width={100}
+                            height={100}
                             className="media-object"
                             src="https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg"
                             alt="..."
@@ -767,7 +809,9 @@ const Page = () => {
               <div className="casestudyshoen_bx_col_th">
                 <div className="blog_head" id="post-3498">
                   <div className="blog_head_img">
-                    <img
+                    <Image
+                      width={700}
+                      height={100}
                       src="/img/globalpages/0ab20_Factors-To-Consider-While-Choosing-Web-Builder-For-E-Commerce-Website.jpg"
                       alt=" Factors To Consider While Choosing Web Builder For E-Commerce Website?"
                     />
@@ -904,7 +948,9 @@ const Page = () => {
                   <div className="col-sm-5 contentarea">
                     <div className="about__text">
                       <div className="img__about">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           alt="img"
                           src="/img/globalpages/setting_icon.png"
                         />
@@ -925,7 +971,12 @@ const Page = () => {
                     </div>
                     <div className="about__text">
                       <div className="img__code">
-                        <img alt="img" src="/img/globalpages/code_icn.png" />
+                        <Image
+                          width={100}
+                          height={100}
+                          alt="img"
+                          src="/img/globalpages/code_icn.png"
+                        />
                       </div>
                       <div className="media-body">
                         <div className="tabrightitle">

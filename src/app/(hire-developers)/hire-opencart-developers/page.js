@@ -143,7 +143,8 @@ const Page = () => {
         <div class="new-hiring-div">
           <div class="row">
                 <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><img width={64} height={100} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+                    <div class="HireFlexNewImg"><Image   width={300}
+                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
                 </div>
                 
                 <div class="col-md-9 col-sm-8 p-0">
@@ -465,7 +466,7 @@ const Page = () => {
                 <div className="col-md-6">
                   <div className="port_feat_img">
                     <span>
-                      <img
+                      <Image
                         src="/img/hiredevelopers/Organic-Moringa.png"
                         alt="organicmoringaaustralia"
                       />
@@ -510,7 +511,7 @@ const Page = () => {
             <div class="row">
                       <div class="col-md-6">
                           <div class="port_feat_img"><span>
-                          <img src="/img/hiredevelopers/Ten-Seconds-Down-Music-Store.png" alt="TenSeconds" /></span>
+                          <Image src="/img/hiredevelopers/Ten-Seconds-Down-Music-Store.png" alt="TenSeconds" /></span>
                           </div>
                           <div class="portimagesec_shadow"></div>
                       </div>
@@ -535,7 +536,7 @@ const Page = () => {
               <div class="row">
                       <div class="col-md-6">
                           <div class="port_feat_img"><span>
-                          <img src="/img/hiredevelopers/FishBone.png" alt="FishBone" /></span>
+                          <Image src="/img/hiredevelopers/FishBone.png" alt="FishBone" /></span>
                           </div>
                           <div class="portimagesec_shadow"></div>
                       </div>

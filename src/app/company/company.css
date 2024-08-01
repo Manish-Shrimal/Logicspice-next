@@ -48,6 +48,8 @@ body{font-family: "Roboto", sans-serif !important; font-weight: 400;}
 
 .director-desk {
 	padding: 70px 0 100px;
+	overflow: hidden;
+	
 }
 
 .team-director {
@@ -149,6 +151,8 @@ body{font-family: "Roboto", sans-serif !important; font-weight: 400;}
 .aboutLogicTeam .team-content h3 {
 	color: #000;
 	font-size: 30px;
+	display: flex;
+	align-items: center;
 }
 
 .aboutLogicTeam .team-content.text-right {
@@ -936,7 +940,8 @@ body{font-family: "Roboto", sans-serif !important; font-weight: 400;}
 	border: 1px #fff solid;
 	border-radius: 5px;
 	font-weight: 600;
-	box-shadow: none
+	box-shadow: none;
+	color: white;
 }
 
 .LogicspiceTechnologies ul li {
@@ -1754,3 +1759,316 @@ section.nav-portfolio-top ul.nav {
 	display: inline-block;
 }
 .LogicspicePortfolioSection{ padding: 10px 0 50px;}
+
+
+/*company---*/
+.CompanyResourcesHeader {
+	padding: 40px 0;
+	text-align: center;
+}
+.CompanyResourcesHeader h1 {
+	color: #3a3a3a;
+	font-size: 50px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-family: 'roboto', sans-serif;
+}
+.CompanyResourcesHeader p {
+	color: #5a5a5a;
+	font-size: 20px;
+	font-weight: 300;
+	padding: 10px 0;
+}
+.OurCompanyBanner {
+	display: inline-block;
+	width: 100%;
+	margin-top: 40px;
+}
+.WhoWeAreBx h2 {
+	color: #505458;
+	font-size: 26px;
+	font-weight: 500;
+	font-family: 'roboto', sans-serif;
+}
+.WhoWeAreBx p {
+	font-size: 20px;
+	font-weight: 300;
+	padding: 10px 0;
+	color: #5a5a5a;
+}
+.WhoWeAreFutcher {
+	margin-top: 30px;
+}
+.WhoWeAreTxt {
+	display: inline-block;
+	width: 100%;
+	padding: 30px 0;
+	border-bottom: 1px #ddd solid;
+}
+.WhoWeAreTxt i {
+	display: inline-block;
+	vertical-align: middle;
+}
+.WhoWeAreTxt span {
+	color: #3b3b3b;
+	font-size: 22px;
+	display: inline-block;
+	padding-left: 15px;
+	vertical-align: middle;
+	width: 90%;
+}
+.OurGallerySection {
+	padding: 70px 0;
+	text-align: center;
+}
+.OurGallerySection h2 {
+	color: #505458;
+	font-size: 26px;
+	font-weight: 500;
+	font-family: 'roboto', sans-serif;
+	margin-bottom: 30px;
+}
+.OurGalleryImg {
+	display: inline-block;
+	/*width: 100%;*/
+}
+.OurOfficeSection {
+	overflow: initial;
+	padding-bottom: 50px;
+}
+.OurOfficeLeft {
+	/* position: relative; */
+	/* position: -webkit-sticky; */
+	/* position: sticky; */
+	overflow: initial;
+}
+.OurOfficeBx h2 {
+	color: #505458;
+	font-size: 56px;
+	font-weight: 500;
+	font-family: 'roboto', sans-serif;
+}
+.OurOfficeBx p {
+	font-size: 18px;
+	font-weight: 300;
+	padding: 20px 0;
+	color: #5a5a5a;
+}
+.OurOfficeTxt {
+	margin-top: 50px;
+}
+.OurOfficeTxt ul {
+}
+.OurOfficeTxt ul li {
+	display: inline-block;
+	width: 100%;
+	padding: 30px 0;
+	border-bottom: 1px #ddd solid;
+}
+.OurOfficeTxt ul li i {
+	display: inline-block;
+	vertical-align: middle;
+}
+.OurOfficeTxt ul li span {
+	color: #3b3b3b;
+	font-size: 22px;
+	display: inline-block;
+	padding-left: 15px;
+	vertical-align: middle;
+	width: 90%;
+}
+.stickybx {
+	position: relative;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100px;
+}
+
+.about-us {
+	margin: 70px 0px;
+}
+.about-us p {
+	font-size: 23px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	color: #3F3F3F;
+}
+.ab-box-new {
+	display: inline-block;
+	width: 100%;
+	padding-top: 30px;
+}
+.about-us h1{ color: #505458;font-size: 36px;}
+.pricing-plan {
+	position: relative;
+	z-index: 1000;
+	text-align: center;
+	min-height: 448px;
+	z-index: 1;
+}
+.pricing-plan::before {
+	background: url('/img/ourteam/box-bg1.png') no-repeat top left/contain;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+	opacity: 1;
+}
+.pricing-plan .icon {
+	display: inline-block;
+	width: 100%;
+	min-height: 70px;
+	margin-top: 40px;
+}
+.pricing-plan h3 {
+	color: #fff;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.pricing-plan p {
+	color: #fff;
+	padding: 5px 20px 20px;
+	font-size: 14px;
+	margin: 0;
+	line-height: 25px;
+}
+.pricing-plan .icon img{ display: inline-block;}
+.pricing-plan1 {  position: relative;z-index: 1000;text-align: center;height: 374px;z-index: 1}
+.pricing-plan-1 {
+background: #154386; 
+background: -moz-linear-gradient(top, #154386 0%, #5da8b9 100%); 
+background: -webkit-linear-gradient(top, #154386 0%,#5da8b9 100%); 
+background: linear-gradient(to bottom, #154386 0%,#5da8b9 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#154386', endColorstr='#5da8b9',GradientType=0 ); 
+}
+.pricing-plan-2 {
+background: #fe3a57; 
+background: -moz-linear-gradient(top, #fe3a57 0%, #dfa185 100%); 
+background: -webkit-linear-gradient(top, #fe3a57 0%,#dfa185 100%); 
+background: linear-gradient(to bottom, #fe3a57 0%,#dfa185 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe3a57', endColorstr='#dfa185',GradientType=0 ); 
+}
+.pricing-plan-3 {
+background: #0a8cd7; 
+background: -moz-linear-gradient(top, #0a8cd7 0%, #62b575 100%); 
+background: -webkit-linear-gradient(top, #0a8cd7 0%,#62b575 100%); 
+background: linear-gradient(to bottom, #0a8cd7 0%,#62b575 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a8cd7', endColorstr='#62b575',GradientType=0 ); 
+}
+.pricing-plan-4 {
+background: #f99122; 
+background: -moz-linear-gradient(top, #f99122 0%, #e3a2f4 100%); 
+background: -webkit-linear-gradient(top, #f99122 0%,#e3a2f4 100%);
+background: linear-gradient(to bottom, #f99122 0%,#e3a2f4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f99122', endColorstr='#e3a2f4',GradientType=0 ); 
+}
+.plus {
+	margin: 50px 0px;
+}
+.plus p {
+	text-align: justify;
+	line-height: 26px;
+	font-size: 17px;
+	color: #4a4a4a;
+}
+.our-mission {
+	margin: 50px 0px;
+}
+#our-work {
+	background-image: url('/img/ourteam/our-work.jpg');
+	margin-bottom: 0;
+	background-repeat: no-repeat;
+}
+#our-work .nav-tabs, 
+.our-mission .nav-tabs {
+	border-bottom: 2px solid #ddd;
+	width: 97%;
+}
+.nav.abouts-nav-tab > li {
+	float: left;
+	width: 50%;
+}
+.our-mission .nav-tabs > li, 
+#our-work .nav-tabs > li {
+	margin-bottom: -2px;
+}
+.nav.abouts-nav-tab > li > a {
+	margin-bottom: 0;
+}
+#our-work .abouts-nav-tab > li > a, 
+.our-mission .abouts-nav-tab > li > a {
+	padding-right: 10px !important;
+}
+#our-work .nav-tabs > li > a, 
+.our-mission .nav-tabs > li > a {
+	border: none;
+	border-bottom: 2px solid transparent;
+	padding: 10px 70px 10px 0;
+	display: block;
+	color: #bebebe;
+  font-size: 24px;
+}
+#our-work .nav-tabs > li.active > a, 
+#our-work .nav-tabs > li.active > a:focus, 
+#our-work .nav-tabs > li.active > a:hover, 
+.our-mission .nav-tabs > li.active > a, 
+.our-mission .nav-tabs > li.active > a:focus, 
+.our-mission .nav-tabs > li.active > a:hover {
+	background: none;
+	border: none;
+	border-bottom: 2px solid #451095;
+	color: #3f157b;
+	font-size: 24px;
+}
+.our-mission p {
+	line-height: 24px;
+	font-size: 16px;
+	color: #4a4a4a;
+}
+#our-work .nav a {
+	color: #fff;
+}
+#our-work .nav-tabs > li.active > a, 
+#our-work .nav-tabs > li.active > a:focus, 
+#our-work .nav-tabs > li.active > a:hover {
+	border-bottom: 2px solid #ff7f00;
+	color: #fff;
+}
+#our-work p {
+	color: #fff;
+	text-align: justify;
+}
+.enq-section {
+	background: #fff;
+	padding: 30px 0;
+}
+
+.fixed-background,
+.s-parallax {
+	background-attachment: fixed;
+	background-position: 50% 0;
+}
+
+.s-parallax,
+.cover-image,
+.cover-background,
+.texture-background {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+
+#testi-hire .slick-slider .slick-prev::before {
+	content: "\f104"; font-family: FontAwesome;color: #3F3F3F;font-size: 30px;
+}
+
+#testi-hire .slick-slider .slick-next::before {
+	content: "\f105";font-family: FontAwesome;color: #3F3F3F;font-size: 30px; 
+}

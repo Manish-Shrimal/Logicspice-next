@@ -32,16 +32,17 @@ const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [pageData, setPageData] = useState([]);
 
-  const getData = async() => {
+  const getData = async () => {
     try {
-        const response = await axios.get(BaseAPI + '/product/Details/classified-ads-script');
-        // console.log(response.data.data)
-        setPageData(response.data.data);
+      const response = await axios.get(
+        BaseAPI + "/product/Details/classified-ads-script"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
     } catch (error) {
-        console.log(error.message);
+      console.log(error.message);
     }
-
-  }
+  };
 
   useEffect(() => {
     getData();
@@ -134,7 +135,11 @@ const Page = () => {
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -1223,7 +1228,6 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-               
               </Slider>
             </div>
           </Modal.Body>

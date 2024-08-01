@@ -1283,7 +1283,7 @@ const Page = () => {
               </a>
             </div>
             <div className="conatct_title">
-              Let's have a quick call to better understand about your idea of
+              Let&apos;s have a quick call to better understand about your idea of
               application.
             </div>
           </div>

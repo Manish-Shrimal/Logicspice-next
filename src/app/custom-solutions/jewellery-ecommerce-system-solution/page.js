@@ -66,7 +66,7 @@ const Page = () => {
                 business needs.
               </p>
               <p className="sml_txt">
-                Rapid customization, because of our team's past experience over
+                Rapid customization, because of our team&apos;s past experience over
                 similar solutions.
               </p>
             </div>
@@ -104,12 +104,12 @@ const Page = () => {
             <div aria-label="breadcrumb" className="my-breadcrumb ">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="injectedConstants.HTTPS_PATH">Home</a>
+                  <Link href="injectedConstants.HTTPS_PATH">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="injectedConstants.HTTPS_PATH+'custom-solutions'">
+                  <Link href="/custom-solutions">
                     Custom Solutions
-                  </a>
+                  </Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Jewellery Website
@@ -825,10 +825,10 @@ const Page = () => {
                         <h3>Website Evaluation & Competitive Analysis</h3>
                         <p>
                           Initiating a comprehensive review of your website,
-                          we'll scrutinize its functionality and user experience
+                          we&apos;ll scrutinize its functionality and user experience
                           to identify areas for enhancement. These insights will
                           strategically guide our approach to optimizing your
-                          Jewellery website. Concurrently, we'll conduct
+                          Jewellery website. Concurrently, we&apos;ll conduct
                           research to discern the successful strategies employed
                           by your leading competitors.
                         </p>
@@ -853,7 +853,7 @@ const Page = () => {
                         <h3>Design Prototyping Process</h3>
                         <p>
                           Before incorporating any changes into your website,
-                          we'll construct a visual mockup of the new design,
+                          we&apos;ll construct a visual mockup of the new design,
                           providing you with a clear preview of the updates.
                           Whether your website is in its infancy or an
                           established entity, we collaborate closely to
@@ -1012,7 +1012,7 @@ const Page = () => {
                   <p>
                     We analyze the market, design UI to deliver the great and
                     effective solution for your business. R&D plays an important
-                    role when you start any business. It'&apos;s our duty to
+                    role when you start any business. It&apos;s our duty to
                     stand out from the competition.
                   </p>
                 </div>

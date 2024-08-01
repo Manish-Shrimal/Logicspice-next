@@ -190,19 +190,19 @@ const Page = () => {
       <div class="col-md-5">
         <div class="HireDevelopersBannerLogo">
           <div class="HireDevelopersMainImg">
-            <img
+            <Image width={100} height={100}
               src="/img/yiiframework/yiiframework-banner-img.png"
               alt="Hire Yii Developer"
             />
           </div>
           <div class="PinkImgBx">
-            <img
+            <Image width={100} height={100}
               src="/img/yiiframework/pink-box.png"
               alt="Hire Yii Developer"
             />
           </div>
           <div class="BlueImgBx">
-            <img
+            <Image width={100} height={100}
               src="/img/yiiframework/blue-box.png"
               alt="Hire Yii Developer"
             />
@@ -342,7 +342,7 @@ const Page = () => {
           <div class="col-md-4 col-sm-4">
             <div class="OurNewHirigModelBx">
               <i
-                ><img
+                ><Image width={100} height={100}
                   alt="app development"
                   src="/img/yiiframework/periodic-icon.png"
               /></i>
@@ -352,7 +352,7 @@ const Page = () => {
           <div class="col-md-4 col-sm-4">
             <div class="OurNewHirigModelBx">
               <i
-                ><img
+                ><Image width={100} height={100}
                   alt="app development"
                   src="/img/yiiframework/hourly-basis-icon.png"
               /></i>
@@ -362,7 +362,7 @@ const Page = () => {
           <div class="col-md-4 col-sm-4">
             <div class="OurNewHirigModelBx">
               <i
-                ><img
+                ><Image width={100} height={100}
                   alt="app development"
                   src="/img/yiiframework/project-basis-icon.png"
               /></i>
@@ -569,7 +569,7 @@ const Page = () => {
           <ul class="">
             <li class="">
               <i
-                ><img
+                ><Image width={100} height={100}
                   src="/img/yiiframework/website-development-icon.png"
                   alt="Website Development"
               /></i>
@@ -583,7 +583,7 @@ const Page = () => {
             </li>
             <li class="">
               <i
-                ><img
+                ><Image width={100} height={100}
                   src="/img/yiiframework/enterprise-icon.png"
                   alt="Enterprise Web Application"
               /></i>
@@ -597,7 +597,7 @@ const Page = () => {
             </li>
             <li class="">
               <i
-                ><img
+                ><Image width={100} height={100}
                   src="/img/yiiframework/ecommerce-Solution-icon.png"
                   alt="eCommerce Solution"
               /></i>
@@ -615,7 +615,7 @@ const Page = () => {
           <ul class="">
             <li class="">
               <i
-                ><img
+                ><Image width={100} height={100}
                   src="/img/yiiframework/Plugin-development-icon.png"
                   alt="Plugin Development"
               /></i>
@@ -629,7 +629,7 @@ const Page = () => {
             </li>
             <li class="">
               <i
-                ><img
+                ><Image width={100} height={100}
                   src="/img/yiiframework/web-application-icon.png"
                   alt="Web Application Development"
               /></i>
@@ -643,14 +643,14 @@ const Page = () => {
             </li>
             <li class="">
               <i
-                ><img
+                ><Image width={100} height={100}
                   src="/img/yiiframework/migration-solution-icon.png"
                   alt="Migration solution"
               /></i>
               <div class="NewHireCustomTxt">
                 <h3>6. Migration solution</h3>
                 <p>
-                  It's easy to migrate between yii framework while using custom
+                  It&apos;s easy to migrate between yii framework while using custom
                   migration template.
                 </p>
               </div>
@@ -672,14 +672,14 @@ const Page = () => {
       <div class="HireEasyStepsBx">
         <div class="HireEasyStepsBxBg">
           <i
-            ><img
+            ><Image width={100} height={100}
               alt="Raise Your Request"
               src="/img/yiiframework/raise-request-icon.png"
           /></i>
           <h5>Raise Your <br />Request</h5>
         </div>
         <div class="HireEasyStepsBorder">
-          <img
+          <Image width={100} height={100}
             alt="Raise Your Request"
             src="/img/yiiframework/step-box-border-down.png"
           />
@@ -687,14 +687,14 @@ const Page = () => {
       </div>
       <div class="HireEasyStepsBx">
         <div class="HireEasyStepsBorder2">
-          <img
+          <Image width={100} height={100}
             alt="Raise Your Request"
             src="/img/yiiframework/step-box-border-up.png"
           />
         </div>
         <div class="HireEasyStepsBxBg">
           <i
-            ><img
+            ><Image width={100} height={100}
               alt="Discuss Your Requirement"
               src="/img/yiiframework/discuss-requirement-icon.png"
           /></i>
@@ -704,14 +704,14 @@ const Page = () => {
       <div class="HireEasyStepsBx">
         <div class="HireEasyStepsBxBg">
           <i
-            ><img
+            ><Image width={100} height={100}
               alt="Select Experts"
               src="/img/yiiframework/select-experts-icon.png"
           /></i>
           <h5>Project <br />Documentation</h5>
         </div>
         <div class="HireEasyStepsBorder">
-          <img
+          <Image width={100} height={100}
             alt="Raise Your Request"
             src="/img/yiiframework/step-box-border-down.png"
           />
@@ -719,14 +719,14 @@ const Page = () => {
       </div>
       <div class="HireEasyStepsBx">
         <div class="HireEasyStepsBorder2">
-          <img
+          <Image width={100} height={100}
             alt="Raise Your Request"
             src="/img/yiiframework/step-box-border-up.png"
           />
         </div>
         <div class="HireEasyStepsBxBg">
           <i
-            ><img
+            ><Image width={100} height={100}
               alt="Finalize The Terms"
               src="/img/yiiframework/finalize-icon.png"
           /></i>
@@ -736,14 +736,14 @@ const Page = () => {
       <div class="HireEasyStepsBx">
         <div class="HireEasyStepsBxBg">
           <i
-            ><img
+            ><Image width={100} height={100}
               alt="Assign and kick start"
               src="/img/yiiframework/kick-start-icon.png"
           /></i>
           <h5>Assign and <br />kick start</h5>
         </div>
         <div class="HireEasyStepsBorder">
-          <img
+          <Image width={100} height={100}
             alt="Raise Your Request"
             src="/img/yiiframework/step-box-border-down.png"
           />
@@ -769,7 +769,7 @@ const Page = () => {
   <div class="container">
     <h3 class="title_heading">
       Why hire from
-      <img
+      <Image width={100} height={100}
         alt="Logicspice Mobile and Web development company"
         src="/img/logo.png"
         style={{display: "inline-block"}}
@@ -780,7 +780,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Qualified, Experienced resources"
                 src="/img/hiredevelopers/experience_icon.png"
                 
@@ -794,7 +794,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Flexible Hiring Models - Logicspice"
                 src="/img/hiredevelopers/search_icon.png"
               />
@@ -806,7 +806,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Monitor team’s performance"
                 src="/img/hiredevelopers/monitor_icon.png"
               />
@@ -819,7 +819,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Track Progress with Project Management"
                 src="/img/hiredevelopers/progress_icon.png"
               />
@@ -832,7 +832,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Fast and easy communication"
                 src="/img/hiredevelopers/comunication_icon.png"
               />
@@ -843,7 +843,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Flexible Timing - Logicspice"
                 src="/img/hiredevelopers/timing_icon.png"
               />
@@ -854,7 +854,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Cost-efficient development - logicspice"
                 src="/img/hiredevelopers/cost_icon.png"
               />
@@ -865,7 +865,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Consistent Technical and Administrative support"
                 src="/img/hiredevelopers/technical_icon.png"
               />
@@ -879,7 +879,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Dependable supervision and execution"
                 src="/img/hiredevelopers/dependabe_icon.png"
               />
@@ -893,7 +893,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="deadlines developers"
                 src="/img/hiredevelopers/calendar_icon.png"
               />
@@ -906,7 +906,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Project confidentiality - Logicspice"
                 src="/img/hiredevelopers/nda_icon.png"
               />
@@ -920,7 +920,7 @@ const Page = () => {
         <div class="col-md-3 col-sm-4">
           <div class="WhyHireFromBx" data-aos="fade-up">
             <div class="WhyHireFromImg">
-              <img
+              <Image width={100} height={100}
                 alt="Availability and scope of expansion - logicspice"
                 src="/img/hiredevelopers/scope_icon.png"
               />
@@ -937,7 +937,7 @@ const Page = () => {
 <section class="BetterUnderstandSection">
   <div class="container">
     <h2>
-      Let's Have A Quick Call To Better Understand <br /><span
+      Let&apos;s Have A Quick Call To Better Understand <br /><span
         >About Your Idea of Yii Application.</span
       >
     </h2>
@@ -962,7 +962,7 @@ const Page = () => {
     <div class="row">
       <div class="col-xs-12 col-md-4 col-lg-4">
         <div class="CustomerReviewsImg">
-          <img
+          <Image width={100} height={100}
             alt="customer-reviews"
             src="/img/yiiframework/customer-reviews-img.jpg"
           />
@@ -975,7 +975,7 @@ const Page = () => {
             <div class="CustomerReviewsMainBx">
               <div class="CustomerReviewsBx">
                 <div class="CustomerReviewsBxImg">
-                  <img
+                  <Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/beat-img.jpg"
                   />
@@ -985,7 +985,7 @@ const Page = () => {
                   <p>
                     I have purchased the service marketplace software and have
                     constructed my own website. This was an easy task because of
-                    logicspice's free installation and support. Keep up the good
+                    logicspice&apos;s free installation and support. Keep up the good
                     work. I will be back for more customization work in the
                     future.
                   </p>
@@ -993,12 +993,12 @@ const Page = () => {
               </div>
               <div class="CustomerReviewsClient">
                 <i
-                  ><img
+                  ><Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/purpal-star.png" /></i
                 ><span
                   >Beat B. Switzerland<i class="contry-flag"
-                    ><img
+                    ><Image width={100} height={100}
                       alt="customer-reviews"
                       src="/img/jobboard/switzerland_flag_img.png" /></i
                 ></span>
@@ -1007,7 +1007,7 @@ const Page = () => {
             <div class="CustomerReviewsMainBx">
               <div class="CustomerReviewsBx">
                 <div class="CustomerReviewsBxImg">
-                  <img
+                  <Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/tom-img.jpg"
                   />
@@ -1024,12 +1024,12 @@ const Page = () => {
               </div>
               <div class="CustomerReviewsClient">
                 <i
-                  ><img
+                  ><Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/purpal-star.png" /></i
                 ><span
                   >Tom J. USA<i class="contry-flag"
-                    ><img
+                    ><Image width={100} height={100}
                       alt="customer-reviews"
                       src="/img/jobboard/usa_flag_img.png" /></i
                 ></span>
@@ -1038,7 +1038,7 @@ const Page = () => {
             <div class="CustomerReviewsMainBx">
               <div class="CustomerReviewsBx">
                 <div class="CustomerReviewsBxImg">
-                  <img
+                  <Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/burak-img.jpg"
                   />
@@ -1048,16 +1048,16 @@ const Page = () => {
                   <p>
                     Exactly the best team available online ! I have been working
                     and communicating with a few companies over the internet and
-                    i didn't see a single better company than logicspice. They
+                    i didn&apos;t see a single better company than logicspice. They
                     are so skilled and professional. Their knowledge about
-                    coding is incredible. And they never say "no" or "we can't"
+                    coding is incredible. And they never say &quot;no&quot; or &quot;we can&apos;t&quot;
                     to any situation. Actually they are the best guys i have
                     ever work with in my life. Their communication, kindness are
                     so high level. Every step of my project, every progress of
                     my project we need maybe 15 to 20 changes. And every time i
                     wrote those needs to them, they did their work at most 1-2
                     days. Their speed and work quality is amazing ! Final word
-                    to those who wants to hire them: don't think twice !
+                    to those who wants to hire them: don&apos;t think twice !
                     Literally they are the best team in this website. And also
                     their work progress and milestones are literally clear as
                     they said. I am advising them to all of my friends and i
@@ -1067,12 +1067,12 @@ const Page = () => {
               </div>
               <div class="CustomerReviewsClient">
                 <i
-                  ><img
+                  ><Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/purpal-star.png" /></i
                 ><span
                   >Burak Turkey<i class="contry-flag"
-                    ><img
+                    ><Image width={100} height={100}
                       alt="customer-reviews"
                       src="/img/jobboard/turkey-flag.png" /></i
                 ></span>
@@ -1082,7 +1082,7 @@ const Page = () => {
             <div class="CustomerReviewsMainBx">
               <div class="CustomerReviewsBx">
                 <div class="CustomerReviewsBxImg">
-                  <img
+                  <Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/dmitry-img.jpg"
                   />
@@ -1101,12 +1101,12 @@ const Page = () => {
               </div>
               <div class="CustomerReviewsClient">
                 <i
-                  ><img
+                  ><Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/purpal-star.png" /></i
                 ><span
                   >Dmitry Canada<i class="contry-flag"
-                    ><img
+                    ><Image width={100} height={100}
                       alt="customer-reviews"
                       src="/img/jobboard/canada-flag.png" /></i
                 ></span>
@@ -1115,7 +1115,7 @@ const Page = () => {
             <div class="CustomerReviewsMainBx">
               <div class="CustomerReviewsBx">
                 <div class="CustomerReviewsBxImg">
-                  <img
+                  <Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/sherif-img.jpg"
                   />
@@ -1132,12 +1132,12 @@ const Page = () => {
               </div>
               <div class="CustomerReviewsClient">
                 <i
-                  ><img
+                  ><Image width={100} height={100}
                     alt="customer-reviews"
                     src="/img/yiiframework/purpal-star.png" /></i
                 ><span
                   >Sherif A. Dubai<i class="contry-flag"
-                    ><img
+                    ><Image width={100} height={100}
                       alt="customer-reviews"
                       src="/img/jobboard/dubai-flag.png" /></i
                 ></span>
