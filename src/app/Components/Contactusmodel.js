@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Link from "next/link";
-import axios from "axios";
+// import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Image from "next/image";
 
@@ -54,11 +54,11 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
   };
 
   const handleClick = async () => {
-    try {
-      const response = await axios.post(BaseAPI + "/pages/contact", formData);
-    } catch (error) {
-      console.log(error.message);
-    }
+    // try {
+    //   const response = await axios.post(BaseAPI + "/pages/contact", formData);
+    // } catch (error) {
+    //   console.log(error.message);
+    // }
   };
 
   return (

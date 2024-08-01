@@ -178,7 +178,8 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                 width ={450} height={100 / (100/100)}
+                  width={450}
+                  height={100 / (100 / 100)}
                   alt="Rental_Property_Management_Software"
                   src="/img/softwares-banner-img/rental-property-banner-img.png"
                 />
@@ -1340,7 +1341,8 @@ See how it work yourself!"
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Image
-             width ={900} height={100 / (100/100)}
+              width={900}
+              height={100 / (100 / 100)}
               src="/img/rentalproperty/property_rental.jpg"
               alt="icon"
               title=""
@@ -1784,7 +1786,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width ={1075} height={100 / (100/100)}
+                    width={1075}
+                    height={100 / (100 / 100)}
                     src="/img/rentalproperty/property_rental_sript_apartment_list.jpg"
                     alt="List of Apartment"
                   />
@@ -1801,7 +1804,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                   width ={1075} height={100 / (100/100)}
+                    width={1075}
+                    height={100 / (100 / 100)}
                     src="/img/rentalproperty/rental_script_add_apartment.png"
                     alt="Add Apartment"
                   />
@@ -1818,7 +1822,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                   width ={1075} height={100 / (100/100)}
+                    width={1075}
+                    height={100 / (100 / 100)}
                     src="/img/rentalproperty/rental_software_search_apartments.jpg"
                     alt="Search Apartment"
                   />
@@ -1834,7 +1839,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                   width ={1075} height={100 / (100/100)}
+                    width={1075}
+                    height={100 / (100 / 100)}
                     src="/img/rentalproperty/vacation_rental_script_manage_property.png"
                     alt="Manage Properties"
                   />
@@ -1850,7 +1856,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                   width ={1075} height={100 / (100/100)}
+                    width={1075}
+                    height={100 / (100 / 100)}
                     src="/img/rentalproperty/vacation_rental_software_apartment_details.jpg"
                     alt="Apartment Details"
                   />

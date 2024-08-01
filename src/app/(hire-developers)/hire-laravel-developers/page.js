@@ -63,7 +63,7 @@ const Page = () => {
   ];
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section
         style={{}}
         class="hire_developer_back_iin otherhire_developer_back_iin"
@@ -135,38 +135,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><Image   width={300}
-                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div class="hiring-sr">
             <div class="row">
               <div class="col-md-8">
@@ -453,7 +480,11 @@ const Page = () => {
           <div class="row">
             <div class="col-sm-12 col-md-12 text-center">
               <a onClick={toggleModal} className="btn btn-primary">
-                <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} title="Hire Laravel Developer"/>
+                <Contactusmodel
+                  modalStatus={modalOpen}
+                  toggle={toggleModal}
+                  title="Hire Laravel Developer"
+                />
                 Hire Now!
               </a>
             </div>
