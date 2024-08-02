@@ -15,7 +15,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
-import axios from "axios";
+// import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -75,21 +75,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  const getData = async () => {
-    try {
-      const response = await axios.get(
-        BaseAPI + "/product/Details/food-ordering-script"
-      );
-      // console.log(response.data.data)
-      setPageData(response.data.data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  // const getData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       BaseAPI + "/product/Details/food-ordering-script"
+  //     );
+  //     // console.log(response.data.data)
+  //     setPageData(response.data.data);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <>
@@ -1242,7 +1242,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              <h4>
+              {/* <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1251,7 +1251,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike>
+              </strike> */}
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>

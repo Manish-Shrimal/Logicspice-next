@@ -24,7 +24,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
-import axios from "axios";
+// import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -74,21 +74,21 @@ const Page = () => {
   const [adminpanelTab, setAdminpanelTab] = useState(false);
   const [pageData, setPageData] = useState([]);
 
-  const getData = async () => {
-    try {
-      const response = await axios.get(
-        BaseAPI + "/product/Details/fiverr-clone"
-      );
-      // console.log(response.data.data)
-      setPageData(response.data.data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  // const getData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       BaseAPI + "/product/Details/fiverr-clone"
+  //     );
+  //     // console.log(response.data.data)
+  //     setPageData(response.data.data);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
   const handleStudentTab = () => {
     setStudentTab(true);
     setInstructorTab(false);
@@ -1270,7 +1270,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              <h4>
+              {/* <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1279,7 +1279,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike>
+              </strike> */}
 
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>

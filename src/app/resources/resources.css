@@ -1,32 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 body {
-  font-family: "Roboto", sans-serif !important;
-  font-weight: 400;
-  color: #3f3f3f;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: normal;
+	font-family: "Roboto", sans-serif !important;
+	font-weight: 400;
+	color: #3f3f3f;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: normal;
 }
+
 section {
 	float: left;
 	width: 100%;
 	overflow: hidden;
 }
+
 .MainDiscriptionFreescript {
 	padding: 30px 0;
 }
+
 .MainDiscriptionFreescript {
 	text-align: center;
 	padding: 30px 0;
 }
+
 .MainDiscriptionFreescript h1 {
 	position: relative;
 	padding-top: 40px;
 }
+
 .MainDiscriptionFreescript h1::before {
 	font-size: 55px;
 	width: 100%;
 }
+
 .MainDiscriptionFreescript h1 span {
 	position: relative;
 	color: #333333;
@@ -49,6 +56,7 @@ section {
 	opacity: 0.17;
 	content: "Free Scripts";
 }
+
 .FreeScriptsHeader p {
 	color: #464646;
 	font-size: 18px;
@@ -58,47 +66,58 @@ section {
 .FreeScriptProductSection {
 	padding: 40px 0 30px;
 }
+
 .FreeScriptProductSection {
 	padding: 50px 0 30px;
 	background: #f8f8f8;
 }
+
 .FreeScriptProducts {
 	padding: 15px;
 	border-radius: 15px;
 	margin-bottom: 30px;
 }
+
 .FreeScriptProductsBlue {
 	background: #f0eaf9;
 }
+
 .FreeScriptProductsImg {
 	border-radius: 10px;
 	overflow: hidden;
 }
+
 .FreeScriptProductsImg img {
 	width: 100%;
 }
+
 .FreeScriptProductsTxt {
 	padding-top: 20px;
 }
+
 .FreeScriptProductsTxt h2 {
 	color: #333333;
 	font-size: 26px;
 	font-weight: 600;
 	font-family: 'roboto', sans-serif;
 }
+
 .FreeScriptProductsTxt p {
 	color: #464646;
 	/* font-size: 14px; */
 	line-height: 19px;
 	padding-top: 5px;
 }
+
 .FreeScriptProductsMoreBtn {
 	padding-top: 5px;
 }
+
 .FreeScriptProductsMoreBtn a {
 	color: #343231;
 	font-size: 16px;
 }
+
 .FreeScriptProductsMoreBtn a i {
 	background: #451095;
 	width: 25px;
@@ -108,6 +127,7 @@ section {
 	border-radius: 50%;
 	text-align: center;
 }
+
 .FreeScriptProductsBlue {
 	background: #f0eaf9;
 }
@@ -119,33 +139,40 @@ section {
 .UsedTechnologySection {
 	padding: 60px 0;
 }
+
 .title_main {
 	text-align: center;
 	font-size: 25px;
 	margin-bottom: 25px;
 }
+
 .title_main {
 	margin-bottom: 45px;
 	font-weight: 500;
 	font-family: 'roboto', sans-serif;
-    color: #505458;
+	color: #505458;
 }
+
 .title_main span {
 	font-weight: 700;
 }
+
 .UsedTechnologySection h4.title_main {
 	color: #292929;
 	font-size: 34px;
 	font-weight: 500;
 	font-family: 'roboto', sans-serif;
 }
+
 .UsedTechnologySectionDataa {
 	text-align: center;
 }
+
 .UsedTechnologySectionDataa ul {
 	width: 100%;
 	text-align: center;
 }
+
 .UsedTechnologySectionDataa ul li {
 	display: inline-block;
 	width: 17%;
@@ -155,6 +182,7 @@ section {
 	padding: 10px 15px;
 	min-height: 80px;
 }
+
 .UsedTechnologyImg {
 	float: left;
 	width: 70px;
@@ -162,18 +190,21 @@ section {
 	height: 58px;
 	position: relative;
 }
+
 .UsedTechnologyImg img {
 	position: absolute;
 	left: 0;
 	top: 50%;
 	transform: translate(0, -50%);
 }
+
 .UsedTechnologyTxt {
 	overflow: hidden;
 	color: #292929;
 	font-size: 18px;
 	padding-top: 14px;
 }
+
 .iOSUsedTechnology {
 	border: 1px #ada7a7 solid
 }
@@ -205,18 +236,22 @@ section {
 .ApacheUsedTechnology {
 	border: 1px #d62f46 solid
 }
+
 .whatsupport_section {
 	background: #f3f3f3;
 	padding: 80px 0;
 }
+
 .supportsetting ul {
 	text-align: center;
 }
+
 .supportsetting ul li {
 	display: inline-block;
 	padding: 0 20px;
 	vertical-align: top;
 }
+
 .supportsetting_icn {
 	background: #fff;
 	border: 1px solid #d1d1d1;
@@ -226,6 +261,7 @@ section {
 	position: relative;
 	width: 108px;
 }
+
 .supportsetting_icn img {
 	bottom: 0;
 	left: 0;
@@ -234,20 +270,24 @@ section {
 	right: 0;
 	top: 0;
 }
+
 .supportsettingtext {
 	display: block;
 	font-size: 18px;
 	margin-top: 10px;
 }
+
 .CustomerReviewsSections {
 	background: url(/img/yiiframework/review-bg.jpg) no-repeat center top;
 	padding: 50px 0;
 	background-size: cover;
 }
+
 .CustomerReviewsSections {
 	padding: 50px 0;
 	background-size: cover;
 }
+
 .CustomerReviewsImg {
 	display: inline-block;
 	width: 100%;
@@ -258,10 +298,12 @@ section {
 	overflow: hidden;
 	height: 626px;
 }
+
 .CustomerReviewsImg img {
 	height: 100%;
 	width: 100%;
 }
+
 .CustomerReviews {
 	float: right;
 	width: 100%;
@@ -270,6 +312,7 @@ section {
 	border-radius: 17px;
 	border: 3px #fff solid;
 }
+
 .CustomerReviews h2 {
 	color: #292929;
 	font-size: 36px;
@@ -277,16 +320,19 @@ section {
 	font-family: 'roboto', sans-serif;
 	font-weight: 600;
 }
+
 .CustomerReviewsMainBx {
 	display: inline-block;
 	width: 100%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
 .CustomerReviewsBx {
 	display: inline-block;
 	width: 100%;
 }
+
 .CustomerReviewsBx {
 	background: #fff;
 	padding: 20px;
@@ -296,6 +342,7 @@ section {
 	position: relative;
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
 }
+
 .CustomerReviewsBx::before {
 	position: absolute;
 	right: 35px;
@@ -305,6 +352,7 @@ section {
 	border-right: 11px transparent solid;
 	border-top: 33px #fff solid;
 }
+
 .CustomerReviewsClient {
 	text-align: right;
 	padding: 8px 60px 0 0;
@@ -312,20 +360,24 @@ section {
 	font-size: 15px;
 	font-weight: 500;
 }
+
 .CustomerReviewsClient i {
 	display: inline-block;
 	margin: 0 6px;
 	vertical-align: top;
 }
+
 .CustomerReviewsClient span {
 	display: inline-block;
 	vertical-align: middle;
 }
+
 .CustomerReviewsClient i {
 	display: inline-block;
 	margin: 0 6px;
 	vertical-align: top;
 }
+
 .CustomerReviewsClient i.contry-flag {
 	width: 25px;
 }
