@@ -23,7 +23,12 @@ h5,
 h6 {
   font-family: "lato", sans-serif;
 }
-
+a{
+  text-decoration: none !important;
+}
+h1, h2, h3, h4, h5, h6, ol, li, ul, a, img, p, span, strong{ padding: 0px; margin: 0px;}
+a:hover,a:focus{ outline: none; text-decoration: none}
+*{ padding: 0; margin: 0; box-sizing: border-box}
 /* @font-face {
 	font-family: 'interregular';
 	src: url('/fonts/inter-regular-webfont.woff2') format('woff2'),

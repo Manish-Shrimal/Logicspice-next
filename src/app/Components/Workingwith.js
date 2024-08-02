@@ -23,13 +23,13 @@ const Workingwith = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/img/images/look/iwork-logo.webp"
-                data-original="https://www.logicspice.com/img/images/look/iwork-logo.webp"
+                src="/img/home/look/iwork-logo.webp"
+                data-original="/img/home/look/iwork-logo.webp"
                 class="lazy"
                 alt="client project logo - logicspice"
                 style={{
                   backgroundImage:
-                    "url(&quot;https://www.logicspice.com/img/images/look/iwork-logo.webp&quot;)",
+                    "url(&quot;/img/home/look/iwork-logo.webp&quot;)",
                 }}
               />
             </a>
@@ -39,13 +39,13 @@ const Workingwith = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/img/images/look/iwork-logo.webp"
-                data-original="https://www.logicspice.com/img/images/look/iwork-logo.webp"
+                src="/img/home/look/iwork-logo.webp"
+                data-original="/img/home/look/iwork-logo.webp"
                 class="lazy"
                 alt="client project logo - logicspice"
                 style={{
                   backgroundImage:
-                    "url(&quot;https://www.logicspice.com/img/images/look/iwork-logo.webp&quot;)",
+                    "url(&quot;/img/home/look/iwork-logo.webp&quot;)",
                 }}
               />
             </a>
@@ -55,13 +55,13 @@ const Workingwith = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/img/images/look/iwork-logo.webp"
-                data-original="https://www.logicspice.com/img/images/look/iwork-logo.webp"
+                src="/img/home/look/iwork-logo.webp"
+                data-original="/img/home/look/iwork-logo.webp"
                 class="lazy"
                 alt="client project logo - logicspice"
                 style={{
                   backgroundImage:
-                    "url(&quot;https://www.logicspice.com/img/images/look/iwork-logo.webp&quot;)",
+                    "url(&quot;/img/home/look/iwork-logo.webp&quot;)",
                 }}
               />
             </a>
@@ -71,13 +71,13 @@ const Workingwith = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/img/images/look/iwork-logo.webp"
-                data-original="https://www.logicspice.com/img/images/look/iwork-logo.webp"
+                src="/img/home/look/iwork-logo.webp"
+                data-original="/img/home/look/iwork-logo.webp"
                 class="lazy"
                 alt="client project logo - logicspice"
                 style={{
                   backgroundImage:
-                    "url(&quot;https://www.logicspice.com/img/images/look/iwork-logo.webp&quot;)",
+                    "url(&quot;/img/home/look/iwork-logo.webp&quot;)",
                 }}
               />
             </a>

@@ -37,7 +37,7 @@ height={100 / (100 /100)}  src="https://www.logicspice.com/app/webroot/files/blo
                 <Image
                   width={500}
                   height={100 / (100 / 100)}
-                  src="https://www.logicspice.com/app/webroot/files/blogs/thumb/be5ea_Best-PHP-Frameworks.jpg"
+                  src="/img/home/blog/AI-Software-Development.jpg"
                   class="lazy"
                   alt="10 Best PHP Frameworks for Web Developers"
                 />{" "}
@@ -60,7 +60,7 @@ height={100 / (100 /100)}  src="https://www.logicspice.com/app/webroot/files/blo
                   <Image
                     width={500}
                     height={100 / (100 / 100)}
-                    src="https://www.logicspice.com/app/webroot/files/blogs/thumb/759ba_AI-Software-Development.jpg"
+                    src="/img/home/blog/AI-Software-Development.jpg"
                     class="lazy"
                     alt="AI Integration in Software Development: From Theory to Real-World Applications"
                   />{" "}
@@ -105,7 +105,7 @@ height={100 / (100 /100)}  src="https://www.logicspice.com/app/webroot/files/blo
                 <Image
                   width={500}
                   height={100 / (100 / 100)}
-                  src="https://www.logicspice.com/app/webroot/files/blogs/thumb/759ba_AI-Software-Development.jpg"
+                  src="/img/home/blog/AI-Software-Development.jpg"
                   class="lazy"
                   alt="AI Integration in Software Development: From Theory to Real-World Applications"
                 />{" "}
@@ -127,7 +127,7 @@ height={100 / (100 /100)}  src="https://www.logicspice.com/app/webroot/files/blo
                 <Image
                   width={500}
                   height={100 / (100 / 100)}
-                  src="https://www.logicspice.com/app/webroot/files/blogs/thumb/759ba_AI-Software-Development.jpg"
+                  src="/img/home/blog/AI-Software-Development.jpg"
                   class="lazy"
                   alt="AI Integration in Software Development: From Theory to Real-World Applications"
                 />{" "}
@@ -149,7 +149,7 @@ height={100 / (100 /100)}  src="https://www.logicspice.com/app/webroot/files/blo
                 <Image
                   width={500}
                   height={100 / (100 / 100)}
-                  src="https://www.logicspice.com/app/webroot/files/blogs/thumb/759ba_AI-Software-Development.jpg"
+                  src="/img/home/blog/AI-Software-Development.jpg"
                   class="lazy"
                   alt="AI Integration in Software Development: From Theory to Real-World Applications"
                 />{" "}

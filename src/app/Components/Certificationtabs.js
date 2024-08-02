@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,13 +18,15 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Certifications" ? "active" : ""}
           onClick={() => handleTabClick("Certifications")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
           <a aria-controls="home" role="tab" data-toggle="tab">
             <span className="cer-icon">
-              <Image width={25} height={100}
+              <Image
+                width={25}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/certification_icon.webp"
+                src="/img/home/certificates/certification_icon.webp"
                 alt="certification_icon"
               />
             </span>{" "}
@@ -37,13 +37,15 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Achievements" ? "active" : ""}
           onClick={() => handleTabClick("Achievements")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
           <a aria-controls="profile" role="tab" data-toggle="tab">
             <span className="cer-icon">
-              <Image width={25} height={100}
+              <Image
+                width={25}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/achivements_icon.webp"
+                src="/img/home/certificates/achivements_icon.webp"
                 alt="achivements_icon"
               />
             </span>{" "}
@@ -54,13 +56,15 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Affiliates" ? "active" : ""}
           onClick={() => handleTabClick("Affiliates")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
           <a aria-controls="messages" role="tab" data-toggle="tab">
             <span className="cer-icon">
-              <Image width={25} height={100}
+              <Image
+                width={25}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/affiliates_icon.webp"
+                src="/img/home/certificates/affiliates_icon.webp"
                 alt="affiliates_icon"
               />
             </span>{" "}
@@ -69,118 +73,162 @@ const Certificationtabs = () => {
         </li>
       </ul>
       <div className="tab-content">
-        <div role="tabpanel" className={`tab-pane ${activeTab === "Certifications" ? "active" : ""}`} id="Certifications">
+        <div
+          role="tabpanel"
+          className={`tab-pane ${
+            activeTab === "Certifications" ? "active" : ""
+          }`}
+          id="Certifications"
+        >
           <ul>
             <li>
-              <Image width={130} height={100}
+              <Image
+                width={130}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/iso_logo.webp"
+                src="/img/home/certificates/iso_logo.webp"
                 alt="iOS app development"
               />
             </li>
             <li>
-              <Image width={210} height={100}
+              <Image
+                width={210}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/freelancertopten.webp"
+                src="/img/home/certificates/freelancertopten.webp"
                 alt="freelancer web and app development"
               />
             </li>
             <li>
-              <Image width={150} height={100}
+              <Image
+                width={150}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/nasscom.webp"
+                src="/img/home/certificates/nasscom.webp"
                 alt="web and app development certification"
               />
             </li>
             <li>
-              <Image width={210} height={100}
+              <Image
+                width={210}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/applancer.webp"
+                src="/img/home/certificates/applancer.webp"
                 alt="applancer certification"
               />
             </li>
             <li>
-              <Image width={150} height={100}
+              <Image
+                width={150}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/goodFirms.webp"
+                src="/img/home/certificates/goodFirms.webp"
                 alt="Good Firms certification"
               />
             </li>
             <li>
-              <Image width={210} height={100}
+              <Image
+                width={210}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/extract.webp"
+                src="/img/home/certificates/extract.webp"
                 alt="Extract certification"
               />
             </li>
             <li>
-              <Image width={120} height={100}
+              <Image
+                width={120}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/appfutura.webp"
+                src="/img/home/certificates/appfutura.webp"
                 alt="appfutura certification"
               />
             </li>
             <li>
-              <Image width={120} height={100}
+              <Image
+                width={120}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/TAC-iphone.webp"
+                src="/img/home/certificates/TAC-iphone.webp"
                 alt="topappcreators certification - logicspice"
               />
             </li>
           </ul>
         </div>
-        <div role="tabpanel" className={`tab-pane ${activeTab === "Achievements" ? "active" : ""}`} id="Achievements">
+        <div
+          role="tabpanel"
+          className={`tab-pane ${activeTab === "Achievements" ? "active" : ""}`}
+          id="Achievements"
+        >
           <ul>
             <li>
-              <Image width={160} height={100}
+              <Image
+                width={160}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/winner.webp"
+                src="/img/home/certificates/winner.webp"
                 alt="web and app development"
               />
             </li>
             <li>
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/bestwebdesign.webp"
+                src="/img/home/certificates/bestwebdesign.webp"
                 alt="web and app development"
               />
             </li>
             <li>
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/clutch_logo.webp"
+                src="/img/home/certificates/clutch_logo.webp"
                 alt="website and app development company profile - clutch"
               />
             </li>
             <li>
-              <Image width={210} height={100}
+              <Image
+                width={210}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/siliconindia.webp"
+                src="/img/home/certificates/siliconindia.webp"
                 alt="logicspice profile siliconindia"
               />
             </li>
           </ul>
         </div>
-        <div role="tabpanel" className={`tab-pane ${activeTab === "Affiliates" ? "active" : ""}`} id="Affiliates">
+        <div
+          role="tabpanel"
+          className={`tab-pane ${activeTab === "Affiliates" ? "active" : ""}`}
+          id="Affiliates"
+        >
           <ul>
             <li>
-              <Image width={210} height={100}
+              <Image
+                width={210}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/iwdro_logo.webp"
+                src="/img/home/certificates/iwdro_logo.webp"
                 alt="website and app development"
               />
             </li>
             <li>
-              <Image width={120} height={100}
+              <Image
+                width={120}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/yellow-pages-logi.webp"
+                src="/img/home/certificates/yellow-pages-logi.webp"
                 alt="web and app development"
               />
             </li>
             <li>
-              <Image width={210} height={100}
+              <Image
+                width={210}
+                height={100}
                 className="lazy"
-                src="https://www.logicspice.com/img/images/logos/microsoftachivement.webp"
+                src="/img/home/certificates/microsoftachivement.webp"
                 alt="web and app development"
               />
             </li>
@@ -192,4 +240,3 @@ const Certificationtabs = () => {
 };
 
 export default Certificationtabs;
-

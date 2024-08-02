@@ -31,7 +31,7 @@ const Lsclassified = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/app/webroot/img/images/classifier/Advanced_Filters.jpg"
+                src="/img/classifier/Advanced_Filters.jpg"
                 alt="Advanced Filters"
               />
             </div>
@@ -44,7 +44,7 @@ const Lsclassified = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/app/webroot/img/images/classifier/Classifieds_Management.jpg"
+                src="/img/classifier/Classifieds_Management.jpg"
                 alt="Classifieds Management"
               />
             </div>
@@ -57,7 +57,7 @@ const Lsclassified = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/app/webroot/img/images/classifier/Post_Classfied.jpg"
+                src="/img/classifier/Post_Classfied.jpg"
                 alt="Post Classified"
               />
             </div>
@@ -70,7 +70,7 @@ const Lsclassified = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/app/webroot/img/images/classifier/Multiple_Picture_Upload.jpg"
+                src="/img/classifier/Multiple_Picture_Upload.jpg"
                 alt="Multiple Picture Upload"
               />
             </div>
@@ -83,7 +83,7 @@ const Lsclassified = () => {
               <Image
                 width={100}
                 height={100}
-                src="https://www.logicspice.com/app/webroot/img/images/classifier/Location_Based.jpg"
+                src="/img/classifier/Location_Based.jpg"
                 alt="Location Based"
               />
             </div>

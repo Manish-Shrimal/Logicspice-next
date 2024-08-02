@@ -21,18 +21,22 @@ const Looksilder = () => {
       <Slider {...settings}>
         <div class="row d-flex align-items-center">
           <div class="col-md-6">
-            <Image  width={500} height ={100 / (100/100)}
+            <Image
+              width={500}
+              height={100 / (100 / 100)}
               data-aos="fade-right"
               class="Zibjob aos-init aos-animate"
-              src="https://www.logicspice.com/img/images/look/Zibzob.webp"
+              src="/img/home/look/Zibzob.webp"
               alt="Zibjob"
             />
           </div>
 
           <div class="col-md-6">
             <div class="ClientLogoHome">
-              <Image  width={200} height ={100 / (100/100)}
-                src="https://www.logicspice.com/img/images/look/zip-joblogo.webp"
+              <Image
+                width={200}
+                height={100 / (100 / 100)}
+                src="/img/home/look/zip-joblogo.webp"
                 data-original=""
                 alt="Zibzob"
               />
@@ -63,18 +67,22 @@ const Looksilder = () => {
         </div>
         <div class="row d-flex align-items-center">
           <div class="col-md-6">
-            <Image  width={500} height ={100 / (100/100)}
+            <Image
+              width={500}
+              height={100 / (100 / 100)}
               data-aos="fade-right"
               class="Zibjob aos-init aos-animate"
-              src="https://www.logicspice.com/img/images/look/Zibzob.webp"
+              src="/img/home/look/Zibzob.webp"
               alt="Zibjob"
             />
           </div>
 
           <div class="col-md-6">
             <div class="ClientLogoHome">
-              <Image  width={200} height ={100 / (100/100)}
-                src="https://www.logicspice.com/img/images/look/zip-joblogo.webp"
+              <Image
+                width={200}
+                height={100 / (100 / 100)}
+                src="/img/home/look/zip-joblogo.webp"
                 data-original=""
                 alt="Zibzob"
               />
