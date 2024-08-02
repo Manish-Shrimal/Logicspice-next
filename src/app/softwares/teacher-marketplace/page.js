@@ -16,7 +16,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-import axios from "axios";
+// import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
