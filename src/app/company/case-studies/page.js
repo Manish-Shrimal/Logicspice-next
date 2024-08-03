@@ -4,7 +4,7 @@ import NavBar from "@/app/Components/Navbar";
 import "@/app/company/company.css";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Blogslider from "../../Components/Blogslider";
 import Ourclient from "../../Components/Ourclient";
 import axios from "axios";
