@@ -1203,7 +1203,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1212,7 +1212,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
