@@ -24,7 +24,7 @@ const Page = () => {
 
   useEffect(() => {
     getData();
-  }, [third])
+  }, [])
   
   return (
     <>
