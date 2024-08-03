@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Link from "next/link";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Image from "next/image";
 
@@ -14,7 +14,9 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
     email: "",
     phone_no: "",
     message: "",
-    // post_url: window.location.pathname,
+    post_url: "https://lswebsitedemo.logicspice.com/fiverr-clone",
+
+
   });
   const [resultSuccess, setResultSuccess] = useState(false);
   const [errors, setErrors] = useState({
@@ -54,11 +56,14 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
   };
 
   const handleClick = async () => {
-    // try {
-    //   const response = await axios.post(BaseAPI + "/pages/contact", formData);
-    // } catch (error) {
-    //   console.log(error.message);
-    // }
+    try {
+      const response = await axios.post(BaseAPI + "/pages/contact", formData);
+      if(response.data.status === 200) {
+        setResultSuccess(true);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -98,7 +103,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/app/webroot/img/images/contact-img.png"
+                              src="/img/contactus/contact-img.png"
                               alt=""
                             />
                           </span>
@@ -122,7 +127,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 <Image
                                   width={30}
                                   height={100}
-                                  src="https://www.logicspice.com/app/webroot/img/images/con-user.png"
+                                  src="/img/contactus/con-user.png"
                                   alt=""
                                 />
                               </span>
@@ -146,7 +151,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 <Image
                                   width={30}
                                   height={100}
-                                  src="https://www.logicspice.com/app/webroot/img/images/con-email.png"
+                                  src="/img/contactus/con-email.png"
                                   alt=""
                                 />
                               </span>
@@ -168,7 +173,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 <Image
                                   width={30}
                                   height={100}
-                                  src="https://www.logicspice.com/app/webroot/img/images/con-phone.png"
+                                  src="/img/contactus/con-phone.png"
                                   alt=""
                                 />
                               </span>
@@ -190,7 +195,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 <Image
                                   width={30}
                                   height={100}
-                                  src="https://www.logicspice.com/app/webroot/img/images/con-massege.png"
+                                  src="/img/contactus/con-massege.png"
                                   alt=""
                                 />
                               </span>
@@ -292,12 +297,12 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 >
                                   OK
                                 </a>
-                                <div className="ftt_lon">
+                                <div className="ftt_lon d-flex justify-content-center">
                                   <a href="/" className="">
                                     <Image
-                                      width={100}
-                                      height={100}
-                                      src="./assets/img/logo.png"
+                                      width={250}
+                                      height={100 / (100 / 100)}
+                                      src="/img/logo.png"
                                       alt=""
                                     />
                                   </a>
@@ -319,7 +324,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <Image
                             width={100}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/logic-mail.png"
+                            src="/img/contactus/logic-mail.png"
                             alt=""
                           />{" "}
                           info@logicspice.com
@@ -333,7 +338,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <Image
                             width={100}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/logic-skyap.png"
+                            src="/img/contactus/logic-skyap.png"
                             alt=""
                           />{" "}
                           logicspice
@@ -347,7 +352,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <Image
                             width={30}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/count/usa.png"
+                            src="/img/globalpages/usa.png"
                             alt=""
                           />
                         </i>
@@ -358,7 +363,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <Image
                             width={30}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/count/UK.png"
+                            src="/img/globalpages/UK.png"
                             alt=""
                           />
                         </i>
@@ -369,7 +374,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                           <Image
                             width={30}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/count/india.png"
+                            src="/img/contactus/india_flag.png"
                             alt=""
                           />
                         </i>

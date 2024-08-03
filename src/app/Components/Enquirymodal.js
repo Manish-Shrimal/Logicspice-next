@@ -76,14 +76,15 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
             <Image
               width={30}
               height={100}
-              src="https://www.logicspice.com/app/webroot/img/images/close-img.png"
+              src="/img/contactus/close-img.png"
               alt="logo"
             />
           </button>
           <div className="logo-enqury">
             <Link href="/">
               <Image
-               width={250} height={100 / (100 / 100)}
+                width={250}
+                height={100 / (100 / 100)}
                 src="/img/logo-white.png"
                 alt="Mobile App & Web Development Company - Logicspice"
               />
@@ -296,7 +297,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                       <Image
                         width={400}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/ls_award_img.png"
+                        src="/img/contactus/ls_award_img.png"
                         alt="logo"
                       />
                     </div>
@@ -306,7 +307,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/google-reting.png"
+                        src="/img/contactus/google-reting.png"
                         alt="logo"
                       />
                     </div>

@@ -4,11 +4,28 @@ import NavBar from "@/app/Components/Navbar";
 import "@/app/company/company.css";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Blogslider from "../../Components/Blogslider";
 import Ourclient from "../../Components/Ourclient";
-
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
+
+  const [pageData, setPageData] = useState([]);
+
+  const getData = async () => {
+    try{
+      const response = await axios.post(BaseAPI + "/casestudies");
+      setPageData(response.data.data);
+    } catch(error) {
+      console.log(error.message);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, [third])
+  
   return (
     <>
       <NavBar />

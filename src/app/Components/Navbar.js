@@ -765,7 +765,7 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/fleg_icon2.png"
+                              src="/img/footer/fleg_icon2.png"
                               alt="Logicspice Contact No. - USA"
                             />
                             <a href="tel:+1-616-929-4064">+1-616-929-4064</a>
@@ -774,7 +774,7 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/fleg_icon1.png"
+                              src="/img/footer/fleg_icon1.png"
                               alt="Logicspice Contact No. - UK"
                             />
                             <a href="tel:+44782-404-8483">+44782-404-8483</a>
@@ -783,7 +783,7 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/fleg_icon3.png"
+                              src="/img/footer/fleg_icon3.png"
                               alt="Logicspice Contact No. - India"
                             />
                             <a href="tel:+91-9829559922">+91-9829559922</a>
@@ -792,7 +792,7 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/skya_icon.png"
+                              src="/img/footer/skya_icon.png"
                               alt="Logicspice Contact - Skype"
                             />
                             <span>logicspice</span>
@@ -801,14 +801,14 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/count/mail.png"
+                              src="/img/footer/mail.png"
                               alt="Logicspice Contact - Email"
                             />
                             <span>
                               <Image
                                 width={100}
                                 height={100}
-                                src="https://www.logicspice.com/img/images/count/logicspice-mail.svg"
+                                src="/img/footer/logicspice-mail.svg"
                                 alt="Logicspice Contact - Email"
                               />
                             </span>
@@ -828,7 +828,7 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/fleg_icon3.png"
+                              src="/img/footer/fleg_icon3.png"
                               alt="Logicspice Contact No. - India"
                             />{" "}
                             <a href="tel:+91-7727974242">+91-7727974242</a>
@@ -837,7 +837,7 @@ const NavBar = () => {
                             <Image
                               width={100}
                               height={100}
-                              src="https://www.logicspice.com/img/images/count/mail.png"
+                              src="/img/footer/mail.png"
                               alt="Logicspice Contact - Email"
                             />{" "}
                             <span> hr@logicspice.com </span>
