@@ -141,6 +141,10 @@ left: 190px;
   padding: 40px 0;
   width: 100%;
 }
+.menu-item {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
 
 .menu-item li a {
   color: #fff;
