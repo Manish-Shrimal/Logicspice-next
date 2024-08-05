@@ -12,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "A Custom Mobile App & Software Development Company - Logicspice",
   description: "A Custom Mobile App & Software Development Company",
+  // Image: "/",
 };
 
 export default function RootLayout({ children }) {

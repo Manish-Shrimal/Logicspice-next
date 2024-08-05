@@ -129,7 +129,7 @@ const Page = () => {
             <p>
               Join us at a social event of Logicspice to save our environment
               and try to make this world an eco friendly. Get inspired, kick
-              around some ideas, or just have some fun. We'd love to connect
+              around some ideas, or just have some fun. We&apos;d love to connect
               with you and to serve our community together.
             </p>
           </div>
@@ -142,7 +142,7 @@ const Page = () => {
                 <p>
                   <span class="pro_bold">Go Green ideas:</span>
                   Go green ideas are good for the Business and good for the
-                  environment. It doesn't mean to spend a lots of money, In Fact
+                  environment. It doesn&apos;t mean to spend a lots of money, In Fact
                   using effective go green ideas can actually save the money.
                   Logicspice periodically conduct the social activities to alert
                   the society and the employees about social responsibility
@@ -161,7 +161,7 @@ const Page = () => {
                   you build for your employees. When employees and management
                   feels that they are working for a company that has a true
                   conscience then they will likely be more enthusiastic and
-                  engaged in the company's social activities.
+                  engaged in the company&apos;s social activities.
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ const Page = () => {
                   Blood donation is one of the most noble work and significant
                   contribution to the society and a great help to the community.
                   Logicspice always look forward to organize the blood camps to
-                  motivate it's team and to aware about social responsibility
+                  motivate it&apos;s team and to aware about social responsibility
                   towards the society and humanity.
                 </p>
               </div>

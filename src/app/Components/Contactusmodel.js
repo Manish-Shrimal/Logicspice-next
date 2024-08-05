@@ -5,8 +5,13 @@ import Link from "next/link";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Image from "next/image";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contactusmodel = ({ modalStatus, toggle }) => {
+
+  let recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
+
+  console.log(recaptchaKey);
   const [popupScProductContacts, setPopupScProductContacts] =
     useState(modalStatus);
   const [formData, setFormData] = useState({
@@ -213,12 +218,13 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                               {errors.messageerror}
                             </div>
                           </div>
-                          <div className="form-group">
+                          <div className="form-group buttonSubmit">
                             <div className="form-group-google">
-                              <div
+                              <ReCAPTCHA key={recaptchaKey} sitekey={recaptchaKey} />
+                              {/* <div
                                 id="recaptchaContact"
                                 className="g-recaptcha"
-                              ></div>
+                              ></div> */}
                               <div className="gcpc" id="captcha_msg">
                                 {errors.reacptchaerror}
                               </div>

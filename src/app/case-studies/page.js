@@ -56,7 +56,7 @@ const Page = () => {
       <section class="breadcrems_header_new">
         <div class="container">
           <h1>Case Studies</h1>
-          <ol class="breadcrumb">
+          <ol class="breadcrumb casestudiesBreadcrumb">
             <li>
               <a href="/">Home</a>
             </li>

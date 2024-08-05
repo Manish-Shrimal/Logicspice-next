@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Slidersimple = () => {
   var settings = {
@@ -59,15 +60,15 @@ const Slidersimple = () => {
                     <br />
                     1800+ projects | 18+ years | 60% repeat clients
                   </p>
-                  <a href="/portfolio" class="btn btn-primary bt34">
+                  <Link href="/portfolio" class="btn btn-primary bt34">
                     PORTFOLIO
-                  </a>{" "}
-                  <a
-                    href="/softwares/hire-developers"
+                  </Link>{" "}
+                  <Link
+                    href="/services/hire-developers"
                     class="btn btn-default bt234"
                   >
                     HIRE A DEVELOPER
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -116,9 +117,9 @@ const Slidersimple = () => {
                     Groupon Clone <span>Script</span>
                   </h2>
                   <p>Similar to Daily Deal Software &amp; Coupon Script</p>
-                  <a class="btn btn-primary" href="/softwares/groupon-clone">
+                  <Link class="btn btn-primary" href="/softwares/groupon-clone">
                     KNOW MORE
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -175,9 +176,9 @@ const Slidersimple = () => {
                     Fiverr Clone <span>Script</span>
                   </h2>
                   <p>Online Micro Job Portal Software and Mobile Apps</p>
-                  <a class="btn btn-primary" href="/softwares/fiverr-clone">
+                  <Link class="btn btn-primary" href="/softwares/fiverr-clone">
                     KNOW MORE
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -246,12 +247,12 @@ const Slidersimple = () => {
                     <p>
                       Freelance Marketplace software &amp; Upwork clone script
                     </p>
-                    <a
+                    <Link
                       class="btn btn-primary"
                       href="/softwares/freelancer-clone"
                     >
                       KNOW MORE
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -298,12 +299,12 @@ const Slidersimple = () => {
                       Logicspice offers Laravel Web development services for any
                       kind of enterprise.{" "}
                     </p>
-                    <a
+                    <Link
                       class="btn btn-primary"
                       href="/softwares/laravel-development"
                     >
                       KNOW MORE
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -346,12 +347,12 @@ const Slidersimple = () => {
                       PHP Classified Ads <span>Script</span>
                     </h2>
                     <p>Empower Your Ads, Expand Your Reach</p>
-                    <a
+                    <Link
                       class="btn btn-primary"
                       href="/softwares/classified-ads-script"
                     >
                       KNOW MORE
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

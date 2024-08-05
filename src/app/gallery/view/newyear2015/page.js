@@ -1,11 +1,156 @@
-import React from 'react'
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const Page = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+    <NavBar />
+      <section class="resources-header">
+        <div class="container">
+          <span>
+            <span>New Year Celebration</span>
+          </span>
+        </div>
+      </section>
 
-export default Page
+      <section class="breadcrems_header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>New Year Celebration </h1>
+            </div>
+            <div class="col-md-6">
+              <ol class="breadcrumb">
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                /
+                <li>
+                  <Link href="/gallery">Gallery</Link>
+                </li>
+                /
+                <li class="current">
+                  <span id="title_here">
+                    New Year Celebration ( <span>December 31,2015</span> )
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content_area content_area_gallery">
+        <div class="container">
+          <div id="content" class="site-content afclr" role="main">
+            <div
+              id="gallery-1"
+              class="gallery galleryid-2301 gallery-columns-5 gallery-size-thumbnail"
+            >
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                  <figure class="gallery-item">
+                    <div class="gallery-icon landscape">
+                      <Link
+                        href="/img/newyear/DSC02129.jpg"
+                        data-lightbox="images"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/newyear/DSC02129.jpg"
+                          alt="Logicspice functions &amp; events"
+                          class="attachment-thumbnail size-thumbnail"
+                        />
+                      </Link>
+                    </div>
+                  </figure>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                  <figure class="gallery-item">
+                    <div class="gallery-icon landscape">
+                      <Link
+                        href="/img/newyear/DSC02157.jpg"
+                        data-lightbox="images"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/newyear/DSC02157.jpg"
+                          alt="Logicspice functions &amp; events"
+                          class="attachment-thumbnail size-thumbnail"
+                        />
+                      </Link>
+                    </div>
+                  </figure>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                  <figure class="gallery-item">
+                    <div class="gallery-icon landscape">
+                      <Link
+                        href="/img/newyear/DSC02179.jpg"
+                        data-lightbox="images"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/newyear/DSC02179.jpg"
+                          alt="Logicspice functions &amp; events"
+                          class="attachment-thumbnail size-thumbnail"
+                        />
+                      </Link>
+                    </div>
+                  </figure>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                  <figure class="gallery-item">
+                    <div class="gallery-icon landscape">
+                      <Link
+                        href="/img/newyear/DSC02186.jpg"
+                        data-lightbox="images"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/newyear/DSC02186.jpg"
+                          alt="Logicspice functions &amp; events"
+                          class="attachment-thumbnail size-thumbnail"
+                        />
+                      </Link>
+                    </div>
+                  </figure>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                  <figure class="gallery-item">
+                    <div class="gallery-icon landscape">
+                      <Link
+                        href="/img/newyear/IMG_5418.jpg"
+                        data-lightbox="images"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/newyear/IMG_5418.jpg"
+                          alt="Logicspice functions &amp; events"
+                          class="attachment-thumbnail size-thumbnail"
+                        />
+                      </Link>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="navigation"></div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default Page;

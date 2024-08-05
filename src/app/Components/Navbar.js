@@ -107,7 +107,7 @@ const NavBar = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link href="/company/case-studies">
+                            <Link href="/case-studies">
                               <span class="hover_btn_menu ">
                                 <i class="menu_icon_all icon_case_study"></i>{" "}
                               </span>
@@ -123,7 +123,7 @@ const NavBar = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link href="">
+                            <Link href="https://blog.logicspice.com/">
                               <span class="hover_btn_menu ">
                                 <i class="menu_icon_all icon_blog"></i>
                               </span>
@@ -736,7 +736,7 @@ const NavBar = () => {
                 </div>
               </li>
               <li>
-                <Link href="">blog</Link>
+                <Link href="https://blog.logicspice.com/">blog</Link>
               </li>
             </ul>
 

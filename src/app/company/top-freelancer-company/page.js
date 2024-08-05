@@ -127,7 +127,7 @@ const Page = () => {
                         parties. In this way, executing operations with
                         freelancer becomes easy and hassle free. Also, define
                         the IP rights and the deliverables of the freelancer so
-                        that after completing the task, such issues don't arise.
+                        that after completing the task, such issues don&apos;t arise.
                       </p>
                       <p>
                         So, in order to hire a competent freelancer you can

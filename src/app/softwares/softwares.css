@@ -296,6 +296,7 @@ body {
   float: left;
   margin-top: 30px;
   margin-left: 0px;
+  padding-left: 0px;
 }
 .job-pr-icon li {
   color: #fff;
@@ -464,6 +465,8 @@ section {
 .tab_bbx_job ul,
 .taxt_tt_job {
   display: inline-block;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 .tatxt_txt_job {
   padding: 40px 0 20px;
@@ -1090,6 +1093,8 @@ section {
 }
 .used_technology_section_dataa ul {
   text-align: center;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 .used_technology_section_dataa ul li {
   display: inline-block;

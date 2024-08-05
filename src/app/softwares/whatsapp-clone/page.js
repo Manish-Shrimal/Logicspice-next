@@ -18,6 +18,7 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Head from "next/head"; // Import the Head component
 const Page = () => {
   var settings = {
     dots: true,
@@ -84,8 +85,10 @@ const Page = () => {
     getData();
   }, []);
 
+
   return (
     <>
+     
       <NavBar />
       <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg whatsapp-clone-new">
         <div className="container">
@@ -117,7 +120,11 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className="btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -167,8 +174,8 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={380}
+                  height={100 / (100 / 100)}
                   alt="WhatsApp Clone"
                   src="/img/softwares-banner-img/whatsapp-banner-img.png"
                 />
@@ -269,7 +276,7 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
                           <Image
-                            width={100}
+                            width={300}
                             height={100}
                             src="/img/whatsappclone/whatsapp_user.png"
                             alt="Seller App Features"
@@ -520,8 +527,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/whatsappclone/whatsapp_deshboard.png"
                             alt="Admin Panel"
                           />
@@ -905,7 +912,7 @@ See how it work yourself!"
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
-                    width={100}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1213,7 +1220,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
@@ -1224,7 +1231,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/nodejs_icon.png"
                         alt="Node.js"
@@ -1236,7 +1243,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1247,7 +1254,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1258,7 +1265,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1269,7 +1276,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="IOS"
@@ -1281,7 +1288,7 @@ See how it work yourself!"
                   <li>
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
@@ -1335,7 +1342,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1346,7 +1353,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1357,7 +1364,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1368,7 +1375,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1512,7 +1519,7 @@ See how it work yourself!"
                       <span id="client-name">John, USA</span>{" "}
                       <span>
                         <Image
-                          width={100}
+                          width={25}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
@@ -1539,7 +1546,7 @@ See how it work yourself!"
                       D. Smith, Germany{" "}
                       <span>
                         <Image
-                          width={100}
+                          width={25}
                           height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in USA"
@@ -1566,7 +1573,7 @@ See how it work yourself!"
                       Mike wilshon, AUS{" "}
                       <span>
                         <Image
-                          width={100}
+                          width={25}
                           height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
@@ -1646,8 +1653,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/whatsappclone/whatsapp-clone.png"
                     alt="Ls Chat"
                   />
@@ -1659,8 +1666,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/whatsappclone/chat-login.png"
                     alt="Chat Login"
                   />
@@ -1672,8 +1679,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/whatsappclone/edit-profile.png"
                     alt="Edit Profile"
                   />
@@ -1685,8 +1692,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/whatsappclone/message.png"
                     alt="Message"
                   />
@@ -1724,13 +1731,13 @@ See how it work yourself!"
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="#">
+                  <Link href="/softwares/crowdfunding-script">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Crowdfunding</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={100}
+                            width={250}
                             height={100}
                             src="/img/jobboard/crowdfunding_new.png"
                             alt="Crowdfunding"
@@ -1749,13 +1756,13 @@ See how it work yourself!"
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="#">
+                  <Link href="/softwares/job-board-software">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={100}
+                            width={250}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
@@ -1772,13 +1779,13 @@ See how it work yourself!"
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="#">
+                  <Link href="/softwares/logistic-marketplace-software">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Logistic Marketplace software</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={100}
+                            width={250}
                             height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"

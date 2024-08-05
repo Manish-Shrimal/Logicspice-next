@@ -45,7 +45,7 @@ const Page = () => {
                     </li>
                     <li>
                       Over We Do it Cheaper Buyer and Freelancer are able to
-                      send 1 to 1 messages, there aren't any restrictions for
+                      send 1 to 1 messages, there aren&apos;t any restrictions for
                       messaging like they need to purchase a gig or hire for a
                       service.
                     </li>

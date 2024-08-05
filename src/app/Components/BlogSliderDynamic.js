@@ -22,8 +22,8 @@ const BlogSliderDynamic = ({blogData, blogImagePath}) => {
     
       <div className="slider-container">
         <Slider {...settings}>
-            {blogData &&blogData.map((item) => (
-                <div>
+            {blogData &&blogData.map((key,item) => (
+                <div key={key}>
                 <li style={{ listStyle: "none" }}>
                   <figure>
                     <Image
