@@ -16,16 +16,13 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-
-
-
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -70,38 +67,35 @@ const Page = () => {
     setActiveTab(tab);
   };
 
-
-
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/news-management-system"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/news-management-system"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
       <NavBar />
       <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg lsnews-banner-new">
-    <div className="container">
-        <div className="row">
+        <div className="container">
+          <div className="row">
             <div className="col-sm-7 col-md-7">
-                <h1>News Portal Management Script</h1>
-                <div className="both-left-p-sec">
-                    <h2>Perfect start for your News Portal with a CMS</h2>                      
-                </div>
+              <h1>News Portal Management Script</h1>
+              <div className="both-left-p-sec">
+                <h2>Perfect start for your News Portal with a CMS</h2>
+              </div>
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
                   <h4>
@@ -133,7 +127,10 @@ See how it work yourself!"
                       />
                     }
                   </div>
-                  <Link className="btn fiverr-buys NewGreenBtnJob" href="/softwares/news-management-system">
+                  <Link
+                    className="btn fiverr-buys NewGreenBtnJob"
+                    href="/softwares/news-management-system"
+                  >
                     Buy Now
                   </Link>
                 </div>
@@ -148,7 +145,6 @@ See how it work yourself!"
                 </div>
               </div>
 
-              
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
@@ -176,7 +172,7 @@ See how it work yourself!"
                   <a href="/softwares">Softwares</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                News Portal software
+                  News Portal software
                 </li>
               </ol>
             </div>
@@ -184,58 +180,68 @@ See how it work yourself!"
         </div>
       </section>
       <section className="job-section-top-new JobBoardSectionNew">
-    <div className="container">
-        <p>Digital media is playing a major role in authentic flow of information and the news&sbquo; to the masses and this news portal management script can play a major role
-		for your corporate&sbquo; political or any other kind of news showcasing. This software is efficient in management of news in a quick time and can save a lot of time 
-		and money for you.</p>
-
-    </div>
-</section>
-      <section className="client-say WhatsaapCliets" style={{ backgroundColor: "#fff" }}>
+        <div className="container">
+          <p>
+            Digital media is playing a major role in authentic flow of
+            information and the news&sbquo; to the masses and this news portal
+            management script can play a major role for your corporate&sbquo;
+            political or any other kind of news showcasing. This software is
+            efficient in management of news in a quick time and can save a lot
+            of time and money for you.
+          </p>
+        </div>
+      </section>
+      <section
+        className="client-say WhatsaapCliets"
+        style={{ backgroundColor: "#fff" }}
+      >
         <div className="container">
           <div className="row">
-          
             <div className="col-md-12">
-            <div className="service-market-ttd">
-            <ul>
-                        <li>Responsive & SEO Friendly</li>
-                        <li>Social Media Sharing</li>
-                        <li>User Oriented</li>
-                        <li>Reporting</li>
-                        <li>Validity Restriction</li>
-                        <li>News Editors dashboard</li>
-                        <li>One time License Fee</li>
-
-                    </ul>
-                </div>
-
+              <div className="service-market-ttd">
+                <ul>
+                  <li>Responsive & SEO Friendly</li>
+                  <li>Social Media Sharing</li>
+                  <li>User Oriented</li>
+                  <li>Reporting</li>
+                  <li>Validity Restriction</li>
+                  <li>News Editors dashboard</li>
+                  <li>One time License Fee</li>
+                </ul>
+              </div>
             </div>
-
-
           </div>
         </div>
       </section>
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-          <h2 className="taxt_tt_job">News Portal Management software Features</h2>
+            <h2 className="taxt_tt_job">
+              News Portal Management software Features
+            </h2>
           </div>
 
-          <div className="tatxt_txt_job text-center">With today&apos;s booms of digital media and publishing&sbquo; this news website portal script has been developed by giving due consideration 
-            to user friendly and handy features. This advanced News Management System tends to provide quick flow of news and information across the globe. 
-        </div>
+          <div className="tatxt_txt_job text-center">
+            With today&apos;s booms of digital media and publishing&sbquo; this
+            news website portal script has been developed by giving due
+            consideration to user friendly and handy features. This advanced
+            News Management System tends to provide quick flow of news and
+            information across the globe.
+          </div>
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job tab_bbx_job_classified">
               <ul className="">
                 <li
                   id="tab1_li"
-                  className={`jobseeker_app_job ddlj ${sellerTab ? "active" : ""}`}
+                  className={`jobseeker_app_job ddlj ${
+                    sellerTab ? "active" : ""
+                  }`}
                   onClick={() => handleSellerTab()}
                 >
                   <a>Editor</a>
                 </li>
-                
+
                 <li
                   id="tab3_li"
                   className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
@@ -256,69 +262,126 @@ See how it work yourself!"
                             src="/img/news/lsnews_saler.png"
                             alt="Editor"
                           />
-                        
                         </div>
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright">
-                        <ul>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/secure_login.png" className="lazy" /></i>
-                                        <span>Secure Login
-                                            <div className="product-idea">
-                                                <p>Editor can login securely in editor&apos;s panel</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/add_gig.png"  className="lazy" /></i>
-                                        <span>Manage Profile
-                                            <div className="product-idea">
-                                                <p>Editor can manage his profile for the editor&apos;s panel.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_gig.png" className="lazy" /></i>
-                                        <span>Manage News Posts
-                                            <div className="product-idea">
-                                                <p>Editor can add and manage news posts from the panel.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/admin_dash.png" /></i>
-                                        <span>Add Categories
-                                            <div className="product-idea">
-                                                <p>Editor can add and manage multiple categories and the sub categories for the news from the panel.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/gig_gallery.png" /></i>
-                                        <span>Video News Posts
-                                            <div className="product-idea">
-                                                <p>Editor can add video news posts and publish from the panel.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/view_public.png" /></i>
-                                        <span>Approve Comments
-                                            <div className="product-idea">
-                                                <p>Editor can approve and unapprove comments on the news post added by the users on the news posts.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                  
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Secure Login
+                                <div className="product-idea">
+                                  <p>
+                                    Editor can login securely in editor&apos;s
+                                    panel
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/add_gig.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Manage Profile
+                                <div className="product-idea">
+                                  <p>
+                                    Editor can manage his profile for the
+                                    editor&apos;s panel.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_gig.png"
+                                  className="lazy"
+                                />
+                              </i>
+                              <span>
+                                Manage News Posts
+                                <div className="product-idea">
+                                  <p>
+                                    Editor can add and manage news posts from
+                                    the panel.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/admin_dash.png"
+                                />
+                              </i>
+                              <span>
+                                Add Categories
+                                <div className="product-idea">
+                                  <p>
+                                    Editor can add and manage multiple
+                                    categories and the sub categories for the
+                                    news from the panel.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/gig_gallery.png"
+                                />
+                              </i>
+                              <span>
+                                Video News Posts
+                                <div className="product-idea">
+                                  <p>
+                                    Editor can add video news posts and publish
+                                    from the panel.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/view_public.png"
+                                />
+                              </i>
+                              <span>
+                                Approve Comments
+                                <div className="product-idea">
+                                  <p>
+                                    Editor can approve and unapprove comments on
+                                    the news post added by the users on the news
+                                    posts.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </>
               )}
-              
+
               {adminTab && (
                 <>
                   <div className="costomer_tab rj" id="tab3">
@@ -329,86 +392,163 @@ See how it work yourself!"
                             src="/img/news/new-mac.jpg"
                             alt="Admin Panel"
                           />
-                        
                         </div>
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright2">
-                        <ul>
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/secure_login.png" /></i>
-                                        <span>Secure Login
-                                            <div className="product-idea">
-                                                <p>Admin can login securely in admin panel</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/admin_dash.png" /></i>
-                                        <span>Manage Dashboard
-                                            <div className="product-idea">
-                                                <p>Admin can view and manage the news post and add multiple news posts.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_user.png" /></i>
-                                        <span>Manage Editors
-                                            <div className="product-idea">
-                                                <p>Admin can add editors to post the news from the backend.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_gig.png" /></i>
-                                        <span>Infinite Categories
-                                            <div className="product-idea">
-                                                <p>Admin can add multiple categories and the subcategories for the news from the backend.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_gig_order.png" /></i>
-                                        <span>Manage Subcategories
-                                            <div className="product-idea">
-                                                <p>Admin can manage multiple categories for the news posts from the backend.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_service.png" /></i>
-                                        <span>Video News Posts
-                                            <div className="product-idea">
-                                                <p>Admin can manage his own video news from the backend.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_category.png" /></i>
-                                        <span>Manage Comments
-                                            <div className="product-idea">
-                                                <p>Admin can manage comments added by the users on the news posts from the backend.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_skill.png" /></i>
-                                        <span>Manage Tags
-                                            <div className="product-idea">
-                                                <p>Admin can manage the tags from the backend for the news posts.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image alt="img" src="/img/jobboard/manage_cat.png" /></i>
-                                        <span>News Tickers
-                                            <div className="product-idea">
-                                                <p>Admin can add and manage news tickers from the backend for breaking news and top stories.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                       
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                />
+                              </i>
+                              <span>
+                                Secure Login
+                                <div className="product-idea">
+                                  <p>Admin can login securely in admin panel</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/admin_dash.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Dashboard
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can view and manage the news post and
+                                    add multiple news posts.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_user.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Editors
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can add editors to post the news from
+                                    the backend.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_gig.png"
+                                />
+                              </i>
+                              <span>
+                                Infinite Categories
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can add multiple categories and the
+                                    subcategories for the news from the backend.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_gig_order.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Subcategories
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage multiple categories for the
+                                    news posts from the backend.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_service.png"
+                                />
+                              </i>
+                              <span>
+                                Video News Posts
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage his own video news from the
+                                    backend.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_category.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Comments
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage comments added by the users
+                                    on the news posts from the backend.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_skill.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Tags
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can manage the tags from the backend
+                                    for the news posts.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  alt="img"
+                                  src="/img/jobboard/manage_cat.png"
+                                />
+                              </i>
+                              <span>
+                                News Tickers
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can add and manage news tickers from
+                                    the backend for breaking news and top
+                                    stories.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -420,43 +560,113 @@ See how it work yourself!"
         </div>
       </section>
       <section className="job_product_page_header_in">
-    <div className="container">
-        <div className="whateissuprt">
-            <h2 className="headhs">What does our News Portal Website Management System offer you?</h2>
-            <p>With the growing demand of digital media these days&sbquo; there is a significant requirement for such a news content management tool&sbquo; which can manage the news content efficiently with low cost of development and maintenance. </p>
-            <p>Our news portal website management system offers the facility&sbquo; where editors or the news portal website owner can easily manage it&apos;s content&sbquo; upload pictures&sbquo; video and other types of files and content for its visitors.</p>
-            <p>With this news management system&sbquo; which is developed in php web scripting language&sbquo; it becomes very easy to manage and extend its functionality in the future&sbquo; as required. We offer seamless support for the success of your news portal. </p>
-
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">
+              What does our News Portal Website Management System offer you?
+            </h2>
+            <p>
+              With the growing demand of digital media these days&sbquo; there
+              is a significant requirement for such a news content management
+              tool&sbquo; which can manage the news content efficiently with low
+              cost of development and maintenance.{" "}
+            </p>
+            <p>
+              Our news portal website management system offers the
+              facility&sbquo; where editors or the news portal website owner can
+              easily manage it&apos;s content&sbquo; upload pictures&sbquo;
+              video and other types of files and content for its visitors.
+            </p>
+            <p>
+              With this news management system&sbquo; which is developed in php
+              web scripting language&sbquo; it becomes very easy to manage and
+              extend its functionality in the future&sbquo; as required. We
+              offer seamless support for the success of your news portal.{" "}
+            </p>
+          </div>
         </div>
-    </div>
-</section>
-<section className="SubscriptionModel" id="subscriptionmodel">
-    <div className="container">	
-        <div className="job_or_title">
-            <h2 className="taxt_tt_job">Subscription Model</h2><br/>
+      </section>
+      <section className="SubscriptionModel" id="subscriptionmodel">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
+            <br />
             <div className="SubscriptionModelBx">
-                <p>Experience convenience like never before with our subscription-based hassle-free model&sbquo; available at just <strong>USD 45 per month</strong>&sbquo; limited offer available for the first year.</p>
-                <p>Key Benefits:</p>
-                <ul>
-                    <li><span>Lifetime Updates: Enjoy complimentary updates for your software version throughout its lifespan.</span></li>
-                    <li><span>Timely Upgrades: Seamlessly transition to upgraded versions at regular intervals&sbquo; all at no extra cost.</span></li>
-                    <li><span><strong>Zero Setup Fees</strong>:- There are no additional charges for the setup and installation of the software&sbquo; making it easier for customers to get started.</span></li>
-                    <li><span>Unlimited Online Test Listings: List as many test postings as you need without any limitations.</span></li>
-                    <li><span>Effortless Program Operation: Revel in robust bandwidth that guarantees your program runs flawlessly&sbquo; supported by resources allocated to your subscription model. Any increase in allocated resources will incur additional charges beyond the standard subscription model.</span></li>
-                    <li><span>Enduring Support: We are committed to providing lifelong assistance through our subscription model. If any software issues arise&sbquo; our <strong>dedicated technical team</strong> will promptly address them during office hours.</span></li>
-                  <li><span>Personalized Customization Assistance: Delivering Custom Features According to Client Requirements at additional cost.</span></li> 
-                     </ul>
-                <p>Discover a new era of convenience and efficiency with our subscription offering. Subscribe today and elevate your experience with our readymade solution!</p>
+              <p>
+                Experience convenience like never before with our
+                subscription-based hassle-free model&sbquo; available at just{" "}
+                <strong>USD 45 per month</strong>&sbquo; limited offer available
+                for the first year.
+              </p>
+              <p>Key Benefits:</p>
+              <ul>
+                <li>
+                  <span>
+                    Lifetime Updates: Enjoy complimentary updates for your
+                    software version throughout its lifespan.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Timely Upgrades: Seamlessly transition to upgraded versions
+                    at regular intervals&sbquo; all at no extra cost.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Zero Setup Fees</strong>:- There are no additional
+                    charges for the setup and installation of the
+                    software&sbquo; making it easier for customers to get
+                    started.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Unlimited Online Test Listings: List as many test postings
+                    as you need without any limitations.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Effortless Program Operation: Revel in robust bandwidth that
+                    guarantees your program runs flawlessly&sbquo; supported by
+                    resources allocated to your subscription model. Any increase
+                    in allocated resources will incur additional charges beyond
+                    the standard subscription model.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Enduring Support: We are committed to providing lifelong
+                    assistance through our subscription model. If any software
+                    issues arise&sbquo; our{" "}
+                    <strong>dedicated technical team</strong> will promptly
+                    address them during office hours.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Personalized Customization Assistance: Delivering Custom
+                    Features According to Client Requirements at additional
+                    cost.
+                  </span>
+                </li>
+              </ul>
+              <p>
+                Discover a new era of convenience and efficiency with our
+                subscription offering. Subscribe today and elevate your
+                experience with our readymade solution!
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
       <section id="subscriptionprice" className="SubscriptionpriceSection">
         <div className="container">
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -465,19 +675,19 @@ See how it work yourself!"
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
-              <div className="btn btn-get" onClick={openModal}>
-                    <button>Get Demo Access!</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of News Portal Management software.
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of News Portal Management software.
 See how it work yourself!"
-                      />
-                    }
-                  </div>
+                    />
+                  }
+                </div>
                 <Link
                   className="btn fiverr-buys"
                   href="/softwares/news-management-system"
@@ -493,7 +703,11 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>18 Reviews</p>
                   </div>
                 </div>
@@ -540,18 +754,19 @@ See how it work yourself!"
               <li>
                 <span>
                   Experience efficient communication channels via email&sbquo;
-                  WhatsApp&sbquo; Google Meet&sbquo; Skype&sbquo; Zoom and Teams.
+                  WhatsApp&sbquo; Google Meet&sbquo; Skype&sbquo; Zoom and
+                  Teams.
                 </span>
               </li>
             </ul>
             <p>
-              For details on an Enterprise license&sbquo; please <a  onClick={toggleModal}>contact us </a>.
+              For details on an Enterprise license&sbquo; please{" "}
+              <a onClick={toggleModal}>contact us </a>.
             </p>
           </div>
         </div>
       </section>
-    
-     
+
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
           <div className="job_or_title">
@@ -560,7 +775,7 @@ See how it work yourself!"
             </h2>
             <br />
             <div className="logic-parter">
-            <a onClick={toggleInfo} className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
                     src="/img/jobboard/why-logic-icon.png"
@@ -583,10 +798,10 @@ See how it work yourself!"
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
-                      Our script code is fully optimized&sbquo; which results in quick
-                      load time and&sbquo; Code is properly commented for each
-                      function and module so anyone can easily update the code
-                      in future.
+                      Our script code is fully optimized&sbquo; which results in
+                      quick load time and&sbquo; Code is properly commented for
+                      each function and module so anyone can easily update the
+                      code in future.
                     </p>
                   </div>
                 </div>
@@ -595,7 +810,10 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image src="/img/jobboard/data-complexity.png" alt="img" />
+                      <Image
+                        src="/img/jobboard/data-complexity.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Strong Framework of PHP & Well managed database</h3>
                     <p>
@@ -620,8 +838,8 @@ See how it work yourself!"
                     </h3>
                     <p>
                       Customers will always get a quick response from our
-                      technical support team&sbquo; with the best possible solution.
-                      Expect our response within 24 hours.
+                      technical support team&sbquo; with the best possible
+                      solution. Expect our response within 24 hours.
                     </p>
                   </div>
                 </div>
@@ -636,9 +854,9 @@ See how it work yourself!"
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
-                      We provide customization of our scripts&sbquo; to meet customer
-                      expectations with best affordable price and minimum
-                      turn-around time.
+                      We provide customization of our scripts&sbquo; to meet
+                      customer expectations with best affordable price and
+                      minimum turn-around time.
                     </p>
                   </div>
                 </div>
@@ -647,12 +865,15 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image src="/img/jobboard/smartphone-icon.png" alt="img" />
+                      <Image
+                        src="/img/jobboard/smartphone-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Mobile Friendly Script</h3>
                     <p>
-                      Our Script is mobile friendly so&sbquo; users can easily access
-                      all the features through mobile devices that gives
+                      Our Script is mobile friendly so&sbquo; users can easily
+                      access all the features through mobile devices that gives
                       improved user experience with portability.
                     </p>
                   </div>
@@ -684,12 +905,12 @@ See how it work yourself!"
                     <h3>Global company with agile development approach</h3>
                     <p>
                       Our customers are almost equally spread around the globe
-                      and we provide international standard solutions for USA&sbquo;
-                      UK&sbquo; Europe&sbquo; Australia&sbquo; UAE and other countries. We follow
-                      a transparent work process and divide all the development
-                      processes into small phases. We can use the latest
-                      technology and standards that assure the smooth
-                      development and execution.
+                      and we provide international standard solutions for
+                      USA&sbquo; UK&sbquo; Europe&sbquo; Australia&sbquo; UAE
+                      and other countries. We follow a transparent work process
+                      and divide all the development processes into small
+                      phases. We can use the latest technology and standards
+                      that assure the smooth development and execution.
                     </p>
                   </div>
                 </div>
@@ -703,8 +924,8 @@ See how it work yourself!"
                     <h3>Customer information and application level security</h3>
                     <p>
                       Security of customer data and application is a major
-                      aspect of any of the solutions&sbquo; Logicspice provides. Our
-                      programming is robust and secure that assures password
+                      aspect of any of the solutions&sbquo; Logicspice provides.
+                      Our programming is robust and secure that assures password
                       encryption.
                     </p>
                   </div>
@@ -719,10 +940,10 @@ See how it work yourself!"
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
                       We are a team of experienced web and mobile app
-                      developers&sbquo; having expertise in handling complex tasks
-                      since the past 16+ years. We delivered lots of projects
-                      with 100% client satisfaction on different platforms with
-                      high levels of standards.
+                      developers&sbquo; having expertise in handling complex
+                      tasks since the past 16+ years. We delivered lots of
+                      projects with 100% client satisfaction on different
+                      platforms with high levels of standards.
                     </p>
                   </div>
                 </div>
@@ -732,7 +953,10 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image src="/img/jobboard/seouser-friendly.png" alt="img" />
+                      <Image
+                        src="/img/jobboard/seouser-friendly.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Seo Friendly Development</h3>
                     <p>
@@ -765,7 +989,10 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image src="/img/jobboard/third-party-api.png" alt="img" />
+                      <Image
+                        src="/img/jobboard/third-party-api.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Integration With Third Party Api</h3>
                     <p>
@@ -849,14 +1076,30 @@ See how it work yourself!"
                 </ul>
               </div>
               <div className="col-sm-6">
-              <ul className="list_detail">
-                    <li className="same"><b>Browsers - </b> Firefox 32.6+&sbquo; Chrome 20.0+&sbquo; Opera 30.0+&sbquo; Safari 5+&sbquo; IE 9+</li> 
-                    <li className="same"><b>CMS  - </b> WordPress</li>  
-                    <li className="same "><b>Language  - </b> PHP 7.2+&sbquo; AJAX&sbquo; jQuery</li> 
-                    <li className="other"><b>Design  - </b> HTML 5&sbquo; CSS 3&sbquo; Bootstrap 3.3.7&sbquo; JavaScript</li> 
-                    <li className="other"><b>Database  - </b> MySQL 5.5+ </li>
-                    <li className="other"><b>Server  - </b>  Apache 2.4+</li>
-                    <li className="other"><b>Android  - </b> java 9 and Android Studio 3.4</li>
+                <ul className="list_detail">
+                  <li className="same">
+                    <b>Browsers - </b> Firefox 32.6+&sbquo; Chrome 20.0+&sbquo;
+                    Opera 30.0+&sbquo; Safari 5+&sbquo; IE 9+
+                  </li>
+                  <li className="same">
+                    <b>CMS - </b> WordPress
+                  </li>
+                  <li className="same ">
+                    <b>Language - </b> PHP 7.2+&sbquo; AJAX&sbquo; jQuery
+                  </li>
+                  <li className="other">
+                    <b>Design - </b> HTML 5&sbquo; CSS 3&sbquo; Bootstrap
+                    3.3.7&sbquo; JavaScript
+                  </li>
+                  <li className="other">
+                    <b>Database - </b> MySQL 5.5+{" "}
+                  </li>
+                  <li className="other">
+                    <b>Server - </b> Apache 2.4+
+                  </li>
+                  <li className="other">
+                    <b>Android - </b> java 9 and Android Studio 3.4
+                  </li>
                 </ul>
               </div>
             </div>
@@ -890,7 +1133,10 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
@@ -1008,7 +1254,7 @@ See how it work yourself!"
                   </div>
                 </div>
                 <div className="col-md-7">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1021,8 +1267,11 @@ See how it work yourself!"
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &quot;I have purchased this script and has constructed my own web-site. This was an easy task because of logicspice&apos;s free
-                      installation and support. Keep up the good work. I will be back for more in the future.&quot;
+                      &quot;I have purchased this script and has constructed my
+                      own web-site. This was an easy task because of
+                      logicspice&apos;s free installation and support. Keep up
+                      the good work. I will be back for more in the
+                      future.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1044,8 +1293,10 @@ See how it work yourself!"
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &quot;This is the best News Portal Management software. Thanks for your great efforts and support while installing the script. Your prompt service
-                      regarding a few minor issues was superb.&quot;
+                      &quot;This is the best News Portal Management software.
+                      Thanks for your great efforts and support while installing
+                      the script. Your prompt service regarding a few minor
+                      issues was superb.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1067,8 +1318,11 @@ See how it work yourself!"
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &quot;Recently I bought this script from logicspice and it worked really nice&rsquo; it helped my business to gain more efficiency. I
-                      recommend for all whom looking for a News Portal Management software&rsquo; it&apos;s really nice.&quot;
+                      &quot;Recently I bought this script from logicspice and it
+                      worked really nice&rsquo; it helped my business to gain
+                      more efficiency. I recommend for all whom looking for a
+                      News Portal Management software&rsquo; it&apos;s really
+                      nice.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1088,8 +1342,6 @@ See how it work yourself!"
                       </span>
                     </div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
@@ -1108,43 +1360,62 @@ See how it work yourself!"
                     headerTitle="Where can I get a live demo?"
                     collapseId="flush-collapse2"
                   >
-                    <p>Please click on the Live Demo button on this page above and submit your request for a live demo and you will get live demo details 
-                    by email immediately.</p>
+                    <p>
+                      Please click on the Live Demo button on this page above
+                      and submit your request for a live demo and you will get
+                      live demo details by email immediately.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Once I purchase this script&rsquo; how many days will it take to go online?"
                     collapseId="flush-collapse4"
                   >
-                    <p>It will take 2 working days generally&rsquo; provided all the information to make it live has been provided. </p>
+                    <p>
+                      It will take 2 working days generally&rsquo; provided all
+                      the information to make it live has been provided.{" "}
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Can I get help for customization?"
                     collapseId="flush-collapse5"
                   >
-                    <p>Yes&rsquo; we have an experienced team of developers to help you with customization as per your requirements.</p>
+                    <p>
+                      Yes&rsquo; we have an experienced team of developers to
+                      help you with customization as per your requirements.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Can I resell the script? Will I have rights over the script code?"
                     collapseId="flush-collapse6"
                   >
-                    <p>No&rsquo; You can&apos;t resell the script. All rights will remain with Logicspice only.</p>
+                    <p>
+                      No&rsquo; You can&apos;t resell the script. All rights
+                      will remain with Logicspice only.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Will I be able to use it on multiple domains&rsquo; after I purchase this script?"
                     collapseId="flush-collapse7"
                   >
-                    <p>You will be licensed to use it only for the domain&rsquo; you purchased for.</p>
+                    <p>
+                      You will be licensed to use it only for the domain&rsquo;
+                      you purchased for.
+                    </p>
                   </MDBAccordionItem>
                   <MDBAccordionItem
                     headerTitle="Along with hosting server details&rsquo; what other recommendations?"
                     collapseId="flush-collapse14"
                   >
-                    <p>We recommend you purchase SSL certificate along with a hosting server&rsquo; considering that an SSL certificate is necessary for all the websites 
-                    these days and it provides a secure layer to the website as well.</p>
+                    <p>
+                      We recommend you purchase SSL certificate along with a
+                      hosting server&rsquo; considering that an SSL certificate
+                      is necessary for all the websites these days and it
+                      provides a secure layer to the website as well.
+                    </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
               </div>
@@ -1154,33 +1425,37 @@ See how it work yourself!"
       </section>
       <section className="content_area feature_inner" id="features">
         <div className="container">
-          <h2 className="title_main">News Portal Management software Features</h2>
+          <h2 className="title_main">
+            News Portal Management software Features
+          </h2>
           <div id="joblboardslide">
             <Slider {...settings}>
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><Image src="/img/news/lsnews-home.jpg" alt=""/></div>
-                    <div className="hands-proved">
-                        <div className="titleof_scnew">Home</div>
-                    </div>
-              </div>
-         
-
-              <div className="SliderMainBx">
-              <div className="feat-slide-img"><Image src="/img/news/lsnews-technology.jpg" alt=""/></div>
-                    <div className="hands-proved">
-                        <div className="titleof_scnew">Technology News</div>
-                    </div>
+                <div className="feat-slide-img">
+                  <Image src="/img/news/lsnews-home.jpg" alt="" />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Home</div>
+                </div>
               </div>
 
               <div className="SliderMainBx">
-              <div className="feat-slide-img"><Image src="/img/news/lsnews-internation.jpg" alt=""/></div>
-                    <div className="hands-proved">
-                        <div className="titleof_scnew">International News</div>
-                    </div>
+                <div className="feat-slide-img">
+                  <Image src="/img/news/lsnews-technology.jpg" alt="" />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Technology News</div>
+                </div>
               </div>
 
-              
-
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image src="/img/news/lsnews-internation.jpg" alt="" />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">International News</div>
+                </div>
+              </div>
             </Slider>
           </div>
         </div>
@@ -1189,7 +1464,7 @@ See how it work yourself!"
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -1221,9 +1496,7 @@ See how it work yourself!"
                           />
                         </div>
                         <p>
-                          <span>
-                          Best white label job board software. 
-                          </span>{" "}
+                          <span>Best white label job board software.</span>{" "}
                         </p>
                       </div>
                     </div>
@@ -1244,7 +1517,10 @@ See how it work yourself!"
                           />
                         </div>
                         <p>
-                          <span>Readymade Script of video E- Learning Platform like Udemy.</span>
+                          <span>
+                            Readymade Script of video E- Learning Platform like
+                            Udemy.
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -1283,7 +1559,7 @@ See how it work yourself!"
             target="_blank"
           >
             <Image
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

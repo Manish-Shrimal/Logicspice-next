@@ -172,12 +172,12 @@ const Page = () => {
                   <h3>Custom Angular Development</h3>
                   <p>
                     Logicspice offers the best custom angular{" "}
-                    <a
-                      href="https://www.logicspice.com/web-development"
+                    <Link
+                      href="/services/web-development"
                       target="_blank"
                     >
                       web development services
-                    </a>
+                    </Link>
                     . This involves designing custom applications to meet
                     clients&apos; needs.
                   </p>

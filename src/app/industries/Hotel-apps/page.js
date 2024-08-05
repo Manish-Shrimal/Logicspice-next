@@ -569,7 +569,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="https://www.logicspice.com/app/webroot/img/images/kesepara.jpg"
+                            src="/img/globalbusinesscountries/kesepara.jpg"
                             alt="..."
                           />
                         </div>
@@ -624,7 +624,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg"
+                            src="/img/globalbusinesscountries/dsherevk.jpg"
                             alt="..."
                           />
                         </div>
@@ -667,7 +667,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg"
+                            src="/img/globalbusinesscountries/sabdeen.jpg"
                             alt="..."
                           />
                         </div>
@@ -693,7 +693,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg"
+                            src="/img/globalbusinesscountries/beatbuehlmann.jpg"
                             alt="..."
                           />
                         </div>
@@ -740,7 +740,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg"
+                            src="/img/globalbusinesscountries/tjulia1.jpg"
                             alt="..."
                           />
                         </div>

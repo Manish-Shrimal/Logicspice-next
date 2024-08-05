@@ -42,13 +42,13 @@ const Page = () => {
             to digital mediums&sbquo; it is imperative for the brands to market
             themselves on these digital platforms. It can help you create a
             niche on the world of web and {""}
-            <a
-              href="https://www.logicspice.com/custom-solutions"
+            <Link
+              href="/custom-solutions"
               target="_blank"
               className="WebsiteTxtLink"
             >
               Mobile App
-            </a>{" "}
+            </Link>{" "}
             {""}
             with innovative and tech savvy approach.
           </p>
@@ -73,7 +73,7 @@ const Page = () => {
                   <Image
                     width={650}
                     height={500 / (100 / 100)}
-                    src="https://www.logicspice.com/app/webroot/img/images/lara/ims1.png"
+                    src="/img/digitalmarketing/ims1.png"
                     alt="Internet Marketing Solutions"
                   />
                 </div>
@@ -116,7 +116,7 @@ const Page = () => {
                   <Image
                     width={650}
                     height={500 / (100 / 100)}
-                    src="https://www.logicspice.com/app/webroot/img/images/lara/ims2.png"
+                    src="/img/digitalmarketing/ims2.png"
                     alt="Social Media Management"
                   />
                 </div>
@@ -157,7 +157,7 @@ const Page = () => {
                   <Image
                     width={650}
                     height={500 / (100 / 100)}
-                    src="https://www.logicspice.com/app/webroot/img/images/lara/ims3.png"
+                    src="/img/digitalmarketing/ims3.png"
                     alt="Brand Development"
                   />
                 </div>
@@ -202,7 +202,7 @@ const Page = () => {
                   <Image
                   width={650}
                   height={500 / (100 / 100)}
-                    src="https://www.logicspice.com/app/webroot/img/images/lara/ims4.png"
+                    src="/img/digitalmarketing/ims4.png"
                     alt="Search Engine Optimization"
                   />
                 </div>

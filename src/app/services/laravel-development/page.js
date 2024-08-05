@@ -857,55 +857,55 @@ const Page = () => {
           <div id="laravel-slader" className="">
             <Slider {...settings}>
               <div className="php-item SalesagySite">
-                <a href="https://salesagy.com/" target="_blank">
+                <Link href="https://salesagy.com/" target="_blank">
                   <Image
                     width={900}
                     height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/salesagy-banner.png"
                     alt="salesagy"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://salesagy.com/"
                   target="_blank"
                   className="visit-site"
                 >
                   VISIT SITE
-                </a>
+                </Link>
               </div>
               <div className="php-item">
-                <a href="https://iepwritingcollaborative.com/" target="_blank">
+                <Link href="https://iepwritingcollaborative.com/" target="_blank">
                   <Image
                     width={900}
                     height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/iep-banner-new.png"
                     alt="IEP Jobs"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://iepwritingcollaborative.com/"
                   target="_blank"
                   className="visit-site"
                 >
                   VISIT SITE
-                </a>
+                </Link>
               </div>
               <div className="php-item">
-                <a href="https://www.designerstrends.com/" target="_blank">
+                <Link href="https://www.designerstrends.com/" target="_blank">
                   <Image
                     width={900}
                     height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/designerstrends-banner-new.png"
                     alt="designerstrends"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.designerstrends.com/"
                   target="_blank"
                   className="visit-site"
                 >
                   VISIT SITE
-                </a>
+                </Link>
               </div>
             </Slider>
           </div>

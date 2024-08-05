@@ -623,9 +623,9 @@ const Page = () => {
                     <p>
                       When you type a website address into your browser&sbquo;
                       such as{" "}
-                      <a href="https://www.logicspice.com" target="_blank">
+                      <Link href="/" target="_blank">
                         https://www.logicspice.com
-                      </a>
+                      </Link>
                       &sbquo; the browser makes a domain name lookup&sbquo; in
                       this case&sbquo; to the Logicspice.com servers. To access
                       the data stored there&sbquo; a user launches their

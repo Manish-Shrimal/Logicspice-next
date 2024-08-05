@@ -121,12 +121,12 @@ const Page = () => {
                 </p>
                 <p>
                   The React Native{" "}
-                  <a
-                    href="https://www.logicspice.com/mobile-app-development"
+                  <Link
+                    href="/services/mobile-app-development"
                     target="_blank"
                   >
                     app development services
-                  </a>{" "}
+                  </Link>{" "}
                   integrate the latest and most advanced technological inputs
                   while programming React Native mobile applications. We ensure
                   that our clients get involved in the application development

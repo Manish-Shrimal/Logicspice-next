@@ -1,11 +1,28 @@
 "use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.css";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../resources.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
+
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
     <Navbar />
@@ -174,6 +191,25 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </Link>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
+      
       <Footer />
     </>
   );

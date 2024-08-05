@@ -13,7 +13,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
@@ -24,8 +24,6 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-
-
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -59,21 +57,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/marketplace-software-solution"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/marketplacesoftware-solution"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -95,8 +93,10 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
-                          src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/images/more-info.png"
                           alt=""
                         />
                       </i>
@@ -122,7 +122,7 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-             
+
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
@@ -139,8 +139,10 @@ See how it work yourself!"
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />
@@ -151,9 +153,11 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={450}
+                  height={100 / (100 / 100)}
                   className=""
-                  src="https://www.logicspice.com/app/webroot/img/images/product_new/marketplace-banner-img.png"
+                  src="/img/marketplacesoftware/marketplace-banner-img.png"
                   alt="Marketplace Software"
                 />
               </div>
@@ -180,9 +184,10 @@ See how it work yourself!"
         <div className="container">
           <p>
             Please check our readymade service marketplace softwares for the
-            sectors like freelance&sbquo; logistics&sbquo; rental&sbquo; scheduling&sbquo; home cleaning
-            and appointment booking service. Click Here to get a demo of the
-            specific marketplace as per your requirement.
+            sectors like freelance&sbquo; logistics&sbquo; rental&sbquo;
+            scheduling&sbquo; home cleaning and appointment booking service.
+            Click Here to get a demo of the specific marketplace as per your
+            requirement.
           </p>
         </div>
       </section>
@@ -210,25 +215,28 @@ See how it work yourself!"
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Marketplace Software Solutions Features</h2>
+            <h2 className="taxt_tt_job">
+              Marketplace Software Solutions Features
+            </h2>
           </div>
           <div className="tatxt_txt_job MarketplaceTxtJob">
             <p>
               Our best marketplace software solutions are designed to
               revolutionize a wide range of industries. From freelance
               professionals seeking opportunities to logistics companies
-              streamlining operations&sbquo; and from homeowners in need of cleaning
-              services to businesses managing scheduling and appointments&sbquo; our
-              platform caters to them all.
+              streamlining operations&sbquo; and from homeowners in need of
+              cleaning services to businesses managing scheduling and
+              appointments&sbquo; our platform caters to them all.
             </p>
             <p>
               With the power of our on-demand B2B marketplace software&sbquo; we
-              enable seamless transactions&sbquo; efficient service delivery&sbquo; and
-              enhanced connectivity. Whether you&apos;re a freelance professional
-              looking for gigs&sbquo; a rental service provider seeking customers&sbquo; a
-              logistics company optimizing routes&sbquo; a homeowner in need of
-              reliable cleaning&sbquo; or a business handling appointments and
-              scheduling&sbquo; our platform serves as a comprehensive solution.
+              enable seamless transactions&sbquo; efficient service
+              delivery&sbquo; and enhanced connectivity. Whether you&apos;re a
+              freelance professional looking for gigs&sbquo; a rental service
+              provider seeking customers&sbquo; a logistics company optimizing
+              routes&sbquo; a homeowner in need of reliable cleaning&sbquo; or a
+              business handling appointments and scheduling&sbquo; our platform
+              serves as a comprehensive solution.
             </p>
           </div>
           <div className="tab_bbx_job MarketplaceSoftwareBBx">
@@ -271,7 +279,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -289,7 +299,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_alert.png"
                                 />
@@ -306,7 +318,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
                                 />
@@ -323,7 +337,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/save_fav.png"
                                 />
@@ -341,7 +357,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/apply_job.png"
                                 />
@@ -358,7 +376,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/search_job.png"
                                 />
@@ -375,7 +395,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/applied_job.png"
                                 />
@@ -392,7 +414,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/share_job.png"
                                 />
@@ -409,7 +433,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_edu.png"
                                 />
@@ -425,7 +451,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_exp.png"
                                 />
@@ -456,7 +484,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-availability-icon.png"
                                 />
@@ -473,7 +503,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-services-icon.png"
                                 />
@@ -491,7 +523,9 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-outstanding-icon.png"
                                 />
@@ -508,7 +542,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/accept-requests-icon.png"
                                 />
@@ -525,7 +561,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-requests-icon.png"
                                 />
@@ -542,7 +580,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-event-icon.png"
                                 />
@@ -559,7 +599,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view-booking-icon.png"
                                 />
@@ -576,7 +618,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view-review-icon.png"
                                 />
@@ -593,7 +637,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/preview-public-icon.png"
                                 />
@@ -609,7 +655,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/social-media-icon.png"
                                 />
@@ -626,7 +674,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/promotions-discounts-icon.png"
                                 />
@@ -643,7 +693,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/notification-icon.png"
                                 />
@@ -652,8 +704,8 @@ See how it work yourself!"
                                 Notifications
                                 <div className="product-idea">
                                   <p>
-                                    As a service provider&sbquo; easily manage your
-                                    notifications.
+                                    As a service provider&sbquo; easily manage
+                                    your notifications.
                                   </p>
                                 </div>
                               </span>
@@ -678,7 +730,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -695,7 +749,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                 />
@@ -713,7 +769,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                 />
@@ -730,7 +788,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_skill.png"
                                 />
@@ -747,7 +807,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_emp.png"
                                 />
@@ -764,7 +826,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_job.png"
                                 />
@@ -781,7 +845,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_news.png"
                                 />
@@ -798,7 +864,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/course_details.png"
                                 />
@@ -815,7 +883,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
                                 />
@@ -832,7 +902,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_blog.png"
                                 />
@@ -849,7 +921,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                 />
@@ -883,12 +957,12 @@ See how it work yourself!"
             <p>
               Logicspice is the custom marketplace development company that
               offers powerful service marketplace software tailored to your
-              needs&sbquo; catering to a diverse range of sectors including freelance&sbquo;
-              rental&sbquo; logistics&sbquo; home cleaning&sbquo; scheduling&sbquo; and appointment
-              booking. Our expertise extends to creating versatile multi vendor
-              marketplace software and marketplace app development solutions
-              that empower businesses to thrive in the digital marketplace
-              landscape.
+              needs&sbquo; catering to a diverse range of sectors including
+              freelance&sbquo; rental&sbquo; logistics&sbquo; home
+              cleaning&sbquo; scheduling&sbquo; and appointment booking. Our
+              expertise extends to creating versatile multi vendor marketplace
+              software and marketplace app development solutions that empower
+              businesses to thrive in the digital marketplace landscape.
             </p>
           </div>
         </div>
@@ -908,17 +982,19 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img1">
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/freelance-icon.png"
+                      <Image
+                        width={50}
+                        height={100}
+                        src="/img/marketplacesoftware/freelance-icon.png"
                         alt="Freelance"
                       />
                     </div>
                     <div className="laravel_choose_details">
                       <h3>Freelance</h3>
                       <p>
-                        Connect freelancers with clients&sbquo; streamline project
-                        management&sbquo; facilitate secure payments&sbquo; and enhance
-                        collaboration.
+                        Connect freelancers with clients&sbquo; streamline
+                        project management&sbquo; facilitate secure
+                        payments&sbquo; and enhance collaboration.
                       </p>
                     </div>
                   </a>
@@ -935,16 +1011,19 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img2">
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/rental-icon.png"
+                      <Image
+                        width={50}
+                        height={100}
+                        src="/img/marketplacesoftware/rental-icon.png"
                         alt="Rental"
                       />
                     </div>
                     <div className="laravel_choose_details">
                       <h3>Rental</h3>
                       <p>
-                        Simplify the rental process&sbquo; from listing products to
-                        managing bookings&sbquo; payments&sbquo; and customer reviews.
+                        Simplify the rental process&sbquo; from listing products
+                        to managing bookings&sbquo; payments&sbquo; and customer
+                        reviews.
                       </p>
                     </div>
                   </a>
@@ -957,20 +1036,22 @@ See how it work yourself!"
               >
                 <div className="libraries_laravel_choose">
                   <a
-                    href="https://www.logicspice.com/logistic-marketplace-software"
+                    href="https://www.logicspice.com/logistic-marketplacesoftware"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img3">
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/logistics-icon.png"
+                      <Image
+                        width={50}
+                        height={100}
+                        src="/img/marketplacesoftware/logistics-icon.png"
                         alt="Logistics"
                       />
                     </div>
                     <div className="laravel_choose_details">
                       <h3>Logistics</h3>
                       <p>
-                        Optimize routes&sbquo; track deliveries&sbquo; manage orders&sbquo; and
-                        improve overall logistics efficiency.
+                        Optimize routes&sbquo; track deliveries&sbquo; manage
+                        orders&sbquo; and improve overall logistics efficiency.
                       </p>
                     </div>
                   </a>
@@ -987,8 +1068,10 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img4">
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/home-cleaning-icon.png"
+                      <Image
+                        width={50}
+                        height={100}
+                        src="/img/marketplacesoftware/home-cleaning-icon.png"
                         alt="Home Cleaning"
                       />
                     </div>
@@ -996,8 +1079,8 @@ See how it work yourself!"
                       <h3>Home Cleaning</h3>
                       <p>
                         Offer homeowners a platform to find and book reliable
-                        cleaning services&sbquo; manage appointments&sbquo; and ensure
-                        quality control.
+                        cleaning services&sbquo; manage appointments&sbquo; and
+                        ensure quality control.
                       </p>
                     </div>
                   </a>
@@ -1014,8 +1097,10 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img5">
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/scheduling-icon.png"
+                      <Image
+                        width={50}
+                        height={100}
+                        src="/img/marketplacesoftware/scheduling-icon.png"
                         alt="Scheduling"
                       />
                     </div>
@@ -1023,8 +1108,8 @@ See how it work yourself!"
                       <h3>Scheduling</h3>
                       <p>
                         Provide businesses with intuitive scheduling tools to
-                        manage appointments&sbquo; reduce no-shows&sbquo; and enhance
-                        customer experience.
+                        manage appointments&sbquo; reduce no-shows&sbquo; and
+                        enhance customer experience.
                       </p>
                     </div>
                   </a>
@@ -1041,8 +1126,10 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img6">
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/appointment-booking-icon.png"
+                      <Image
+                        width={50}
+                        height={100}
+                        src="/img/marketplacesoftware/appointment-booking-icon.png"
                         alt="Appointment Booking"
                       />
                     </div>
@@ -1059,9 +1146,9 @@ See how it work yourself!"
             </div>
             <p className="laravel_core_sub2">
               Our white label software marketplace empowers businesses to expand
-              their reach&sbquo; streamline operations&sbquo; and provide a seamless
-              experience to their customers. Join us in transforming your
-              industry and achieving new heights of success.
+              their reach&sbquo; streamline operations&sbquo; and provide a
+              seamless experience to their customers. Join us in transforming
+              your industry and achieving new heights of success.
             </p>
           </div>
         </div>
@@ -1078,8 +1165,9 @@ See how it work yourself!"
             <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
-                subscription-based hassle-free model&sbquo; available at just <strong>USD 45 per month</strong>&sbquo; limited offer available for
-                the first year.
+                subscription-based hassle-free model&sbquo; available at just{" "}
+                <strong>USD 45 per month</strong>&sbquo; limited offer available
+                for the first year.
               </p>
               <p>Key Benefits:</p>
               <ul>
@@ -1098,8 +1186,9 @@ See how it work yourself!"
                 <li>
                   <span>
                     <strong>Zero Setup Fees</strong>:- There are no additional
-                    charges for the setup and installation of the software&sbquo;
-                    making it easier for customers to get started.
+                    charges for the setup and installation of the
+                    software&sbquo; making it easier for customers to get
+                    started.
                   </span>
                 </li>
                 <li>
@@ -1111,10 +1200,10 @@ See how it work yourself!"
                 <li>
                   <span>
                     Mobile Apps: Stay perpetually connected with Android and
-                    iPhone apps&sbquo; available for an additional USD 45 per month
-                    for each&sbquo; android or iPhone. These apps will be launched
-                    through your dedicated developer accounts on Google Play and
-                    the Apple App Store.
+                    iPhone apps&sbquo; available for an additional USD 45 per
+                    month for each&sbquo; android or iPhone. These apps will be
+                    launched through your dedicated developer accounts on Google
+                    Play and the Apple App Store.
                   </span>
                 </li>
                 <li>
@@ -1130,7 +1219,9 @@ See how it work yourself!"
                   <span>
                     Enduring Support: We are committed to providing lifelong
                     assistance through our subscription model. If any software
-                    issues arise&sbquo; our <strong>dedicated technical team</strong> will promptly address them during office hours.
+                    issues arise&sbquo; our{" "}
+                    <strong>dedicated technical team</strong> will promptly
+                    address them during office hours.
                   </span>
                 </li>
                 <li>
@@ -1155,7 +1246,7 @@ See how it work yourself!"
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1164,25 +1255,27 @@ See how it work yourself!"
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
-              <div className="btn btn-get" onClick={openModal}>
-                    <button>Enquire Now</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Marketplace Software.
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Enquire Now</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of Marketplace Software.
 See how it work yourself!"
-                      />
-                    }
-                  </div>
+                    />
+                  }
+                </div>
               </div>
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />
@@ -1231,13 +1324,14 @@ See how it work yourself!"
               <li>
                 <span>
                   Experience efficient communication channels via email&sbquo;
-                  WhatsApp&sbquo; Google Meet&sbquo; Skype&sbquo; Zoom and Teams.
+                  WhatsApp&sbquo; Google Meet&sbquo; Skype&sbquo; Zoom and
+                  Teams.
                 </span>
               </li>
             </ul>
             <p>
-              For details on an Enterprise license&sbquo; please <a  onClick={toggleModal}>contact us</a>
-              .
+              For details on an Enterprise license&sbquo; please{" "}
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
@@ -1250,9 +1344,11 @@ See how it work yourself!"
             </h2>
             <br />
             <div className="logic-parter">
-            <a onClick={toggleInfo} className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={20}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1263,7 +1359,6 @@ See how it work yourself!"
               <Whylogicspice open={showInfo} />
             </div>
           </div>
-      
         </div>
       </section>
       <section className="whatsupport_section" id="support">
@@ -1275,8 +1370,10 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
-                    src="https://www.logicspice.com/app/webroot/img/images/month_half_icon.png"
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
                 </div>
@@ -1284,8 +1381,10 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
-                    src="https://www.logicspice.com/app/webroot/img/images/free_remove_icon.png"
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
                 </div>
@@ -1293,8 +1392,10 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
-                    src="https://www.logicspice.com/app/webroot/img/images/free_instal;liicon.png"
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/free_installiicon.png"
                     alt="manager_icn"
                   />
                 </div>
@@ -1302,8 +1403,10 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
-                    src="https://www.logicspice.com/app/webroot/img/images/access_secure_code_icon.png"
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
                 </div>
@@ -1318,8 +1421,10 @@ See how it work yourself!"
         id="reviews"
       >
         <div className="ecommerce_review__img">
-          <Image width={100} height={100}
-            src="https://www.logicspice.com/app/webroot/img/images/marketplace-software/faq-review-img.png"
+          <Image
+            width={450}
+            height={100 / (100 / 100)}
+            src="/img/marketplacesoftware/faq-review-img.png"
             alt="Marketplace Software"
             className=""
           />
@@ -1334,8 +1439,8 @@ See how it work yourself!"
                   <div className="customer_review_stext">
                     I have purchased the service marketplace software and have
                     constructed my own website. This was an easy task because of
-                    logicspice&apos;s free installation and support. Keep up the good
-                    work. I will be back for more customization work in the
+                    logicspice&apos;s free installation and support. Keep up the
+                    good work. I will be back for more customization work in the
                     future.
                   </div>
                   <div className="who_ratset">
@@ -1351,8 +1456,10 @@ See how it work yourself!"
                     </span>
                     Mark Henry&sbquo; Australia
                     <span>
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/img/images/australia_flag_img.png"
+                      <Image
+                        width={25}
+                        height={100}
+                        src="/img/jobboard/australia_flag_img.png"
                         alt="mobile app development"
                         style={{ width: "20px", marginLeft: "3px" }}
                       />
@@ -1362,9 +1469,10 @@ See how it work yourself!"
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
                     This is the best readymade solution I found for my business.
-                    Thanks for your great efforts&sbquo; commitment and support while
-                    installing the software. Your prompt service regarding a few
-                    minor issues was superb and great communication skills.
+                    Thanks for your great efforts&sbquo; commitment and support
+                    while installing the software. Your prompt service regarding
+                    a few minor issues was superb and great communication
+                    skills.
                   </div>
 
                   <div className="who_ratset">
@@ -1380,8 +1488,10 @@ See how it work yourself!"
                     </span>
                     <span id="client-name">Davian Smith&sbquo; Italy</span>{" "}
                     <span>
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/img/images/italy_flag.png"
+                      <Image
+                        width={25}
+                        height={100}
+                        src="/img/jobboard/italy_flag.png"
                         alt="mobile app development"
                         style={{ width: "20px", marginLeft: "3px" }}
                       />
@@ -1392,9 +1502,10 @@ See how it work yourself!"
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
                     Recently I bought freelance software based upon gigs from
-                    logicspice and it worked really nice&sbquo; it helped my business
-                    to gain more efficiency. I recommend it to all who are
-                    looking for freelance based models&sbquo; it&apos;s really nice.
+                    logicspice and it worked really nice&sbquo; it helped my
+                    business to gain more efficiency. I recommend it to all who
+                    are looking for freelance based models&sbquo; it&apos;s
+                    really nice.
                   </div>
                   <div className="who_ratset">
                     <span
@@ -1409,8 +1520,10 @@ See how it work yourself!"
                     </span>
                     <span id="client-name">Iam Convey&sbquo; USA</span>{" "}
                     <span>
-                      <Image width={100} height={100}
-                        src="https://www.logicspice.com/img/images/usa_flag_img.png"
+                      <Image
+                        width={25}
+                        height={100}
+                        src="/img/jobboard/usa_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px" }}
                       />
@@ -1505,7 +1618,7 @@ See how it work yourself!"
                   </div>
                 </div>
                 <div className="ecommerce--review--btn ">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1517,7 +1630,8 @@ See how it work yourself!"
                 </div>
                 <div className="main-rait">
                   <span>
-                    <i className="fa fa-star"></i> <span>4.7 out of 5 stars</span>
+                    <i className="fa fa-star"></i>{" "}
+                    <span>4.7 out of 5 stars</span>
                   </span>
                 </div>
               </div>
@@ -1535,7 +1649,9 @@ See how it work yourself!"
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image width={100} height={100}
+                  <Image
+                    width={450}
+                    height={100 / (100 / 100)}
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
@@ -1549,14 +1665,14 @@ See how it work yourself!"
                       collapseId="flush-collapse1"
                     >
                       <p>
-                        Yes&sbquo; most of the softwares is completely flexible and
-                        clients can customize it as per their requirements.
-                        However&sbquo; 1-2 core files are encrypted due to licensing
-                        purposes&sbquo; because we will allow you to run the script on
-                        the specific domain for which encryption will be done in
-                        1-2 core files&sbquo; rest of the code is open to make changes
-                        and those encrypted files will be part of the codebase
-                        as well.
+                        Yes&sbquo; most of the softwares is completely flexible
+                        and clients can customize it as per their requirements.
+                        However&sbquo; 1-2 core files are encrypted due to
+                        licensing purposes&sbquo; because we will allow you to
+                        run the script on the specific domain for which
+                        encryption will be done in 1-2 core files&sbquo; rest of
+                        the code is open to make changes and those encrypted
+                        files will be part of the codebase as well.
                       </p>
                     </MDBAccordionItem>
 
@@ -1576,9 +1692,10 @@ See how it work yourself!"
                       collapseId="flush-collapse3"
                     >
                       <p>
-                        We will communicate with you via live chat&sbquo; phone call&sbquo;
-                        whatsapp&sbquo; skype&sbquo; and email during our business hours and
-                        try to solve your problem as soon as possible.
+                        We will communicate with you via live chat&sbquo; phone
+                        call&sbquo; whatsapp&sbquo; skype&sbquo; and email
+                        during our business hours and try to solve your problem
+                        as soon as possible.
                       </p>
                     </MDBAccordionItem>
 
@@ -1587,9 +1704,9 @@ See how it work yourself!"
                       collapseId="flush-collapse4"
                     >
                       <p>
-                        Yes&sbquo; we are providing free 3 months technical support on
-                        the existing features and functionalities of the
-                        software.
+                        Yes&sbquo; we are providing free 3 months technical
+                        support on the existing features and functionalities of
+                        the software.
                       </p>
                     </MDBAccordionItem>
 
@@ -1598,8 +1715,8 @@ See how it work yourself!"
                       collapseId="flush-collapse5"
                     >
                       <p>
-                        Yes&sbquo; you will own the license to use it for the domain
-                        you purchased for.
+                        Yes&sbquo; you will own the license to use it for the
+                        domain you purchased for.
                       </p>
                     </MDBAccordionItem>
 
@@ -1608,9 +1725,9 @@ See how it work yourself!"
                       collapseId="flush-collapse6"
                     >
                       <p>
-                        Yes&sbquo; you need to provide a map API key. Please follow
-                        the steps mentioned in the below URL to generate the
-                        Google map API key:
+                        Yes&sbquo; you need to provide a map API key. Please
+                        follow the steps mentioned in the below URL to generate
+                        the Google map API key:
                         https://developers.google.com/maps/documentation/javascript/get-api-key.
                         You need to set up your billing details over that.
                       </p>
@@ -1621,8 +1738,8 @@ See how it work yourself!"
                       collapseId="flush-collapse7"
                     >
                       <p>
-                        Yes&sbquo; you will have access to all the code&sbquo; except some
-                        of the core encrypted files.
+                        Yes&sbquo; you will have access to all the code&sbquo;
+                        except some of the core encrypted files.
                       </p>
                     </MDBAccordionItem>
 
@@ -1641,8 +1758,8 @@ See how it work yourself!"
                       collapseId="flush-collapse9"
                     >
                       <p>
-                        No&sbquo; you can&apos;t resell the software. All rights will
-                        remain with Logicspice only.
+                        No&sbquo; you can&apos;t resell the software. All rights
+                        will remain with Logicspice only.
                       </p>
                     </MDBAccordionItem>
 
@@ -1651,13 +1768,13 @@ See how it work yourself!"
                       collapseId="flush-collapse10"
                     >
                       <p>
-                        Yes&sbquo; we offer a 30 days money-back guarantee to ensure
-                        customer satisfaction with our software. If for any
-                        reason&sbquo; you wish to discontinue using the product&sbquo; you
-                        can ask us for a refund. We will refund your total money
-                        except the installation and configuration charges&sbquo; which
-                        are USD 65 or 20% of the application cost&sbquo; whichever is
-                        greater.
+                        Yes&sbquo; we offer a 30 days money-back guarantee to
+                        ensure customer satisfaction with our software. If for
+                        any reason&sbquo; you wish to discontinue using the
+                        product&sbquo; you can ask us for a refund. We will
+                        refund your total money except the installation and
+                        configuration charges&sbquo; which are USD 65 or 20% of
+                        the application cost&sbquo; whichever is greater.
                       </p>
                     </MDBAccordionItem>
 
@@ -1667,10 +1784,10 @@ See how it work yourself!"
                     >
                       <p>
                         We recommend you purchase an SSL certificate along with
-                        a hosting server which is Linux based&sbquo; considering that
-                        an SSL certificate is necessary for all the websites
-                        these days and it provides a secure layer to the website
-                        as well.
+                        a hosting server which is Linux based&sbquo; considering
+                        that an SSL certificate is necessary for all the
+                        websites these days and it provides a secure layer to
+                        the website as well.
                       </p>
                     </MDBAccordionItem>
                   </MDBAccordion>
@@ -1684,7 +1801,7 @@ See how it work yourself!"
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -1714,8 +1831,10 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/product_img/gigger_logo_new.png"
+                          <Image
+                            width={250}
+                            height={100}
+                            src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
                             className=""
                           />
@@ -1733,21 +1852,25 @@ See how it work yourself!"
                   <a
                     title="View Detail"
                     target="_black"
-                    href="/softwares/logistic-marketplace-software"
+                    href="/softwares/logistic-marketplacesoftware"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/product_img/logictic_logo_new.png"
-                            alt="logistic-marketplace-software"
+                          <Image
+                            width={250}
+                            height={100}
+                            src="/img/jobboard/logictic_logo_new.png"
+                            alt="logistic-marketplacesoftware"
                             className=""
                           />
                         </div>
                         <p>
-                          <span>Similar to Uship Clone&sbquo; Shiply Clone.</span>
+                          <span>
+                            Similar to Uship Clone&sbquo; Shiply Clone.
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -1766,8 +1889,10 @@ See how it work yourself!"
                         <h3>Appointment Booking System</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/product_img/abs_logo_new.png"
+                          <Image
+                            width={250}
+                            height={100}
+                            src="/img/jobboard/abs_logo_new.png"
                             alt="Fiverr Clone Script Logo"
                             className=""
                           />
@@ -1793,7 +1918,9 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
+            <Image
+              width={100}
+              height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />

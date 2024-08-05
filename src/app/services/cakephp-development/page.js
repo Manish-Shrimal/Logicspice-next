@@ -659,31 +659,31 @@ const Page = () => {
               </div>
 
               <div className="php-item">
-                <a href="https://www.iamcleaning.co.za/" target="_blank">
+                <Link href="https://www.iamcleaning.co.za/" target="_blank">
                   <Image
                     width={900}
                     height={500 / (100 / 100)}
                     src="/img/cakephpdevelopment/iamcleaning-banner.png"
                     alt="img15"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.iamcleaning.co.za/"
                   target="_blank"
                   className="visit-site"
                 >
                   VISIT SITE
-                </a>
+                </Link>
               </div>
               <div className="php-item">
-                <a href="https://afodel.com/" target="_blank">
+                <Link href="https://afodel.com/" target="_blank">
                   <Image
                     width={900}
                     height={500 / (100 / 100)}
                     src="/img/cakephpdevelopment/afodel-banner.png"
                     alt="img16"
                   />
-                </a>
+                </Link>
                 <a
                   href="https://afodel.com/"
                   target="_blank"

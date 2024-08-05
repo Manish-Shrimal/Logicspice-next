@@ -127,12 +127,12 @@ const Page = () => {
                   platform. The developers of Magento provide a significant
                   addition to their users with an assortment of choices and
                   development options catered by the Magento and we as a
-                  <a
-                    href="https://www.logicspice.com/web-development"
+                  <Link
+                    href="/services/web-development"
                     target="_blank"
                   >
                     web development company
-                  </a>
+                  </Link>
                   can customize them to meet any specific requirements of
                   customization. Magento web development is rendered via a MVC
                   or Model View Controller&sbquo; EAV or Entity Attribute Value
@@ -144,12 +144,12 @@ const Page = () => {
                 </p>
                 <p>
                   Magento{" "}
-                  <a
-                    href="https://www.logicspice.com/website-design"
+                  <Link
+                    href="/services/website-design"
                     target="_blank"
                   >
                     website designing
-                  </a>
+                  </Link>
                   and custom development services have been utilized by many
                   leading enterprises. We provide our clients with a larger
                   choice base than any other framework developer.

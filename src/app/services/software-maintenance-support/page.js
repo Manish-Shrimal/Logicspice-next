@@ -80,8 +80,8 @@ const Page = () => {
                 For software to be exceptional, it needs to be backed up by
                 reliable software support and maintenance service. Since user
                 preferences keep on varying rapidly, perfect
-                <a
-                  href="https://www.logicspice.com/software-development"
+                <Link
+                  href="/services/software-development"
                   target="_blank"
                   style={{
                     color: "#31aae1",
@@ -91,7 +91,7 @@ const Page = () => {
                   }}
                 >
                   software development{" "}
-                </a>
+                </Link>
                 does not exist. However, to ensure that the customer stays
                 satisfied with the reliability and performance of the
                 development, we at Logicspice provide expert software support
@@ -105,8 +105,8 @@ const Page = () => {
                 simple, we make available at your disposal same level of
                 expertise utilized while developing the software. Equipped with
                 an experienced team of
-                <a
-                  href="https://www.logicspice.com/mobile-app-development"
+                <Link
+                  href="/services/mobile-app-development"
                   target="_blank"
                   style={{
                     color: "#31aae1",
@@ -116,7 +116,7 @@ const Page = () => {
                   }}
                 >
                   mobile app developers
-                </a>
+                </Link>
                 and web programmers, we at Logicspice offer comprehensive
                 software support services to meet company requirements. We
                 provide you with long term ceaseless maintenance along with

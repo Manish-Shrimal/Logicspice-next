@@ -16,7 +16,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   var settings = {
@@ -36,10 +36,6 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-
-
-
-
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -72,22 +68,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/whatsapp-clone"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/whatsapp-clone"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -109,7 +104,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -140,7 +137,9 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -167,7 +166,9 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="WhatsApp Clone"
                   src="/img/softwares-banner-img/whatsapp-banner-img.png"
                 />
@@ -202,7 +203,10 @@ See how it work yourself!"
           </p>
         </div>
       </section>
-      <section className="client-say WhatsaapCliets" style={{ background: "#fff" }}>
+      <section
+        className="client-say WhatsaapCliets"
+        style={{ background: "#fff" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -264,7 +268,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/whatsappclone/whatsapp_user.png"
                             alt="Seller App Features"
                           />
@@ -275,7 +281,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -292,7 +300,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
                                 />
@@ -309,7 +319,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/private-chat.png"
                                 />
@@ -326,7 +338,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_job.png"
                                 />
@@ -343,7 +357,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/search-friend.png"
                                 />
@@ -361,7 +377,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/add-group.png"
                                 />
@@ -378,7 +396,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/update-group.png"
                                 />
@@ -396,7 +416,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/delete-group.png"
                                 />
@@ -413,7 +435,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/chear-chat.png"
                                 />
@@ -430,7 +454,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/leave-group.png"
                                 />
@@ -444,7 +470,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/add-group.png"
                                 />
@@ -461,7 +489,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/remove-friend.png"
                                 />
@@ -489,7 +519,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/whatsappclone/whatsapp_deshboard.png"
                             alt="Admin Panel"
                           />
@@ -500,7 +532,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -514,7 +548,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                 />
@@ -532,7 +568,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                 />
@@ -550,7 +588,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
                                 />
@@ -568,7 +608,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_contents.png"
                                 />
@@ -585,7 +627,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_service.png"
                                 />
@@ -617,15 +661,17 @@ See how it work yourself!"
       <section className="job_product_page_header_in">
         <div className="container">
           <div className="whateissuprt">
-            <h2 className="headhs">What does our WhatsApp Clone App offer you?</h2>
+            <h2 className="headhs">
+              What does our WhatsApp Clone App offer you?
+            </h2>
             <p>
               With the boom in this era of social networking{" "}
-              <strong>WhatsApp</strong> has become the world&lsquo;s most popular
-              messenger. More than one billion people are using this app for
-              communication. So, take advantage of its popularity you can launch
-              your messenger app like WhatsApp. We at Logicspice, provide ready
-              to use <strong>WhatsApp clone script</strong> which helps to start
-              your messenger in less time.{" "}
+              <strong>WhatsApp</strong> has become the world&lsquo;s most
+              popular messenger. More than one billion people are using this app
+              for communication. So, take advantage of its popularity you can
+              launch your messenger app like WhatsApp. We at Logicspice, provide
+              ready to use <strong>WhatsApp clone script</strong> which helps to
+              start your messenger in less time.{" "}
             </p>
             <p>
               This script is fully responsive and provides an excellent user
@@ -737,7 +783,7 @@ See how it work yourself!"
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -746,20 +792,23 @@ See how it work yourself!"
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
-              <div className="btn btn-get" onClick={openModal}>
-                    <button>Get Demo Access!</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Whatsapp Clone.
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of Whatsapp Clone.
 See how it work yourself!"
-                      />
-                    }
-                  </div>
-                <Link className="btn fiverr-buys" href="/softwares/whatsapp-clone">
+                    />
+                  }
+                </div>
+                <Link
+                  className="btn fiverr-buys"
+                  href="/softwares/whatsapp-clone"
+                >
                   Buy Now
                 </Link>
               </div>
@@ -780,7 +829,13 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>24 Reviews</p>
                   </div>
                 </div>
@@ -833,10 +888,7 @@ See how it work yourself!"
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <a  onClick={toggleModal}>
-                contact us
-              </a>
-              .
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
@@ -850,9 +902,11 @@ See how it work yourself!"
             </h2>
             <br />
             <div className="logic-parter">
-            <a onClick={toggleInfo} className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -861,7 +915,6 @@ See how it work yourself!"
                 <span>Why Logicspice</span>
               </a>
               <Whylogicspice open={showInfo} />
-             
             </div>
           </div>
           <div className="small_bbx_job_new" style={{ display: "none" }}>
@@ -870,7 +923,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coding.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coding.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
@@ -886,7 +944,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data-complexity.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data-complexity.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Strong Framework of PHP & Well managed database</h3>
                     <p>
@@ -903,7 +966,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coordinate.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coordinate.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>
                       Quick Response and
@@ -923,7 +991,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/customize.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/customize.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
@@ -938,7 +1011,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/smartphone-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/smartphone-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Mobile Friendly Script</h3>
                     <p>
@@ -953,7 +1031,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Dedicated Support Team</h3>
                     <p>
@@ -970,7 +1053,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/web-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/web-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Global company with agile development approach</h3>
                     <p>
@@ -989,7 +1077,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/encrypted.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/encrypted.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customer information and application level security</h3>
                     <p>
@@ -1005,7 +1098,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/history-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/history-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
@@ -1023,7 +1121,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/seouser-friendly.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/seouser-friendly.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Seo Friendly Development</h3>
                     <p>
@@ -1038,7 +1141,9 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                       />
@@ -1056,7 +1161,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/third-party-api.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/third-party-api.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Integration With Third Party Api</h3>
                     <p>
@@ -1071,7 +1181,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/cost-effective.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/cost-effective.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Cost Effective</h3>
                     <p>
@@ -1097,7 +1212,9 @@ See how it work yourself!"
                 <ul>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
                       />
@@ -1106,7 +1223,9 @@ See how it work yourself!"
                   </li>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/nodejs_icon.png"
                         alt="Node.js"
                         className="lazy"
@@ -1116,13 +1235,20 @@ See how it work yourself!"
                   </li>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -1131,7 +1257,9 @@ See how it work yourself!"
                   </li>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -1140,7 +1268,9 @@ See how it work yourself!"
                   </li>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="IOS"
                         className="lazy"
@@ -1150,7 +1280,9 @@ See how it work yourself!"
                   </li>
                   <li>
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
                         className="lazy"
@@ -1202,7 +1334,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1211,7 +1345,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1220,13 +1356,20 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1338,7 +1481,7 @@ See how it work yourself!"
                   </div>
                 </div>
                 <div className="col-md-7">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1351,10 +1494,11 @@ See how it work yourself!"
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &apos;I have purchased this script and has constructed my own
-                      web-site. This was an easy task because of logicspice&lsquo;s
-                      free installation and support. Keep up the good work. I
-                      will be back for more in the future.&apos;
+                      &apos;I have purchased this script and has constructed my
+                      own web-site. This was an easy task because of
+                      logicspice&lsquo;s free installation and support. Keep up
+                      the good work. I will be back for more in the
+                      future.&apos;
                     </div>
 
                     <div className="who_ratset">
@@ -1367,7 +1511,9 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">John, USA</span>{" "}
                       <span>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1376,7 +1522,7 @@ See how it work yourself!"
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &apos;This is the best WhatsApp Clone App. Thanks for your
+                      &apos;This is the best WhatsApp Clone App. Thanks for your
                       great efforts and support while installing the script.
                       Your prompt service regarding a few minor issues was
                       superb.&apos;
@@ -1392,7 +1538,9 @@ See how it work yourself!"
                       </span>
                       D. Smith, Germany{" "}
                       <span>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in USA"
                         />
@@ -1401,7 +1549,7 @@ See how it work yourself!"
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &apos;Recently I bought this script from logicspice and it
+                      &apos;Recently I bought this script from logicspice and it
                       worked really nice, it helped my business to gain more
                       efficiency. I recommend for all whom looking for a
                       WhatsApp Clone, it&lsquo;s really nice.&apos;
@@ -1417,7 +1565,9 @@ See how it work yourself!"
                       </span>
                       Mike wilshon, AUS{" "}
                       <span>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1456,8 +1606,8 @@ See how it work yourself!"
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      No, You can&lsquo;t resell the script. All rights will remain
-                      with Logicspice only.
+                      No, You can&lsquo;t resell the script. All rights will
+                      remain with Logicspice only.
                     </p>
                   </MDBAccordionItem>
 
@@ -1495,7 +1645,9 @@ See how it work yourself!"
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/whatsappclone/whatsapp-clone.png"
                     alt="Ls Chat"
                   />
@@ -1506,7 +1658,9 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/whatsappclone/chat-login.png"
                     alt="Chat Login"
                   />
@@ -1517,7 +1671,9 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/whatsappclone/edit-profile.png"
                     alt="Edit Profile"
                   />
@@ -1528,7 +1684,12 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100} src="/img/whatsappclone/message.png" alt="Message" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/whatsappclone/message.png"
+                    alt="Message"
+                  />
                 </div>
                 <div className="hands-proved">
                   <div className="titleof_scnew">Message</div>
@@ -1542,7 +1703,7 @@ See how it work yourself!"
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -1568,7 +1729,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Crowdfunding</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/crowdfunding_new.png"
                             alt="Crowdfunding"
                             className=""
@@ -1591,7 +1754,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
                             className=""
@@ -1612,7 +1777,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Logistic Marketplace software</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
                             className=""
@@ -1636,8 +1803,10 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

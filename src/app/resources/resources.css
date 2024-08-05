@@ -381,3 +381,299 @@ section {
 .CustomerReviewsClient i.contry-flag {
 	width: 25px;
 }
+
+.ecommerce_faq_section {
+	padding: 70px 0 0;
+}
+
+.resources-header {
+	background-position: left top;
+	background-size: cover;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 100px 0;
+	border-bottom: 1px solid #fff;
+}
+
+.resources-header span {
+	text-shadow: 0 0 3px #000;
+	font-family: "roboto", sans-serif;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold
+}
+
+.breadcrems_header {
+	color: #fff;
+}
+
+.breadcrems_header {
+	background-color: #451095;
+	padding: 15px 0;
+}
+
+.breadcrems_header h1 {
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase
+}
+
+.breadcrems_header ol.breadcrumb {
+	background: transparent none repeat scroll 0 0;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	display: inline-block;
+	width: 100%
+}
+
+.breadcrems_header ol.breadcrumb li,
+.breadcrems_header ol.breadcrumb a {
+	color: #fff;
+	display: inline-block;
+}
+
+.content_area_resources {
+	padding: 30px 0;
+}
+
+.content_area_resources h2::after,
+.content_area_resources h3::after,
+.content_area_resources h4::after {
+	background: #451095;
+	clear: both;
+	content: "";
+	display: block;
+	height: 2px;
+	margin: 5px 0 0;
+	vertical-align: top;
+	width: 47px;
+}
+
+.content_area_resources h2,
+.content_area_resources h3,
+.content_area_resources h4 {
+	color: #29166f;
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	position: relative;
+	width: 100%;
+	font-weight: 600
+}
+
+.content_area_resources li {
+	background: rgba(0, 0, 0, 0) url("/img/globalpages/icn_list_detail.png") no-repeat scroll 0 2px;
+	float: left;
+	font-size: 17px;
+	margin-bottom: 15px;
+	padding-left: 24px;
+	width: 100%;
+}
+
+.aside_menu,
+.sludebar_menus {
+	float: left;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.aside_menu li,
+.sludebar_menus ul li {
+	float: left;
+	margin-bottom: 2px;
+	width: 100%;
+	position: relative;
+	background: #e5e5e5 none repeat scroll 0 0;
+	transition: all 0.5s ease 0s;
+}
+
+.aside_menu li a,
+.sludebar_menus ul li a {
+	color: #000;
+	float: left;
+	font-size: 16px;
+	padding: 19px 15px 18px;
+	position: relative;
+	width: 100%;
+}
+
+.aside_menu li::before,
+.sludebar_menus ul li a::before {
+	background-color: #451095;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 3px;
+	transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+}
+
+.aside_menu li:hover::before,
+.sludebar_menus ul li:hover a::before,
+.aside_menu li.current_page_item::before,
+.sludebar_menus ul li.current_page_item a::before {
+	width: 100%;
+}
+
+.aside_menu li a:hover,
+.sludebar_menus ul li a:hover,
+.aside_menu li.current_page_item a,
+.sludebar_menus ul li.current_page_item a {
+	color: #fff;
+}
+
+.HowCanBanner {
+	background: url(/img/resources/how_can_we_help.png) no-repeat
+}
+
+.HowMuchBanner {
+	background: url(/img/resources/how_much_an_app_cost.png) no-repeat
+}
+
+.GrowBusinessBanner {
+	background: url(/img/resources/how_to_grow_your_business_idea.png) no-repeat
+}
+
+.wop-header {
+	background-image: url("/img/resources/wp-head.png");
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 80px 0;
+}
+
+.wop-header h1 {
+	color: #fff;
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.wop-middle p {
+	color: #4c4c4c;
+	font-size: 18px;
+	margin: 0;
+	text-align: center;
+}
+
+.wop-middle {
+	padding: 60px 0;
+}
+
+.wop-gray {
+	background-color: #ececec;
+}
+
+.wop-list {
+	padding: 50px 0;
+}
+
+.wop-list .col-md-3 {
+	width: 30%;
+}
+
+.wop-list .col-md-9 {
+	width: 70%;
+}
+
+.wl-img {
+	float: left;
+	margin-right: 20px;
+	width: 80px;
+}
+
+.wl-cont {
+	float: left;
+	width: calc(100% - 100px);
+	direction: ltr
+}
+
+.wl-cont h2 {
+	border-bottom: 3px dotted #a3a3a3;
+	color: #29166f;
+	font-size: 30px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.wl-cont p {
+	color: #555555;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.wop-list li {
+	color: #6a6a6a;
+	font-size: 16px;
+	padding: 6px 0 6px 20px;
+	position: relative;
+}
+
+.wop-list li::after {
+	border: 3px solid #29166f;
+	border-radius: 50%;
+	content: "";
+	height: 15px;
+	left: -7px;
+	position: absolute;
+	top: 10px;
+	width: 14px;
+}
+
+.wop-inverse .wl-img {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+.wop-inverse ul {
+	text-align: right;
+}
+
+.wop-inverse ul li {
+	padding: 6px 20px 6px 0;
+}
+
+.wop-inverse li::after {
+	left: auto;
+	right: -7px;
+}
+
+.wop-talk {
+	background-color: #ff7f00;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.wop-talk h3 {
+	color: #fff;
+	font-size: 30px;
+	margin: 0 auto 20px;
+	max-width: 880px;
+}
+
+.wop-talk .btn.btn-default {
+	background-color: #fff;
+	border: 0px;
+	color: #ff7f00;
+	font-size: 20px;
+	padding: 10px 40px;
+}
+
+.ResourcesBanner {
+	background: url(/img/resources/resources-banner.png) no-repeat
+}
+
+.QualityAssuranceBanner {
+	background: url(/img/resources/quality_assurance.png) no-repeat
+}

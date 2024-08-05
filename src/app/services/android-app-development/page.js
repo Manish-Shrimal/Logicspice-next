@@ -1045,12 +1045,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/beano-app/"
                               target="_blank"
                             >
                               Beano
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &rdquo;Beano: Coffee ordering&rdquo; is an
@@ -1070,12 +1070,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/social-securites/"
                               target="_blank"
                             >
                               Social Securites
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             Social Securites app that will scoping for
@@ -1095,12 +1095,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/utrack-app/"
                               target="_blank"
                             >
                               Utrack
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &rdquo;Utrack&rdquo; app facilitates the students to
@@ -1120,12 +1120,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/bestcit-app/"
                               target="_blank"
                             >
                               Bestcit
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &rdquo;Aphorism&rdquo; app is a hub where user can
@@ -1138,12 +1138,12 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="more_btn more_btnrevercebn">
-                  <a
+                  <Link
                     className="btn btn-primary"
                     href="https://www.logicspice.com/case-study/"
                   >
                     <span>Featured Case Studies</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1340,12 +1340,12 @@ const Page = () => {
                     <div className="lin_hr"></div>
                     <div className="clear"></div>
                     <div className="seall_btn">
-                      <a
+                      <Link
                         className="btn btn-primary"
-                        href="https://www.logicspice.com/industries/"
+                        href="/industries/"
                       >
                         View
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

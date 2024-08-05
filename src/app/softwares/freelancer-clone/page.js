@@ -15,7 +15,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -43,21 +43,21 @@ const Page = () => {
   const [adminTab, setAdminTab] = useState(false);
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/freelancer-clone"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/freelancer-clone"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
@@ -1274,7 +1274,7 @@ See how it work yourself!"
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1283,7 +1283,7 @@ See how it work yourself!"
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
                 {/* <a
                   className="btn btn-get"
@@ -1294,13 +1294,13 @@ See how it work yourself!"
                 >
                   Get Demo Access!
                 </a> */}
-                <a
+                <Link
                   className="btn fiverr-buys"
                   href="https://www.logicspice.com/softwares/buynow/freelancer-clone"
                   id="buy_now_1"
                 >
                   Buy Now
-                </a>
+                </Link>
               </div>
               <div className="job-valu"></div>
               <div className="jocpp">
@@ -1838,15 +1838,15 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a
+                    <Link
                       href="https://www.xirfad.so/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       xirfad.so
-                    </a>
+                    </Link>
                   </div>
-                  <a
+                  <Link
                     href="https://www.xirfad.so/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1859,19 +1859,19 @@ See how it work yourself!"
                       title=""
                       className="img-fluid"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a
+                    <Link
                       href="https://talent.shineywise.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       talent.shineywise.com
-                    </a>
+                    </Link>
                   </div>
-                  <a
+                  <Link
                     href="https://talent.shineywise.com/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1884,19 +1884,19 @@ See how it work yourself!"
                       title=""
                       className="img-fluid"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a
+                    <Link
                       href="https://community.mu"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       community.mu
-                    </a>
+                    </Link>
                   </div>
-                  <a
+                  <Link
                     href="https://community.mu"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1909,7 +1909,7 @@ See how it work yourself!"
                       title=""
                       className="img-fluid"
                     />
-                  </a>
+                  </Link>
                 </div>
               </Slider>
             </div>

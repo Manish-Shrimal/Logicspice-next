@@ -33,7 +33,8 @@ const Page = () => {
       <section className="slider_img shopifyslider_img">
         <div className="container">
           <div className="slider_inner_img">
-            <Image width={800}
+            <Image
+              width={800}
               height={500 / (100 / 100)}
               alt="PSD to HTML Conversion Services"
               src="/img/psdtowordpress/psd-to-html.png"
@@ -51,7 +52,9 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     alt="convert PSD to Wordpress"
                     src="/img/psdtowordpress/pstowp.png"
                   />
@@ -62,18 +65,24 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={50} height={100}
+                  <Image
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/migration-maintence.png"
                   />
                 </div>
-                <div className="adeptness_box_content">24*7 Technical Support</div>
+                <div className="adeptness_box_content">
+                  24*7 Technical Support
+                </div>
               </div>
             </div>
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={50} height={100}
+                  <Image
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/wordpressthemeicon.png"
                   />
@@ -87,7 +96,9 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={50} height={100}
+                  <Image
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/customwordpressicon.png"
                   />
@@ -111,21 +122,22 @@ const Page = () => {
             <br />
             <p>
               Equipped with exceptional team of developers and experienced
-              designers&sbquo; we remain ever ready to convert any file design to HTML
-              utilizing CSS preprocessors along with JavaScript. Our best psd to
-              html conversion service is regarded as one of the best owing to
-              its seamless functionality and responsiveness.
+              designers&sbquo; we remain ever ready to convert any file design
+              to HTML utilizing CSS preprocessors along with JavaScript. Our
+              best psd to html conversion service is regarded as one of the best
+              owing to its seamless functionality and responsiveness.
             </p>
             <br />
             <p>
-              Moreover&sbquo; we also fulfill front end requirements of customers such
-              as giving parallax effect or putting animations and videos in the
-              background. Being equipped with talented developers&sbquo; we assist you
-              in bringing your artwork to best possible life by simply
-              converting it into a dynamic and easy to use site. To enhance the
-              user experience and customer satisfaction&sbquo; we develop the site
-              based on code based CMS platform of your choice&sbquo; such as
-              WordPress&sbquo; Shopify or Joomla.
+              Moreover&sbquo; we also fulfill front end requirements of
+              customers such as giving parallax effect or putting animations and
+              videos in the background. Being equipped with talented
+              developers&sbquo; we assist you in bringing your artwork to best
+              possible life by simply converting it into a dynamic and easy to
+              use site. To enhance the user experience and customer
+              satisfaction&sbquo; we develop the site based on code based CMS
+              platform of your choice&sbquo; such as WordPress&sbquo; Shopify or
+              Joomla.
             </p>
             <br />
             <p>
@@ -145,9 +157,7 @@ const Page = () => {
               <div className="slider_wrapper_inner_content_in">
                 <div className="slider_wrapper_inner_content">
                   <div id="processslide" className="owl-carousel hidedot">
-
-                  <Processconvert />
-
+                    <Processconvert />
                   </div>
                 </div>
               </div>
@@ -163,8 +173,8 @@ const Page = () => {
               conversions?
             </h2>
             <p>
-              In the terms of quality &amp; performance&sbquo; you can expect high
-              from us. What we give to our clients-
+              In the terms of quality &amp; performance&sbquo; you can expect
+              high from us. What we give to our clients-
             </p>
           </div>
 
@@ -172,12 +182,16 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/pixcel_perfect_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Seo friendly conversion</h3>
+                <h3 className="adeptness_psd_title_box">
+                  Seo friendly conversion
+                </h3>
                 <div className="adeptness_psd_content_box">
                   Our developer utilize SEO friendly markups while coding and
                   ensure that it remains free from glitches.
@@ -187,7 +201,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/compability_all_browsers_icon.png"
                   />
@@ -202,22 +218,28 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/w3c_validator_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Quick speed loading </h3>
+                <h3 className="adeptness_psd_title_box">
+                  Quick speed loading{" "}
+                </h3>
                 <div className="adeptness_psd_content_box">
-                  We optimized images&sbquo; codes and CSS while converting the PSD
-                  into HTML&sbquo; it makes the file size smaller.
+                  We optimized images&sbquo; codes and CSS while converting the
+                  PSD into HTML&sbquo; it makes the file size smaller.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_responsive_icon.png"
                   />
@@ -234,42 +256,52 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_optimised_icon.png"
                   />
                 </div>
                 <h3 className="adeptness_psd_title_box">Easy integration</h3>
                 <div className="adeptness_psd_content_box">
-                  We allow the facility of smooth integration&sbquo; so that you can
-                  add something to site whenever you want.{" "}
+                  We allow the facility of smooth integration&sbquo; so that you
+                  can add something to site whenever you want.{" "}
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_efficient_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Browser compatibility </h3>
+                <h3 className="adeptness_psd_title_box">
+                  Browser compatibility{" "}
+                </h3>
                 <div className="adeptness_psd_content_box">
-                  It runs smoothly on Google chrome&sbquo; Mozilla and with every
-                  popular browser.{" "}
+                  It runs smoothly on Google chrome&sbquo; Mozilla and with
+                  every popular browser.{" "}
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_theme_customization_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Validated HTML markup</h3>
+                <h3 className="adeptness_psd_title_box">
+                  Validated HTML markup
+                </h3>
                 <div className="adeptness_psd_content_box">
                   The coding is done manually utilizing CSS preprocessor for
                   ensuring better readability along with easy maintenance.{" "}
@@ -279,7 +311,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/admin_interface_icon.png"
                   />
@@ -295,7 +329,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_fast_loading_icon.png"
                   />
@@ -310,7 +346,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/privacy_support_icon.png"
                   />
@@ -325,7 +363,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_searchengine_icon.png"
                   />
@@ -340,7 +380,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_widget_icon.png"
                   />
@@ -355,12 +397,16 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_best_price_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Admin panel facility</h3>
+                <h3 className="adeptness_psd_title_box">
+                  Admin panel facility
+                </h3>
                 <div className="adeptness_psd_content_box">
                   To ensure that you are able to monitor the site well&sbquo; we
                   provide you with admin control facility along with integration
@@ -371,7 +417,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_outstanding_icon.png"
                   />
@@ -386,7 +434,9 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/security_icon_psd.png"
                   />
@@ -412,20 +462,18 @@ const Page = () => {
             Logicspice helps you bring your creativity to fruition. If you have
             any idea in your mind which you want to present before the world as
             your business&sbquo; you are not late.{" "}
-            <a href="https://www.logicspice.com/hire-developers/">
-              Hire developer
-            </a>{" "}
-            from our experienced team and give a start to your business.
+            <Link href="/services/hire-developers/">Hire developer</Link> from
+            our experienced team and give a start to your business.
           </p>
           <div className="requirment_btn">
-            <a
+            <Link
               className="btn btn-primary"
               data-aos="fade-right"
               id="inquirenow"
-              href="https://www.logicspice.com/portfolio/"
+              href="/portfolio/"
             >
               Portfolio
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -437,104 +485,104 @@ const Page = () => {
           <div className="expert_minds">
             <div className="expert_minds_con">
               <p>
-                If you are good at designing&sbquo; we are good at developing. We can
-                help you to create a WordPress theme out of the design you
-                created. All we will need is your design in the PSD format and
-                we will provide code into HTML to provide you with a WordPress
-                theme as imagined by you.
+                If you are good at designing&sbquo; we are good at developing.
+                We can help you to create a WordPress theme out of the design
+                you created. All we will need is your design in the PSD format
+                and we will provide code into HTML to provide you with a
+                WordPress theme as imagined by you.
               </p>
             </div>
             <div className="different_experts">
               <ul className="different_experts_member">
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-android-app-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Android App Developer
-                  </a>
+                  <Link href="/hire-android-app-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Android App Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-ios-app-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    iOS App Developer
-                  </a>
+                  <Link href="/services/hire-ios-app-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire iOS App Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-cakephp-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Cake PHP Developer
-                  </a>
+                  <Link href="/hire-cakephp-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Cake PHP Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-wordpress-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Wordpress Developer
-                  </a>
+                  <Link href="/hire-wordpress-experts/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Wordpress Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-drupal-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Drupal Developer
-                  </a>
+                  <Link href="/hire-drupal-experts/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Drupal Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-magento-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Magento Developer
-                  </a>
+                  <Link href="/hire-magento-experts/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Magento Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-zencart-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Zencart Developer
-                  </a>
+                  <Link href="/hire-zencart-experts/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Zencart Developer
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-shopify-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Shopify Developers
-                  </a>
+                  <Link href="/hire-shopify-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Shopify Developers
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-laravel-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Laravel Developers
-                  </a>
+                  <Link href="/hire-laravel-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Laravel Developers
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-codeigniter-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Codeigniter Developers
-                  </a>
+                  <Link href="/hire-codeigniter-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Codeigniter Developers
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-node-js-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Node.Js Experts
-                  </a>
+                  <Link href="/hire-node-js-experts/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Node.Js Experts
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-angular-js-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Angular jS Developers
-                  </a>
+                  <Link href="/hire-angular-js-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Angular jS Developers
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-yii-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Yii Developers
-                  </a>
+                  <Link href="/hire-yii-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Yii Developers
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-opencart-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Opencart Developers
-                  </a>
+                  <Link href="/hire-opencart-developers/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Opencart Developers
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Hybrid mobile app Developer
-                  </a>
+                  <Link href="/hire-hybrid-mobile-app-developer/">
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Hybrid mobile app Developer
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -559,7 +607,8 @@ const Page = () => {
       <section className="working_with">
         <div className="container">
           <h3 className="title_heading title_heading_bgg">
-            Worked with 1500+ companies worldwide&sbquo; from startups to enterprises.
+            Worked with 1500+ companies worldwide&sbquo; from startups to
+            enterprises.
           </h3>
 
           <Workingwith />
@@ -568,12 +617,17 @@ const Page = () => {
 
       <section className="quoue_box_full_sec">
         <div className="whatsapp-call">
-          <a
+          <Link
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
-          </a>
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </Link>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />

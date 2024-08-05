@@ -16,7 +16,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -76,21 +76,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/real-estate-script"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/real-estate-script"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -115,7 +115,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -146,7 +148,9 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -167,7 +171,9 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="Real Estate Script"
                   src="/img/softwares-banner-img/realstate-banner-img.png"
                 />
@@ -230,7 +236,9 @@ See how it work yourself!"
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Real Estate Classifieds Script Features</h2>
+            <h2 className="taxt_tt_job">
+              Real Estate Classifieds Script Features
+            </h2>
           </div>
 
           <div className="tatxt_txt_job text-center">
@@ -280,7 +288,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/realestate/real_saler.png"
                             alt="Agent Features"
                           />
@@ -291,7 +301,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -310,7 +322,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                 />
@@ -327,7 +341,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/self_profile.png"
                                 />
@@ -345,7 +361,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_city.png"
                                 />
@@ -364,7 +382,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view_map.png"
                                 />
@@ -382,7 +402,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view_public.png"
                                 />
@@ -400,7 +422,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view_apartment.png"
                                 />
@@ -419,7 +443,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
                                 />
@@ -436,7 +462,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/membership_plan.png"
                                 />
@@ -453,7 +481,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
                                 />
@@ -471,7 +501,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_messages.png"
                                 />
@@ -489,7 +521,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_appea.png"
                                   className="lazy"
@@ -519,7 +553,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/realestate/real_saler.png"
                             alt="User Features"
                           />
@@ -530,7 +566,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/search_apartment.png"
                                 />
@@ -548,7 +586,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/browse_gig.png"
                                 />
@@ -566,7 +606,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/refine_search.png"
                                 />
@@ -585,7 +627,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view_map.png"
                                 />
@@ -603,7 +647,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/view_apartment.png"
                                 />
@@ -621,7 +667,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/contact.png"
                                 />
@@ -641,7 +689,9 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                 />
@@ -660,7 +710,9 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                 />
@@ -679,7 +731,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/Ser_provider_ragis.png"
                                 />
@@ -708,7 +762,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/realestate/real_estate_deshboard.png"
                             alt="Admin Panel"
                           />
@@ -719,7 +775,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -736,7 +794,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                 />
@@ -754,7 +814,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_city.png"
                                 />
@@ -772,7 +834,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
                                 />
@@ -790,7 +854,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_apartment.png"
                                 />
@@ -809,7 +875,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
                                 />
@@ -827,7 +895,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/sort_apartment.png"
                                 />
@@ -844,7 +914,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_countries.png"
                                 />
@@ -862,7 +934,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_appea.png"
                                 />
@@ -880,7 +954,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/membership_plan.png"
                                 />
@@ -897,7 +973,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/spec_price.png"
                                 />
@@ -914,7 +992,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/pay_transaction.png"
                                 />
@@ -944,7 +1024,9 @@ See how it work yourself!"
       <section className="job_product_page_header_in">
         <div className="container">
           <div className="whateissuprt">
-            <h2 className="headhs">What does our real estate script offer you?`</h2>
+            <h2 className="headhs">
+              What does our real estate script offer you?`
+            </h2>
             <p>
               Nowadays real estate applications and agent websites are becoming
               more and more popular for searching and selling the property. So,
@@ -1057,7 +1139,7 @@ See how it work yourself!"
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1066,7 +1148,7 @@ See how it work yourself!"
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
@@ -1094,7 +1176,13 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>13 Reviews</p>
                   </div>
                 </div>
@@ -1163,7 +1251,9 @@ See how it work yourself!"
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1180,7 +1270,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coding.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coding.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
@@ -1196,7 +1291,9 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/data-complexity.png"
                         alt="img"
                       />
@@ -1216,7 +1313,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coordinate.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coordinate.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>
                       Quick Response and
@@ -1236,7 +1338,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/customize.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/customize.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
@@ -1251,7 +1358,9 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/smartphone-icon.png"
                         alt="img"
                       />
@@ -1269,7 +1378,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Dedicated Support Team</h3>
                     <p>
@@ -1286,7 +1400,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/web-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/web-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Global company with agile development approach</h3>
                     <p>
@@ -1305,7 +1424,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/encrypted.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/encrypted.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customer information and application level security</h3>
                     <p>
@@ -1321,7 +1445,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/history-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/history-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
@@ -1339,7 +1468,9 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/seouser-friendly.png"
                         alt="img"
                       />
@@ -1357,7 +1488,9 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                       />
@@ -1375,7 +1508,9 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/third-party-api.png"
                         alt="img"
                       />
@@ -1393,7 +1528,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/cost-effective.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/cost-effective.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Cost Effective</h3>
                     <p>
@@ -1419,7 +1559,9 @@ See how it work yourself!"
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
                       />
@@ -1428,13 +1570,20 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -1443,7 +1592,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -1488,7 +1639,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1497,7 +1650,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1506,7 +1661,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                   />
@@ -1515,7 +1672,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1657,7 +1816,9 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">John, USA</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1682,7 +1843,9 @@ See how it work yourself!"
                       </span>
                       D. Smith, Germany{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
                         />
@@ -1707,7 +1870,9 @@ See how it work yourself!"
                       </span>
                       mike wilshon, AUS{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in Australia"
                         />
@@ -1784,7 +1949,9 @@ See how it work yourself!"
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/realestate/real_home.jpg"
                     alt="Real Estate"
                   />
@@ -1796,7 +1963,9 @@ See how it work yourself!"
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/realestate/real_proparty.jpg"
                     alt="Property"
                     className="lazy"
@@ -1809,7 +1978,9 @@ See how it work yourself!"
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/realestate/real_proparty_detail.jpg"
                     alt="Property Details"
                     className="lazy"
@@ -1853,7 +2024,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>whatsapp clone</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
                           />
@@ -1874,7 +2047,9 @@ See how it work yourself!"
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
                           />
@@ -1895,7 +2070,9 @@ See how it work yourself!"
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
                           />
@@ -1918,8 +2095,10 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

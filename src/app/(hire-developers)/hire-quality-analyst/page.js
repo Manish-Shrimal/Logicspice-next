@@ -23,7 +23,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image: "https://www.logicspice.com/app/webroot/img/images/kesepara.jpg",
+      image: "/img/globalbusinesscountries/kesepara.jpg",
       heading: "C2C Ecommerce Website About Fashion",
       text: "&quot;Exactly the best team available online ! I have been working and communicating with a few companies over the internet and i didn&apos;t see a single better company than logicspice. They are",
       name: "Burak",
@@ -31,7 +31,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image: "https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg",
+      image: "/img/globalbusinesscountries/dsherevk.jpg",
       heading: "Website + Mobile App (iOs&Android)",
       text: "&quot;&quot;Manish was very cooperative and professional during the project. The team was great, the project was very complicated and they tried their best to complete it with the best diligence. I",
       name: "Dmitry",
@@ -39,7 +39,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image: "https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg",
+      image: "/img/globalbusinesscountries/sabdeen.jpg",
       heading: "Build a Website",
       text: "&quot;Best project management experience/journey I had. Great team spirit, very flexible and understanding while maintaining time and budget target.Top tear professional communication and support.",
       name: "Sherif A.",
@@ -48,7 +48,7 @@ const Page = () => {
     {
       id: 4,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg",
+        "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -56,7 +56,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image: "https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg",
+      image: "/img/globalbusinesscountries/tjulia1.jpg",
       heading: "Build a Social Networking Website With Payment System",
       text: "&quot;I hired this team for a very complex project that involved handling many different types of users, payment options, and social network integration. Extremely timely and professional. Will use again!&quot;",
       name: "Tom J.",
@@ -416,10 +416,10 @@ const Page = () => {
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-cakephp-developers"
+                    href="/hire-cakephp-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -441,15 +441,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-wordpress-experts"
+                    href="/hire-wordpress-experts"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -470,15 +470,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-laravel-developers"
+                    href="/hire-laravel-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -499,7 +499,7 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

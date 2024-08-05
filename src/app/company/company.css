@@ -1016,6 +1016,95 @@ body{font-family: "Roboto", sans-serif !important; font-weight: 400;}
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 }
+
+/* Dynamic Styles for case study Start */
+.case-study-listing .blog_row:before,
+.casestudies_header:before{ position: absolute; left: 0; top: 0; content: "";  width: 100%; height: 100%}
+.afodel_header:before{background: #fcb724;opacity: 0.7; }
+.nedarom_header:before{background: #1dbf73;opacity: 0.7; }
+.zipjob_header:before{background: rgb(0,114,162);opacity: 0.7; }
+.online-order-menu_header:before{ background: rgb(85,85,85);opacity: 0.7; }
+.iamcleaning_header:before{ background: rgb(137,137,137);opacity: 0.7; }
+.techybeach_header:before{ background: rgb(67,185,185);opacity: 0.7; }
+.racing-cartel_header:before{ background: rgb(239,140,39);opacity: 0.7; }
+.tradebench_header:before{ background: rgb(25,112,233);opacity: 0.7; }
+.place-rocks_header:before{ background: rgb(102, 212, 59);opacity: 0.7; }
+.retainme_header:before{ background: rgb(163, 163, 162);opacity: 0.7; }
+.zip-movers_header:before{ background: rgb(76, 159, 63);opacity: 0.7; }
+.cipherforex-informational-website_header:before{ background: rgb(24, 140, 162);opacity: 0.7; }
+.on-demand-service-providing-citohealthcareprofessionals_header:before{ background: rgb(255, 156, 0);opacity: 0.6; }
+.ubbergloves_header:before{ background: rgb(190, 148, 46);opacity: 0.7; }
+.tipping-cartel_header:before{ background: rgb(206, 174, 37);opacity: 0.7; }
+.remote-box-office_header:before{ background: rgb(30, 124, 170);opacity: 0.7; }
+.treasuremap-app_header:before{ background: rgb(70, 140, 87);opacity: 0.7; }
+.ipoints-demo_header:before{ background: rgb(226, 114, 60); opacity: 0.7;}
+.uuuga_header:before{ background: rgb(71, 162, 209);opacity: 0.7; }
+.jvpost_header:before{ background: rgb(115, 121, 146);opacity: 0.7; }
+.physical-edge_header:before{ background: rgb(134, 36, 97);opacity: 0.7; }
+.social-securitas-1_header:before{ background: rgb(245, 185, 36);opacity: 0.7; }
+.martgram-1_header:before{ background: rgb(24, 98, 200);opacity: 0.7; }
+.bleepmenot_header:before{ background: rgb(225, 212, 11);opacity: 0.7; }
+.locumsite_header:before{ background: rgb(27, 182, 211);opacity: 0.7; }
+.eampenzi_header:before{ background: rgb(198, 134, 193);opacity: 0.7; }
+.national-cleaning-group_header:before{ background: rgb(66, 147, 210);opacity: 0.7; }
+.thrill-venture_header:before{ background: rgb(17, 134, 168);opacity: 0.7; }
+.dream-job_header:before{ background: rgb(48, 196, 184);opacity: 0.7; }
+.lolly-daisy_header:before{ background: rgb(250, 154, 96);opacity: 0.7; }
+.truckseeker_header:before{ background: rgb(23, 96, 197);opacity: 0.7; }
+.faircomny_header:before{ background: rgb(127, 175, 141);opacity: 0.7; }
+.katerz-1_header:before{ background: rgb(131, 190, 91);opacity: 0.7; }
+.iamcooking_header:before{ background: rgb(102, 102, 102); opacity: 0.7;}
+.satvicsage_header:before{ background: rgb(123, 151, 126);opacity: 0.7; }
+.shopbook_header:before{ background: rgb(13, 154, 229);opacity: 0.7; }
+.maltazone_header:before{ background: rgb(185, 185, 185);opacity: 0.7; }
+.amcs_header:before{ background: rgb(127, 175, 141); opacity: 0.7;}
+.one-gai_header:before{ background: rgb(28, 93, 184);opacity: 0.7; }
+.daybreaktots_header:before{ background: rgb(165, 137, 236);opacity: 0.6; }
+.martgram-app_header:before{ background: rgb(16, 100, 212);opacity: 0.7; }
+.localgenii-app_header:before{ background: rgb(94, 89, 97);opacity: 0.7; }
+.social-securitas_header:before{ background: rgb(233, 172, 20);opacity: 0.7; }
+.yataxi_header:before{ background: rgb(233, 172, 20);opacity: 0.7; }
+.wheel-shark_header:before{ background: rgb(225, 115, 125);opacity: 0.7; }
+.lazybed_header:before{ background: rgb(128, 203, 196);opacity: 0.7; }
+.la-maison-chic_header:before{ background: rgb(158, 151, 137);opacity: 0.7; }
+.onebed_header:before{ background: rgb(40, 36, 98);opacity: 0.7; }
+.bestcit-app_header:before{ background: rgb(76, 163, 123);opacity: 0.7; }
+.utrack-app_header:before{ background: rgb(108, 110, 89);opacity: 0.7; }
+.beano-app_header:before{ background: rgb(25, 24, 23);opacity: 0.7; }
+.mymentions_header:before{ background: rgb(50, 172, 223);opacity: 0.7; }
+.holoolticketing_header:before{ background: rgb(50, 172, 223);opacity: 0.7; }
+.askoureinstein_header:before{ background: rgb(191, 45, 29);opacity: 0.6; }
+.jv-post_header:before{ background: rgb(16, 16, 16);opacity: 0.7; }
+.pension-plan-management_header:before{ background: rgb(146, 208, 80);opacity: 0.7; }
+.emergencyservice_header:before{ background: rgb(239, 108, 39);opacity: 0.7; }
+.ticketshak_header:before{ background: rgb(186, 163, 17);opacity: 0.7; }
+.food-portal_header:before{ background: rgb(141, 198, 39);opacity: 0.7; }
+.uloan_header:before{ background: rgb(9, 96, 122);opacity: 0.7; }
+.healthywealthy_header:before{ background: rgb(7, 105, 5);opacity: 0.7; }
+.neighborchain_header:before{ background: rgb(125, 215, 162);opacity: 0.7; }
+.klikelas_header:before{ background: rgb(255, 102, 91);opacity: 0.7; }
+.katerz_header:before{ background: rgb(131, 190, 91);opacity: 0.7; }
+.wefurb_header:before{ background: rgb(0, 173, 239);opacity: 0.7; }
+.gigminute_header:before{ background: rgb(244, 186, 89);opacity: 0.7; }
+.simpleshark-2_header:before{ background: rgb(51, 147, 198);opacity: 0.7; }
+.tooleys_header:before{ background: rgb(0, 148, 188);opacity: 0.7; }
+.ahmadkadi_header:before{ background: rgb(220, 141, 106);opacity: 0.7; }
+.itenderyou_header:before{ background: rgb(81, 81, 82);opacity: 0.7; }
+.yolo-dome_header:before{ background: rgb(107, 179, 82);opacity: 0.7; }
+.pomerac-website_header:before{ background: rgb(109, 106, 101);opacity: 0.7; }
+.mytattooist_header:before{ background: rgb(25, 25, 25);opacity: 0.7; }
+.date-with-students_header:before{ background: rgb(137, 63, 28);opacity: 0.7; }
+.four-strokes_header:before{ background: rgb(44, 169, 192);opacity: 0.7; }
+.photographers247_header:before{ background: rgb(161, 80, 80);opacity: 0.7; }
+.freshid-promotions_header:before{ background: rgb(0, 146, 204);opacity: 0.7; }
+.mothers-groupie-2_header:before{ background: rgb(249, 106, 194);opacity: 0.7; }
+.foodhub_header:before{ background: rgb(223, 119, 118);opacity: 0.7; }
+.case-study-listing .blog_row::before{ opacity: 1}
+.iworks_header::before {background: rgb(38,192,243);opacity: 0.7;}
+.gb_lancers_header::before {background: rgb(193,32,92);opacity: 0.7;}
+.we_do_it_cheaper_header::before {background: rgb(255,18,130);opacity: 0.7;}
+.job_at_home_1_header::before {background: rgb(3,155,228);opacity: 0.7;}
+/* Dynamic Styles for case study End */
 .racing_cartel_header::before {
 	background: rgb(239, 140, 39);
 	opacity: 0.7;
@@ -1034,6 +1123,34 @@ body{font-family: "Roboto", sans-serif !important; font-weight: 400;}
 .case-study-listing .media {
 	position: relative;
 }
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+  
+.pagination-button {
+	background-color: #f0f0f0;
+	border: 1px solid #ddd;
+	color: #333;
+	padding: 10px 15px;
+	margin: 0 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+  
+.pagination-button:hover {
+	background-color: #ddd;
+}
+  
+.pagination-button.active {
+	background-color: #007bff;
+	color: white;
+	border-color: #007bff;
+}
+  
 .content_area_resources h2, .content_area_resources h3, .content_area_resources h4 {
 	color: #29166f;
 	display: inline-block;
@@ -2071,4 +2188,98 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f99122', end
 
 #testi-hire .slick-slider .slick-next::before {
 	content: "\f105";font-family: FontAwesome;color: #3F3F3F;font-size: 30px; 
+}
+
+.FreelancerCompanyBanners {
+	background: url("/img/ourteam/top-freelancer.png") no-repeat left top
+}
+
+.resources-header {
+	background-position: left top;
+	background-size: cover;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 100px 0;
+	border-bottom: 1px solid #fff;
+}
+
+.resources-header span {
+	text-shadow: 0 0 3px #000;
+	font-family: "roboto", sans-serif;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold
+}
+
+.office_event_img_social .ofimg_sm {
+	width: 20.5%;
+}
+
+.office_event_img_social img {
+	width: 100%;
+}
+.office_event_img_social .office_event_img_cols {
+	max-height: 243px;
+	min-height: 188px;
+	overflow: hidden;
+}
+
+.office_event_img_cols::after {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.office_event_img_cols {
+	float: left;
+	margin: 0 0 2px;
+	padding: 0 1px;
+	position: relative;
+}
+.office_event_img_social {
+	margin-bottom: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+.stat_data_tex {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.stat_data_tex_hos {
+	background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: left;
+	top: 0;
+	transition: all 0.3s ease-in-out 0s;
+	z-index: 3;
+}
+
+.stat_data_tex_hos_text {
+	bottom: 15px;
+	color: #fff;
+	left: 25px;
+	letter-spacing: 0;
+	line-height: 25px;
+	position: absolute;
+	right: 25px;
+	top: auto;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.stat_data_tex_hos:hover .stat_data_tex_hos_text {
+	bottom: 25px;
+	transition: all 0.3s ease-in-out 0s;
 }

@@ -40,12 +40,12 @@ const Page = () => {
                   <strong>Django development company</strong> that provides
                   Django web development services of the highest quality to
                   clients worldwide. Our team employs the robust{" "}
-                  <a
-                    href="https://www.logicspice.com/python-development"
+                  <Link
+                    href="/services/python-development"
                     target="_blank"
                   >
                     Python framework
-                  </a>{" "}
+                  </Link>{" "}
                   Django to develop innovative features and high-performance
                   solutions.
                 </div>

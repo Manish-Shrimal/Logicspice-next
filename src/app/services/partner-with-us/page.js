@@ -52,10 +52,10 @@ const Page = () => {
           </p>
           <p>
             We have all what you need at single place. Have a look on our{" "}
-            <a href="https://www.logicspice.com/portfolio">portfolio</a> and
-            <a href="https://www.logicspice.com/company/testimonials-and-reviews">
+            <Link href="/portfolio">portfolio</Link> and
+            <Link href="/company/testimonials-and-reviews">
               client testimonials
-            </a>
+            </Link>
             . Discuss with us what you want. We see the partnership as a long
             term relationship.
           </p>

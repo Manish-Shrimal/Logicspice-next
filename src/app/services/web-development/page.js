@@ -142,12 +142,12 @@ const Page = () => {
                   Web development is building platform-independent solutions
                   using an ideal combination of technologies to meet business
                   requirements. Our team ensures to deliver 100%{" "}
-                  <a
-                    href="https://www.logicspice.com/custom-solutions"
+                  <Link
+                    href="/custom-solutions"
                     target="_blank"
                   >
                     customized web applications
-                  </a>{" "}
+                  </Link>{" "}
                   that work efficiently across multiple platforms and devices.
                 </p>
                 <p>
@@ -467,20 +467,20 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://www.goodlucknc.com/" target="_blank">
+                      <Link href="https://www.goodlucknc.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
-                      </a>
+                      </Link>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
+                      <Link
                         href="https://www.logicspice.com/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -517,12 +517,12 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <Link href="https://salesagy.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
-                      </a>
+                      </Link>
                       <i
                         className="fa-brands fa-android"
                         aria-hidden="true"
@@ -530,12 +530,12 @@ const Page = () => {
                       <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
+                      <Link
                         href="https://www.logicspice.com/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -581,12 +581,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
+                      <Link
                         href="https://www.logicspice.com/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -631,12 +631,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
+                      <Link
                         href="https://www.logicspice.com/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -682,12 +682,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
-                        href="https://www.logicspice.com/portfolio"
+                      <Link
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -733,12 +733,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
-                        href="https://www.logicspice.com/portfolio"
+                      <Link
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -872,12 +872,12 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <p>
                       Our{" "}
-                      <a
-                        href="https://www.logicspice.com/website-design"
+                      <Link
+                        href="/services/website-design"
                         target="_blank"
                       >
                         web design
-                      </a>{" "}
+                      </Link>{" "}
                       and development team always focuses on client
                       satisfaction, always available for support and
                       communication.
@@ -909,12 +909,12 @@ const Page = () => {
           </div>
         </div>
         <div className="col-sm-12 main_btn_hire">
-          <a
-            href="https://www.logicspice.com/hire-web-developers"
+          <Link
+            href="/hire-web-developers"
             className="btn btn-hire"
           >
             Hire a Web Developer
-          </a>
+          </Link>
         </div>
       </section>
       <section className="ecommerce_faq_section NewFaqDesignSection">

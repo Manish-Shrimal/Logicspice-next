@@ -199,10 +199,10 @@ const Page = () => {
                     programmers have expertise in developing top android apps
                     for small, medium and large business globally. We are
                     continuously progressing in
-                    <a href="https://www.logicspice.com/android-app-development">
+                    <Link href="/softwares/android-app-development">
                       {" "}
                       android apps development
-                    </a>{" "}
+                    </Link>{" "}
                     for past years with a team of dedicated
                     developers&nbsp;towards their skills.&lt;br /&gt;&lt;br
                     /&gt; We keep ourselves updated with the latest technologies
@@ -500,10 +500,10 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-ios-app-developers"
+                    href="/hire-ios-app-developers"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -524,15 +524,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-laravel-developers"
+                    href="/hire-laravel-developers"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -553,15 +553,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-hybrid-mobile-app-developer"
+                    href="/hire-hybrid-mobile-app-developer"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -582,7 +582,7 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

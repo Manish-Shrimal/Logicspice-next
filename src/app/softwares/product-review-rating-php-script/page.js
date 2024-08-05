@@ -16,17 +16,13 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-
-
-
-
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -73,34 +69,33 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/product-review-rating-php-script"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/product-review-rating-php-script"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
       <NavBar />
-<section className="paid-pro job-portal-banner fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg product-review-new-banner">
-    <div className="container">
-        <div className="row">
+      <section className="paid-pro job-portal-banner fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg product-review-new-banner">
+        <div className="container">
+          <div className="row">
             <div className="col-sm-7 col-md-7">
-                <h1>Product Review & Rating PHP Script</h1>
-                <div className="both-left-p-sec">
-                    <h2>Make your own star rating system like TrustPilot</h2>                      
-                </div>
+              <h1>Product Review & Rating PHP Script</h1>
+              <div className="both-left-p-sec">
+                <h2>Make your own star rating system like TrustPilot</h2>
+              </div>
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
                   <h4>
@@ -110,7 +105,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -131,11 +128,12 @@ const Page = () => {
                       />
                     }
                   </div>
-                 
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -144,7 +142,6 @@ const Page = () => {
                 </div>
               </div>
 
-              
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
@@ -155,7 +152,9 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="Product Review & Rating PHP Script"
                   src="/img/softwares-banner-img/product-review-mobile.png"
                 />
@@ -172,63 +171,84 @@ const Page = () => {
                   <a href="/softwares">Softwares</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                Product Review
+                  Product Review
                 </li>
               </ol>
             </div>
           </div>
         </div>
       </section>
-<section className="job-section-top-new JobBoardSectionNew">
-    <div className="container">
-    <p>Get valuable feedback from your customers by giving them the opportunity to share their reviews. Let them rate your products and services directly on 
-            your website. The customer review system is useful for both clients and the service providers, for any type of website. The PHP Review Script can help 
-            in improving quality of your products and services, by getting genuine feedback from customers, which inturn will increase credibility and brand awareness, 
-            and will ultimately increase your market.</p>
-    </div>
-</section>
-      <section className="client-say service-market-say" style={{ backgroundColor: "#fff" }}>
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
+          <p>
+            Get valuable feedback from your customers by giving them the
+            opportunity to share their reviews. Let them rate your products and
+            services directly on your website. The customer review system is
+            useful for both clients and the service providers, for any type of
+            website. The PHP Review Script can help in improving quality of your
+            products and services, by getting genuine feedback from customers,
+            which inturn will increase credibility and brand awareness, and will
+            ultimately increase your market.
+          </p>
+        </div>
+      </section>
+      <section
+        className="client-say service-market-say"
+        style={{ backgroundColor: "#fff" }}
+      >
         <div className="container">
           <div className="row">
-          
             <div className="col-md-12">
-            <div className="service-market-ttd">
-            <ul>
-                         <li>Attractive & Responsive Design: This script works on all the devices, seamlessly adapting to various screen sizes.</li>
-                        <li>Email Notifications: Set up the online review system to send email alerts when a new review is posted. </li>
-                        <li>High Performance</li>
-                        <li>One Admin</li>
-                        <li>Ready to Use Code & Easy Installation with proper guidelines. </li>
-                        <li>Script Modification</li>
-                        <li>White labeled script</li>
-                        <li>One time License Fee</li>
-			<li>Complete monitoring & management from administration panel</li>
-                    </ul>
-                </div>
-
+              <div className="service-market-ttd">
+                <ul>
+                  <li>
+                    Attractive & Responsive Design: This script works on all the
+                    devices, seamlessly adapting to various screen sizes.
+                  </li>
+                  <li>
+                    Email Notifications: Set up the online review system to send
+                    email alerts when a new review is posted.{" "}
+                  </li>
+                  <li>High Performance</li>
+                  <li>One Admin</li>
+                  <li>
+                    Ready to Use Code & Easy Installation with proper
+                    guidelines.{" "}
+                  </li>
+                  <li>Script Modification</li>
+                  <li>White labeled script</li>
+                  <li>One time License Fee</li>
+                  <li>
+                    Complete monitoring & management from administration panel
+                  </li>
+                </ul>
+              </div>
             </div>
-
-
           </div>
         </div>
       </section>
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-          <h2 className="taxt_tt_job">PHP Review Script Features</h2>
+            <h2 className="taxt_tt_job">PHP Review Script Features</h2>
           </div>
 
-          <div className="tatxt_txt_job text-center">The PHP Review Script is a web tool that authorize our customers to share their experiences by giving reviews and by rating 
-            on our various products and services. The customer review system is useful to both, the clients and the service providers 
-            for any type of website in business.
-        </div>
+          <div className="tatxt_txt_job text-center">
+            The PHP Review Script is a web tool that authorize our customers to
+            share their experiences by giving reviews and by rating on our
+            various products and services. The customer review system is useful
+            to both, the clients and the service providers for any type of
+            website in business.
+          </div>
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job tab_bbx_job_classified">
               <ul className="">
                 <li
                   id="tab1_li"
-                  className={`jobseeker_app_job ddlj ${sellerTab ? "active" : ""}`}
+                  className={`jobseeker_app_job ddlj ${
+                    sellerTab ? "active" : ""
+                  }`}
                   onClick={() => handleSellerTab()}
                 >
                   <a>Customer/ User Panel</a>
@@ -249,266 +269,580 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/product-review/product-review-img.png"
                             alt="Product Review & Rating PHP Script"
                           />
-                        
                         </div>
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright">
-                        <ul>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/secure_login.png" /></i>
-                                        <span>Secure login
-                                            <div className="product-idea">
-                                                <p>User can securely login</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage-notifi.png" /></i>
-                                        <span>Simple Review & Rating tool
-                                            <div className="product-idea">
-                                                <p>Our PHP review system will help to build credibility, attract new clients, and manage customer relationships in an open and engaging manner. </p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/post_comments.png" /></i>
-                                        <span>Easy Review Form
-                                            <div className="product-idea">
-                                                <p>Only name and email required, registration not required.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/view_save_projects.png" /></i>
-                                        <span>Quick tips
-                                            <div className="product-idea">
-                                                <p>Use the tip box space to add importance notes.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/view_testimonial.png" /></i>
-                                        <span>Overall Rating
-                                            <div className="product-idea">
-                                                <p>User can write a comment.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/pros-and-cons.png" /></i>
-                                        <span>Pros & Cons
-                                            <div className="product-idea">
-                                                <p>No fake reviews, only the facts through the client&apos;s eyes.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_profile.png" /></i>
-                                        <span>Select User type
-                                            <div className="product-idea">
-                                                <p>Customers can select their user type depending on the services / products used.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/clear-cut-rating.png" /></i>
-                                        <span>Clear-cut Rating
-                                            <div className="product-idea">
-                                                <p>Customer reviews and the rating score based on all reviews will show up on the web page that you paste.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/rating-scoring-icon.png" /></i>
-                                        <span>Rating Score
-                                            <div className="product-idea">
-                                                <p>Based on 5-star rating system, the average rating based on all criteria and the average rating for each separate criterion are shown.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/filter-ratings-icon.png" /></i>
-                                        <span>Filter ratings
-                                            <div className="product-idea">
-                                                <p>Can filter all ratings given by a selected user type.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/high-flexibility.png" /></i>
-                                        <span>High Flexibility
-                                            <div className="product-idea">
-                                                <p>The PHP Review Script handles even the most data-intensive workloads flawlessly.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/easy-installation.png" /></i>
-                                        <span>Easy Installation & Integration
-                                            <div className="product-idea">
-                                                <p>An installation  guideline will be provided to install the customer review system for you.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_faq.png" /></i>
-                                        <span>Subscription Management
-                                            <div className="product-idea">
-                                                <p>Users can subscribe so that whenever any new blog for a product or services gets added then they get informed of that.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/social_login.png" /></i>
-                                        <span>Social Media Integration
-                                            <div className="product-idea">
-                                                <p>Added various social networking sites such as Facebook, Twitter etc, in a review website. This helps the customers as well as admin to share reviews on the social media platforms.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/tickets_list.png" /></i>
-                                        <span>Contact Us Form
-                                            <div className="product-idea">
-                                                <p>Allows Visitors or Users to ask queries related to any product or service or about anything. </p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_user_acc.png" /></i>
-                                        <span>Video or Photo/Image Reviews
-                                            <div className="product-idea">
-                                                <p>Users can post reviews by uploading the video or Photo/images.</p>
-                                            </div>
-                                        </span>
-                                    </li>
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                />
+                              </i>
+                              <span>
+                                Secure login
+                                <div className="product-idea">
+                                  <p>User can securely login</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage-notifi.png"
+                                />
+                              </i>
+                              <span>
+                                Simple Review & Rating tool
+                                <div className="product-idea">
+                                  <p>
+                                    Our PHP review system will help to build
+                                    credibility, attract new clients, and manage
+                                    customer relationships in an open and
+                                    engaging manner.{" "}
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/post_comments.png"
+                                />
+                              </i>
+                              <span>
+                                Easy Review Form
+                                <div className="product-idea">
+                                  <p>
+                                    Only name and email required, registration
+                                    not required.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/view_save_projects.png"
+                                />
+                              </i>
+                              <span>
+                                Quick tips
+                                <div className="product-idea">
+                                  <p>
+                                    Use the tip box space to add importance
+                                    notes.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/view_testimonial.png"
+                                />
+                              </i>
+                              <span>
+                                Overall Rating
+                                <div className="product-idea">
+                                  <p>User can write a comment.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/pros-and-cons.png"
+                                />
+                              </i>
+                              <span>
+                                Pros & Cons
+                                <div className="product-idea">
+                                  <p>
+                                    No fake reviews, only the facts through the
+                                    client&apos;s eyes.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_profile.png"
+                                />
+                              </i>
+                              <span>
+                                Select User type
+                                <div className="product-idea">
+                                  <p>
+                                    Customers can select their user type
+                                    depending on the services / products used.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/clear-cut-rating.png"
+                                />
+                              </i>
+                              <span>
+                                Clear-cut Rating
+                                <div className="product-idea">
+                                  <p>
+                                    Customer reviews and the rating score based
+                                    on all reviews will show up on the web page
+                                    that you paste.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/rating-scoring-icon.png"
+                                />
+                              </i>
+                              <span>
+                                Rating Score
+                                <div className="product-idea">
+                                  <p>
+                                    Based on 5-star rating system, the average
+                                    rating based on all criteria and the average
+                                    rating for each separate criterion are
+                                    shown.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/filter-ratings-icon.png"
+                                />
+                              </i>
+                              <span>
+                                Filter ratings
+                                <div className="product-idea">
+                                  <p>
+                                    Can filter all ratings given by a selected
+                                    user type.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/high-flexibility.png"
+                                />
+                              </i>
+                              <span>
+                                High Flexibility
+                                <div className="product-idea">
+                                  <p>
+                                    The PHP Review Script handles even the most
+                                    data-intensive workloads flawlessly.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/easy-installation.png"
+                                />
+                              </i>
+                              <span>
+                                Easy Installation & Integration
+                                <div className="product-idea">
+                                  <p>
+                                    An installation guideline will be provided
+                                    to install the customer review system for
+                                    you.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_faq.png"
+                                />
+                              </i>
+                              <span>
+                                Subscription Management
+                                <div className="product-idea">
+                                  <p>
+                                    Users can subscribe so that whenever any new
+                                    blog for a product or services gets added
+                                    then they get informed of that.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/social_login.png"
+                                />
+                              </i>
+                              <span>
+                                Social Media Integration
+                                <div className="product-idea">
+                                  <p>
+                                    Added various social networking sites such
+                                    as Facebook, Twitter etc, in a review
+                                    website. This helps the customers as well as
+                                    admin to share reviews on the social media
+                                    platforms.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/tickets_list.png"
+                                />
+                              </i>
+                              <span>
+                                Contact Us Form
+                                <div className="product-idea">
+                                  <p>
+                                    Allows Visitors or Users to ask queries
+                                    related to any product or service or about
+                                    anything.{" "}
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_user_acc.png"
+                                />
+                              </i>
+                              <span>
+                                Video or Photo/Image Reviews
+                                <div className="product-idea">
+                                  <p>
+                                    Users can post reviews by uploading the
+                                    video or Photo/images.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </>
               )}
-              
+
               {adminTab && (
                 <>
                   <div className="costomer_tab rj" id="tab3">
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/product-review/product_review_deshboard.png"
                             alt="Admin Panel"
                           />
-                        
                         </div>
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright2">
-                        <ul>
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/secure_login.png" /></i>
-                                        <span>Secure Login
-                                            <div className="product-idea">
-                                                <p>Admin can securely login on this portal</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/admin_dash.png" /></i>
-                                        <span>Advanced Administration
-                                            <div className="product-idea">
-                                                <p>The PHP Review Script can provide the complete overview of all reviews, ratings, and users.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage-dashboard.png" /></i>
-                                        <span>User Friendly Dashboard
-                                            <div className="product-idea">
-                                                <p>Can check the fresh ratings, reviews (Comments) and reviewers.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/ragister-icon.png" /></i>
-                                        <span>Check reviewer&apos;s details
-                                            <div className="product-idea">
-                                                <p>Require Name, contacts, ratings posted, first rating and status.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_keywords.png" /></i>
-                                        <span>Export Ratings
-                                            <div className="product-idea">
-                                                <p>Export rating in different formats.</p>
-                                            </div>
-                                        </span>
-                                    </li>                               
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_service.png" /></i>
-                                        <span>Rating order
-                                            <div className="product-idea">
-                                                <p>Define rating order (newer on top or at the bottom) and ratings per page.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_category.png" /></i>
-                                        <span>Review management
-                                            <div className="product-idea">
-                                                <p>Admin can configure all general options, manage rating criteria and user types, and adapt the review and rating script to your specific business needs.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_skill.png" /></i>
-                                        <span>Sub Admin Management
-                                            <div className="product-idea">
-                                                <p>Sub Admin should be able to manage all the functionality of the admin side on behalf of the admin.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_blog.png" /></i>
-                                        <span>Blog Management
-                                            <div className="product-idea">
-                                                <p>This can give a well designed blog management so that Admin can inform users of the newly added products and services.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_news.png" /></i>
-                                        <span>Newsletter Management
-                                            <div className="product-idea">
-                                                <p>Add Newsletter Template, Send Newsletter to Reviewers and Subscribers. </p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/manage_testimonial.png" /></i>
-                                        <span>Review Search Management
-                                            <div className="product-idea">
-                                                <p>View a list of reviews given to a particular product or for a particular service.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                    <li>
-                                        <i><Image width={100} height={100} alt="img" src="/img/jobboard/payment_history.png" /></i>
-                                        <span>Enquiry Management
-                                            <div className="product-idea">
-                                                <p>Able to view all the enquiries sent by Visitors and Users.</p>
-                                            </div>
-                                        </span>
-                                    </li>    
-                                </ul>
+                          <ul>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                />
+                              </i>
+                              <span>
+                                Secure Login
+                                <div className="product-idea">
+                                  <p>Admin can securely login on this portal</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/admin_dash.png"
+                                />
+                              </i>
+                              <span>
+                                Advanced Administration
+                                <div className="product-idea">
+                                  <p>
+                                    The PHP Review Script can provide the
+                                    complete overview of all reviews, ratings,
+                                    and users.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage-dashboard.png"
+                                />
+                              </i>
+                              <span>
+                                User Friendly Dashboard
+                                <div className="product-idea">
+                                  <p>
+                                    Can check the fresh ratings, reviews
+                                    (Comments) and reviewers.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/ragister-icon.png"
+                                />
+                              </i>
+                              <span>
+                                Check reviewer&apos;s details
+                                <div className="product-idea">
+                                  <p>
+                                    Require Name, contacts, ratings posted,
+                                    first rating and status.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_keywords.png"
+                                />
+                              </i>
+                              <span>
+                                Export Ratings
+                                <div className="product-idea">
+                                  <p>Export rating in different formats.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_service.png"
+                                />
+                              </i>
+                              <span>
+                                Rating order
+                                <div className="product-idea">
+                                  <p>
+                                    Define rating order (newer on top or at the
+                                    bottom) and ratings per page.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_category.png"
+                                />
+                              </i>
+                              <span>
+                                Review management
+                                <div className="product-idea">
+                                  <p>
+                                    Admin can configure all general options,
+                                    manage rating criteria and user types, and
+                                    adapt the review and rating script to your
+                                    specific business needs.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_skill.png"
+                                />
+                              </i>
+                              <span>
+                                Sub Admin Management
+                                <div className="product-idea">
+                                  <p>
+                                    Sub Admin should be able to manage all the
+                                    functionality of the admin side on behalf of
+                                    the admin.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_blog.png"
+                                />
+                              </i>
+                              <span>
+                                Blog Management
+                                <div className="product-idea">
+                                  <p>
+                                    This can give a well designed blog
+                                    management so that Admin can inform users of
+                                    the newly added products and services.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_news.png"
+                                />
+                              </i>
+                              <span>
+                                Newsletter Management
+                                <div className="product-idea">
+                                  <p>
+                                    Add Newsletter Template, Send Newsletter to
+                                    Reviewers and Subscribers.{" "}
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/manage_testimonial.png"
+                                />
+                              </i>
+                              <span>
+                                Review Search Management
+                                <div className="product-idea">
+                                  <p>
+                                    View a list of reviews given to a particular
+                                    product or for a particular service.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  alt="img"
+                                  src="/img/jobboard/payment_history.png"
+                                />
+                              </i>
+                              <span>
+                                Enquiry Management
+                                <div className="product-idea">
+                                  <p>
+                                    Able to view all the enquiries sent by
+                                    Visitors and Users.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -520,43 +854,116 @@ const Page = () => {
         </div>
       </section>
       <section className="job_product_page_header_in">
-    <div className="container">
-        <div className="whateissuprt">
-            <h2 className="headhs">What does our Online Forum Software offer you?</h2>
-            <p>Having an online discussion forum has become the need of every online business nowadays as tends to reduce time to connect with the company and the users. By discussing the queries in a common transparent platform you can improve productivity within your team, stakeholders and prospective clients. With our ready to use forum script, you can create an online community so your audience will naturally feel more engaged with your product or project.  </p>
-            <p>This PHP forum script has a secure admin dashboard where admin can control the forum by viewing and deleting the list of all registered users and can edit and delete their topics and comment which provides full command over the forum. Users can raise the questions regarding knowledge, reviews, suggestions threads of product or services by our easy to use help forum. It can be easily integrated with your website in less time.</p>
-            <p>The active forum makes the users and prospective clients feel authenticated regarding your product or service. Get our readymade forum clone and save your development cost.</p>
-
+        <div className="container">
+          <div className="whateissuprt">
+            <h2 className="headhs">
+              What does our Online Forum Software offer you?
+            </h2>
+            <p>
+              Having an online discussion forum has become the need of every
+              online business nowadays as tends to reduce time to connect with
+              the company and the users. By discussing the queries in a common
+              transparent platform you can improve productivity within your
+              team, stakeholders and prospective clients. With our ready to use
+              forum script, you can create an online community so your audience
+              will naturally feel more engaged with your product or project.{" "}
+            </p>
+            <p>
+              This PHP forum script has a secure admin dashboard where admin can
+              control the forum by viewing and deleting the list of all
+              registered users and can edit and delete their topics and comment
+              which provides full command over the forum. Users can raise the
+              questions regarding knowledge, reviews, suggestions threads of
+              product or services by our easy to use help forum. It can be
+              easily integrated with your website in less time.
+            </p>
+            <p>
+              The active forum makes the users and prospective clients feel
+              authenticated regarding your product or service. Get our readymade
+              forum clone and save your development cost.
+            </p>
+          </div>
         </div>
-    </div>
-</section>
-<section className="SubscriptionModel" id="subscriptionmodel">
-    <div className="container">	
-        <div className="job_or_title">
-            <h2 className="taxt_tt_job">Subscription Model</h2><br/>
+      </section>
+      <section className="SubscriptionModel" id="subscriptionmodel">
+        <div className="container">
+          <div className="job_or_title">
+            <h2 className="taxt_tt_job">Subscription Model</h2>
+            <br />
             <div className="SubscriptionModelBx">
-                <p>Experience convenience like never before with our subscription-based hassle-free model, available at just <strong>USD 45 per month</strong>, limited offer available for the first year.</p>
-                <p>Key Benefits:</p>
-                <ul>
-                    <li><span>Lifetime Updates: Enjoy complimentary updates for your software version throughout its lifespan.</span></li>
-                    <li><span>Timely Upgrades: Seamlessly transition to upgraded versions at regular intervals, all at no extra cost.</span></li>
-                    <li><span><strong>Zero Setup Fees</strong>:- There are no additional charges for the setup and installation of the software, making it easier for customers to get started.</span></li>
-                    <li><span>Unlimited User Connection Listings: List as many user connections as you need without any limitations.</span></li>
-                    <li><span>Effortless Program Operation: Revel in robust bandwidth that guarantees your program runs flawlessly, supported by resources allocated to your subscription model. Any increase in allocated resources will incur additional charges beyond the standard subscription model.</span></li>
-                    <li><span>Enduring Support: We are committed to providing lifelong assistance through our subscription model. If any software issues arise, our <strong>dedicated technical team</strong> will promptly address them during office hours.</span></li>
-                <li><span>Personalized Customization Assistance: Delivering Custom Features According to Client Requirements at additional cost.</span></li>      
-                </ul>
-                <p>Discover a new era of convenience and efficiency with our subscription offering. Subscribe today and elevate your experience with our readymade solution!</p>
+              <p>
+                Experience convenience like never before with our
+                subscription-based hassle-free model, available at just{" "}
+                <strong>USD 45 per month</strong>, limited offer available for
+                the first year.
+              </p>
+              <p>Key Benefits:</p>
+              <ul>
+                <li>
+                  <span>
+                    Lifetime Updates: Enjoy complimentary updates for your
+                    software version throughout its lifespan.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Timely Upgrades: Seamlessly transition to upgraded versions
+                    at regular intervals, all at no extra cost.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Zero Setup Fees</strong>:- There are no additional
+                    charges for the setup and installation of the software,
+                    making it easier for customers to get started.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Unlimited User Connection Listings: List as many user
+                    connections as you need without any limitations.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Effortless Program Operation: Revel in robust bandwidth that
+                    guarantees your program runs flawlessly, supported by
+                    resources allocated to your subscription model. Any increase
+                    in allocated resources will incur additional charges beyond
+                    the standard subscription model.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Enduring Support: We are committed to providing lifelong
+                    assistance through our subscription model. If any software
+                    issues arise, our <strong>dedicated technical team</strong>{" "}
+                    will promptly address them during office hours.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Personalized Customization Assistance: Delivering Custom
+                    Features According to Client Requirements at additional
+                    cost.
+                  </span>
+                </li>
+              </ul>
+              <p>
+                Discover a new era of convenience and efficiency with our
+                subscription offering. Subscribe today and elevate your
+                experience with our readymade solution!
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
       <section id="subscriptionprice" className="SubscriptionpriceSection">
         <div className="container">
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -565,19 +972,18 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
-              <div className="btn btn-get" onClick={openModal}>
-                    <button>Enquire Now</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Product Review & Rating PHP Script"
-                      />
-                    }
-                  </div>
-                
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Enquire Now</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Product Review & Rating PHP Script"
+                    />
+                  }
+                </div>
               </div>
               <div className="jocpp">
                 <ul className="job-pr-icon">
@@ -587,7 +993,13 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>23 Reviews</p>
                   </div>
                 </div>
@@ -640,16 +1052,12 @@ const Page = () => {
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <a  onClick={toggleModal}>
-                contact us
-              </a>
-              .
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
       </section>
-    
-     
+
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
           <div className="job_or_title">
@@ -658,9 +1066,11 @@ const Page = () => {
             </h2>
             <br />
             <div className="logic-parter">
-            <a onClick={toggleInfo} className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -677,7 +1087,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coding.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coding.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
@@ -693,7 +1108,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data-complexity.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data-complexity.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Strong Framework of PHP & Well managed database</h3>
                     <p>
@@ -710,7 +1130,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coordinate.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coordinate.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>
                       Quick Response and
@@ -730,7 +1155,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/customize.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/customize.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
@@ -745,7 +1175,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/smartphone-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/smartphone-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Mobile Friendly Script</h3>
                     <p>
@@ -760,7 +1195,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Dedicated Support Team</h3>
                     <p>
@@ -777,7 +1217,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/web-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/web-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Global company with agile development approach</h3>
                     <p>
@@ -796,7 +1241,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/encrypted.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/encrypted.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customer information and application level security</h3>
                     <p>
@@ -812,7 +1262,12 @@ const Page = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/history-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/history-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
@@ -830,7 +1285,12 @@ const Page = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/seouser-friendly.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/seouser-friendly.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Seo Friendly Development</h3>
                     <p>
@@ -845,7 +1305,9 @@ const Page = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                       />
@@ -863,7 +1325,12 @@ const Page = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/third-party-api.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/third-party-api.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Integration With Third Party Api</h3>
                     <p>
@@ -878,7 +1345,12 @@ const Page = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/cost-effective.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/cost-effective.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Cost Effective</h3>
                     <p>
@@ -904,7 +1376,9 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -913,13 +1387,20 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -928,24 +1409,38 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
                   </li>
-                  
                 </ul>
               </div>
               <div className="col-sm-6">
-              <ul className="list_detail">
-                    <li className="same"><b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+, Safari 5+, IE 9+</li> 
-                    <li className="same"><b>Framework  - </b> Laravel 8.16</li>  
-                    <li className="same "><b>Language  - </b> PHP 5.4+, AJAX, jQuery</li> 
-                    <li className="other"><b>Design  - </b> HTML 5, CSS 3, Bootstrap 4.7, JavaScript</li> 
-                    <li className="other"><b>Database  - </b> MySQL 5.5+ </li>
-                    <li className="other"><b>Server  - </b>  Apache 2.4+</li>
+                <ul className="list_detail">
+                  <li className="same">
+                    <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+, Opera 30.0+,
+                    Safari 5+, IE 9+
+                  </li>
+                  <li className="same">
+                    <b>Framework - </b> Laravel 8.16
+                  </li>
+                  <li className="same ">
+                    <b>Language - </b> PHP 5.4+, AJAX, jQuery
+                  </li>
+                  <li className="other">
+                    <b>Design - </b> HTML 5, CSS 3, Bootstrap 4.7, JavaScript
+                  </li>
+                  <li className="other">
+                    <b>Database - </b> MySQL 5.5+{" "}
+                  </li>
+                  <li className="other">
+                    <b>Server - </b> Apache 2.4+
+                  </li>
                 </ul>
               </div>
             </div>
@@ -961,7 +1456,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -970,7 +1467,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -979,13 +1478,20 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1097,7 +1603,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="col-md-7">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1110,8 +1616,11 @@ const Page = () => {
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &quot;I have purchased this script and has constructed my own web-site. This was an easy task because of logicspice&apos;s free
-                      installation and support. Keep up the good work. I will be back for more in the future.&quot;
+                      &quot;I have purchased this script and has constructed my
+                      own web-site. This was an easy task because of
+                      logicspice&apos;s free installation and support. Keep up
+                      the good work. I will be back for more in the
+                      future.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1124,7 +1633,9 @@ const Page = () => {
                       </span>
                       <span id="client-name">John, USA</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1133,8 +1644,10 @@ const Page = () => {
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &quot;This is the best Product Review & Rating PHP Script. Thanks for your great efforts and support while installing the script. Your prompt service
-                      regarding a few minor issues was superb.&quot;
+                      &quot;This is the best Product Review & Rating PHP Script.
+                      Thanks for your great efforts and support while installing
+                      the script. Your prompt service regarding a few minor
+                      issues was superb.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1147,7 +1660,9 @@ const Page = () => {
                       </span>
                       D. Smith, Germany{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in Germany"
                         />
@@ -1156,8 +1671,10 @@ const Page = () => {
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    &quot;Recently I bought this script from logicspice and it worked really nice, it helped my business to gain more efficiency. I
-                      recommend for all whom looking for a Forum Script, it&apos;s really nice.&quot;
+                      &quot;Recently I bought this script from logicspice and it
+                      worked really nice, it helped my business to gain more
+                      efficiency. I recommend for all whom looking for a Forum
+                      Script, it&apos;s really nice.&quot;
                     </div>
 
                     <div className="who_ratset">
@@ -1170,15 +1687,15 @@ const Page = () => {
                       </span>
                       mike wilshon, AUS{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in AUS"
                         />
                       </span>
                     </div>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
@@ -1190,14 +1707,20 @@ const Page = () => {
                     headerTitle="What do I need to use your software?"
                     collapseId="flush-collapse1"
                   >
-                    <p>Your hosting services must support PHP 5.1 and MySQL 5.1 or greater version.</p>
+                    <p>
+                      Your hosting services must support PHP 5.1 and MySQL 5.1
+                      or greater version.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Do you make custom changes to the scripts?"
                     collapseId="flush-collapse2"
                   >
-                    <p>Yes, we can make custom changes to the script as per your requirements.</p>
+                    <p>
+                      Yes, we can make custom changes to the script as per your
+                      requirements.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
@@ -1211,28 +1734,43 @@ const Page = () => {
                     headerTitle="How long does it take to receive the script after payment?"
                     collapseId="flush-collapse5"
                   >
-                    <p>It takes 2 working days generally, if all the provided hosting information has required PHP extensions to make it live. If you want 
-                    customizations, then time taken to implement depends on the level of customization and data migration.</p>
+                    <p>
+                      It takes 2 working days generally, if all the provided
+                      hosting information has required PHP extensions to make it
+                      live. If you want customizations, then time taken to
+                      implement depends on the level of customization and data
+                      migration.
+                    </p>
                   </MDBAccordionItem>
                   <MDBAccordionItem
                     headerTitle="Can I resell the script? Will I have rights over the script code?"
                     collapseId="flush-collapse6"
                   >
-                    <p>No, You can&apos;t resell the script. All rights will remain with Logicspice only.</p>
+                    <p>
+                      No, You can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
+                    </p>
                   </MDBAccordionItem>
                   <MDBAccordionItem
                     headerTitle="Can I update some design and functionality in application code myself?"
                     collapseId="flush-collapse7"
                   >
-                    <p>Yes, You will have access to all the code, except some of the core encrypted files.</p>
+                    <p>
+                      Yes, You will have access to all the code, except some of
+                      the core encrypted files.
+                    </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Along with hosting server details, what other recommendations?"
                     collapseId="flush-collapse14"
                   >
-                    <p>We recommend you purchase SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all the websites 
-                    these days and it provides a secure layer to the website as well.</p>
+                    <p>
+                      We recommend you purchase SSL certificate along with a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all the websites these days and it provides
+                      a secure layer to the website as well.
+                    </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
               </div>
@@ -1240,12 +1778,12 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="enq-section">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -1264,7 +1802,7 @@ const Page = () => {
           <h2 className="title_main">Other Popular Softwares</h2>
           <div className="other-product-box">
             <div className="row">
-            <div className="col-sm-6 col-md-4">
+              <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
                   <a title="View Detail" target="_black">
                     <div className="caption">
@@ -1272,13 +1810,18 @@ const Page = () => {
                         <h3>eBay Clone</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/ecart_new.png"
                             alt="eBay Clone"
                           />
                         </div>
                         <p>
-                          <span>eBay - A multi vendor eCommerce script, specially designed.</span>
+                          <span>
+                            eBay - A multi vendor eCommerce script, specially
+                            designed.
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -1292,14 +1835,17 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Appointment Booking System</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/abs_logo_new.png"
                             alt="Appointment Booking System"
                           />
                         </div>
                         <p>
                           <span>
-                          A user-friendly appointment booking system that enables owners to manage.
+                            A user-friendly appointment booking system that
+                            enables owners to manage.
                           </span>{" "}
                         </p>
                       </div>
@@ -1307,7 +1853,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
                   <a title="View Detail" target="_black">
@@ -1316,13 +1862,18 @@ const Page = () => {
                         <h3>News Management System</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/news_logo_new.png"
                             alt="News Management System"
                           />
                         </div>
                         <p>
-                          <span>Digital media is playing a major role in authentic flow of information.</span>
+                          <span>
+                            Digital media is playing a major role in authentic
+                            flow of information.
+                          </span>
                         </p>
                       </div>
                     </div>
@@ -1339,8 +1890,10 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

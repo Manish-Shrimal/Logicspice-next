@@ -51,29 +51,29 @@ const Page = () => {
                 flexibility and scalability to meet the desired requirements of
                 our clients. Trusted by customers across world, we take
                 expertise in developing{" "}
-                <a
-                  href="https://www.logicspice.com/custom-solutions"
+                <Link
+                  href="/custom-solutions"
                   target="_blank"
                   className="WebsiteTxtLink"
                 >
                   Custom Softwares
-                </a>
+                </Link>
                 ,{" "}
-                <a
-                  href="https://www.logicspice.com/website-design"
+                <Link
+                  href="/services/website-design"
                   target="_blank"
                   className="WebsiteTxtLink"
                 >
                   Website Designing
-                </a>{" "}
+                </Link>{" "}
                 and{" "}
-                <a
-                  href="https://www.logicspice.com/mobile-app-development"
+                <Link
+                  href="/services/mobile-app-development"
                   target="_blank"
                   className="WebsiteTxtLink"
                 >
                   Mobile Applications.
-                </a>
+                </Link>
               </p>
 
               <p>

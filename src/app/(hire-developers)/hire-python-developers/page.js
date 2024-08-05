@@ -24,7 +24,7 @@ const Page = () => {
     {
       id: 1,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/alex-morgan.jpg",
+        "/img/pythondevelopment/alex-morgan.jpg",
       heading: "",
       text: "Our Python development needs were complex, but the developer we hired from Logicspice tackled them with ease. Their proficiency in Django was particularly impressive.",
       name: "Michael T.,",
@@ -33,7 +33,7 @@ const Page = () => {
     {
       id: 2,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/sophia-turner.jpg",
+        "/img/pythondevelopment/sophia-turner.jpg",
       heading: "",
       text: "We needed a Python expert for our machine learning project, and the professional from Logicspice exceeded all expectations.",
       name: "Sophia R.,",
@@ -42,7 +42,7 @@ const Page = () => {
     {
       id: 3,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/david-clark.jpg",
+        "/img/pythondevelopment/david-clark.jpg",
       heading: "",
       text: "Hiring a Python developer for our backend systems was a crucial step. The developer's skill in Flask and database management has greatly improved our application's performance.",
       name: "David K.,",
@@ -51,7 +51,7 @@ const Page = () => {
     {
       id: 4,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/isabella-clark.jpg",
+        "/img/pythondevelopment/isabella-clark.jpg",
       heading: "",
       text: "The Python developer we hired was outstanding. They understood our vision and brought in their unique perspective, which added immense value to our web application.",
       name: "Isabella G.,",
@@ -60,7 +60,7 @@ const Page = () => {
     {
       id: 5,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/emma-turner.jpg",
+        "/img/pythondevelopment/emma-turner.jpg",
       heading: "",
       text: "The Python developer we brought on board from Logicspice was a game-changer for our project. Their expertise in data analysis and web development helped us achieve milestones ahead of schedule.",
       name: "Emma L.,",
@@ -137,45 +137,68 @@ const Page = () => {
           <div class="snop_animation"></div>
         </div>
       </section>
-
-
-      
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><Image   width={300}
-                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
-                    </div>
-                </div> 
-                </div>
-                </div> 
-                </div>
-            </div>
+              </div>
 
- 
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="hiring-sr">
             <div class="row">
               <div class="col-md-8">
@@ -186,7 +209,7 @@ const Page = () => {
                     range of Python experts in data science, Django, Flask, and
                     more. With extensive expertise and a proven track record of
                     delivering exceptional results, you can trust our team to
-                    propel your project to success. Hire Python developers in 
+                    propel your project to success. Hire Python developers in
                     India today for exceptional results.
                   </p>
                   <p>
@@ -249,7 +272,7 @@ const Page = () => {
                         height={100}
                         alt="icon-1"
                         src="/img/hiredevelopers/custom-icon1.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -268,16 +291,15 @@ const Page = () => {
                         height={100}
                         alt="icon-2"
                         src="/img/hiredevelopers/custom-icon2.png"
-                        style={{display: 'inline'}}
-
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
                       <h3>2. Python Data Analysis Solutions</h3>
                       <p>
                         Our Python specialists deliver advanced data analysis
-                        solutions, harnessing Python&apos;s powerful data libraries
-                        and tools.
+                        solutions, harnessing Python&apos;s powerful data
+                        libraries and tools.
                       </p>
                     </div>
                   </li>
@@ -288,8 +310,7 @@ const Page = () => {
                         height={100}
                         alt="icon-3"
                         src="/img/hiredevelopers/custom-icon3.png"
-                        style={{display: 'inline'}}
-
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -312,8 +333,7 @@ const Page = () => {
                         height={100}
                         alt="icon-4"
                         src="/img/hiredevelopers/custom-icon4.png"
-                        style={{display: 'inline'}}
-
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -332,8 +352,7 @@ const Page = () => {
                         height={100}
                         alt="icon-5"
                         src="/img/hiredevelopers/custom-icon5.png"
-                        style={{display: 'inline'}}
-
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -352,8 +371,7 @@ const Page = () => {
                         height={100}
                         alt="icon-6"
                         src="/img/hiredevelopers/custom-icon6.png"
-                        style={{display: 'inline'}}
-
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -512,10 +530,10 @@ const Page = () => {
                   >
                     <p>
                       The cost of hiring a Python developer can vary based on
-                      their experience level, the project&apos;s complexity, and the
-                      contract&apos;s duration. Logicspice offers competitive pricing
-                      for Python developers, ensuring you get the best value for
-                      your investment.
+                      their experience level, the project&apos;s complexity, and
+                      the contract&apos;s duration. Logicspice offers
+                      competitive pricing for Python developers, ensuring you
+                      get the best value for your investment.
                     </p>
                   </MDBAccordionItem>
 

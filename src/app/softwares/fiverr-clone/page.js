@@ -24,7 +24,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -74,21 +74,21 @@ const Page = () => {
   const [adminpanelTab, setAdminpanelTab] = useState(false);
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/fiverr-clone"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/fiverr-clone"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
   const handleStudentTab = () => {
     setStudentTab(true);
     setInstructorTab(false);
@@ -211,13 +211,13 @@ const Page = () => {
                       />
                     }
                   </div>
-                  <a
+                  <Link
                     className="btn fiverr-buys NewGreenBtnJob"
                     href="https://www.logicspice.com/softwares/buynow/fiverr-clone"
                     id="buy_now_1"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="DeliSou" style={{ display: "none" }}>
@@ -1270,7 +1270,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1279,7 +1279,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
 
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
@@ -1292,13 +1292,13 @@ const Page = () => {
                     />
                   }
                 </div>
-                <a
+                <Link
                   className="btn fiverr-buys"
                   href="https://www.logicspice.com/softwares/buynow/jobsite"
                   id="buy_now_1"
                 >
                   Buy Now
-                </a>
+                </Link>
               </div>
               <div className="jocpp">
                 <ul className="job-pr-icon">
@@ -1872,11 +1872,11 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a href="https://www.gblancers.com/" target="_blank">
+                    <Link href="https://www.gblancers.com/" target="_blank">
                       gblancers.com
-                    </a>
+                    </Link>
                   </div>
-                  <a href="https://www.gblancers.com/" target="_blank">
+                  <Link href="https://www.gblancers.com/" target="_blank">
                     <Image
                       width={900}
                       height={100}
@@ -1885,15 +1885,15 @@ const Page = () => {
                       title=""
                       className="img-fluid"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a href="https://dilancer.com/" target="_blank">
+                    <Link href="https://dilancer.com/" target="_blank">
                       dilancer.com
-                    </a>
+                    </Link>
                   </div>
-                  <a href="https://dilancer.com/" target="_blank">
+                  <Link href="https://dilancer.com/" target="_blank">
                     <Image
                       width={900}
                       height={100}
@@ -1902,13 +1902,13 @@ const Page = () => {
                       title=""
                       className="img-fluid"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a href="https://www.bimtower.in/" target="_blank">
+                    <Link href="https://www.bimtower.in/" target="_blank">
                       bimtower.in
-                    </a>
+                    </Link>
                   </div>
                   <a href="https://www.bimtower.in/" target="_blank">
                     <Image
@@ -1922,11 +1922,11 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a href="https://www.workpido.com/" target="_blank">
+                    <Link href="https://www.workpido.com/" target="_blank">
                       workpido.com
-                    </a>
+                    </Link>
                   </div>
-                  <a href="https://www.workpido.com/" target="_blank">
+                  <Link href="https://www.workpido.com/" target="_blank">
                     <Image
                       width={900}
                       height={100}
@@ -1934,15 +1934,15 @@ const Page = () => {
                       alt="icon"
                       title=""
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <a href="https://4buh.org/" target="_blank">
+                    <Link href="https://4buh.org/" target="_blank">
                       4buh.org
-                    </a>
+                    </Link>
                   </div>
-                  <a href="https://4buh.org/" target="_blank">
+                  <Link href="https://4buh.org/" target="_blank">
                     <Image
                       width={900}
                       height={100}
@@ -1950,7 +1950,7 @@ const Page = () => {
                       alt="icon"
                       title=""
                     />
-                  </a>
+                  </Link>
                 </div>
               </Slider>
             </div>

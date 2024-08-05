@@ -15,7 +15,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -66,23 +66,23 @@ const Page = () => {
     setActiveTab(tab);
   };
 
-  // const [pageData, setPageData] = useState([]);
+  const [pageData, setPageData] = useState([]);
 
-  // const getData = async() => {
-  //   try {
-  //       const response = await axios.get(BaseAPI + '/product/Details/grocery-app-development');
-  //       // console.log(response.data.data)
-  //       setPageData(response.data.data);
-  //   } catch (error) {
-  //       console.log(error.message);
-  //   }
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/grocery-app-development"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // }
-
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -117,7 +117,11 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -246,7 +250,9 @@ See how it work yourself!"
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Online Grocery Store Software Features</h2>
+            <h2 className="taxt_tt_job">
+              Online Grocery Store Software Features
+            </h2>
           </div>
 
           <div className="tatxt_txt_job text-center">
@@ -961,12 +967,16 @@ See how it work yourself!"
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
-                {pageData.currency_symbol}{pageData.price}<span className="sml_labl"> {pageData.name}</span>
+              <h4>
+                {pageData.currency_symbol}
+                {pageData.price}
+                <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">
-                {pageData.currency_symbol}{pageData.other_price}<span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+                {pageData.currency_symbol}
+                {pageData.other_price}
+                <span className="sml_labl"> {pageData.name}</span>
+              </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
@@ -1585,7 +1595,9 @@ See how it work yourself!"
                   />
                 </div>
                 <div className="hands-proved">
-                  <div className="titleof_scnew">Categorically Search Products</div>
+                  <div className="titleof_scnew">
+                    Categorically Search Products
+                  </div>
                   <div className="pro-feat-detai">
                     Customers can search for products by selecting the
                     categories first and then by selecting their subcategory.

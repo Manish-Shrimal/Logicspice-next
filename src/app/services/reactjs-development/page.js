@@ -38,12 +38,12 @@ const Page = () => {
                 <div className="LaravelText">
                   <strong>Revolutionize Your Digital Presence:</strong> Harness
                   the Power of React JS{" "}
-                  <a
-                    href="https://www.logicspice.com/web-development"
+                  <Link
+                    href="/services/web-development"
                     target="_blank"
                   >
                     Web Development
-                  </a>{" "}
+                  </Link>{" "}
                   with Logicspice. We offer reliable React JS web application
                   development services worldwide, delivering high-performance
                   functionality and feature-rich solutions.

@@ -101,12 +101,12 @@ const Page = () => {
                 compiled and well distributed base of codes across different
                 platforms like Titanium, Sencha, HTML5 and PhoneGap. Our team
                 assures to deliver 100% customized hybrid{" "}
-                <a
-                  href="https://www.logicspice.com/mobile-app-development"
+                <Link
+                  href="/services/mobile-app-development"
                   target="_blank"
                 >
                   Mobile applications
-                </a>
+                </Link>
                 {" "}that work efficiently across multiple devices.
               </p>
               <h2>Hybrid Mobile Application Development</h2>
@@ -392,7 +392,7 @@ const Page = () => {
               <Image
                 width={300}
                 height={500 / (100 / 100)}
-                src="https://www.logicspice.com/app/webroot/img/images/girl-bg.png"
+                src="/img/hybridappdevelopment/girl-bg.png"
                 alt="icon13"
               />
             </div>
@@ -492,14 +492,16 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div className="quoue_box_full_sec">
+      <section className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>
@@ -507,7 +509,7 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   );

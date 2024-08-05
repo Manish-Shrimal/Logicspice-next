@@ -67,7 +67,12 @@ const Page = () => {
                 <Link href="/services/mobile-app-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={51} height={100} src="/img/services/serv_4.png" alt="serv_4" />
+                      <Image
+                        width={51}
+                        height={100}
+                        src="/img/services/serv_4.png"
+                        alt="serv_4"
+                      />
                     </div>
                     <h2>Mobile App Development</h2>
                   </div>
@@ -77,7 +82,12 @@ const Page = () => {
                 <Link href="/services/web-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_1.png" alt="serv_1" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_1.png"
+                        alt="serv_1"
+                      />
                     </div>
                     <h2>Web Development</h2>
                   </div>
@@ -87,7 +97,9 @@ const Page = () => {
                 <Link href="/services/big-data-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/big-data-development.png"
                         alt="Big Data Development"
                       />
@@ -100,7 +112,9 @@ const Page = () => {
                 <Link href="/services/devops-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/devops-development.png"
                         alt="DevOps Development"
                       />
@@ -113,7 +127,9 @@ const Page = () => {
                 <Link href="/services/web-hosting">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/webhostin_icon.png"
                         alt="serv_3"
                       />
@@ -126,7 +142,9 @@ const Page = () => {
                 <Link href="/services/django-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={116} height={100}
+                      <Image
+                        width={116}
+                        height={100}
                         src="/img/services/DjangoIcon.png"
                         alt="contract hire"
                       />
@@ -139,7 +157,9 @@ const Page = () => {
                 <Link href="/services/contract-hire">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/ContractIcon.png"
                         alt="contract hire"
                       />
@@ -152,7 +172,9 @@ const Page = () => {
                 <Link href="/services/angular-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/AngularLogo.png"
                         alt="Angular Development"
                       />
@@ -165,7 +187,9 @@ const Page = () => {
                 <Link href="/services/python-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/PythonLogo.png"
                         alt="Python Development"
                       />
@@ -178,7 +202,9 @@ const Page = () => {
                 <Link href="/services/reactjs-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/ReactJSLogo.png"
                         alt="React JS Development"
                       />
@@ -191,7 +217,9 @@ const Page = () => {
                 <Link href="/services/react-native-app-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/ReactJSLogo.png"
                         alt="React Native App Development"
                       />
@@ -204,7 +232,9 @@ const Page = () => {
                 <Link href="/services/artificial-intelligence">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/ArtificialLogo.png"
                         alt="Artificial Intelligence Services"
                       />
@@ -218,7 +248,12 @@ const Page = () => {
                 <Link href="/services/digital-marketing">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_3.png" alt="serv_3" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_3.png"
+                        alt="serv_3"
+                      />
                     </div>
                     <h2>Digital Marketing</h2>
                   </div>
@@ -228,7 +263,12 @@ const Page = () => {
                 <Link href="/services/software-testing-services">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_5.png" alt="serv_5" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_5.png"
+                        alt="serv_5"
+                      />
                     </div>
                     <h2>Testing Services</h2>
                   </div>
@@ -238,7 +278,12 @@ const Page = () => {
                 <Link href="/services/software-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_2.png" alt="serv_2" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_2.png"
+                        alt="serv_2"
+                      />
                     </div>
                     <h2>Software Development</h2>
                   </div>
@@ -248,7 +293,12 @@ const Page = () => {
                 <Link href="/services/support">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_6.png" alt="serv_6" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_6.png"
+                        alt="serv_6"
+                      />
                     </div>
                     <h2>Support & Maintenance</h2>
                   </div>
@@ -258,7 +308,12 @@ const Page = () => {
                 <Link href="/services/php-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_8.png" alt="serv_8" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_8.png"
+                        alt="serv_8"
+                      />
                     </div>
                     <h2>PHP Web Development</h2>
                   </div>
@@ -268,7 +323,12 @@ const Page = () => {
                 <Link href="/services/cakephp-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_9.png" alt="serv_9" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_9.png"
+                        alt="serv_9"
+                      />
                     </div>
                     <h2>Cakephp Web Development</h2>
                   </div>
@@ -278,7 +338,12 @@ const Page = () => {
                 <Link href="/services/codeigniter-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_10.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_10.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>CodeIgniter Development</h2>
                   </div>
@@ -288,7 +353,12 @@ const Page = () => {
                 <Link href="/services/nodejs-development-company">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_11.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_11.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Node.JS Development</h2>
                   </div>
@@ -298,7 +368,12 @@ const Page = () => {
                 <Link href="/services/opencart-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_12.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_12.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>OpenCart Development</h2>
                   </div>
@@ -308,7 +383,12 @@ const Page = () => {
                 <Link href="/services/magento-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_13.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_13.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Magento Development</h2>
                   </div>
@@ -318,7 +398,12 @@ const Page = () => {
                 <Link href="/services/laravel-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_04.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_04.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Laravel Development</h2>
                   </div>
@@ -328,7 +413,12 @@ const Page = () => {
                 <Link href="/services/ecommerce-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_15.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_15.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>eCommerce Development</h2>
                   </div>
@@ -338,7 +428,12 @@ const Page = () => {
                 <Link href="/services/wordpress-web-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_16.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_16.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Wordpress Development</h2>
                   </div>
@@ -348,7 +443,12 @@ const Page = () => {
                 <Link href="/services/advanced-web-programming">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_17.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_17.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Advanced Web Development</h2>
                   </div>
@@ -358,7 +458,12 @@ const Page = () => {
                 <Link href="/services/open-source-cms">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_18.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_18.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Open Source CMS Development</h2>
                   </div>
@@ -368,7 +473,12 @@ const Page = () => {
                 <Link href="/services/ios-app-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_19.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_19.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>iPhone Development</h2>
                   </div>
@@ -378,7 +488,12 @@ const Page = () => {
                 <Link href="/services/android-app-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_20.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_20.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Android App Development</h2>
                   </div>
@@ -389,7 +504,12 @@ const Page = () => {
                 <Link href="/services/hybrid-app-development">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_21.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_21.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Hybrid Development</h2>
                   </div>
@@ -400,7 +520,12 @@ const Page = () => {
                 <Link href="/services/website-design">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_22.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_22.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Website Design</h2>
                   </div>
@@ -411,7 +536,12 @@ const Page = () => {
                 <Link href="/services/https://design.logicspice.com/website-design-packages/">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_23.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_23.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Website Design Packages</h2>
                   </div>
@@ -422,7 +552,12 @@ const Page = () => {
                 <Link href="/services/website-redesign">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_24.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_24.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Website Redesign Company</h2>
                   </div>
@@ -432,7 +567,12 @@ const Page = () => {
                 <Link href="/services/responsive-web-design">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_25.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_25.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Responsive Website</h2>
                   </div>
@@ -443,7 +583,12 @@ const Page = () => {
                 <Link href="/services/landing-page-design">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_26.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_26.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Landing Page Design</h2>
                   </div>
@@ -453,7 +598,12 @@ const Page = () => {
                 <Link href="/services/website-cloning-service">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_27.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_27.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Website Cloning Service</h2>
                   </div>
@@ -463,7 +613,12 @@ const Page = () => {
                 <Link href="/services/saas-software-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_28.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_28.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Saas Software Development</h2>
                   </div>
@@ -474,7 +629,12 @@ const Page = () => {
                 <Link href="/services/psd-to-wordpress">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={102} height={100} src="/img/services/serv_29.png" alt="serv_10" />
+                      <Image
+                        width={102}
+                        height={100}
+                        src="/img/services/serv_29.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Psd to Wordpress</h2>
                   </div>
@@ -485,7 +645,12 @@ const Page = () => {
                 <Link href="/services/psd-to-html">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={96} height={100} src="/img/services/serv_30.png" alt="serv_10" />
+                      <Image
+                        width={96}
+                        height={100}
+                        src="/img/services/serv_30.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Psd to HTML</h2>
                   </div>
@@ -495,7 +660,12 @@ const Page = () => {
                 <Link href="/services/psd-to-shopify">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={101} height={100} src="/img/services/serv_31.png" alt="serv_10" />
+                      <Image
+                        width={101}
+                        height={100}
+                        src="/img/services/serv_31.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Psd to Shopify</h2>
                   </div>
@@ -505,7 +675,12 @@ const Page = () => {
                 <Link href="/services/script-customization">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_32.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_32.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Script Customization</h2>
                   </div>
@@ -516,7 +691,12 @@ const Page = () => {
                 <Link href="/services/software-testing-services">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_33.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_33.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Software Testing</h2>
                   </div>
@@ -527,7 +707,12 @@ const Page = () => {
                 <Link href="/services/progressive-web-app-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_34.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_34.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Progressive Development</h2>
                   </div>
@@ -537,7 +722,12 @@ const Page = () => {
                 <Link href="/services/business-support-services">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_35.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_35.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Business Support Services</h2>
                   </div>
@@ -547,7 +737,12 @@ const Page = () => {
                 <Link href="/services/social-media-optimization-services">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_36.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_36.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Social Media Optimization</h2>
                   </div>
@@ -557,7 +752,12 @@ const Page = () => {
                 <Link href="/services/shopify-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100} src="/img/services/serv_37.png" alt="serv_10" />
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_37.png"
+                        alt="serv_10"
+                      />
                     </div>
                     <h2>Shopify Development</h2>
                   </div>
@@ -567,7 +767,9 @@ const Page = () => {
                 <Link href="/services/shopify-development-packages">
                   <div className="our-services-bx">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/shopifypackages-img.png"
                         alt="Shopify Development Packages"
                       />
@@ -580,7 +782,9 @@ const Page = () => {
                 <Link href="/services/startup-mobile-app-development-company">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/startup-img.png"
                         alt="Startup App Development"
                       />
@@ -593,7 +797,9 @@ const Page = () => {
                 <Link href="/services/partner-with-us">
                   <div className="our-services-bx botton-none">
                     <div className="our-services-img">
-                      <Image width={70} height={100}
+                      <Image
+                        width={70}
+                        height={100}
                         src="/img/services/partner-img.png"
                         alt="Partner With us"
                       />
@@ -642,7 +848,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/ios-app-development">
                           <span className="circle_icon andri-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/android-img.png"
                               alt="android-img"
                             />
@@ -653,7 +861,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/android-app-development">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/iPhone-img.png"
                               alt="iPhone-img"
                             />
@@ -664,7 +874,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/hybrid-app-development">
                           <span className="circle_icon hybirds-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/hybrid-img.png"
                               alt="hybrid-img"
                             />
@@ -683,7 +895,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/cakephp-development">
                           <span className="circle_icon hybirds-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/cake-img.png"
                               alt="cake-img"
                             />
@@ -694,7 +908,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/codeigniter-development">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/codeigniter-img.png"
                               alt="codeigniter-img"
                             />
@@ -705,7 +921,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/laravel-development">
                           <span className="circle_icon hybirds-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/laravel-img.png"
                               alt="laravel-img"
                             />
@@ -716,7 +934,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/wordpress-web-development">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/wordpress-img.png"
                               alt="wordpress-img"
                             />
@@ -727,7 +947,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/magento-development">
                           <span className="circle_icon magentos-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/magento-img.png"
                               alt="magento-img"
                             />
@@ -738,7 +960,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/opencart-development">
                           <span className="circle_icon opne-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/opencart-img.png"
                               alt="opencart-img"
                             />
@@ -749,7 +973,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/php-programing">
                           <span className="circle_icon hybirds-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/php-img.png"
                               alt="php-img"
                             />
@@ -760,7 +986,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/website-design">
                           <span className="circle_icon webdesign-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/webdesign-img.png"
                               alt="webdesign-img"
                             />
@@ -771,7 +999,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/website-redesign">
                           <span className="circle_icon redesign-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/redesign-img.png"
                               alt="redesign-img"
                             />
@@ -782,7 +1012,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/responsive-web-design">
                           <span className="circle_icon responsive-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/responsive-img.png"
                               alt="responsive-img"
                             />
@@ -793,7 +1025,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/landing-page-design">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/panding-img.png"
                               alt="panding-img"
                             />
@@ -807,7 +1041,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/advanced-web-programming">
                           <span className="circle_icon adprograming-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/ad-progra-img.png"
                               alt="ad-progra-img"
                             />
@@ -821,7 +1057,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/open-source-cms">
                           <span className="circle_icon responsive-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/opensource-img.png"
                               alt="opensource-img"
                             />
@@ -832,7 +1070,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/devops-services">
                           <span className="circle_icon hybirds-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/devops-img.png"
                               alt="DevOps Services"
                             />
@@ -851,7 +1091,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/software-development">
                           <span className="circle_icon responsive-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/softdevelop-img.png"
                               alt="softdevelop-img"
                             />
@@ -865,7 +1107,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/digital-marketing">
                           <span className="circle_icon opne-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/digital-img.png"
                               alt="digital-img"
                             />
@@ -880,7 +1124,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/software-maintenance-support">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/support-img.png"
                               alt="support-img"
                             />
@@ -894,7 +1140,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/psd-to-wordpress">
                           <span className="circle_icon webdesign-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/psdwordpress-img.png"
                               alt="psdwordpress-img"
                             />
@@ -909,7 +1157,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/psd-to-html">
                           <span className="circle_icon redesign-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/psdhtml-img.png"
                               alt="psdhtml-img"
                             />
@@ -924,7 +1174,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/psd-to-shopify">
                           <span className="circle_icon opne-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/psdshopify-img.png"
                               alt="psdshopify-img"
                             />
@@ -939,7 +1191,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/script-customization">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/script-img.png"
                               alt="script-img"
                             />
@@ -954,7 +1208,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/software-testing-services">
                           <span className="circle_icon magentos-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/softtesting-img.png"
                               alt="softtesting-img"
                             />
@@ -969,7 +1225,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/progressive-web-page-development">
                           <span className="circle_icon iPhone-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/progressive-img.png"
                               alt="progressive-img"
                             />
@@ -984,7 +1242,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/business-support-services">
                           <span className="circle_icon hybirds-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/business-img.png"
                               alt="business-img"
                             />
@@ -999,7 +1259,9 @@ const Page = () => {
                       <li>
                         <Link href="/services/salesforce_development_company">
                           <span className="circle_icon adprograming-img">
-                            <Image width={100} height={100}
+                            <Image
+                              width={100}
+                              height={100}
                               src="/img/services/salesforce-img.png"
                               alt="business-img"
                             />
@@ -1026,67 +1288,129 @@ const Page = () => {
             <Slider {...settings}>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_1.png" alt="cl_1" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_1.png"
+                    alt="cl_1"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_1.png" alt="cl_1" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_1.png"
+                    alt="cl_1"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_3.png" alt="cl_3" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_3.png"
+                    alt="cl_3"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_4.png" alt="cl_3" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_4.png"
+                    alt="cl_3"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_5.png" alt="cl_5" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_5.png"
+                    alt="cl_5"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_6.png" alt="cl_6" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_6.png"
+                    alt="cl_6"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_7.png" alt="cl_9" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_7.png"
+                    alt="cl_9"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_8.png" alt="cl_8" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_8.png"
+                    alt="cl_8"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_10.png" alt="cl_10" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_10.png"
+                    alt="cl_10"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_11.png" alt="cl_10" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_11.png"
+                    alt="cl_10"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/cl_12.png" alt="cl_10" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/cl_12.png"
+                    alt="cl_10"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100} src="/img/services/client-icon.png" alt="client-icon" />
+                  <Image
+                    width={150}
+                    height={100}
+                    src="/img/services/client-icon.png"
+                    alt="client-icon"
+                  />
                 </li>
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon3.svg"
                     alt="client-icon3"
                   />
@@ -1094,7 +1418,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon4.png"
                     alt="client-icon4"
                   />
@@ -1102,7 +1428,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon5.png"
                     alt="client-icon5"
                   />
@@ -1110,7 +1438,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon6.png"
                     alt="client-icon3"
                   />
@@ -1118,7 +1448,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon7.png"
                     alt="client-icon3"
                   />
@@ -1126,7 +1458,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon8.png"
                     alt="client-icon3"
                   />
@@ -1134,7 +1468,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon9.png"
                     alt="client-icon3"
                   />
@@ -1142,7 +1478,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon10.png"
                     alt="client-icon3"
                   />
@@ -1150,7 +1488,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon11.png"
                     alt="client-icon3"
                   />
@@ -1158,7 +1498,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon12.png"
                     alt="client-icon3"
                   />
@@ -1166,7 +1508,9 @@ const Page = () => {
               </div>
               <div>
                 <li>
-                  <Image width={150} height={100}
+                  <Image
+                    width={150}
+                    height={100}
                     src="/img/services/client-icon13.jpg"
                     alt="client-icon3"
                   />

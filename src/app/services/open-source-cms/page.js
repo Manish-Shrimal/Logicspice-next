@@ -137,12 +137,12 @@ const Page = () => {
                     <>
                       <div className="TabPanel rj" id="tab1">
                         <p>
-                          <a
-                            href="https://www.logicspice.com/cakephp-development"
+                          <Link
+                            href="/services/cakephp-development"
                             target="_blank"
                           >
                             CakePHP
-                          </a>{" "}
+                          </Link>{" "}
                           is designed and based on the concept of model
                           controller view. Development via Cake PHP is simple
                           and faster as it requires less coding when compared to
@@ -165,12 +165,12 @@ const Page = () => {
                       <div className="TabPanel rj" id="tab2">
                         <p>
                           A powerful PHP framework,{" "}
-                          <a
-                            href="https://www.logicspice.com/codeigniter-development"
+                          <Link
+                            href="/services/codeigniter-development"
                             target="_blank"
                           >
                             CodeIgniter
-                          </a>{" "}
+                          </Link>{" "}
                           is perfect for web developers who need effective and
                           simple tool kit to create fully featured web
                           applications.It provides a rich set of libraries and
@@ -195,12 +195,12 @@ const Page = () => {
                           it handy for creating perfect applications. Equipped
                           with features including scalability, quick intuition
                           and better development speed.{" "}
-                          <a
-                            href="https://www.logicspice.com/laravel-development"
+                          <Link
+                            href="/services/laravel-development"
                             target="_blank"
                           >
                             Laravel
-                          </a>{" "}
+                          </Link>{" "}
                           web framework dispenses better programming results
                           when compared to some other PHP frameworks.
                         </p>
@@ -220,12 +220,12 @@ const Page = () => {
                       <div className="TabPanel rj" id="tab4">
                         <p>
                           A slightly different web development framework,{" "}
-                          <a
-                            href="https://www.logicspice.com/opencart-development"
+                          <Link
+                            href="/services/opencart-development"
                             target="_blank"
                           >
                             Opencart
-                          </a>{" "}
+                          </Link>{" "}
                           is preferred for developing e-commerce websites. It is
                           an online shopping cart and the CMS platform is
                           extremely easy to setup. It is an open source system
@@ -249,12 +249,12 @@ const Page = () => {
                           It is one of the most widely used e-commerce platform
                           web frameworks as it comes with huge number of options
                           for integration and customization purpose.
-                          <a
-                            href="https://www.logicspice.com/magento-development"
+                          <Link
+                            href="/services/magento-development"
                             target="_blank"
                           >
                             Magento
-                          </a>{" "}
+                          </Link>{" "}
                           has grown tremendously over a period of time and it
                           caters to the requirements of e-commerce market quite
                           specifically.

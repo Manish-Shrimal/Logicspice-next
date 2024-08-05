@@ -122,7 +122,7 @@ const Page = () => {
                 </p>
                 <p>
                   With many a new
-                  <a href="https://www.logicspice.com/open-source-cms">
+                  <a href="/services/open-source-cms">
                     open source platforms
                   </a>
                   available for the developers&sbquo; you can chose highly

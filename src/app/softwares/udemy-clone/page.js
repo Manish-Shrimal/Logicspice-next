@@ -24,7 +24,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -33,7 +33,6 @@ const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-
 
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
@@ -107,22 +106,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/udemy-clone"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/udemy-clone"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -146,7 +144,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -167,13 +167,18 @@ const Page = () => {
                       />
                     }
                   </div>
-                  <Link className="btn fiverr-buys" href="/softwares/udemy-clone">
+                  <Link
+                    className="btn fiverr-buys"
+                    href="/softwares/udemy-clone"
+                  >
                     Buy Now
                   </Link>
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -200,7 +205,9 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="crowd_funding_script"
                   src="/img/softwares-banner-img/udemy-banner-img.png"
                 />
@@ -323,7 +330,9 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/udemyclone/mobile-udemy-clone.png"
                             alt="Udemy Clone Script"
                           />
@@ -334,7 +343,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -351,7 +362,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -368,7 +381,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_renter.png"
                                 />
@@ -377,7 +392,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
                                 />
@@ -394,7 +411,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/outstanding_booking.png"
                                 />
@@ -412,7 +431,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
                                 />
@@ -429,7 +450,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_tickets.png"
                                 />
@@ -446,7 +469,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                 />
@@ -464,7 +489,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/favourite_classified.png"
                                 />
@@ -478,7 +505,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
                                 />
@@ -495,7 +524,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/filter_tickets.png"
                                 />
@@ -513,7 +544,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/accepet_reject_reque.png"
                                 />
@@ -530,7 +563,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/tickets_list.png"
                                 />
@@ -558,7 +593,9 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/udemyclone/instructor-mobile.png"
                             alt="Udemy Clone Script"
                           />
@@ -569,7 +606,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -586,7 +625,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -603,7 +644,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_address3.png"
                                 />
@@ -620,7 +663,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/upcoming_eve.png"
                                 />
@@ -648,7 +693,9 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/udemyclone/udemy-website.png"
                             alt="Admin Panel"
                           />
@@ -659,7 +706,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -673,7 +722,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                 />
@@ -690,7 +741,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                 />
@@ -708,7 +761,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
                                 />
@@ -726,7 +781,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/self_profile.png"
                                 />
@@ -743,7 +800,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/multiple_picture.png"
                                 />
@@ -760,7 +819,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage_address3.png"
                                 />
@@ -777,7 +838,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/articles.png"
                                 />
@@ -793,7 +856,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                 />
@@ -811,7 +876,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                 />
@@ -957,7 +1024,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -966,18 +1033,18 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
-              <div className="btn btn-get" onClick={openModal}>
-                    <button>Get Demo Access!</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Udemy Clone..See how it work yourself!"
-                      />
-                    }
-                  </div>
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of Udemy Clone..See how it work yourself!"
+                    />
+                  }
+                </div>
                 <Link className="btn fiverr-buys" href="/softwares/udemy-clone">
                   Buy Now
                 </Link>
@@ -999,7 +1066,13 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>13 Reviews</p>
                   </div>
                 </div>
@@ -1052,8 +1125,7 @@ const Page = () => {
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <a onClick={toggleModal}>contact us</a>
-              .
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
@@ -1110,7 +1182,9 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1132,7 +1206,9 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image width={100} height={100}
+            <Image
+              width={100}
+              height={100}
               src="/img/udemyclone/udemy-how-it-works.jpg"
               alt="icon"
               title=""
@@ -1177,7 +1253,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1200,7 +1278,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1223,7 +1303,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1246,7 +1328,9 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/fiverrclone/salorapido.jpg"
                       alt="icon"
                       title=""
@@ -1256,7 +1340,9 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
                       alt="Job Management"
                     />
@@ -1272,7 +1358,9 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
                       alt="Membership Plan"
                     />
@@ -1310,7 +1398,9 @@ const Page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="Laravel Development"
                     />
@@ -1319,19 +1409,31 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="HTML5"
+                    />
                   </div>
                   <div className="icntechimg_nm">HTML5</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image width={100} height={100} src="/img/jobboard/tech_mysql_icon.png" alt="MySQL" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/tech_mysql_icon.png"
+                      alt="MySQL"
+                    />
                   </div>
                   <div className="icntechimg_nm">MySQL</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
                     />
@@ -1340,7 +1442,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/apple_phn_icon.png"
                       alt="MySQL"
                       className="lazy"
@@ -1350,7 +1454,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       src="/img/jobboard/andoird_icon.png"
                       alt="Apache"
                       className="lazy"
@@ -1402,7 +1508,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1411,7 +1519,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1423,13 +1533,20 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1541,7 +1658,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="col-md-7">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1556,10 +1673,11 @@ const Page = () => {
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
 
                     <div className="customer_review_stext">
-                    &apos;I have purchased this script and has constructed my own
-                      udemy clone. This was an easy task because of logicspice&lsquo;s
-                      free installation and support. Keep up the good work. I
-                      will be back for more in the future.&apos;
+                      &apos;I have purchased this script and has constructed my
+                      own udemy clone. This was an easy task because of
+                      logicspice&lsquo;s free installation and support. Keep up
+                      the good work. I will be back for more in the
+                      future.&apos;
                     </div>
                     <div
                       className="who_ratset"
@@ -1577,7 +1695,9 @@ const Page = () => {
                       </span>
                       John, USA{" "}
                       <span>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1587,9 +1707,10 @@ const Page = () => {
                   <div className="customers_review_sec_row">
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext" id="fiveer-clone">
-                    &apos;This is the best udemy clone. Thanks for your great
+                      &apos;This is the best udemy clone. Thanks for your great
                       efforts and support while installing the script. Your
-                      prompt service regarding a few minor issues was superb.&apos;
+                      prompt service regarding a few minor issues was
+                      superb.&apos;
                     </div>
 
                     <div
@@ -1608,7 +1729,9 @@ const Page = () => {
                       </span>
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
                         />
@@ -1618,7 +1741,7 @@ const Page = () => {
                   <div className="customers_review_sec_row">
                     {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext">
-                    &apos;Recently I bought this script from logicspice and it
+                      &apos;Recently I bought this script from logicspice and it
                       worked really nice, it helped my business to gain more
                       efficiency. I recommend for all whom looking for a udemy
                       clone, it&lsquo;s really nice.&apos;
@@ -1639,7 +1762,9 @@ const Page = () => {
                       </span>
                       mike wilshon, AUS{" "}
                       <span>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
                         />
@@ -1701,8 +1826,8 @@ const Page = () => {
                     collapseId="flush-collapse5"
                   >
                     <p>
-                      No, You can&lsquo;t resell the script. All rights will remain
-                      with Logicspice only.
+                      No, You can&lsquo;t resell the script. All rights will
+                      remain with Logicspice only.
                     </p>
                   </MDBAccordionItem>
 
@@ -1845,7 +1970,9 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/search_course.png"
                           alt="searchcourse"
                         />
@@ -1861,7 +1988,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/course_detail.png"
                           alt="Configuration"
                         />
@@ -1876,7 +2005,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/my_user_courses.png"
                           alt="Manage Courses"
                         />
@@ -1891,7 +2022,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/view_lecture_video.png"
                           alt="View Payments"
                         />
@@ -1907,7 +2040,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/purchase_history.png"
                           alt="Manage Categories"
                         />
@@ -1931,7 +2066,9 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/manage_courses.png"
                           alt="searchcourse"
                         />
@@ -1947,7 +2084,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/add_course.png"
                           alt="Configuration"
                         />
@@ -1962,7 +2101,9 @@ const Page = () => {
 
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/my_courses_instructure.png"
                           alt="Configuration"
                         />
@@ -1977,7 +2118,9 @@ const Page = () => {
 
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/view_video.png"
                           alt="Configuration"
                         />
@@ -2001,7 +2144,9 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/search_course.png"
                           alt="searchcourse"
                         />
@@ -2017,7 +2162,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/course_detail.png"
                           alt="Configuration"
                         />
@@ -2032,7 +2179,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/my_user_courses.png"
                           alt="Manage Courses"
                         />
@@ -2047,7 +2196,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/view_lecture_video.png"
                           alt="View Payments"
                         />
@@ -2063,7 +2214,9 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/udemyclone/purchase_history.png"
                           alt="Manage Categories"
                         />
@@ -2089,7 +2242,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -2120,7 +2273,9 @@ const Page = () => {
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
                             className=""
@@ -2145,7 +2300,9 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
                             className=""
@@ -2174,7 +2331,9 @@ const Page = () => {
                         <h3>WhatsApp Clone App</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
                             className=""
@@ -2201,7 +2360,9 @@ const Page = () => {
         className="modal-service"
       >
         <MDBModalBody>
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/udemyclone/udemy-how-it-works.jpg"
             alt="icon"
             title=""
@@ -2225,7 +2386,9 @@ const Page = () => {
                 </Link>
               </div>
               <Link href="http://learnybee.in/" target="_blank">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   src="/img/udemyclone/learnybee.jpg"
                   alt="banner"
                   title=""
@@ -2236,20 +2399,24 @@ const Page = () => {
         </MDBModalBody>
       </MDBModal>
 
-      
-        <div className="quoue_box_full_sec">
+      <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
-    <a href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!" target="_blank">
-        <Image width={100} height={100} src="https://www.logicspice.com/img/images/whatsapp.png" alt="whatsapp-icon"/>
-    </a>
-</div>
-          <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
-          
-          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
-          </div>
-          
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </a>
         </div>
-     
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
 
       <Footer />
     </>

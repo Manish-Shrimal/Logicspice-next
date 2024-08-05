@@ -30,7 +30,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image: "https://www.logicspice.com/app/webroot/img/images/kesepara.jpg",
+      image: "/img/globalbusinesscountries/kesepara.jpg",
       heading: "C2C Ecommerce Website About Fashion",
       text: "&quot;Exactly the best team available online ! I have been working and communicating with a few companies over the internet and i didn&apos;t see a single better company than logicspice. They are",
       name: "Burak",
@@ -38,7 +38,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image: "https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg",
+      image: "/img/globalbusinesscountries/dsherevk.jpg",
       heading: "Website + Mobile App (iOs&Android)",
       text: "&quot;&quot;Manish was very cooperative and professional during the project. The team was great, the project was very complicated and they tried their best to complete it with the best diligence. I",
       name: "Dmitry",
@@ -46,7 +46,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image: "https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg",
+      image: "/img/globalbusinesscountries/sabdeen.jpg",
       heading: "Build a Website",
       text: "&quot;Best project management experience/journey I had. Great team spirit, very flexible and understanding while maintaining time and budget target.Top tear professional communication and support.",
       name: "Sherif A.",
@@ -54,8 +54,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -63,7 +62,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image: "https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg",
+      image: "/img/globalbusinesscountries/tjulia1.jpg",
       heading: "Build a Social Networking Website With Payment System",
       text: "I hired this team for a very complex project that involved handling many different types of users, payment options, and social network integration. Extremely timely and professional. Will use again!",
       name: "Tom J.",
@@ -124,8 +123,8 @@ const Page = () => {
               <div class="col-md-5">
                 <div class="cack_logo_img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={300}
+                    height={100 / (100 / 100)}
                     alt="Hire CakePHP Developer"
                     src="/img/hiredevelopers/hire_cakephp_developer.png"
                   />
@@ -143,8 +142,8 @@ const Page = () => {
               <div class="col-md-3 col-sm-4 p-0">
                 <div class="HireFlexNewImg">
                   <Image
-                      width={300}
-                      height={500 / (100 / 100)}
+                    width={300}
+                    height={500 / (100 / 100)}
                     alt="app development"
                     src="/img/hiredevelopers/hire-women-img.png"
                   />
@@ -205,9 +204,9 @@ const Page = () => {
                   <p>
                     <b>Are you looking for a solution in cakePHP?</b> Then, you
                     are at right place. Logicspice is a leading{" "}
-                    <a href="https://www.logicspice.com/cakephp-development">
+                    <Link href="/softwares/cakephp-development">
                       cakePHP development company
-                    </a>{" "}
+                    </Link>{" "}
                     with talented developers serving the industry over years. We
                     are equipped with cakephp developers who serves client as
                     per their project requirement with cakephp web development,
@@ -477,7 +476,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/6e72e_teacherpublisher.png"
+                        src="/img/cakephpdevelopment/teacherpublisher.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -520,7 +519,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/a544f_altijdbon.png"
+                        src="/img/cakephpdevelopment/a544f_altijdbon.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -564,7 +563,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/a4221_uloan.png"
+                        src="/img/cakephpdevelopment/a4221_uloan.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -612,7 +611,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/6b36c_locumsite.png"
+                        src="/img/cakephpdevelopment/6b36c_locumsite.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -655,7 +654,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/694ce_your-pansion.png"
+                        src="/img/cakephpdevelopment/694ce_your-pansion.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -703,7 +702,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/3f714_shopbook.png"
+                        src="/img/cakephpdevelopment/3f714_shopbook.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -751,7 +750,7 @@ const Page = () => {
                       <Image
                         width={808}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/90037_Iancooking-808px.png"
+                        src="/img/cakephpdevelopment/90037_Iancooking-808px.png"
                         alt="Logicspice cakephp portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -820,10 +819,10 @@ const Page = () => {
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-quality-analyst"
+                    href="/hire-quality-analyst"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -832,7 +831,7 @@ const Page = () => {
                           <Image
                             width={100}
                             height={100}
-                            src="https://www.logicspice.com/img/images/services_img/qa-img.png"
+                            src="/img/softwaretestingservices/qa-img.png"
                             alt="img"
                           />
                         </div>
@@ -845,15 +844,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-angular-js-developers"
+                    href="/hire-angular-js-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -874,15 +873,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-wordpress-experts"
+                    href="/hire-wordpress-experts"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -903,13 +902,31 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>{" "}
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

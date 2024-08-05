@@ -503,6 +503,7 @@ bread-top {
 .complete_servca ul {
   padding: 30px 0;
   text-align: center;
+  padding-left: 0;
 }
 
 .grid-demo ul li.img_web_app {
@@ -2283,6 +2284,8 @@ positivitymain {
   position: absolute;
   left: 0;
   bottom: -18px;
+  margin-bottom: 0px;
+  padding-left: 0px;
 }
 
 .make-style li {

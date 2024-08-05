@@ -31,7 +31,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image: "https://www.logicspice.com/app/webroot/img/images/kesepara.jpg",
+      image: "/img/globalbusinesscountries/kesepara.jpg",
       heading: "C2C Ecommerce Website About Fashion",
       text: "&quot;Exactly the best team available online ! I have been working and communicating with a few companies over the internet and i didn&apos;t see a single better company than logicspice. They are",
       name: "Burak",
@@ -39,7 +39,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image: "https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg",
+      image: "/img/globalbusinesscountries/dsherevk.jpg",
       heading: "Website + Mobile App (iOs&Android)",
       text: "&quot;&quot;Manish was very cooperative and professional during the project. The team was great, the project was very complicated and they tried their best to complete it with the best diligence. I",
       name: "Dmitry",
@@ -47,7 +47,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image: "https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg",
+      image: "/img/globalbusinesscountries/sabdeen.jpg",
       heading: "Build a Website",
       text: "&quot;Best project management experience/journey I had. Great team spirit, very flexible and understanding while maintaining time and budget target.Top tear professional communication and support.",
       name: "Sherif A.",
@@ -56,7 +56,7 @@ const Page = () => {
     {
       id: 4,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg",
+        "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -64,7 +64,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image: "https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg",
+      image: "/img/globalbusinesscountries/tjulia1.jpg",
       heading: "Build a Social Networking Website With Payment System",
       text: "&quot;I hired this team for a very complex project that involved handling many different types of users, payment options, and social network integration. Extremely timely and professional. Will use again!&quot;",
       name: "Tom J.",
@@ -212,9 +212,9 @@ const Page = () => {
                   <p>
                     Do you have an app idea? Our developers are skilled enough
                     to develop your concept into a reality. Logicspice is an{" "}
-                    <a href="https://www.logicspice.com/ios-app-development">
+                    <Link href="/services/ios-app-development">
                       iPhone application development company
-                    </a>{" "}
+                    </Link>{" "}
                     with a team of iOS experts which enables us to deliver
                     comprehensive and robust mobile applications to the clients
                     globally. We have a team of dedicated iphone developer with
@@ -454,7 +454,7 @@ const Page = () => {
                     width={63}
                     height={100}
                     alt="step-5"
-                    src="https://www.logicspice.com/app/webroot/img/images/step-icon5.png"
+                    src="/img/globalbusinesscountries/step-icon5.png"
                   />
                 </i>
                 <h5>Assign and kick start</h5>
@@ -489,7 +489,7 @@ const Page = () => {
                       <Image
                         width={851}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/b1978_UUUga.jpg"
+                        src="/img/iosappdevelopment/b1978_UUUga.jpg"
                         alt="Logicspice iphone portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -534,7 +534,7 @@ const Page = () => {
                       <Image
                         width={851}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/files/portfolio/full/21c14_Physical-EDGE.jpg"
+                        src="/img/iosappdevelopment/21c14_Physical-EDGE.jpg"
                         alt="Logicspice iphone portfolio"
                         class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
                       />{" "}
@@ -596,10 +596,10 @@ const Page = () => {
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-android-app-developers"
+                    href="/hire-android-app-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -620,15 +620,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-hybrid-mobile-app-developer"
+                    href="/hire-hybrid-mobile-app-developer"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -649,15 +649,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-cakephp-developers"
+                    href="/hire-cakephp-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -679,13 +679,31 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>{" "}
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

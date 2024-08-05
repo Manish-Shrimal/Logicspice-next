@@ -197,12 +197,12 @@ const Page = () => {
             solution for your business.
           </p>
           <div className="custo_btn text-center">
-            <a
-              href="https://www.logicspice.com/custom-solutions/"
+            <Link
+              href="/custom-solutions/"
               className="btn btn-primary"
             >
               Custom Solutions
-            </a>
+            </Link>
           </div>
         </div>
       </section>

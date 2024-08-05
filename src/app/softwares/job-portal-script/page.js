@@ -15,7 +15,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
 const Page = () => {
@@ -76,21 +76,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/job-board-software"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/job-board-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -115,7 +115,7 @@ const Page = () => {
                         <Image
                           width={100}
                           height={100}
-                          src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                          src="/img/images/more-info.png"
                           alt=""
                         />
                       </i>
@@ -170,7 +170,7 @@ const Page = () => {
                           <Image
                             width={100}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                            src="/img/images/more-info.png"
                             alt=""
                           />
                         </i>
@@ -197,7 +197,7 @@ const Page = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                      src="https://www.logicspice.com/app/webroot/img/images/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />
@@ -228,7 +228,7 @@ const Page = () => {
                   width={370}
                   height={100 / (100 / 100)}
                   className="lazy"
-                  src="https://www.logicspice.com/img/images/product_new/new-img-jobboard.png"
+                  src="/img/jobboard/new-img-jobboard.png"
                   alt="Job_Board_Software"
                 />
               </div>
@@ -238,10 +238,10 @@ const Page = () => {
             <div aria-label="breadcrumb" className="my-breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="https://www.logicspice.com">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="https://www.logicspice.com/softwares">Softwares</a>
+                  <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Job Portal Script
@@ -1905,7 +1905,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1914,7 +1914,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
 
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
@@ -1952,7 +1952,7 @@ const Page = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                      src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />
@@ -2315,7 +2315,7 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://sellfomote.ch/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -2323,14 +2323,14 @@ const Page = () => {
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://sellfomote.ch/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/sellfomote.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2340,22 +2340,22 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://www.ejtecs.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      ejtecs.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://www.ejtecs.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/ejtecs.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2365,22 +2365,22 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://jobs.restrowizard.com.co/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      jobs.restrowizard.com.co
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://jobs.restrowizard.com.co/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/restrowizard.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2390,22 +2390,22 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://www.healthandsocialcarejobs.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      healthandsocialcarejobs.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://www.healthandsocialcarejobs.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/healthandsocialcarejobs.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2413,40 +2413,79 @@ const Page = () => {
                   </Link>
                 </div>
                 <div className="SliderMainBx">
-                  <div className="feat-slide-img">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.joblisto.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      joblisto.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.joblisto.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
+                      src="/img/jobboard/joblisto.webp"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
                     />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Job Management</div>
-                    <div className="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
-                  <div className="feat-slide-img">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.booyajobs.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      booyajobs.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.booyajobs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
+                      src="/img/jobboard/booyajobs.webp"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
                     />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.jobseakers.com.au/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobseakers.com.au
+                    </Link>
                   </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Membership Plan</div>
-                    <div className="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
+                  <Link
+                    href="https://www.jobseakers.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/jobseakers.webp"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
                 </div>
               </Slider>
             </div>
@@ -2651,7 +2690,7 @@ const Page = () => {
           <Image
             width={400}
             height={100}
-            src="https://www.logicspice.com/app/webroot/img/images/ecommerce/ecommerce-review-img.png"
+            src="/img/jobboard/ecommerce-review-img.png"
             alt="eCommerce Ultimate Package"
             className=""
           />
@@ -2685,7 +2724,7 @@ const Page = () => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/img/images/usa_flag_img.png"
+                        src="/img/jobboard/usa_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -2715,7 +2754,7 @@ const Page = () => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/img/images/german.png"
+                        src="/img/jobboard/german.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -2747,7 +2786,7 @@ const Page = () => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/img/images/australia_flag_img.png"
+                        src="/img/jobboard/australia_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />

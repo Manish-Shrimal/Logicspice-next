@@ -123,12 +123,12 @@ const Page = () => {
                   These designers and developers work extensively over the
                   solutions across different platforms to furnish them with
                   elegance and fluidity. They build AI solutions using{" "}
-                  <a
-                    href="https://www.logicspice.com/python-development"
+                  <Link
+                    href="/services/python-development"
                     target="_blank"
                   >
                     Python
-                  </a>
+                  </Link>
                   &sbquo; TensorFlow&sbquo; Keras&sbquo; and PyTorch development
                   frameworks. We have provided phenomenal service to all our
                   clients across various platforms. As an AI solution

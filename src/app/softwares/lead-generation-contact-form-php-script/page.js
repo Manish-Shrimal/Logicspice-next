@@ -1219,7 +1219,7 @@ const Page = () => {
             <Image
               width={100}
               height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

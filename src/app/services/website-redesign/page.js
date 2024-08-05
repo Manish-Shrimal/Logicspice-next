@@ -138,12 +138,12 @@ const Page = () => {
                   maintain their market share. The Website Redesign companies
                   incorporate the recent changes and updates in the enterprise
                   through their web pages and{" "}
-                  <a
-                    href="https://www.logicspice.com/website-development/"
+                  <Link
+                    href="/services/website-development/"
                     target="_blank"
                   >
                     websites development
-                  </a>
+                  </Link>
                   . It integrates the technological updates and developments so
                   that your application and websites are equally accessible over
                   different platforms.
@@ -424,20 +424,20 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://www.goodlucknc.com/" target="_blank">
+                      <Link href="https://www.goodlucknc.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
                         ></i>
-                      </a>
+                      </Link>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
+                      <Link
                         href="https://www.logicspice.com/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -487,12 +487,12 @@ const Page = () => {
                       <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
-                        href="https://www.logicspice.com/portfolio"
+                      <Link
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -538,12 +538,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
-                        href="https://www.logicspice.com/portfolio"
+                      <Link
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -588,12 +588,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
-                        href="https://www.logicspice.com/portfolio"
+                      <Link
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -639,12 +639,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
+                      <Link
                         href="https://www.logicspice.com/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">
@@ -690,12 +690,12 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <a
-                        href="https://www.logicspice.com/portfolio"
+                      <Link
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="WebProjectImg">

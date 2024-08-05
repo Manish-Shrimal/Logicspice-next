@@ -14,26 +14,26 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Enquirymodal from "@/app/Components/Enquirymodal";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async() => {
-  //   try {
-  //       const response = await axios.get(BaseAPI + '/product/Details/chat-room-script');
-  //       // console.log(response.data.data)
-  //       setPageData(response.data.data);
-  //   } catch (error) {
-  //       console.log(error.message);
-  //   }
+  const getData = async() => {
+    try {
+        const response = await axios.get(BaseAPI + '/product/Details/chat-room-script');
+        // console.log(response.data.data)
+        setPageData(response.data.data);
+    } catch (error) {
+        console.log(error.message);
+    }
 
-  // }
+  }
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   var settings = {
     dots: true,
@@ -99,7 +99,7 @@ const Page = () => {
                     $45 USD<small>/mo</small>{" "}
                   </h4>
                   <div className="OfferPriceProduct">
-                    {/* <strike className="srik_cls">{pageData.currency_symbol}{pageData.price}{" "}{pageData.name}</strike> */}
+                    <strike className="srik_cls">{pageData.currency_symbol}{pageData.price}{" "}{pageData.name}</strike>
                     <span className="MoreInfo">
                       <i>
                         {/* <Image

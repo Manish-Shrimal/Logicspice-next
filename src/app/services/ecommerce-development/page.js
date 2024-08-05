@@ -1243,12 +1243,12 @@ See how it work yourself!"
                 </Slider>
               </div>
               <div className="vill-all-projects">
-                <a
+                <Link
                   href="https://www.logicspice.com/portfolio"
                   className="btn btn-primary"
                 >
                   View all Portfolio
-                </a>
+                </Link>
               </div>
             </div>
           </div>

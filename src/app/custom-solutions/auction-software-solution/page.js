@@ -103,10 +103,10 @@ const Page = () => {
             <div aria-label="breadcrumb" className="my-breadcrumb ">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <Link href="https://www.logicspice.com">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <Link href="https://www.logicspice.com/custom-solutions">
+                  <Link href="/custom-solutions">
                     Custom Solutions
                   </Link>
                 </li>

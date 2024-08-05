@@ -62,13 +62,13 @@ const Page = () => {
                 globe. An enterprise requires a functional and an exceptional
                 web design when its business depends on one. Our website
                 designing services&sbquo;{" "}
-                <a
-                  href="https://www.logicspice.com/website-redesign"
+                <Link
+                  href="/services/website-redesign"
                   target="_blank"
                   className="WebsiteTxtLink"
                 >
                   website redesign service
-                </a>{" "}
+                </Link>{" "}
                 will give you just that at affordable prices. Our clients have
                 been reported to comment on our services with 100% satisfaction
                 and genuine procurements.

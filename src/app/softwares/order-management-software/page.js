@@ -16,7 +16,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -77,22 +77,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/order-management-software"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/order-management-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -114,7 +113,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -139,7 +140,9 @@ const Page = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -150,7 +153,9 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="Order Management"
                   src="/img/ordermanagement/order-management-banner-img.png"
                 />
@@ -192,7 +197,9 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 alt="Order Management"
                 src="/img/ordermanagement/order-management-img.png"
               />
@@ -266,7 +273,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/bulk-order-icon.png"
                                   className="lazy"
@@ -284,7 +293,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/tiered-pricing-icon.png"
                                   className="lazy"
@@ -303,7 +314,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/volume-discounts-icon.png"
                                   className="lazy"
@@ -323,7 +336,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/multi-warehouse-icon.png"
                                   className="lazy"
@@ -341,7 +356,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/customized-catalogs-icon.png"
                                   className="lazy"
@@ -360,7 +377,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/advanced-reporting-icon.png"
                                   className="lazy"
@@ -379,7 +398,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/procurement-system-icon.png"
                                   className="lazy"
@@ -397,7 +418,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/flexible-payment-icon.png"
                                   className="lazy"
@@ -415,7 +438,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/barcode-tracking-icon.png"
                                   className="lazy"
@@ -447,7 +472,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/user-friendly-icon.png"
                                 />
@@ -464,7 +491,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/personalized-account-icon.png "
                                 />
@@ -478,7 +507,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/automated-order-icon.png"
                                 />
@@ -495,7 +526,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/wishlist-icon.png"
                                 />
@@ -512,7 +545,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/flexible-payment-icon.png"
                                 />
@@ -529,7 +564,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/subscription-icon.png"
                                 />
@@ -546,7 +583,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/discounts-promotions-icon.png"
                                 />
@@ -564,7 +603,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/mobile-accessibility-icon.png"
                                 />
@@ -581,7 +622,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/customer-feedback-icon.png"
                                 />
@@ -613,7 +656,9 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/role-based-icon.png"
                                 />
@@ -629,7 +674,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/order-approval-icon.png"
                                 />
@@ -647,7 +694,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/audit-trails-icon.png"
                                 />
@@ -665,7 +714,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/customizable-dashboards-icon.png"
                                 />
@@ -683,7 +734,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/ecommerce-platform-icon.png"
                                 />
@@ -700,7 +753,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/automated-reporting-icon.png"
                                 />
@@ -717,7 +772,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/inventory-forecasting-icon.png"
                                 />
@@ -735,7 +792,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/user-permissions-icon.png"
                                 />
@@ -752,7 +811,9 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/ordermanagement/customizable-order-icon.png"
                                 />
@@ -890,7 +951,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -899,7 +960,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Enquire Now</button>
@@ -915,7 +976,13 @@ const Page = () => {
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>225 Reviews</p>
                   </div>
                 </div>
@@ -985,7 +1052,9 @@ const Page = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1009,7 +1078,9 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -1018,13 +1089,20 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -1033,7 +1111,9 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -1075,34 +1155,48 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div className="supportsettingtext">3-Months of Free Support</div>
+                <div className="supportsettingtext">
+                  3-Months of Free Support
+                </div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div className="supportsettingtext">Brand Removal at No Cost</div>
+                <div className="supportsettingtext">
+                  Brand Removal at No Cost
+                </div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                   />
                 </div>
-                <div className="supportsettingtext">Complimentary Installation</div>
+                <div className="supportsettingtext">
+                  Complimentary Installation
+                </div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1118,7 +1212,9 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
                 />
@@ -1140,7 +1236,9 @@ const Page = () => {
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
@@ -1148,7 +1246,9 @@ const Page = () => {
                       <span>
                         Jessica M., USA
                         <i className="contry-flag">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/usa_flag_img.png"
                           />
@@ -1170,7 +1270,9 @@ const Page = () => {
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
@@ -1178,7 +1280,9 @@ const Page = () => {
                       <span>
                         Alexander K., Canada
                         <i className="contry-flag">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/canada_flag_img.png"
                           />
@@ -1200,7 +1304,9 @@ const Page = () => {
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
@@ -1208,7 +1314,9 @@ const Page = () => {
                       <span>
                         Maria S., UK
                         <i className="contry-flag">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/uk_flag_img.png"
                           />
@@ -1316,7 +1424,8 @@ const Page = () => {
                 </div>
                 <div className="main-rait">
                   <span>
-                    <i className="fa fa-star"></i> <span>4.7 out of 5 stars</span>
+                    <i className="fa fa-star"></i>{" "}
+                    <span>4.7 out of 5 stars</span>
                   </span>
                 </div>
               </div>
@@ -1334,7 +1443,9 @@ const Page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/ordermanagement/freescript-faq.png"
                     alt="Free Script"
                   />
@@ -1421,8 +1532,8 @@ const Page = () => {
                         You have the flexibility to modify the script by
                         removing your company information and substituting it
                         with yours. However, it is not permissible to include
-                        &quot;copyright by&quot; since exclusive copyright ownership for
-                        the software rests with us.
+                        &quot;copyright by&quot; since exclusive copyright
+                        ownership for the software rests with us.
                       </p>
                     </MDBAccordionItem>
 
@@ -1526,7 +1637,9 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Inventory Management Software</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/inventory-management-logo.png"
                             alt="Inventory Management Software"
                           />
@@ -1547,7 +1660,9 @@ const Page = () => {
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job Board Software"
                           />
@@ -1568,7 +1683,9 @@ const Page = () => {
                         <h3>eCommerce Software</h3>
 
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/ecommerce_logo_new.png"
                             alt="ecommerce website"
                           />
@@ -1591,8 +1708,10 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

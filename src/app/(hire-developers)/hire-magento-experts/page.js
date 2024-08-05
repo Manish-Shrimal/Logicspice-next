@@ -30,7 +30,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image: "https://www.logicspice.com/app/webroot/img/images/kesepara.jpg",
+      image: "/img/globalbusinesscountries/kesepara.jpg",
       heading: "C2C Ecommerce Website About Fashion",
       text: "&quot;Exactly the best team available online ! I have been working and communicating with a few companies over the internet and i didn&apos;t see a single better company than logicspice. They are",
       name: "Burak",
@@ -38,7 +38,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image: "https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg",
+      image: "/img/globalbusinesscountries/dsherevk.jpg",
       heading: "Website + Mobile App (iOs&Android)",
       text: "&quot;&quot;Manish was very cooperative and professional during the project. The team was great, the project was very complicated and they tried their best to complete it with the best diligence. I",
       name: "Dmitry",
@@ -46,7 +46,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image: "https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg",
+      image: "/img/globalbusinesscountries/sabdeen.jpg",
       heading: "Build a Website",
       text: "&quot;Best project management experience/journey I had. Great team spirit, very flexible and understanding while maintaining time and budget target.Top tear professional communication and support.",
       name: "Sherif A.",
@@ -54,8 +54,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -63,7 +62,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image: "https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg",
+      image: "/img/globalbusinesscountries/tjulia1.jpg",
       heading: "Build a Social Networking Website With Payment System",
       text: "&quot;I hired this team for a very complex project that involved handling many different types of users, payment options, and social network integration. Extremely timely and professional. Will use again!&quot;",
       name: "Tom J.",
@@ -73,7 +72,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section  class="hire_developer_back_iin otherhire_developer_back_iin">
+      <section class="hire_developer_back_iin otherhire_developer_back_iin">
         <div class="hire_developer_back_iin_mask new-developers-mask">
           <div class="container">
             <div class="row">
@@ -137,38 +136,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><Image   width={300}
-                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div class="hiring-sr">
             <div class="row">
               <div class="col-md-8">
@@ -181,9 +207,9 @@ const Page = () => {
                     working on a range of projects, our developers have garnered
                     skills that best suits any requirement with the most
                     advanced methodology for{" "}
-                    <a href="https://www.logicspice.com/magento-development">
+                    <Link href="/services/magento-development">
                       magento development
-                    </a>
+                    </Link>
                     .<br />
                     <br />
                     Our proficient magento experts tend to participate
@@ -256,7 +282,7 @@ const Page = () => {
                   <li class="list-group-item">
                     <i>
                       <Image
-                         width={64}
+                        width={64}
                         height={100}
                         src="/img/hiredevelopers/custom-icon2.png"
                         alt="icon-2"
@@ -294,7 +320,7 @@ const Page = () => {
                   <li class="list-group-item">
                     <i>
                       <Image
-                       width={64}
+                        width={64}
                         height={100}
                         src="/img/hiredevelopers/custom-icon4.png"
                         alt="icon-4"
@@ -311,7 +337,7 @@ const Page = () => {
                   <li class="list-group-item">
                     <i>
                       <Image
-                         width={64}
+                        width={64}
                         height={100}
                         src="/img/hiredevelopers/custom-icon5.png"
                         alt="icon-5"
@@ -432,97 +458,95 @@ const Page = () => {
       </section>
       <section class="portfolio_hire PortfolioWebsiteSlider">
         <div class="container-fluid">
-        <Slider {...item}>
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={808}
-                      height={100}
-                      src="/img/hiredevelopers/regenepure.png"
-                      alt="Logicspice magento portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+          <Slider {...item}>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="/img/hiredevelopers/regenepure.png"
+                        alt="Logicspice magento portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Regene Pure
-                  </li>
-                  <li>
-                    <b>Website URL:</b> http://www.regenepure.com/
-                  </li>
-                  <li>
-                    <b>Framework:</b> Magento
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> eCommerce Website
-                  </li>
-                </ul>
-              </div>
-            </div>
-            </div>
-
-<div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="port_feat_img">
-                  <span>
-                    <Image
-                      width={808}
-                      height={100}
-                      src="/img/hiredevelopers/biggerboatdistribution.png"
-                      alt="Logicspice magento portfolio"
-                      class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
-                    />{" "}
-                  </span>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Regene Pure
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.regenepure.com/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Magento
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> eCommerce Website
+                    </li>
+                  </ul>
                 </div>
-                <div class="portimagesec_shadow"></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="port_feat">
-                  <li>
-                    <b>Website Name:</b> Bigger Boat Distribution
-                  </li>
-                  <li>
-                    <b>Website URL:</b> http://www.biggerboatdistribution.com/
-                  </li>
-                  <li>
-                    <b>Framework:</b> Magento
-                  </li>
-                  <li>
-                    <b>Language:</b> PHP-5, AJAX, Jquery, Java scripts
-                  </li>
-                  <li>
-                    <b>Database:</b> MySQL
-                  </li>
-                  <li>
-                    <b>Server:</b> Apache
-                  </li>
-                  <li>
-                    <b>Overview:</b> eCommerce Website
-                  </li>
-                </ul>
               </div>
             </div>
-</div>
 
-
-</Slider>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="/img/hiredevelopers/biggerboatdistribution.png"
+                        alt="Logicspice magento portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> Bigger Boat Distribution
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.biggerboatdistribution.com/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Magento
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP-5, AJAX, Jquery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> eCommerce Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
       </section>
 
@@ -552,10 +576,10 @@ const Page = () => {
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-php-developers"
+                    href="/hire-php-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -576,15 +600,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-wordpress-experts"
+                    href="/hire-wordpress-experts"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -605,15 +629,15 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/hire-opencart-developers"
+                    href="/hire-opencart-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
@@ -634,13 +658,31 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>{" "}
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

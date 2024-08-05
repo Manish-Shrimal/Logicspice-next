@@ -13,7 +13,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
@@ -63,21 +63,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/wordpress-ecommerce-website"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/wordpress-ecommerce-website"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -99,7 +99,9 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                         />
@@ -130,7 +132,9 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
@@ -141,7 +145,9 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="WordPress eCommerce Website"
                   src="/img/wordpress-ecommerce/wordpress-ecommerce-banner-img.png"
                 />
@@ -207,7 +213,9 @@ See how it work yourself!"
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">WordPress eCommerce Website Features</h2>
+            <h2 className="taxt_tt_job">
+              WordPress eCommerce Website Features
+            </h2>
           </div>
 
           <div className="tatxt_txt_job text-center">
@@ -259,7 +267,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/wordpress-ecommerce/worspress-ecommerce-customer.png"
                             alt="Customer App Feature"
                           />
@@ -270,7 +280,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                 />
@@ -288,7 +300,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/product-management-icon.png"
                                 />
@@ -306,7 +320,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/order-management.png"
                                 />
@@ -324,7 +340,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/commission-management.png"
                                 />
@@ -342,7 +360,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/shipping-management.png"
                                 />
@@ -360,7 +380,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payment-integration.png"
                                 />
@@ -379,7 +401,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/seller-ratings.png"
                                 />
@@ -397,7 +421,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/marketing-promotion.png"
                                 />
@@ -415,7 +441,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/product-recommendations.png"
                                 />
@@ -448,7 +476,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/wordpress-ecommerce/worspress-buyer-mobile.png"
                             alt="Investors"
                           />
@@ -459,7 +489,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/seller-ratings.png"
                                 />
@@ -477,7 +509,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/wishlist-save.png"
                                 />
@@ -487,15 +521,17 @@ See how it work yourself!"
                                 <div className="product-idea">
                                   <p>
                                     Enable buyers to save products to a wishlist
-                                    or &apos;save for later&apos; list for future
-                                    reference or purchase.
+                                    or &apos;save for later&apos; list for
+                                    future reference or purchase.
                                   </p>
                                 </div>
                               </span>
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/secure-payment-gateways.png"
                                 />
@@ -513,7 +549,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/order-tracking.png"
                                 />
@@ -532,7 +570,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/responsive-design.png"
                                 />
@@ -552,7 +592,9 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/customer-support.png"
                                 />
@@ -571,7 +613,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/easy-returns.png"
                                 />
@@ -589,7 +633,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/personalized-recommendations.png"
                                 />
@@ -599,8 +645,8 @@ See how it work yourself!"
                                 <div className="product-idea">
                                   <p>
                                     Intelligent product recommendations based on
-                                    the buyer&lsquo;s browsing and purchase history,
-                                    enhancing the shopping experience.
+                                    the buyer&lsquo;s browsing and purchase
+                                    history, enhancing the shopping experience.
                                   </p>
                                 </div>
                               </span>
@@ -618,7 +664,9 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/wordpress-ecommerce/worspress-ecommerce-website.png"
                             alt="Admin Panel"
                           />
@@ -629,7 +677,9 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/email-marketing.png"
                                 />
@@ -647,7 +697,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/product-management-icon.png"
                                 />
@@ -665,7 +717,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/order-management.png"
                                 />
@@ -683,7 +737,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/customer-support.png"
                                 />
@@ -701,7 +757,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/inventory-management.png"
                                 />
@@ -720,7 +778,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/payment-shipping.png"
                                 />
@@ -737,7 +797,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/reporting-analytics.png"
                                 />
@@ -755,7 +817,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/coupon-discount.png"
                                 />
@@ -772,7 +836,9 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image width={100} height={100}
+                                <Image
+                                  width={100}
+                                  height={100}
                                   alt="img"
                                   src="/img/jobboard/security-permissions.png"
                                 />
@@ -830,9 +896,9 @@ See how it work yourself!"
             </p>
             <p>
               Plugin Installation and Customization: Our plugin installation and
-              customization service enhance your eCommerce site&lsquo;s functionality
-              by installing and customizing relevant plugins. This ensures your
-              website has the features it needs to succeed.
+              customization service enhance your eCommerce site&lsquo;s
+              functionality by installing and customizing relevant plugins. This
+              ensures your website has the features it needs to succeed.
             </p>
             <p>
               Operational Guidance: We will provide comprehensive guidance on
@@ -853,12 +919,12 @@ See how it work yourself!"
               Enhancing Security: Our security enhancements include implementing
               a range of measures to protect your WordPress eCommerce website
               from cyber threats and ensure the safety of customer data. We
-              conduct a thorough assessment of your website&lsquo;s vulnerabilities
-              and then implement security protocols such as firewalls, secure
-              socket layer (SSL) certificates, and regular security audits.
-              Additionally, we stay updated with the latest security trends and
-              technologies to continuously enhance your website&lsquo;s security
-              posture.
+              conduct a thorough assessment of your website&lsquo;s
+              vulnerabilities and then implement security protocols such as
+              firewalls, secure socket layer (SSL) certificates, and regular
+              security audits. Additionally, we stay updated with the latest
+              security trends and technologies to continuously enhance your
+              website&lsquo;s security posture.
             </p>
           </div>
         </div>
@@ -950,7 +1016,7 @@ See how it work yourself!"
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -959,7 +1025,7 @@ See how it work yourself!"
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
@@ -982,7 +1048,13 @@ See how it work yourself!"
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image width={100} height={100} src="/img/jobboard/stars.png" alt="" className="lazy" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/jobboard/stars.png"
+                      alt=""
+                      className="lazy"
+                    />
                     <p>225 Reviews</p>
                   </div>
                 </div>
@@ -1035,10 +1107,7 @@ See how it work yourself!"
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <a  onClick={toggleModal}>
-                contact us
-              </a>
-              .
+              <a onClick={toggleModal}>contact us</a>.
             </p>
           </div>
         </div>
@@ -1053,9 +1122,11 @@ See how it work yourself!"
             </h2>
             <br />
             <div className="logic-parter">
-            <a onClick={toggleInfo} className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1072,7 +1143,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coding.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coding.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Optimized Code with proper commenting</h3>
                     <p>
@@ -1088,7 +1164,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data-complexity.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data-complexity.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Strong Framework of PHP & Well managed database</h3>
                     <p>
@@ -1105,7 +1186,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/coordinate.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/coordinate.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>
                       Quick Response and
@@ -1125,7 +1211,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/customize.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/customize.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customization at affordable price</h3>
                     <p>
@@ -1140,7 +1231,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/smartphone-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/smartphone-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Mobile Friendly Script</h3>
                     <p>
@@ -1155,7 +1251,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/data.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/data.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Dedicated Support Team</h3>
                     <p>
@@ -1172,7 +1273,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/web-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/web-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Global company with agile development approach</h3>
                     <p>
@@ -1191,7 +1297,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/encrypted.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/encrypted.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Customer information and application level security</h3>
                     <p>
@@ -1207,7 +1318,12 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/history-icon.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/history-icon.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Experienced workforce with 3000+ project history</h3>
                     <p>
@@ -1225,7 +1341,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/seouser-friendly.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/seouser-friendly.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Seo Friendly Development</h3>
                     <p>
@@ -1240,7 +1361,9 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                       />
@@ -1258,7 +1381,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/third-party-api.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/third-party-api.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Integration With Third Party Api</h3>
                     <p>
@@ -1273,7 +1401,12 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image width={100} height={100} src="/img/jobboard/cost-effective.png" alt="img" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/cost-effective.png"
+                        alt="img"
+                      />
                     </div>
                     <h3>Cost Effective</h3>
                     <p>
@@ -1299,7 +1432,9 @@ See how it work yourself!"
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
                       />
@@ -1308,13 +1443,20 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100} src="/img/jobboard/html-5.png" alt="HTML5" />
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5"
+                      />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -1323,7 +1465,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -1369,7 +1513,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1378,7 +1524,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1387,13 +1535,20 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100} src="/img/jobboard/free_instal.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/free_instal.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1409,7 +1564,9 @@ See how it work yourself!"
           <div className="row">
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
                 />
@@ -1423,20 +1580,23 @@ See how it work yourself!"
                     <div className="CustomerReviewsBx">
                       <p>
                         I absolutely love the intuitive user interface of this
-                        software. It&lsquo;s incredibly easy to navigate, and I can
-                        quickly find the features Im looking for. The interface
-                        is well-designed, with detailed descriptions and helpful
-                        tooltips that give me a clear idea of how to use the
-                        software. The overall user experience is seamless, and I
-                        appreciate the variety of customization options
-                        available, making it convenient for me to customize the
-                        website to my needs. Overall, this software offers a
-                        fantastic user experience that keeps me satisfied.
+                        software. It&lsquo;s incredibly easy to navigate, and I
+                        can quickly find the features Im looking for. The
+                        interface is well-designed, with detailed descriptions
+                        and helpful tooltips that give me a clear idea of how to
+                        use the software. The overall user experience is
+                        seamless, and I appreciate the variety of customization
+                        options available, making it convenient for me to
+                        customize the website to my needs. Overall, this
+                        software offers a fantastic user experience that keeps
+                        me satisfied.
                       </p>
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
@@ -1444,7 +1604,9 @@ See how it work yourself!"
                       <span>
                         Emily, Canada
                         <i className="contry-flag">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/canada_flag_img.png"
                           />
@@ -1468,7 +1630,9 @@ See how it work yourself!"
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
@@ -1476,7 +1640,9 @@ See how it work yourself!"
                       <span>
                         James, USA
                         <i className="contry-flag">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/usa_flag_img.png"
                           />
@@ -1500,7 +1666,9 @@ See how it work yourself!"
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image width={100} height={100}
+                        <Image
+                          width={100}
+                          height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
                         />
@@ -1508,7 +1676,9 @@ See how it work yourself!"
                       <span>
                         Sophie, UK
                         <i className="contry-flag">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/uk_flag_img.png"
                           />
@@ -1604,7 +1774,7 @@ See how it work yourself!"
                   </div>
                 </div>
                 <div className="ecommerce--review--btn ">
-                <a className="btn btn-primary" onClick={openReviewModel}>
+                  <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
                   </a>
 
@@ -1616,7 +1786,8 @@ See how it work yourself!"
                 </div>
                 <div className="main-rait">
                   <span>
-                    <i className="fa fa-star"></i> <span>4.7 out of 5 stars</span>
+                    <i className="fa fa-star"></i>{" "}
+                    <span>4.7 out of 5 stars</span>
                   </span>
                 </div>
               </div>
@@ -1729,7 +1900,7 @@ See how it work yourself!"
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
@@ -1755,7 +1926,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="Fiverr clone"
                           />
@@ -1775,7 +1948,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job Board Software Logo"
                           />
@@ -1795,7 +1970,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>
                         <div className="other-project-logo">
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/jobboard/ecommerce_logo_new.png"
                             alt="eCommerce Software"
                           />
@@ -1819,7 +1996,9 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100}
+            <Image
+              width={100}
+              height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />

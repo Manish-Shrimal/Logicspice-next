@@ -1,11 +1,28 @@
 "use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.css";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "./resources.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
+
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
       <Navbar />
@@ -122,42 +139,42 @@ const Page = () => {
                   <div class="sidebarmenu_w afclr">
                     <ul class="aside_menu">
                       <li class="current_page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources">
+                        <Link href="/resources">
                           Resources
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/quality-assurance">
+                        <Link href="/resources/quality-assurance">
                           Quality Assurance
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/project-communication">
+                        <Link href="/resources/project-communication">
                           Project Communication Strategy
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/how-much-an-app-cost">
+                        <Link href="/resources/how-much-an-app-cost">
                           How Much An App Cost
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/how-to-grow-your-business-idea">
+                        <Link href="/resources/how-to-grow-your-business-idea">
                           How to grow your business idea
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/how-can-we-help">
+                        <Link href="/resources/how-can-we-help">
                           How Can We Help
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/our-work-process">
+                        <Link href="/resources/our-work-process">
                           Our Work Process
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="injectedConstants.HTTPS_PATH+'resources/free-scripts">
+                        <Link href="/resources/free-scripts">
                           Free Scripts
                         </Link>
                       </li>
@@ -169,6 +186,24 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </Link>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

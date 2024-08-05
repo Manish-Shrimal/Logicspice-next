@@ -31,7 +31,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image: "https://www.logicspice.com/app/webroot/img/images/kesepara.jpg",
+      image: "/img/globalbusinesscountries/kesepara.jpg",
       heading: "C2C Ecommerce Website About Fashion",
       text: "&quot;Exactly the best team available online ! I have been working and communicating with a few companies over the internet and i didn&apos;t see a single better company than logicspice. They are",
       name: "Burak",
@@ -39,7 +39,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image: "https://www.logicspice.com/app/webroot/img/images/dsherevk.jpg",
+      image: "/img/globalbusinesscountries/dsherevk.jpg",
       heading: "Website + Mobile App (iOs&Android)",
       text: "&quot;&quot;Manish was very cooperative and professional during the project. The team was great, the project was very complicated and they tried their best to complete it with the best diligence. I",
       name: "Dmitry",
@@ -47,7 +47,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image: "https://www.logicspice.com/app/webroot/img/images/sabdeen.jpg",
+      image: "/img/globalbusinesscountries/sabdeen.jpg",
       heading: "Build a Website",
       text: "&quot;Best project management experience/journey I had. Great team spirit, very flexible and understanding while maintaining time and budget target.Top tear professional communication and support.",
       name: "Sherif A.",
@@ -55,8 +55,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "https://www.logicspice.com/app/webroot/img/images/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -64,7 +63,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image: "https://www.logicspice.com/app/webroot/img/images/tjulia1.jpg",
+      image: "/img/globalbusinesscountries/tjulia1.jpg",
       heading: "Build a Social Networking Website With Payment System",
       text: "&quot;I hired this team for a very complex project that involved handling many different types of users, payment options, and social network integration. Extremely timely and professional. Will use again!&quot;",
       name: "Tom J.",
@@ -139,38 +138,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><Image   width={300}
-                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div className="hiring-sr">
             <div className="row">
               <div className="col-md-8">
@@ -265,7 +291,7 @@ const Page = () => {
                         height={100}
                         alt="icon-1"
                         src="/img/hiredevelopers/custom-icon1.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -283,7 +309,7 @@ const Page = () => {
                         height={100}
                         alt="icon-2"
                         src="/img/hiredevelopers/custom-icon2.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -301,7 +327,7 @@ const Page = () => {
                         height={100}
                         alt="icon-3"
                         src="/img/hiredevelopers/custom-icon3.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -323,7 +349,7 @@ const Page = () => {
                         height={100}
                         alt="icon-4"
                         src="/img/hiredevelopers/custom-icon4.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -341,7 +367,7 @@ const Page = () => {
                         height={100}
                         alt="icon-5"
                         src="/img/hiredevelopers/custom-icon5.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -359,7 +385,7 @@ const Page = () => {
                         height={100}
                         alt="icon-6"
                         src="/img/hiredevelopers/custom-icon6.png"
-                        style={{display: 'inline'}}
+                        style={{ display: "inline" }}
                       />
                     </i>
                     <div class="custom-ser-txt">
@@ -460,7 +486,6 @@ const Page = () => {
       <section className="portfolio_hire PortfolioWebsiteSlider">
         <div className="container">
           <Slider {...item}>
-
             <div>
               <div className="row">
                 <div className="col-md-6">
@@ -505,58 +530,87 @@ const Page = () => {
               </div>
             </div>
 
-
-
             <div>
-            <div class="row">
-                      <div class="col-md-6">
-                          <div class="port_feat_img"><span>
-                          <Image src="/img/hiredevelopers/Ten-Seconds-Down-Music-Store.png" alt="TenSeconds" /></span>
-                          </div>
-                          <div class="portimagesec_shadow"></div>
-                      </div>
-                      <div class="col-md-6">
-                          <ul class="port_feat">
-                              <li><b>Website  Name:</b> TenSeconds</li>
-                              <li><b>Website  URL:</b> http://www.tenseconds.com.au/</li>
-                              <li><b>Framework:</b> Opencart</li>
-                              <li><b>Language:</b> PHP5, AJAX, jQuery, Java</li>
-                              <li><b>Database:</b> MySQLI</li>
-                              <li><b>Server:</b> MySQL</li>
-                              <li><b>Overview:</b> N/A</li>
-                          </ul>
-                          
-                      </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        src="/img/hiredevelopers/Ten-Seconds-Down-Music-Store.png"
+                        alt="TenSeconds"
+                      />
+                    </span>
                   </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> TenSeconds
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.tenseconds.com.au/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Opencart
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQLI
+                    </li>
+                    <li>
+                      <b>Server:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Overview:</b> N/A
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-
-
 
             <div>
               <div class="row">
-                      <div class="col-md-6">
-                          <div class="port_feat_img"><span>
-                          <Image src="/img/hiredevelopers/FishBone.png" alt="FishBone" /></span>
-                          </div>
-                          <div class="portimagesec_shadow"></div>
-                      </div>
-                      <div class="col-md-6">
-                          <ul class="port_feat">
-                              <li><b>Website  Name:</b> FishBone</li>
-                              <li><b>Website  URL:</b> http://www.skatefishbone.com/</li>
-                              <li><b>Framework:</b> Opencart</li>
-                              <li><b>Language:</b> PHP5, AJAX, jQuery, Java</li>
-                              <li><b>Database:</b> MySQLI</li>
-                              <li><b>Server:</b> MySQL</li>
-                              <li><b>Overview:</b> N/A</li>
-                          </ul>
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        src="/img/hiredevelopers/FishBone.png"
+                        alt="FishBone"
+                      />
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> FishBone
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.skatefishbone.com/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Opencart
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQLI
+                    </li>
+                    <li>
+                      <b>Server:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Overview:</b> N/A
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-                
-                
-          </div>
-            </div>
-
-
           </Slider>
         </div>
       </section>

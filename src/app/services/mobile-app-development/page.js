@@ -79,9 +79,9 @@ const Page = () => {
               from small businesses to medium Enterprises. We develop native
               Android and iPhone apps customized to client requirements and
               current market trends. Logicspice is an{" "}
-              <a target="_blank" href="https://www.logicspice.com">
+              <Link target="_blank" href="/">
                 app development company
-              </a>{" "}
+              </Link>{" "}
               that focuses on delivering our promises with the best planning and
               transparency. We work for some awesome clients like Cisco NHS,
               Johnson &amp; Johnson etc.
@@ -153,9 +153,9 @@ const Page = () => {
             </div>
             <div className="devide_secs_right">
               <h2 className="devide_secs_title">
-                <a href="https://www.logicspice.com/ios-app-development/">
+                <Link href="/services/ios-app-development/">
                   iPhone &amp; iPad App Development
-                </a>
+                </Link>
               </h2>
               <p>
                 Logicspice is a well known iphone app development company &
@@ -166,9 +166,9 @@ const Page = () => {
                 development, testing and deployment. We are serving to all the
                 major streams including business, entertainment, education,
                 arts, education, e-commerce and others.{" "}
-                <a href="https://www.logicspice.com/ios-app-development/">
+                <Link href="/services/ios-app-development/">
                   Read More
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -183,9 +183,9 @@ const Page = () => {
             </div>
             <div className="devide_secs_right">
               <h2 className="devide_secs_title">
-                <a href="https://www.logicspice.com/android-app-development/">
+                <Link href="/services/android-app-development/">
                   Android App Development
-                </a>
+                </Link>
               </h2>
               <p>
                 Logicspice is a leading android application development company
@@ -196,9 +196,9 @@ const Page = () => {
                 apps. We are serving to all the major streams including
                 business, entertainment, education, arts, education, e-commerce
                 and others.{" "}
-                <a href="https://www.logicspice.com/android-app-development/">
+                <Link href="/services/android-app-development/">
                   Read More
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -1205,12 +1205,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/martgram-app/"
                               target="_blank"
                             >
                               Martgram
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             Martgram app that we are scoping will serves as
@@ -1230,12 +1230,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/beano-app/"
                               target="_blank"
                             >
                               Beano
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &quot;Beano: Coffee ordering&quot; is an interactive
@@ -1254,12 +1254,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/social-securites/"
                               target="_blank"
                             >
                               Social Securites
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             Social Securites app that will scoping for
@@ -1279,12 +1279,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/utrack-app/"
                               target="_blank"
                             >
                               Utrack
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &quot;Utrack&quot; app facilitates the students to
@@ -1304,12 +1304,12 @@ const Page = () => {
                         </div>
                         <div className="casestudy_mobcontent">
                           <span>
-                            <a
+                            <Link
                               href="https://www.logicspice.com/case-study/bestcit-app/"
                               target="_blank"
                             >
                               Bestcit
-                            </a>
+                            </Link>
                           </span>
                           <p>
                             &quot;Aphorism&quot; app is a hub where user can
@@ -1322,12 +1322,12 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="more_btn more_btnrevercebn">
-                  <a
+                  <Link
                     className="btn btn-primary"
                     href="https://www.logicspice.com/case-study/"
                   >
                     <span>Featured Case Studies</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1354,12 +1354,12 @@ const Page = () => {
               </p>
               <h6>Some Industries We Serve and able to Serve</h6>
               <div className="industru_btn">
-                <a
+                <Link
                   className="btn btn-primary"
-                  href="https://www.logicspice.com/industries/"
+                  href="/industries/"
                 >
                   VIEW ALL
-                </a>
+                </Link>
               </div>
             </div>
           </div>

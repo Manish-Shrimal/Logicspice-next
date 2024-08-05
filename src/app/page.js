@@ -800,7 +800,7 @@ const Page = () => {
           </div>
           <ul className="hiring-list">
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-reactjs-developers">
+              <Link href="/hire-reactjs-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon reactjs-icon"></span>
@@ -810,7 +810,7 @@ const Page = () => {
               </Link>
             </li>
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-ios-app-developers">
+              <Link href="/hire-ios-app-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon apple-icon"></span>
@@ -820,7 +820,7 @@ const Page = () => {
               </Link>
             </li>
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-web-developers">
+              <Link href="/hire-web-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon web-icon"></span>
@@ -830,7 +830,7 @@ const Page = () => {
               </Link>
             </li>
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-node-js-experts">
+              <Link href="/hire-node-js-experts">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon cake-icon"></span>
@@ -841,7 +841,7 @@ const Page = () => {
             </li>
 
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-laravel-developers">
+              <Link href="/hire-laravel-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon lara-icon"></span>
@@ -851,7 +851,7 @@ const Page = () => {
               </Link>
             </li>
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-react-native-developers">
+              <Link href="/hire-react-native-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon react-native-icon"></span>
@@ -861,7 +861,7 @@ const Page = () => {
               </Link>
             </li>
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-hybrid-mobile-app-developer">
+              <Link href="/hire-hybrid-mobile-app-developer">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon mag-icon"></span>
@@ -871,7 +871,7 @@ const Page = () => {
               </Link>
             </li>
             <li data-aos="fade-left" className="aos-init aos-animate">
-              <Link href="https://www.logicspice.com/hire-wordpress-experts">
+              <Link href="/hire-wordpress-experts">
                 <span className="home-hire-icon">
                   <span className="bg">
                     <span className="icon word-icon"></span>

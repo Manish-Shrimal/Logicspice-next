@@ -304,12 +304,12 @@ const Page = () => {
           <p>
             If your business requires specialized IT expertise&sbquo; don&apos;t
             hesitate to{" "}
-            <a
+            <Link
               href="https://www.approhire.com/request_consultation"
               target="_blank"
             >
               consult with us today
-            </a>{" "}
+            </Link>{" "}
             for access to a network of skilled professionals ready to support
             your growth.
           </p>

@@ -24,7 +24,7 @@ const Page = () => {
     {
       id: 1,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/alex-morgan.jpg",
+        "/img/pythondevelopment/alex-morgan.jpg",
       heading: "",
       text: "Our Python development needs were complex, but the developer we hired from Logicspice tackled them with ease. Their proficiency in Django was particularly impressive.",
       name: "Michael T.,",
@@ -33,7 +33,7 @@ const Page = () => {
     {
       id: 2,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/sophia-turner.jpg",
+        "/img/pythondevelopment/sophia-turner.jpg",
       heading: "",
       text: "We needed a Python expert for our machine learning project, and the professional from Logicspice exceeded all expectations.",
       name: "Sophia R.,",
@@ -42,7 +42,7 @@ const Page = () => {
     {
       id: 3,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/david-clark.jpg",
+        "/img/pythondevelopment/david-clark.jpg",
       heading: "",
       text: "Hiring a Python developer for our backend systems was a crucial step. The developer's skill in Flask and database management has greatly improved our application's performance.",
       name: "David K.,",
@@ -51,7 +51,7 @@ const Page = () => {
     {
       id: 4,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/isabella-clark.jpg",
+        "/img/pythondevelopment/isabella-clark.jpg",
       heading: "",
       text: "The Python developer we hired was outstanding. They understood our vision and brought in their unique perspective, which added immense value to our web application.",
       name: "Isabella G.,",
@@ -60,7 +60,7 @@ const Page = () => {
     {
       id: 5,
       image:
-        "https://www.logicspice.com/app/webroot/img/images/emma-turner.jpg",
+        "/img/pythondevelopment/emma-turner.jpg",
       heading: "",
       text: "The Python developer we brought on board from Logicspice was a game-changer for our project. Their expertise in data analysis and web development helped us achieve milestones ahead of schedule.",
       name: "Emma L.,",
@@ -194,12 +194,12 @@ const Page = () => {
                     giving you complete power over your e-commerce site and a
                     seamless one for your customers. Hire dedicated Shopify
                     Developers from Logicspice to get the
-                    <a
-                      href="https://www.logicspice.com/shopify-development"
+                    <Link
+                      href="/services/shopify-development"
                       target="_blank"
                     >
                       Shopify development services. and Speed Optimization.
-                    </a>
+                    </Link>
                   </p>
                   <p>
                     Our Shopify programmers will modify the e-commerce platform

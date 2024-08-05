@@ -1,4 +1,5 @@
 "use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
@@ -6,8 +7,22 @@ import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../resources.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
       <Navbar />
@@ -44,8 +59,8 @@ const Page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="FreeScriptProductsImg">
                       <Image
-                        width={100}
-                        height={100}
+                        width={650}
+                        height={500 / (100 / 100)}
                         alt="Lead Generation Form Script"
                         src="/img/resources/lead-generation-form-img.jpg"
                         class=""
@@ -70,8 +85,8 @@ const Page = () => {
                           <span>Read More</span>
                           <i>
                             <Image
-                              width={100}
-                              height={100}
+                              width={50}
+                              height={500 / (100 / 100)}
                               alt="read more"
                               src="/img/resources/readmore-arrow.png"
                               class=""
@@ -91,8 +106,8 @@ const Page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="FreeScriptProductsImg">
                       <Image
-                        width={100}
-                        height={100}
+                       width={650}
+                       height={500 / (100 / 100)}
                         alt="FAQ Script"
                         src="/img/resources/Faqscript-img.jpg"
                         class=""
@@ -116,7 +131,7 @@ const Page = () => {
                           <span>Read More</span>
                           <i>
                             <Image
-                              width={100}
+                              width={20}
                               height={100}
                               alt="read more"
                               src="/img/resources/readmore-arrow.png"
@@ -136,8 +151,8 @@ const Page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="FreeScriptProductsImg">
                       <Image
-                        width={100}
-                        height={100}
+                      width={650}
+                      height={500 / (100 / 100)}
                         alt="Blog Script"
                         src="/img/resources/blogscript-img.jpg"
                         class=""
@@ -161,7 +176,7 @@ const Page = () => {
                           <span>Read More</span>
                           <i>
                             <Image
-                              width={100}
+                              width={25}
                               height={100}
                               alt="read more"
                               src="/img/resources/readmore-arrow.png"
@@ -181,8 +196,8 @@ const Page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="FreeScriptProductsImg">
                       <Image
-                        width={100}
-                        height={100}
+                        width={650}
+                        height={500 / (100 / 100)}
                         alt="cake php cms"
                         src="/img/resources/cmsscript-img.jpg"
                         class=""
@@ -206,7 +221,7 @@ const Page = () => {
                           <span>Read More</span>
                           <i>
                             <Image
-                              width={100}
+                              width={25}
                               height={100}
                               alt="read more"
                               src="/img/resources/readmore-arrow.png"
@@ -237,8 +252,8 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
-                      height={100}
+                     width={40}
+                     height={500 / (100 / 100)}
                       alt="iOS Development"
                       src="/img/resources/tech_ios_icon.png"
                     />
@@ -251,7 +266,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Java"
                       src="/img/resources/tech_java_icon.png"
@@ -265,7 +280,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Android Developers"
                       src="/img/resources/tech_android_icon.png"
@@ -279,7 +294,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="PHP Development"
                       src="/img/resources/tech_php_icon.png"
@@ -293,7 +308,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="CakePHP Developers"
                       src="/img/resources/tech_cakephp_icon.png"
@@ -307,7 +322,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Bootstrap"
                       src="/img/resources/bootstrap_icon.png"
@@ -321,7 +336,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="MySQL"
                       src="/img/resources/tech_mysql_icon.png"
@@ -335,7 +350,7 @@ const Page = () => {
                 >
                   <div class="UsedTechnologyImg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Apache"
                       src="/img/resources/tech_apache_icon.png"
@@ -357,7 +372,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Free Updates - Logicspice"
                       src="/img/jobboard/monthyear_icon.png"
@@ -368,7 +383,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Free Support - Logicspice"
                       src="/img/jobboard/month_half_icon.png"
@@ -379,7 +394,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Free Brand Removal - Logicspice"
                       src="/img/jobboard/free_remove_icon.png"
@@ -390,7 +405,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Free Installation - Logicspice"
                       src="/img/jobboard/free_instal.png"
@@ -401,7 +416,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       alt="Access to Source code - Logicspice"
                       src="/img/jobboard/access_secure_code_icon.png"
@@ -419,8 +434,8 @@ const Page = () => {
               <div class="col-xs-12 col-md-3 col-lg-3">
                 <div class="CustomerReviewsImg">
                   <Image
-                    width={100}
-                    height={100}
+                    width={650}
+                    height={500 / (100 / 100)}
                     alt="customer-reviews"
                     src="/img/resources/customer-reviews-img.jpg"
                   />
@@ -462,9 +477,9 @@ const Page = () => {
                   <div class="CustomerReviewsMainBx">
                     <div class="CustomerReviewsBx">
                       <p>
-                        The word &quot;perfect&quot; is not enough to describe the
-                        capability of Logicspice. They are just wonderful and
-                        willing to extend the effort until the customer
+                        The word &quot;perfect&quot; is not enough to describe
+                        the capability of Logicspice. They are just wonderful
+                        and willing to extend the effort until the customer
                         satisfied, definitely will re-hire them.
                       </p>
                     </div>
@@ -629,8 +644,8 @@ const Page = () => {
                   </h4>
                   <div class="FaqImgBx">
                     <Image
-                      width={100}
-                      height={100}
+                      width={350}
+                      height={500 / (100 / 100)}
                       src="/img/ordermanagement/freescript-faq.png"
                       alt="Order Management Software"
                     />{" "}
@@ -686,8 +701,8 @@ const Page = () => {
                       collapseId="flush-collapse5"
                     >
                       <p>
-                        Yes, We deliver the exact product. We don&apos;t compromise
-                        with quality at all.
+                        Yes, We deliver the exact product. We don&apos;t
+                        compromise with quality at all.
                       </p>
                     </MDBAccordionItem>
 
@@ -718,8 +733,8 @@ const Page = () => {
                       <p>
                         You are allowed to modify the script. You can remove our
                         company information and put yours. But you cannot put
-                        &quot;copyright by&quot; because only we own the copyrights for
-                        our softwares.
+                        &quot;copyright by&quot; because only we own the
+                        copyrights for our softwares.
                       </p>
                     </MDBAccordionItem>
                   </MDBAccordion>
@@ -729,6 +744,24 @@ const Page = () => {
           </div>
         </section>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </Link>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

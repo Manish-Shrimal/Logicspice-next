@@ -15,7 +15,7 @@ import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -44,21 +44,21 @@ const Page = () => {
 
   const [pageData, setPageData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       BaseAPI + "/product/Details/job-board-software"
-  //     );
-  //     // console.log(response.data.data)
-  //     setPageData(response.data.data);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        BaseAPI + "/product/Details/job-board-software"
+      );
+      // console.log(response.data.data)
+      setPageData(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   var settings = {
     dots: true,
@@ -113,7 +113,7 @@ const Page = () => {
                         <Image
                           width={100}
                           height={100}
-                          src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                          src="/img/images/more-info.png"
                           alt=""
                         />
                       </i>
@@ -168,7 +168,7 @@ const Page = () => {
                           <Image
                             width={100}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                            src="/img/images/more-info.png"
                             alt=""
                           />
                         </i>
@@ -195,7 +195,7 @@ const Page = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                      src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />
@@ -242,7 +242,7 @@ const Page = () => {
                         <Image
                           width={100}
                           height={100}
-                          src="https://www.logicspice.com/app/webroot/img/images/product_new/subscription2.png"
+                          src="/app/webroot/img/images/product_new/subscription2.png"
                           alt="subscription"
                         />
                       </i>
@@ -258,7 +258,7 @@ const Page = () => {
                   width={400}
                   height={100}
                   className="lazy"
-                  src="https://www.logicspice.com/img/images/product_new/new-img-jobboard.png"
+                  src="/img/jobboard/new-img-jobboard.png"
                   alt="Job_Board_Software"
                 />
               </div>
@@ -652,7 +652,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/ragister-icon.png"
+                                  src="/img/jobboard/ragister-icon.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -672,7 +672,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/manage_alert.png"
+                                  src="/img/jobboard/manage_alert.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -694,7 +694,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/manage_profile.png"
+                                  src="/img/jobboard/manage_profile.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -715,7 +715,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/save_fav.png"
+                                  src="/img/jobboard/save_fav.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -735,7 +735,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/apply_job.png"
+                                  src="/img/jobboard/apply_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -755,7 +755,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/search_job.png"
+                                  src="/img/jobboard/search_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -776,7 +776,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/applied_job.png"
+                                  src="/img/jobboard/applied_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -796,7 +796,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/share_job.png"
+                                  src="/img/jobboard/share_job.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -817,7 +817,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/manage_edu.png"
+                                  src="/img/jobboard/manage_edu.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -838,7 +838,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/manage_exp.png"
+                                  src="/img/jobboard/manage_exp.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -859,7 +859,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/genrate_cv.png"
+                                  src="/img/jobboard/genrate_cv.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -881,7 +881,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/jobs_by.png"
+                                  src="/img/jobboard/jobs_by.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -902,7 +902,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/approve_tickets.png"
+                                  src="/img/jobboard/approve_tickets.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -922,7 +922,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/manage_blog.png"
+                                  src="/img/jobboard/manage_blog.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -982,7 +982,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/deletes_acc.png"
+                                  src="/img/jobboard/deletes_acc.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -1002,7 +1002,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/upload-video.png"
+                                  src="/img/jobboard/upload-video.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -1023,7 +1023,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/categories-auto.png"
+                                  src="/img/jobboard/categories-auto.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -1044,7 +1044,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/simple_application.png"
+                                  src="/img/jobboard/simple_application.png"
                                   alt="Jobseeker App Feature"
                                 />
                               </i>
@@ -1298,7 +1298,7 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   className="lazy"
-                                  src="https://www.logicspice.com/img/images/product_new/manage_user_acc.png"
+                                  src="/img/jobboard/manage_user_acc.png"
                                   alt=""
                                 />
                               </i>
@@ -1841,7 +1841,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              {/* <h4>
+              <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1850,7 +1850,7 @@ const Page = () => {
                 {pageData.currency_symbol}
                 {pageData.other_price}
                 <span className="sml_labl"> {pageData.name}</span>
-              </strike> */}
+              </strike>
 
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
@@ -1865,7 +1865,7 @@ const Page = () => {
                 </div>
                 <a
                   className="btn fiverr-buys"
-                  href="https://www.logicspice.com/softwares/buynow/jobsite"
+                  href="/softwares/buynow/jobsite"
                   id="buy_now_1"
                 >
                   Buy Now
@@ -1888,7 +1888,7 @@ const Page = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                      src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />
@@ -2254,7 +2254,7 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://sellfomote.ch/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -2262,14 +2262,14 @@ const Page = () => {
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://sellfomote.ch/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/sellfomote.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2279,22 +2279,22 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://www.ejtecs.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      ejtecs.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://www.ejtecs.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/ejtecs.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2304,22 +2304,22 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://jobs.restrowizard.com.co/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      jobs.restrowizard.com.co
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://jobs.restrowizard.com.co/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/restrowizard.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2329,22 +2329,22 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://www.healthandsocialcarejobs.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      healthandsocialcarejobs.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://www.healthandsocialcarejobs.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/jobboard/healthandsocialcarejobs.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2352,40 +2352,79 @@ const Page = () => {
                   </Link>
                 </div>
                 <div className="SliderMainBx">
-                  <div className="feat-slide-img">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.joblisto.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      joblisto.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.joblisto.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
+                      src="/img/jobboard/joblisto.webp"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
                     />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Job Management</div>
-                    <div className="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
-                  <div className="feat-slide-img">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.booyajobs.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      booyajobs.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.booyajobs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       width={900}
                       height={100}
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
+                      src="/img/jobboard/booyajobs.webp"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
                     />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.jobseakers.com.au/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobseakers.com.au
+                    </Link>
                   </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Membership Plan</div>
-                    <div className="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
+                  <Link
+                    href="https://www.jobseakers.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/jobseakers.webp"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
                 </div>
               </Slider>
             </div>
@@ -2577,7 +2616,7 @@ const Page = () => {
           <Image
             width={400}
             height={100}
-            src="https://www.logicspice.com/app/webroot/img/images/ecommerce/ecommerce-review-img.png"
+            src="/img/jobboard/ecommerce-review-img.png"
             alt="eCommerce Ultimate Package"
             className=""
           />
@@ -2611,7 +2650,7 @@ const Page = () => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/img/images/usa_flag_img.png"
+                        src="/img/jobboard/usa_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -2641,7 +2680,7 @@ const Page = () => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/img/images/german.png"
+                        src="/img/jobboard/german.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -2673,7 +2712,7 @@ const Page = () => {
                       <Image
                         width={100}
                         height={100}
-                        src="https://www.logicspice.com/img/images/australia_flag_img.png"
+                        src="/img/jobboard/australia_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -3299,10 +3338,10 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
-                    href="https://www.logicspice.com/udemy-clone"
+                    href="/softwares/udemy-clone"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -3311,7 +3350,7 @@ const Page = () => {
                           <Image
                             width={200}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/product_img/udemy_new.png"
+                            src="/img/jobboard/udemy_new.png"
                             alt="Udemy Clone"
                             className=""
                           />
@@ -3324,7 +3363,7 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
@@ -3341,7 +3380,7 @@ const Page = () => {
                           <Image
                             width={200}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/product_img/rms_new.png"
+                            src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
                             className=""
                           />
@@ -3372,7 +3411,7 @@ const Page = () => {
                           <Image
                             width={200}
                             height={100}
-                            src="https://www.logicspice.com/app/webroot/img/images/product_img/gigger_logo_new.png"
+                            src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
                             className=""
                           />
@@ -3398,7 +3437,7 @@ const Page = () => {
             <Image
               width={100}
               height={100}
-              src="https://www.logicspice.com/img/images/whatsapp.png"
+              src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />
           </a>

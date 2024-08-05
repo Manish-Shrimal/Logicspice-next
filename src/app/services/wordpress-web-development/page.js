@@ -145,12 +145,12 @@ const Page = () => {
                   development solutions for clients from all over the world.
                   WordPress website development services include a wide range of
                   services such as plug-ins development&sbquo;
-                  <a
-                    href="https://www.logicspice.com/services/software-development/open-source-cms"
+                  <Link
+                    href="/services/software-development/open-source-cms"
                     target="_blank"
                   >
                     CMS development
-                  </a>
+                  </Link>
                   &sbquo; theme customization and maintenance backed up with
                   highly technically advanced tools and state of the art
                   infrastructure.

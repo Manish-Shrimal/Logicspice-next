@@ -79,7 +79,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      
+
       <section className="job-portal-banner job-portal-bg NewJobSiteDesign fiverr-new-banner JobBoardNewDesign HotelBookingSoftwareBanner">
         <div className="container">
           <div className="row">
@@ -98,9 +98,9 @@ const Page = () => {
                     <span className="MoreInfo">
                       <i>
                         <Image
-                         width ={100}
+                          width={100}
                           height={100}
-                          src="https://www.logicspice.com/app/webroot/img/images/more-info.png"
+                          src="/img/images/more-info.png"
                           alt=""
                         />
                       </i>
@@ -145,9 +145,9 @@ const Page = () => {
                   <div className="portel-btnbx">
                     <div className="line-border">
                       <Image
-                       width ={100}
+                        width={100}
                         height={100}
-                        src="https://www.logicspice.com/app/webroot/img/images/product_new/stars.png"
+                        src="/img/jobboard/stars.png"
                         alt=""
                         className="lazy"
                       />
@@ -161,9 +161,9 @@ const Page = () => {
                     >
                       <i>
                         <Image
-                         width ={100}
+                          width={100}
                           height={100}
-                          src="https://www.logicspice.com/app/webroot/img/images/product_new/subscription2.png"
+                          src="/img/images/product_new/subscription2.png"
                           alt="subscription"
                         />
                       </i>
@@ -176,8 +176,8 @@ const Page = () => {
             <div className="col-sm-5 col-md-5 noposition">
               <div className="por-mobile-new">
                 <Image
-                   width={350}
-                   height={100 / 100 / 10}
+                  width={350}
+                  height={100 / 100 / 10}
                   src="/img/hotelbooking/hotelbooking-banner-img.png"
                   alt="hotel booking"
                   className="lazy"
@@ -188,10 +188,10 @@ const Page = () => {
               <div aria-label="breadcrumb" className="my-breadcrumb">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item">
-                    <a href="https://www.logicspice.com">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li className="breadcrumb-item">
-                    <a href="https://www.logicspice.com/softwares">Softwares</a>
+                    <Link href="/softwares">Softwares</Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
                     Hotel Booking Software
@@ -311,7 +311,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/efficient-reservation-icon.png"
@@ -331,7 +331,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/room-availability-icon.png"
@@ -351,7 +351,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/relationship-icon.png"
@@ -372,7 +372,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/payment-processing-icon.png"
@@ -393,7 +393,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/reporting-icon.png"
@@ -414,7 +414,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/inventory-icon.png"
@@ -435,7 +435,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/mobile-compatibility-icon.png"
@@ -457,7 +457,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/booking-rules-icon.png"
@@ -479,7 +479,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/user-friendly-icon.png"
@@ -513,7 +513,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/easy-booking-icon.png "
@@ -534,7 +534,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/real-time-icon.png"
@@ -555,7 +555,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/secure-payment-icon.png"
@@ -575,7 +575,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/search-filters-icon.png"
@@ -596,7 +596,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/room-information-icon.png"
@@ -617,7 +617,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/special-offers-icon.png"
@@ -638,7 +638,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/booking-icon.png"
@@ -659,7 +659,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/social-media-icon.png"
@@ -680,7 +680,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/room-customization-icon.png"
@@ -717,7 +717,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/dashboard-icon.png"
@@ -739,7 +739,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/user-management-icon.png"
@@ -760,7 +760,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/inventory-icon.png"
@@ -781,7 +781,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/booking-icon.png"
@@ -801,7 +801,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/task-management-icon.png"
@@ -822,7 +822,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/payment-icon.png"
@@ -843,7 +843,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/relationship-icon.png"
@@ -864,7 +864,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/email-campaigns-icon.png"
@@ -888,7 +888,7 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                 width ={100}
+                                  width={100}
                                   height={100}
                                   alt="img"
                                   src="/img/hotelbooking/rate-management-icon.png"
@@ -1108,7 +1108,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="used_technology_section" id="technologies">
         <div className="container">
           <h4 className="title_main">
@@ -1255,7 +1255,7 @@ const Page = () => {
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
                 <Image
-                 width ={100}
+                  width={100}
                   height={100}
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
@@ -1279,7 +1279,7 @@ const Page = () => {
                     <div className="CustomerReviewsClient">
                       <i>
                         <Image
-                         width ={100}
+                          width={100}
                           height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
@@ -1289,7 +1289,7 @@ const Page = () => {
                         John D. (Canada)
                         <i className="contry-flag">
                           <Image
-                           width ={100}
+                            width={100}
                             height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/canada_flag_img.png"
@@ -1310,7 +1310,7 @@ const Page = () => {
                     <div className="CustomerReviewsClient">
                       <i>
                         <Image
-                         width ={100}
+                          width={100}
                           height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
@@ -1320,7 +1320,7 @@ const Page = () => {
                         Sarah K. (UK)
                         <i className="contry-flag">
                           <Image
-                           width ={100}
+                            width={100}
                             height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/uk_flag_img.png"
@@ -1332,16 +1332,17 @@ const Page = () => {
                   <div className="CustomerReviewsMainBx">
                     <div className="CustomerReviewsBx">
                       <p>
-                        Logicspice&apos;s LS Room Reserver has been a game-changer
-                        for our hotel. The software is robust, and the team at
-                        Logicspice has been very supportive throughout the
-                        implementation process. Highly recommended.
+                        Logicspice&apos;s LS Room Reserver has been a
+                        game-changer for our hotel. The software is robust, and
+                        the team at Logicspice has been very supportive
+                        throughout the implementation process. Highly
+                        recommended.
                       </p>
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
                         <Image
-                         width ={100}
+                          width={100}
                           height={100}
                           alt="customer-reviews"
                           src="/img/yiiframework/purpal-star.png"
@@ -1351,7 +1352,7 @@ const Page = () => {
                         Michael P. (Australia)
                         <i className="contry-flag">
                           <Image
-                           width ={100}
+                            width={100}
                             height={100}
                             alt="customer-reviews"
                             src="/img/jobboard/australia_flag_img.png"
@@ -1480,8 +1481,8 @@ const Page = () => {
                 </h4>
                 <div className="FaqImgBx">
                   <Image
-                   width={350}
-                   height={100 / 100 / 10}
+                    width={350}
+                    height={100 / 100 / 10}
                     src="/img/ordermanagement/freescript-faq.png"
                     alt="Free Script"
                   />
@@ -1580,8 +1581,8 @@ const Page = () => {
                         You have the flexibility to modify the software by
                         removing our company information and substituting it
                         with yours. However, it is not permissible to include
-                        &quot;copyright by&quot; since exclusive copyright ownership for
-                        the software rests with us.
+                        &quot;copyright by&quot; since exclusive copyright
+                        ownership for the software rests with us.
                       </p>
                     </MDBAccordionItem>
 
@@ -1601,8 +1602,8 @@ const Page = () => {
                       collapseId="flush-collapse10"
                     >
                       <p>
-                        Yes, We deliver the exact product. We don&apos;t compromise
-                        with quality at all.
+                        Yes, We deliver the exact product. We don&apos;t
+                        compromise with quality at all.
                       </p>
                     </MDBAccordionItem>
 
