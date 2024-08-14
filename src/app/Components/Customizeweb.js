@@ -50,7 +50,7 @@ const Customizeweb = () => {
                 development and
                 <a
                   className="inline-link"
-                  href="https://www.logicspice.com/mobile-app-development/"
+                  href="/services/mobile-app-development/"
                 >
                   {" "}
                   mobile app development{" "}
@@ -65,7 +65,7 @@ const Customizeweb = () => {
                 corporate culture and values.
               </p>
               <a
-                href="https://www.logicspice.com/company/about-us"
+                href="/company/about-us"
                 className="btn btn-primary tab-btn"
               >
                 Read More
@@ -77,7 +77,7 @@ const Customizeweb = () => {
                   <Image
                     width={500}
                     height={100}
-                    src="https://www.logicspice.com/img/images/dev-custom.png"
+                    src="/img/home/customdev/dev-custom.png"
                     alt="about"
                   />
                 )}
@@ -412,7 +412,7 @@ const Customizeweb = () => {
                         width={40}
                         height={100}
                         className="media-object"
-                        src="https://www.logicspice.com/img/images/house_icon.png"
+                        src="/img/images/house_icon.png"
                         alt="..."
                       />
                     )}
@@ -442,7 +442,7 @@ const Customizeweb = () => {
                         width={40}
                         height={100}
                         className="media-object"
-                        src="https://www.logicspice.com/img/images/lappy_icon.png"
+                        src="/img/images/lappy_icon.png"
                         alt="..."
                       />
                     )}
@@ -471,7 +471,7 @@ const Customizeweb = () => {
                         width={40}
                         height={100}
                         className="media-object"
-                        src="https://www.logicspice.com/img/images/clip_board.png"
+                        src="/img/images/clip_board.png"
                         alt="..."
                       />
                     )}
@@ -500,7 +500,7 @@ const Customizeweb = () => {
                         width={40}
                         height={100}
                         className="media-object"
-                        src="https://www.logicspice.com/img/images/mind.png"
+                        src="/img/images/mind.png"
                         alt="..."
                       />
                     )}

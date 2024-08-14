@@ -6,13 +6,22 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import parse from "html-react-parser";
+import Link from "next/link";
 const Page = () => {
   const [pageData, setPageData] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
+  let imagePath = useRef();
+
+  const [blogData, setBlogData] = useState([]);
 
   const getData = async () => {
     try {
       const response = await axios.get(BaseAPI + "/testimonials");
       setPageData(response.data.data);
+      setTestimonials(response.data.testimonial);
+      setBlogData(response.data.blogs);
+      imagePath.current = response.data.imagePath;
     } catch (error) {
       console.log(error.message);
     }
@@ -37,41 +46,44 @@ const Page = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-9 col-sm-8 ">
-              <div class="m_content" id="listID">
-                <div class="panel-body">
-                  <section class="lstng-section">
-                    <b class="ctname">MyMentions Website</b>
-                    <hr class="dotted" />
-                    <Image
-                      width={100}
-                      height={100}
-                      src="https://www.logicspice.com/app/webroot/files/testimonial/full/Alanc13.png"
-                      alt="MyMentions Website"
-                    />
-                    <p></p>
-                    <p class="western" lang="en-US" align="justify">
-                      <span>
-                        MyMention website is a Social media site where users can
-                        create and manage profiles and search for other users.
-                        Here they can follow other users and tag pictures with
-                        them. This site also have other social features such as
-                        tagging(Javascript),POP up pictures, profile
-                        setting,background video ,Comment, like and share.
-                      </span>
-                    </p>
-                    <p class="western" lang="en-US" align="justify">
-                      You can also review the case study for the project over
-                      here:{" "}
-                      <a
-                        class="p_excerpt_url"
-                        href="https://www.logicspice.com/case-study/mymentions/"
-                      >
-                        Case Study
-                      </a>
-                    </p>
-                  </section>
-                </div>
-              </div>
+              {testimonials.map((item) => {
+                return (
+                  <>
+                    <div class="m_content" id="listID">
+                      <div class="panel-body">
+                        <section class="lstng-section">
+                          <b class="ctname">{item.title}</b>
+                          {/* <hr class="dotted" /> */}
+                          {item.image !== "" && (
+                            <Image
+                              width={1500}
+                              height={100 / (100 / 100)}
+                              src={imagePath.current + item.image}
+                              alt="MyMentions Website"
+                            />
+                          )}
+                          <p style={{ color: "#000" }}></p>
+                          <p class="western" lang="en-US" align="justify">
+                            <span>
+                              {item.description && parse(item.description)}
+                            </span>
+                          </p>
+                          {/* <p class="western" lang="en-US" align="justify" style={{fontSize : "20px"}}>
+                            You can also review the case study for the project
+                            over here:{" "}
+                            <a
+                              class="p_excerpt_url"
+                              href={`/case-studies/${item.slug}`}
+                            >
+                              Case Study
+                            </a>
+                          </p> */}
+                        </section>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
             </div>
             <div class="col-md-3 col-sm-4">
               <div class="sidebar_right new_right_side">
@@ -86,10 +98,53 @@ const Page = () => {
                   ></iframe>
                 </div>
               </div>
+              <div className="widget-area">
+                <aside id="recent-posts-2" class="widget widget_recent_entries">
+                  <h4 class="widget-title">Recent Posts</h4>
+
+                  <ul>
+                    {blogData &&
+                      blogData.map((i) => {
+                        return (
+                          <>
+                            <li>
+                              <Link
+                                href={`https://blog.logicspice.com/${i.slug}`}
+                              >
+                                {i.subject}
+                              </Link>
+                            </li>
+
+                            <br />
+                          </>
+                        );
+                      })}
+                  </ul>
+                </aside>
+                {/* <div id="blog_search" class="widget widget_recent_entries">
+        <div class="cost_wrap">
+          <div class="blog_cost_calculator">
+            <div class="cost_content">
+              Try this tool for free to calculate the cost of App/Web
+            </div>
+            <div class="cost_btn">
+              <a
+                class="btn btn-primary"
+                href="https://app-cost-calculator.logicspice.com"
+              >
+                App Cost Calculator
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> */}
+              </div>
+            
             </div>
           </div>
         </div>
       </section>
+   
       <Footer />
     </>
   );

@@ -19,12 +19,12 @@ const Slidersimple = () => {
   return (
     <>
       <Slider {...settings}>
-        <div class="HomeSlider HomeSliderJobSlide">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-                <div class="HomeBannerImg">
-                  <div class="LeftGolImg balloon">
+        <div className="HomeSlider HomeSliderJobSlide">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+                <div className="HomeBannerImg">
+                  <div className="LeftGolImg balloon">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -32,7 +32,7 @@ const Slidersimple = () => {
                       alt=""
                     />
                   </div>
-                  <div class="LeftTxtImg">
+                  <div className="LeftTxtImg">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -43,29 +43,32 @@ const Slidersimple = () => {
                   <Image
                     width={500}
                     height={100 / (100 / 100)}
-                    class="AppDevelomentsImgHome"
+                    className="AppDevelomentsImgHome"
                     src="/img/home/top-banner/app-development-banner.webp"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-6 pull-left">
-                <div class="HomeSliderTxt">
+              <div className="col-xs-12 col-sm-6 col-md-6 pull-left">
+                <div className="HomeSliderTxt">
                   <h2>
                     Mobile Apps Development{" "}
-                    <span class="smallText">Company</span>
+                    <span className="smallText">Company</span>
                   </h2>
                   <p>
                     Ready to use, affordable &amp; custom solutions
                     <br />
                     1800+ projects | 18+ years | 60% repeat clients
                   </p>
-                  <Link href="/portfolio" class="btn btn-primary bt34">
+                  <Link
+                    href="/company/portfolio"
+                    className="btn btn-primary bt34"
+                  >
                     PORTFOLIO
                   </Link>{" "}
                   <Link
                     href="/services/hire-developers"
-                    class="btn btn-default bt234"
+                    className="btn btn-default bt234"
                   >
                     HIRE A DEVELOPER
                   </Link>
@@ -74,12 +77,12 @@ const Slidersimple = () => {
             </div>
           </div>
         </div>
-        <div class="HomeSlider HomeSliderJobSlide">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-6 pull-right">
-                <div class="HomeBannerImg">
-                  <div class="GrouponIcons1">
+        <div className="HomeSlider HomeSliderJobSlide">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12 col-md-6 pull-right">
+                <div className="HomeBannerImg">
+                  <div className="GrouponIcons1">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -87,7 +90,7 @@ const Slidersimple = () => {
                       alt="Groupon Clone"
                     />
                   </div>
-                  <div class="GrouponIcons2">
+                  <div className="GrouponIcons2">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -95,7 +98,7 @@ const Slidersimple = () => {
                       alt="Groupon Clone"
                     />
                   </div>
-                  <div class="GrouponIcons3">
+                  <div className="GrouponIcons3">
                     <Image
                       width={500}
                       height={100 / (100 / 100)}
@@ -111,13 +114,16 @@ const Slidersimple = () => {
                   />
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 pull-left">
-                <div class="HomeSliderTxt">
+              <div className="col-sm-12 col-md-6 pull-left">
+                <div className="HomeSliderTxt">
                   <h2>
                     Groupon Clone <span>Script</span>
                   </h2>
                   <p>Similar to Daily Deal Software &amp; Coupon Script</p>
-                  <Link class="btn btn-primary" href="/softwares/groupon-clone">
+                  <Link
+                    className="btn btn-primary"
+                    href="/softwares/groupon-clone"
+                  >
                     KNOW MORE
                   </Link>
                 </div>
@@ -125,12 +131,12 @@ const Slidersimple = () => {
             </div>
           </div>
         </div>
-        <div class="HomeSlider HomeSliderJobSlide">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4 col-md-6 pull-right">
-                <div class="HomeBannerImg">
-                  <div class="FivverIcons1">
+        <div className="HomeSlider HomeSliderJobSlide">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-4 col-md-6 pull-right">
+                <div className="HomeBannerImg">
+                  <div className="FivverIcons1">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -138,7 +144,7 @@ const Slidersimple = () => {
                       alt="gigger"
                     />
                   </div>
-                  <div class="FivverIcons2">
+                  <div className="FivverIcons2">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -146,7 +152,7 @@ const Slidersimple = () => {
                       alt="gigger"
                     />
                   </div>
-                  <div class="FivverIcons3">
+                  <div className="FivverIcons3">
                     <Image
                       width={500}
                       height={100 / (100 / 100)}
@@ -154,7 +160,7 @@ const Slidersimple = () => {
                       alt="gigger"
                     />
                   </div>
-                  <div class="FivverIcons4">
+                  <div className="FivverIcons4">
                     <Image
                       width={100}
                       height={100 / (100 / 100)}
@@ -170,13 +176,16 @@ const Slidersimple = () => {
                   />
                 </div>
               </div>
-              <div class="col-sm-8 col-md-6 pull-left">
-                <div class="HomeSliderTxt">
+              <div className="col-sm-8 col-md-6 pull-left">
+                <div className="HomeSliderTxt">
                   <h2>
                     Fiverr Clone <span>Script</span>
                   </h2>
                   <p>Online Micro Job Portal Software and Mobile Apps</p>
-                  <Link class="btn btn-primary" href="/softwares/fiverr-clone">
+                  <Link
+                    className="btn btn-primary"
+                    href="/softwares/fiverr-clone"
+                  >
                     KNOW MORE
                   </Link>
                 </div>
@@ -186,12 +195,12 @@ const Slidersimple = () => {
         </div>
 
         <div>
-          <div class="HomeSlider HomeSliderJobSlide">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-6 pull-right">
-                  <div class="HomeBannerImg">
-                    <div class="FreelancerIcons1">
+          <div className="HomeSlider HomeSliderJobSlide">
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-12 col-md-6 pull-right">
+                  <div className="HomeBannerImg">
+                    <div className="FreelancerIcons1">
                       <Image
                         width={100}
                         height={100 / (100 / 100)}
@@ -199,7 +208,7 @@ const Slidersimple = () => {
                         alt="Freelancer Clone"
                       />
                     </div>
-                    <div class="FreelancerIcons2">
+                    <div className="FreelancerIcons2">
                       <Image
                         width={100}
                         height={100 / (100 / 100)}
@@ -207,7 +216,7 @@ const Slidersimple = () => {
                         alt="Freelancer Clone"
                       />
                     </div>
-                    <div class="FreelancerIcons3">
+                    <div className="FreelancerIcons3">
                       <Image
                         width={100}
                         height={100 / (100 / 100)}
@@ -215,7 +224,7 @@ const Slidersimple = () => {
                         alt="Freelancer Clone"
                       />
                     </div>
-                    <div class="FreelancerIcons4">
+                    <div className="FreelancerIcons4">
                       <Image
                         width={500}
                         height={100 / (100 / 100)}
@@ -223,7 +232,7 @@ const Slidersimple = () => {
                         alt="Freelancer Clone"
                       />
                     </div>
-                    <div class="FreelancerIcons5">
+                    <div className="FreelancerIcons5">
                       <Image
                         width={100}
                         height={100 / (100 / 100)}
@@ -239,8 +248,8 @@ const Slidersimple = () => {
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-6 pull-left">
-                  <div class="HomeSliderTxt">
+                <div className="col-sm-12 col-md-6 pull-left">
+                  <div className="HomeSliderTxt">
                     <h2>
                       Freelancer <span>Clone</span>
                     </h2>
@@ -248,7 +257,7 @@ const Slidersimple = () => {
                       Freelance Marketplace software &amp; Upwork clone script
                     </p>
                     <Link
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       href="/softwares/freelancer-clone"
                     >
                       KNOW MORE
@@ -261,12 +270,12 @@ const Slidersimple = () => {
         </div>
 
         <div>
-          <div class="HomeSlider HomeSliderJobSlide">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-6 pull-right">
-                  <div class="HomeBannerImg">
-                    <div class="LaravelIcons1">
+          <div className="HomeSlider HomeSliderJobSlide">
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-12 col-md-6 pull-right">
+                  <div className="HomeBannerImg">
+                    <div className="LaravelIcons1">
                       <Image
                         width={500}
                         height={100 / (100 / 100)}
@@ -274,7 +283,7 @@ const Slidersimple = () => {
                         alt="Laravel Development"
                       />
                     </div>
-                    <div class="LaravelIcons2">
+                    <div className="LaravelIcons2">
                       <Image
                         width={500}
                         height={100 / (100 / 100)}
@@ -290,8 +299,8 @@ const Slidersimple = () => {
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-6 pull-left">
-                  <div class="HomeSliderTxt">
+                <div className="col-sm-12 col-md-6 pull-left">
+                  <div className="HomeSliderTxt">
                     <h2>
                       Laravel <span>Development</span>
                     </h2>
@@ -300,8 +309,8 @@ const Slidersimple = () => {
                       kind of enterprise.{" "}
                     </p>
                     <Link
-                      class="btn btn-primary"
-                      href="/softwares/laravel-development"
+                      className="btn btn-primary"
+                      href="/services/laravel-development"
                     >
                       KNOW MORE
                     </Link>
@@ -312,20 +321,20 @@ const Slidersimple = () => {
           </div>
         </div>
         <div>
-          <div class="HomeSlider HomeSliderJobSlide">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-6 pull-right">
-                  <div class="HomeBannerImg">
-                    <div class="ClassifiedIcons1">
+          <div className="HomeSlider HomeSliderJobSlide">
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-12 col-md-6 pull-right">
+                  <div className="HomeBannerImg">
+                    <div className="ClassifiedIcons1">
                       <Image
-                        width={500}
+                        width={100}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/classified-icon1.webp"
                         alt="PHP Classified Ads Script"
                       />
                     </div>
-                    <div class="ClassifiedIcons2">
+                    <div className="ClassifiedIcons2">
                       <Image
                         width={500}
                         height={100 / (100 / 100)}
@@ -341,14 +350,14 @@ const Slidersimple = () => {
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-6 pull-left">
-                  <div class="HomeSliderTxt">
+                <div className="col-sm-12 col-md-6 pull-left">
+                  <div className="HomeSliderTxt">
                     <h2>
                       PHP Classified Ads <span>Script</span>
                     </h2>
                     <p>Empower Your Ads, Expand Your Reach</p>
                     <Link
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       href="/softwares/classified-ads-script"
                     >
                       KNOW MORE

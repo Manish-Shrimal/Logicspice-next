@@ -25,6 +25,7 @@ const Page = () => {
   };
   return (
     <>
+    <Navbar />
       <section class="resources-header HowMuchBanner">
         <div class="container">
           <span>How Much An App Cost </span>

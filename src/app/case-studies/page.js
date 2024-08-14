@@ -10,11 +10,18 @@ import Ourclient from "../Components/Ourclient";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import BlogSlider from "@/app/Components/BlogSliderDynamic";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 
 const Page = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   const [pageData, setPageData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // Adjust this to the number of items you want per page
+  const itemsPerPage = 12; // Adjust this to the number of items you want per page
 
   let blogImagePath = useRef();
   let caseStudeImagePath = useRef();
@@ -46,9 +53,14 @@ const Page = () => {
   // Calculate the displayed items based on the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = caseStudyData.current?.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = caseStudyData.current?.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
-  const totalPages = Math.ceil((caseStudyData.current?.length || 0) / itemsPerPage);
+  const totalPages = Math.ceil(
+    (caseStudyData.current?.length || 0) / itemsPerPage
+  );
 
   return (
     <>
@@ -58,7 +70,7 @@ const Page = () => {
           <h1>Case Studies</h1>
           <ol class="breadcrumb casestudiesBreadcrumb">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
               <p> / </p>
@@ -127,7 +139,9 @@ const Page = () => {
                       <button
                         key={i}
                         onClick={() => handlePageChange(i + 1)}
-                        className={`pagination-button ${i + 1 === currentPage ? 'active' : ''}`}
+                        className={`pagination-button ${
+                          i + 1 === currentPage ? "active" : ""
+                        }`}
                       >
                         {i + 1}
                       </button>
@@ -163,6 +177,27 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
+      
+      
       <Footer />
     </>
   );

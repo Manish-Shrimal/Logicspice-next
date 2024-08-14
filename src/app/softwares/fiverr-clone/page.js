@@ -26,6 +26,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Pagination, Navigation } from "swiper/modules";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -38,6 +39,8 @@ const Page = () => {
 
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
+
+
 
   const openModal = () => {
     console.log(showModal);
@@ -213,7 +216,7 @@ const Page = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="https://www.logicspice.com/softwares/buynow/fiverr-clone"
+                    href={`/buy-now/fiverr-clone`}
                     id="buy_now_1"
                   >
                     Buy Now

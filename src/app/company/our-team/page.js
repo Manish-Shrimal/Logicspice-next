@@ -1,15 +1,22 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import "@/app/company/company.css";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 
 const Page = () => {
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -647,6 +654,24 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

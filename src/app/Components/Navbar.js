@@ -2,7 +2,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import "../globals.css";
+import "../resposive.css";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 // import {
 //   AppBar,
@@ -17,7 +19,7 @@ import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 
-const NavBar = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [dropdown1, setDropdown1] = useState(false);
@@ -25,6 +27,9 @@ const NavBar = () => {
   const [dropdown3, setDropdown3] = useState(false);
   const [dropdown4, setDropdown4] = useState(false);
   const [dropdown5, setDropdown5] = useState(false);
+  const router = useRouter();
+
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -36,7 +41,12 @@ const NavBar = () => {
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">
-              <Image width={272} height={100 / (100 / 100)} src="/img/logo.png" alt="Logo" />
+              <Image
+                width={272}
+                height={100 / (100 / 100)}
+                src="/img/logo.png"
+                alt="Logo"
+              />
             </Link>
           </div>
           <button
@@ -67,7 +77,7 @@ const NavBar = () => {
                   onMouseLeave={() => setDropdown1(false)}
                 >
                   COMPANY
-                  <b class="caret caret-company"></b>
+                  <b className="caret caret-company"></b>
                 </a>
 
                 <div
@@ -81,56 +91,106 @@ const NavBar = () => {
                   <div className="grid-demo">
                     <div className="row menu-one">
                       <div className="col-sm-6">
-                        <ul>
+                        {/* <ul>
                           <li>
                             <Link href="/company/our-team">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_team"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_team"></i>
                               </span>
                               <span>Our Team</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/company/testimonials-and-reviews/">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_testimonials"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_testimonials"></i>
                               </span>
                               <span>Testimonials &amp; Reviews</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/company/technologies">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_technologies"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_technologies"></i>
                               </span>
                               <span>Technologies</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/case-studies">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_case_study"></i>{" "}
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_case_study"></i>{" "}
                               </span>
                               <span>Case Studies</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/company/portfolio">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_portfolio"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_portfolio"></i>
                               </span>
                               <span>Portfolio</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="https://blog.logicspice.com/">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_blog"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_blog"></i>
                               </span>
                               <span>Blog</span>
                             </Link>
                           </li>
-                        </ul>
+                        </ul> */}
+                      <ul>
+      <li className={router.pathname === '/company/our-team' ? "active" : ""}>
+        <Link href="/company/our-team">
+          <span className="hover_btn_menu">
+            <i className="menu_icon_all icon_team"></i>
+          </span>
+          <span>Our Team</span>
+        </Link>
+      </li>
+      <li className={router.pathname === '/company/testimonials-and-reviews' ? 'active' : ''}>
+        <Link href="/company/testimonials-and-reviews">
+          <span className="hover_btn_menu">
+            <i className="menu_icon_all icon_testimonials"></i>
+          </span>
+          <span>Testimonials &amp; Reviews</span>
+        </Link>
+      </li>
+      <li className={router.pathname === '/company/technologies' ? 'active' : ''}>
+        <Link href="/company/technologies">
+          <span className="hover_btn_menu">
+            <i className="menu_icon_all icon_technologies"></i>
+          </span>
+          <span>Technologies</span>
+        </Link>
+      </li>
+      <li className={router.pathname === '/case-studies' ? 'active' : ''}>
+        <Link href="/case-studies">
+          <span className="hover_btn_menu">
+            <i className="menu_icon_all icon_case_study"></i>
+          </span>
+          <span>Case Studies</span>
+        </Link>
+      </li>
+      <li className={router.pathname === '/company/portfolio' ? 'active' : ''}>
+        <Link href="/company/portfolio">
+          <span className="hover_btn_menu">
+            <i className="menu_icon_all icon_portfolio"></i>
+          </span>
+          <span>Portfolio</span>
+        </Link>
+      </li>
+      <li className={router.pathname === 'https://blog.logicspice.com/' ? 'active' : ''}>
+        <Link href="https://blog.logicspice.com/">
+          <span className="hover_btn_menu">
+            <i className="menu_icon_all icon_blog"></i>
+          </span>
+          <span>Blog</span>
+        </Link>
+      </li>
+    </ul>
                       </div>
                       <div className="col-sm-6">
                         <ul>
@@ -187,7 +247,7 @@ const NavBar = () => {
                   onMouseLeave={() => setDropdown2(false)}
                 >
                   SOFTWARE
-                  <b class="caret caret-company"></b>
+                  <b className="caret caret-company"></b>
                 </a>
                 <div
                   className={`dropdown-menu company-menu ${
@@ -203,56 +263,56 @@ const NavBar = () => {
                         <ul>
                           <li>
                             <Link href="/softwares/fiverr-clone">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all fiver"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all fiver"></i>
                               </span>
                               <span>Fiverr Clone Script</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/crowdfunding-script">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_crowd_funding"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_crowd_funding"></i>
                               </span>
                               <span>Crowdfunding Script</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/job-board-software">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_reqruitment_application"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_reqruitment_application"></i>
                               </span>
                               <span>Job Board Software</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/whatsapp-clone">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all whatsapp_clone_icon"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all whatsapp_clone_icon"></i>
                               </span>
                               <span> Whatsapp Clone App</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/groupon-clone">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_groupon"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_groupon"></i>
                               </span>
                               <span>Groupon Clone</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/udemy-clone">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all udemy-clone-icon"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all udemy-clone-icon"></i>
                               </span>
                               <span> Udemy Clone Script</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/freelancer-clone">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_freelancer"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_freelancer"></i>
                               </span>
                               <span>Freelancer Clone</span>
                             </Link>
@@ -263,56 +323,56 @@ const NavBar = () => {
                         <ul>
                           <li>
                             <Link href="/softwares/equipment-rental-software">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_machinerental"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_machinerental"></i>
                               </span>
                               <span>Equipment Rental System</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/classified-ads-script">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_classfied"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_classfied"></i>
                               </span>
                               <span>Classified Ads Software</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/logistic-marketplace-software">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_logistic"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_logistic"></i>
                               </span>
                               <span>Logistic Marketplace Software</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/marketplace-software-solution">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_service_provider_system"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_service_provider_system"></i>
                               </span>
                               <span>Marketplace Software Solution</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/inventory-management-software">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_online_test_app"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_online_test_app"></i>
                               </span>
                               <span>Inventory Management</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/recruitment-management-software">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all rms_clone"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all rms_clone"></i>
                               </span>
                               <span>Recruitment Management</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/business-directory-system">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_business_directorysystem"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_business_directorysystem"></i>
                               </span>
                               <span>Business Directory Software</span>
                             </Link>
@@ -323,47 +383,47 @@ const NavBar = () => {
                         <ul>
                           <li>
                             <Link href="/softwares/event-booking-software">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_event_booking"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_event_booking"></i>
                               </span>
                               <span>Event Booking Software</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/faq-script">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_faq"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_faq"></i>
                               </span>
                               <span>FAQ Script</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/blog-script">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_angularjsblog"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_angularjsblog"></i>
                               </span>
                               <span>Blog Script</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/softwares/lead-generation-contact-form-php-script">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_lead_gene"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_lead_gene"></i>
                               </span>
                               <span>Lead Generation Form</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_temp"></i>
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_temp"></i>
                               </span>
                               <span>Free Templates</span>
                             </Link>
                           </li>
 
-                          <li class="ad-footer-view-all">
-                            <Link href="/softwares" class="btn btn-primary">
+                          <li className="ad-footer-view-all">
+                            <Link href="/softwares" className="btn btn-primary">
                               View All Softwares
                             </Link>
                           </li>
@@ -384,7 +444,7 @@ const NavBar = () => {
                   onMouseLeave={() => setDropdown3(false)}
                 >
                   SERVICES
-                  <b class="caret caret-company"></b>
+                  <b className="caret caret-company"></b>
                 </a>
                 <div
                   className={`dropdown-menu company-menu ${
@@ -468,56 +528,56 @@ const NavBar = () => {
                         </li> */}
                         </ul>
                       </div>
-                      <div class="col-sm-4">
+                      <div className="col-sm-4">
                         <ul style={{ paddingBottom: "15px" }}>
-                          <span class="ahab ahab1">
+                          <span className="ahab ahab1">
                             <Link href="/services/mobile-app-development">
-                              <i class="fa fa-mobile"></i> Mobile App
+                              <i className="fa fa-mobile"></i> Mobile App
                               Development
                             </Link>
                           </span>
                           <li>
                             <Link href="/services/ios-app-development">
-                              <span class="hover_btn_menu icon_iphone_application">
-                                <i class="menu_icon_all icon_iphone_application"></i>{" "}
+                              <span className="hover_btn_menu icon_iphone_application">
+                                <i className="menu_icon_all icon_iphone_application"></i>{" "}
                               </span>
                               <span>iPhone App Development</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="/services/android-app-development">
-                              <span class="hover_btn_menu icon_android_application">
-                                <i class="menu_icon_all icon_android_application"></i>
+                              <span className="hover_btn_menu icon_android_application">
+                                <i className="menu_icon_all icon_android_application"></i>
                               </span>
                               <span>Android App Development</span>
                             </Link>
                           </li>
                         </ul>
-                        <ul class="" style={{ PaddingTop: "0px" }}>
-                          <span class="ahab ahab2">
+                        <ul className="" style={{ PaddingTop: "0px" }}>
+                          <span className="ahab ahab2">
                             <Link href="https://design.logicspice.com">
-                              <i class="fa fa-paint-brush"></i> UI UX Design{" "}
+                              <i className="fa fa-paint-brush"></i> UI UX Design{" "}
                             </Link>
                           </span>
                           <li>
-                            <Link href="/services/website-design" class="">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_web"></i>
+                            <Link href="/services/website-design" className="">
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_web"></i>
                               </span>
                               <span>Web Design</span>
                             </Link>
                           </li>
                           <li>
                             <Link href="https://design.logicspice.com/website-design-packages">
-                              <span class="hover_btn_menu ">
-                                <i class="menu_icon_all icon_webdesign"></i>{" "}
+                              <span className="hover_btn_menu ">
+                                <i className="menu_icon_all icon_webdesign"></i>{" "}
                               </span>
                               <span>Website Design Packages</span>
                             </Link>
                           </li>
 
-                          <li class="ad-footer-view-all desktop-show">
-                            <Link href="/services" class="btn btn-primary">
+                          <li className="ad-footer-view-all desktop-show">
+                            <Link href="/services" className="btn btn-primary">
                               View All Services
                             </Link>
                           </li>
@@ -608,7 +668,7 @@ const NavBar = () => {
                   onMouseLeave={() => setDropdown4(false)}
                 >
                   CUSTOM SOLUTIONS
-                  <b class="caret caret-company"></b>
+                  <b className="caret caret-company"></b>
                 </a>
                 <div
                   className={`dropdown-menu company-menu company-menu-icon ${
@@ -714,7 +774,7 @@ const NavBar = () => {
                             </a>
                           </li>
                           <li>
-                            <Link href="/custom-solutions/erp-system-software-developement">
+                            <Link href="/custom-solutions/erp-system-software-development">
                               <span className="hover_btn_menu">
                                 <i className="menu_icon_all icon_erp"></i>{" "}
                               </span>
@@ -740,15 +800,15 @@ const NavBar = () => {
               </li>
             </ul>
 
-            <div class="contact_detail_top">
-              <ul class="con_d">
-                <li class="logic_contact">
+            <div className="contact_detail_top">
+              <ul className="con_d">
+                <li className="logic_contact">
                   <a
                     href="#"
                     onMouseEnter={() => setDropdown5(true)}
                     onMouseLeave={() => setDropdown5(false)}
                   >
-                    <i class="fa fa-phone"></i> <b class="caret"></b>
+                    <i className="fa fa-phone"></i> <b className="caret"></b>
                   </a>
                   <div
                     className={`sub-contact ${dropdown5 ? "show" : ""}`}
@@ -756,11 +816,11 @@ const NavBar = () => {
                     onMouseEnter={() => setDropdown5(true)}
                     onMouseLeave={() => setDropdown5(false)}
                   >
-                    <div class="">
+                    <div className="">
                       <h2>Connect With Us</h2>
-                      <div class="sales_enquiry">
+                      <div className="sales_enquiry">
                         <p>For Sales Inquiry</p>
-                        <ul class="sales_contact">
+                        <ul className="sales_contact">
                           <li>
                             <Image
                               width={100}
@@ -814,16 +874,13 @@ const NavBar = () => {
                             </span>
                           </li>
                         </ul>
-                        <a
-                          href="https://www.logicspice.com/contact-us"
-                          class="btn btn-primary"
-                        >
+                        <a href="/contact-us" className="btn btn-primary">
                           Contact Us
                         </a>
                       </div>
-                      <div class="hr_enquiry">
+                      <div className="hr_enquiry">
                         <p>For HR Inquiry</p>
-                        <ul class="sales_contact">
+                        <ul className="sales_contact">
                           <li>
                             <Image
                               width={100}
@@ -843,10 +900,7 @@ const NavBar = () => {
                             <span> hr@logicspice.com </span>
                           </li>
                         </ul>
-                        <a
-                          href="https://www.logicspice.com/apply-now"
-                          class="btn btn-primary"
-                        >
+                        <a href="/apply-now" className="btn btn-primary">
                           Apply Now
                         </a>
                       </div>
@@ -862,4 +916,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

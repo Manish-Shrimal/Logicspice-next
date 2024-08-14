@@ -677,3 +677,14 @@ section {
 .QualityAssuranceBanner {
 	background: url(/img/resources/quality_assurance.png) no-repeat
 }
+
+.ProjectCommunicationBanner {
+	background: url(/img/resources/project_communication_strategy.png) no-repeat
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: var(--bs-breadcrumb-item-padding-x);
+    color: white !important;
+    content: var(--bs-breadcrumb-divider, "/");
+}

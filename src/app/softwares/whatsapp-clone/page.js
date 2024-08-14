@@ -85,10 +85,8 @@ const Page = () => {
     getData();
   }, []);
 
-
   return (
     <>
-     
       <NavBar />
       <section className="paid-pro job-portal-banner  fiverr-new-banner NewJobSiteDesign JobBoardNewDesign NewCrowdDesigns job-portal-bg whatsapp-clone-new">
         <div className="container">

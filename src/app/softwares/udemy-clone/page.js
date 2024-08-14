@@ -157,7 +157,11 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -206,8 +210,8 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={400}
+                  height={100 / (100 / 100)}
                   alt="crowd_funding_script"
                   src="/img/softwares-banner-img/udemy-banner-img.png"
                 />
@@ -331,7 +335,7 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
                           <Image
-                            width={100}
+                            width={300}
                             height={100}
                             src="/img/udemyclone/mobile-udemy-clone.png"
                             alt="Udemy Clone Script"
@@ -594,7 +598,7 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
                           <Image
-                            width={100}
+                            width={300}
                             height={100}
                             src="/img/udemyclone/instructor-mobile.png"
                             alt="Udemy Clone Script"
@@ -694,7 +698,7 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                            width={100}
+                            width={300}
                             height={100}
                             src="/img/udemyclone/udemy-website.png"
                             alt="Admin Panel"
@@ -1183,7 +1187,7 @@ const Page = () => {
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
-                    width={100}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1399,7 +1403,7 @@ const Page = () => {
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="Laravel Development"
@@ -1410,7 +1414,7 @@ const Page = () => {
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       src="/img/jobboard/html-5.png"
                       alt="HTML5"
@@ -1421,7 +1425,7 @@ const Page = () => {
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       src="/img/jobboard/tech_mysql_icon.png"
                       alt="MySQL"
@@ -1432,7 +1436,7 @@ const Page = () => {
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
@@ -1443,7 +1447,7 @@ const Page = () => {
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       src="/img/jobboard/apple_phn_icon.png"
                       alt="MySQL"
@@ -1455,7 +1459,7 @@ const Page = () => {
                 <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
-                      width={100}
+                      width={40}
                       height={100}
                       src="/img/jobboard/andoird_icon.png"
                       alt="Apache"
@@ -1509,7 +1513,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1520,7 +1524,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1534,7 +1538,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1545,7 +1549,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1696,7 +1700,7 @@ const Page = () => {
                       John, USA{" "}
                       <span>
                         <Image
-                          width={100}
+                          width={25}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
@@ -1730,7 +1734,7 @@ const Page = () => {
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
                         <Image
-                          width={100}
+                          width={25}
                           height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
@@ -1763,7 +1767,7 @@ const Page = () => {
                       mike wilshon, AUS{" "}
                       <span>
                         <Image
-                          width={100}
+                          width={25}
                           height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
@@ -1971,8 +1975,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/search_course.png"
                           alt="searchcourse"
                         />
@@ -1989,8 +1993,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/course_detail.png"
                           alt="Configuration"
                         />
@@ -2006,8 +2010,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/my_user_courses.png"
                           alt="Manage Courses"
                         />
@@ -2023,8 +2027,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/view_lecture_video.png"
                           alt="View Payments"
                         />
@@ -2041,8 +2045,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/purchase_history.png"
                           alt="Manage Categories"
                         />
@@ -2067,8 +2071,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/manage_courses.png"
                           alt="searchcourse"
                         />
@@ -2085,8 +2089,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/add_course.png"
                           alt="Configuration"
                         />
@@ -2102,8 +2106,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/my_courses_instructure.png"
                           alt="Configuration"
                         />
@@ -2119,8 +2123,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/view_video.png"
                           alt="Configuration"
                         />
@@ -2145,8 +2149,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/search_course.png"
                           alt="searchcourse"
                         />
@@ -2163,8 +2167,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/course_detail.png"
                           alt="Configuration"
                         />
@@ -2180,8 +2184,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/my_user_courses.png"
                           alt="Manage Courses"
                         />
@@ -2197,8 +2201,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/view_lecture_video.png"
                           alt="View Payments"
                         />
@@ -2215,8 +2219,8 @@ const Page = () => {
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
-                          width={100}
-                          height={100}
+                          width={900}
+                          height={100 / (100 / 100)}
                           src="/img/udemyclone/purchase_history.png"
                           alt="Manage Categories"
                         />
@@ -2266,7 +2270,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/job-board-software"
+                    href="/softwares/job-board-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -2274,7 +2278,7 @@ const Page = () => {
 
                         <div className="other-project-logo">
                           <Image
-                            width={100}
+                            width={250}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
@@ -2294,14 +2298,14 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/recruitment-management-software"
+                    href="/softwares/recruitment-management-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={100}
+                            width={250}
                             height={100}
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
@@ -2324,7 +2328,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/whatsapp-clone"
+                    href="/softwares/whatsapp-clone"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -2332,7 +2336,7 @@ const Page = () => {
 
                         <div className="other-project-logo">
                           <Image
-                            width={100}
+                            width={250}
                             height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"

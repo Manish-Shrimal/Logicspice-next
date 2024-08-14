@@ -197,7 +197,7 @@ const Page = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://www.logicspice.com/app/webroot/img/images/jobboard/stars.png"
+                      src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
                     />

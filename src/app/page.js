@@ -12,15 +12,11 @@ import Customizeweb from "./Components/Customizeweb";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "./resposive.css";
 import Image from "next/image";
+import Servercomponents from "./Components/Servercomponents";
 
 // import React, { useState } from "react";
 
 const Page = () => {
-  // const [modalOpen, setModalOpen] = useState(false);
-
-  // const toggleModal = () => {
-  //   setModalOpen(!modalOpen);
-  // };
   return (
     <>
       <NavBar />
@@ -166,9 +162,23 @@ const Page = () => {
       </section>
 
       {/* Take a look Section  */}
-      <section className="take-a-look">
+      {/* <section className="take-a-look">
         <div className="container">
           <div className="headings">
+            <h2>TAKE A LOOK AT WHAT WE HAVE BEEN WORKING ON</h2>
+            <p>
+              We have established partnerships with prominent organizations and
+              well-known brands,
+              <br /> offering innovative custom software solutions for both web
+              and mobile platforms.
+            </p>
+          </div>
+          <Looksilder />
+        </div>
+      </section> */}
+      <section class="take-a-look">
+        <div class="container">
+          <div class="headings">
             <h2>TAKE A LOOK AT WHAT WE HAVE BEEN WORKING ON</h2>
             <p>
               We have established partnerships with prominent organizations and
@@ -1172,6 +1182,7 @@ const Page = () => {
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div> */}
+      <Servercomponents />
 
       <Footer />
     </>

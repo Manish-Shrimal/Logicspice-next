@@ -1,13 +1,20 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import "@/app/company/company.css";
 import NavBar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 const page = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
-    <NavBar />
+      <NavBar />
       <section class="CompanyResourcesHeader">
         <div class="container">
           <h1>Our Company</h1>
@@ -18,7 +25,12 @@ const page = () => {
           </p>
         </div>
         <div class="OurCompanyBanner">
-          <Image width={1600} height={100} src="/img/ourteam/companybannerimg.png" alt="Comapny" />
+          <Image
+            width={1600}
+            height={100}
+            src="/img/ourteam/companybannerimg.png"
+            alt="Comapny"
+          />
         </div>
       </section>
       <section class="WhoWeAreSection">
@@ -123,7 +135,12 @@ const page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="WhoWeAreTxt">
                       <i>
-                        <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                        <Image
+                          width={29}
+                          height={100}
+                          src="/img/ourteam/arrow-icon.png"
+                          alt="icon"
+                        />
                       </i>
                       <span>
                         We are your comprehensive destination for project
@@ -134,7 +151,12 @@ const page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="WhoWeAreTxt">
                       <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                        <Image
+                          width={29}
+                          height={100}
+                          src="/img/ourteam/arrow-icon.png"
+                          alt="icon"
+                        />
                       </i>
                       <span>
                         We offer a complimentary initial analysis of your
@@ -145,7 +167,12 @@ const page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="WhoWeAreTxt MinHeights">
                       <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                        <Image
+                          width={29}
+                          height={100}
+                          src="/img/ourteam/arrow-icon.png"
+                          alt="icon"
+                        />
                       </i>
                       <span>
                         We specialize in creating comprehensive and detailed
@@ -156,7 +183,12 @@ const page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="WhoWeAreTxt MinHeights">
                       <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                        <Image
+                          width={29}
+                          height={100}
+                          src="/img/ourteam/arrow-icon.png"
+                          alt="icon"
+                        />
                       </i>
                       <span>
                         We excel in crafting precise project scopes and
@@ -168,7 +200,12 @@ const page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="WhoWeAreTxt">
                       <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                        <Image
+                          width={29}
+                          height={100}
+                          src="/img/ourteam/arrow-icon.png"
+                          alt="icon"
+                        />
                       </i>
                       <span>
                         We assign specialized experts to handle the relevant
@@ -179,7 +216,12 @@ const page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="WhoWeAreTxt">
                       <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                        <Image
+                          width={29}
+                          height={100}
+                          src="/img/ourteam/arrow-icon.png"
+                          alt="icon"
+                        />
                       </i>
                       <span>
                         We maintain a dedicated quality assurance team to ensure
@@ -197,42 +239,102 @@ const page = () => {
         <h2>Gallery</h2>
         <div id="galleryslider1" class="owl-carousel OurGallery slide">
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img1.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img1.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img2.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img2.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img3.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img3.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img4.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img4.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img5.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img5.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img6.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img6.png"
+              alt="icon"
+            />
           </div>
         </div>
         <div id="galleryslider2" class="owl-carousel OurGallery slide">
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img7.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img7.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img8.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img8.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img9.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img9.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img10.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img10.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img11.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img11.png"
+              alt="icon"
+            />
           </div>
           <div class="OurGalleryImg">
-            <Image width={100} height={100} src="/img/ourteam/gallery-img12.png" alt="icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/ourteam/gallery-img12.png"
+              alt="icon"
+            />
           </div>
         </div>
       </section>
@@ -255,7 +357,9 @@ const page = () => {
                     hands with LogicSpice.
                   </p>
                   <div class="OurOfficeImg">
-                    <Image width={544} height={100}
+                    <Image
+                      width={544}
+                      height={100}
                       src="/img/ourteam/our-office-img.png"
                       alt="Our Office"
                     />
@@ -268,7 +372,12 @@ const page = () => {
                 <ul>
                   <li>
                     <i>
-                    <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>
                       Since 2006, LogicSpice excels in expert software
@@ -277,7 +386,12 @@ const page = () => {
                   </li>
                   <li>
                     <i>
-                    <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>
                       40+ experienced full-time professionals on board.
@@ -285,19 +399,36 @@ const page = () => {
                   </li>
                   <li>
                     <i>
-                    <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
-                    <span>We&apos;ve served 1400+ satisfied clients worldwide.</span>
+                    <span>
+                      We&apos;ve served 1400+ satisfied clients worldwide.
+                    </span>
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>We&apos;ve catered to clients in 40+ countries.</span>
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>
                       Our primary focus includes Australia, US, Europe, and the
@@ -306,13 +437,23 @@ const page = () => {
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>We excel in managing large, complex projects.</span>
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>
                       Leading provider of both readymade and custom solutions.
@@ -320,19 +461,34 @@ const page = () => {
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>Remote and onsite support without limitations.</span>
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>Full-fledged IT Management Services</span>
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>
                       We hold a position in the top 10 on freelancer.com
@@ -340,7 +496,12 @@ const page = () => {
                   </li>
                   <li>
                     <i>
-                      <Image width={29} height={100} src="/img/ourteam/arrow-icon.png" alt="icon" />
+                      <Image
+                        width={29}
+                        height={100}
+                        src="/img/ourteam/arrow-icon.png"
+                        alt="icon"
+                      />
                     </i>
                     <span>Highly Qualified and Skilled IT Professionals</span>
                   </li>
@@ -350,6 +511,24 @@ const page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

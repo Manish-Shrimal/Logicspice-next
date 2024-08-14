@@ -1,11 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
+import "../../gallery.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
-      <section class="resources-header">
+      <section class="resources-header" style={{ background: "url(/img/gallery.png)" }}>
         <div class="container">
           <span>
             <span>Plantation 2017</span>
@@ -53,11 +63,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/1ed7b_Social-Events---Logicspice.JPG"
+                        href="/img/Gallery/1ed7b_Social-Events---Logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/1ed7b_Social-Events---Logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/1ed7b_Social-Events---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -69,11 +81,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/cbbd0_Plantations-By-Team-.JPG"
+                        href="/img/Gallery/cbbd0_Plantations-By-Team-.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/cbbd0_Plantations-By-Team-.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/cbbd0_Plantations-By-Team-.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -85,11 +99,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.JPG"
+                        href="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -101,11 +117,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/655eb_Plantation-By-Logicspice.JPG"
+                        href="/img/Gallery/655eb_Plantation-By-Logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/655eb_Plantation-By-Logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/655eb_Plantation-By-Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -117,11 +135,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/f379f_Logicspice-Plantation-Event--.JPG"
+                        href="/img/Gallery/f379f_Logicspice-Plantation-Event--.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/f379f_Logicspice-Plantation-Event--.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/f379f_Logicspice-Plantation-Event--.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -133,11 +153,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/cbbd0_Plantations-By-Team-.JPG"
+                        href="/img/Gallery/cbbd0_Plantations-By-Team-.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/cbbd0_Plantations-By-Team-.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/cbbd0_Plantations-By-Team-.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -149,11 +171,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.JPG"
+                        href="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/4e60f_Plantation-By-Team-Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -165,11 +189,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/655eb_Plantation-By-Logicspice.JPG"
+                        href="/img/Gallery/655eb_Plantation-By-Logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/655eb_Plantation-By-Logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/655eb_Plantation-By-Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -181,11 +207,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/f379f_Logicspice-Plantation-Event--.JPG"
+                        href="/img/Gallery/f379f_Logicspice-Plantation-Event--.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/f379f_Logicspice-Plantation-Event--.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/f379f_Logicspice-Plantation-Event--.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -197,11 +225,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/a78b7_Logicspice-Plantation-Social-Event.JPG"
+                        href="/img/Gallery/a78b7_Logicspice-Plantation-Social-Event.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/a78b7_Logicspice-Plantation-Social-Event.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/a78b7_Logicspice-Plantation-Social-Event.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -213,11 +243,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/9fe35_Plantation---Team-Logicspice.JPG"
+                        href="/img/Gallery/9fe35_Plantation---Team-Logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/9fe35_Plantation---Team-Logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/9fe35_Plantation---Team-Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -229,11 +261,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/09c76_Plantation-By-Team-Logicspice-1.JPG"
+                        href="/img/Gallery/09c76_Plantation-By-Team-Logicspice-1.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/09c76_Plantation-By-Team-Logicspice-1.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/09c76_Plantation-By-Team-Logicspice-1.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -245,11 +279,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/be437_Team.JPG"
+                        href="/img/Gallery/be437_Team.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/be437_Team.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/be437_Team.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -261,11 +297,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/22af8_Plantation-By--Logicspice-Team.JPG"
+                        href="/img/Gallery/22af8_Plantation-By--Logicspice-Team.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/22af8_Plantation-By--Logicspice-Team.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/22af8_Plantation-By--Logicspice-Team.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -278,11 +316,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/f1f53_Logicspice-Social-Events.JPG"
+                        href="/img/Gallery/f1f53_Logicspice-Social-Events.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/f1f53_Logicspice-Social-Events.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/f1f53_Logicspice-Social-Events.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -294,11 +334,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/870ea_Plantation-Social-Event---logicspice.JPG"
+                        href="/img/Gallery/870ea_Plantation-Social-Event---logicspice.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/870ea_Plantation-Social-Event---logicspice.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/870ea_Plantation-Social-Event---logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -310,11 +352,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/de1df_Plantation-Event.JPG"
+                        href="/img/Gallery/de1df_Plantation-Event.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/de1df_Plantation-Event.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/de1df_Plantation-Event.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -326,11 +370,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/90ea7_IMG_7111.JPG"
+                        href="/img/Gallery/90ea7_IMG_7111.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/90ea7_IMG_7111.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/90ea7_IMG_7111.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -342,11 +388,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="/img/Gallery/d2de2_IMG_7118.JPG"
+                        href="/img/Gallery/d2de2_IMG_7118.jpg"
                         data-lightbox="images"
                       >
-                        <Image width ={100} height ={100}
-                          src="/img/Gallery/d2de2_IMG_7118.JPG"
+                        <Image
+                          width={500}
+                          height={100 / (100 / 100)}
+                          src="/img/Gallery/d2de2_IMG_7118.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -359,6 +407,25 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };

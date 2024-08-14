@@ -826,7 +826,7 @@ bread-top {
   transition: all 3s;
 }
 
-.navbar-default .top-main-menu>li.active>a .caret-company::after,
+.navbar-default .top-main-menu>li:active>a .caret-company::after,
 .navbar-default .top-main-menu>li>a:hover .caret-company::after {
   color: #451095;
 }
@@ -881,8 +881,8 @@ bread-top {
   background: transparent;
 }
 
-.mega-menu ul ul li.active>a,
-.mega-menu ul ul li>a.active,
+.mega-menu ul ul li:active>a,
+.mega-menu ul ul li>a:active,
 .mega-menu ul ul li>a:hover {
   background: #f7f7f7;
   color: #451095;
@@ -1776,7 +1776,9 @@ bread-top {
 }
 
 .sales_contact li {
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
   padding: 3px 0 8px;
   text-align: left;
 }
@@ -6870,3 +6872,107 @@ body.modal-open .quote_pop_plus {
   align-items: center;
   gap: 8px;
 } */
+
+
+
+.client_logos_item {
+  flex: 1 1 150px !important;
+  /* Allow the items to grow and shrink, with a base width of 150px */
+  display: flex !important;
+  justify-content: center !important;
+  /* Center the image horizontally within the item */
+  align-items: center !important;
+  /* Center the image vertically within the item */
+  transition: transform 0.3s !important;
+  /* Smooth transition for scaling */
+}
+
+.client_logos-item a {
+  display: inline-block !important;
+}
+
+.client_logos-item img {
+  max-width: 100%;
+  /* Ensure the image does not exceed the container's width */
+  height: auto;
+  /* Maintain the aspect ratio of the image */
+  display: block;
+  transition: transform 0.3s;
+  /* Smooth transition for scaling */
+}
+
+.client_logos-item:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the logo on hover */
+}
+
+.client_logos-item a:hover img {
+  transform: scale(1.1);
+  /* Slightly enlarge the image on hover */
+}
+
+
+#workingowl {
+  float: left;
+  width: 100%;
+}
+
+.FormError {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+ 
+  margin-left: 25px;
+}
+
+.input-group-addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+button.close {
+  background: none;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px !important;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1280px !important;
+  }
+}
+
+
+.btn.btn-default {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #451095;
+  color: #451095;
+}
+
+.multibutton .btn.btn-default {
+  margin-left: 10px;
+}
+
+.btn.btn-default:hover {
+	background: #451095;
+	color: #fff;
+}

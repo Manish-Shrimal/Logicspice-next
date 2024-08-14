@@ -7,6 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   return (
     <>
       <NavBar />

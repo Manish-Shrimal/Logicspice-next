@@ -1883,16 +1883,7 @@ const AppointmentSchedulingSoftware = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-              {/* <a
-                id=""
-                data-toggle="modal"
-                data-target="#popup_sc_product"
-                className="btn btn-primary"
-                onclick='$("#update_frm").html("Crowd Funding Script");
-                            $("#contact_fr").val("Crowd Funding Script");'
-              >
-                Enquire Now
-              </a> */}
+             
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {

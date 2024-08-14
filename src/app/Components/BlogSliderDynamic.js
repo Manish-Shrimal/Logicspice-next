@@ -4,7 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-const BlogSliderDynamic = ({blogData, blogImagePath}) => {
+
+const BlogSliderDynamic = ({ blogData, blogImagePath }) => {
   const settings = {
     dots: false,
     lazyLoad: true,
@@ -14,39 +15,37 @@ const BlogSliderDynamic = ({blogData, blogImagePath}) => {
     slidesToScroll: 2,
   };
 
-  // console.log(blogData,"data");
-  // console.log(blogImagePath,"imagepath");
+  // console.log(blogData, "data");
+  // console.log(blogImagePath, "imagepath");
 
   return (
     <>
-    
       <div className="slider-container">
         <Slider {...settings}>
-            {blogData &&blogData.map((key,item) => (
-                <div key={key}>
-                <li style={{ listStyle: "none" }}>
-                  <figure>
-                    <Image
-                      width={500}
-                      height={100 / (100 / 100)}
-                      src={`${blogImagePath}/${item.image}`}
-                      class="lazy"
-                      alt="10 Best PHP Frameworks for Web Developers"
-                    />{" "}
-                    <figcaption>
-                      <a
-                        href={`https://blog.logicspice.com/${item.slug}`}
-                        title="Read more"
-                        class="btn btn-primary"
-                      >
-                        Read more
-                      </a>{" "}
-                    </figcaption>
-                  </figure>
-                </li>
-              </div>
-            ))}
-          
+          {blogData && blogData.map((item, index) => (
+            <div key={index}>
+              <li style={{ listStyle: "none" }}>
+                <figure>
+                  <Image
+                    width={500}
+                    height={100}
+                    src={`${blogImagePath}${item.image}`}
+                    className="lazy"
+                    alt={item.title}
+                  />
+                  <figcaption>
+                    <a
+                      href={`https://blog.logicspice.com/${item.slug}`}
+                      title="Read more"
+                      className="btn btn-primary"
+                    >
+                      Read more
+                    </a>
+                  </figcaption>
+                </figure>
+              </li>
+            </div>
+          ))}
         </Slider>
       </div>
     </>

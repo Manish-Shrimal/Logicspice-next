@@ -374,7 +374,7 @@ body {
 .fiverr-new-banner .my-breadcrumb .breadcrumb > li + li::before {
   content: "\f105";
   padding: 0 5px;
-  color: #363737;
+  color: #363737!important;
   font-family: FontAwesome;
 }
 .job-portal-banner .container {
@@ -4436,7 +4436,7 @@ before {
   width: 100%;
 }
 
-.modal-service .modal-dialog .btn-close,
+#jobportal .modal-service .modal-dialog .btn-close,
 .modal-service .modal-dialog-service .close {
   cursor: pointer;
   position: sticky;
@@ -4458,7 +4458,7 @@ before {
   position: -o-sticky;
   box-sizing: border-box;
   background-size: 12px;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .modal-service .modal-dialog-service .close i {
@@ -4516,12 +4516,12 @@ before {
   height: 25px;
   border: 1px solid #451095;
   opacity: 1;
-  background: #451095;
+  /* background: #451095; */
   text-shadow: none;
   border-radius: 50%;
   z-index: 99999;
   font-size: 21px;
-  color: #fff !important;
+  /* color: #fff !important; */
   text-align: right;
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -4949,5 +4949,16 @@ before {
 .content_area.content_left_bar.pursue p {
   margin-bottom: 20px;
   color: #3F3F3F;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: white !important;
+  content: var(--bs-breadcrumb-divider, "/");
+}
+
+#jobportal .btn-close {
+  
 }
 

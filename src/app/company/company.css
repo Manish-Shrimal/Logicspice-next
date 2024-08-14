@@ -603,7 +603,6 @@ body {
 	font-size: 18px;
 	line-height: 28px;
 	margin-bottom: 6px;
-	font-family: 'interregular';
 }
 
 .casestudyshoen_bx_col_th .blog_row_detail {
@@ -1050,7 +1049,12 @@ body {
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 }
-
+.headings {
+    padding-bottom: 25px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
 /* Dynamic Styles for case study Start */
 .case-study-listing .blog_row:before,
 .casestudies_header:before {
@@ -1480,6 +1484,20 @@ body {
 	background: rgb(3, 155, 228);
 	opacity: 0.7;
 }
+.casestudies-right ul {
+	overflow: hidden;
+	transition: max-height 0.5s ease-out;
+	max-height: 500px; /* Large enough to accommodate all items when expanded */
+  }
+  
+  .casestudies-right ul.collapsed {
+	max-height: 300px;
+  }
+  
+  .casestudies-right ul.expanded {
+	max-height: 1000px; /* Adjust as necessary for the number of items */
+  }
+  
 
 /* Dynamic Styles for case study End */
 .racing_cartel_header::before {
@@ -2088,6 +2106,10 @@ body {
 	padding: 10px 0;
 }
 
+.m_content {
+	margin-top: 45px;
+}
+
 .lstng-section hr {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -2096,6 +2118,7 @@ body {
 
 .new-review-content_area_resources .western {
 	padding: 0 15px;
+	
 }
 
 .content_area_resources p {
@@ -2811,4 +2834,374 @@ section.nav-portfolio-top ul.nav {
 .stat_data_tex_hos:hover .stat_data_tex_hos_text {
 	bottom: 25px;
 	transition: all 0.3s ease-in-out 0s;
+}
+
+.casestudies_header {
+	background: url("/img/casestudies-banner.png") no-repeat;
+	position: relative;
+	background-size: cover;
+}
+
+.casestudies_sec {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	padding: 120px 0 80px;
+}
+
+.breadcrumb-casestudies {
+	position: absolute;
+	right: 0;
+	top: 30px;
+	width: 100%;
+}
+
+.breadcrumb-casestudies h1 {
+	color: #fff;
+	font-size: 29px;
+	font-weight: 600;
+	padding: 4px 0 0 60px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.breadcrumb-casestudies .breadcrumb {
+	padding: 0;
+	margin-bottom: 0;
+	list-style: none;
+	background-color: transparent;
+	border-radius: 0;
+	float: right;
+}
+
+.breadcrumb-casestudies .breadcrumb li,
+.breadcrumb-casestudies .breadcrumb a {
+	color: #fff;
+}
+
+.case-studies-pagedtl {
+	display: inline-block;
+	width: 100%;
+	padding-top: 36px;
+}
+
+.case-studies-pagedtl ul {
+	display: inline-block;
+	width: 100%;
+	margin-top: 15px;
+	padding: 0;
+}
+
+.case-studies-pagedtl ul li {
+	display: inline-block;
+	width: 100%;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 23px;
+	line-height: 23px;
+}
+
+.case-studies-pagedtl ul li::before {
+	content: "\f111";
+	font-family: FontAwesome;
+	font-size: 12px;
+	margin-right: 8px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 23px;
+}
+
+.breadcrumb-casestudies .breadcrumb li.breadcrumb-item+.breadcrumb-item::before {
+	color: #fff;
+}
+
+.casestudies-right {
+	display: inline-block;
+	width: 100%;
+	border: 1px #ddd solid;
+	margin-top: 50px;
+}
+
+.casestudies-right h3 {
+	background: #d6d6d6;
+	color: #212121;
+	font-size: 19px;
+	padding: 12px 15px;
+	margin: 0;
+	font-weight: 600;
+}
+
+.content_area_casestudies h2::after,
+.content_area_casestudies h3::after,
+.content_area_casestudies h4::after {
+	display: none;
+}
+
+.casestudies-right ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.content_area_resources .casestudies-right ul li {
+	background-image: none;
+	position: relative;
+	font-size: 17px;
+	margin-bottom: 0;
+	padding: 0;
+	width: 100%;
+	color: #9a9a9a;
+	border-bottom: 1px #ddd solid;
+}
+
+.content_area_resources .casestudies-right ul li::before {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	content: "\f101";
+	font-family: FontAwesome;
+	transform: translate(0, -50%);
+	font-size: 23px;
+}
+
+.content_area_resources .casestudies-right ul li a {
+	font-size: 12px;
+	color: #9a9a9a;
+	padding: 10px 15px;
+	display: inline-block;
+	width: 100%;
+}
+
+.content_area_resources .casestudies-right ul li a strong {
+	font-weight: normal;
+	display: block;
+	font-size: 15px;
+	color: #444;
+}
+
+.blog_row_new .blog_detail_sectc_bl p {
+	margin: 30px 0;
+	font-family: 'lato', Arial, Helvetica, sans-serif;
+	line-height: 26px;
+	font-size: 17px;
+}
+
+.blog_row_new {
+	border: none;
+	margin-bottom: 20px;
+	padding: 13px 0;
+	position: relative;
+}
+
+.view-btns {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 0 7px;
+}
+
+.view-btns button {
+	background: transparent;
+	border: none;
+	color: #451095;
+	font-size: 28px;
+	padding: 6px 0;
+	margin: 0;
+	line-height: normal;
+	outline: none;
+	box-shadow: none;
+}
+
+.SocialResponsibilityBanners {
+	background: url("/img/ourteam/social_responsibility_banner.png") no-repeat left top
+}
+
+.subMenus-port {
+	background: #fff none repeat scroll 0 0;
+	min-width: 560px;
+	padding: 0;
+	position: absolute;
+	width: auto;
+	z-index: 999;
+	display: none;
+	left: 0;
+}
+
+.subMenus-port li {
+	border-bottom: 1px solid #ddd;
+	/* padding: 9px 20px; */
+	text-align: left;
+}
+
+.subMenus-port > ul > li {
+    border: 1px solid #ddd;
+    float: left;
+    /* padding: 10px 40px 10px 10px; */
+    text-align: left;
+    width: 50%;
+    cursor: pointer;
+}
+.subMenus-port > ul > li a {
+    font-size: 13px;
+}
+
+.subMenus-port>ul>li.activecnt {
+	background-color: #31aae1;
+	position: relative;
+}
+
+.subMenus-port>ul>li.activecnt::before {
+	color: #fff;
+	content: "\f00c";
+	font-family: fontawesome;
+	position: absolute;
+	right: 15px;
+}
+
+.subMenus-port>ul>li.activecnt a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.subMenus-port>ul>li.activecat {
+	background-color: #31aae1;
+	position: relative;
+}
+
+.subMenus-port>ul>li.activecat::before {
+	color: #fff;
+	content: "\f00c";
+	font-family: fontawesome;
+	position: absolute;
+	right: 15px;
+}
+
+.subMenus-port>ul>li.activecat a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.subMenus-port>ul>li a {
+	font-size: 13px;
+}
+
+.nav-portfolio-top ul.nav>li {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+section.nav-portfolio-top {
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	overflow: initial;
+	padding: 0;
+	text-align: center;
+}
+
+.nav-portfolio-top ul.nav>li>a {
+	display: inline-block;
+	padding: 10px 30px;
+}
+
+.nav-portfolio-top ul li.drop-down-port1:hover>.subMenus-port1 {
+	display: block;
+}
+
+.nav-portfolio-top .nav>li>a:hover,
+.nav-portfolio-top .nav>li>a:focus {
+	background-color: #451095;
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+
+
+
+.nav-portfolio-top {
+	position: relative;
+}
+
+.nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.drop-down-port {
+	position: relative;
+}
+
+.drop-down-port a {
+	cursor: pointer;
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+.caret {
+	margin-left: 5px;
+}
+
+/* .subMenus-port {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	min-width: 160px;
+	z-index: 1;
+} */
+
+.subMenus-port ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.subMenus-port li a {
+	text-decoration: none;
+	color: #337ab7!important;
+}
+
+/* .subMenus-port li a:hover {
+	background-color: #f1f1f1;
+} */
+
+.drop-down-port:hover .subMenus-port {
+	display: block;
+}
+
+
+
+#recent-posts-2 {
+    margin: 40px 0;
+}
+
+.content_area_resources li {
+    background: rgba(0, 0, 0, 0) url(/img/icn_list_detail.png) no-repeat scroll 0 2px;
+    float: left;
+    font-size: 17px;
+    margin-bottom: 15px;
+    padding-left: 24px;
+    width: 100%;
+}
+
+
+.blog_cost_calculator {
+    background-color: #451095;
+    background-image: url(/img/images/calculator_img.png);
+    background-position: 140% -100%;
+    background-repeat: no-repeat;
+    margin: 30px 0 0;
+    padding: 60px 30px 40px;
+    text-align: center;
 }
