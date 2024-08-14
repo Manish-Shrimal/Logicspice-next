@@ -15,6 +15,7 @@ const Page = () => {
   };
   return (
     <>
+    <Navbar />
       <section class="resources-header" style={{ background: "url(/img/gallery.png)" }}>
         <div class="container">
           <span>

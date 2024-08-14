@@ -705,10 +705,11 @@ bread-top {
   color: #535353;
   display: block;
   overflow: hidden;
-  padding: 7px 0 7px 40px;
+  padding: 7px 0 7px 32px;
   font-weight: 600;
   font-size: 14px;
   transition: 0.4s;
+  font-family: roboto, sans-serif !important;
 }
 
 .grid-demo ul span.ahab a {
