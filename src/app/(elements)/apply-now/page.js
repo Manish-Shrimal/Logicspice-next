@@ -6,7 +6,7 @@ import Footer from "@/app/Components/Footer";
 import "../elements.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
-import "@fortawesome/fontawesome-free/css/all.css";c
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
