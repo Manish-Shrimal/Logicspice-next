@@ -245,7 +245,8 @@ const Page = ({ params }) => {
       // Cookies.set("countries", JSON.stringify(response.data.countries));
       Cookies.set("currencyDetail", JSON.stringify(response.data.currencyDetail));
       Cookies.set("productType", JSON.stringify(response.data.productType));
-      localStorage.setItem("countries", JSON.stringify(response.data.countries));
+      // localStorage.setItem("countries", JSON.stringify(response.data.countries));
+      sessionStorage.setItem("countries", JSON.stringify(response.data.countries));
 
 
       // Cookies.set("initials", JSON.stringify(response.data));

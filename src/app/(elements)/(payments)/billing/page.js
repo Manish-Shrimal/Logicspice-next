@@ -29,8 +29,11 @@ const billingInitials = useRef();
     initialAdditionalPoints
   );
 
-  const initialCountries = JSON.parse(
-    localStorage.getItem("countries") || "{}"
+//   const initialCountries = JSON.parse(
+//     localStorage.getItem("countries") || "{}"
+//   );
+const initialCountries = JSON.parse(
+    sessionStorage.getItem("countries") || "{}"
   );
   const [countries, setCountries] = useState(initialCountries);
 
