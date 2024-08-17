@@ -127,7 +127,11 @@ const Page = () => {
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
 
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Enquire Now</button>
                     {
                       <Enquirymodal
@@ -154,8 +158,8 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={350}
+                  height={100 / (100 / 100)}
                   alt="Order Management"
                   src="/img/ordermanagement/order-management-banner-img.png"
                 />
@@ -198,8 +202,8 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6 job-video">
               <Image
-                width={100}
-                height={100}
+                width={400}
+                height={100 / (100 / 100)}
                 alt="Order Management"
                 src="/img/ordermanagement/order-management-img.png"
               />
@@ -274,8 +278,8 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                  width={100}
-                                  height={100}
+                                  width={300}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/ordermanagement/bulk-order-icon.png"
                                   className="lazy"
@@ -473,8 +477,8 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                  width={100}
-                                  height={100}
+                                  width={300}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/ordermanagement/user-friendly-icon.png"
                                 />
@@ -657,8 +661,8 @@ const Page = () => {
                             <li>
                               <i>
                                 <Image
-                                  width={100}
-                                  height={100}
+                                  width={300}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/ordermanagement/role-based-icon.png"
                                 />
@@ -1053,7 +1057,7 @@ const Page = () => {
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
-                    width={100}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1079,7 +1083,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
@@ -1090,7 +1094,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1101,7 +1105,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1112,7 +1116,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1156,7 +1160,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1169,7 +1173,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1182,7 +1186,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1195,7 +1199,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1213,8 +1217,8 @@ const Page = () => {
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
                 <Image
-                  width={100}
-                  height={100}
+                  width={400}
+                  height={100 / (100 / 100)}
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
                 />
@@ -1444,8 +1448,8 @@ const Page = () => {
                 </h4>
                 <div className="FaqImgBx">
                   <Image
-                    width={100}
-                    height={100}
+                    width={450}
+                    height={100 / (100 / 100)}
                     src="/img/ordermanagement/freescript-faq.png"
                     alt="Free Script"
                   />
@@ -1632,7 +1636,11 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a title="View Detail" target="_black">
+                  <Link
+                    href="/softwares/inventory-management-software"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Inventory Management Software</h3>
@@ -1649,12 +1657,16 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a title="View Detail" target="_black">
+                  <Link
+                    href="/softwares/job-board-software"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
@@ -1672,12 +1684,16 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a title="View Detail" target="_black">
+                  <Link
+                    href="/softwares/ebay-clone"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>
@@ -1695,7 +1711,7 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

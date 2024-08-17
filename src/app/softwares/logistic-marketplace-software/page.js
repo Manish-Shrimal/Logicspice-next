@@ -147,7 +147,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/logistic-marketplace-software"
+                    href="/buy-now/logistic-marketplace-software"
                   >
                     Buy Now
                   </Link>
@@ -1286,7 +1286,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/logistic-marketplace-software"
+                  href="/buy-now/logistic-marketplace-software"
                 >
                   Buy Now
                 </Link>

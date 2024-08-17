@@ -153,7 +153,7 @@ const Page = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys"
-                    href="/softwares/udemy-clone"
+                    href="/buy-now/crowdfunding-script"
                   >
                     Buy Now
                   </Link>
@@ -1248,7 +1248,7 @@ const Page = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/crowdfunding-script"
+                  href="/buy-now/crowdfunding-script"
                 >
                   Buy Now
                 </Link>

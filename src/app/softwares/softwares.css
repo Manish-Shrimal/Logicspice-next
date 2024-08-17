@@ -288,7 +288,7 @@ body {
 }
 .jocpp {
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
   padding-top: 0px;
 }
 .job-pr-icon {
@@ -4958,7 +4958,17 @@ before {
   content: var(--bs-breadcrumb-divider, "/");
 }
 
-#jobportal .btn-close {
-  
+
+
+
+
+@media (max-width: 767px) {
+  .job-valu .portal-price {
+      margin-bottom: 10px!important;
+      text-align: center!important;
+  }
+  .SubscriptionpriceSection{
+    display: none;
+  }
 }
 

@@ -128,7 +128,7 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -141,7 +141,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/real-estate-script"
+                    href="/buy-now/real-estate-script"
                   >
                     Buy Now
                   </Link>
@@ -172,8 +172,8 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={300}
+                  height={100 / (100 / 100)}
                   alt="Real Estate Script"
                   src="/img/softwares-banner-img/realstate-banner-img.png"
                 />
@@ -289,8 +289,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
                           <Image
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/realestate/real_saler.png"
                             alt="Agent Features"
                           />
@@ -554,8 +554,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
                           <Image
-                            width={100}
-                            height={100}
+                           width={300}
+                           height={100 / (100 / 100)}
                             src="/img/realestate/real_saler.png"
                             alt="User Features"
                           />
@@ -763,8 +763,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/realestate/real_estate_deshboard.png"
                             alt="Admin Panel"
                           />
@@ -1163,7 +1163,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/real-estate-script"
+                  href="/buy-now/real-estate-script"
                 >
                   Buy Now
                 </Link>
@@ -1252,7 +1252,7 @@ See how it work yourself!"
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
-                    width={100}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1560,7 +1560,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
@@ -1571,7 +1571,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1582,7 +1582,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1593,7 +1593,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1640,7 +1640,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1651,7 +1651,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1662,7 +1662,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1673,7 +1673,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1950,8 +1950,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/realestate/real_home.jpg"
                     alt="Real Estate"
                   />
@@ -1964,8 +1964,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/realestate/real_proparty.jpg"
                     alt="Property"
                     className="lazy"
@@ -1979,8 +1979,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={900}
+                    height={100 / (100 / 100)}
                     src="/img/realestate/real_proparty_detail.jpg"
                     alt="Property Details"
                     className="lazy"
@@ -2012,83 +2012,7 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section className="latest_feature_product">
-        <div className="container">
-          <h2 className="title_main">Other Popular Softwares</h2>
-          <div className="other-product-box">
-            <div className="row">
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>whatsapp clone</h3>
-                        <div className="other-project-logo">
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/jobboard/ls-chat-logo.png"
-                            alt="WhatsApp Clone App"
-                          />
-                        </div>
-                        <p>
-                          <span>Readymade WhatsApp Clone Script.</span>{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Fiverr clone</h3>
-
-                        <div className="other-project-logo">
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/jobboard/gigger_logo_new.png"
-                            alt="fiverr-clone"
-                          />
-                        </div>
-                        <p>
-                          <span>On Demand Marketplace Software</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Uship clone</h3>
-
-                        <div className="other-project-logo">
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/jobboard/logictic_logo_new.png"
-                            alt="logistic-marketplace-software"
-                          />
-                        </div>
-                        <p>
-                          <span>Similar to Uship Clone, Shiply Clone.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a

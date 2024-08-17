@@ -134,7 +134,7 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -147,7 +147,7 @@ const Page = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys"
-                    href="/softwares/event-booking-software"
+                    href="/buy-now/event-booking-software"
                   >
                     Buy Now
                   </Link>
@@ -1227,7 +1227,7 @@ const Page = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/event-booking-software"
+                  href="/buy-now/event-booking-software"
                 >
                   Buy Now
                 </Link>

@@ -17,6 +17,9 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Head from "next/head";
+
+
 
 const Page = () => {
   var settings = {
@@ -100,6 +103,14 @@ const Page = () => {
   return (
     <>
       <NavBar />
+      <Head>
+        <link
+          rel="canonical"
+          href="https://example.com/blog/original-post"
+          key="canonical"
+        />
+      </Head>
+
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign InventoryManagementBanner">
         <div className="container">
           <div className="row">
@@ -2253,4 +2264,4 @@ const Page = () => {
 
 export default Page;
 
-//
+

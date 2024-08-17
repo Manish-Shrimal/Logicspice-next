@@ -118,7 +118,7 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
                     <button>Enquire Now</button>
                     {
                       <Enquirymodal
@@ -153,8 +153,8 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={500}
+                  height={100 / (100 / 100)}
                   alt="Product Review & Rating PHP Script"
                   src="/img/softwares-banner-img/product-review-mobile.png"
                 />
@@ -270,8 +270,8 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
                           <Image
-                            width={100}
-                            height={100}
+                             width={300}
+                             height={100 / (100 / 100)}
                             src="/img/product-review/product-review-img.png"
                             alt="Product Review & Rating PHP Script"
                           />
@@ -605,8 +605,8 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                            width={100}
-                            height={100}
+                           width={300}
+                           height={100 / (100 / 100)}
                             src="/img/product-review/product_review_deshboard.png"
                             alt="Admin Panel"
                           />

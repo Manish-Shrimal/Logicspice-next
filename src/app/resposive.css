@@ -430,7 +430,7 @@
     .app_solution .nav.nav-tabs .active > a, .app_solution .nav.nav-tabs a { font-size: 17px;}
     .support_logic p { margin: 0 auto 20px; max-width: 90%; min-height: auto;}
     .su_rev_section::after { display: none;}
-    .Quick_FAQ { padding-left: 15px;}
+    .Quick_FAQ { padding-left: 15px!important;}
     .both-left-p-sec { padding: 0 10px; width: 100%;}
     .left-p-sec { width: 100%;}
     .left-p-sec li { min-height: 30px;}

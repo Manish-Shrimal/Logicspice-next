@@ -96,7 +96,7 @@ const Page = () => {
               <div className="job-valu">
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -1893,95 +1893,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="latest_feature_product">
-        <div className="container">
-          <h2 className="title_main">Other Popular Softwares</h2>
-          <div className="other-product-box">
-            <div className="row">
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <Link
-                    href="/softwares/whatsapp-clone"
-                    title="View Detail"
-                    target="_blank"
-                  >
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>whatsapp clone</h3>
-                        <div className="other-project-logo">
-                          <Image
-                            src="/img/jobboard/ls-chat-logo.png"
-                            alt="WhatsApp Clone App"
-                            width={250}
-                            height={100}
-                          />
-                        </div>
-                        <p>
-                          <span>Readymade WhatsApp Clone Script.</span>{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <Link
-                    href="/softwares/fiverr-clone"
-                    title="View Detail"
-                    target="_blank"
-                  >
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Fiverr clone</h3>
-
-                        <div className="other-project-logo">
-                          <Image
-                            src="/img/jobboard/gigger_logo_new.png"
-                            alt="fiverr-clone"
-                            width={250}
-                            height={100}
-                          />
-                        </div>
-                        <p>
-                          <span>On Demand Marketplace Software</span>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <Link
-                    href="/softwares/logistic-marketplace-software"
-                    title="View Detail"
-                    target="_blank"
-                  >
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Uship clone</h3>
-
-                        <div className="other-project-logo">
-                          <Image
-                            src="/img/jobboard/logictic_logo_new.png"
-                            alt="logistic-marketplace-software"
-                            width={250}
-                            height={100}
-                          />
-                        </div>
-                        <p>
-                          <span>Similar to Uship Clone, Shiply Clone.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a

@@ -1297,7 +1297,7 @@ const Page = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="https://www.logicspice.com/softwares/buynow/jobsite"
+                  href={`/buy-now/fiverr-clone`}
                   id="buy_now_1"
                 >
                   Buy Now

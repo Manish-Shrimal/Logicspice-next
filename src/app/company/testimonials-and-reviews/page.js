@@ -8,6 +8,9 @@ import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import parse from "html-react-parser";
 import Link from "next/link";
+import "@fortawesome/fontawesome-free/css/all.css";
+
+
 const Page = () => {
   const [pageData, setPageData] = useState([]);
   const [testimonials, setTestimonials] = useState([]);

@@ -6,12 +6,13 @@ import Footer from "@/app/Components/Footer";
 import "@/app/company/company.css";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
+import Head from "next/head";
 
 const Page = () => {
-
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -29,6 +30,12 @@ const Page = () => {
 
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://logicspice-next.vercel.app/company/our-team"
+        />
+      </Head>
       <NavBar />
       <section class="team_head">
         <div class="container">

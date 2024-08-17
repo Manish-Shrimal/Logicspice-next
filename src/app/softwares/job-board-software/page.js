@@ -149,7 +149,7 @@ const Page = () => {
 
                   <a
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="<?php echo HTTP_PATH; ?>/softwares/buynow/crowdfunding"
+                    href="/buy-now/job-board-software"
                     id="buy_now_1"
                   >
                     Buy Now
@@ -1865,7 +1865,7 @@ const Page = () => {
                 </div>
                 <a
                   className="btn fiverr-buys"
-                  href="/softwares/buynow/jobsite"
+                  href="/buynow/job-board-software"
                   id="buy_now_1"
                 >
                   Buy Now

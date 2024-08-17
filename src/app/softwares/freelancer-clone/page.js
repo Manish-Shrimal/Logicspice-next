@@ -143,7 +143,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys"
-                    href="/softwares/freelancer-clone"
+                    href="/buy-now/freelancer-clone"
                   >
                     Buy Now
                   </Link>
@@ -1296,7 +1296,7 @@ See how it work yourself!"
                 </a> */}
                 <Link
                   className="btn fiverr-buys"
-                  href="https://www.logicspice.com/softwares/buynow/freelancer-clone"
+                  href="/buy-now/freelancer-clone"
                   id="buy_now_1"
                 >
                   Buy Now

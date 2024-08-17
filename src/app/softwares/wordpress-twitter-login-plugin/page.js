@@ -14,7 +14,6 @@ import "../../resposive.css";
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
- 
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -27,7 +26,9 @@ const Page = () => {
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <Image width={100} height={100}
+        <Image
+          width={100}
+          height={100}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -75,7 +76,13 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image width={100} height={100} src="/img/jobboard/stars.png" alt="stars" className="" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/jobboard/stars.png"
+                alt="stars"
+                className=""
+              />
               <p>12 Reviews</p>
             </div>
             <Link className="btn btn-primary" href="#">
@@ -127,7 +134,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/unique_signupicon.png"
                         alt="Easy Registration"
@@ -146,7 +155,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/great_profile_managment_icon.png"
                         alt="Great Profile Management"
@@ -166,7 +177,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/fully_responsive_icon.png"
                         alt="Fully Responsive"
@@ -176,8 +189,8 @@ const Page = () => {
                   <div className="media-body">
                     <h3 className="media-heading">Fully Responsive</h3>
                     <p>
-                      Themes with &lsquo;fit-all-screen&lsquo; compatibility allow user to
-                      access from mobile as well as tablet.
+                      Themes with &lsquo;fit-all-screen&lsquo; compatibility
+                      allow user to access from mobile as well as tablet.
                     </p>
                   </div>
                 </div>
@@ -186,7 +199,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Lost Password Recovery"
@@ -206,7 +221,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/search_filter_icon.png"
                         alt="Search Filter"
@@ -226,7 +243,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/payment_options_icon.png"
                         alt="Payment Options"
@@ -292,7 +311,9 @@ const Page = () => {
                         href="javascript:void(0);"
                       >
                         <span>
-                          <Image width={100} height={100}
+                          <Image
+                            width={100}
+                            height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
                           />
@@ -334,25 +355,42 @@ const Page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100} src="/img/jobboard/apple_phn_icon.png" alt="iOS" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/apple_phn_icon.png"
+                    alt="iOS"
+                  />
                 </div>
                 <div className="icntechimg_nm">iOS</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100} src="/img/jobboard/tech_java_icon.png" alt="Java" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/tech_java_icon.png"
+                    alt="Java"
+                  />
                 </div>
                 <div className="icntechimg_nm">Java</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100} src="/img/jobboard/andoird_icon.png" alt="Android" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/andoird_icon.png"
+                    alt="Android"
+                  />
                 </div>
                 <div className="icntechimg_nm">Android</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
                   />
@@ -361,7 +399,9 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
                   />
@@ -370,13 +410,20 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100} src="/img/jobboard/bootstrap.png" alt="manager_icn" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/img/jobboard/bootstrap.png"
+                    alt="manager_icn"
+                  />
                 </div>
                 <div className="icntechimg_nm">Bootstrap</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
                   />
@@ -385,7 +432,9 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
                   />
@@ -405,7 +454,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -414,7 +465,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -625,8 +678,8 @@ const Page = () => {
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      Yes, We deliver the exact product. We don&lsquo;t compromise
-                      with quality at all.
+                      Yes, We deliver the exact product. We don&lsquo;t
+                      compromise with quality at all.
                     </p>
                   </MDBAccordionItem>
 
@@ -648,8 +701,8 @@ const Page = () => {
                     <p>
                       You are allowed to modify the script. You can remove our
                       company information and put yours. But you cannot put
-                      &apos;copyright by&apos; because only we own the copyrights for our
-                      products.{" "}
+                      &apos;copyright by&apos; because only we own the
+                      copyrights for our products.{" "}
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
@@ -664,7 +717,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

@@ -3,19 +3,24 @@ import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../../elements.css";
 import Billing from "@/app/Components/Billing";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Cookies from "js-cookie";
+import { Router } from "next/navigation";
 
 const Page = ({ params }) => {
   const router = useRouter();
   const [productDetails, setProductDetails] = useState(null);
   const [android, setAndroid] = useState(585.0);
-  const [checkedAndroid, setCheckedAndroid] = useState(false);
-  const [checkedIphone, setCheckedIphone] = useState(false);
   const [productPriceTot, setProductPriceTot] = useState(0);
   const [queryParameter, setQueryParameter] = useState(null);
   const [billingInitials, setBillingInitials] = useState([]);
+
+  let checkedAndroid = useRef(false);
+  let checkedIphone = useRef(false);
+  let discountRemoved = useRef(false);
 
   const [billing, setBilling] = useState(false);
 
@@ -25,13 +30,11 @@ const Page = ({ params }) => {
     const fetchData = async () => {
       try {
         document.querySelector(".main_cart_loader").style.display = "block";
-        const response = await axios.get(
-          `https://lswebsitedemo.logicspice.com/logicspice/apis/buynow/${slug}`,{
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const response = await axios.get(BaseAPI + `/buynow/${slug}`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         setProductDetails(response.data.data);
         setProductPriceTot(response.data.data.currencyDetail.price);
         document.querySelector(".main_cart_loader").style.display = "none";
@@ -43,12 +46,6 @@ const Page = ({ params }) => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   if (router.query.status) {
-  //     setQueryParameter(router.query.status);
-  //   }
-  // }, [router.query.status]);
-
   const addAdditional = async (event, addPrice) => {
     document.querySelector("#loadercart").style.display = "block";
 
@@ -58,23 +55,112 @@ const Page = ({ params }) => {
     const currencySym = productDetails.currencyDetail.currency_symbol;
     const currency = productDetails.currencyDetail.name;
     let discount = 0;
+    let additionalPriceAndroid = productDetails.currencyDetail.android_app;
+    let additionalPriceIphone = productDetails.currencyDetail.ios_app;
+    let iphoneBasePrice = productDetails.currencyDetail.ios_app;
+    let androidBasePrice = productDetails.currencyDetail.android_app;
+    let appTotalPrice = iphoneBasePrice + androidBasePrice;
 
+    let appTotalDiscountedPrice = Math.ceil(
+      (appTotalPrice * productDetails.app_combo) / 100
+    );
+    // total -= Math.ceil(appTotalDiscountedPrice);
     if (!event.target.checked) {
       document.querySelector(`#additional_${value}`).remove();
 
-      if (
-        (id === "remember-in-inline-iphone" ||
-          id === "remember-in-inline-android") &&
-        (document.querySelector("#remember-in-inline-iphone").checked ||
-          document.querySelector("#remember-in-inline-android").checked)
-      ) {
-        document.querySelector("#additional_discount").remove();
-        price += 176;
+      // if (
+      //   (id === "remember-in-inline-ios" ||
+      //     id === "remember-in-inline-android") &&
+      //   (document.querySelector("#remember-in-inline-ios").checked ||
+      //     document.querySelector("#remember-in-inline-android").checked)
+      // ) {
+      //   document.querySelector("#additional_discount").remove();
+      //   price += 176;
+      // }
+
+      // In case android and iphone both are unchecked.
+      if (checkedAndroid || checkedIphone) {
+        if (!checkedAndroid.current || !checkedIphone.current) {
+          console.log(
+            price,
+            appTotalDiscountedPrice,
+            addPrice,
+            "price, appTotalDiscountedPrice, addPrice"
+          );
+
+          if (document.querySelector("#additional_discount"))
+            document.querySelector("#additional_discount").remove();
+
+          if (!discountRemoved.current) {
+            price = price + appTotalDiscountedPrice;
+          }
+
+          // if (discountRemoved.current) {
+          //   document.querySelector("#tot_sec").innerText = price - addPrice;
+          //   setProductPriceTot((prev) => prev - parseInt(addPrice));
+          // } else {
+
+          //   document.querySelector("#tot_sec").innerText =
+          //     price + appTotalDiscountedPrice - addPrice;
+          //   setProductPriceTot((prev) => prev - parseInt(addPrice));
+          // }
+
+          discountRemoved.current = true;
+
+          // document.querySelector("#tot_sec").innerText =
+          //   price + appTotalDiscountedPrice - addPrice;
+          // setProductPriceTot((prev) => prev - parseInt(addPrice));
+        }
       }
+
       document.querySelector("#tot_sec").innerText = price - addPrice;
       setProductPriceTot((prev) => prev - parseInt(addPrice));
+
+      // if (checkedAndroid && checkedIphone) {
+
+      //   if (!checkedAndroid.current) {
+
+      //     console.log('is Android false')
+
+      //     if (discountRemoved.current) {
+      //       document.querySelector("#tot_sec").innerText = price - addPrice;
+      //       setProductPriceTot((prev) => prev - parseInt(addPrice));
+      //     } else {
+      //       document.querySelector("#tot_sec").innerText =
+      //         price + appTotalDiscountedPrice - addPrice;
+      //       setProductPriceTot((prev) => prev - parseInt(addPrice));
+      //     }
+
+      //     discountRemoved.current = true;
+      //   }
+
+      //   if (!checkedIphone.current) {
+
+      //     console.log('is ios false')
+
+      //     // if(document.querySelector("#additional_discount"))
+      //     //   document.querySelector("#additional_discount").remove();
+
+      //     if (discountRemoved.current) {
+      //       document.querySelector("#tot_sec").innerText = price - addPrice;
+      //       setProductPriceTot((prev) => prev - parseInt(addPrice));
+      //     } else {
+      //       document.querySelector("#tot_sec").innerText =
+      //         price + appTotalDiscountedPrice - addPrice;
+
+      //       setProductPriceTot((prev) => prev - parseInt(addPrice));
+      //     }
+      //     discountRemoved.current = true;
+      //   }
+
+      //   if(!discountRemoved.current){
+      //     if(document.querySelector("#additional_discount"))
+      //       document.querySelector("#additional_discount").remove();
+      //   }
+
+      // }
     } else {
-      if (checkedAndroid && checkedIphone) discount = 1;
+      if (checkedAndroid.current && checkedIphone.current) discount = 1;
 
       const data = {
         type: productDetails.productType,
@@ -83,23 +169,30 @@ const Page = ({ params }) => {
         currencySym: currencySym,
         currency: currency,
         discount: discount,
+        slug: slug,
       };
 
       try {
         const response = await axios.post(
-          "https://lswebsitedemo.logicspice.com/logicspice/apis/softwares/addAdditional",
+          BaseAPI + "/softwares/addAdditional",
           data
         );
         document.querySelector("#offeer_sec").innerHTML += response.data;
 
-        let total = parseInt(addPrice) + price;
+        console.log(addPrice);
+        console.log(price);
+
+        var total = parseInt(addPrice) + price;
+
         if (
-          (id === "remember-in-inline-iphone" ||
+          (id === "remember-in-inline-ios" ||
             id === "remember-in-inline-android") &&
-          checkedIphone &&
-          checkedAndroid
+          checkedIphone.current &&
+          checkedAndroid.current
         ) {
-          total -= 175.5;
+          total -= Math.ceil(appTotalDiscountedPrice);
+          console.log(appTotalDiscountedPrice, "appTotalDiscountedPrice");
+          // total -= 175.5;
         }
 
         setProductPriceTot((prev) => prev + parseInt(addPrice));
@@ -114,6 +207,8 @@ const Page = ({ params }) => {
 
   const submitForm = async (event) => {
     event.preventDefault();
+
+    
 
     const formData = new FormData(event.target);
     // Manually construct the form data
@@ -133,25 +228,80 @@ const Page = ({ params }) => {
     );
     formData.append("data[Product][product_price_tot]", productPriceTot);
     formData.append("data[Product][custom_price_val]", "0");
-
+    console.log("Form submitted");
     try {
       const response = await axios.post(
-        "https://lswebsitedemo.logicspice.com/logicspice/apis/softwares/buynowpost",
+        BaseAPI + "/softwares/buynowpost",
         formData
       );
-      // router.push("/billing");
-      // console.log(response,"res")
 
-      setBilling(true);
+      // setBilling(true);
       setBillingInitials(response.data);
-      // console.log(billingInitials,"from")
+      // if(billingInitials.length > 0){
+      //   Cookies.set("billing", JSON.stringify(billingInitials));
+      // }
+      Cookies.set("addArray", JSON.stringify(response.data.addArray));
+      Cookies.set("additionalPoints", JSON.stringify(response.data.additionalPoints));
+      // Cookies.set("countries", JSON.stringify(response.data.countries));
+      Cookies.set("currencyDetail", JSON.stringify(response.data.currencyDetail));
+      Cookies.set("productType", JSON.stringify(response.data.productType));
+      localStorage.setItem("countries", JSON.stringify(response.data.countries));
+
+
+      // Cookies.set("initials", JSON.stringify(response.data));
+      router.push("/billing");
     } catch (err) {
       console.error("Error submitting form:", err.message);
     }
   };
 
-  const handleProceed = () => {
-    setBilling(true);
+  const applyDiscount = async () => {
+    let discountData = {
+      coupon_code: couponDiscount.coupon_code,
+      payment_gateway: "paypal",
+      product_name: billingInitials?.productType,
+      // total_amount: totalPrice.current,
+      total_amount: totalCost,
+      currencySym: billingInitials?.currencyDetail.currency_symbol,
+      currency: billingInitials?.currencyDetail.name,
+      slug: billingInitials?.currencyDetail.product_name,
+    };
+
+    try {
+      const response = await axios.post(
+        BaseAPI + "/softwares/discount",
+        discountData
+      );
+
+      console.log(response);
+
+      if (response.data.status == 200) {
+        // setFormData((pre) => ({
+        //   ...pre,
+        //   cost: response.data.data.total_amount,
+        //   discount: response.data.data.discount_price,
+        //   total_cost: response.data.data.charge_amount,
+        // }));
+
+        console.log(response.data.html);
+        discountHtml.current = response.data.html;
+
+        if (discountHtml.current !== "") {
+          const offerElement = document.querySelector("#ofer_finl"); // Corrected selector
+          if (offerElement) {
+            offerElement.innerHTML = discountHtml.current;
+          } else {
+            console.error("Element #ofer_finl not found in the DOM.");
+          }
+        }
+
+        // $('#ofer_finl').html(response.data.html)
+      }
+
+      setMessage(response.data.message);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -178,7 +328,7 @@ const Page = ({ params }) => {
       </section>
 
       <div className="main_cart_loader" id="loadercart">
-        <img src="./../assets/img/loader_large_blue.gif" alt="" />
+        <img src="/img/loader_large_blue.gif" alt="" />
       </div>
 
       {productDetails && (
@@ -231,74 +381,151 @@ const Page = ({ params }) => {
                 acceptCharset="utf-8"
                 noValidate
               >
-                {!billing && (
-                  <>
-                    <div className="order_title">
-                      <h4 className="titke">
-                        You’ve added {productDetails.productType} Software
-                      </h4>
-                    </div>
-                    <div className="order_summarty_left">
-                      <div className="oder_inner">
-                        <div className="order_addonStep">
-                          {productDetails.additionalPoints.map((additional) => (
-                            <div className="addonStep_row" key={additional.id}>
-                              <div className="addonStep_row_inner">
-                                <div className="right_input">
-                                  <div className="form__remember">
-                                    <input
-                                      type="checkbox"
-                                      name="data[Additional][ids][]"
-                                      id={`remember-in-inline${additional.id}`}
-                                      className="in-checkbox"
-                                      onClick={(e) =>
-                                        addAdditional(e, additional.price)
-                                      }
-                                      value={additional.id}
-                                    />
-                                    <label
-                                      htmlFor={`remember-in-inline${additional.id}`}
-                                      className="in-label"
-                                    ></label>
-                                  </div>
-                                </div>
-                                <div className="input_des">
-                                  {additional.name}
-                                  <span className="row_des">
-                                    ({additional.subtitle})
-                                  </span>
-                                </div>
-                                <div className="input_rate">
-                                  <span className="rate">
-                                    {
-                                      productDetails.currencyDetail
-                                        .currency_symbol
-                                    }
-                                    {additional.price}{" "}
-                                    {productDetails.currencyDetail.name}
-                                  </span>
-                                </div>
+                <div className="order_title">
+                  <h4 className="titke">
+                    You’ve added {productDetails.productType} Software
+                  </h4>
+                </div>
+                <div className="order_summarty_left">
+                  <div className="oder_inner">
+                    <div className="order_addonStep">
+                      {productDetails.additionalPoints.map((additional) => (
+                        <div className="addonStep_row" key={additional.id}>
+                          <div className="addonStep_row_inner">
+                            <div className="right_input">
+                              <div className="form__remember">
+                                <input
+                                  type="checkbox"
+                                  name="data[Additional][ids][]"
+                                  id={`remember-in-inline${additional.id}`}
+                                  className="in-checkbox"
+                                  onClick={(e) =>
+                                    addAdditional(e, additional.price)
+                                  }
+                                  value={additional.id}
+                                />
+                                <label
+                                  htmlFor={`remember-in-inline${additional.id}`}
+                                  className="in-label"
+                                ></label>
                               </div>
                             </div>
-                          ))}
+                            <div className="input_des">
+                              {additional.name}
+                              <span className="row_des">
+                                ({additional.subtitle})
+                              </span>
+                            </div>
+                            <div className="input_rate">
+                              <span className="rate">
+                                {productDetails.currencyDetail.currency_symbol}
+                                {additional.price}{" "}
+                                {productDetails.currencyDetail.name}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="action_btn ">
-                        <button
-                          type="submit"
-                          className="custom_btn btn btn-primary"
-                          // onClick={submitForm}
-                        >
-                          Proceed
-                        </button>
-                      </div>
+                      ))}
+                      {productDetails.currencyDetail.android_app !== null && (
+                        <>
+                          <div className="addonStep_row" key="2">
+                            <div className="addonStep_row_inner">
+                              <div className="right_input">
+                                <div className="form__remember">
+                                  <input
+                                    type="checkbox"
+                                    name="data[Additional][ids][]"
+                                    id="remember-in-inline-android"
+                                    className="in-checkbox"
+                                    checked={checkedAndroid.current}
+                                    onClick={(e) => {
+                                      (checkedAndroid.current =
+                                        !checkedAndroid.current),
+                                        addAdditional(
+                                          e,
+                                          productDetails.currencyDetail
+                                            .android_app
+                                        );
+                                    }}
+                                    value="android"
+                                  />
+                                  <label
+                                    htmlFor="remember-in-inline-android"
+                                    className="in-label"
+                                  ></label>
+                                </div>
+                              </div>
+                              <div className="input_des">Android App</div>
+                              <div className="input_rate">
+                                <span className="rate">
+                                  {
+                                    productDetails.currencyDetail
+                                      .currency_symbol
+                                  }
+                                  {productDetails.currencyDetail.android_app}{" "}
+                                  {productDetails.currencyDetail.name}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                      {productDetails.currencyDetail.android_app !== null && (
+                        <>
+                          <div className="addonStep_row" key="2">
+                            <div className="addonStep_row_inner">
+                              <div className="right_input">
+                                <div className="form__remember">
+                                  <input
+                                    type="checkbox"
+                                    name="data[Additional][ids][]"
+                                    id="remember-in-inline-ios"
+                                    className="in-checkbox"
+                                    checked={checkedIphone.current}
+                                    onClick={(e) => {
+                                      (checkedIphone.current =
+                                        !checkedIphone.current),
+                                        addAdditional(
+                                          e,
+                                          productDetails.currencyDetail.ios_app
+                                        );
+                                    }}
+                                    value="iphone"
+                                  />
+                                  <label
+                                    htmlFor="remember-in-inline-ios"
+                                    className="in-label"
+                                  ></label>
+                                </div>
+                              </div>
+                              <div className="input_des">iPhone App</div>
+                              <div className="input_rate">
+                                <span className="rate">
+                                  {
+                                    productDetails.currencyDetail
+                                      .currency_symbol
+                                  }
+                                  {productDetails.currencyDetail.ios_app}{" "}
+                                  {productDetails.currencyDetail.name}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
-                  </>
-                )}
+                  </div>
+                  <div className="action_btn ">
+                    <button
+                      type="submit"
+                      className="custom_btn btn btn-primary"
+                      // onClick={submitForm}
+                    >
+                      Proceed
+                    </button>
+                  </div>
+                </div>
 
-                {/* Billing code start */}
-                {billing && <Billing billingInitials={billingInitials} />}
-                {/* Billing code end */}
                 <div className="order_summarty_right">
                   <div className="order_summarty_right_inner">
                     <div className="order_title">Order Summary</div>
@@ -336,6 +563,7 @@ const Page = ({ params }) => {
                           </div>
                         </div>
                       </div>
+                      {/* <div id="ofer_finl"></div> */}
                       <div className="off_sect">
                         <span id="show" className="drop drop_left">
                           We Offer Money Back Guarantee{" "}

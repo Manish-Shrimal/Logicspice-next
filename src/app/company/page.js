@@ -5,6 +5,7 @@ import "@/app/company/company.css";
 import NavBar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const page = () => {
   const [modalOpen, setModalOpen] = useState(false);

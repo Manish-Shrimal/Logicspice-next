@@ -5,6 +5,7 @@ import Link from "next/link";
 import "@/app/company/company.css";
 import Image from "next/image";
 import React, { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {

@@ -215,7 +215,7 @@ const Page = () => {
 
                   <Link
                     className="btn fiverr-buys"
-                    href="https://www.logicspice.com/softwares/buynow/business-directory-system"
+                    href="/buy-now/business-directory-system"
                     id="buy_now_1"
                   >
                     Buy Now
@@ -1228,7 +1228,7 @@ const Page = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="https://www.logicspice.com/softwares/buynow/business-directory-system"
+                  href="/buy-now/business-directory-system"
                   id="buy_now_1"
                 >
                   Buy Now

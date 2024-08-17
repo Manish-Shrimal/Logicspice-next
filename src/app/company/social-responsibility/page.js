@@ -5,6 +5,7 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/company/company.css";
 import Image from "next/image";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import "@fortawesome/fontawesome-free/css/all.css";
 import Link from "next/link";
 
 const Page = () => {

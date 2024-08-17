@@ -152,7 +152,7 @@ const Page = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys"
-                    href="/softwares/buynow/classsifiedr-ads-script"
+                    href="/buy-now/classified-ads-script"
                     id="buy_now_1"
                   >
                     Buy Now
@@ -1003,7 +1003,7 @@ const Page = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/buynow/classNameified-ads-script"
+                  href="/buy-now/classified-ads-script"
                   id="buy_now_1"
                 >
                   Buy Now

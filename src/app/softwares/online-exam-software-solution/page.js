@@ -141,7 +141,7 @@ See how it work yourself!!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/online-exam-software-solution"
+                    href="/buy-now/online-exam-software-solution"
                   >
                     Buy Now
                   </Link>
@@ -942,7 +942,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/online-exam-software-solution"
+                  href="/buy-now/online-exam-software-solution"
                 >
                   Buy Now
                 </Link>
@@ -1760,7 +1760,7 @@ See how it work yourself!"
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a title="View Detail" target="_black">
+                  <Link href="/softwares/job-board-software" title="View Detail" target="_black">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
@@ -1777,12 +1777,12 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a title="View Detail" target="_black">
+                  <Link href="/softwares/udemy-clone" title="View Detail" target="_black">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>
@@ -1803,12 +1803,12 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a title="View Detail" target="_black">
+                  <Link href="/softwares/whatsapp-clone" title="View Detail" target="_black">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>WhatsApp Clone App</h3>
@@ -1826,7 +1826,7 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

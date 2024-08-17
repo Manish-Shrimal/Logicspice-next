@@ -6,6 +6,7 @@ import "@/app/company/company.css";
 import Image from "next/image";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Link from "next/link";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

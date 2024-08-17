@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import "@fortawesome/fontawesome-free/css/all.css";
 
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -195,7 +196,6 @@ const Page = () => {
         <div class="container">
           <div class="row">
             <div class="col-md-7">
-          
               <ul className="nav nav-tabs abouts-nav-tab">
                 <li
                   id="tab1_li"
@@ -311,10 +311,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-
-        
       </section>
-     
 
       <section
         id="our-work"
@@ -352,21 +349,21 @@ const Page = () => {
                 >
                   <p style={{ marginTop: "20px" }}>
                     Logicspice understands the significance of competition in
-                    every business venture. That&apos;s mainly because the company is
-                    subjected to it itself. The way we deal with competition is
-                    translated to how we make our clients win it over the others
-                    as well.
+                    every business venture. That&apos;s mainly because the
+                    company is subjected to it itself. The way we deal with
+                    competition is translated to how we make our clients win it
+                    over the others as well.
                   </p>
                   <br />
 
                   <p>
                     Logicspice never stops improving. We never stop thinking out
-                    fresh new ideas that could get our client&apos;s goal across. We
-                    never stop finding an updated technology that could
-                    translate a business&apos;s vision into reality. We know that
-                    there is so much room for change, especially in this kind of
-                    business. And when change unfolds, we make sure that we are
-                    right through it.
+                    fresh new ideas that could get our client&apos;s goal
+                    across. We never stop finding an updated technology that
+                    could translate a business&apos;s vision into reality. We
+                    know that there is so much room for change, especially in
+                    this kind of business. And when change unfolds, we make sure
+                    that we are right through it.
                   </p>
                   <br />
 
@@ -380,8 +377,8 @@ const Page = () => {
                   <br />
 
                   <p>
-                    Logicspice works closely with its clients. That&apos;s how we
-                    know and understand their needs and wants. We have the
+                    Logicspice works closely with its clients. That&apos;s how
+                    we know and understand their needs and wants. We have the
                     perfect tools and the most creative team to implement your
                     ideas and even give you a sight of some that have not
                     crossed your mind yet. Simply put, Logicspice has the best
@@ -395,18 +392,19 @@ const Page = () => {
                   id="tab2"
                 >
                   <p style={{ marginTop: "20px" }}>
-                    Logicspice put the highest value to its clients. That&apos;s why
-                    our movement is always geared towards client&apos;s satisfaction.
-                    We never rest until we see wide smiles in our client&apos;s face,
-                    signaling fulfillment in what we have done to his business.
+                    Logicspice put the highest value to its clients. That&apos;s
+                    why our movement is always geared towards client&apos;s
+                    satisfaction. We never rest until we see wide smiles in our
+                    client&apos;s face, signaling fulfillment in what we have
+                    done to his business.
                   </p>
                   <br />
 
                   <p>
                     Logicspice takes its cues from the desires and the
-                    requirements of a specific client. We&apos;ll know what we should
-                    do as soon as we meet you and have a good assessment of what
-                    you want to happen in your business.
+                    requirements of a specific client. We&apos;ll know what we
+                    should do as soon as we meet you and have a good assessment
+                    of what you want to happen in your business.
                   </p>
                   <br />
 

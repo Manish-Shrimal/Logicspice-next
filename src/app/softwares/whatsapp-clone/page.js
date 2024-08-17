@@ -135,7 +135,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys"
-                    href="/softwares/whatsapp-clone"
+                    href={'/buy-now/whatsapp-clone'}
                   >
                     Buy Now
                   </Link>
@@ -812,7 +812,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/whatsapp-clone"
+                  href={'/buy-now/whatsapp-clone'}
                 >
                   Buy Now
                 </Link>

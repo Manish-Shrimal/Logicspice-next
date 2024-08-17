@@ -134,7 +134,7 @@ const Page = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/linkedin-clone"
+                    href="/buy-now/linkedin-clone"
                   >
                     Buy Now
                   </Link>
@@ -277,8 +277,8 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
                           <Image
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/linkedin-clone/linkedinls-mobile.png"
                             alt="Linkedin_User"
                           />
@@ -523,8 +523,8 @@ const Page = () => {
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                            width={100}
-                            height={100}
+                           width={300}
+                           height={100 / (100 / 100)}
                             src="/img/linkedin-clone/linkedin_admin.png"
                             alt="Admin Panel"
                           />
@@ -915,7 +915,7 @@ const Page = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/linkedin-clone"
+                  href="/buy-now/linkedin-clone"
                 >
                   Buy Now
                 </Link>
@@ -1004,7 +1004,7 @@ const Page = () => {
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
-                    width={100}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1312,7 +1312,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
@@ -1323,7 +1323,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1334,7 +1334,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1345,7 +1345,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1392,7 +1392,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1414,7 +1414,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1425,7 +1425,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1720,8 +1720,8 @@ const Page = () => {
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={1200}
+                    height={100 / (100 / 100)}
                     src="/img/linkedin-clone/linkedin-clone-account.png"
                     alt="linkedin_clone_Profile"
                   />
@@ -1739,8 +1739,8 @@ const Page = () => {
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                  width={1200}
+                  height={100 / (100 / 100)}
                     src="/img/linkedin-clone/user-profile.png"
                     alt="User_Profile"
                   />
@@ -1757,8 +1757,8 @@ const Page = () => {
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                  width={1200}
+                  height={100 / (100 / 100)}
                     src="/img/linkedin-clone/messages-user.png"
                     alt="Linkedin_Messages"
                   />
@@ -1776,8 +1776,8 @@ const Page = () => {
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                   width={1200}
+                   height={100 / (100 / 100)}
                     src="/img/linkedin-clone/acitivity.png"
                     alt="acitivity"
                   />
@@ -1814,86 +1814,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="latest_feature_product">
-        <div className="container">
-          <h2 className="title_main">Other Popular Softwares</h2>
-          <div className="other-product-box">
-            <div className="row">
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Job Board Software</h3>
-                        <div className="other-project-logo">
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/jobboard/job-board-logo.png"
-                            alt="Job board software"
-                          />
-                        </div>
-                        <p>
-                          <span>Best white label job board software.</span>{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Udemy Clone</h3>
-
-                        <div className="other-project-logo">
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/jobboard/udemy_new.png"
-                            alt="Udemy Clone"
-                          />
-                        </div>
-                        <p>
-                          <span>
-                            Readymade Script of video E- Learning Platform like
-                            Udemy.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>WhatsApp Clone App</h3>
-
-                        <div className="other-project-logo">
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/jobboard/ls-chat-logo.png"
-                            alt="WhatsApp Clone App"
-                          />
-                        </div>
-                        <p>
-                          <span>Readymade WhatsApp Clone Script.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a

@@ -151,7 +151,7 @@ const Page = () => {
 
                   <a
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="<?php echo HTTP_PATH; ?>/softwares/buynow/job-portal-script"
+                    href="/buy-now/job-portal-script"
                     id="buy_now_1"
                   >
                     Buy Now
@@ -1929,7 +1929,7 @@ const Page = () => {
                 </div>
                 <a
                   className="btn fiverr-buys"
-                  href="https://www.logicspice.com/softwares/buynow/jobsite"
+                  href="/buy-now/job-portal-script"
                   id="buy_now_1"
                 >
                   Buy Now
@@ -2512,7 +2512,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
                         alt="ReactJS Development"
@@ -2523,7 +2523,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
@@ -2534,7 +2534,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -2545,7 +2545,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -2556,7 +2556,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -2567,7 +2567,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
@@ -2579,7 +2579,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
@@ -3413,7 +3413,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/udemy-clone"
@@ -3423,7 +3423,7 @@ const Page = () => {
                         <h3>Udemy Clone</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={300}
+                            width={250}
                             height={100}
                             src="/img/jobboard/udemy_new.png"
                             alt="Udemy Clone"
@@ -3438,12 +3438,12 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     className="View Detail"
                     target="_black"
                     href="/softwares/recruitment-management-software"
@@ -3453,7 +3453,7 @@ const Page = () => {
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
                           <Image
-                            width={300}
+                            width={250}
                             height={100}
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
@@ -3468,12 +3468,12 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/fiverr-clone"
@@ -3484,7 +3484,7 @@ const Page = () => {
 
                         <div className="other-project-logo">
                           <Image
-                            width={300}
+                            width={250}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
@@ -3496,7 +3496,7 @@ const Page = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

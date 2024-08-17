@@ -122,7 +122,7 @@ const Page = () => {
                   >
                     Get Demo Access!
                   </Link> */}
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -135,7 +135,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/forum-script"
+                    href="/buy-now/forum-script"
                   >
                     Buy Now
                   </Link>
@@ -771,7 +771,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/forum-script"
+                  href="/buy-now/forum-script"
                 >
                   Buy Now
                 </Link>
@@ -1564,7 +1564,7 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={1075}
+                    width={1200}
                     height={100}
                     src="/img/forum-script/fourms2.png"
                     alt=""
@@ -1578,7 +1578,7 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={1075}
+                    width={1200}
                     height={100}
                     src="/img/forum-script/fourms3.png"
                     alt=""
@@ -1592,8 +1592,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={1075}
-                    height={100}
+                   width={1200}
+                   height={100}
                     src="/img/forum-script/fourms4.png"
                     alt=""
                   />

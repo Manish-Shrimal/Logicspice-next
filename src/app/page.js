@@ -1166,25 +1166,8 @@ const Page = () => {
         </div>
       </section>
 
-      {/* <div className="quoue_box_full_sec">
-        <div className="whatsapp-call">
-          <Link
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
-            target="_blank"
-          >
-            <Image width={100} height={100}
-              src="/img/product-img/whatsapp.png"
-              alt="whatsapp-icon"
-            />
-          </Link>
-        </div>
-        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
-          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
-        </div>
-      </div> */}
-      <Servercomponents />
-
       <Footer />
+      <Servercomponents />
     </>
   );
 };

@@ -145,7 +145,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys"
-                    href="/softwares/recruitment-management-software"
+                    href="/buy-now/recruitment-management-software"
                   >
                     Buy Now
                   </Link>
@@ -891,7 +891,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares//recruitment-management-software"
+                  href="/buy-now/recruitment-management-software"
                 >
                   Buy Now
                 </Link>

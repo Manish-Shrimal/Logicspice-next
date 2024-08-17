@@ -147,7 +147,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/rental-property-management-software"
+                    href="/buy-now/rental-property-management-software"
                   >
                     Buy Now
                   </Link>
@@ -1220,7 +1220,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/rental-property-management-software"
+                  href="/buy-now/rental-property-management-software"
                 >
                   Buy Now
                 </Link>

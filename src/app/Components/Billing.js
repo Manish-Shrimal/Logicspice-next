@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import BaseAPI from "../BaseAPI/BaseAPI";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Billing = ({ billingInitials }) => {
+const Billing = ({ billingInitials, test, applyDiscount, getDiscount }) => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const [productDetails, setProductDetails] = useState([]);
   const [formData, setFormData] = useState({
@@ -41,8 +41,6 @@ const Billing = ({ billingInitials }) => {
     cost: "",
     discount: "0.00",
     total_cost: "",
-    // currencySym: productDetails?.currencyDetail.currency_symbol || "",
-    // currency: productDetails?.currencyDetail.name || "",
     captcha: "",
   });
 
@@ -53,6 +51,8 @@ const Billing = ({ billingInitials }) => {
   const [couponDiscount, setCouponDiscount] = useState({
     coupon_code: "",
   });
+  let paymentUrl = useRef();
+  let totalPrice = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -102,7 +102,7 @@ const Billing = ({ billingInitials }) => {
 
     if (!formData.billing_postcode) {
       newErrors.billing_postcode = "Postcode is required";
-    } else if (!/^\d{5}$/.test(formData.billing_postcode)) {
+    } else if (!/^\d{6}$/.test(formData.billing_postcode)) {
       newErrors.billing_postcode = "Postcode is invalid";
     }
 
@@ -122,50 +122,32 @@ const Billing = ({ billingInitials }) => {
         return;
       }
       try {
-        // let totalPrice;
-        // let basePrice = billingInitials?.currencyDetail.price;
-        // if(billingInitials?.addArray.length > 0){
-        //   billingInitials.addArray.forEach((ele) => {
-        //     let id = addArray[ele];
-        //     billingInitials.additionalPoints.forEach((element) => {
-        //       if (element.id === id) {
-        //         totalPrice = basePrice + element.price;
-        //       }
-        //     })
-        //   })
-        // }
+        console.log("Total Price:", totalPrice.current);
 
-        let totalPrice = billingInitials?.currencyDetail.price || 0;
+        // setFormData((prevData) => ({
+        //   ...prevData,
+        //   total_cost: totalPrice.current,
+        //   cost: totalPrice.current,
+        // }));
+        let updatedFormData = {
+          ...formData,
+          total_cost: totalPrice.current,
+          cost: totalPrice.current,
+        };
+        // console.log(updatedFormData.cost, updatedFormData.total_cost,"cost");
+        let updatedData = {
+          formData: updatedFormData,
+          buynow: billingInitials,
+        };
 
-        if (billingInitials?.addArray.length > 0) {
-          billingInitials.addArray.forEach((ele) => {
-            // Convert the string to a number
-            let id = parseInt(ele, 10);
-
-            // Find the matching additional point
-            let selectedPoint = billingInitials.additionalPoints.find(
-              (point) => point.id === id
-            );
-
-            // If a matching point is found, add its price to the total price
-            if (selectedPoint) {
-              totalPrice += selectedPoint.price;
-            }
-          });
-        }
-
-        console.log("Total Price:", totalPrice);
-
-        setFormData((prevData) => ({
-          ...prevData,
-          total_cost: totalPrice,
-        }));
-        // console.log(formData, "form data");
-        // console.log(totalPrice, "total price");
         const response = await axios.post(
           BaseAPI + "/softwares/savebilling",
-          formData
+          updatedData
         );
+        if (response.data.status === 200) {
+          paymentUrl.current = response.data.url;
+          window.location.href = paymentUrl.current; // Redirect to the URL
+        }
       } catch (error) {
         console.log(error.message);
       }
@@ -174,12 +156,88 @@ const Billing = ({ billingInitials }) => {
     // Handle form submission
   };
 
-  const applyDiscount = (e) => {
-    e.preventDefault();
-    // Handle promo code submission
-  };
+  // let discountHtml = useRef();
+
+  // const applyDiscount = async (e) => {
+  //   e.preventDefault();
+  //   // Handle promo code submission
+
+  //   let discountData = {
+  //     coupon_code: couponDiscount.coupon_code,
+  //     payment_gateway: "paypal",
+  //     product_name: billingInitials?.productType,
+  //     total_amount: totalPrice.current,
+  //     currencySym: billingInitials?.currencyDetail.currency_symbol,
+  //     currency: billingInitials?.currencyDetail.name,
+  //     slug: billingInitials?.currencyDetail.product_name,
+  //   };
+
+  //   try {
+  //     const response = await axios.post(
+  //       BaseAPI + "/softwares/discount",
+  //       discountData
+  //     );
+
+  //     console.log(response);
+
+  //     if (response.data.status == 200) {
+  //       setFormData((pre) => ({
+  //         ...pre,
+  //         cost: response.data.data.total_amount,
+  //         discount: response.data.data.discount_price,
+  //         total_cost: response.data.data.charge_amount,
+  //       }));
+
+  //       // this.formData.cost = response.data.data.total_amount;
+  //       // this.formData.discount = response.data.data.discount_price;
+  //       // this.formData.total_cost = response.data.data.charge_amount;
+
+  //       // document.getElementById('ofer_finl').innerHTML(response.data.html)
+
+  //       console.log(response.data.html);
+  //       discountHtml.current = response.data.html;
+
+  //       if (discountHtml.current !== "") {
+  //         const offerElement = document.querySelector("#ofer_finl"); // Corrected selector
+  //         if (offerElement) {
+  //           offerElement.innerHTML = discountHtml.current;
+  //         } else {
+  //           console.error("Element #ofer_finl not found in the DOM.");
+  //         }
+  //       }
+        
+
+  //       // $('#ofer_finl').html(response.data.html)
+  //     }
+
+  //     setMessage(response.data.message);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
   console.log(billingInitials, "here");
+
+  const calculateTotal = () => {
+    totalPrice.current = billingInitials?.currencyDetail.price || 0;
+
+    if (billingInitials?.addArray.length > 0) {
+      billingInitials.addArray.forEach((ele) => {
+        // Convert the string to a number
+        let id = parseInt(ele, 10);
+
+        // Find the matching additional point
+        let selectedPoint = billingInitials.additionalPoints.find(
+          (point) => point.id === id
+        );
+
+        // If a matching point is found, add its price to the total price
+        if (selectedPoint) {
+          totalPrice.current += selectedPoint.price;
+        }
+      });
+    }
+  };
 
   // if (!productDetails) {
   //   return null;
@@ -190,9 +248,7 @@ const Billing = ({ billingInitials }) => {
       try {
         console.log("object");
         // Replace `injectedConstants.API_PATH` with your API path
-        const response = await axios.post(
-          "https://lswebsitedemo.logicspice.com/logicspice/api/softwares/billing"
-        );
+        const response = await axios.post(BaseAPI + "/softwares/billing");
 
         console.log(response.data, "data heers");
         setProductDetails(response.data);
@@ -304,8 +360,14 @@ const Billing = ({ billingInitials }) => {
       }
     };
 
-    fetchData();
+    //fetchData();
+    calculateTotal();
   }, []); // Empty dependency array means this effect runs once on mount
+
+  const handleApplyDiscount = (e) => {
+    e.preventDefault();
+    getDiscount(couponDiscount, totalPrice.current);
+};
 
   return (
     <>
@@ -537,7 +599,88 @@ const Billing = ({ billingInitials }) => {
             </div>
           </div>
         </div>
+        <div className="order_summarty_right">
+                  <div className="order_summarty_right_inner">
+                    <div className="order_title">Order Summary</div>
+                    <div className="order_wrap">
+                      <div id="offeer_sec">
+                        <div className="order_wrap_row" id="and_sec">
+                          <div className="order_wrap_left">
+                            <span className="basi_title">
+                              {productDetails.productType}
+                            </span>
+                            <br />
+                            (Web Version)
+                          </div>
+                          <div className="order_wrap_right">
+                            {productDetails.currencyDetail.currency_symbol}
+                            <span id="and_price">
+                              {productDetails.currencyDetail.price}
+                            </span>{" "}
+                            {productDetails.currencyDetail.name}
+                          </div>
+                        </div>
+                        <div id="custom_sec"></div>
+                      </div>
+                      {/* <div id="ofer_nw">
+                        <div className="order_wrap_row">
+                          <div className="order_wrap_left">
+                            <span className="basi_title">Total</span>
+                          </div>
+                          <div className="order_wrap_right">
+                            {productDetails.currencyDetail.currency_symbol}
+                            <span id="tot_sec">
+                              {productDetails.currencyDetail.price}
+                            </span>{" "}
+                            {productDetails.currencyDetail.name}
+                          </div>
+                        </div>
+                      </div> */}
+                      <div id="ofer_finl"></div>
+                      <div className="off_sect">
+                        <span id="show" className="drop drop_left">
+                          We Offer Money Back Guarantee{" "}
+                          <i className="question_icon"></i>
+                          <div className="drop_contanet drop_left_content">
+                            <span id="hide"></span>
+                            Yes, we provide a 30 days money back guarantee to
+                            ensure customer satisfaction with our software. If,
+                            for any reason, you decide to stop using the
+                            product, you can request a refund. We will reimburse
+                            the entire amount, excluding the installation and
+                            configuration charges, which are either USD 65 or
+                            20% of the application cost, whichever is higher.
+                            Please note that the money back guarantee does not
+                            apply to customers who have received updates as per
+                            their specific requests, taking into account the
+                            significant efforts and time invested by the team
+                            for their project.
+                          </div>
+                        </span>
+                        <div className="pay_pri_term">
+                          For more detail visit following pages
+                          <a
+                            href="https://demo.imagetowebpage.com/logicspice_com_cake//privacy-policy"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Privacy Policy
+                          </a>{" "}
+                          and
+                          <a
+                            href="https://demo.imagetowebpage.com/logicspice_com_cake//terms-of-use"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Terms Of Use
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
       </form>
+      <div id="ofer_finl"></div>
 
       <div
         className={`modal fade ${paymentModal ? "show" : ""}`}
@@ -590,13 +733,13 @@ const Billing = ({ billingInitials }) => {
                         type="submit"
                         id="coupon_save"
                         className="cupon_bt_righ ancorinput btn btn-primary"
-                        onClick={applyDiscount}
+                        onClick={handleApplyDiscount}
+                        // onClick={test}
                       >
                         Apply
                       </button>
-                      <span id="errors" v-if={message !== ""}>
-                        {message}
-                      </span>
+                      <br />
+                      {message && <span id="errors">{message}</span>}
                     </div>
                   </div>
                 </div>
@@ -619,55 +762,3 @@ const Billing = ({ billingInitials }) => {
 };
 
 export default Billing;
-
-// billing_address
-// :
-// "Jaipur"
-// billing_city
-// :
-// "Jaipur"
-// billing_country
-// :
-// 101
-// billing_email
-// :
-// "deepak.mundhra@logicspice.com"
-// billing_name
-// :
-// "Deepak"
-// billing_phone
-// :
-// "7676767676"
-// billing_postcode
-// :
-// "302020"
-// billing_state
-// :
-// "Rajasthan"
-// cost
-// :
-// 529
-// currency
-// :
-// "USD"
-// currencySym
-// :
-// "$"
-// discount
-// :
-// 0
-// domain_name
-// :
-// ""
-// payment_gateway
-// :
-// "paypal"
-// product_name
-// :
-// "Fiverr Clone"
-// roobot
-// :
-// true
-// total_cost
-// :
-// 529

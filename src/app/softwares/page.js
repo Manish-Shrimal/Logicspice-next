@@ -357,7 +357,7 @@ const Page = () => {
                       </Link>
                     </div>
                     <div className="col-sm-6 col-md-4">
-                      <Link href="/softwares/logicstic-marketplace-software" className="ready-product" data-aos="fade-up">
+                      <Link href="/softwares/logistic-marketplace-software" className="ready-product" data-aos="fade-up">
                         <Image
                           width={100}
                           height={100}

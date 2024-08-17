@@ -14,7 +14,12 @@ const servercomponents = () => {
   return (
     <>
          <div className="quoue_box_full_sec">
-        <div className="whatsapp-call">
+       
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
+      <div className="whatsapp-call">
           <a
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
@@ -25,10 +30,6 @@ const servercomponents = () => {
             />
           </a>
         </div>
-        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
-          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
-        </div>
-      </div>
     </>
   )
 }

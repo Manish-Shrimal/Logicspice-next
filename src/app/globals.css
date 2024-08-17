@@ -3890,6 +3890,12 @@ body.modal-open .quote_pop_plus {
 }
 
 .quote_pop_plus {
+  /* border-radius: 5px 0 0 5px;
+  box-shadow: 0px 0 4px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 40px;
+  width: 40px; */
   border-radius: 5px 0 0 5px;
   box-shadow: 0px 0 4px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -3899,6 +3905,12 @@ body.modal-open .quote_pop_plus {
 }
 
 .quoue_box_full_sec {
+  /* position: fixed;
+  z-index: 99;
+  top: 190px;
+  right: 0;
+  width: auto;
+  box-shadow: 0px 0 4px 0 rgba(0, 0, 0, 0.5); */
   position: fixed;
   z-index: 99;
   top: 190px;
@@ -4328,6 +4340,11 @@ body.modal-open .quote_pop_plus {
 }
 
 .quote_pop_in {
+  /* background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px 0 0 5px;
+  color: #451095;
+  height: 120px;
+  position: relative; */
   background: rgba(255, 255, 255, 0.9);
   border-radius: 5px 0 0 5px;
   color: #451095;
@@ -4341,7 +4358,7 @@ body.modal-open .quote_pop_plus {
 }
 
 .quote_pop_in::after {
-  bottom: 0;
+  /* bottom: 0;
   content: "Contact Us";
   letter-spacing: 1px;
   font-size: 15px;
@@ -4350,7 +4367,17 @@ body.modal-open .quote_pop_plus {
   text-align: center;
   top: 0;
   transform: rotate(-90deg);
-  width: 120px;
+  width: 120px; */
+  bottom: 0;
+    content: "Contact Us";
+    letter-spacing: 1px;
+    font-size: 15px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: rotate(-90deg);
+    width: 120px;
 }
 
 .quote_pop_plus {
@@ -4358,8 +4385,8 @@ body.modal-open .quote_pop_plus {
   box-shadow: 0px 0 4px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
   font-size: 25px;
-  line-height: 40px;
-  width: 40px;
+  line-height: 50px;
+  width: 45px;
 }
 
 /* Contact Us Modal Css end  */

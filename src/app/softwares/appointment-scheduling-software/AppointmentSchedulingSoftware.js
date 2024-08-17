@@ -153,7 +153,7 @@ const AppointmentSchedulingSoftware = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/appointment-scheduling-software"
+                    href="/buy-now/appointment-scheduling-software"
                   >
                     Buy Now
                   </Link>
@@ -983,7 +983,7 @@ const AppointmentSchedulingSoftware = () => {
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/appointment-booking-system"
+                  href="/buy-now/appointment-booking-system"
                 >
                   Buy Now
                 </Link>

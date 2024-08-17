@@ -134,7 +134,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/grocery-store-script"
+                    href="/buy-now/grocery-store-script"
                   >
                     Buy Now
                   </Link>
@@ -991,7 +991,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/grocery-app-development"
+                  href="/buy-now/grocery-app-development"
                 >
                   Buy Now
                 </Link>

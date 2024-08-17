@@ -137,7 +137,7 @@ See how it work yourself!"
 
                   <a
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/Vuejs/softwares/groupon-clone"
+                    href="/buy-now/groupon-clone"
                     id="buy_now_1"
                   >
                     Buy Now
@@ -1118,7 +1118,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/food-ordering-script"
+                  href="/buy-now/groupon-clone"
                 >
                   Buy Now
                 </Link>

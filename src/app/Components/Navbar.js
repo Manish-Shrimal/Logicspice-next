@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "../globals.css";
 import "../resposive.css";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 // import {
 //   AppBar,
@@ -28,8 +28,6 @@ const Navbar = () => {
   const [dropdown4, setDropdown4] = useState(false);
   const [dropdown5, setDropdown5] = useState(false);
   const router = useRouter();
-
-
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -141,56 +139,93 @@ const Navbar = () => {
                             </Link>
                           </li>
                         </ul> */}
-                      <ul>
-      <li className={router.pathname === '/company/our-team' ? "active" : ""}>
-        <Link href="/company/our-team">
-          <span className="hover_btn_menu">
-            <i className="menu_icon_all icon_team"></i>
-          </span>
-          <span>Our Team</span>
-        </Link>
-      </li>
-      <li className={router.pathname === '/company/testimonials-and-reviews' ? 'active' : ''}>
-        <Link href="/company/testimonials-and-reviews">
-          <span className="hover_btn_menu">
-            <i className="menu_icon_all icon_testimonials"></i>
-          </span>
-          <span>Testimonials &amp; Reviews</span>
-        </Link>
-      </li>
-      <li className={router.pathname === '/company/technologies' ? 'active' : ''}>
-        <Link href="/company/technologies">
-          <span className="hover_btn_menu">
-            <i className="menu_icon_all icon_technologies"></i>
-          </span>
-          <span>Technologies</span>
-        </Link>
-      </li>
-      <li className={router.pathname === '/case-studies' ? 'active' : ''}>
-        <Link href="/case-studies">
-          <span className="hover_btn_menu">
-            <i className="menu_icon_all icon_case_study"></i>
-          </span>
-          <span>Case Studies</span>
-        </Link>
-      </li>
-      <li className={router.pathname === '/company/portfolio' ? 'active' : ''}>
-        <Link href="/company/portfolio">
-          <span className="hover_btn_menu">
-            <i className="menu_icon_all icon_portfolio"></i>
-          </span>
-          <span>Portfolio</span>
-        </Link>
-      </li>
-      <li className={router.pathname === 'https://blog.logicspice.com/' ? 'active' : ''}>
-        <Link href="https://blog.logicspice.com/">
-          <span className="hover_btn_menu">
-            <i className="menu_icon_all icon_blog"></i>
-          </span>
-          <span>Blog</span>
-        </Link>
-      </li>
-    </ul>
+                        <ul>
+                          <li
+                            className={
+                              router.pathname === "/company/our-team"
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            <Link href="/company/our-team">
+                              <span className="hover_btn_menu">
+                                <i className="menu_icon_all icon_team"></i>
+                              </span>
+                              <span>Our Team</span>
+                            </Link>
+                          </li>
+                          <li
+                            className={
+                              router.pathname ===
+                              "/company/testimonials-and-reviews"
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            <Link href="/company/testimonials-and-reviews">
+                              <span className="hover_btn_menu">
+                                <i className="menu_icon_all icon_testimonials"></i>
+                              </span>
+                              <span>Testimonials &amp; Reviews</span>
+                            </Link>
+                          </li>
+                          <li
+                            className={
+                              router.pathname === "/company/technologies"
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            <Link href="/company/technologies">
+                              <span className="hover_btn_menu">
+                                <i className="menu_icon_all icon_technologies"></i>
+                              </span>
+                              <span>Technologies</span>
+                            </Link>
+                          </li>
+                          <li
+                            className={
+                              router.pathname === "/case-studies"
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            <Link href="/case-studies">
+                              <span className="hover_btn_menu">
+                                <i className="menu_icon_all icon_case_study"></i>
+                              </span>
+                              <span>Case Studies</span>
+                            </Link>
+                          </li>
+                          <li
+                            className={
+                              router.pathname === "/company/portfolio"
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            <Link href="/company/portfolio">
+                              <span className="hover_btn_menu">
+                                <i className="menu_icon_all icon_portfolio"></i>
+                              </span>
+                              <span>Portfolio</span>
+                            </Link>
+                          </li>
+                          <li
+                            className={
+                              router.pathname === "https://blog.logicspice.com/"
+                                ? "active"
+                                : ""
+                            }
+                          >
+                            <Link href="https://blog.logicspice.com/">
+                              <span className="hover_btn_menu">
+                                <i className="menu_icon_all icon_blog"></i>
+                              </span>
+                              <span>Blog</span>
+                            </Link>
+                          </li>
+                        </ul>
                       </div>
                       <div className="col-sm-6">
                         <ul>

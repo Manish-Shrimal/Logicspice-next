@@ -128,7 +128,7 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -141,7 +141,7 @@ See how it work yourself!"
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/softwares/teacher-marketplace"
+                    href={'/buy-now/teacher-marketplace'}
                   >
                     Buy Now
                   </Link>
@@ -169,8 +169,8 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={100}
-                  height={100}
+                  width={450}
+                  height={100 / (100 / 100)}
                   alt="Teacher_Marketplace"
                   src="/img/softwares-banner-img/teacher-marketplace-banner-img.png"
                 />
@@ -288,8 +288,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
                           <Image
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/teachermarketplace/teacher-marketplace.png"
                             alt="Teacher Marketplace"
                           />
@@ -544,8 +544,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
                           <Image
-                            width={100}
-                            height={100}
+                             width={300}
+                             height={100 / (100 / 100)}
                             src="/img/teachermarketplace/teacher-marketplace.png"
                             alt="Teacher Marketplace"
                           />
@@ -802,8 +802,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/teachermarketplace/teacher_deshboard.png"
                             alt="Admin Panel"
                           />
@@ -1257,7 +1257,7 @@ See how it work yourself!"
                 </div>
                 <Link
                   className="btn fiverr-buys"
-                  href="/softwares/teacher-marketplace"
+                  href={'/buy-now/teacher-marketplace'}
                 >
                   Buy Now
                 </Link>
@@ -1346,7 +1346,7 @@ See how it work yourself!"
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
-                    width={100}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1654,7 +1654,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
@@ -1665,7 +1665,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1676,7 +1676,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1687,7 +1687,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1698,7 +1698,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
-                        width={100}
+                        width={40}
                         height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
@@ -1748,7 +1748,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1759,7 +1759,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1770,7 +1770,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1781,7 +1781,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -2077,8 +2077,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={1200}
+                    height={100 / (100 / 100)}
                     src="/img/teachermarketplace/teacher-marketplace-home.png"
                     alt="Teacher Marketplace"
                     className="lazy"
@@ -2093,8 +2093,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={1200}
+                    height={100 / (100 / 100)}
                     src="/img/teachermarketplace/teacher-profile.png"
                     alt="Teacher Marketplace"
                     className="lazy"
@@ -2109,8 +2109,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                   width={1200}
+                   height={100 / (100 / 100)}
                     src="/img/teachermarketplace/teacher-message.png"
                     alt="Teacher Marketplace"
                     className="lazy"
@@ -2125,8 +2125,8 @@ See how it work yourself!"
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
-                    width={100}
-                    height={100}
+                    width={1200}
+                    height={100 / (100 / 100)}
                     src="/img/teachermarketplace/students-tips.png"
                     alt="Teacher Marketplace"
                     className="lazy"
