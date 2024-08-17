@@ -14,8 +14,8 @@ const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const [productDetails, setProductDetails] = useState([]);
 
-//   const [billingInitials, setBillingInitials] = useState([]);
-const billingInitials = useRef();
+  //   const [billingInitials, setBillingInitials] = useState([]);
+  const billingInitials = useRef();
 
   const [discountApplied, setDiscountApplied] = useState(false);
 
@@ -29,13 +29,13 @@ const billingInitials = useRef();
     initialAdditionalPoints
   );
 
-//   const initialCountries = JSON.parse(
-//     localStorage.getItem("countries") || "{}"
-//   );
-const initialCountries = JSON.parse(
-    sessionStorage.getItem("countries") || "{}"
-  );
-  const [countries, setCountries] = useState(initialCountries);
+  //   const initialCountries = JSON.parse(
+  //     localStorage.getItem("countries") || "{}"
+  //   );
+  // const initialCountries = JSON.parse(
+  //     sessionStorage.getItem("countries") || "{}"
+  //   );
+  const [countries, setCountries] = useState();
 
   const initialCurrencyDetail = JSON.parse(
     Cookies.get("currencyDetail") || "{}"
@@ -106,6 +106,17 @@ const initialCountries = JSON.parse(
   const handleClose = (e) => {
     e.preventDefault();
     setPaymentModal(false);
+  };
+
+  const getCountries = async () => {
+    try {
+      const response = await axios.get(BaseAPI + "/softwares/getCountries");
+      if (response.data.status === 200) {
+        setCountries(response.data.data);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -194,10 +205,8 @@ const initialCountries = JSON.parse(
           countries: countries,
           currencyDetail: currencyDetail,
           productType: productType,
-        }
+        };
         console.log(billingInitials.current, "here");
-
-
 
         let updatedFormData = {
           ...formData,
@@ -366,14 +375,15 @@ const initialCountries = JSON.parse(
 
     //fetchData();
     calculateTotal();
+    getCountries();
   }, []); // Empty dependency array means this effect runs once on mount
 
   const applyDiscount = async (e) => {
     e.preventDefault();
 
-    if(couponDiscount.coupon_code == ""){
-        setMessage("Please enter coupon code");
-        return false;
+    if (couponDiscount.coupon_code == "") {
+      setMessage("Please enter coupon code");
+      return false;
     }
     let discountData = {
       coupon_code: couponDiscount.coupon_code,
@@ -402,9 +412,8 @@ const initialCountries = JSON.parse(
         }));
         totalPrice.current = response.data.data.charge_amount;
 
-        
         setDiscountApplied(true);
-        setPaymentModal(false)
+        setPaymentModal(false);
         console.log(response.data.html);
         discountHtml.current = response.data.html;
 
@@ -542,7 +551,7 @@ const initialCountries = JSON.parse(
                           <option selected value="">
                             Select Country
                           </option>
-                          {countries.map((country) => (
+                          {countries?.map((country) => (
                             <option value={country.id} key={country.id}>
                               {country.name}
                             </option>
@@ -797,7 +806,16 @@ const initialCountries = JSON.parse(
                           Apply
                         </button>
                         <br />
-                        {message && <span id="errors" className={`${discountApplied ? 'text-success' : 'text-danger'}`}>{message}</span>}
+                        {message && (
+                          <span
+                            id="errors"
+                            className={`${
+                              discountApplied ? "text-success" : "text-danger"
+                            }`}
+                          >
+                            {message}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
