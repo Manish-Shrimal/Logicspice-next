@@ -494,6 +494,8 @@ const Page = () => {
                       <Image
                         src="/img/hiredevelopers/Organic-Moringa.png"
                         alt="organicmoringaaustralia"
+                        width={851}
+                        height={100}
                       />
                     </span>
                   </div>
@@ -538,6 +540,8 @@ const Page = () => {
                       <Image
                         src="/img/hiredevelopers/Ten-Seconds-Down-Music-Store.png"
                         alt="TenSeconds"
+                        width={851}
+                        height={100}
                       />
                     </span>
                   </div>
@@ -579,6 +583,9 @@ const Page = () => {
                       <Image
                         src="/img/hiredevelopers/FishBone.png"
                         alt="FishBone"
+                        width={851}
+                        height={100}
+
                       />
                     </span>
                   </div>

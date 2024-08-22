@@ -215,7 +215,7 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6 job-video">
               <iframe
-                src="https://player.vimeo.com/video/794842326?h=daac5fd3fb&loop=1&color=451095&byline=0"
+                src="https://player.vimeo.com/video/794842326?h=daac5fd3fb&loop=1&color=451095&byline=0?rel=0&autoplay=1"
                 width="100%"
                 height="312"
                 frameborder="0"

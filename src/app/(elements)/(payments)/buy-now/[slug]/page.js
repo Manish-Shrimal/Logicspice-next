@@ -208,8 +208,6 @@ const Page = ({ params }) => {
   const submitForm = async (event) => {
     event.preventDefault();
 
-    
-
     const formData = new FormData(event.target);
     // Manually construct the form data
     formData.append("_method", "POST");
@@ -241,13 +239,18 @@ const Page = ({ params }) => {
       //   Cookies.set("billing", JSON.stringify(billingInitials));
       // }
       Cookies.set("addArray", JSON.stringify(response.data.addArray));
-      Cookies.set("additionalPoints", JSON.stringify(response.data.additionalPoints));
+      Cookies.set(
+        "additionalPoints",
+        JSON.stringify(response.data.additionalPoints)
+      );
       // Cookies.set("countries", JSON.stringify(response.data.countries));
-      Cookies.set("currencyDetail", JSON.stringify(response.data.currencyDetail));
+      Cookies.set(
+        "currencyDetail",
+        JSON.stringify(response.data.currencyDetail)
+      );
       Cookies.set("productType", JSON.stringify(response.data.productType));
       // localStorage.setItem("countries", JSON.stringify(response.data.countries));
       // sessionStorage.setItem("countries", JSON.stringify(response.data.countries));
-
 
       // Cookies.set("initials", JSON.stringify(response.data));
       router.push("/billing");

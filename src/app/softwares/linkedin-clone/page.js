@@ -163,7 +163,7 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={450}
+                  width={480}
                   height={500 / (100 / 100)}
                   alt="LinkedIn_Clone"
                   src="/img/softwares-banner-img/linkedin-banner-img.png"

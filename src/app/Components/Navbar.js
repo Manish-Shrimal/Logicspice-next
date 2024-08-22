@@ -89,56 +89,7 @@ const Navbar = () => {
                   <div className="grid-demo">
                     <div className="row menu-one">
                       <div className="col-sm-6">
-                        {/* <ul>
-                          <li>
-                            <Link href="/company/our-team">
-                              <span className="hover_btn_menu ">
-                                <i className="menu_icon_all icon_team"></i>
-                              </span>
-                              <span>Our Team</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/company/testimonials-and-reviews/">
-                              <span className="hover_btn_menu ">
-                                <i className="menu_icon_all icon_testimonials"></i>
-                              </span>
-                              <span>Testimonials &amp; Reviews</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/company/technologies">
-                              <span className="hover_btn_menu ">
-                                <i className="menu_icon_all icon_technologies"></i>
-                              </span>
-                              <span>Technologies</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/case-studies">
-                              <span className="hover_btn_menu ">
-                                <i className="menu_icon_all icon_case_study"></i>{" "}
-                              </span>
-                              <span>Case Studies</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/company/portfolio">
-                              <span className="hover_btn_menu ">
-                                <i className="menu_icon_all icon_portfolio"></i>
-                              </span>
-                              <span>Portfolio</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="https://blog.logicspice.com/">
-                              <span className="hover_btn_menu ">
-                                <i className="menu_icon_all icon_blog"></i>
-                              </span>
-                              <span>Blog</span>
-                            </Link>
-                          </li>
-                        </ul> */}
+                       
                         <ul>
                           <li
                             className={
@@ -833,9 +784,8 @@ const Navbar = () => {
               <li>
                 <Link href="https://blog.logicspice.com/">blog</Link>
               </li>
-            </ul>
-
-            <div className="contact_detail_top">
+              <li>
+              <div className="contact_detail_top">
               <ul className="con_d">
                 <li className="logic_contact">
                   <a
@@ -944,6 +894,118 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
+            </li>
+            </ul>
+
+            {/* <div className="contact_detail_top">
+              <ul className="con_d">
+                <li className="logic_contact">
+                  <a
+                    href="#"
+                    onMouseEnter={() => setDropdown5(true)}
+                    onMouseLeave={() => setDropdown5(false)}
+                  >
+                    <i className="fa fa-phone"></i> <b className="caret"></b>
+                  </a>
+                  <div
+                    className={`sub-contact ${dropdown5 ? "show" : ""}`}
+                    aria-labelledby=""
+                    onMouseEnter={() => setDropdown5(true)}
+                    onMouseLeave={() => setDropdown5(false)}
+                  >
+                    <div className="">
+                      <h2>Connect With Us</h2>
+                      <div className="sales_enquiry">
+                        <p>For Sales Inquiry</p>
+                        <ul className="sales_contact">
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/fleg_icon2.png"
+                              alt="Logicspice Contact No. - USA"
+                            />
+                            <a href="tel:+1-616-929-4064">+1-616-929-4064</a>
+                          </li>
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/fleg_icon1.png"
+                              alt="Logicspice Contact No. - UK"
+                            />
+                            <a href="tel:+44782-404-8483">+44782-404-8483</a>
+                          </li>
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/fleg_icon3.png"
+                              alt="Logicspice Contact No. - India"
+                            />
+                            <a href="tel:+91-9829559922">+91-9829559922</a>
+                          </li>
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/skya_icon.png"
+                              alt="Logicspice Contact - Skype"
+                            />
+                            <span>logicspice</span>
+                          </li>
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/mail.png"
+                              alt="Logicspice Contact - Email"
+                            />
+                            <span>
+                              <Image
+                                width={100}
+                                height={100}
+                                src="/img/footer/logicspice-mail.svg"
+                                alt="Logicspice Contact - Email"
+                              />
+                            </span>
+                          </li>
+                        </ul>
+                        <a href="/contact-us" className="btn btn-primary">
+                          Contact Us
+                        </a>
+                      </div>
+                      <div className="hr_enquiry">
+                        <p>For HR Inquiry</p>
+                        <ul className="sales_contact">
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/fleg_icon3.png"
+                              alt="Logicspice Contact No. - India"
+                            />{" "}
+                            <a href="tel:+91-7727974242">+91-7727974242</a>
+                          </li>
+                          <li>
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/img/footer/mail.png"
+                              alt="Logicspice Contact - Email"
+                            />{" "}
+                            <span> hr@logicspice.com </span>
+                          </li>
+                        </ul>
+                        <a href="/apply-now" className="btn btn-primary">
+                          Apply Now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div> */}
           </div>
         </div>
       </nav>

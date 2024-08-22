@@ -123,10 +123,10 @@ const Page = () => {
             <div aria-label="breadcrumb" className="my-breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="">Home</a>
+                  <Link href="">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="/softwares">Softwares</a>
+                  <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Blog Script

@@ -176,7 +176,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="jocpp">
-                <ul className="job-pr-icon">
+                <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
                       className="fa-solid fa-earth-americas"
@@ -203,7 +203,7 @@ const Page = () => {
                 <Image
                   src="/img/classified/classsifiedr-banner-img.png"
                   alt="classified_Ads_Script"
-                  width={500}
+                  width={460}
                   height={500 / (100 / 100)} // Adjust height to maintain aspect ratio
                 />
               </div>

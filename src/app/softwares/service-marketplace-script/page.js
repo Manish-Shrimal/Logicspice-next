@@ -221,7 +221,7 @@ const Page = () => {
               <iframe
                 width="100%"
                 height="312"
-                src="https://www.youtube-nocookie.com/embed/6UQDXgeOMlw?rel=0"
+                src="https://www.youtube-nocookie.com/embed/6UQDXgeOMlw?rel=0&autoplay=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -239,7 +239,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="jocpp">
-                <ul className="job-pr-icon">
+                <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
                       className="fa-solid fa-earth-americas"
@@ -304,17 +304,30 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6 job-video">
+            {/* <div className="col-md-6 job-video">
               <iframe
                 width="100%"
                 height="312"
                 src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0"
                 title="YouTube video player"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen=""
               ></iframe>
-            </div>
+            </div> */}
+   <div className="col-md-6 job-video">
+  <iframe
+    width="100%"
+    height="312"
+    src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0&autoplay=1"
+    title="YouTube video player"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen=""
+  ></iframe>
+</div>
+
+
             <div className="col-md-6">
               <div className="service-market-ttd">
                 <ul>

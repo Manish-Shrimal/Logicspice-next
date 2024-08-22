@@ -40,8 +40,6 @@ const Page = () => {
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
 
-
-
   const openModal = () => {
     console.log(showModal);
 
@@ -320,7 +318,7 @@ const Page = () => {
                 <iframe
                   width="100%"
                   height="312"
-                  src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0"
+                  src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=1"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen

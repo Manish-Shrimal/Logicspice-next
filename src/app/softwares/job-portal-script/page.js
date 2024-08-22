@@ -277,7 +277,7 @@ const Page = () => {
                 id="jobvideo"
                 width="100%"
                 height="312"
-                src="https://www.youtube.com/embed/7fJVD2R2kkA?rel=0"
+                src="https://www.youtube.com/embed/7fJVD2R2kkA?rel=0&autoplay=1"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen

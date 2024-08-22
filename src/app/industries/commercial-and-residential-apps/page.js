@@ -670,7 +670,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="img/globalbusinesscountries/beatbuehlmann.jpg"
+                            src="/img/globalbusinesscountries/beatbuehlmann.jpg"
                             alt="..."
                           />
                         </div>

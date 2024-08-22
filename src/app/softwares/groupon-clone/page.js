@@ -135,13 +135,13 @@ See how it work yourself!"
                     }
                   </div>
 
-                  <a
+                  <Link
                     className="btn fiverr-buys NewGreenBtnJob"
                     href="/buy-now/groupon-clone"
                     id="buy_now_1"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
@@ -156,7 +156,7 @@ See how it work yourself!"
                 </div>
               </div>
               <div className="jocpp">
-                <ul className="job-pr-icon">
+                <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
                       className="fa-solid fa-earth-americas"
@@ -175,7 +175,7 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={350}
+                  width={320}
                   height={500 / (100 / 100)}
                   alt="Groupon Clone"
                   src="/img/softwares-banner-img/groupon_banner_img.png"
@@ -1116,10 +1116,7 @@ See how it work yourself!"
                     />
                   }
                 </div>
-                <Link
-                  className="btn fiverr-buys"
-                  href="/buy-now/groupon-clone"
-                >
+                <Link className="btn fiverr-buys" href="/buy-now/groupon-clone">
                   Buy Now
                 </Link>
               </div>

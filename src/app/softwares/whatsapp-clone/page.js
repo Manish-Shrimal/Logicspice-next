@@ -153,7 +153,7 @@ See how it work yourself!"
                 </div>
               </div>
               <div className="jocpp">
-                <ul className="job-pr-icon">
+                <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
                       className="fa-solid fa-earth-americas"

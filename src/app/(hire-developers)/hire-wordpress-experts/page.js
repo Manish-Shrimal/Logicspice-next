@@ -489,7 +489,7 @@ const Page = () => {
                   <div class="port_feat_img">
                     <span>
                       <Image
-                        width={100}
+                        width={851}
                         height={100}
                         src="/img/hiredevelopers/uavvision.png"
                         alt="Logicspice wordpress portfolio"
@@ -532,7 +532,7 @@ const Page = () => {
                   <div class="port_feat_img">
                     <span>
                       <Image
-                        width={100}
+                        width={851}
                         height={100}
                         src="/img/hiredevelopers/dagrella.png"
                         alt="Logicspice wordpress portfolio"
@@ -575,7 +575,7 @@ const Page = () => {
                   <div class="port_feat_img">
                     <span>
                       <Image
-                        width={100}
+                        width={851}
                         height={100}
                         src="/img/hiredevelopers/aikinnebandy.png"
                         alt="Logicspice wordpress portfolio"
@@ -618,7 +618,7 @@ const Page = () => {
                   <div class="port_feat_img">
                     <span>
                       <Image
-                        width={100}
+                        width={851}
                         height={100}
                         src="/img/hiredevelopers/nationalcleaninggroup--2-.png"
                         alt="Logicspice wordpress portfolio"
@@ -661,7 +661,7 @@ const Page = () => {
                   <div class="port_feat_img">
                     <span>
                       <Image
-                        width={100}
+                        width={851}
                         height={100}
                         src="/img/hiredevelopers/protroc.png"
                         alt="Logicspice wordpress portfolio"

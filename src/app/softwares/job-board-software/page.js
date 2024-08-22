@@ -329,7 +329,7 @@ const Page = () => {
               <iframe
                 width="100%"
                 height="312"
-                src="https://www.youtube.com/embed/jZUjtbUTuHQ?si=NrWfYG4wQYAnm1bJ"
+                src="https://www.youtube.com/embed/jZUjtbUTuHQ?si=NrWfYG4wQYAnm1bJ?rel=0&autoplay=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1865,7 +1865,7 @@ const Page = () => {
                 </div>
                 <a
                   className="btn fiverr-buys"
-                  href="/buynow/job-board-software"
+                  href="/buy-now/job-board-software"
                   id="buy_now_1"
                 >
                   Buy Now

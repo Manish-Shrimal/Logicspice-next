@@ -110,7 +110,7 @@ const Page = () => {
               </div>
               <div className="service-title">
                 <h2>
-                  <Link href="/industries/finance_and_insurance">
+                  <Link href="/industries/finance-and-insurance-apps">
                     {" "}
                     Finance & Insurance{" "}
                   </Link>
@@ -155,7 +155,7 @@ const Page = () => {
               </div>
               <div className="service-title">
                 <h2>
-                  <Link href="/industries/account_and_finance">
+                  <Link href="/industries/accountants-and-financial-services-real-estate-apps">
                     {" "}
                     Accountants and Financial Services{" "}
                   </Link>

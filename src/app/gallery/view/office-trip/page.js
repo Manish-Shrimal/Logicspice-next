@@ -7,6 +7,8 @@ import Image from "next/image";
 import "../../gallery.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Viewer from "viewerjs";
+import "@fortawesome/fontawesome-free/css/all.css";
+
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);

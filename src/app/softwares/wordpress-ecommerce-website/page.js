@@ -103,7 +103,7 @@ const Page = () => {
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
-                          alt=""
+                          alt="more-info"
                         />
                       </i>
                       <p>Limited Period Offer for First Year</p>
@@ -112,7 +112,11 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -269,7 +273,7 @@ See how it work yourself!"
                         <div className="costomer_tab_right costomer_tab_rightleft">
                           <Image
                             width={300}
-                            height={100 / (100 /100)}
+                            height={100 / (100 / 100)}
                             src="/img/wordpress-ecommerce/worspress-ecommerce-customer.png"
                             alt="Customer App Feature"
                           />
@@ -477,8 +481,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
                           <Image
-                             width={300}
-                             height={100 / (100 /100)}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/wordpress-ecommerce/worspress-buyer-mobile.png"
                             alt="Investors"
                           />
@@ -665,8 +669,8 @@ See how it work yourself!"
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
-                             width={300}
-                             height={100 / (100 /100)}
+                            width={300}
+                            height={100 / (100 / 100)}
                             src="/img/wordpress-ecommerce/worspress-ecommerce-website.png"
                             alt="Admin Panel"
                           />
@@ -1052,7 +1056,7 @@ See how it work yourself!"
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
-                      alt=""
+                      alt="stars"
                       className="lazy"
                     />
                     <p>225 Reviews</p>
@@ -1128,7 +1132,7 @@ See how it work yourself!"
                     width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
-                    alt=""
+                    alt="icon"
                     className=""
                   />
                 </i>
@@ -1565,8 +1569,8 @@ See how it work yourself!"
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
                 <Image
-                   width={300}
-                   height={100 / (100 /100)}
+                  width={300}
+                  height={100 / (100 / 100)}
                   alt="customer-reviews"
                   src="/img/yiiframework/customer-reviews-img.jpg"
                 />
@@ -1921,7 +1925,11 @@ See how it work yourself!"
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href= "/softwares/fiverr-clone" title="View Detail" target="_black">
+                  <Link
+                    href="/softwares/fiverr-clone"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
@@ -1943,7 +1951,11 @@ See how it work yourself!"
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/softwares/job-board-software" title="View Detail" target="_black">
+                  <Link
+                    href="/softwares/job-board-software"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
@@ -1965,7 +1977,11 @@ See how it work yourself!"
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/softwares/ebay-clone" title="View Detail" target="_black">
+                  <Link
+                    href="/softwares/ebay-clone"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>

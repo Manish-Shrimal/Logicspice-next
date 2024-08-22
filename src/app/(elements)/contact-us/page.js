@@ -218,7 +218,7 @@ const Page = () => {
                             className="loadloader contact_page"
                             id="loadloader5"
                           >
-                            <img src="/img/loading-old.gif" alt="" />
+                            <Image width={100} height={100} src="/img/loading-old.gif" alt="" />
                           </div> */}
                         </div>
                       </div>
@@ -250,13 +250,15 @@ const Page = () => {
               <div className="col-sm-6">
                 <div className="ls-google-swction">
                   <div className="ls-google-img">
-                    <img
-                      src="https://www.logicspice.com/app/webroot/img/images/google-reting.png"
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/contactus/google-reting.png"
                       alt="logo"
                     />
                   </div>
                   <p>
-                    “Considering all the adjustments we asked for, the patience
+                    &quot;Considering all the adjustments we asked for, the patience
                     they showed, extremely swift turnaround times, good value
                     for money and quality of work, they have shown to be a great
                     partner.?
@@ -274,10 +276,15 @@ const Page = () => {
               <div className="col-sm-6">
                 <div className="ls-google-swction">
                   <div className="ls-google-img">
-                    <img src="/img/contactus/google-reting.png" alt="logo" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src="/img/contactus/google-reting.png"
+                      alt="logo"
+                    />
                   </div>
                   <p>
-                    “Love to work with LogicSpice Team. They understood the
+                    &quot;Love to work with LogicSpice Team. They understood the
                     requirements and delivered exactly that. If you want
                     literally the best software house going...then hire these
                     guys honestly. Highly recommended.?
@@ -300,7 +307,9 @@ const Page = () => {
               <div className="row">
                 <div className="col-sm-3">
                   <div className="awards_recognition_img">
-                    <img
+                    <Image
+                      width={300}
+                      height={100 / (100 / 100)}
                       src="/img/contactus/award_1.png"
                       alt=""
                       title="award"
@@ -309,7 +318,9 @@ const Page = () => {
                 </div>
                 <div className="col-sm-3">
                   <div className="awards_recognition_img">
-                    <img
+                    <Image
+                      width={300}
+                      height={100 / (100 / 100)}
                       src="/img/contactus/award_2.png"
                       alt=""
                       title="award"
@@ -318,7 +329,9 @@ const Page = () => {
                 </div>
                 <div className="col-sm-3">
                   <div className="awards_recognition_img">
-                    <img
+                    <Image
+                     width={300}
+                     height={100 / (100 / 100)}
                       src="/img/contactus/award_3.png"
                       alt=""
                       title="award"
@@ -327,7 +340,9 @@ const Page = () => {
                 </div>
                 <div className="col-sm-3">
                   <div className="awards_recognition_img">
-                    <img
+                    <Image
+                      width={300}
+                      height={100 / (100 / 100)}
                       src="/img/contactus/award_4.png"
                       alt=""
                       title="award"
@@ -348,8 +363,10 @@ const Page = () => {
                   <div className="media">
                     <div className="media-left">
                       <div className="contact_detail_info_row_icn">
-                        <img
-                          src="https://www.logicspice.com/app/webroot/img/images/ingland_flag.png"
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/contactus/ingland_flag.png"
                           alt="USA Contact No. - Logicspice"
                         />
                       </div>
@@ -362,8 +379,10 @@ const Page = () => {
                         </div>
                         <div className="row_of_cont_d">
                           <label>Email:</label>
-                          <img
-                            src="https://www.logicspice.com/app/webroot/img/images/log_com.png"
+                          <Image
+                            width={100}
+                            height={100}
+                            src="/img/contactus/log_com.png"
                             alt="UK Contact No. - Logicspice"
                           />
                         </div>
@@ -375,8 +394,10 @@ const Page = () => {
                   <div className="media">
                     <div className="media-left">
                       <div className="contact_detail_info_row_icn">
-                        <img
-                          src="https://www.logicspice.com/app/webroot/img/images/falg_2.png"
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/contactus/falg_2.png"
                           alt="India Contact No. - Logicspice"
                         />
                       </div>
@@ -393,8 +414,10 @@ const Page = () => {
                         </div>
                         <div className="row_of_cont_d">
                           <label>Email:</label>
-                          <img
-                            src="https://www.logicspice.com/app/webroot/img/images/log_co_uk.png"
+                          <Image
+                            width={100}
+                            height={100}
+                            src="/img/contactus/log_co_uk.png"
                             alt="UK Contact No. - Logicspice"
                           />
                         </div>
@@ -406,8 +429,10 @@ const Page = () => {
                   <div className="media">
                     <div className="media-left">
                       <div className="contact_detail_info_row_icn">
-                        <img
-                          src="https://www.logicspice.com/app/webroot/img/images/india_flag.png"
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/contactus/india_flag.png"
                           alt="India Contact No. - Logicspice"
                         />
                       </div>
@@ -437,15 +462,19 @@ const Page = () => {
                         </div>
                         <div className="row_of_cont_d">
                           <label>Email:</label>
-                          <img
-                            src="https://www.logicspice.com/app/webroot/img/images/log_com.png"
+                          <Image
+                            width={100}
+                            height={100}
+                            src="/img/contactus/log_com.png"
                             alt="Contact - Logicspice"
                           />
                         </div>
                         <div className="row_of_cont_d">
                           <label>HR Email:</label>
-                          <img
-                            src="https://www.logicspice.com/app/webroot/img/images/hr_logicspice_14.png"
+                          <Image
+                            width={100}
+                            height={100}
+                            src="/img/contactus/hr_logicspice_14.png"
                             alt="Contact - Logicspice"
                           />
                         </div>
@@ -457,8 +486,10 @@ const Page = () => {
             </div>
             <div className="col-sm-6">
               <div className="awd_img">
-                <img
-                  src="https://www.logicspice.com/app/webroot/img/images/expri_img.png"
+                <Image
+                  width={450}
+                  height={100 / (100 / 100)}
+                  src="/img/contactus/expri_img.png"
                   alt="Logicspice"
                 />
               </div>

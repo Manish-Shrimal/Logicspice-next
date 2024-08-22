@@ -12,15 +12,86 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Certificationtabs from "@/app/Components/Certificationtabs";
 import Workingwith from "@/app/Components/Workingwith";
 import "../../globals.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone_no: "",
+    message: "",
+    post_url: "https://lswebsitedemo.logicspice.com/fiverr-clone",
+    recaptchaToken: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const openModal = () => {
     console.log(showModal);
 
     setShowModal(!showModal);
+  };
+  const onRecaptchaChange = (token) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      recaptchaToken: token,
+    }));
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // if (validateForm()) {
+    //   setLoader(true);
+    //   try {
+    //     const response = await axios.post(BaseAPI + "/pages/contact", formData);
+    //     if (response.data.status === 200) {
+    //       setResultSuccess(true);
+    //     }
+    //   } catch (error) {
+    //     console.error("Submission error:", error.message);
+    //   }
+    // }
+  };
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.usarnameerror = "Name is required";
+    } else if (/[\d]/.test(formData.name)) {
+      newErrors.usarnameerror = "Name cannot contain numbers";
+    }
+
+    if (!formData.email) {
+      newErrors.emailerror = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.emailerror = "Email is invalid";
+    }
+
+    if (!formData.phone_no) {
+      newErrors.phoneerror = "Phone number is required";
+    } else if (!/^\d{10}$/.test(formData.phone_no)) {
+      newErrors.phoneerror = "Phone number must be 10 digits long";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.messageerror = "Message is required";
+    }
+
+    if (!formData.recaptchaToken) {
+      newErrors.reacptchaerror = "Please verify Recaptcha";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const toggleModal = () => {
@@ -51,19 +122,10 @@ const Page = () => {
                   data-aos="fade-right"
                   className="more_btn deve_btn aos-init aos-animate"
                 >
-                  <a
-                    href="/portfolio/"
-                    className="btn btn-primary"
-                  >
+                  <Link href="/company/portfolio" className="btn btn-primary">
                     <span>Portfolio</span>
-                  </a>
-                  <a
-                    id="inquirenow"
-                    data-toggle="modal"
-                    data-target="#contactFix"
-                    className="btn btn-primary"
-                    onClick={toggleModal}
-                  >
+                  </Link>
+                  <a className="btn btn-primary" onClick={toggleModal}>
                     <span>Enquire Now</span>
                   </a>
                 </div>
@@ -75,8 +137,8 @@ const Page = () => {
                 className="right_slide_section aos-init aos-animate"
               >
                 <Image
-                   width={500}
-                   height={500 / (100 / 100)}
+                  width={500}
+                  height={500 / (100 / 100)}
                   alt="Hire App Developers - Logicspice"
                   src="/img/hiredevelopers/man_slide.png"
                 />
@@ -168,12 +230,12 @@ const Page = () => {
               <p></p>
             </div>
             <div className="col-md-4">
-            <Image
-                  width={400}
-                  height={500 / (100 / 100)}
-                  alt="Senior Developers"
-                  src="/img/hiredevelopers/hire-web-developers-technource.png"
-                />
+              <Image
+                width={400}
+                height={500 / (100 / 100)}
+                alt="Senior Developers"
+                src="/img/hiredevelopers/hire-web-developers-technource.png"
+              />
             </div>
           </div>
           <div className="hire_type hire_type2 row">
@@ -193,7 +255,6 @@ const Page = () => {
                   height={100}
                   alt="TEAM LEAD"
                   src="/img/hiredevelopers/Web-Developer.png"
-
                 />
               </div>
               <p></p>
@@ -236,8 +297,8 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6">
               <Image
-                 width={800}
-                 height={500 / (100 / 100)}
+                width={800}
+                height={500 / (100 / 100)}
                 alt="app development"
                 src="/img/hiredevelopers/yt-dev-home-dev-stories.png"
               />
@@ -297,7 +358,9 @@ const Page = () => {
                     src="/img/hiredevelopers/search_icon.png"
                   />
                 </div>
-                <div className="developer_box_content">Flexible Hiring Models</div>
+                <div className="developer_box_content">
+                  Flexible Hiring Models
+                </div>
               </div>
             </div>
             <div className="col-md-3 col-sm-4">
@@ -523,7 +586,9 @@ const Page = () => {
                     src="/img/hiredevelopers/gaurantee_icon.png"
                   />
                 </div>
-                <div className="developer_box_content">100% moneyback gurantee</div>
+                <div className="developer_box_content">
+                  100% moneyback gurantee
+                </div>
               </div>
             </div>
             <div className="col-md-3 col-sm-4">
@@ -569,12 +634,9 @@ const Page = () => {
 
           <p>
             Logicspice has a remarkable footprint among the{" "}
-            <a
-              target="_blank"
-              href="/mobile-app-development"
-            >
+            <Link target="_blank" href="/mobile-app-development">
               top mobile app development companies
-            </a>{" "}
+            </Link>{" "}
             by providing affordable mobile apps and development services for
             more than 12 years.
           </p>
@@ -605,19 +667,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-python-developers">
+                        <Link href="/hire-python-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire Python Developers - Logicspice"
                             src="/img/hiredevelopers/python-hire-logo.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-python-developers">
+                        <Link href="/hire-python-developers">
                           Hire Python Developers
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire Python developers for your software development
@@ -633,19 +695,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-reactjs-developers">
+                        <Link href="/hire-reactjs-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire ReactJS Developers - Logicspice"
                             src="/img/hiredevelopers/reactjs-hire-logo.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-reactjs-developers">
+                        <Link href="/hire-reactjs-developers">
                           Hire ReactJS Developers
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Start your web development journey with the expertise of
@@ -661,19 +723,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-react-native-developers">
+                        <Link href="/hire-react-native-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire React Native Developers - Logicspice"
                             src="/img/hiredevelopers/reactjs-hire-logo.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-react-native-developers">
+                        <Link href="/hire-react-native-developers">
                           Hire React Native Developers
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire React Native Developers to transform your ideas
@@ -689,19 +751,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-android-app-developers">
+                        <Link href="/hire-android-app-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire Android App Developer - Logicspice"
                             src="/img/hiredevelopers/andoird_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-android-app-developers">
+                        <Link href="/hire-android-app-developers">
                           Hire Android App Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Our Android experts ensure code is written in the most
@@ -717,19 +779,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-ios-app-developers">
+                        <Link href="/hire-ios-app-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire iOS/ iPhone App Developer"
                             src="/img/hiredevelopers/apple_phn_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-ios-app-developers">
+                        <Link href="/hire-ios-app-developers">
                           Hire iOS App Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         We offers experienced iOS app developers for custom iOS
@@ -745,19 +807,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-web-developers">
+                        <Link href="/hire-web-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire Dphp-developers - logicspice"
                             src="/img/hiredevelopers/web_developer_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-web-developers">
+                        <Link href="/hire-web-developers">
                           Hire Web Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire website developer from the hub of talented web
@@ -773,19 +835,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-php-developers">
+                        <Link href="/hire-php-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire Dphp-developers - logicspice"
                             src="/img/hiredevelopers/php_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-php-developers">
+                        <Link href="/hire-php-developers">
                           Hire PHP Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Logicspice have team of dedicated PHP programmers who
@@ -801,19 +863,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-cakephp-developers">
+                        <Link href="/hire-cakephp-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire Cake PHP Developer Logicspice"
                             src="/img/hiredevelopers/cake_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-cakephp-developers">
+                        <Link href="/hire-cakephp-developers">
                           Hire CakePHP Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire dedicated CakePHP programmers, who have a good mix
@@ -829,19 +891,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-wordpress-experts">
+                        <Link href="/hire-wordpress-experts">
                           <Image
                             width={60}
                             height={100}
                             alt="Hire Wordpress Developer - logicspice"
                             src="/img/hiredevelopers/wp_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-wordpress-experts">
+                        <Link href="/hire-wordpress-experts">
                           Hire Wordpress Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Our expert Wordpress developers offers customized web
@@ -858,19 +920,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-magento-experts">
+                        <Link href="/hire-magento-experts">
                           <Image
                             width={60}
                             height={100}
                             alt="hire magento developers - logicspice"
                             src="/img/hiredevelopers/magento_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-magento-experts">
+                        <Link href="/hire-magento-experts">
                           Hire Magento Developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire certified, expert &amp; dedicated Magento
@@ -887,19 +949,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-laravel-developers">
+                        <Link href="/hire-laravel-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="hire laravel developers - logicspice"
                             src="/img/hiredevelopers/larvel_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-laravel-developers">
+                        <Link href="/hire-laravel-developers">
                           Hire Laravel Developers
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire Laravel web developers from logicspice to develop
@@ -915,19 +977,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-codeigniter-developers">
+                        <Link href="/hire-codeigniter-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="hire codeigniter developers - logicspice"
                             src="/img/hiredevelopers/codenator_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-codeigniter-developers">
+                        <Link href="/hire-codeigniter-developers">
                           Hire Codeigniter Developers
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         We has expert CodeIgniter web developers to work with
@@ -943,21 +1005,21 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-node-js-experts">
+                        <Link href="/hire-node-js-experts">
                           <Image
                             width={60}
                             height={100}
                             alt="hire node-js-experts developers - logicspice"
                             src="/img/hiredevelopers/node_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-node-js-experts">
+                        <Link href="/hire-node-js-experts">
                           Hire Node.js
                           <br />
                           Experts
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire Node.js developers and programmers from logicspice
@@ -973,19 +1035,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-angular-js-developers">
+                        <Link href="/hire-angular-js-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="hire angular-js-developers developers - logicspice"
                             src="/img/hiredevelopers/angular_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-angular-js-developers">
+                        <Link href="/hire-angular-js-developers">
                           Hire Angular JS developers{" "}
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire our experts AngularJS developers to build fast,
@@ -1001,21 +1063,21 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-yii-developers">
+                        <Link href="/hire-yii-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="hire yii developers - logicspice"
                             src="/img/hiredevelopers/yii_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-yii-developers">
+                        <Link href="/hire-yii-developers">
                           Hire Yii
                           <br />
                           Developers{" "}
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire highly skilled Yii programmers and developers for
@@ -1031,19 +1093,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-opencart-developers">
+                        <Link href="/hire-opencart-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="hire opencart developers - logicspice"
                             src="/img/hiredevelopers/operat_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-opencart-developers">
+                        <Link href="/hire-opencart-developers">
                           Hire Opencart Developers{" "}
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Our dedicated Opencart experts ensure code is written in
@@ -1059,19 +1121,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-hybrid-mobile-app-developer">
+                        <Link href="/hire-hybrid-mobile-app-developer">
                           <Image
                             width={60}
                             height={100}
                             alt="hire hybrid mobile app developers at logicspice"
                             src="/img/hiredevelopers/hydribd_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-hybrid-mobile-app-developer">
+                        <Link href="/hire-hybrid-mobile-app-developer">
                           Hire Hybrid mobile app developer
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire top rated hybrid mobile app developers from
@@ -1087,19 +1149,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-quality-analyst">
+                        <Link href="/hire-quality-analyst">
                           <Image
                             width={60}
                             height={100}
                             alt="hire quality analyst at logicspice"
                             src="/img/hiredevelopers/quality_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-quality-analyst">
+                        <Link href="/hire-quality-analyst">
                           Hire Quality Analyst
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Hire developer quality assurance tester to make your
@@ -1115,19 +1177,19 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <a href="/hire-shopify-developers">
+                        <Link href="/hire-shopify-developers">
                           <Image
                             width={60}
                             height={100}
                             alt="hire shopify developers at logicspice"
                             src="/img/hiredevelopers/shopify_icon.png"
                           />
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <a href="/hire-shopify-developers">
+                        <Link href="/hire-shopify-developers">
                           Hire Shopify Developers
-                        </a>
+                        </Link>
                       </div>
                       <div className="dedicated_develop_content_box">
                         Are you looking to hire a Shopify Developer for a new
@@ -1148,16 +1210,13 @@ const Page = () => {
         </div>
       </section>
 
-
       <section className="requirement_section">
         <div className="container">
           <div className="requir_title">
             Talk to us Now!! even if you have very short term requirement.
           </div>
           <div className="requirment_btn" onclick={toggleModal}>
-            <a  className="btn btn-primary">
-              Enquire Now
-            </a>
+            <a className="btn btn-primary">Enquire Now</a>
           </div>
         </div>
       </section>
@@ -1229,42 +1288,132 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="form_quote">
                 <form
-                  action="/pages/requestquote"
-                  enctype="multipart/form-data"
-                  name="requestquote"
-                  id="requestquote"
-                  method="post"
-                  accept-charset="utf-8"
+                  onSubmit={handleSubmit}
+                  // action="/pages/requestquote"
+                  // enctype="multipart/form-data"
+                  // name="requestquote"
+                  // id="requestquote"
+                  // method="post"
+                  // accept-charset="utf-8"
                 >
                   <div style={{ display: "none" }}>
                     <input type="hidden" name="_method" value="POST" />
                   </div>
                   <h4>Get a Quote</h4>
-                  {/* <div className="form-group">
-                        <input name="data[User][name]" placeholder="Your Full Name*" value="" size="40" className="form-control required" type="text" id="UserName"/>                    </div>
-                    <div className="form-group">
-                        <input name="data[User][email]" placeholder="Email*" value="" size="40" className="form-control required email" type="text" id="UserEmail"/>                    </div>
-                    <div className="form-group">
-                        <input name="data[User][phone_no]" placeholder="Phone Number" value="" size="40" className="form-control" type="text" id="UserPhoneNo"/>                    </div>
-                    <div className="form-group">
-                        <textarea name="data[User][message]" placeholder="Your Message*" size="40" className="form-control required" id="UserMessage"></textarea>                    </div>
-                    <div className="form-group">
-                        <div id="recaptchaQ" style="transform: scale(0.82); transform-origin: left top;"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-9nkkqblhtw1n" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Leg3gITAAAAAPzWHZ1PgnMhko9tHq8yWvH2q2S7&amp;co=aHR0cHM6Ly93d3cubG9naWNzcGljZS5jb206NDQz&amp;hl=en&amp;v=rKbTvxTxwcw5VqzrtN-ICwWt&amp;theme=light&amp;size=normal&amp;cb=3sk5l0abc68z"></iframe></div><textarea id="g-recaptcha-response-2" name="g-recaptcha-response" className="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                  <div className="form-group">
+                    <input
+                      onChange={handleChange}
+                      name="name"
+                      placeholder="Your Full Name*"
+                      value={formData.name}
+                      size="40"
+                      className="form-control required"
+                      type="text"
+                      id="UserName"
+                    />
+                  </div>
+                  <div className="FormError">{errors.usarnameerror}</div>
+                  <div className="form-group">
+                    <input
+                      onChange={handleChange}
+                      name="email"
+                      placeholder="Email*"
+                      value={formData.email}
+                      size="40"
+                      className="form-control required email"
+                      type="text"
+                      id="UserEmail"
+                    />
+                  </div>
+                  <div className="FormError">{errors.emailerror}</div>
+                  <div className="form-group">
+                    <input
+                      onChange={handleChange}
+                      name="phone_no"
+                      placeholder="Phone Number"
+                      value={formData.phone_no}
+                      size="40"
+                      className="form-control"
+                      type="text"
+                      id="UserPhoneNo"
+                    />
+                  </div>
+                  <div className="FormError">{errors.phoneerror}</div>
+                  <div className="form-group">
+                    <textarea
+                      onChange={handleChange}
+                      name="message"
+                      placeholder="Your Message*"
+                      size="40"
+                      className="form-control required"
+                      id="UserMessage"
+                      value={formData.message}
+                    ></textarea>
+                  </div>
+                  <div className="FormError">{errors.messageerror}</div>
+                  <div className="form-group"></div>
+                  <div id="captcha_msg_contact2"></div>
+                  <input
+                    type="hidden"
+                    id="contact_slugQ"
+                    value=""
+                    name="data[User][post_slug]"
+                  />
+                  <input
+                    type="hidden"
+                    value="http://www.logicspice.com/hire-developers"
+                    name="data[User][post_url]"
+                  />
+                  <input
+                    type="hidden"
+                    id="contact_frQ"
+                    value="Get A Quote for hire developer"
+                    name="data[User][product_name]"
+                  />
+                  <div className="form-group">
+                    <div
+                      className="display_success_message"
+                      id="quote_success_message"
+                      style={{ display: "none" }}
+                    ></div>
+                    <div
+                      className="display_error_message"
+                      id="quote_error_message"
+                      style={{ display: "none" }}
+                    ></div>
+                  </div>
+                  <div className="form-group buttonSubmit">
+                    <div className="form-group-google">
+                      <ReCAPTCHA
+                        key={recaptchaKey}
+                        sitekey={recaptchaKey}
+                        onChange={onRecaptchaChange}
+                      />
+                      <div className="gcpc FormError" id="captcha_msg">
+                        {errors.reacptchaerror}
+                      </div>
                     </div>
-                    <div id="captcha_msg_contact2"></div>
-                    <input type="hidden" id="contact_slugQ" value="" name="data[User][post_slug]">
-                    <input type="hidden" value="http://www.logicspice.com/hire-developers" name="data[User][post_url]">
-                    <input type="hidden" id="contact_frQ" value="Get A Quote for hire developer" name="data[User][product_name]">
-                    <div className="form-group">
-                        <div className="display_success_message" id="quote_success_message" style="display: none;">                            
-                        </div>
-                        <div className="display_error_message" id="quote_error_message" style="display: none;">                            
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <input id="submitquote" title="Submit" className="btn btn-primary" size="30" label="" type="submit" value="Submit"/> 
-                        <div className="loadloader side_page" id="loadloaderH"><Image width={100} height ={100} src="/img/loading-old.gif" alt=""/></div>
+                  </div>
+                  <div className="form-group">
+                    <input
+                      id="submitquote"
+                      title="Submit"
+                      className="btn btn-primary"
+                      size="30"
+                      label=""
+                      type="submit"
+                      value="Submit"
+                    />
+
+                    {/* <div className="loadloader side_page" id="loadloaderH">
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/loading-old.gif"
+                        alt=""
+                      />
                     </div> */}
+                  </div>
                 </form>
               </div>
             </div>
@@ -1275,16 +1424,13 @@ const Page = () => {
         <div className="container">
           <div className="contact_now_wraper">
             <div data-aos="fade-right" className="contact_now_btn  ">
-              <a
-                className="btn btn-primary"
-                onClick={toggleModal}
-              >
+              <a className="btn btn-primary" onClick={toggleModal}>
                 Contact Now &nbsp; <i className="fa fa-angle-right"></i>
               </a>
             </div>
             <div className="conatct_title">
-              Let&apos;s have a quick call to better understand about your idea of
-              application.
+              Let&apos;s have a quick call to better understand about your idea
+              of application.
             </div>
           </div>
         </div>

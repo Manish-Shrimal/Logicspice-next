@@ -154,7 +154,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="jocpp">
-                <ul className="job-pr-icon">
+                <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
                       className="fa-solid fa-earth-americas"
@@ -174,7 +174,7 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={350}
+                  width={330}
                   height={500 / (100 / 100)}
                   alt="Food Ordering Script"
                   src="/img/softwares-banner-img/food-banner-img.png"

@@ -191,7 +191,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="jocpp">
-                <ul className="job-pr-icon">
+                <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
                       className="fa-solid fa-earth-americas"
@@ -257,7 +257,7 @@ const Page = () => {
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/9I7UC62GoqQ?rel=0"
+                src="https://www.youtube.com/embed/9I7UC62GoqQ?rel=0&autoplay=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

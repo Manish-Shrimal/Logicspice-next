@@ -58,7 +58,7 @@ const Page = () => {
                 <li>
                   <Link href="/">Home</Link>
                 </li>
-                /<li className="current">Sitemap</li>
+                <li className="current">Sitemap</li>
               </ol>
             </div>
           </div>
