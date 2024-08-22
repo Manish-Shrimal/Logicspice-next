@@ -1,55 +1,60 @@
-
-
 import { Inter } from "next/font/google";
 import "../../globals.css";
-
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Affordable Web & Mobile App Development Services - LogicSpice",
-  description:
-    "Logicspice, an IT company that is offering services in web design, web and mobile app development, ready to use software development, digital marketing & other.",
-  keywords:
-    "Mobile application development services, Website design and development services, e-commerce web development, android app development, iPhone app development, Website hosting services, Mobile app development company",
-  alternates: {
-    canonical: `${Domain}/services`,
-    
-  },
-};
-const jsonLd = {
-    "@context": "http://schema.org/",
-    "@type": "ProfessionalService",
-    "name": "Affordable Web & Mobile App Development Services-LogicSpice", 
-    "image": [ `${Domain}/img/logo.png` ],
-    "description": "Logicspice is a well established mobile application and web development company with over a decade and offers web design services, custom web development services, ready to use software development services, mobile app development & digital marketing services",
-    "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "reviewCount": "347"  } }
-    
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/laravel-development`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-export default function RootLayout({ children, canonicalUrl }) {
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/services/laravel-development`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
+
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+ 
+
   return (
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        {/* Use canonicalUrl prop or a default value if not provided */}
-        <link
-          rel="canonical"
-          href={canonicalUrl || "https://www.default-canonical-url.com"}
-        />
         <title>{metadata.title}</title>
-        
       </Head>
       <body className={inter.className}>{children}</body>
       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }

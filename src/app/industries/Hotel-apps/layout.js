@@ -1,51 +1,59 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import Domain from "@/app/BaseAPI/Domain";
-
-
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Mobile App Development For Hotels Industry - Logicspice",
-  description:
-    "We at logicspice has expert Android & iPhone app developers to deliver best mobile app development services for your hotel industry.",
-  keywords:
-    "online hotel booking app development company,mobile app development comapny,hire online booking app developers,mobile app development services,mobile app development for hotel booking",
-  alternates: {
-    // canonical: 'https://nextjs.org',
-    canonical: `${Domain}/industries/Hotels-apps`,
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(
+    `${MetadataApi}/Hotels-apps`
+  ).then((res) => res.json());
+  // console.log(product)
 
-    languages: {
-      "en-US": "https://nextjs.org/en-US",
-      "de-DE": "https://nextjs.org/de-DE",
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/industries/Hotel-apps`,
     },
-    media: {
-      "only screen and (max-width: 600px)": "https://nextjs.org/mobile",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-    types: {
-      "application/rss+xml": "https://nextjs.org/rss",
-    },
-  },
-};
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
 
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
 
-export default function RootLayout({ children, canonicalUrl }) {
   return (
     <html lang="en">
       <Head>
-        
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
-    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }
-
-
-
-
-
-

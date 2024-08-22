@@ -41,7 +41,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
-  console.log(metadata);
+//   console.log(metadata);
 
   return (
     <html lang="en">

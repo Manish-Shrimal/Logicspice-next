@@ -4741,7 +4741,20 @@ before {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 }
-
+.new-product-box .thumbnail > img.img_prora {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	width: 100%;
+}
+.new-product-box .thumbnail:hover img.img_prora {
+	transform: scale(1.20);
+	-webkit-transform: scale(1.20);
+	-moz-transform: scale(1.20);
+	-o-transform: scale(1.20);
+	-ms-transform: scale(1.20);
+}
 .new-product-box .thumbnail .caption {
 	padding: 0px;
 	color: #fff;
@@ -4751,8 +4764,23 @@ before {
 	top: 0;
 	background: rgba(0, 0, 0, 0.5);
 	height: 100%;
+  text-align: center;
 }
-
+.customized-website .caption-bx {
+	padding-top: 60px;
+}
+.customized-website .caption-bx .btn-primary {
+	margin-top: 70px;
+}
+.new-product-box .customized-website .caption {
+	background: transparent;
+}
+.new-product-box .thumbnail:hover .caption-bx {
+	/* padding-top: 30px; */
+	transition: all .8s ease 0s;
+	cursor: pointer;
+	text-align: center;
+}
 .caption-bx {
 	position: absolute;
 	left: 0;
@@ -4915,7 +4943,6 @@ before {
 .content_area h3 {
 	font-weight: 600;
 	color: #000;
-	display: inline-block;
 	float: left;
 	font-size: 18px;
 	margin-bottom: 15px;
@@ -4962,10 +4989,6 @@ before {
   color: white !important;
   content: var(--bs-breadcrumb-divider, "/");
 }
-
-
-
-
 
 @media (max-width: 767px) {
   .job-valu .portal-price {

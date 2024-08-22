@@ -1,50 +1,59 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import Domain from "@/app/BaseAPI/Domain";
-
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Mobile App Development for the Finance & Insurance Industry",
-  description:
-    "Tailored mobile app development solutions for the finance & insurance industry. Elevate your services with our expertise solutions. Contact us today.",
-  keywords:
-    "mobile apps for insurance, insurance application development, finance app development company, finance app development, apps for finance, mobile app development services, mobile application development services",
-  alternates: {
-    // canonical: 'https://nextjs.org',
-    canonical: `${Domain}/industries/finance-and-insurance-apps`,
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(
+    `${MetadataApi}/commercial-and-residential-real-estate-apps`
+  ).then((res) => res.json());
+  // console.log(product)
 
-    languages: {
-      "en-US": "https://nextjs.org/en-US",
-      "de-DE": "https://nextjs.org/de-DE",
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/industries/finance-and-insurance-apps`,
     },
-    media: {
-      "only screen and (max-width: 600px)": "https://nextjs.org/mobile",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-    types: {
-      "application/rss+xml": "https://nextjs.org/rss",
-    },
-  },
-};
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
 
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
 
-export default function RootLayout({ children, canonicalUrl }) {
   return (
     <html lang="en">
       <Head>
-        
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
-    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }
-
-
-
-
-
-

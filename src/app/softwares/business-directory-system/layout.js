@@ -1,54 +1,61 @@
-
-
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Advanced Web Development | Advance Web Application",
-  description:
-    "As a advance web development company, logicspice offers best solution in advanced web programming & web application at cost effective price.",
-  keywords:
-    "advanced web development, advanced web design, advanced website development,advanced web programming, advanced web application development",
-  alternates: {
-    canonical: `${Domain}/services/advanced-web-programming`,
-    
-  },
-};
-const jsonLd = {
-    "@context": "http://schema.org/",
-    "@type": "ProfessionalService",
-    "name": "Advanced Web Development | Advance Web Application", 
-    "image": [ `${Domain}/img/advancedwebprogramming/advanced-web-development-img.png` ],
-    "description": "As a advance web development company, logicspice offers best solution in advanced web programming & web application at cost effective price",
-    "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "412"  } }
-    
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/business-directory-system`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-export default function RootLayout({ children, canonicalUrl }) {
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/softwares/business-directory-system`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
+
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+//   console.log(metadata);
+
   return (
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        {/* Use canonicalUrl prop or a default value if not provided */}
-        <link
-          rel="canonical"
-          href={canonicalUrl || "https://www.default-canonical-url.com"}
-        />
         <title>{metadata.title}</title>
         
       </Head>
       <body className={inter.className}>{children}</body>
       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }

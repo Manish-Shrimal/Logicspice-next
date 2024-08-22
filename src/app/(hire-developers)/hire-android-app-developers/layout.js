@@ -1,53 +1,60 @@
-
-
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Hire Android App Developer | Top Android App Programmer",
-  description:
-    "Hire android app developer from logicspice for best app development service. We are equipped with a team of expert android app programmer who build robust apps.",
-  keywords:
-    "hire android app developer, hire android developer, hire android programmer, hire android app programmer,hire dedicated android developers, hire android developer in india, hire android app developer india, hire android developer india, hire android app developers in india",
-  alternates: {
-    canonical: `${Domain}/hire-android-app-developers`,
-    
-  },
-};
-const jsonLd = {
-    "@context": "http://schema.org/",
-    "@type": "ProfessionalService",
-    "name": "Hire Android App Developer|Top Android App Programmer", 
-    "image": [ `${Domain}/img/hiredevelopers/hire_android_programmers.png` ],
-    "description": "Hire android app developer from logicspice for best app development service. We are equipped with a team of expert android app programmer who build robust apps",
-    "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "153"  } }
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/android-app-developers`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-export default function RootLayout({ children, canonicalUrl }) {
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/hire-android-app-developers`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
+
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+  // console.log(metadata);
+
   return (
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        {/* Use canonicalUrl prop or a default value if not provided */}
-        <link
-          rel="canonical"
-          href={canonicalUrl || "https://www.default-canonical-url.com"}
-        />
         <title>{metadata.title}</title>
-        
       </Head>
       <body className={inter.className}>{children}</body>
       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }

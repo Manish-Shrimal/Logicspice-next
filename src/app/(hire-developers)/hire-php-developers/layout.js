@@ -1,40 +1,60 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata for the page
-const metadata = {
-  title: "Hire iPhone App Developers | Hire Dedicated iOS Programmers",
-  description:
-    "Hire IOS app developers from Logicspice for the best iOS app development services. Develop custom iPhone mobile apps at affordable prices with our developer.",
-  keywords:
-    "hire iOS developer, hire iPhone app developer, hire iOS app developer, hire iOS programmer, best iPhone app developers, expert iPhone app developer for hire, hire iPhone application developer",
-  alternates: {
-    canonical: `${Domain}/hire-ios-app-developers`,
-  },
-};
+ async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/php-developers`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-export default function RootLayout({ children, canonicalUrl }) {
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/hire-php-developers`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
+
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+ 
+
   return (
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        <link
-          rel="canonical"
-          href={canonicalUrl || metadata.alternates.canonical}
-        />
         <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
-      {/* Uncomment and use this if you need structured data */}
-      {/* <script
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      /> */}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }

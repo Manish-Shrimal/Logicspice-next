@@ -1,56 +1,60 @@
-
-
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Best Business Support Services for Small & Medium Enterprises",
-  description:
-    "We are a professional business support services provider company, offering technical support, customer support, Virtual Assistant Services to every enterprise.",
-  keywords:
-    "call center services,business support services,customer service support,technical support services,virtual assistant services,virtual personal assistant,virtual administrative assistant,online technical support,business call center services,it support services",
-  alternates: {
-    canonical: `${Domain}/services/business-support-services`,
-    
-  },
-};
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/business-support-services`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/services/business-support-services`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
 
-const jsonLd = {
-    "@context": "http://schema.org/",
-    "@type": "ProfessionalService",
-    "name": "Best Business Support Services for Small & Medium Enterprises", 
-    "image": [ `${Domain}/img/businesssupportservices/business-banner.png` ],
-    "description": "We are professional business support services provider, offering the  call center, technical support, customer support, Virtual Assistant Services to small, medium & large enterprises",
-    "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "261"  } }
-    
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+  console.log(metadata);
 
-export default function RootLayout({ children, canonicalUrl }) {
   return (
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        {/* Use canonicalUrl prop or a default value if not provided */}
-        <link
-          rel="canonical"
-          href={canonicalUrl || "https://www.default-canonical-url.com"}
-        />
         <title>{metadata.title}</title>
-        
       </Head>
       <body className={inter.className}>{children}</body>
       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }

@@ -1,56 +1,60 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Magento Experts | Hire Magento Developers - LogicSpice",
-  description:
-    "Hire professional magento developers to develop custom eCommerce website for you. We at logicspice provide SEO friendly web development solutions.",
-  keywords:
-    "hire magento programmers usa, hire dedicated magento developers, Hire dedicated developers, web development solution",
-  alternates: {
-    canonical: `${Domain}/hire-magento-experts`,
-  },
-};
-// const jsonLd = {
-//     "@context": "https://schema.org",
-//     "@type": "ProfessionalService",
-//     "name": "Hire Dedicated Developers | Hire Programmers - Logicspice",
-//     "description": "Hire dedicated developers and programmers at Logicspice. Our skilled team offers expert solutions for your custom mobile apps & software development needs.",
-//     "image": `${Domain}/img/logo.png`,
-//     "@id": `${Domain}`,
-//     "url": `${Domain}`,
-//     "telephone": "+91-9829559922",
-//     "address": {
-//     "@type": "PostalAddress",
-//     "streetAddress": "506-507, JAIPUR ELECTRONIC MARKET, Near Riddhi Siddhi Circle",
-//     "addressLocality": "Jaipur",
-//     "postalCode": "302018",
-//     "addressCountry": "IN"
-//     }
-//     }
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/magento-experts`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-export default function RootLayout({ children, canonicalUrl }) {
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/hire-magento-experts`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+  };
+}
+
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+  console.log(metadata);
+
   return (
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        {/* Use canonicalUrl prop or a default value if not provided */}
-        <link
-          rel="canonical"
-          href={canonicalUrl || "https://www.default-canonical-url.com"}
-        />
         <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
-      {/* <script
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      /> */}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }
