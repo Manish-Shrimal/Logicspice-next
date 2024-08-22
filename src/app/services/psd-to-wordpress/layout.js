@@ -1,7 +1,8 @@
 
 
 import { Inter } from "next/font/google";
-import "../globals.css";
+import "../../globals.css";
+
 import Head from "next/head";
 import Domain from "@/app/BaseAPI/Domain";
 
