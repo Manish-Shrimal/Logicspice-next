@@ -1914,7 +1914,7 @@ const Page = () => {
                     </div>
                     <div className="col-sm-6 col-md-4">
                       <Link
-                        href="/softwares/cake-php-facebook-login-plugin-script"
+                        href="/softwares/cakephp-facebook-login-plugin-script"
                         className="ready-product ready-product-min2"
                         data-aos="fade-up"
                       >
