@@ -1,3 +1,3 @@
-const Domain = "https://logicspice-next.vercel.app";
+const Domain = "https://main.d1bbsv9ysn61hj.amplifyapp.com/";
 
 export default Domain;
