@@ -17,7 +17,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let text = product.data.schema;
 
   let schemaOrg = null;
-  if(text){
+  if(text !== null || text !== ""){
     const cleanedText = text
       .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
       .replace(/\\n/g, '')      // Remove \n (newline)
@@ -26,7 +26,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
 
 
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
+      schemaOrg = cleanedText;
 
   }
 
