@@ -9,10 +9,25 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/laravel-development`).then((res) =>
+  const product = await fetch(`${MetadataApi}/magento-development`).then((res) =>
     res.json()
   );
   // console.log(product)
+  let text = product.data.schema;
+
+  let schemaOrg = null;
+  if(text){
+    const cleanedText = text
+      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, '')      // Remove \n (newline)
+      .replace(/\\r/g, '')      // Remove \r (carriage return)
+      .replace(/\\+/g, '')      // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+
+
+      schemaOrg = cleanedText;
+
+  }
 
   // Return metadata
   return {
@@ -21,7 +36,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/laravel-development`,
+      canonical: `${Domain}/services/magento-development`,
     },
     robots: {
       index: true,
@@ -34,7 +49,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    // schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    schemaOrg: schemaOrg || null,
+
   };
 }
 

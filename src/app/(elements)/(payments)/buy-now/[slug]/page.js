@@ -9,6 +9,8 @@ import Billing from "@/app/Components/Billing";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Cookies from "js-cookie";
 import { Router } from "next/navigation";
+import "@fortawesome/fontawesome-free/css/all.css";
+
 
 const Page = ({ params }) => {
   const router = useRouter();

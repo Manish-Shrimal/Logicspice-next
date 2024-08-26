@@ -13,6 +13,21 @@ export async function generateMetadata({ params, searchParams }, parent) {
     res.json()
   );
   // console.log(product)
+  let text = product.data.schema;
+
+  let schemaOrg = null;
+  if(text){
+    const cleanedText = text
+      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, '')      // Remove \n (newline)
+      .replace(/\\r/g, '')      // Remove \r (carriage return)
+      .replace(/\\+/g, '')      // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+
+
+      schemaOrg = cleanedText && JSON.parse(cleanedText);
+
+  }
 
   // Return metadata
   return {
@@ -34,14 +49,16 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    // schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    schemaOrg: schemaOrg || null,
+
   };
 }
 
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
-  console.log(metadata);
+
 
   return (
     <html lang="en">
@@ -54,7 +71,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      />
+      /> 
     </html>
   );
 }

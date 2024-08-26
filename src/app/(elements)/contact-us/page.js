@@ -31,7 +31,7 @@ const Page = () => {
       <Navbar />
       <section className="page-contact-new">
         <div className="container">
-          <h1>Let's Connect</h1>
+          <h1>Let&apos;s Connect</h1>
           <div className="contact-top-bg">
             <div className="row">
               <div className="col-sm-12">
@@ -447,7 +447,7 @@ const Page = () => {
                           Logicspice Consultancy Pvt Ltd
                         </div>
                         <div className="row_of_cont_da">
-                          <label>Jaipur:</label> 506-507, Manglam's JAIPUR
+                          <label>Jaipur:</label> 506-507, Manglam&apos;s JAIPUR
                           ELECTRONIC MARKET, Opposite Petrol Pump, Mansarovar
                           Link Road, near Riddhi Siddhi, Gopalpura by pass,
                           Jaipur, Rajasthan PIN - 302018
@@ -568,7 +568,7 @@ const Page = () => {
                   {/* <i className="fa fa-skype" aria-hidden="true"></i> */}
                   <i className="fa-brands fa-skype"></i>
                   <span>
-                    Don't Have Much Time?
+                    Don&apos;t Have Much Time?
                     <br />
                     Connect to us on Skype: logicspice
                   </span>

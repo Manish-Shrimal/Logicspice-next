@@ -12,6 +12,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Slider from "react-slick";
+import Link from "next/link";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Carrentaltab = () => {
   const [activeTab, setActiveTab] = useState("tab8");
@@ -20,6 +24,17 @@ const Carrentaltab = () => {
   const handleMainTabClick = (tab) => {
     setActiveTab(tab);
     setActiveSubTab("tab6");
+  };
+
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
   };
 
   const handleSubTabClick = (subTab) => {
@@ -159,7 +174,7 @@ const Carrentaltab = () => {
                       description="Customer can pay for the rent of the car by paying safely through an integrated payment gateway."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/booking-details.png"
+                      src="/img/customsolutions/Booking-Details.png"
                       alt="Booking Details"
                       title="Booking Details"
                       description="Customers can view their booking history and upcoming booking in different sections."
@@ -173,42 +188,42 @@ const Carrentaltab = () => {
                 }`}
                 id="tab7"
               >
-                <div
-                  id="screenshotslide"
-                  className="owl-carousel ScreenShotSlider"
-                >
-                  <div className="item active">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/book-a-car.jpg"
-                      alt="book-a-car"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/booking-confirm.jpg"
-                      alt="booking-confirm"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/car-detail.jpg"
-                      alt="car-detail"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/search-result.jpg"
-                      alt="search-result"
-                    />
-                  </div>
+
+                <div>
+                  <Slider {...settings}>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/book-a-car.jpg"
+                        alt="book-a-car"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/booking-confirm.jpg"
+                        alt="booking-confirm"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/car-detail.jpg"
+                        alt="car-detail"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/search-result.jpg"
+                        alt="search-result"
+                      />
+                    </div>
+                  </Slider>
                 </div>
               </div>
             </div>
@@ -287,7 +302,7 @@ const Carrentaltab = () => {
                   </div>
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/availability-management.png"
+                      src="/img/customsolutions/Availability-Management.png"
                       alt="Availability Management"
                       title="Availability Management"
                       description="Rental Owners can manage the availability of different cars listed by them so as to avoid confusion."
@@ -333,42 +348,41 @@ const Carrentaltab = () => {
                 }`}
                 id="tab7"
               >
-                <div
-                  id="screenshotslide2"
-                  className="owl-carousel ScreenShotSlider"
-                >
-                  <div className="item active">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/book-a-car.jpg"
-                      alt="book-a-car"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/booking-confirm.jpg"
-                      alt="booking-confirm"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/car-detail.jpg"
-                      alt="car-detail"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/search-result.jpg"
-                      alt="search-result"
-                    />
-                  </div>
+                <div>
+                  <Slider {...settings}>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/book-a-car.jpg"
+                        alt="book-a-car"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/booking-confirm.jpg"
+                        alt="booking-confirm"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/car-detail.jpg"
+                        alt="car-detail"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/search-result.jpg"
+                        alt="search-result"
+                      />
+                    </div>
+                  </Slider>
                 </div>
               </div>
             </div>
@@ -493,42 +507,41 @@ const Carrentaltab = () => {
                 }`}
                 id="tab7"
               >
-                <div
-                  id="screenshotslide3"
-                  className="owl-carousel ScreenShotSlider"
-                >
-                  <div className="item active">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/book-a-car.jpg"
-                      alt="book-a-car"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/booking-confirm.jpg"
-                      alt="booking-confirm"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/car-detail.jpg"
-                      alt="car-detail"
-                    />
-                  </div>
-                  <div className="item">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/customsolutions/search-result.jpg"
-                      alt="search-result"
-                    />
-                  </div>
+                 <div>
+                  <Slider {...settings}>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/book-a-car.jpg"
+                        alt="book-a-car"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/booking-confirm.jpg"
+                        alt="booking-confirm"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/car-detail.jpg"
+                        alt="car-detail"
+                      />
+                    </div>
+                    <div className="SliderMainBx">
+                      <Image
+                        width={1500}
+                        height={100 / (100 / 100)}
+                        src="/img/customsolutions/search-result.jpg"
+                        alt="search-result"
+                      />
+                    </div>
+                  </Slider>
                 </div>
               </div>
             </div>

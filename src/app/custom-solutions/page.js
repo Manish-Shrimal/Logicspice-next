@@ -893,7 +893,7 @@ const Page = () => {
                       </div>
                       <Link
                         className=""
-                        href="/custom-solutions/social-network-integration-in-android-app"
+                        href="/softwares/social-network-integration-in-android-app"
                       >
                         <div className="product_show_bx_in">
                           <div className="product_image_full_shon">

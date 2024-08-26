@@ -13,6 +13,16 @@ export async function generateMetadata({ params, searchParams }, parent) {
     res.json()
   );
   // console.log(product)
+  let text = product.data.schema;
+    const cleanedText = text
+      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, '')      // Remove \n (newline)
+      .replace(/\\r/g, '')      // Remove \r (carriage return)
+      .replace(/\\+/g, '')      // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+
+    // Parse the cleaned string as JSON
+    const schemaOrg = JSON.parse(cleanedText);
 
   // Return metadata
   return {
@@ -34,14 +44,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    schemaOrg: schemaOrg,
   };
 }
 
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
-  console.log(metadata);
+  
 
   return (
     <html lang="en">

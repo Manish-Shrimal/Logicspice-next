@@ -125,7 +125,7 @@ const Page = () => {
               </p>
             </div>
             <div className="col-sm-5 text-right hidden-xs">
-              <Image
+              <Image width={100} height={100}
                 src="/img/softwaremaintenancesupport/support.png"
                 alt="Support &amp; Maintainence"
               />
@@ -188,7 +188,7 @@ const Page = () => {
                 <div className="row m-0">
                   <div className="col-md-6 col-sm-4 p-0">
                     <div className="servin-img">
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/cl2.png"
                         alt="Adjustable Maintenance and support"
                       />
@@ -197,7 +197,7 @@ const Page = () => {
                   <div className="col-md-6 col-sm-8 p-0">
                     <div className="servin-content">
                       <h3>Adjustable Maintenance and support</h3>
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/clArrow.png"
                         alt="clArrow"
                       />
@@ -217,7 +217,7 @@ const Page = () => {
                 <div className="row m-0">
                   <div className="col-md-6 col-sm-4 p-0">
                     <div className="servin-img">
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/cl3.png"
                         alt="Corrective maintenance"
                       />
@@ -226,7 +226,7 @@ const Page = () => {
                   <div className="col-md-6 col-sm-8 p-0">
                     <div className="servin-content">
                       <h3>Corrective maintenance</h3>
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/clArrow.png"
                         alt="clArrow"
                       />
@@ -247,7 +247,7 @@ const Page = () => {
                 <div className="row m-0">
                   <div className="col-md-6  col-sm-4 pull-right p-0">
                     <div className="servin-img">
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/cl1.png"
                         alt="Preventive software maintenance service"
                       />
@@ -256,7 +256,7 @@ const Page = () => {
                   <div className="col-md-6  col-sm-8 pull-left p-0">
                     <div className="servin-content">
                       <h3>Preventive software maintenance service</h3>
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/clArrow.png"
                         alt="clArrow"
                       />
@@ -275,7 +275,7 @@ const Page = () => {
                 <div className="row m-0">
                   <div className="col-md-6 col-sm-4 pull-right p-0">
                     <div className="servin-img">
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/cl4.png"
                         alt="Organized maintenance and support"
                       />
@@ -284,7 +284,7 @@ const Page = () => {
                   <div className="col-md-6 col-sm-8 pull-left p-0">
                     <div className="servin-content">
                       <h3>Organized maintenance and support</h3>
-                      <Image
+                      <Image width={100} height={100}
                         src="/img/softwaremaintenancesupport/clArrow.png"
                         alt="clArrow"
                       />
@@ -310,7 +310,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-5">
               <h2>We promise and assure</h2>
-              <Image
+              <Image width={100} height={100}
                 src="/img/softwaremaintenancesupport/promise.png"
                 alt="We promise and assure"
               />
@@ -442,7 +442,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image width={100} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

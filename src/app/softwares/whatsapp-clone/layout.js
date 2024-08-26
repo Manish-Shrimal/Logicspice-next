@@ -34,7 +34,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    // schemaOrg: product.data.schema !== null ? JSON.parse(product.data.schema) : {},
   };
 }
 
@@ -52,10 +52,10 @@ export default async function RootLayout({ children, params, searchParams }) {
         
       </Head>
       <body className={inter.className}>{children}</body>
-      <script
+      {/* <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      />
+        dangerouslySetInnerHTML={{ __html: metadata.schemaOrg }}
+      /> */}
     </html>
   );
 }

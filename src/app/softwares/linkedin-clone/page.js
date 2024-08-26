@@ -32,7 +32,7 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-    console.log(showModal);
+    
 
     setShowModal(!showModal);
   };

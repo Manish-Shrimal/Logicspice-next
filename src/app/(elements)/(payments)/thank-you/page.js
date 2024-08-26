@@ -25,12 +25,13 @@ const Page = () => {
           <div class="sid_oivd smwood smwoodde">
             <div class="panel">
               <div class="panel-thanks">
-                <Image width={300} height={100} src="/img/logo.png" />
+                <Image width={300} height={100} src="/img/logo.png" alt="Logo" />
                 <br />
                 <br />
                 <Image
                   width={300}
                   height={100}
+                  alt="thank-you"
                   style={{ marginBottom: "10px" }}
                   src="/img/jobboard/thank.png"
                 />
@@ -41,7 +42,7 @@ const Page = () => {
                 <h3>
                   While we get back to you, please download our white paper of{" "}
                   <br />
-                  "best-practices for building a disruptive app startup".
+                  &quot;best-practices for building a disruptive app startup&quot;.
                 </h3>
                 <Link
                   class="btn btn-download-script"

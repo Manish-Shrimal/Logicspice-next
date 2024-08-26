@@ -14,6 +14,18 @@ export async function generateMetadata({ params, searchParams }, parent) {
   );
   // console.log(product)
 
+      // Clean up the schema string
+      let text = product.data.schema;
+      const cleanedText = text
+        .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
+        .replace(/\\n/g, '')      // Remove \n (newline)
+        .replace(/\\r/g, '')      // Remove \r (carriage return)
+        .replace(/\\+/g, '')      // Remove unnecessary backslashes
+        .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+  
+      // Parse the cleaned string as JSON
+      const schemaOrg = cleanedText;
+
   // Return metadata
   return {
     title: product.data.meta_title,
@@ -34,14 +46,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    schemaOrg: schemaOrg,
   };
 }
 
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
-  console.log(metadata);
+ 
 
   return (
     <html lang="en">
@@ -53,7 +65,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       <body className={inter.className}>{children}</body>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+        dangerouslySetInnerHTML={{__html: JSON.stringify(metadata.schemaOrg) }}
       />
     </html>
   );

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 
 
-const servercomponents = () => {
+const Servercomponents = () => {
     const [modalOpen, setModalOpen] = useState(false);
 
     const toggleModal = () => {
@@ -34,4 +34,4 @@ const servercomponents = () => {
   )
 }
 
-export default servercomponents
+export default Servercomponents

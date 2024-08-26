@@ -48,7 +48,7 @@ const Page = () => {
                   <li>Cross-Platform Development Capability</li>
                 </ul>
                 <div className="laravel-anquire">
-                <div className="btn btn-primary" onClick={openModal}>
+                  <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
                       <Enquirymodal
@@ -76,6 +76,8 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
                 <Image
+                  width={300}
+                  height={500 / (100 / 100)}
                   src="/img/nodejsdevelopment/node-js-img.png"
                   alt="Node JS Development Company"
                 />
@@ -91,6 +93,8 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
                 <Image
+                  width={600}
+                  height={500 / (100 / 100)}
                   src="/img/nodejsdevelopment/node-js-logo-img.png"
                   alt="Node JS Development Company"
                 />
@@ -166,11 +170,15 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
+                        width={70}
+                        height={100}
                         className="widout-hover"
                         src="/img/nodejsdevelopment/node-js-new-icon1.png"
                         alt="Node JS Development Company"
                       />
                       <Image
+                       width={70}
+                       height={100}
                         className="on-hover"
                         src="/img/nodejsdevelopment/node-js-white-icon1.png"
                         alt="Node JS Development Company"
@@ -180,7 +188,8 @@ const Page = () => {
                   </div>
                   <h3>API Development & Integration</h3>
                   <p>
-                    We are proficient in developing API&apos;s for web applications.
+                    We are proficient in developing API&apos;s for web
+                    applications.
                   </p>
                 </div>
               </div>
@@ -190,11 +199,15 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
+                        width={70}
+                        height={100}
                         className="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon2.png"
                         alt="Node JS Development Company"
                       />
                       <Image
+                        width={70}
+                        height={100}
                         className="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon2.png"
                         alt="Node JS Development Company"
@@ -214,11 +227,15 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
+                        width={70}
+                        height={100}
                         className="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon3.png"
                         alt="Node JS Development Company"
                       />
                       <Image
+                        width={70}
+                        height={100}
                         className="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon3.png"
                         alt="Node JS Development Company"
@@ -238,11 +255,15 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
+                        width={70}
+                        height={100}
                         className="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon4.png"
                         alt="Node JS Development Company"
                       />
                       <Image
+                        width={70}
+                        height={100}
                         className="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon4.png"
                         alt="Node JS Development Company"
@@ -262,11 +283,15 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
+                        width={70}
+                        height={100}
                         className="widout-hover"
                         src="/img/nodejsdevelopment/node-js-new-icon2.png"
                         alt="Node JS Development Company"
                       />
                       <Image
+                        width={70}
+                        height={100}
                         className="on-hover"
                         src="/img/nodejsdevelopment/node-js-white-icon2.png"
                         alt="Node JS Development Company"
@@ -286,11 +311,15 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <Image
+                        width={70}
+                        height={100}
                         className="widout-hover"
                         src="/img/nodejsdevelopment/laravel-new-icon6.png"
                         alt="Node JS Development Company"
                       />
                       <Image
+                       width={70}
+                       height={100}
                         className="on-hover"
                         src="/img/nodejsdevelopment/laravel-white-icon6.png"
                         alt="Node JS Development Company"
@@ -325,6 +354,8 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/nodejsdevelopment/nodajs_features_icon1.png"
                       alt="img1"
                     />
@@ -340,6 +371,8 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/nodejsdevelopment/nodajs_features_icon2.png"
                       alt="img4"
                     />
@@ -358,6 +391,8 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/nodejsdevelopment/nodajs_features_icon3.png"
                       alt="img2"
                     />
@@ -376,6 +411,8 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/nodejsdevelopment/nodajs_features_icon4.png"
                       alt="img5"
                     />
@@ -394,6 +431,8 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      width={60}
+                      height={100}
                       src="/img/nodejsdevelopment/nodajs_features_icon5.png"
                       alt="img3"
                     />
@@ -417,16 +456,16 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
-                    <button>Enquire Now</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Node JS Development Company"
-                      />
-                    }
-                  </div>
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Node JS Development Company"
+                  />
+                }
+              </div>
             </div>
           </div>
         </div>
@@ -438,6 +477,8 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              width={100}
+              height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
             />

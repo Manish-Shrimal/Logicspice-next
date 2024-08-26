@@ -417,7 +417,7 @@ const Footer = () => {
           </div>
           <div className="col-sm-3">
             <div className="title_of_footer_menu">
-              <Link href="/softwares/contact-us">Contact us</Link>
+              <Link href="/contact-us">Contact us</Link>
             </div>
             <div className="contact_dtl">
               <div className="company_informetion">

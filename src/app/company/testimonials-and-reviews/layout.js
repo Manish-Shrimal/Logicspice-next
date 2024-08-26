@@ -1,39 +1,76 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-
 import Head from "next/head";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "LogicSpice - Find Our Client Testimonials & Reviews",
-  description:
-    "Check out our Client Reviews and Feedback for our services in Website & Mobile App Development and get solutions via hire our skilled developers.",
-  keywords:
-    "Logicspice reviews, Logicspice Client Testimonials, Logicspice Client Reviews, Logicspice Client Feedback",
-  alternates: {
-    // canonical: 'https://nextjs.org',
-    canonical: `https://logicspice-next.vercel.app/company/testimonials-and-reviews`,
+export async function generateMetadata({ params, searchParams }, parent) {
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/testimonials-and-reviews`).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-    languages: {
-      "en-US": "https://nextjs.org/en-US",
-      "de-DE": "https://nextjs.org/de-DE",
-    },
-    media: {
-      "only screen and (max-width: 600px)": "https://nextjs.org/mobile",
-    },
-    types: {
-      "application/rss+xml": "https://nextjs.org/rss",
-    },
-  },
-};
+  let text = product.data.schema;
 
-export default function RootLayout({ children, canonicalUrl }) {
+  let schemaOrg = null;
+  if(text){
+    const cleanedText = text
+      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, '')      // Remove \n (newline)
+      .replace(/\\r/g, '')      // Remove \r (carriage return)
+      .replace(/\\+/g, '')      // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+
+
+      schemaOrg = cleanedText && JSON.parse(cleanedText);
+
+  }
+
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/company/testimonials-and-reviews`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: schemaOrg || null,
+  };
+}
+
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
+  const metadata = await generateMetadata({ params, searchParams });
+ 
+
   return (
     <html lang="en">
-      <Head></Head>
+      <Head>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <title>{metadata.title}</title>
+      </Head>
       <body className={inter.className}>{children}</body>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
     </html>
   );
 }

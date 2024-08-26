@@ -7,7 +7,7 @@ import Footer from "@/app/Components/Footer";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-const page = () => {
+const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -535,4 +535,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

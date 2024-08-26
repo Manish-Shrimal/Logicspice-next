@@ -9,10 +9,24 @@ import Cookies from "js-cookie";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "../../elements.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const [productDetails, setProductDetails] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    // console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   //   const [billingInitials, setBillingInitials] = useState([]);
   const billingInitials = useRef();
@@ -835,6 +849,24 @@ const Page = () => {
               </form>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div>
 

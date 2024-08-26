@@ -977,7 +977,7 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <Link href="/hire-codeigniter-developers">
+                        <Link href="/hire-codeignitor-developers">
                           <Image
                             width={60}
                             height={100}
@@ -987,7 +987,7 @@ const Page = () => {
                         </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <Link href="/hire-codeigniter-developers">
+                        <Link href="/hire-codeignitor-developers">
                           Hire Codeigniter Developers
                         </Link>
                       </div>
@@ -1035,7 +1035,7 @@ const Page = () => {
                   >
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
-                        <Link href="/hire-angular-js-developers">
+                        <Link href="/hire-angular-js-experts">
                           <Image
                             width={60}
                             height={100}
@@ -1045,7 +1045,7 @@ const Page = () => {
                         </Link>
                       </div>
                       <div className="dedicated_develop_title_box">
-                        <Link href="/hire-angular-js-developers">
+                        <Link href="/hire-angular-js-experts">
                           Hire Angular JS developers{" "}
                         </Link>
                       </div>

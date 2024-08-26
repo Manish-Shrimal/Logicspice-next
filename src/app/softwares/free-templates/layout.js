@@ -10,9 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
   const product = await fetch(
-    `${MetadataApi}/`
+    `${MetadataApi}/free-templates`
   ).then((res) => res.json());
   // console.log(product)
+
+  let text = product.data.schema;
+  const cleanedText = text.replace(/\\r\\n/g, '').replace(/\\+/g, '');
+  const schemaOrg = JSON.parse(cleanedText);
 
   // Return metadata
   return {
@@ -34,7 +38,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    // schemaOrg: product.data.schema && JSON.parse(product.data.schema),
+    schemaOrg: schemaOrg,
   };
 }
 

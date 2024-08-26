@@ -245,7 +245,7 @@ const Page = () => {
               </li>
               <li>
                 <strong>Project Management Through Online Medium: -</strong>
-                Clients don't have to bother about their project and can monitor
+                Clients don&apos;t have to bother about their project and can monitor
                 at which stage their project is via online medium.
               </li>
               <li>

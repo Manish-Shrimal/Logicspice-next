@@ -126,6 +126,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                   })
                                 }
                                 className="form-control"
+                                style={{height:"40px"}}
                                 placeholder="Your Name *"
                                 id="UserName"
                                 aria-describedby="inputGroupPrepend"
@@ -151,6 +152,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                 }
                                 className="form-control"
                                 placeholder="Your Email *"
+                                style={{height:"40px"}}
                                 id="UserEmail"
                                 aria-describedby="inputGroupPrepend"
                               />
@@ -175,6 +177,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                 }
                                 className="form-control"
                                 placeholder="Your Mobile Number"
+                                style={{height:"40px"}}
                                 id="UserPhoneNo"
                                 aria-describedby="inputGroupPrepend"
                               />
@@ -199,6 +202,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                 }
                                 className="form-control"
                                 placeholder="Budget (optional)"
+                                style={{height:"40px"}}
                                 id="UserBudget"
                                 aria-describedby="inputGroupPrepend"
                               />
@@ -236,7 +240,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                               {formErrors.reacptchaerror}
                             </div>
                           </div>
-                          <div className="form-group">
+                          {/* <div className="form-group">
                             <div
                               className="display_success_message"
                               id="request_success_message"
@@ -251,7 +255,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                 display: resultSuccess ? "none" : "block",
                               }}
                             ></div>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="modal-footer">
                           <input
