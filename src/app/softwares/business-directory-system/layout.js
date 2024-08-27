@@ -19,11 +19,11 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let schemaOrg = null;
   if(text){
     const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+      .replace(/\\r\\n/g, '')  
+      .replace(/\\n/g, '')      
+      .replace(/\\r/g, '')      
+      .replace(/\\+/g, '')      
+      .replace(/[\u0000-\u001F\u007F]/g, '');  
 
 
       schemaOrg = cleanedText && JSON.parse(cleanedText);

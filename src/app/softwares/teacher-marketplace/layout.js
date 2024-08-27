@@ -17,8 +17,11 @@ export async function generateMetadata({ params, searchParams }, parent) {
   
   let text = product.data.schema;
 
+  console.log(text,"from tmp");
+
   let schemaOrg = null;
-  if(text !== null || text !== ""){
+  if(text){
+    console.log("from if")
     const cleanedText = text
       .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
       .replace(/\\n/g, '')      // Remove \n (newline)
