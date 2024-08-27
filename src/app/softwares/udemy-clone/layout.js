@@ -23,7 +23,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       .replace(/\\n/g, "") // Remove \n (newline)
       .replace(/\\r/g, "") // Remove \r (carriage return)
       .replace(/\\+/g, "") // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
+      .replace(/[\u0000-\u001F\u007F]/g, ""); 
 
     try {
       schemaOrg = JSON.parse(cleanedText); // Parse it as JSON if necessary
