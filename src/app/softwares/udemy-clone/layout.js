@@ -17,6 +17,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   
   let schemaOrg = null;
   if (product?.data?.schema) {
+    console.log("from if of udemy-clone", product.data.schema);
     const cleanedText = product.data.schema
       .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
       .replace(/\\n/g, "") // Remove \n (newline)
