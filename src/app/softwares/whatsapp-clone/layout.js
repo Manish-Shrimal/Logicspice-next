@@ -14,20 +14,20 @@ export async function generateMetadata({ params, searchParams }, parent) {
   );
   // console.log(product)
 
-  let text = product.data.schema;
-
   let schemaOrg = null;
-  if(text !== null || text !== ""){
-    const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+  if (product?.data?.schema) {
+    const cleanedText = product.data.schema
+      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, "") // Remove \n (newline)
+      .replace(/\\r/g, "") // Remove \r (carriage return)
+      .replace(/\\+/g, "") // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-
-      schemaOrg = cleanedText;
-
+    try {
+      schemaOrg = JSON.parse(cleanedText); // Parse it as JSON if necessary
+    } catch (error) {
+      console.error("Error parsing schemaOrg JSON:", error);
+    }
   }
 
   // Return metadata
