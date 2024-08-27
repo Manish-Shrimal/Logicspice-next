@@ -9,31 +9,31 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(
-    `${MetadataApi}/grocery-app-development`
-  ).then((res) => res.json());
-  // console.log(product)
-  let text = product.data.schema;
-
+  const product = await fetch(`${MetadataApi}/grocery-app-development`).then(
+    (res) => res.json()
+  );
+  
   let schemaOrg = null;
-  if(text){
-    const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+  if (product?.data?.schema) {
+    const cleanedText = product.data.schema
+      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, "") // Remove \n (newline)
+      .replace(/\\r/g, "") // Remove \r (carriage return)
+      .replace(/\\+/g, "") // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
-
+    try {
+      schemaOrg = JSON.parse(cleanedText); // Parse it as JSON if necessary
+    } catch (error) {
+      console.error("Error parsing schemaOrg JSON:", error);
+    }
   }
+  
   // Return metadata
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
     keywords: product.data.meta_keyword,
-    // Add other meta tags as needed
     alternates: {
       canonical: `${Domain}/softwares/grocery-app-development`,
     },
@@ -51,6 +51,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     schemaOrg: schemaOrg || null,
   };
 }
+
 
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
