@@ -9,25 +9,25 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/rental-property-management-software`).then((res) =>
-    res.json()
-  );
+  const product = await fetch(
+    `${MetadataApi}/rental-property-management-software`,{
+      cache: "no-store",
+    }
+  ).then((res) => res.json());
   // console.log(product)
 
   let text = product.data.schema;
 
   let schemaOrg = null;
-  if(text){
+  if (text) {
     const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, "") // Remove \n (newline)
+      .replace(/\\r/g, "") // Remove \r (carriage return)
+      .replace(/\\+/g, "") // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-
-      schemaOrg = cleanedText;
-
+    schemaOrg = cleanedText;
   }
 
   // Return metadata
@@ -57,7 +57,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
-//   console.log(metadata);
+  //   console.log(metadata);
 
   return (
     <html lang="en">
@@ -65,7 +65,6 @@ export default async function RootLayout({ children, params, searchParams }) {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <title>{metadata.title}</title>
-        
       </Head>
       <body className={inter.className}>{children}</body>
       <script
