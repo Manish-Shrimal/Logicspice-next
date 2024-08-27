@@ -29,7 +29,7 @@ const Page = () => {
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
           <Image
-            width={650}
+            width={1500}
             height={500 / (100 / 100)}
             src="/img/digitalmarketing/digital-marketing.jpg"
             alt="web design service"

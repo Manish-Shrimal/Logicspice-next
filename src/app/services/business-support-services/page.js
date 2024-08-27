@@ -1,24 +1,113 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/services/services.css";
 import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Domain from "@/app/BaseAPI/Domain";
 const Page = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
+  const recaptchaRef = useRef(null);
 
-  const openModal = () => {
-    console.log(showModal);
+  const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
 
-    setShowModal(!showModal);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone_no: "",
+    message: "",
+    post_url: Domain + "/services/business-support-services",
+    product_name: "Business support services",
+    post_slug: "/services/business-support-services",
+  });
+
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    message: "",
+    recaptchaerror: "",
+  });
+
+  const onRecaptchaChange = (token) => {
+    if (token) {
+      setIsRecaptchaVerified(true);
+      setError((prevError) => ({
+        ...prevError,
+        recaptchaerror: "",
+      }));
+    }
   };
 
-  const toggleModal = () => {
-    setModalOpen(!modalOpen);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setError((prevError) => ({
+      ...prevError,
+      [name]: "",
+    }));
   };
+
+  const submitQuoteForm = async (e) => {
+    e.preventDefault();
+
+    const newErrors = {};
+
+    if (!isRecaptchaVerified) {
+      newErrors.recaptchaerror = "Please verify that you are not a robot";
+    }
+
+    if (formData.name === "") {
+      newErrors.name = "Please enter your name";
+    }
+
+    if (formData.email === "") {
+      newErrors.email = "Please enter your email";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (formData.message === "") {
+      newErrors.message = "Please enter your message";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setError(newErrors);
+      return;
+    }
+
+    try {
+      const response = await axios.post(BaseAPI + "/pages/quote", formData);
+
+      if (response.data.status === 200) {
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone_no: "",
+          message: "",
+        });
+
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+
+        document.querySelector("#successMessage").innerHTML =
+          "Request message sent successfully";
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <>
       <NavBar />
@@ -85,73 +174,96 @@ const Page = () => {
                   <h4>Get a Quote</h4>
                   <div className="form-group">
                     <input
-                      name="data[User][name]"
+                      name="name"
                       placeholder="Your Full Name*"
-                      value=""
+                      value={formData.name}
                       size="40"
-                      className="form-control required"
+                      className={`form-control required ${
+                        error.name ? "fieldRequired" : ""
+                      }`}
                       type="text"
+                      
                       id="UserName"
+                      onChange={handleChange}
                     />{" "}
                   </div>
                   <div className="form-group">
                     <input
-                      name="data[User][email]"
+                      name="email"
                       placeholder="Email*"
-                      value=""
+                      value={formData.email}
                       size="40"
-                      className="form-control required email"
+                      className={`form-control required ${
+                        error.email ? "fieldRequired" : ""
+                      }`}
                       type="text"
-                      id="UserEmail"
+                      onChange={handleChange}
                     />{" "}
                   </div>
                   <div className="form-group">
                     <input
-                      name="data[User][phone_no]"
+                      name="phone_no"
                       placeholder="Phone Number"
-                      value=""
+                      value={formData.phone_no}
                       size="40"
                       className="form-control"
                       type="text"
-                      id="UserPhoneNo"
+                      onChange={handleChange}
                     />{" "}
                   </div>
                   <div className="form-group">
                     <input
-                      name="data[User][company]"
+                      name="company"
                       placeholder="Company Name"
-                      value=""
+                      value={formData.company}
                       size="40"
                       className="form-control"
                       type="text"
-                      id="UserCompany"
+                      onChange={handleChange}
                     />{" "}
                   </div>
 
                   <div className="form-group">
                     <textarea
-                      name="data[User][message]"
+                      name="message"
                       placeholder="Your Message*"
                       size="40"
-                      className="form-control required"
-                      id="UserMessage"
+                      value={formData.message}
+                      className={`form-control required ${
+                        error.message ? "fieldRequired" : ""
+                      }`}
+                      type="text"
+                      onChange={handleChange}
                     ></textarea>{" "}
                   </div>
-                  <div className="form-group">
-                    <div id="recaptchaq"></div>
+
+                  <div className="form-group-google">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      key={recaptchaKey}
+                      sitekey={recaptchaKey}
+                      onChange={onRecaptchaChange}
+                    />
+                    <div
+                      className="gcpc FormError recaptchaError"
+                      id="captcha_msg"
+                    >
+                      {error.recaptchaerror}
+                    </div>
                   </div>
-                  <div id="captcha_msg_contact2"></div>
+
+                  <div
+                    id="successMessage"
+                    className="text-success fw-bold successMessage"
+                  ></div>
 
                   <div className="form-group">
-                    <input
-                      id="submitquote"
-                      title="Submit"
+                    <button
                       className="btn btn-primary btn-block"
-                      size="30"
-                      label=""
-                      type="submit"
-                      value="Submit"
-                    />
+                      onClick={submitQuoteForm}
+                    >
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

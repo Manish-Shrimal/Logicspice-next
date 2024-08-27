@@ -58,7 +58,7 @@ const Page = () => {
                     <Enquirymodal
                       modalStatus={showModal}
                       toggle={openModal}
-                      title="Web Development Servicest"
+                      title="Web Development Services"
                     />
                   }
                 </div>

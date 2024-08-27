@@ -438,9 +438,8 @@ const Page = () => {
               <h2 className="sas12">Enquiry Now</h2>
               <a
                 id=""
-                data-toggle="modal"
-                data-target="#contactFix"
                 className="btn btn-primary sas13"
+                onClick={toggleModal}
               >
                 Get a Free Quote
               </a>

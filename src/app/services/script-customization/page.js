@@ -38,8 +38,8 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6 text-center">
               <Image
-                 width={450}
-                 height={500 / (100 / 100)}
+                width={450}
+                height={500 / (100 / 100)}
                 src="/img/scriptcustomization/imageScriptModifications.png"
                 alt="script modification"
               />
@@ -178,7 +178,9 @@ const Page = () => {
           </div>
 
           <div className="custo_btn text-center">
-            <a className="btn btn-primary">Ready Made Softwares</a>
+            <Link href="/softwares" className="btn btn-primary">
+              Ready Made Softwares
+            </Link>
           </div>
         </div>
       </section>
@@ -197,10 +199,7 @@ const Page = () => {
             solution for your business.
           </p>
           <div className="custo_btn text-center">
-            <Link
-              href="/custom-solutions/"
-              className="btn btn-primary"
-            >
+            <Link href="/custom-solutions/" className="btn btn-primary">
               Custom Solutions
             </Link>
           </div>

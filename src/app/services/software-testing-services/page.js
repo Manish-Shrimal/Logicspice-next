@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/services/services.css";
@@ -10,9 +10,35 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Domain from "@/app/BaseAPI/Domain";
 const Page = () => {
+  const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
+  const recaptchaRef = useRef(null);
+
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone_no: "",
+    message: "",
+    post_url: Domain + "/services/software-testing-services",
+    product_name: "Software testing services",
+    post_slug: "/services/software-testing-services"
+  })
+
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    message: "",
+    recaptchaerror: "",
+  });
 
   const openModal = () => {
     console.log(showModal);
@@ -22,6 +48,82 @@ const Page = () => {
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
+  };
+
+  const onRecaptchaChange = (token) => {
+    if (token) {
+      setIsRecaptchaVerified(true);
+      setError((prevError) => ({
+        ...prevError,
+        recaptchaerror: "",
+      }));
+    }
+
+    
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setError((prevError) => ({
+      ...prevError,
+      [name]: "",
+    }))
+  }
+
+
+  const submitQuoteForm = async (e) => {
+    e.preventDefault();
+  
+    const newErrors = {};
+  
+    if (!isRecaptchaVerified) {
+      newErrors.recaptchaerror = "Please verify that you are not a robot";
+    }
+  
+    if (formData.name === "") {
+      newErrors.name = "Please enter your name";
+    }
+  
+    if (formData.email === "") {
+      newErrors.email = "Please enter your email";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+  
+    if (formData.message === "") {
+      newErrors.message = "Please enter your message";
+    }
+  
+    if (Object.keys(newErrors).length > 0) {
+      setError(newErrors);
+      return;
+    }
+  
+    try {
+      const response = await axios.post(BaseAPI + "/pages/quote", formData);
+  
+      if (response.data.status === 200) {
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone_no: "",
+          message: "",
+        });
+  
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+  
+        document.querySelector("#successMessage").innerHTML = "Request message sent successfully";
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -177,92 +279,83 @@ const Page = () => {
 
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="form_quote form_testing">
-                  <form
-                    action="/pages/quote"
-                    enctype="multipart/form-data"
-                    name="quote"
-                    id="quote"
-                    method="post"
-                    accept-charset="utf-8"
-                  >
-                    <h4>Get a Quote</h4>
-                    <div className="form-group">
-                      <input
-                        name="data[User][name]"
-                        placeholder="Your Full Name*"
-                        value=""
-                        size="40"
-                        className="form-control required"
-                        type="text"
-                        id="UserName"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        name="data[User][email]"
-                        placeholder="Email*"
-                        value=""
-                        size="40"
-                        className="form-control required email"
-                        type="text"
-                        id="UserEmail"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        name="data[User][phone_no]"
-                        placeholder="Phone Number"
-                        value=""
-                        size="40"
-                        className="form-control"
-                        type="text"
-                        id="UserPhoneNo"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        name="data[User][company]"
-                        placeholder="Company Name"
-                        value=""
-                        size="40"
-                        className="form-control"
-                        type="text"
-                        id="UserCompany"
-                      />
-                    </div>
+                <form>
+                  <h4>Get a Quote</h4>
+                  <div className="form-group">
+                    <input
+                      name="name"
+                      placeholder="Your Full Name*"
+                      value={formData.name}
+                      size="40"
+                      className={`form-control required ${error.name ? 'fieldRequired' : ''}`}                      type="text"
+                      
+                      id="UserName"
+                      onChange={handleChange}
+                    />{" "}
+                  </div>
+                  <div className="form-group">
+                    <input
+                      name="email"
+                      placeholder="Email*"
+                      value={formData.email}
+                      size="40"
+                      className={`form-control required ${error.email ? 'fieldRequired' : ''}`}                      type="text"
+                      onChange={handleChange}
+                    />{" "}
+                  </div>
+                  <div className="form-group">
+                    <input
+                      name="phone_no"
+                      placeholder="Phone Number"
+                      value={formData.phone_no}
+                      size="40"
+                      className="form-control"
+                      type="text"
+                      onChange={handleChange}
+                    />{" "}
+                  </div>
+                  <div className="form-group">
+                    <input
+                      name="company"
+                      placeholder="Company Name"
+                      value={formData.company}
+                      size="40"
+                      className="form-control"
+                      type="text"
+                      onChange={handleChange}
+                    />{" "}
+                  </div>
 
-                    <div className="form-group">
-                      <textarea
-                        name="data[User][message]"
-                        placeholder="Your Message*"
-                        className="form-control required"
-                        id="UserMessage"
-                      ></textarea>
+                  <div className="form-group">
+                    <textarea
+                      name="message"
+                      placeholder="Your Message*"
+                      size="40"
+                      value={formData.message}
+                      className={`form-control required ${error.message ? 'fieldRequired' : ''}`}                      type="text"
+                      onChange={handleChange}
+                    ></textarea>{" "}
+                  </div>
+                  
+                  <div className="form-group-google">
+                    <ReCAPTCHA
+                    ref={recaptchaRef}
+                      key={recaptchaKey}
+                      sitekey={recaptchaKey}
+                      onChange={onRecaptchaChange}
+                    />
+                    <div className="gcpc FormError recaptchaError" id="captcha_msg">
+                      {error.recaptchaerror}
                     </div>
-                    <div className="form-group">
-                      <div id="recaptchaq"></div>
-                    </div>
-                    <div id="captcha_msg_contact2"></div>
-                    <div className="form-group">
-                      <div
-                        className="display_success_message"
-                        id="quote1_success_message"
-                      ></div>
-                      <div
-                        className="display_error_message"
-                        id="quote1_error_message"
-                      ></div>
-                    </div>
-                    <div className="form-group">
-                      <input
-                        id="submitquote"
-                        title="Submit"
-                        className="btn  btn-primary btn-block"
-                        type="submit"
-                        value="Submit"
-                      />
-                    </div>
-                  </form>
+                  </div>
+
+                  <div id="successMessage" className="text-success fw-bold successMessage"></div>
+
+                  <div className="form-group">
+                    
+                    <button className="btn btn-primary btn-block" onClick={submitQuoteForm}>Submit</button>
+                  </div>
+                </form>
                 </div>
               </div>
             </div>

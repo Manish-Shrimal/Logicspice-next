@@ -9,10 +9,29 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/services`).then((res) =>
+  const product = await fetch(`${MetadataApi}/services`,{
+    cache: "no-store",
+  }).then((res) =>
     res.json()
   );
   // console.log(product)
+
+  let schemaOrg = null;
+  if (product?.data?.schema) {
+    console.log("from if of udemy-clone", product.data.schema);
+    const cleanedText = product.data.schema
+      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, "") // Remove \n (newline)
+      .replace(/\\r/g, "") // Remove \r (carriage return)
+      .replace(/\\+/g, "") // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ""); 
+
+    try {
+      schemaOrg = JSON.parse(cleanedText); // Parse it as JSON if necessary
+    } catch (error) {
+      console.error("Error parsing schemaOrg JSON:", error);
+    }
+  }
 
   // Return metadata
   return {
@@ -34,7 +53,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: product.data.schema && product.data.schema,
+    schemaOrg: schemaOrg || null,
   };
 }
 

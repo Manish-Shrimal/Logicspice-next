@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/digital-marketing`).then((res) =>
+  const product = await fetch(`${MetadataApi}/digital-marketing`,{
+    cache: "no-store",
+  }).then((res) =>
     res.json()
   );
   // console.log(product)

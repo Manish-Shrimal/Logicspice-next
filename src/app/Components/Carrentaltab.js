@@ -188,7 +188,6 @@ const Carrentaltab = () => {
                 }`}
                 id="tab7"
               >
-
                 <div>
                   <Slider {...settings}>
                     <div className="SliderMainBx">
@@ -294,51 +293,41 @@ const Carrentaltab = () => {
                       description="Rental Owners will have an interactive dashboard from where they can view their cars and requests."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/push-notification.png"
-                      alt="Push Notification"
-                      title="Push Notification"
-                      description="Rental Owners will receive push notifications whenever there is a booking request or booking confirmation."
+                      src="/img/customsolutions/dashboard-statistics.png"
+                      alt="Dashboard Statistics"
+                      title="Dashboard Statistics"
+                      description="Rental Owners can see the statistics like no. of cars, no. of requests etc."
                     />
                   </div>
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/Availability-Management.png"
-                      alt="Availability Management"
-                      title="Availability Management"
-                      description="Rental Owners can manage the availability of different cars listed by them so as to avoid confusion."
+                      src="/img/customsolutions/notifications-emails.png"
+                      alt="Notifications & Emails"
+                      title="Notifications & Emails"
+                      description="Rental Owners can receive Notifications and emails regarding the requests on the cars."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/rating-and-feedback.png"
+                      src="/img/customsolutions/manage-availability.png"
                       alt="Rating And Feedback"
                       title="Rating And Feedback"
-                      description="Rental Owners can view the rating and feedback provided by the customers for the cars listed by them."
+                      description="Rental Owners can easily manage the availability of the cars that they have posted for rent."
                     />
-                    <FeatureDetail
-                      src="/img/customsolutions/track-earnings.png"
-                      alt="Track Earnings"
-                      title="Track Earnings"
-                      description="Rental Owners can track their earnings made from different cars listed by them on the platform."
-                    />
+                    
                   </div>
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/secure-payment.png"
-                      alt="Secure Payment"
-                      title="Secure Payment"
-                      description="Rental Owners will be paid through secure payment methods integrated with the platform."
+                      src="/img/customsolutions/Booking-Details.png"
+                      alt="booking details"
+                      title="Booking details"
+                      description="Rental Owners can view their booking history in one place"
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/transaction-history.png"
-                      alt="Transaction History"
-                      title="Transaction History"
-                      description="Rental Owners can view their transaction history and all the payments received by them."
+                      src="/img/customsolutions/track-vehicle-location.png"
+                      alt="Track Vehicle Location"
+                      title="Track Vehicle Location"
+                      description="Owner can track their vehicle at real time, past time or present time."
                     />
-                    <FeatureDetail
-                      src="/img/customsolutions/profile-management.png"
-                      alt="Profile Management"
-                      title="Profile Management"
-                      description="Rental Owners can maintain their profile by editing their personal and contact details."
-                    />
+                    
                   </div>
                 </div>
               </div>
@@ -354,7 +343,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/book-a-car.jpg"
+                        src="/img/customsolutions/care-request.jpg"
                         alt="book-a-car"
                       />
                     </div>
@@ -362,7 +351,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/booking-confirm.jpg"
+                        src="/img/customsolutions/track-ehicle-ocation.jpg"
                         alt="booking-confirm"
                       />
                     </div>
@@ -370,7 +359,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/car-detail.jpg"
+                        src="/img/customsolutions/manage-car.jpg"
                         alt="car-detail"
                       />
                     </div>
@@ -378,7 +367,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/search-result.jpg"
+                        src="/img/customsolutions/manage-locations.jpg"
                         alt="search-result"
                       />
                     </div>
@@ -421,83 +410,63 @@ const Carrentaltab = () => {
                 <div className="row">
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/interactive-dashboard.png"
-                      alt="Interactive Dashboard"
-                      title="Interactive Dashboard"
-                      description="Admin will have an interactive dashboard from where they can view all the rental cars and requests."
+                      src="/img/customsolutions/configuration.png"
+                      alt="Configuration"
+                      title="Configuration"
+                      description="Admin can configure the app/website through the configuration section."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/push-notification.png"
-                      alt="Push Notification"
-                      title="Push Notification"
-                      description="Admin will receive push notifications whenever there is a booking request or booking confirmation."
+                      src="/img/customsolutions/customer-management.png"
+                      alt="Customer Management"
+                      title="Customer Management"
+                      description="Admin can manage the list of customers and add/edit/delete them"
                     />
-                    <FeatureDetail
-                      src="/img/customsolutions/availability-management.png"
-                      alt="Availability Management"
-                      title="Availability Management"
-                      description="Admin can manage the availability of different cars listed by them so as to avoid confusion."
-                    />
+                   
                   </div>
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/rating-and-feedback.png"
-                      alt="Rating And Feedback"
-                      title="Rating And Feedback"
-                      description="Admin can view the rating and feedback provided by the customers for the cars listed by them."
+                      src="/img/customsolutions/rental-owner-management.png"
+                      alt="Rental Owner Management"
+                      title="Rental Owner Management"
+                      description="Admin can manage the list of rental owners and add/edit/delete them."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/track-earnings.png"
-                      alt="Track Earnings"
-                      title="Track Earnings"
-                      description="Admin can track their earnings made from different cars listed by them on the platform."
+                      src="/img/customsolutions/statistics.png"
+                      alt="Statistics"
+                      title="Statistics"
+                      description="Admin can see the statistics on the dashboard which would include the total customers, total rental owners, total booking requests etc"
                     />
-                    <FeatureDetail
-                      src="/img/customsolutions/secure-payment.png"
-                      alt="Secure Payment"
-                      title="Secure Payment"
-                      description="Admin will be paid through secure payment methods integrated with the platform."
-                    />
+                    
                   </div>
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/transaction-history.png"
-                      alt="Transaction History"
-                      title="Transaction History"
-                      description="Admin can view their transaction history and all the payments received by them."
+                      src="/img/customsolutions/vehicle-management.png"
+                      alt="Vehicle Management"
+                      title="Vehicle Management"
+                      description="Admin can manage the list of brand and model of cars that a rental owner selects while posting the car."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/profile-management.png"
-                      alt="Profile Management"
-                      title="Profile Management"
-                      description="Admin can maintain their profile by editing their personal and contact details."
+                      src="/img/customsolutions/transaction-management.png"
+                      alt="Transaction Managementt"
+                      title="Transaction Management"
+                      description="Admin can view the list of transactions that took place over the website/app."
                     />
-                    <FeatureDetail
-                      src="/img/customsolutions/social-media-login.png"
-                      alt="Social Media Login"
-                      title="Social Media Login"
-                      description="Admin can sign up/login easily using social media accounts like Facebook and Google."
-                    />
+                    
                   </div>
                   <div className="col-sm-3">
                     <FeatureDetail
-                      src="/img/customsolutions/account-verification.png"
-                      alt="Account Verification"
-                      title="Account Verification"
-                      description="All the Admin will have to be verified by the admin before they can login to the websites."
+                      src="/img/customsolutions/content-management.png"
+                      alt="Content Management"
+                      title="Content Management"
+                      description="Admin can easily manage the static content of the website pages."
                     />
                     <FeatureDetail
-                      src="/img/customsolutions/rental-car-management.png"
-                      alt="Rental Car Management"
-                      title="Rental Car Management"
-                      description="Admin can maintain the list of cars they have uploaded and can add or remove them."
+                      src="/img/customsolutions/review-management.png"
+                      alt="Review Management"
+                      title="Review Management"
+                      description="Admin can view a list of reviews that were given and delete them if they find it inappropriate."
                     />
-                    <FeatureDetail
-                      src="/img/customsolutions/rental-request-management.png"
-                      alt="Rental Request Management"
-                      title="Rental Request Management"
-                      description="Admin can manage the requests received by them on different cars they have added."
-                    />
+                    
                   </div>
                 </div>
               </div>
@@ -507,13 +476,13 @@ const Carrentaltab = () => {
                 }`}
                 id="tab7"
               >
-                 <div>
+                <div>
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/book-a-car.jpg"
+                        src="/img/customsolutions/vehicle-management.jpg"
                         alt="book-a-car"
                       />
                     </div>
@@ -521,7 +490,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/booking-confirm.jpg"
+                        src="/img/customsolutions/customer-managment.jpg"
                         alt="booking-confirm"
                       />
                     </div>
@@ -529,7 +498,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/car-detail.jpg"
+                        src="/img/customsolutions/rental-owner-management.jpg"
                         alt="car-detail"
                       />
                     </div>
@@ -537,7 +506,7 @@ const Carrentaltab = () => {
                       <Image
                         width={1500}
                         height={100 / (100 / 100)}
-                        src="/img/customsolutions/search-result.jpg"
+                        src="/img/customsolutions/statistics.jpg"
                         alt="search-result"
                       />
                     </div>
@@ -553,7 +522,7 @@ const Carrentaltab = () => {
 };
 
 const FeatureDetail = ({ src, alt, title, description }) => (
-  <div className="details_features_wrp">
+  <div className="details_features_wrp" style={{ marginBottom: "20px" }}>
     <div className="details_features">
       <div className="icon_round">
         <Image width={60} height={100} src={src} alt={alt} />

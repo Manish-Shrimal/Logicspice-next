@@ -65,10 +65,10 @@ const Page = () => {
                 <div className="clearfix"></div>
                 <div className="portfolio_button">
                   <Link
-                    href="#"
+                    href="/company/portfolio"
                     id=""
                     className="btn btn-primary"
-                    onClick={() => openEnquiryModal()}
+                    
                   >
                     <span>Portfolio</span>
                   </Link>
@@ -1140,7 +1140,7 @@ const Page = () => {
                 <div className="more_btn more_btnrevercebn">
                   <Link
                     className="btn btn-primary"
-                    href="https://www.logicspice.com/case-study/"
+                    href="/case-studies"
                   >
                     <span>Featured Case Studies</span>
                   </Link>

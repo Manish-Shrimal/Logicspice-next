@@ -10,8 +10,11 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../../resposive.css";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -21,12 +24,17 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  const openModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <Image width={100} height={100}
+        <Image
+          width={100}
+          height={100}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -62,7 +70,13 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image width={100} height={100} src="/img/jobboard/stars.png" alt="stars" className="" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/jobboard/stars.png"
+                alt="stars"
+                className=""
+              />
               <p>12 Reviews</p>
             </div>
             <a className="btn btn-primary" href="#">
@@ -108,7 +122,9 @@ const Page = () => {
               <div className="col-md-6">
                 <div className="media">
                   <div className="media-left">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       className="media-object"
                       src="/img/leadgeneration/unique_signupicon.png"
                       alt="Easy Configuration"
@@ -126,7 +142,9 @@ const Page = () => {
               <div className="col-md-6">
                 <div className="media">
                   <div className="media-left">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       className="media-object"
                       src="/img/leadgeneration/great_profile_managment_icon.png"
                       alt="Easy Login/Registration"
@@ -145,7 +163,9 @@ const Page = () => {
               <div className="col-md-6">
                 <div className="media">
                   <div className="media-left">
-                    <Image width={100} height={100}
+                    <Image
+                      width={100}
+                      height={100}
                       className="media-object"
                       src="/img/leadgeneration/fully_responsive_icon.png"
                       alt="Secure login"
@@ -164,7 +184,9 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image width={100} height={100}
+                      <Image
+                        width={100}
+                        height={100}
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Combined Integration"
@@ -228,14 +250,24 @@ const Page = () => {
                       <a
                         className="page-scroll btn btn-default"
                         href="javascript:void(0);"
+                        onClick={openModal}
                       >
                         <span>
-                          <Image width={100} height={100}
+                          <Image
+                            width={30}
+                            height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
                           />
                         </span>{" "}
                         Enquire Now
+                        {
+                          <Enquirymodal
+                            modalStatus={showModal}
+                            toggle={openModal}
+                            title="Social Network Integration For Android"
+                          />
+                        }
                       </a>
                     </li>
                   </ul>
@@ -275,19 +307,31 @@ const Page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100} src="/img/jobboard/tech_java_icon.png" alt="Java" />
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/tech_java_icon.png"
+                    alt="Java"
+                  />
                 </div>
                 <div className="icntechimg_nm">Java</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100} src="/img/jobboard/andoird_icon.png" alt="Android" />
+                  <Image
+                    width={40}
+                    height={100}
+                    src="/img/jobboard/andoird_icon.png"
+                    alt="Android"
+                  />
                 </div>
                 <div className="icntechimg_nm">Android</div>
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
                   />
@@ -296,7 +340,9 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
                   />
@@ -305,7 +351,9 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image width={100} height={100}
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
                   />
@@ -325,7 +373,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -334,7 +384,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image width={100} height={100}
+                  <Image
+                    width={40}
+                    height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -584,7 +636,12 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

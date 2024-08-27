@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata({ params, searchParams }, parent) {
   try {
     // Fetch data
-    const product = await fetch(`${MetadataApi}/cakephp-development`).then(
+    const product = await fetch(`${MetadataApi}/cakephp-development`,{
+      cache: "no-store",
+    }).then(
       (res) => res.json()
     );
 

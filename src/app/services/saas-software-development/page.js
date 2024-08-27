@@ -91,7 +91,10 @@ const Page = () => {
                   and services.
                 </p>
               </div>
-              <div className="btn_align aos-init aos-animate" data-aos="fade-up">
+              <div
+                className="btn_align aos-init aos-animate"
+                data-aos="fade-up"
+              >
                 <div className="btn btn-primary" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -436,12 +439,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12">
               <h2 className="sas12">Enquiry Now</h2>
-              <a
-                id=""
-                data-toggle="modal"
-                data-target="#contactFix"
-                className="btn btn-primary sas13"
-              >
+              <a id="" className="btn btn-primary sas13" onClick={toggleModal}>
                 Get a Free Quote
               </a>
             </div>

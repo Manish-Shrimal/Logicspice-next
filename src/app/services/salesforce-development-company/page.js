@@ -1,23 +1,30 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
+import Navbar from "@/app/Components/Navbar";
 import "@/app/services/services.css";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import "../../resposive.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Domain from "@/app/BaseAPI/Domain";
+import "@/app/services/services.css";
 
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const recaptchaRef = useRef(null);
-
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+
   const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -26,10 +33,10 @@ const Page = () => {
     company: "",
     phone_no: "",
     message: "",
-    post_url: Domain + "/services/website-design",
-    product_name: "Website design",
-    post_slug: "/services/website-design"
-  })
+    post_url: Domain + "/services/salesforce-development-company",
+    product_name: "Salesforce development company",
+    post_slug: "/services/salesforce-development-company",
+  });
 
   const [error, setError] = useState({
     name: "",
@@ -37,12 +44,6 @@ const Page = () => {
     message: "",
     recaptchaerror: "",
   });
-
-  const openModal = () => {
-    console.log(showModal);
-
-    setShowModal(!showModal);
-  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -56,8 +57,6 @@ const Page = () => {
         recaptchaerror: "",
       }));
     }
-
-    
   };
 
   const handleChange = (e) => {
@@ -69,41 +68,40 @@ const Page = () => {
     setError((prevError) => ({
       ...prevError,
       [name]: "",
-    }))
-  }
-
+    }));
+  };
 
   const submitQuoteForm = async (e) => {
     e.preventDefault();
-  
+
     const newErrors = {};
-  
+
     if (!isRecaptchaVerified) {
       newErrors.recaptchaerror = "Please verify that you are not a robot";
     }
-  
+
     if (formData.name === "") {
       newErrors.name = "Please enter your name";
     }
-  
+
     if (formData.email === "") {
       newErrors.email = "Please enter your email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
-  
+
     if (formData.message === "") {
       newErrors.message = "Please enter your message";
     }
-  
+
     if (Object.keys(newErrors).length > 0) {
       setError(newErrors);
       return;
     }
-  
+
     try {
       const response = await axios.post(BaseAPI + "/pages/quote", formData);
-  
+
       if (response.data.status === 200) {
         setFormData({
           name: "",
@@ -112,82 +110,62 @@ const Page = () => {
           phone_no: "",
           message: "",
         });
-  
+
         if (recaptchaRef.current) {
           recaptchaRef.current.reset();
         }
-  
-        document.querySelector("#successMessage").innerHTML = "Request message sent successfully";
+
+        document.querySelector("#successMessage").innerHTML =
+          "Request message sent successfully";
       }
     } catch (error) {
       console.log(error.message);
     }
   };
-  
-  
   return (
     <>
-      <NavBar />
-
+      <Navbar />
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
           <Image
-            width={1000}
+            width={1500}
             height={100 / (500 / 500)}
-            src="/img/websitedesign/web-designing-service.jpg"
-            alt="web design service"
+            src="/img/services/salesforce-banner.png"
+            alt="Professional SalesForce Platform Development Services"
           />
         </div>
-
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-md-8">
-              <h1 className="main--title">Website Design Services</h1>
               <p>
-                Web Design Company caters to enterprises and managements with
-                cost effective and professional personalized web designing
-                services. The custom web designing services will propel your
-                business towards new directions.{" "}
+                Salesforce provides end to end solutions to organisations to
+                automate their business workflow. It is a cloud based
+                application or software, developed to help your sales team to
+                decide their strategies to improve the sales by accessing the
+                centralised customer&apos;s and other information.{" "}
+              </p>
+              <h2>Salesforce Application Development</h2>
+              <p>
+                We at Logicspice, perceive your business requirements and help
+                you to automate your business functionality. We, therefore
+                develop a custom salesforce CRM software with our experienced,
+                trained, certified developers to improve the value of your
+                business.
               </p>
               <p>
-                Logicspice is one of the most preferred service providers for IT
-                solutions. We have a record of serving to more than 1286 clients
-                and furnished them with more than 1844 successful projects
-                globally. We have more than 50 experts who have specialized in
-                constructing and programming websites with insightful designs
-                that are both alluring and comprehensive.
-              </p>
-
-              <h2>Professional Website Designing</h2>
-
-              <p>
-                If you are searching for a trustworthy web designing company
-                then Logicspice will make your dreams come true. It has been
-                accredited with accomplishments in over 15 countries around the
-                globe. An enterprise requires a functional and an exceptional
-                web design when its business depends on one. Our website
-                designing services&sbquo;{" "}
-                <Link
-                  href="/services/website-redesign"
-                  target="_blank"
-                  className="WebsiteTxtLink"
-                >
-                  website redesign service
-                </Link>{" "}
-                will give you just that at affordable prices. Our clients have
-                been reported to comment on our services with 100% satisfaction
-                and genuine procurements.
+                We provides the advance Salesforce solutions, which will help
+                you to developing the strategies for growing your overall sales.
+                It&apos;s the integration of people, system, strategies,
+                processes, sales, customer and more related business entity. It
+                will helps sales team to execute their strategies.{" "}
               </p>
               <p>
-                {" "}
-                At Logicspice&sbquo; we believe in the ethos which supports the
-                cause of our clients. Our developers are professional and
-                brilliant in their respective fields of work. They make sure
-                that the client does not have to make any extra effort. Our
-                services are constantly under supervision and improvisation in
-                order to satisfy the dynamic needs of our clients. We provide{" "}
-                <b>web design service</b> which is quite distinct from any other
-                IT solution provider.
+                Our Salesforce CRM can help you to track on your client&apos;s
+                information from anywhere and anytime. So you can quickly
+                answers the customer&apos;s queries and enquiries to move sales
+                forward. Get the detailed business reports, will help you to
+                make your decision smart. We make sure its security and workflow
+                is maintained through the different platform.{" "}
               </p>
             </div>
             <div className="col-sm-6 col-md-4">
@@ -200,7 +178,9 @@ const Page = () => {
                       placeholder="Your Full Name*"
                       value={formData.name}
                       size="40"
-                      className={`form-control required ${error.name ? 'fieldRequired' : ''}`}                      type="text"
+                      className={`form-control required ${
+                        error.name ? "fieldRequired" : ""
+                      }`}
                       id="UserName"
                       onChange={handleChange}
                     />{" "}
@@ -211,7 +191,10 @@ const Page = () => {
                       placeholder="Email*"
                       value={formData.email}
                       size="40"
-                      className={`form-control required ${error.email ? 'fieldRequired' : ''}`}                      type="text"
+                      className={`form-control required ${
+                        error.email ? "fieldRequired" : ""
+                      }`}
+                      type="text"
                       onChange={handleChange}
                     />{" "}
                   </div>
@@ -244,28 +227,41 @@ const Page = () => {
                       placeholder="Your Message*"
                       size="40"
                       value={formData.message}
-                      className={`form-control required ${error.message ? 'fieldRequired' : ''}`}                      type="text"
+                      className={`form-control required ${
+                        error.message ? "fieldRequired" : ""
+                      }`}
+                      type="text"
                       onChange={handleChange}
                     ></textarea>{" "}
                   </div>
-                  
+
                   <div className="form-group-google">
                     <ReCAPTCHA
-                    ref={recaptchaRef}
+                      ref={recaptchaRef}
                       key={recaptchaKey}
                       sitekey={recaptchaKey}
                       onChange={onRecaptchaChange}
                     />
-                    <div className="gcpc FormError recaptchaError" id="captcha_msg">
+                    <div
+                      className="gcpc FormError recaptchaError"
+                      id="captcha_msg"
+                    >
                       {error.recaptchaerror}
                     </div>
                   </div>
 
-                  <div id="successMessage" className="text-success fw-bold successMessage"></div>
+                  <div
+                    id="successMessage"
+                    className="text-success fw-bold successMessage"
+                  ></div>
 
                   <div className="form-group">
-                    
-                    <button className="btn btn-primary btn-block" onClick={submitQuoteForm}>Submit</button>
+                    <button
+                      className="btn btn-primary btn-block"
+                      onClick={submitQuoteForm}
+                    >
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>
@@ -273,85 +269,53 @@ const Page = () => {
           </div>
         </div>
       </section>
-
       <section className="d-services d-services1">
         <div className="container">
-          <h2>Web Design Services </h2>
+          <h2>SalesForce Platform Development Services </h2>
           <div className="row">
             <div className="col-sm-6 col-md-6">
               <div className="service_box Application1 ">
-                <h3>Static Website Design</h3>
+                <h3>Sales & Service Cloud Solutions</h3>
                 <p>
                   {" "}
-                  We offer static website design services which is
-                  interactive&sbquo; appealing and creative. These websites load
-                  faster and launch at a quick rate.
+                  We provide custom applications development and execution
+                  services for Salesforce Sales and Service Cloud solutions to
+                  enhance overall platform.
                 </p>
               </div>
               <div className="service_box Application2">
-                <h3>Graphic Designs</h3>
+                <h3>Third Party Application Integration</h3>
                 <p>
-                  Image speaks louder than words. Our graphic designs get
-                  attention and define business in best possible way.
-                </p>
-              </div>
-              <div className="service_box Application3">
-                <h3>Responsive Web Designs</h3>
-                <p>
-                  We make the website effective and easy to use on any device.
-                  Our web designers migrate a mobile enable website into mobile
-                  responsive website.
-                </p>
-              </div>
-              <div className="service_box Application1 ">
-                <h3>Web Portal Designs</h3>
-                <p>
-                  Our web portal design differ with the kind of business. We
-                  include all the essential features while developing web portal
-                  for your business.
+                  We advise instant integration of SalesForce development
+                  services with the third party updated applications.
                 </p>
               </div>
             </div>
             <div className="col-sm-6 col-md-6">
               <div className="service_box Application4">
-                <h3>Dynamic Website Designs</h3>
+                <h3>Fields Service Impetuous</h3>
                 <p>
-                  We offer dynamic website with easy and fast database. Our
-                  developers create dynamic website with advance concept which
-                  can help your business to succeed.
+                  We provide consultation and execution services to improve
+                  field operation and improve front and back end communication
+                  using the mobile solution that delivers real-time association
+                  with access.
                 </p>
               </div>
               <div className="service_box Application5">
-                <h3>Custom Web Design Company</h3>
+                <h3>Perform Justification</h3>
                 <p>
-                  Our developers are aware of our principles and hence are able
-                  to render custom designs for every client as per their
-                  instructions and choices.
-                </p>
-              </div>
-              <div className="service_box Application6">
-                <h3>Corporate Website Design</h3>
-                <p>
-                  Extremely sensitive and specific demands of corporate
-                  enterprises are also fulfilled by our website designing
-                  services.
-                </p>
-              </div>
-              <div className="service_box Application4">
-                <h3>Template Designing</h3>
-                <p>
-                  Our template design services focus on the client details and
-                  customized it to meet requirement of business.
+                  Applying the Salesforces platform competence Logicspice has
+                  accelerators and provides comprehensive industry specific
+                  platform rationalization services.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section className="d-features">
         <div className="container">
-          <h2>Our Web Design Process</h2>
+          <h2>Why Go For SalesForce Development?</h2>
 
           <div className="row">
             <div className="col-sm-6 col-md-4">
@@ -362,10 +326,10 @@ const Page = () => {
                   src="/img/websitedesign/lara_icon1.png"
                   alt="icon1"
                 />
-                <h3>Strategy </h3>
+                <h3>Cloud based </h3>
                 <p>
-                  Our major concern is to identify your goal for integrating
-                  successful web design strategy.
+                  Salesforce services are cloud based, anyone can access the
+                  services and data from remote locations.
                 </p>
               </div>
             </div>
@@ -377,10 +341,9 @@ const Page = () => {
                   src="/img/websitedesign/lara_icon6.png"
                   alt="icon2"
                 />
-                <h3>Create Wireframes</h3>
+                <h3>Easy to Customize</h3>
                 <p>
-                  After gathering all the required information we design sketch
-                  and get the content written.
+                  It can be customized easily as compared to other development.
                 </p>
               </div>
             </div>
@@ -392,10 +355,10 @@ const Page = () => {
                   src="/img/websitedesign/lara_icon5.png"
                   alt="icon3"
                 />
-                <h3>Create Mockup</h3>
+                <h3>Easy to integrate</h3>
                 <p>
-                  We create complete home page mockup with images&sbquo; content
-                  & elements.
+                  Easy to integrate in your present CRM, Database Management,
+                  System Analytics and other.
                 </p>
               </div>
             </div>
@@ -408,10 +371,11 @@ const Page = () => {
                   src="/img/websitedesign/lara_icon4.png"
                   alt="icon4"
                 />
-                <h3>Presentation</h3>
+                <h3>Reporting dashboard</h3>
                 <p>
-                  We present our home page mockup with complete explanation &
-                  concept.
+                  Salesforce software have analytics and reporting dashboard to
+                  generate automatic report . Help to forecast the growth of the
+                  business.
                 </p>
               </div>
             </div>
@@ -423,10 +387,9 @@ const Page = () => {
                   src="/img/websitedesign/lara_icon3.png"
                   alt="icon5"
                 />
-                <h3>Support</h3>
+                <h3>Cost effective</h3>
                 <p>
-                  We do the required changes in the mock up if you ask us to do
-                  so.
+                  SalesForce can increases the revenues and reduces the cost.
                 </p>
               </div>
             </div>
@@ -438,111 +401,94 @@ const Page = () => {
                   src="/img/websitedesign/lara_icon2.png"
                   alt="icon6"
                 />
-                <h3>Approval</h3>
-                <p>
-                  After your approval&sbquo; we proceed to the next step which
-                  is web development.
-                </p>
+                <h3>Easy integration</h3>
+                <p>Support third party app or software integration.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section className="d-choose">
         <div className="container">
-          <h2>Why Choose Logicspice for Web Designing Service?</h2>
-
+          <h2>Why Choose Logicspice For SalesForce Services ?</h2>
           <div className="row">
             <div className="col-sm-6 col-md-6 text-right">
-              <div className="libraries" data-aos="fade-right">
-                <h3>One Stop Solution</h3>
-                <p>
-                  We offer complete design & development solution along with the
-                  business strategy&sbquo; all under one roof.
-                </p>
+              <div
+                className="libraries aos-init aos-animate"
+                data-aos="fade-right"
+              >
+                <h3>
+                  We have a team of experienced &amp; expert developers and
+                  programmers.
+                </h3>
               </div>
             </div>
-
             <div className="col-sm-6 col-md-6">
-              <div className="libraries" data-aos="fade-left">
-                <h3>Support & Maintenance</h3>
-                <p>
-                  You can contact with us in our working hours for any
-                  query&sbquo; we are ready to serve you.
-                </p>
+              <div
+                className="libraries aos-init aos-animate"
+                data-aos="fade-left"
+              >
+                <h3>
+                  Our clients are fully satisfied with our SalesForce services.
+                </h3>
               </div>
             </div>
-
             <div className="col-sm-6 col-md-6 text-right">
-              <div className="libraries" data-aos="fade-right">
-                <h3>Experience in same industry</h3>
-                <p>
-                  We have been working in the same industry for 12+ years and
-                  have a better understanding and approach for work.
-                </p>
+              <div
+                className="libraries aos-init aos-animate"
+                data-aos="fade-right"
+              >
+                <h3>
+                  We work with productivity, efficiency, save time &amp; cost
+                  and deliver quality work.
+                </h3>
               </div>
             </div>
-
             <div className="col-sm-6 col-md-6">
-              <div className="libraries" data-aos="fade-left">
-                <h3>Minimum Loading Time</h3>
-                <p>
-                  While designing website&sbquo; we try to minimize loading time
-                  as much as possible for richer user experience.
-                </p>
+              <div
+                className="libraries aos-init aos-animate"
+                data-aos="fade-left"
+              >
+                <h3>
+                  Our motto is always satisfy our client 100% with our softwares
+                  and services.
+                </h3>
               </div>
             </div>
-
             <div className="col-sm-6 col-md-6  text-right">
-              <div className="libraries" data-aos="fade-right">
-                <h3>After sales support</h3>
-                <p>
-                  We offer 1 month free support after delivering project to you.
-                </p>
+              <div
+                className="libraries aos-init aos-animate"
+                data-aos="fade-right"
+              >
+                <h3>
+                  We are also very peculiar about the security feature and make
+                  use of latest SalesForce development tools for enhanced
+                  security.
+                </h3>
               </div>
             </div>
-
             <div className="col-sm-6 col-md-6">
-              <div className="libraries" data-aos="fade-left">
-                <h3>SEO Friendly Websites</h3>
-                <p>
-                  Our developed websites are seo optimized so it can rank better
-                  in google.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-6  text-right">
-              <div className="libraries" data-aos="fade-right">
-                <h3>Integration with third party API</h3>
-                <p>
-                  We integrate your website with third party API on our end to
-                  serve you better.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-sm-6 col-md-6">
-              <div className="libraries" data-aos="fade-left">
-                <h3>Unlimited Revision for home page design</h3>
-                <p>
-                  We offer unlimited revision for home page until client
-                  satisfaction.
-                </p>
+              <div
+                className="libraries aos-init aos-animate"
+                data-aos="fade-left"
+              >
+                <h3>
+                  We provides high level of customization support and faster
+                  development.
+                </h3>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="quoue_box_full_sec">
+      <section className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
             <Image
-              width={50}
+              width={100}
               height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
@@ -552,8 +498,7 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </div>
-
+      </section>
       <Footer />
     </>
   );

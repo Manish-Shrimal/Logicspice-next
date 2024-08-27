@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/devops-development`,{
+  const product = await fetch(`${MetadataApi}/salesforce-development-company`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
@@ -38,7 +38,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/devops-development`,
+      canonical: `${Domain}/services/salesforce-development-company`,
     },
     robots: {
       index: true,
@@ -51,16 +51,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    // schemaOrg: product.data.schema && JSON.parse(product.data.schema),
     schemaOrg: schemaOrg || null,
-
   };
 }
 
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
- 
+  // console.log(metadata);
 
   return (
     <html lang="en">

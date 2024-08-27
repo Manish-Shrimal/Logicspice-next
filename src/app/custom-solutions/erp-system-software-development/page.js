@@ -483,6 +483,7 @@ const Page = () => {
           </ul>
         </div>
       </section>
+      <div className="clearfix"></div>
       <div className="support_logic">
         <div className="container">
           <h2>What Support You Will Get ?</h2>
@@ -592,7 +593,7 @@ const Page = () => {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Custom Elearning System Development"
+                    title="Auction System Custom Development"
                   />
                 }
               </div>

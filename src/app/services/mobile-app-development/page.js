@@ -18,7 +18,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 8,
-    slidesToScroll: 8,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
   };
@@ -28,7 +28,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
   };
@@ -215,8 +215,8 @@ const Page = () => {
             <div className="col-sm-12 col-md-9 position-relative">
               <div className="mobil-bg_h">
                 <Image
-                  width={200}
-                  height={100}
+                  width={270}
+                  height={100 / (100 / 100)}
                   alt="mobil-bg"
                   src="/img/mobileappdevelopment/mobil-bg_h.png"
                 />
@@ -1324,7 +1324,7 @@ const Page = () => {
                 <div className="more_btn more_btnrevercebn">
                   <Link
                     className="btn btn-primary"
-                    href="https://www.logicspice.com/case-study/"
+                    href="/case-studies/"
                   >
                     <span>Featured Case Studies</span>
                   </Link>

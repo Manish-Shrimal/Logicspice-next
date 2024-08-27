@@ -60,7 +60,7 @@ const Page = () => {
                 className="my-breadcrumb my-custom-breadcrumb"
                 data-aos="fade-up"
               >
-                <ol className="breadcrumb">
+                <ol className="breadcrumb" style={{display : "flex", justifyContent : "center"}}>
                   <li className="breadcrumb-item">
                     <Link href="/">Home</Link>
                   </li>

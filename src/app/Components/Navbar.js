@@ -1,21 +1,12 @@
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../globals.css";
 import "../resposive.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-// import {
-//   AppBar,
-//   Toolbar,
-//   IconButton,
-//   Typography,
-//   Menu,
-//   MenuItem,
-//   Container,
-//   Button,
-// } from '@mui/material';
+
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 
@@ -33,9 +24,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+
   return (
     <>
-      <nav className="navbar navbar-light header home-header navbar-expand-lg navbar-default mega-menu">
+      <nav className="navbar navbar-light header home-header navbar-expand-lg navbar-default mega-menu ">
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">
@@ -89,7 +82,6 @@ const Navbar = () => {
                   <div className="grid-demo">
                     <div className="row menu-one">
                       <div className="col-sm-6">
-                       
                         <ul>
                           <li
                             className={
@@ -785,227 +777,122 @@ const Navbar = () => {
                 <Link href="https://blog.logicspice.com/">blog</Link>
               </li>
               <li>
-              <div className="contact_detail_top">
-              <ul className="con_d">
-                <li className="logic_contact">
-                  <a
-                    href="#"
-                    onMouseEnter={() => setDropdown5(true)}
-                    onMouseLeave={() => setDropdown5(false)}
-                  >
-                    <i className="fa fa-phone"></i> <b className="caret"></b>
-                  </a>
-                  <div
-                    className={`sub-contact ${dropdown5 ? "show" : ""}`}
-                    aria-labelledby=""
-                    onMouseEnter={() => setDropdown5(true)}
-                    onMouseLeave={() => setDropdown5(false)}
-                  >
-                    <div className="">
-                      <h2>Connect With Us</h2>
-                      <div className="sales_enquiry">
-                        <p>For Sales Inquiry</p>
-                        <ul className="sales_contact">
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon2.png"
-                              alt="Logicspice Contact No. - USA"
-                            />
-                            <a href="tel:+1-616-929-4064">+1-616-929-4064</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon1.png"
-                              alt="Logicspice Contact No. - UK"
-                            />
-                            <a href="tel:+44782-404-8483">+44782-404-8483</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon3.png"
-                              alt="Logicspice Contact No. - India"
-                            />
-                            <a href="tel:+91-9829559922">+91-9829559922</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/skya_icon.png"
-                              alt="Logicspice Contact - Skype"
-                            />
-                            <span>logicspice</span>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/mail.png"
-                              alt="Logicspice Contact - Email"
-                            />
-                            <span>
-                              <Image
-                                width={100}
-                                height={100}
-                                src="/img/footer/logicspice-mail.svg"
-                                alt="Logicspice Contact - Email"
-                              />
-                            </span>
-                          </li>
-                        </ul>
-                        <a href="/contact-us" className="btn btn-primary">
-                          Contact Us
-                        </a>
+                <div className="contact_detail_top">
+                  <ul className="con_d">
+                    <li className="logic_contact">
+                      <a
+                        href="#"
+                        onMouseEnter={() => setDropdown5(true)}
+                        onMouseLeave={() => setDropdown5(false)}
+                      >
+                        <i className="fa fa-phone"></i>{" "}
+                        <b className="caret"></b>
+                      </a>
+                      <div
+                        className={`sub-contact ${dropdown5 ? "show" : ""}`}
+                        aria-labelledby=""
+                        onMouseEnter={() => setDropdown5(true)}
+                        onMouseLeave={() => setDropdown5(false)}
+                      >
+                        <div className="">
+                          <h2>Connect With Us</h2>
+                          <div className="sales_enquiry">
+                            <p>For Sales Inquiry</p>
+                            <ul className="sales_contact">
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/fleg_icon2.png"
+                                  alt="Logicspice Contact No. - USA"
+                                />
+                                <a href="tel:+1-616-929-4064">
+                                  +1-616-929-4064
+                                </a>
+                              </li>
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/fleg_icon1.png"
+                                  alt="Logicspice Contact No. - UK"
+                                />
+                                <a href="tel:+44782-404-8483">
+                                  +44782-404-8483
+                                </a>
+                              </li>
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/fleg_icon3.png"
+                                  alt="Logicspice Contact No. - India"
+                                />
+                                <a href="tel:+91-9829559922">+91-9829559922</a>
+                              </li>
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/skya_icon.png"
+                                  alt="Logicspice Contact - Skype"
+                                />
+                                <span>logicspice</span>
+                              </li>
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/mail.png"
+                                  alt="Logicspice Contact - Email"
+                                />
+                                <span>
+                                  <Image
+                                    width={100}
+                                    height={100}
+                                    src="/img/footer/logicspice-mail.svg"
+                                    alt="Logicspice Contact - Email"
+                                  />
+                                </span>
+                              </li>
+                            </ul>
+                            <a href="/contact-us" className="btn btn-primary">
+                              Contact Us
+                            </a>
+                          </div>
+                          <div className="hr_enquiry">
+                            <p>For HR Inquiry</p>
+                            <ul className="sales_contact">
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/fleg_icon3.png"
+                                  alt="Logicspice Contact No. - India"
+                                />{" "}
+                                <a href="tel:+91-7727974242">+91-7727974242</a>
+                              </li>
+                              <li>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/footer/mail.png"
+                                  alt="Logicspice Contact - Email"
+                                />{" "}
+                                <span> hr@logicspice.com </span>
+                              </li>
+                            </ul>
+                            <a href="/apply-now" className="btn btn-primary">
+                              Apply Now
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                      <div className="hr_enquiry">
-                        <p>For HR Inquiry</p>
-                        <ul className="sales_contact">
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon3.png"
-                              alt="Logicspice Contact No. - India"
-                            />{" "}
-                            <a href="tel:+91-7727974242">+91-7727974242</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/mail.png"
-                              alt="Logicspice Contact - Email"
-                            />{" "}
-                            <span> hr@logicspice.com </span>
-                          </li>
-                        </ul>
-                        <a href="/apply-now" className="btn btn-primary">
-                          Apply Now
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            </li>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-
-            {/* <div className="contact_detail_top">
-              <ul className="con_d">
-                <li className="logic_contact">
-                  <a
-                    href="#"
-                    onMouseEnter={() => setDropdown5(true)}
-                    onMouseLeave={() => setDropdown5(false)}
-                  >
-                    <i className="fa fa-phone"></i> <b className="caret"></b>
-                  </a>
-                  <div
-                    className={`sub-contact ${dropdown5 ? "show" : ""}`}
-                    aria-labelledby=""
-                    onMouseEnter={() => setDropdown5(true)}
-                    onMouseLeave={() => setDropdown5(false)}
-                  >
-                    <div className="">
-                      <h2>Connect With Us</h2>
-                      <div className="sales_enquiry">
-                        <p>For Sales Inquiry</p>
-                        <ul className="sales_contact">
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon2.png"
-                              alt="Logicspice Contact No. - USA"
-                            />
-                            <a href="tel:+1-616-929-4064">+1-616-929-4064</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon1.png"
-                              alt="Logicspice Contact No. - UK"
-                            />
-                            <a href="tel:+44782-404-8483">+44782-404-8483</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon3.png"
-                              alt="Logicspice Contact No. - India"
-                            />
-                            <a href="tel:+91-9829559922">+91-9829559922</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/skya_icon.png"
-                              alt="Logicspice Contact - Skype"
-                            />
-                            <span>logicspice</span>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/mail.png"
-                              alt="Logicspice Contact - Email"
-                            />
-                            <span>
-                              <Image
-                                width={100}
-                                height={100}
-                                src="/img/footer/logicspice-mail.svg"
-                                alt="Logicspice Contact - Email"
-                              />
-                            </span>
-                          </li>
-                        </ul>
-                        <a href="/contact-us" className="btn btn-primary">
-                          Contact Us
-                        </a>
-                      </div>
-                      <div className="hr_enquiry">
-                        <p>For HR Inquiry</p>
-                        <ul className="sales_contact">
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/fleg_icon3.png"
-                              alt="Logicspice Contact No. - India"
-                            />{" "}
-                            <a href="tel:+91-7727974242">+91-7727974242</a>
-                          </li>
-                          <li>
-                            <Image
-                              width={100}
-                              height={100}
-                              src="/img/footer/mail.png"
-                              alt="Logicspice Contact - Email"
-                            />{" "}
-                            <span> hr@logicspice.com </span>
-                          </li>
-                        </ul>
-                        <a href="/apply-now" className="btn btn-primary">
-                          Apply Now
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
       </nav>

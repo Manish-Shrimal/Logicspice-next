@@ -16,6 +16,24 @@ body {
   font-style: normal;
   font-weight: normal;
 }
+
+.fieldRequired {
+  color: red !important;
+  border: 1px solid red !important;
+  
+}
+
+.fieldRequired::placeholder {
+	color: red !important;
+}
+.recaptchaError {
+	text-align: left;
+	margin-left: 0px !important;
+	margin-bottom: 10px !important;
+}
+.successMessage {
+	text-align: left !important;
+}
 .btn {
 	border-radius: 3px;
 	font-size: 16px;
@@ -3232,7 +3250,7 @@ section.new-why-choose-section.sass_title h2 span {
 	background-size: cover;
 	color: #fff;
 	float: left;
-	padding: 130px 0 180px;
+	padding: 100px 0;
 	text-align: left;
 	width: 100%;
 } 
@@ -3242,8 +3260,8 @@ section.new-why-choose-section.sass_title h2 span {
 }
 .SatisfyDemandModernBusiness1 .mobil-bg_h {
 	position: absolute;
-	top: -64px;
-	left: 417px;
+	top: -54px;
+	left: 345px;
 	width: 30%;
 }
 .SatisfyDemandModernBusiness1 .satisfied_clients_logo1 {

@@ -11,7 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
   const product = await fetch(
-    `${MetadataApi}/diwali-celebration-2`
+    `${MetadataApi}/diwali-celebration-2`,{
+      cache: "no-store",
+    }
   ).then((res) => res.json());
   // console.log(product)
   let text = product.data.schema;

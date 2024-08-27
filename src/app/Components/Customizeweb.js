@@ -43,11 +43,7 @@ const Customizeweb = () => {
             <div className="col-sm-6">
               <h3>Providing a feasible and cost effective solution</h3>
               <p>
-                At Logicspice, we believe in providing a feasible and cost
-                effective solution to match with a fast pace world. Our team
-                have specialized experts who work well in close coordination to
-                meet the technological and quality standards. We do web
-                development and
+              At Logicspice, we believe in providing a feasible and cost effective solution to match with a fast pace world. We do web development and
                 <a
                   className="inline-link"
                   href="/services/mobile-app-development/"
@@ -55,14 +51,18 @@ const Customizeweb = () => {
                   {" "}
                   mobile app development{" "}
                 </a>
-                (iPhone and Android) based on tried-and-tested subsystems that
-                work with any business class for any complex bespoke or
-                customized software development.
+                (iPhone and Android) based on tried-and-tested subsystems. In addition to our expertise in mobile and web development, we stand as a leading Laravel development company. Our dedicated
+                <a
+                  className="inline-link"
+                  href="/services/laravel-development/"
+                >
+                  {" "}
+                  Laravel app development services{" "}
+                </a>
+                offer cutting-edge solutions to enhance your web applications. Our expertise extends to crafting hybrid mobile app development & custom web app development services that elevate user experiences, ensuring robust and scalable solutions that meet the demands of the modern digital landscape.
               </p>
               <p>
-                Logicspice has been in the business since 10+ years. To know
-                more about us: who we are, what we do, how we work, our
-                corporate culture and values.
+              Logicspice has been in the business for over 18 years. To know more about us: who we are, what we do, how we work, our corporate culture and values.
               </p>
               <a
                 href="/company/about-us"

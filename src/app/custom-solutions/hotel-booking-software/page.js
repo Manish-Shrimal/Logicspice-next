@@ -281,6 +281,7 @@ const Page = () => {
                     sellerTab ? "active" : ""
                   }`}
                   onClick={() => handleSellerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a>Hotel Owner</a>
                 </li>
@@ -288,6 +289,7 @@ const Page = () => {
                   id="tab2_li"
                   className={`emplyer_app_job ddlj ${buyerTab ? "active" : ""}`}
                   onClick={() => handleBuyerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a>Customer</a>
                 </li>
@@ -295,6 +297,7 @@ const Page = () => {
                   id="tab3_li"
                   className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
                   onClick={() => handleAdminTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a>Admin Panel</a>
                 </li>

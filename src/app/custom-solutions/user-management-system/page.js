@@ -25,6 +25,13 @@ const Page = () => {
 
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
+  const [showInitialText, setShowInitialText] = useState(true); // Track if initial text and button should be displayed
+  const [showMore, setShowMore] = useState(false);
+
+  const handleReadMoreClick = () => {
+    setShowMore(true); // Show more content
+    setShowInitialText(false); // Hide initial text and button
+  };
 
   const openModal = () => {
     console.log(showModal);
@@ -83,16 +90,16 @@ const Page = () => {
                 </ul>
               </div>
               <div className="HireDevelopersBannerBtn">
-              <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
-                {
-                  <Enquirymodal
-                    modalStatus={showModal}
-                    toggle={openModal}
-                    title="Auction System Custom Development"
-                  />
-                }
-              </div>
+                <div className="btn btn-primary" onClick={openModal}>
+                  <button>Enquire Now</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Auction System Custom Development"
+                    />
+                  }
+                </div>
                 <a
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                   target="_blank"
@@ -241,9 +248,42 @@ const Page = () => {
                   user access and internal communication of users.
                 </p>
               </div>
-              <p>
-                <a id="read-more-content">Read More</a>
-              </p>
+              
+              {showInitialText && (
+                <p>
+                  <a
+                    id="read-more-content"
+                    // style={{
+                    //   cursor: "pointer",
+                    //   color: "#fff",
+                    //   border: "1px solid #fff",
+                    //   padding: "3px 20px",
+                    //   display: "inline-block",
+                    // }}
+                    onClick={handleReadMoreClick}
+                  >
+                    Read More
+                  </a>
+                </p>
+              )}
+
+              {showMore && (
+                <div style={{ color: "#fff", marginTop: "10px" }}>
+                  <p>
+                    We introduce you to the object oriented patterns of design
+                    and PHP standards of recommendation, which will improve the
+                    structure of your code & ease its management as well. Our
+                    team of skilled professionals will teach you how to manage
+                    Bower, Node.js so that you can manage the Javascripts and
+                    CSS.
+                  </p>
+
+                  <p>
+                    This user management system will be highly secure,
+                    multi-level user access and internal communication of users.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -337,6 +377,7 @@ const Page = () => {
                   id="tab1_li"
                   className={` ddlj ${sellerTab ? "active" : ""}`}
                   onClick={() => handleSellerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a> Features</a>
                 </li>
@@ -344,13 +385,18 @@ const Page = () => {
                   id="tab2_li"
                   className={` ddlj ${buyerTab ? "active" : ""}`}
                   onClick={() => handleBuyerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a>Admin </a>
                 </li>
               </ul>
 
               <div className="costomer_tab tab-pane rj">
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   {sellerTab && (
                     <>
                       <div className="UserManagementFeatures">
@@ -529,7 +575,11 @@ const Page = () => {
                     </>
                   )}
                 </div>
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   {buyerTab && (
                     <>
                       <div className="UserManagementFeatures">
@@ -1192,13 +1242,13 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
+              <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Auction System Custom Development"
+                    title="Custom User Management System"
                   />
                 }
               </div>

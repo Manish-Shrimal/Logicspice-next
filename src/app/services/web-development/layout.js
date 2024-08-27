@@ -9,12 +9,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/web-development`).then((res) =>
+  const product = await fetch(`${MetadataApi}/web-development`,{
+    cache: "no-store",
+  }).then((res) =>
     res.json()
   );
   // console.log(product)
 
+  let schemaOrg = null;
   let text = product.data.schema;
+  if(text){
     const cleanedText = text
       .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
       .replace(/\\n/g, '')      // Remove \n (newline)
@@ -23,8 +27,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
       .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
 
     // Parse the cleaned string as JSON
-    const schemaOrg = cleanedText && JSON.parse(cleanedText);
-
+    schemaOrg = cleanedText && JSON.parse(cleanedText);
+  }
   // Return metadata
   return {
     title: product.data.meta_title,

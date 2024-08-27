@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/website-redesign`).then((res) =>
+  const product = await fetch(`${MetadataApi}/website-redesign`,{
+    cache: "no-store",
+  }).then((res) =>
     res.json()
   );
   // console.log(product)
@@ -45,7 +47,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: schemaOrg,
+    schemaOrg: schemaOrg || null,
   };
 }
 

@@ -377,6 +377,7 @@ const Page = () => {
                     sellerTab ? "active" : ""
                   }`}
                   onClick={() => handleSellerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a> Features</a>
                 </li>
@@ -386,6 +387,7 @@ const Page = () => {
                     buyerTab ? "active" : ""
                   }`}
                   onClick={() => handleBuyerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a>Screenshot </a>
                 </li>

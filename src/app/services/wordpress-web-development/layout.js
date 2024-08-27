@@ -8,80 +8,58 @@ import Domain from "@/app/BaseAPI/Domain";
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
-  try {
-    // Fetch data
-    const product = await fetch(
-      `${MetadataApi}/wordpress-web-development`
-    ).then((res) => res.json());
+  // Fetch data
+  const product = await fetch(`${MetadataApi}/wordpress-web-development`,{
+    cache: "no-store",
+  }).then((res) =>
+    res.json()
+  );
+  // console.log(product)
 
-    // Clean up the schema string
-    let text = product.data.schema;
-    const cleanedText = text
-      .replace(/[\u0000-\u001F\u007F-\u009F]/g, "") // Remove control characters
-      .replace(/\\'/g, "'") // Fix escaped single quotes
-      .replace(/\\"/g, '"') // Fix escaped double quotes
-      .replace(/\\&/g, "&") // Fix escaped ampersands
-      .replace(/\\\//g, "/") // Fix escaped slashes
-      .replace(/\\b/g, "") // Remove backspace characters
-      .replace(/\\f/g, "") // Remove form feed characters
-      .replace(/\\n/g, "") // Remove newlines
-      .replace(/\\r/g, "") // Remove carriage returns
-      .replace(/\\t/g, "") // Remove tabs
-      .replace(/\\v/g, "") // Remove vertical tabs
-      .replace(/\\+/g, "");
+  
+  let schemaOrg = null;
+  if (product?.data?.schema) {
+    const cleanedText = product.data.schema
+      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, "") // Remove \n (newline)
+      .replace(/\\r/g, "") // Remove \r (carriage return)
+      .replace(/\\+/g, "") // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ""); 
 
-    // Parse the cleaned string as JSON
-    const schemaOrg = JSON.parse(cleanedText);
-
-    // Return metadata
-    return {
-      title: product.data.meta_title,
-      description: product.data.meta_description,
-      keywords: product.data.meta_keyword,
-      alternates: {
-        canonical: `${Domain}/services/wordpress-web-development`,
-      },
-      robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-          index: true,
-          follow: true,
-          "max-video-preview": -1,
-          "max-image-preview": "large",
-          "max-snippet": -1,
-        },
-      },
-      schemaOrg: schemaOrg,
-    };
-  } catch (error) {
-    console.error("Failed to generate metadata:", error);
-    return {
-      title: "Default Title",
-      description: "Default description",
-      keywords: "default, keywords",
-      alternates: {
-        canonical: `${Domain}/services/wordpress-web-development`,
-      },
-      robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-          index: true,
-          follow: true,
-          "max-video-preview": -1,
-          "max-image-preview": "large",
-          "max-snippet": -1,
-        },
-      },
-      schemaOrg: null,
-    };
+    try {
+      schemaOrg = JSON.parse(cleanedText); // Parse it as JSON if necessary
+    } catch (error) {
+      console.error("Error parsing schemaOrg JSON:", error);
+    }
   }
+  // Return metadata
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    // Add other meta tags as needed
+    alternates: {
+      canonical: `${Domain}/services/wordpress-web-development`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    schemaOrg: schemaOrg || null,
+  };
 }
 
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
+//   console.log(metadata);
 
   return (
     <html lang="en">
@@ -89,16 +67,13 @@ export default async function RootLayout({ children, params, searchParams }) {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <title>{metadata.title}</title>
+        
       </Head>
       <body className={inter.className}>{children}</body>
-      {metadata.schemaOrg && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schemaOrg),
-          }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: metadata.schemaOrg }}
+      />
     </html>
   );
 }

@@ -30,10 +30,16 @@ const Page = () => {
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
 
+  const [showMore, setShowMore] = useState(false);
+  const [showInitialText, setShowInitialText] = useState(true); // Track if initial text and button should be displayed
 
+  const handleReadMoreClick = () => {
+    setShowMore(true); // Show more content
+    setShowInitialText(false); // Hide initial text and button
+  };
 
   const openModal = () => {
-    console.log(showModal);
+   
 
     setShowModal(!showModal);
   };
@@ -246,44 +252,86 @@ const Page = () => {
                 developing the best delivery routing software for our clients.
               </p>
             </div>
-            <p className="res_txt">
-              If you are looking for food ordering system for your restaurant?
-              We have launched a hassle free{" "}
-             
-              <a
-                style={{ color: "#fff" }}
-                href="https://food-ordering-marketplace.logicspice.com"
-                target="_blank"
-              >
-                hosted solution for food ordering
-              </a>{" "}
-              at affordable price.
-            </p>
-            <p>
-            
-                <a
-                id="read-more-content"
-                style={{
-                  cursor: "pointer",
-                  color: "#fff",
-                  border: "1px solid rgb(255, 255, 255)",
-                  padding: "3px 20px",
-                  display: "inline-block",
-                }}
-               
-              >
-                Read More
-              </a>
-          
-              
-                    
-         
-            </p>
-            </div>
+
+            {showInitialText && (
+              <div>
+                <p className="res_txt">
+                  If you are looking for a food ordering system for your
+                  restaurant? We have launched a hassle-free{" "}
+                  <a
+                    style={{ color: "#fff" }}
+                    href="https://food-ordering-marketplace.logicspice.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    hosted solution for food ordering
+                  </a>{" "}
+                  at an affordable price.
+                </p>
+
+                <p>
+                  <a
+                    id="read-more-content"
+                    style={{
+                      cursor: "pointer",
+                      color: "#fff",
+                      border: "1px solid #fff",
+                      padding: "3px 20px",
+                      display: "inline-block",
+                    }}
+                    onClick={handleReadMoreClick}
+                  >
+                    Read More
+                  </a>
+                </p>
+              </div>
+            )}
+
+            {showMore && (
+              <div style={{ color: "#fff", marginTop: "10px" }}>
+                <p>
+                  One of the best ways to build your name in the food and
+                  grocery industry is to get an integrated and seamless delivery
+                  software solution for your business. This will allow you to
+                  deliver fresh food and grocery, on time and you can easily win
+                  the trust of your clients. Buyers just want quick and perfect
+                  service and with the right software, you can give them what
+                  they are looking for.
+                </p>
+                <p>
+                  A good packing makes the product more attractive and
+                  impressive and with the right delivery software, you can
+                  deliver these beautiful packages on time. Yes, the right
+                  delivery management software will help your package delivery
+                  business in growing faster with thousands of happy customers
+                  on your list.
+                </p>
+                <p>
+                  To create a perfect delivery tracking software for your
+                  business, LogicSpice is always ready to help you. We are
+                  equipped with a dedicated team of professionals, who wish to
+                  work hard and help us in creating a reputation in the field of
+                  developing the best delivery routing software for our clients.
+                </p>
+                <p className="res_txt">
+                  If you are looking for a food ordering system for your
+                  restaurant? We have launched a hassle-free{" "}
+                  <a
+                    style={{ color: "#fff" }}
+                    href="https://food-ordering-marketplace.logicspice.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    hosted solution for food ordering
+                  </a>{" "}
+                  at an affordable price.
+                </p>
+              </div>
+            )}
           </div>
-          </div>
-        
-            
+        </div>
+      </div>
+
       <div className="demand_app">
         <div className="container">
           <h2>Key Benefits of Our Delivery Routing Software</h2>
@@ -293,7 +341,7 @@ const Page = () => {
               <div className="demand-card" data-aos="fade-right">
                 <div className="demand-img">
                   <Image
-                    width={100}
+                    width={80}
                     height={100}
                     src="/img/customsolutions/b_icon1.png"
                     alt="icon5"
@@ -313,7 +361,7 @@ const Page = () => {
               <div className="demand-card" data-aos="fade-right">
                 <div className="demand-img">
                   <Image
-                    width={100}
+                    width={80}
                     height={100}
                     src="/img/customsolutions/b_icon3.png"
                     alt="icon6"
@@ -332,7 +380,7 @@ const Page = () => {
               <div className="demand-card" data-aos="fade-right">
                 <div className="demand-img">
                   <Image
-                    width={100}
+                    width={80}
                     height={100}
                     src="/img/customsolutions/b_icon5.png"
                     alt="icon7"
@@ -368,7 +416,7 @@ const Page = () => {
                 </div>
                 <div className="demand-img">
                   <Image
-                    width={100}
+                    width={80}
                     height={100}
                     src="/img/customsolutions/b_icon2.png"
                     alt="icon9"
@@ -388,7 +436,7 @@ const Page = () => {
                 </div>
                 <div className="demand-img">
                   <Image
-                    width={100}
+                    width={80}
                     height={100}
                     src="/img/customsolutions/b_icon4.png"
                     alt="icon10"
@@ -408,7 +456,7 @@ const Page = () => {
                 </div>
                 <div className="demand-img">
                   <Image
-                    width={100}
+                    width={80}
                     height={100}
                     src="/img/customsolutions/b_icon6.png"
                     alt="icon11"
@@ -436,6 +484,7 @@ const Page = () => {
                     sellerTab ? "active" : ""
                   }`}
                   onClick={() => handleSellerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a> Features</a>
                 </li>
@@ -445,13 +494,18 @@ const Page = () => {
                     buyerTab ? "active" : ""
                   }`}
                   onClick={() => handleBuyerTab()}
+                  style={{cursor: "pointer"}}
                 >
                   <a>Screenshot </a>
                 </li>
               </ul>
 
               <div className="tab-content">
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   {sellerTab && (
                     <>
                       <div className="row">
@@ -618,7 +672,7 @@ const Page = () => {
                             <Image
                               width={60}
                               height={100}
-                              src="/img/customsolutions/booking-details.png"
+                              src="/img/customsolutions/Booking-Details.png"
                               alt="Deliveries on Time"
                             />
                             <h3>Deliveries on Time</h3>
@@ -632,7 +686,11 @@ const Page = () => {
                     </>
                   )}
                 </div>
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   {buyerTab && (
                     <>
                       <div>

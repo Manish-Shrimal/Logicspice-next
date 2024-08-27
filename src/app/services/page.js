@@ -290,7 +290,7 @@ const Page = () => {
                 </Link>
               </div>
               <div className="col-md-4 col-sm-4 padding-no">
-                <Link href="/services/support">
+                <Link href="/services/software-maintenance-support">
                   <div className="our-services-bx">
                     <div className="our-services-img">
                       <Image
@@ -350,7 +350,7 @@ const Page = () => {
                 </Link>
               </div>
               <div className="col-md-4 col-sm-4 padding-no">
-                <Link href="/services/nodejs-development-company">
+                <Link href="/services/nodejs-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">
                       <Image
@@ -533,7 +533,7 @@ const Page = () => {
               </div>
 
               <div className="col-md-4 col-sm-4 padding-no">
-                <Link href="/services/https://design.logicspice.com/website-design-packages/">
+                <Link href="https://design.logicspice.com/website-design-packages/">
                   <div className="our-services-bx">
                     <div className="our-services-img">
                       <Image
@@ -821,6 +821,7 @@ const Page = () => {
                 id="tab1_li"
                 className={`ddlj ${activeTab === "tab1" ? "active" : ""}`}
                 onClick={() => handleTabClick("tab1")}
+                style={{cursor: "pointer"}}
               >
                 <a>Mobile App Development</a>
               </li>
@@ -828,6 +829,7 @@ const Page = () => {
                 id="tab2_li"
                 className={`ddlj ${activeTab === "tab2" ? "active" : ""}`}
                 onClick={() => handleTabClick("tab2")}
+                style={{cursor: "pointer"}}
               >
                 <a>Web Development</a>
               </li>
@@ -835,6 +837,7 @@ const Page = () => {
                 id="tab3_li"
                 className={`ddlj ${activeTab === "tab3" ? "active" : ""}`}
                 onClick={() => handleTabClick("tab3")}
+                style={{cursor: "pointer"}}
               >
                 <a>Others</a>
               </li>
@@ -846,7 +849,7 @@ const Page = () => {
                   <div className="technologi-bx">
                     <ul>
                       <li>
-                        <Link href="/services/ios-app-development">
+                        <Link href="/services/android-app-developmen">
                           <span className="circle_icon andri-img">
                             <Image
                               width={100}
@@ -859,7 +862,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/android-app-development">
+                        <Link href="/services/ios-app-development">
                           <span className="circle_icon iPhone-img">
                             <Image
                               width={100}
@@ -971,7 +974,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/php-programing">
+                        <Link href="/services/php-development">
                           <span className="circle_icon hybirds-img">
                             <Image
                               width={100}
@@ -1068,7 +1071,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/devops-services">
+                        <Link href="/services/devops-development">
                           <span className="circle_icon hybirds-img">
                             <Image
                               width={100}
@@ -1257,7 +1260,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/salesforce_development_company">
+                        <Link href="/services/salesforce-development-company">
                           <span className="circle_icon adprograming-img">
                             <Image
                               width={100}
@@ -1587,9 +1590,9 @@ const Page = () => {
               <h2>Ready to start your project? Let&apos;s make it happen!</h2>
             </div>
             <div className="col-sm-3 text-right">
-              <a href="" className="btn btn-primary">
+              <Link href="/contact-us" className="btn btn-primary">
                 Click Here
-              </a>
+              </Link>
             </div>
           </div>
         </div>

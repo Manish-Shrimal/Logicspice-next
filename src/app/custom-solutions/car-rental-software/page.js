@@ -23,6 +23,13 @@ import {
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+  const [showInitialText, setShowInitialText] = useState(true); // Track if initial text and button should be displayed
+
+  const handleReadMoreClick = () => {
+    setShowMore(true); // Show more content
+    setShowInitialText(false); // Hide initial text and button
+  };
 
   const openModal = () => {
     console.log(showModal);
@@ -218,21 +225,50 @@ const Page = () => {
                 their status.
               </p>
             </div>
-            <p>
-              <Link
-                href=""
-                id="read-more-content"
-                style={{
-                  cursor: "pointer",
-                  color: "#fff",
-                  border: "1px solid rgb(255, 255, 255)",
-                  padding: "3px 20px",
-                  display: "inline-block",
-                }}
-              >
-                Read More
-              </Link>
-            </p>
+            {showInitialText && (
+              <p>
+                <a
+                  id="read-more-content"
+                  style={{
+                    cursor: "pointer",
+                    color: "#fff",
+                    border: "1px solid #fff",
+                    padding: "3px 20px",
+                    display: "inline-block",
+                  }}
+                  onClick={handleReadMoreClick}
+                >
+                  Read More
+                </a>
+              </p>
+            )}
+
+            {showMore && (
+              <div style={{ color: "#fff", marginTop: "10px" }}>
+                <p>
+                  The main requirement is the management of handling all the
+                  rentals all together along with the accounting needs for which
+                  you need a good car rental system development company like us.
+                </p>
+                <p>
+                  <strong>
+                    How we help you in Car Rental Software Development Solution?
+                  </strong>{" "}
+                </p>
+                <p>
+                  Logicspice provides you best development team to create your
+                  car rental app development. You can upload multiple products
+                  or services related to the rental process of the cars, as per
+                  your requirements.
+                </p>
+                <p className="res_txt">
+                  We provide car rental management system through which Rental
+                  Company Owner controls and overview every rented vehicle. They
+                  can see the information about different vehicles and can see
+                  their status.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -371,11 +407,13 @@ const Page = () => {
       </div>
 
       <section className="content_area feature_inner" id="features">
-      <div className="container">
-        <h2 className="titlesettop titlesettop_mar">Custom Car Rental Web & App Development Features</h2>
-        <Carrentaltab/>
+        <div className="container">
+          <h2 className="titlesettop titlesettop_mar">
+            Custom Car Rental Web & App Development Features
+          </h2>
+          <Carrentaltab />
         </div>
-        </section>
+      </section>
 
       <div className="clearfix"></div>
 
