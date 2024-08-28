@@ -1521,7 +1521,7 @@ body {
 
 .case-study-listing .media {
 	position: relative;
-	display: inline-block;
+	/* display: inline-block; */
 }
 
 .pagination {
@@ -3204,4 +3204,68 @@ section.nav-portfolio-top {
     margin: 30px 0 0;
     padding: 60px 30px 40px;
     text-align: center;
+}
+
+
+.event_gallery_colsshom_col_box_in {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    float: left;
+    padding: 25px;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+.even_img_name {
+    color: #29166f;
+    float: left;
+    font-size: 19px;
+    margin-top: 10px;
+    padding-left: 1px;
+    width: 100%;
+}
+
+.even_img_date {
+    color: #999;
+    float: left;
+    font-size: 14px;
+    margin-top: 4px;
+    padding-left: 1px;
+    width: 100%;
+}
+
+.img-event {
+    float: left;
+    height: 225px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+.blog_cost_calculator .cost_content {
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 25px;
+    font-family: 'intersemi_bold';
+    font-weight: normal;
+}
+
+
+.database-use-icon:hover img,
+.use-icon:hover img {
+	transform: scale(1.12);
+	-webkit-transform: scale(1.12);
+	-moz-transform: scale(1.12);
+	-o-transform: scale(1.12);
+	-ms-transform: scale(1.12);
+}
+
+.database-use-icon img,
+.use-icon img {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 }

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/online-exam-software-solution`,{
+  const product = await fetch(`${MetadataApi}/product-review-rating-php-script`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/online-exam-software-solution`,
+      canonical: `${Domain}/softwares/product-review-rating-php-script`,
     },
     robots: {
       index: true,

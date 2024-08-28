@@ -493,7 +493,7 @@ section {
 .tab_bbx_job ul li {
   float: left;
   position: relative;
-  width: calc(100% / 3);
+  width: calc(100% / 3) !important;
   cursor: pointer;
 }
 .fund_raiserbg a,
@@ -1852,7 +1852,7 @@ section {
 }
 
 .crowdfunding-say .service-market-ttd li {
-  width: 100%;
+  width: 49%;
 }
 .service-market-ttd li {
   color: #808080;
@@ -1943,7 +1943,7 @@ section {
   border: 1px #451095 solid;
   border-radius: 5px 5px 0 0;
   border-bottom: none;
-  color: #fff;
+  color: #fff!important;
   font-size: 16px;
   display: inline-block;
   padding: 10px 15px;
@@ -1960,7 +1960,7 @@ section {
 .nav-tabs-slide li.active a {
   background: #fff;
   border-color: #ccc;
-  color: #451095;
+  color: #451095!important;
 }
 
 .nav-tabs-slide li a:before {

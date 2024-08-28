@@ -124,7 +124,7 @@ const Page = () => {
                       })}
                   </ul>
                 </aside>
-                {/* <div id="blog_search" class="widget widget_recent_entries">
+                <div id="blog_search" class="widget widget_recent_entries" style={{marginTop : "265px"}}>
         <div class="cost_wrap">
           <div class="blog_cost_calculator">
             <div class="cost_content">
@@ -140,7 +140,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
               </div>
             
             </div>

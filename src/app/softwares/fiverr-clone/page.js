@@ -1186,8 +1186,9 @@ const Page = () => {
             <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
-                subscription-based hassle-free model, available at just USD 145
-                per month.
+                subscription-based hassle-free model, available at just{" "}
+                <strong>USD 45 per month</strong> , limited offer available for
+                the first year.
               </p>
               <p>Key Benefits:</p>
               <ul>
@@ -1205,9 +1206,9 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    Zero Setup Fees:- There are no additional charges for the
-                    setup and installation of the software, making it easier for
-                    customers to get started.
+                    <strong>Zero Setup Fees</strong> :- There are no additional
+                    charges for the setup and installation of the software,
+                    making it easier for customers to get started.
                   </span>
                 </li>
                 <li>
@@ -1244,8 +1245,8 @@ const Page = () => {
                   <span>
                     Enduring Support: We are committed to providing lifelong
                     assistance through our subscription model. If any software
-                    issues arise, our dedicated technical team will promptly
-                    address them during office hours.
+                    issues arise, our <strong>dedicated technical team</strong>{" "}
+                    will promptly address them during office hours.
                   </span>
                 </li>
                 <li>
@@ -2490,42 +2491,44 @@ const Page = () => {
 
       <section className="content_area feature_inner" id="features">
         <div className="container">
-          <h2 className="title_main">LS Jobber Features</h2>
+          <h2 className="title_main">
+            Top Features of a Fiverr Clone Marketplace
+          </h2>
 
           <div className="sliders-div">
             <ul className="nav nav-tabs-slide" role="tablist">
               <li role="presentation" className={studentTab ? "active" : ""}>
                 <a
-                  href="#homefiveer"
                   aria-controls="homefiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="true"
                   onClick={() => handleStudentTab()}
+                  style={{ cursor: "pointer" }}
                 >
                   Seller App Features
                 </a>
               </li>
               <li role="presentation" className={instructorTab ? "active" : ""}>
                 <a
-                  href="#profilefiveer"
                   aria-controls="profilefiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="false"
                   onClick={() => handleInstructorTab()}
+                  style={{ cursor: "pointer" }}
                 >
                   Buyer App Features
                 </a>
               </li>
               <li role="presentation" className={adminpanelTab ? "active" : ""}>
                 <a
-                  href="#adminfiveer"
                   aria-controls="adminfiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="false"
                   onClick={() => handleAdminpanelTab()}
+                  style={{ cursor: "pointer" }}
                 >
                   Admin Panel
                 </a>
@@ -2536,95 +2539,111 @@ const Page = () => {
             {studentTab && (
               <>
                 <div id="joblboardslide">
-                  <Slider {...settings}>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/search_course.png"
-                          alt="searchcourse"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Search Course</div>
-                        <div className="pro-feat-detai">
-                          Students will be able to view listings of course and
-                          can be able to filter on the basis of topic, level,
-                          price, duration and rating.
+                  <Swiper
+                    slidesPerView={1}
+                    spaceBetween={50}
+                    loop={true}
+                    navigation={true}
+                    pagination={{ clickable: true }}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                  >
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/dashboard.png"
+                            alt="Dashboard"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Dashboard</div>
+                          <div className="pro-feat-detai">
+                            User can view own dashboard with gigs and other
+                            details like : profile, service request etc..
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/course_detail.png"
-                          alt="Configuration"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Course Detail</div>
-                        <div className="pro-feat-detai">
-                          Students can view details about the course and can
-                          purchase from here.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/post_gig.png"
+                            alt="Post Gig"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Post Gig</div>
+                          <div className="pro-feat-detai">
+                            It will facilitate users to post gig over the site.
+                            Users can post gigs by specifying gig details.
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/my_user_courses.png"
-                          alt="Manage Courses"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">My Courses</div>
-                        <div className="pro-feat-detai">
-                          Students can view the listing of his courses that they
-                          have purchased.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/earning.png"
+                            alt="Earning"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Manage Earning</div>
+                          <div className="pro-feat-detai">
+                            User can manage their earning which earned by gigs
+                            over the site.
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/view_lecture_video.png"
-                          alt="View Payments"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">View Lecture Video</div>
-                        <div className="pro-feat-detai">
-                          Students can view the video for the related lecture.
-                          They are able to change the lecture from the right
-                          section for that course.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/messaging-img.png"
+                            alt="Messaging system"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Messaging system</div>
+                          <div className="pro-feat-detai">
+                            Seller and buyer can communicate each other with
+                            using messaging feature.
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/purchase_history.png"
-                          alt="Manage Categories"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Purchase History</div>
-                        <div className="pro-feat-detai">
-                          Students can view the purchase history of when and how
-                          many courses he has purchased.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/customer-img.png"
+                            alt="Custom Offer"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Custom Offer</div>
+                          <div className="pro-feat-detai">
+                            Seller can create any custom offer for buyer from
+                            message page.
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Slider>
+                    </SwiperSlide>
+                  </Swiper>
                 </div>
               </>
             )}
@@ -2632,77 +2651,106 @@ const Page = () => {
             {instructorTab && (
               <>
                 <div id="joblboardslide">
-                  <Slider {...settings}>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/manage_courses.png"
-                          alt="searchcourse"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Courses</div>
-                        <div className="pro-feat-detai">
-                          Instructors will be able to view the direct link of
-                          all the management and also be able to statistics of
-                          Student and Courses.
+                  <Swiper
+                    slidesPerView={1}
+                    spaceBetween={50}
+                    loop={true}
+                    navigation={true}
+                    pagination={{ clickable: true }}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                  >
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/search_gig.png"
+                            alt="Search Gig"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Search Gig</div>
+                          <div className="pro-feat-detai">
+                          It will facilitate users to search gigs over the site. Users can search gig by specifying keyword on search bar or they can search gigs by categories.
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/add_course.png"
-                          alt="Configuration"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Add Course</div>
-                        <div className="pro-feat-detai">
-                          Instructure can create a new course from here.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/detail_gig.png"
+                            alt="Detail Gig"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Detail Gig</div>
+                          <div className="pro-feat-detai">
+                          User can view detail of gigs with category, location, gallery images etc.
+                          </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/my_courses_instructure.png"
-                          alt="Configuration"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">My Courses</div>
-                        <div className="pro-feat-detai">
-                          Instructure can view the selling courses from here.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/post_request.png"
+                            alt="Post Request"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Post Request</div>
+                          <div className="pro-feat-detai">
+                          It will facilitate users to request service request for gig over the site. Users can post service request for gigs by specifying request details.
+                          </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          width={1075}
-                          height={100}
-                          src="/img/udemyclone/view_video.png"
-                          alt="Configuration"
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">View Lecture Video</div>
-                        <div className="pro-feat-detai">
-                          Instructure can view the video of lecture uploaded by
-                          him in a course.
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/saved_gigs.png"
+                            alt="Saved Gigs"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">Saved Gigs</div>
+                          <div className="pro-feat-detai">
+                          User can do favorites any gig over the site and user can view all saved gigs in separate listing.
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Slider>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="SliderMainBx">
+                        <div className="feat-slide-img">
+                          <Image
+                            width={1075}
+                            height={100}
+                            src="/img/fiverrclone/view_profile.png"
+                            alt="View Profile"
+                          />
+                        </div>
+                        <div className="hands-proved">
+                          <div className="titleof_scnew">View Profile</div>
+                          <div className="pro-feat-detai">
+                          Buyer can view seller profile with gigs and other details like : reviews,profile details, service request etc..
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  </Swiper>
                 </div>
               </>
             )}

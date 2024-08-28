@@ -2855,6 +2855,13 @@ positivitymain {
   box-shadow: none;
 }
 
+.HomeSlider .btn.btn-default:hover
+ {
+  background-color: #451095 !important;
+  border: 1px solid #451095 !important;
+  color: #fff;
+ }
+
 .HomeSlider .btn.btn-primary:hover {
   background-color: #451095 !important;
   border: 1px solid #451095 !important;
@@ -3458,7 +3465,10 @@ positivitymain {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 70px;
-  text-decoration: underline;
+  text-decoration: underline!important;
+}
+.case-study:hover {
+  text-decoration: none!important;
 }
 
 .have_look {
@@ -3582,7 +3592,7 @@ positivitymain {
 }
 
 .certificates .tab-content li img {
-  height: 75px;
+  /* height: 75px; */
   background-size: 100%;
 }
 
@@ -3626,7 +3636,11 @@ positivitymain {
   position: relative;
   text-align: center;
   vertical-align: middle;
+  margin-bottom: 30px;
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* working with css end  */
@@ -7015,4 +7029,16 @@ button.close {
 .btn.btn-default:hover {
 	background: #451095;
 	color: #fff;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: #000!important;
+}
+
+.slick-dots {
+  bottom: 20px!important;
+}
+
+.slick-dots li button:before{
+  font-size: 10px!important;
 }

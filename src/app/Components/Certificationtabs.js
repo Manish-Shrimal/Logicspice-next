@@ -83,8 +83,8 @@ const Certificationtabs = () => {
           <ul>
             <li>
               <Image
-                width={130}
-                height={100}
+                width={70}
+                height={100 / (100 /100)}
                 className="lazy"
                 src="/img/home/certificates/iso_logo.webp"
                 alt="iOS app development"
@@ -92,8 +92,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={210}
-                height={100}
+                width={230}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/freelancertopten.webp"
                 alt="freelancer web and app development"
@@ -101,8 +101,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={150}
-                height={100}
+                width={200}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/nasscom.webp"
                 alt="web and app development certification"
@@ -110,8 +110,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={210}
-                height={100}
+                width={240}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/applancer.webp"
                 alt="applancer certification"
@@ -119,17 +119,18 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={150}
-                height={100}
+                width={100}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/goodFirms.webp"
                 alt="Good Firms certification"
               />
             </li>
+            <br />
             <li>
               <Image
                 width={210}
-                height={100}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/extract.webp"
                 alt="Extract certification"
@@ -137,8 +138,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={120}
-                height={100}
+                width={70}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/appfutura.webp"
                 alt="appfutura certification"
@@ -146,8 +147,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={120}
-                height={100}
+                width={60}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/TAC-iphone.webp"
                 alt="topappcreators certification - logicspice"
@@ -163,8 +164,8 @@ const Certificationtabs = () => {
           <ul>
             <li>
               <Image
-                width={160}
-                height={100}
+                width={100}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/winner.webp"
                 alt="web and app development"
@@ -172,8 +173,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={100}
-                height={100}
+                width={155}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/bestwebdesign.webp"
                 alt="web and app development"
@@ -181,8 +182,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={100}
-                height={100}
+                width={75}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/clutch_logo.webp"
                 alt="website and app development company profile - clutch"
@@ -190,8 +191,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={210}
-                height={100}
+                width={190}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/siliconindia.webp"
                 alt="logicspice profile siliconindia"
@@ -207,8 +208,8 @@ const Certificationtabs = () => {
           <ul>
             <li>
               <Image
-                width={210}
-                height={100}
+                width={190}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/iwdro_logo.webp"
                 alt="website and app development"
@@ -216,8 +217,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={120}
-                height={100}
+                width={80}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/yellow-pages-logi.webp"
                 alt="web and app development"
@@ -225,8 +226,8 @@ const Certificationtabs = () => {
             </li>
             <li>
               <Image
-                width={210}
-                height={100}
+                width={190}
+                height={100 / (100 / 100)}
                 className="lazy"
                 src="/img/home/certificates/microsoftachivement.webp"
                 alt="web and app development"

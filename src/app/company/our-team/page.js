@@ -11,6 +11,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 import Head from "next/head";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -372,7 +377,7 @@ const Page = () => {
           <div class="row">
             <div class="col-sm-8">
               <h2>Let’s Consult With Our Experts</h2>
-              <a data-toggle="modal" data-target="#contactFix">
+              <a data-toggle="modal" onClick={toggleModal}>
                 Get In Touch{" "}
                 <span>
                   <Image
@@ -490,8 +495,111 @@ const Page = () => {
 
       <section className="events">
         <div className="container">
-          <Slider {...settings}>
-            {/* Slide 1 */}
+          <div>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={50}
+            loop={true}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+           
+            <SwiperSlide>
+              <div className="event_gallery_colsshom_col_box_in">
+                <div className="img-event">
+                <Image
+                  width={300}
+                  height={100 / 100 / 100}
+                  src="/img/ourteam/trip_photo.jpg"
+                  alt="Office Trip 2019"
+                  className="slider-image"
+                />
+                <div className="even_img_name">Office Trip</div>
+                <div className="even_img_date">November 23, 2019</div>
+                </div>
+               
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="event_gallery_colsshom_col_box_in">
+            <div className="img-event">
+                <Image
+                  width={300}
+                  height={100 / 100 / 100}
+                  src="/img/ourteam/sunrise2019.jpg"
+                  alt="Sunrise Resort 2019"
+                  className="slider-image"
+                />
+                <div className="even_img_name">Sunrise Resort</div>
+                <div className="even_img_date">July 27, 2019</div>
+              </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="event_gallery_colsshom_col_box_in">
+            <div className="img-event">
+                <Image
+                  width={300}
+                  height={100 / 100 / 100}
+                  src="/img/ourteam/appu_ghar_2018img.jpg"
+                  alt="Appu Ghar 2018"
+                  className="slider-image"
+                />
+                <div className="even_img_name">Appu Ghar</div>
+                <div className="even_img_date">August 04, 2018</div>
+              </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="event_gallery_colsshom_col_box_in">
+            <div className="img-event">
+                <Image
+                  width={300}
+                  height={100 / 100 / 100}
+                  src="/img/ourteam/plantation_2016img.png"
+                  alt="Plantation 2016"
+                  className="slider-image"
+                />
+                <div className="even_img_name">Plantation</div>
+                <div className="even_img_date">July 16, 2016</div>
+              </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="event_gallery_colsshom_col_box_in">
+            <div className="img-event">
+                <Image
+                  width={300}
+                  height={100 / 100 / 100}
+                  src="/img/ourteam/newyear_2017img.png"
+                  alt="New Year Celebration 2016"
+                  className="slider-image"
+                />
+                <div className="even_img_name">New Year Celebration</div>
+                <div className="even_img_date">December 31, 2016</div>
+              </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="event_gallery_colsshom_col_box_in">
+            <div className="img-event">
+                <Image
+                  width={300}
+                  height={100 / 100 / 100}
+                  src="/img/ourteam/diwali_2016_img.png"
+                  alt="Diwali Celebration 2016"
+                  className="slider-image"
+                />
+                <div className="even_img_name">Diwali Celebration</div>
+                <div className="even_img_date">October 10, 2016</div>
+              </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          </div>
+          {/* <Slider {...settings}>
+           
             <div>
               <Image
                 width={300}
@@ -504,7 +612,7 @@ const Page = () => {
               <div className="even_img_date">November 23, 2019</div>
             </div>
 
-            {/* Slide 2 */}
+            
             <div>
               <Image
                 width={300}
@@ -517,7 +625,7 @@ const Page = () => {
               <div className="even_img_date">July 27, 2019</div>
             </div>
 
-            {/* Slide 3 */}
+           
             <div>
               <Image
                 width={300}
@@ -530,7 +638,7 @@ const Page = () => {
               <div className="even_img_date">August 04, 2018</div>
             </div>
 
-            {/* Slide 4 */}
+           
             <div>
               <Image
                 width={300}
@@ -543,7 +651,7 @@ const Page = () => {
               <div className="even_img_date">July 16, 2016</div>
             </div>
 
-            {/* Slide 5 */}
+            
             <div>
               <Image
                 width={300}
@@ -556,7 +664,7 @@ const Page = () => {
               <div className="even_img_date">December 31, 2016</div>
             </div>
 
-            {/* Slide 6 */}
+           
             <div>
               <Image
                 width={300}
@@ -568,7 +676,9 @@ const Page = () => {
               <div className="even_img_name">Diwali Celebration</div>
               <div className="even_img_date">October 10, 2016</div>
             </div>
-          </Slider>
+          </Slider> */}
+
+          
         </div>
       </section>
 

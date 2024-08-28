@@ -410,8 +410,8 @@ const Page = () => {
               <li data-aos="fade-right">
                 <div class="TechnologiesMobileUseIcon">
                   <Image
-                    width={60}
-                    height={100}
+                    width={150}
+                    height={100 / (100 / 100)}
                     src="/img/technology/android-icon.png"
                     alt="android"
                   />
@@ -424,8 +424,8 @@ const Page = () => {
               <li data-aos="fade-left">
                 <div class="TechnologiesMobileUseIcon">
                   <Image
-                    width={60}
-                    height={100}
+                    width={150}
+                    height={100 / (100 / 100)}
                     src="/img/technology/apple-icon.png"
                     alt="apple"
                   />
@@ -438,8 +438,8 @@ const Page = () => {
               <li data-aos="fade-left">
                 <div class="TechnologiesMobileUseIcon">
                   <Image
-                    width={60}
-                    height={100}
+                    width={150}
+                    height={100 / (100 / 100)}
                     src="/img/technology/hybrid.png"
                     alt="Hybrid"
                   />

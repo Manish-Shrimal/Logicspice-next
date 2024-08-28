@@ -41,8 +41,8 @@ const Page = () => {
                     Your vision, Our expertise, Live results
                     <i>
                       <Image
-                        width={300}
-                        height={100}
+                        width={600}
+                        height={100 / (100 / 100)}
                         src="/img/home/your-vision.png"
                         alt="icon"
                       />
@@ -52,8 +52,8 @@ const Page = () => {
                     Turning vision into apps
                     <i>
                       <Image
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={100 / (100 / 100)}
                         src="/img/home/turning-vision.png"
                         alt="icon"
                       />
@@ -63,8 +63,8 @@ const Page = () => {
                     Empower business solutions
                     <i>
                       <Image
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={100 / (100 / 100)}
                         src="/img/home/empower-business.png"
                         alt="icon"
                       />
@@ -96,8 +96,8 @@ const Page = () => {
                     Seamless web: Design, function, UX
                     <i>
                       <Image
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={100 / (100 / 100)}
                         src="/img/home/ux-design.png"
                         alt="icon"
                       />
@@ -107,8 +107,8 @@ const Page = () => {
                     Turning ideas into responsive web
                     <i>
                       <Image
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={100 / (100 / 100)}
                         src="/img/home/responsive-web.png"
                         alt="icon"
                       />
@@ -118,8 +118,8 @@ const Page = () => {
                     Laravel experts, web &amp; app solutions
                     <i>
                       <Image
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={100 / (100 / 100)}
                         src="/img/home/laravel-experts.png"
                         alt="icon"
                       />
@@ -939,7 +939,10 @@ const Page = () => {
       </section>
       <section className="working_with">
         <div className="container">
-          <h3 className="title_heading title_heading_bgg">
+          <h3
+            className="title_heading title_heading_bgg"
+            style={{ marginBottom: "30px" }}
+          >
             Worked with 1500+ companies worldwide, from startups to enterprises.
           </h3>
 

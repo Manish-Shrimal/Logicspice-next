@@ -40,6 +40,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
+          
           <button
             className="navbar-toggler"
             type="button"
@@ -56,6 +57,7 @@ const Navbar = () => {
             className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
             id="navbarNav"
           >
+            
             <ul className="nav navbar-nav navbar-right ms-auto top-main-menu">
               <li className="dropdown mega-menu-fw">
                 <a
@@ -777,8 +779,8 @@ const Navbar = () => {
                 <Link href="https://blog.logicspice.com/">blog</Link>
               </li>
               <li>
-                <div className="contact_detail_top">
-                  <ul className="con_d">
+                <div className="contact_detail_top" style={{position: "relative"}}>
+                  <ul className="con_d" style={{position: "absolute", bottom: "10px", right : "20px"}}>
                     <li className="logic_contact">
                       <a
                         href="#"
