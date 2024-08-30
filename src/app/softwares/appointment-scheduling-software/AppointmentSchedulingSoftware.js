@@ -114,7 +114,7 @@ const AppointmentSchedulingSoftware = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                           width={100}
@@ -160,7 +160,7 @@ const AppointmentSchedulingSoftware = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       alt="Appointment Schedule Script"
                       src="/img/jobboard/stars.png"
                       width={100}
@@ -183,7 +183,7 @@ const AppointmentSchedulingSoftware = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                <Image unoptimized={true}
                   alt="Appointment Booking System"
                   src="/img/softwares-banner-img/abs_banner_img.png"
                   height={400}
@@ -295,7 +295,7 @@ const AppointmentSchedulingSoftware = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/abs/abs_user.png"
                             alt="User Panel"
                             height={400}
@@ -308,7 +308,7 @@ const AppointmentSchedulingSoftware = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                   height={100}
@@ -324,7 +324,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_restaurants.png"
                                   height={100}
@@ -344,7 +344,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                   height={100}
@@ -363,7 +363,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_customers.png"
                                   height={100}
@@ -382,7 +382,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_cuisines.png"
                                   height={100}
@@ -403,7 +403,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_meal.png"
                                   height={100}
@@ -423,7 +423,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_city.png"
                                   height={100}
@@ -445,7 +445,7 @@ const AppointmentSchedulingSoftware = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
                                   height={100}
@@ -476,7 +476,7 @@ const AppointmentSchedulingSoftware = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/abs/abs_staff.png"
                             alt="Staff"
                             height={400}
@@ -489,7 +489,7 @@ const AppointmentSchedulingSoftware = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   height={100}
@@ -505,7 +505,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/received-orders.png"
                                   height={100}
@@ -526,7 +526,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-Charges.png"
                                   height={100}
@@ -547,7 +547,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/kitchen-staff.png"
                                   height={100}
@@ -568,7 +568,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-person.png"
                                   height={100}
@@ -590,7 +590,7 @@ const AppointmentSchedulingSoftware = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/order-status.png"
                                   height={100}
@@ -612,7 +612,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
                                   height={100}
@@ -644,7 +644,7 @@ const AppointmentSchedulingSoftware = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/abs/abs_admin.png"
                             alt="Admin Panel"
                             height={400}
@@ -657,7 +657,7 @@ const AppointmentSchedulingSoftware = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
                                   height={100}
@@ -673,7 +673,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/search_restaurant.png"
                                   height={100}
@@ -695,7 +695,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/filter_restaurant.png"
                                   height={100}
@@ -717,7 +717,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_restaurant_dtl.png"
                                   height={100}
@@ -737,7 +737,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   height={100}
@@ -757,7 +757,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   height={100}
@@ -779,7 +779,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                   height={100}
@@ -800,7 +800,7 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/favorite-orders.png"
                                   height={100}
@@ -996,7 +996,7 @@ const AppointmentSchedulingSoftware = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -1071,7 +1071,7 @@ const AppointmentSchedulingSoftware = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1090,7 +1090,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/coding.png"
                         height={100}
                         width={100}
@@ -1111,7 +1111,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/data-complexity.png"
                         alt="img"
                         height={100}
@@ -1133,7 +1133,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/coordinate.png"
                         alt="img"
                         height={100}
@@ -1158,7 +1158,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/customize.png"
                         alt="img"
                         height={100}
@@ -1178,7 +1178,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/smartphone-icon.png"
                         alt="img"
                         height={100}
@@ -1198,7 +1198,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/data.png"
                         alt="img"
                         height={100}
@@ -1220,7 +1220,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/web-icon.png"
                         alt="img"
                         height={100}
@@ -1244,7 +1244,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/encrypted.png"
                         alt="img"
                         height={100}
@@ -1265,7 +1265,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/history-icon.png"
                         alt="img"
                         height={100}
@@ -1288,7 +1288,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/seouser-friendly.png"
                         alt="img"
                         height={100}
@@ -1308,7 +1308,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                         height={100}
@@ -1328,7 +1328,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/third-party-api.png"
                         alt="img"
                         height={100}
@@ -1348,7 +1348,7 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/cost-effective.png"
                         alt="img"
                         height={100}
@@ -1379,7 +1379,7 @@ const AppointmentSchedulingSoftware = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                         height={40}
@@ -1390,7 +1390,7 @@ const AppointmentSchedulingSoftware = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         height={40}
@@ -1401,7 +1401,7 @@ const AppointmentSchedulingSoftware = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         height={40}
@@ -1412,7 +1412,7 @@ const AppointmentSchedulingSoftware = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         height={40}
@@ -1459,7 +1459,7 @@ const AppointmentSchedulingSoftware = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1470,7 +1470,7 @@ const AppointmentSchedulingSoftware = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1481,7 +1481,7 @@ const AppointmentSchedulingSoftware = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     height={50}
@@ -1492,7 +1492,7 @@ const AppointmentSchedulingSoftware = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1646,7 +1646,7 @@ const AppointmentSchedulingSoftware = () => {
                       </span>
                       <span id="client-name">Henry, USA</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           height={20}
@@ -1672,7 +1672,7 @@ const AppointmentSchedulingSoftware = () => {
                       </span>
                       Shafan Saabdeen, Dubai [UAE]{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/uae_flag_iimg.png"
                           alt="mobile app development in UAE"
                           height={20}
@@ -1698,7 +1698,7 @@ const AppointmentSchedulingSoftware = () => {
                       </span>
                       Robert, New York{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           height={20}
@@ -1827,7 +1827,7 @@ const AppointmentSchedulingSoftware = () => {
             <Slider {...settings} className="hidedot">
               <div>
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/abs/SS1.jpg"
                     alt="Add Menu For Restaurants"
                     width={1075}
@@ -1837,7 +1837,7 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/abs/SS2.jpg"
                     alt="List/Filter/Sort Restaurants"
                     width={1075}
@@ -1847,7 +1847,7 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/abs/SS3.jpg"
                     alt="Menu Management For Restaurant"
                     width={1075}
@@ -1857,7 +1857,7 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/abs/SS4.jpg"
                     alt="View Received Orders"
                     width={1075}
@@ -1867,7 +1867,7 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/abs/SS5.jpg"
                     alt="View Restaurant Detail"
                     width={1075}
@@ -1904,7 +1904,7 @@ const AppointmentSchedulingSoftware = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

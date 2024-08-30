@@ -17,9 +17,19 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
     email: "",
     phone_no: "",
     message: "",
-    post_url: "https://lswebsitedemo.logicspice.com/fiverr-clone",
+    post_url: "",
     recaptchaToken: "",
   });
+
+  useEffect(() => {
+    // Fetch the current URL and update the formData
+    const currentUrl = window.location.href;
+    setFormData((prevData) => ({
+      ...prevData,
+      post_url: currentUrl,
+    }));
+    // console.log(currentUrl,"currentUrl")
+  }, []);
   const [resultSuccess, setResultSuccess] = useState(false);
   const [errors, setErrors] = useState({});
   const [loader, setLoader] = useState(false);
@@ -31,11 +41,29 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
 
   const handleChange = (e) => {
     const { id, value } = e.target;
+  
+    // Update the form data
     setFormData((prevData) => ({
       ...prevData,
       [id]: value,
     }));
+  
+    // Clear the specific error message for the field being typed into
+    setErrors((prevErrors) => {
+      const newErrors = { ...prevErrors };
+      if (id === "name") {
+        newErrors.usarnameerror = "";
+      } else if (id === "email") {
+        newErrors.emailerror = "";
+      } else if (id === "phone_no") {
+        newErrors.phoneerror = "";
+      } else if (id === "message") {
+        newErrors.messageerror = "";
+      }
+      return newErrors;
+    });
   };
+  
 
   const validateForm = () => {
     const newErrors = {};
@@ -78,6 +106,13 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
         const response = await axios.post(BaseAPI + "/pages/contact", formData);
         if (response.data.status === 200) {
           setResultSuccess(true);
+          setFormData((prevData) => ({
+            ...prevData,
+            name: "",
+            email: "",
+            phone_no: "",
+            message: "",
+          }))
         }
       } catch (error) {
         console.error("Submission error:", error.message);
@@ -90,12 +125,21 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
       ...prevData,
       recaptchaToken: token,
     }));
+    if(token){
+      setErrors((prevError) => ({
+        ...prevError,
+        recaptchaerror: "",
+      }));
+    }
   };
 
   const close = () => {
     setPopupScProductContacts(false);
+    setResultSuccess(false);
+    setLoader(false);
     toggle();
   };
+
 
   const stopPropagation = (e) => {
     e.stopPropagation();
@@ -129,7 +173,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
               </button>
               <div className="row m-0">
                 <div className="col-sm-6 col-md-8 padding-no">
-                  {!resultSuccess ? (
+                  {!resultSuccess ? ( 
                     <>
                       <div className="modal-header">
                         <h4 className="modal-title" id="myModalLabel">

@@ -458,7 +458,7 @@ const Page = () => {
                       Submit Your Resume
                     </Link>
                     <Link
-                      href="/company/applicationform'"
+                      href="/applicationform"
                       className="btn btn-primary vieus oid"
                     >
                       Interview Application Form

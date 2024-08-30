@@ -100,7 +100,7 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/images/more-info.png"
                           width={100}
                           height={100}
@@ -164,7 +164,7 @@ const Page = () => {
                     <Link href="#subscriptionprice">click here</Link>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -194,13 +194,13 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                {/* <Image
+                {/* <Image unoptimized={true}
                   src="/img/classified/classsifiedr-banner-img.png"
                   alt="classNameified_Ads_Script"
                   width={100}
                   height={100}
                 /> */}
-                <Image
+                <Image unoptimized={true}
                   src="/img/classified/classsifiedr-banner-img.png"
                   alt="classified_Ads_Script"
                   width={460}
@@ -334,7 +334,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/classified/classified_costomer.png"
                             alt="User"
                             width={400}
@@ -347,7 +347,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                   width={100}
@@ -366,7 +366,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/multiple_picture.png"
                                   width={100}
@@ -385,7 +385,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/share_review.png"
                                   width={100}
@@ -405,7 +405,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/social_login.png"
                                   width={100}
@@ -424,7 +424,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_classified.png"
                                   width={100}
@@ -444,7 +444,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/filter_project.png"
                                   width={100}
@@ -463,7 +463,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/postan_ad.png"
                                   width={100}
@@ -482,7 +482,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_category.png"
                                   width={100}
@@ -501,7 +501,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/search_location.png"
                                   width={100}
@@ -521,7 +521,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
                                   width={100}
@@ -541,7 +541,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_comments.png"
                                   width={100}
@@ -561,7 +561,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_alerts.png"
                                   width={100}
@@ -588,7 +588,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/classified/lsclassified_admin_mac.png"
                             alt="Admin Panel"
                             width={400}
@@ -601,7 +601,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                   width={100}
@@ -619,7 +619,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                   width={100}
@@ -640,7 +640,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
                                   width={100}
@@ -659,7 +659,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/equipment_search.png"
                                   width={100}
@@ -679,7 +679,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                   width={100}
@@ -699,7 +699,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
                                   width={100}
@@ -718,7 +718,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
                                   width={100}
@@ -738,7 +738,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_classified.png"
                                   width={100}
@@ -758,7 +758,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_bookings.png"
                                   width={100}
@@ -778,7 +778,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_content.png"
                                   width={100}
@@ -797,7 +797,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_address.png"
                                   width={100}
@@ -816,7 +816,7 @@ const Page = () => {
                             </li>{" "}
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/active_deactive.png"
                                   width={100}
@@ -1026,7 +1026,7 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -1119,7 +1119,7 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/images/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1146,7 +1146,7 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image
+            <Image unoptimized={true}
               src="/img/classified/Ls_classidied_infographic.jpg"
               alt="icon"
               title=""
@@ -1193,7 +1193,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/classified/medinest.jpg"
                       alt="icon"
                       title=""
@@ -1218,7 +1218,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/classified/pharmsat.jpg"
                       alt="icon"
                       title=""
@@ -1252,7 +1252,7 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="wordpress Development"
                         width={40}
@@ -1263,7 +1263,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         width={40}
@@ -1274,7 +1274,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         width={40}
@@ -1285,7 +1285,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         width={40}
@@ -1296,7 +1296,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
                         className="lazy"
@@ -1308,7 +1308,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
                         className="lazy"
@@ -1362,7 +1362,7 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     width={50}
@@ -1373,7 +1373,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     width={50}
@@ -1384,7 +1384,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     width={50}
@@ -1395,7 +1395,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     width={40}
@@ -1546,7 +1546,7 @@ const Page = () => {
                       </span>
                       John, USA{" "}
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           width={20}
@@ -1579,7 +1579,7 @@ const Page = () => {
                       </span>
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
                           width={20}
@@ -1611,7 +1611,7 @@ const Page = () => {
                       </span>
                       mike wilshon, AUS{" "}
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
                           width={20}
@@ -1735,7 +1735,7 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Business Directory</h3>
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/jobboard/business-logo.png"
                             alt="business-directory-system"
                             className=""
@@ -1762,7 +1762,7 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
                             className=""
@@ -1790,7 +1790,7 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/jobboard/rms_new.png"
                             alt="Recruitment Management Software"
                             className=""
@@ -1819,7 +1819,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

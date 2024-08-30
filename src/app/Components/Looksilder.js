@@ -124,7 +124,7 @@ const Looksilder = () => {
        
     
       </Slider> */}
-      <div id="equipment_sldier">
+      <div id="">
         <Swiper
           slidesPerView={1}
           spaceBetween={50}

@@ -32,7 +32,7 @@ const Page = () => {
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <Image
+        <Image unoptimized={true}
           width={100}
           height={100}
           src="/img/leadgeneration/bg.png"
@@ -70,7 +70,7 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image
+              <Image unoptimized={true}
                 width={100}
                 height={100}
                 src="/img/jobboard/stars.png"
@@ -122,7 +122,7 @@ const Page = () => {
               <div className="col-md-6">
                 <div className="media">
                   <div className="media-left">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="media-object"
@@ -142,7 +142,7 @@ const Page = () => {
               <div className="col-md-6">
                 <div className="media">
                   <div className="media-left">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="media-object"
@@ -163,7 +163,7 @@ const Page = () => {
               <div className="col-md-6">
                 <div className="media">
                   <div className="media-left">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="media-object"
@@ -184,7 +184,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -253,7 +253,7 @@ const Page = () => {
                         onClick={openModal}
                       >
                         <span>
-                          <Image
+                          <Image unoptimized={true}
                             width={30}
                             height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
@@ -307,7 +307,7 @@ const Page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/tech_java_icon.png"
@@ -318,7 +318,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/andoird_icon.png"
@@ -329,7 +329,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/tech_php_icon.png"
@@ -340,7 +340,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/tech_cakephp_icon.png"
@@ -351,7 +351,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/tech_mysql_icon.png"
@@ -373,7 +373,7 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
@@ -384,7 +384,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
@@ -636,7 +636,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

@@ -26,7 +26,7 @@ const Page = () => {
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <Image
+        <Image unoptimized={true}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -75,7 +75,7 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image
+              <Image unoptimized={true}
                 src="/img/jobboard/stars.png"
                 alt="stars"
                 className=""
@@ -124,7 +124,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/unique_signupicon.png"
                         alt="Easy Registration"
@@ -145,7 +145,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/great_profile_managment_icon.png"
                         alt="Great Profile Management"
@@ -167,7 +167,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/fully_responsive_icon.png"
                         alt="Fully Responsive"
@@ -189,7 +189,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Lost Password Recovery"
@@ -211,7 +211,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/search_filter_icon.png"
                         alt="Search Filter"
@@ -233,7 +233,7 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image
+                      <Image unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/payment_options_icon.png"
                         alt="Payment Options"
@@ -301,7 +301,7 @@ const Page = () => {
                         href="javascript:void(0);"
                       >
                         <span>
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
                             height={100}
@@ -346,7 +346,7 @@ const Page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/apple_phn_icon.png"
                     alt="iOS"
                     height={40}
@@ -357,7 +357,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/tech_java_icon.png"
                     alt="Java"
                     height={40}
@@ -368,7 +368,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/andoird_icon.png"
                     alt="Android"
                     height={40}
@@ -379,7 +379,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
                     height={40}
@@ -390,7 +390,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
                     height={40}
@@ -401,7 +401,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/bootstrap.png"
                     alt="manager_icn"
                     height={40}
@@ -412,7 +412,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -423,7 +423,7 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -445,7 +445,7 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={60}
@@ -456,7 +456,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -708,7 +708,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

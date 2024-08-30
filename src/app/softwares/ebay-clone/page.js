@@ -110,7 +110,7 @@ const Page = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                       width={100}
@@ -133,7 +133,7 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                <Image unoptimized={true}
                   alt="Ebay Clone"
                   src="/img/softwares-banner-img/ebaybanner-img.png"
                   width={450}
@@ -289,7 +289,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/ebay/ebay_User_website.jpg"
                             alt="Customer Panel"
                             width={400}
@@ -302,7 +302,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                   width={100}
@@ -322,7 +322,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_restaurants.png"
                                   width={100}
@@ -343,7 +343,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                   width={100}
@@ -363,7 +363,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_customers.png"
                                   width={100}
@@ -383,7 +383,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_cuisines.png"
                                   width={100}
@@ -403,7 +403,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_1.png"
                                   width={100}
@@ -423,7 +423,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_1.png"
                                   width={100}
@@ -443,7 +443,7 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_3.png"
                                   width={100}
@@ -463,7 +463,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_5.png"
                                   width={100}
@@ -484,7 +484,7 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
                                   width={100}
@@ -505,7 +505,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_10.png"
                                   width={100}
@@ -525,7 +525,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
                                   width={100}
@@ -557,7 +557,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/ebay/ebay_User.png"
                             alt="Store Vendors Panel"
                             width={400}
@@ -570,7 +570,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   width={100}
@@ -591,7 +591,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/received-orders.png"
                                   width={100}
@@ -610,7 +610,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-Charges.png"
                                   width={100}
@@ -629,7 +629,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/kitchen-staff.png"
                                   width={100}
@@ -649,7 +649,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-person.png"
                                   width={100}
@@ -669,7 +669,7 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/order-status.png"
                                   width={100}
@@ -690,7 +690,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
                                   width={100}
@@ -710,7 +710,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_6.png"
                                   width={100}
@@ -731,7 +731,7 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_3.png"
                                   width={100}
@@ -751,7 +751,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
                                   width={100}
@@ -772,7 +772,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_7.png"
                                   width={100}
@@ -791,7 +791,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_6.png"
                                   width={100}
@@ -810,7 +810,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_11.png"
                                   width={100}
@@ -830,7 +830,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_10.png"
                                   width={100}
@@ -850,7 +850,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_5.png"
                                   width={100}
@@ -881,7 +881,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image
+                          <Image unoptimized={true}
                             src="/img/ebay/ebay_admin.png"
                             alt="Admin Panel"
                             width={400}
@@ -894,7 +894,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
                                   width={100}
@@ -913,7 +913,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/search_restaurant.png"
                                   width={100}
@@ -933,7 +933,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/filter_restaurant.png"
                                   width={100}
@@ -953,7 +953,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_restaurant_dtl.png"
                                   width={100}
@@ -973,7 +973,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   width={100}
@@ -994,7 +994,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   width={100}
@@ -1014,7 +1014,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_1.png"
                                   width={100}
@@ -1034,7 +1034,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_2.png"
                                   width={100}
@@ -1054,7 +1054,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_3.png"
                                   width={100}
@@ -1075,7 +1075,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_4.png"
                                   width={100}
@@ -1097,7 +1097,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_6.png"
                                   width={100}
@@ -1119,7 +1119,7 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_5.png"
                                   width={100}
@@ -1140,7 +1140,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_7.png"
                                   width={100}
@@ -1162,7 +1162,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_9.png"
                                   width={100}
@@ -1183,7 +1183,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_8.png"
                                   width={100}
@@ -1340,7 +1340,7 @@ const Page = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1366,7 +1366,7 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
                         width={40}
@@ -1377,7 +1377,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         width={40}
@@ -1388,7 +1388,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         width={40}
@@ -1399,7 +1399,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         width={40}
@@ -1446,7 +1446,7 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     width={50}
@@ -1457,7 +1457,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     width={50}
@@ -1468,7 +1468,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     width={50}
@@ -1479,7 +1479,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     width={40}
@@ -1622,7 +1622,7 @@ const Page = () => {
                       </span>
                       <span id="client-name">Jack caron, UK</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/uk_flag_img.png"
                           alt="mobile app development in UK"
                           width={20}
@@ -1648,7 +1648,7 @@ const Page = () => {
                       </span>
                       W. Desuza, USA{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           width={20}
@@ -1676,7 +1676,7 @@ const Page = () => {
                       </span>
                       Marian Keli, Belgium{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image
+                        <Image unoptimized={true}
                           src="/img/jobboard/belgium_flag_img.png"
                           alt="mobile app development in Belgium"
                           width={20}
@@ -1821,7 +1821,7 @@ const Page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/ebay/ebay01.jpg"
                     alt="Add Menu For Restaurants"
                     width={1075}
@@ -1832,7 +1832,7 @@ const Page = () => {
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/ebay/ebay02.jpg"
                     alt="List/Filter/Sort Restaurants"
                     width={1075}
@@ -1843,7 +1843,7 @@ const Page = () => {
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/ebay/ebay03.jpg"
                     alt="Menu Management For Restaurant"
                     width={1075}
@@ -1853,7 +1853,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/ebay/ebay04.jpg"
                     alt="View Received Orders"
                     width={1075}
@@ -1863,7 +1863,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/ebay/ebay05.jpg"
                     alt="View Restaurant Detail"
                     width={1075}
@@ -1900,7 +1900,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}

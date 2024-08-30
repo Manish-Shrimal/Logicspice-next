@@ -112,7 +112,7 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/images/more-info.png"
@@ -167,7 +167,7 @@ const Page = () => {
                     <span className="AppPrice">
                       <span className="MoreInfo">
                         <i>
-                          <Image
+                          <Image unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/images/more-info.png"
@@ -194,7 +194,7 @@ const Page = () => {
                     <a href="#subscriptionprice">click here</a>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -224,7 +224,7 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                <Image unoptimized={true}
                   width={370}
                   height={100 / (100 / 100)}
                   className="lazy"
@@ -364,7 +364,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
-                          <Image
+                          <Image unoptimized={true}
                             width={400}
                             height={100}
                             src="/img/jobboard/mobile-job-seeker.png"
@@ -377,7 +377,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -397,7 +397,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -419,7 +419,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -439,7 +439,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -459,7 +459,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -479,7 +479,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -500,7 +500,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -520,7 +520,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -541,7 +541,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -561,7 +561,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -582,7 +582,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -604,7 +604,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -625,7 +625,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -645,7 +645,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -665,7 +665,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -685,7 +685,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -705,7 +705,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -725,7 +725,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -746,7 +746,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -767,7 +767,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -800,7 +800,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image
+                          <Image unoptimized={true}
                             width={400}
                             height={100}
                             src="/img/jobboard/emplyer-mobile.png"
@@ -813,7 +813,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -833,7 +833,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -855,7 +855,7 @@ const Page = () => {
 
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -876,7 +876,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -900,7 +900,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -920,7 +920,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -940,7 +940,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -961,7 +961,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -981,7 +981,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1001,7 +1001,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1021,7 +1021,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1041,7 +1041,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1062,7 +1062,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1082,7 +1082,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1102,7 +1102,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1122,7 +1122,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1142,7 +1142,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1164,7 +1164,7 @@ const Page = () => {
 
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1190,7 +1190,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1215,7 +1215,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1248,7 +1248,7 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image
+                          <Image unoptimized={true}
                             width={400}
                             height={100}
                             src="/img/fiverrclone/gigger_deshboard.png"
@@ -1261,7 +1261,7 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1278,7 +1278,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1300,7 +1300,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1322,7 +1322,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1343,7 +1343,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1365,7 +1365,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1388,7 +1388,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1409,7 +1409,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1431,7 +1431,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1454,7 +1454,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1475,7 +1475,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1495,7 +1495,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1515,7 +1515,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1536,7 +1536,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1557,7 +1557,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1577,7 +1577,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1601,7 +1601,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1624,7 +1624,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1649,7 +1649,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1670,7 +1670,7 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1949,7 +1949,7 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -2256,7 +2256,7 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={20}
                     height={20}
                     src="/img/jobboard/why-logic-icon.png"
@@ -2280,7 +2280,7 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image
+            <Image unoptimized={true}
               width={900}
               height={100}
               src="/img/jobboard/Job_board_for_page.jpg"
@@ -2327,7 +2327,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/sellfomote.jpg"
@@ -2352,7 +2352,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/ejtecs.webp"
@@ -2377,7 +2377,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/restrowizard.webp"
@@ -2402,7 +2402,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/healthandsocialcarejobs.webp"
@@ -2427,7 +2427,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/joblisto.webp"
@@ -2452,7 +2452,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/booyajobs.webp"
@@ -2477,7 +2477,7 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/jobseakers.webp"
@@ -2511,7 +2511,7 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
@@ -2522,7 +2522,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
@@ -2533,7 +2533,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/html-5.png"
@@ -2544,7 +2544,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
@@ -2555,7 +2555,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
@@ -2566,7 +2566,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/apple_phn_icon.png"
@@ -2578,7 +2578,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         width={40}
                         height={100}
                         src="/img/jobboard/andoird_icon.png"
@@ -2639,7 +2639,7 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
@@ -2650,7 +2650,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
@@ -2661,7 +2661,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
@@ -2672,7 +2672,7 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
@@ -2687,7 +2687,7 @@ const Page = () => {
       </section>
       <section className="ecommerce_review_section" id="reviews">
         <div className="ecommerce_review__img">
-          <Image
+          <Image unoptimized={true}
             width={400}
             height={100}
             src="/img/jobboard/ecommerce-review-img.png"
@@ -2721,7 +2721,7 @@ const Page = () => {
                     </span>
                     John, USA
                     <span>
-                      <Image
+                      <Image unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/usa_flag_img.png"
@@ -2751,7 +2751,7 @@ const Page = () => {
                     </span>
                     <span id="client-name">D. Smith, Germany in USA</span>{" "}
                     <span>
-                      <Image
+                      <Image unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/german.png"
@@ -2783,7 +2783,7 @@ const Page = () => {
                     </span>
                     <span id="client-name">mike wilshon, AUS</span>{" "}
                     <span>
-                      <Image
+                      <Image unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/australia_flag_img.png"
@@ -3265,7 +3265,7 @@ const Page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/job_portal_script_apply_jobs.png"
@@ -3282,7 +3282,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/Job_portal_script_create_job.png"
@@ -3299,7 +3299,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/job_portal_system_search_jobs.png"
@@ -3316,7 +3316,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/make_a_cv_job_portal_app.png"
@@ -3334,7 +3334,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/Manage_jobs_job_portal_script.png"
@@ -3351,7 +3351,7 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
@@ -3422,7 +3422,7 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/udemy_new.png"
@@ -3452,7 +3452,7 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/rms_new.png"
@@ -3483,7 +3483,7 @@ const Page = () => {
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
@@ -3509,7 +3509,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

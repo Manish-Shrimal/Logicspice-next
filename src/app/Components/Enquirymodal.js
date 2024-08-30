@@ -21,9 +21,9 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     phone_no: "",
     budget: "",
     message: "",
-    product_name: "php-development",
-    post_slug: "php-development",
-    post_url: "https://logicspice-next.vercel.app/services/codeigniter-development",
+    product_name: "",
+    post_slug: "",
+    post_url: "",
     budget: "",
   });
   const [formErrors, setFormErrors] = useState({
@@ -39,6 +39,23 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
 
   const [resultSuccess, setResultSuccess] = useState(false);
   const [loader, setLoader] = useState(false);
+  useEffect(() => {
+    // Fetch the current URL and update the formData
+    const currentUrl = window.location.href;
+    // Extract the last part of the path
+    const pathSegments = currentUrl.split('/');
+    const lastSegment = pathSegments[pathSegments.length - 1];
+
+    console.log(lastSegment, "lastSegment");
+
+    setFormData((prevData) => ({
+      ...prevData,
+      post_url: currentUrl,
+      post_slug: lastSegment,
+      product_name: lastSegment,
+    }));
+    // console.log(currentUrl,"currentUrl")
+  }, []);
 
   const onRecaptchaChange = (token) => {
     if (token) {

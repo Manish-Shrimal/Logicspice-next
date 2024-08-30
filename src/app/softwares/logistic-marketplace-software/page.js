@@ -117,7 +117,7 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
@@ -154,7 +154,7 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -182,7 +182,7 @@ See how it work yourself!"
 
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                <Image unoptimized={true}
                   width={450}
                   height={100 / (100 / 100)}
                   className="lazy"
@@ -320,7 +320,7 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right costomer_tab_rightleft">
-                        <Image
+                        <Image unoptimized={true}
                           width={300}
                           height={100}
                           src="/img/logisticmarketplace/logistic_customer.png"
@@ -333,7 +333,7 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -352,7 +352,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -372,7 +372,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -393,7 +393,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -412,7 +412,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -433,7 +433,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -454,7 +454,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -474,7 +474,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -493,7 +493,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -513,7 +513,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -532,7 +532,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -548,7 +548,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -576,7 +576,7 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right">
-                        <Image
+                        <Image unoptimized={true}
                           width={300}
                           height={100}
                           src="/img/logisticmarketplace/logistic-transporters.png"
@@ -589,7 +589,7 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -609,7 +609,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -629,7 +629,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -649,7 +649,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -673,7 +673,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -693,7 +693,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -713,7 +713,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -737,7 +737,7 @@ See how it work yourself!"
 
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -757,7 +757,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -776,7 +776,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -796,7 +796,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -815,7 +815,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -846,7 +846,7 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3 ">
                       <div className="costomer_tab_right costomer_tab_rightleft2">
-                        <Image
+                        <Image unoptimized={true}
                           width={300}
                           height={100}
                           src="/img/logisticmarketplace/logistic_admin_mac.png"
@@ -859,7 +859,7 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -880,7 +880,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -902,7 +902,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -923,7 +923,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -944,7 +944,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -963,7 +963,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -984,7 +984,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1005,7 +1005,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1026,7 +1026,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1044,7 +1044,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1064,7 +1064,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1084,7 +1084,7 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image
+                              <Image unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1308,7 +1308,7 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1489,7 +1489,7 @@ See how it work yourself!"
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
@@ -1513,7 +1513,7 @@ See how it work yourself!"
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/logisticmarketplace/logistics_marketplace.jpg"
@@ -1560,7 +1560,7 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1585,7 +1585,7 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1610,7 +1610,7 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1635,7 +1635,7 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1647,7 +1647,7 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
@@ -1665,7 +1665,7 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
@@ -1705,7 +1705,7 @@ See how it work yourself!"
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/tech_cakephp_icon.png"
@@ -1716,7 +1716,7 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/html-5.png"
@@ -1727,7 +1727,7 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/tech_mysql_icon.png"
@@ -1738,7 +1738,7 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/tech_apache_icon.png"
@@ -1749,7 +1749,7 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/apple_phn_icon.png"
@@ -1761,7 +1761,7 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/andoird_icon.png"
@@ -1815,7 +1815,7 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
@@ -1826,7 +1826,7 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
@@ -1840,7 +1840,7 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/jobboard/free_instal.png"
@@ -1851,7 +1851,7 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
@@ -2000,7 +2000,7 @@ See how it work yourself!"
                       </span>
                       Kunal S.&rsquo; India{" "}
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/jobboard/india_flag_img.png"
@@ -2036,7 +2036,7 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">Alena&rsquo; USA</span>{" "}
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
@@ -2070,7 +2070,7 @@ See how it work yourself!"
                       </span>
                       Mohammed Shozeb&rsquo; UAE{" "}
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/jobboard/uae_flag_iimg.png"
@@ -2221,7 +2221,7 @@ See how it work yourself!"
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/logisticmarketplace/add_shipment.png"
@@ -2239,7 +2239,7 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/logisticmarketplace/search_for_transporters.png"
@@ -2256,7 +2256,7 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/logisticmarketplace/search_inquiries.png"
@@ -2273,7 +2273,7 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/logisticmarketplace/submit_quote.png"
@@ -2290,7 +2290,7 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     src="/img/logisticmarketplace/transporter_details.png"
@@ -2346,7 +2346,7 @@ See how it work yourself!"
                         <h3>Freelancer Clone</h3>
 
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/freelancer_logo_new.png"
@@ -2377,7 +2377,7 @@ See how it work yourself!"
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
@@ -2405,7 +2405,7 @@ See how it work yourself!"
                         <h3>WhatsApp Clone App</h3>
 
                         <div className="other-project-logo">
-                          <Image
+                          <Image unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/ls-chat-logo.png"
@@ -2435,7 +2435,7 @@ See how it work yourself!"
         className="modal-service"
       >
         <MDBModalBody>
-          <Image
+          <Image unoptimized={true}
             width={100}
             height={100}
             src="/img/logisticmarketplace/logistics_marketplace.jpg"
@@ -2461,7 +2461,7 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://loadboard.trucking21.com/" target="_blank">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/loadboard.jpg"
@@ -2478,7 +2478,7 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://loadmoversgh.com/" target="_blank">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/loadmoversgh.jpg"
@@ -2494,7 +2494,7 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://fletes24.com/" target="_blank">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/fletes24.jpg"
@@ -2510,7 +2510,7 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://logistics.onestop.global/" target="_blank">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/logisticsonestop.jpg"
@@ -2526,7 +2526,7 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://afodel.com/" target="_blank">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/afodel.jpg"
@@ -2542,7 +2542,7 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="http://esseltransport.co.ke/" target="_blank">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/esseltransport.jpg"
@@ -2561,7 +2561,7 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&rsquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

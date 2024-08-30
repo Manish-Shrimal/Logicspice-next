@@ -837,7 +837,7 @@ const Footer = () => {
 
         <div class="footer-bottom">
           <p>
-            © Copyright @ 2023 | Mobile App Development Company - Logicspice.
+            © Copyright @ 2024 | Mobile App Development Company - Logicspice.
             All Rights Reserved.
           </p>
         </div>

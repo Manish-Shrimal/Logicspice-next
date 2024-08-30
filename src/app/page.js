@@ -798,7 +798,7 @@ const Page = () => {
         </div>
       </section>
       {/* Hire section  */}
-      <section className="hire-expert-home">
+      <section className="hire-expert-home" >
         <div className="container">
           <div className="headings">
             <h2>HIRE DEVELOPER MINDS FOR DIFFERENT PLATFORM</h2>
@@ -809,7 +809,7 @@ const Page = () => {
             </p>
           </div>
           <ul className="hiring-list">
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-reactjs-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -819,7 +819,7 @@ const Page = () => {
                 <strong>Hire ReactJS Developers</strong>
               </Link>
             </li>
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-ios-app-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -829,7 +829,7 @@ const Page = () => {
                 <strong>Hire iOS App Developer</strong>
               </Link>
             </li>
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-web-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -839,7 +839,7 @@ const Page = () => {
                 <strong>Hire Web Developer</strong>
               </Link>
             </li>
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-node-js-experts">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -850,7 +850,7 @@ const Page = () => {
               </Link>
             </li>
 
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-laravel-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -860,7 +860,7 @@ const Page = () => {
                 <strong>Hire Laravel Developer</strong>
               </Link>
             </li>
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-react-native-developers">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -870,7 +870,7 @@ const Page = () => {
                 <strong>Hire React Native Developers</strong>
               </Link>
             </li>
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-hybrid-mobile-app-developer">
                 <span className="home-hire-icon">
                   <span className="bg">
@@ -880,7 +880,7 @@ const Page = () => {
                 <strong>Hire Hybrid App Developer</strong>
               </Link>
             </li>
-            <li data-aos="fade-left" className="aos-init aos-animate">
+            <li data-aos="fade-left" class="aos-init aos-animate">
               <Link href="/hire-wordpress-experts">
                 <span className="home-hire-icon">
                   <span className="bg">

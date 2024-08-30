@@ -49,7 +49,7 @@ const Page = () => {
       <NavBar />
       <section className="FaqBannerSection">
         <div className="FaqBannerLeftImg">
-          <Image
+          <Image unoptimized={true}
             src="/img/faqscript/faqbanner-leftimg.png"
             alt="icon"
             width={35}
@@ -57,7 +57,7 @@ const Page = () => {
           />
         </div>
         <div className="FaqBannerRightImg">
-          <Image
+          <Image unoptimized={true}
             src="/img/faqscript/faqbanner-rightimg.png"
             alt="icon"
             width={100}
@@ -95,7 +95,7 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-5 col-md-5">
               <div className="FaqBannerImgTop">
-                <Image
+                <Image unoptimized={true}
                   src="/img/faqscript/faqbannerimg.png"
                   width={300}
                   height={500 / (100 / 100)}
@@ -134,14 +134,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon1.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon1hover.png"
                       alt="FAQ Script"
@@ -164,14 +164,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon2.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon2hover.png"
                       alt="FAQ Script"
@@ -194,14 +194,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon3.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon3hover.png"
                       alt="FAQ Script"
@@ -224,14 +224,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon4.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon4hover.png"
                       alt="FAQ Script"
@@ -254,14 +254,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon5.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon5hover.png"
                       alt="FAQ Script"
@@ -281,14 +281,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon6.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon6hover.png"
                       alt="FAQ Script"
@@ -308,14 +308,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon7.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon7hover.png"
                       alt="FAQ Script"
@@ -339,14 +339,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon9.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon9hover.png"
                       alt="FAQ Script"
@@ -369,14 +369,14 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon8.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon8hover.png"
                       alt="FAQ Script"
@@ -418,7 +418,7 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className=""
                       src="/img/faqscript/FaqUserIcon.png"
                       alt="FAQ Script"
@@ -437,7 +437,7 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/FaqAdminIcon.png"
                       alt="FAQ Script"
@@ -460,7 +460,7 @@ const Page = () => {
                       <div className="row">
                         <div className="col-xs-12 col-sm-6 col-md-5">
                           <div className="FaqUserImg">
-                            <Image
+                            <Image unoptimized={true}
                               className="FeaturesIcon"
                               src="/img/faqscript/FaqUserimg.jpg"
                               alt="FAQ Script"
@@ -670,14 +670,14 @@ const Page = () => {
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-5">
                           <div className="FaqUserImg">
-                            <Image
+                            <Image unoptimized={true}
                               className="FeaturesIcon FeaturesImgDesktop"
                               src="/img/faqscript/FaqAdminimg.jpg"
                               alt="FAQ Script"
                               width={100}
                               height={100}
                             />
-                            <Image
+                            <Image unoptimized={true}
                               className="FeaturesImgmobile"
                               src="/img/faqscript/FaqAdminImgMobile.jpg"
                               alt="FAQ Script"
@@ -821,7 +821,7 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                         width={40}
@@ -832,7 +832,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         width={40}
@@ -843,7 +843,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         width={40}
@@ -854,7 +854,7 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         width={40}
@@ -898,7 +898,7 @@ const Page = () => {
         data-aos="fade-up"
       >
         <div className="ecommerce_review__img">
-          <Image
+          <Image unoptimized={true}
             src="/img/marketplacesoftware/faq-review-img.png"
             alt="Laravel Development"
             width={500}
@@ -931,7 +931,7 @@ const Page = () => {
                     </span>
                     Marcus Cruz, Canada
                     <span>
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/canada-flag.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
@@ -961,7 +961,7 @@ const Page = () => {
                     </span>
                     <span id="client-name">Lisa Jonhathan, Switzerland</span>{" "}
                     <span>
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/switzerland_flag_img.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
@@ -991,7 +991,7 @@ const Page = () => {
                     </span>
                     <span id="client-name">John, USA</span>{" "}
                     <span>
-                      <Image
+                      <Image unoptimized={true}
                         src="/img/jobboard/usa_flag_img.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
@@ -1124,7 +1124,7 @@ const Page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image
+                  <Image unoptimized={true}
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
                     alt="laravel web development"
                     width={300}
@@ -1212,7 +1212,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}
