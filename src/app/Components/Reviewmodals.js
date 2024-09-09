@@ -24,10 +24,11 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
     email: "",
     phone: "",
     message: "",
-    reacptcha: "",
+    recaptcha: "",
   });
   const [loader, setLoader] = useState(false);
   const [html, setHtml] = useState("");
+  const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
 
   useEffect(() => {
     setPopupScReview(modalStatus);
@@ -37,26 +38,26 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
     // Fetch the current URL and update the formData
     const currentUrl = window.location.href;
     // Extract the last part of the path
-    const pathSegments = currentUrl.split('/');
+    const pathSegments = currentUrl.split("/");
     const lastSegment = pathSegments[pathSegments.length - 1];
-
-    console.log(lastSegment, "lastSegment");
 
     setFormData((prevData) => ({
       ...prevData,
       product_name: lastSegment,
     }));
-    // console.log(currentUrl,"currentUrl")
   }, []);
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
-
-    console.log(value)
+    const { id, name, value } = e.target;
 
     setFormData((prev) => ({
       ...prev,
       [id]: value,
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
     }));
   };
 
@@ -66,25 +67,25 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
     // Handle form submission
     let newErrors = {};
 
-    // if (!isRecaptchaVerified) {
-    //   newErrors.reacptchaerror = "Please verify that you are not a robot";
-    // }
+    if (!isRecaptchaVerified) {
+      newErrors.recaptcha = "Please verify that you are not a robot";
+    }
 
     const nameRegex = /^[a-zA-Z\s]+$/;
     if (!formData.name) {
-      newErrors.usarnameerror = "Name is required";
-    } else if(!nameRegex.test(formData.name)) {
-      newErrors.usarnameerror = "Name can only contain letters and spaces";
+      newErrors.name = "Name is required";
+    } else if (!nameRegex.test(formData.name)) {
+      newErrors.name = "Name can only contain letters and spaces";
     }
 
     if (formData.email === "") {
-      newErrors.emailerror = "Please enter your email";
+      newErrors.email = "Please enter your email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.emailerror = "Please enter a valid email address";
+      newErrors.email = "Please enter a valid email address";
     }
 
     if (formData.message === "") {
-      newErrors.messageerror = "Please enter your message";
+      newErrors.message = "Please enter your message";
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -92,11 +93,11 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
       return;
     }
 
-    try{
-
+    try {
       const response = await axios.post(BaseAPI + "/pages/review", formData);
 
       if (response.data.status === 200) {
+        setHtml(response.data.message);
         setFormData({
           name: "",
           email: "",
@@ -107,22 +108,18 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
         if (recaptchaRef.current) {
           recaptchaRef.current.reset();
         }
+        setResultSuccess(true);
       }
-
-    }catch(error){
-      console.log(error.message)
+    } catch (error) {
+      console.log(error.message);
     }
-
   };
   const onRecaptchaChange = (token) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      recaptchaToken: token,
-    }));
     if (token) {
+      setIsRecaptchaVerified(true);
       setErrors((prevError) => ({
         ...prevError,
-        recaptchaerror: "",
+        recaptcha: "",
       }));
     }
   };
@@ -130,6 +127,7 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
   const close = () => {
     setPopupScReview(false);
     toggle();
+    setResultSuccess(false);
   };
 
   return (
@@ -174,16 +172,12 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                             id="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="form-control"
+                            className={`form-control ${
+                              errors.name ? "fieldRequired" : ""
+                            }`}
                             placeholder="Your Name *"
                             aria-describedby="inputGroupPrepend"
-                            required
                           />
-                          {errors.name && (
-                            <div className="invalid-feedback d-block">
-                              {errors.name}
-                            </div>
-                          )}
                         </div>
                       </div>
                       <div className="mb-3">
@@ -200,16 +194,12 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                             id="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="form-control"
+                            className={`form-control ${
+                              errors.email ? "fieldRequired" : ""
+                            }`}
                             placeholder="Your Email *"
                             aria-describedby="inputGroupPrepend"
-                            required
                           />
-                          {errors.email && (
-                            <div className="invalid-feedback d-block">
-                              {errors.email}
-                            </div>
-                          )}
                         </div>
                       </div>
                       <div className="mb-3">
@@ -238,25 +228,16 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                           value={formData.message}
                           onChange={handleChange}
                           id="message"
-                          className="form-control"
+                          className={`form-control ${
+                            errors.message ? "fieldRequired" : ""
+                          }`}
                           placeholder="Your Message *"
+                          size="50"
                           rows="4"
-                          required
+                          noResize="1"
                         ></textarea>
-                        {errors.message && (
-                          <div className="invalid-feedback d-block">
-                            {errors.message}
-                          </div>
-                        )}
                       </div>
-                      {/* <div className="mb-3">
-                        <div id="recaptchaQ" className="g-recaptcha"></div>
-                        {errors.recaptcha && (
-                          <div className="invalid-feedback d-block">
-                            {errors.recaptcha}
-                          </div>
-                        )}
-                      </div> */}
+
                       <div className=" mb-3">
                         <ReCAPTCHA
                           key={recaptchaKey}
@@ -264,7 +245,7 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                           onChange={onRecaptchaChange}
                         />
                         <div className="gcpc FormError" id="captcha_msg">
-                          {errors.reacptchaerror}
+                          {errors.recaptcha}
                         </div>
                       </div>
 
@@ -281,21 +262,23 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                     </>
                   ) : (
                     <div className="text-center">
-                      <h5>Thank you for submitting your review for {title}!</h5>
-                      <p>
+                      <span className="thank_ss">{html}</span>
+                      <p className="hh_cls">
                         Your review is under moderation. We will update you
                         soon.
                       </p>
                       <button
                         type="button"
                         className="btn btn-primary"
-                        onClick={handleClose}
+                        aria-label="Close"
+                        onClick={close}
                       >
                         OK
                       </button>
                     </div>
                   )}
                 </div>
+                <hr />
                 {!resultSuccess && (
                   <div className="modal-footer">
                     <input

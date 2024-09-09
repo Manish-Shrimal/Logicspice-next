@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -54,111 +54,80 @@ const Page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
-  const Accordion = styled((props) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    "&:not(:last-child)": {
-      borderBottom: 0,
-    },
-    "&::before": {
-      display: "none",
-    },
-  }));
-
-  const AccordionSummary = styled((props) => (
-    <MuiAccordionSummary
-      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    backgroundColor: "rgba(0, 0, 0, .03)",
-    flexDirection: "row-reverse",
-    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-      // transform: "rotate(90deg)",
-    },
-    "& .MuiAccordionSummary-content": {
-      marginLeft: theme.spacing(1),
-    },
-    ...theme.applyStyles("dark", {
-      backgroundColor: "rgba(255, 255, 255, .05)",
-    }),
-  }));
-
-  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: "1px solid rgba(0, 0, 0, .125)",
-  }));
-
-  const [expanded, setExpanded] = React.useState("panel1");
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
   
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 100) { // Adjust this value based on when you want the navbar to appear
+      if (offset > 100) {
+        // Adjust this value based on when you want the navbar to appear
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <>
       <NavBar />
       <section className="product_middle_menu_box">
-      {isScrolled && (
-        <section className="product_middle_menu top-fixed">
-          <div className="container">
-            <nav className="navbar navbar-default">
-              <div className="container-fluid">
-                <div className="navbar-header">
-                  <button
-                    type="button"
-                    className="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-2"
-                    aria-expanded="false"
+        {isScrolled && (
+          <section className="product_middle_menu top-fixed">
+            <div className="container">
+              <nav className="navbar navbar-default">
+                <div className="container-fluid">
+                  <div className="navbar-header">
+                    <button
+                      type="button"
+                      className="navbar-toggle collapsed"
+                      data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-2"
+                      aria-expanded="false"
+                    >
+                      <span className="sr-only">Toggle navigation</span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                    </button>
+                  </div>
+                  <div
+                    className="collapse navbar-collapse"
+                    id="bs-example-navbar-collapse-2"
                   >
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                  </button>
-                </div>
-                <div
-                  className="collapse navbar-collapse"
-                  id="bs-example-navbar-collapse-2"
-                >
-                  <ul className="nav navbar-nav">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#technologies">Technologies</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                  </ul>
-                  <ul className="nav navbar-nav navbar-right">
-                    <li>
-                      {/* <a className="page-scroll btn btn-default" href="javascript:void(0);" data-toggle="modal" data-target="#popup_sc_product" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#update_frm&quot;).html(&quot;FAQ Script&quot;); $(&quot;#contact_fr&quot;).val(&quot;FAQ Script&quot;);" id="buy_now_1">
+                    <ul className="nav navbar-nav">
+                      <li>
+                        <a href="#features">Features</a>
+                      </li>
+                      <li>
+                        <a href="#technologies">Technologies</a>
+                      </li>
+                      <li>
+                        <a href="#reviews">Reviews</a>
+                      </li>
+                      <li>
+                        <a href="#faq">FAQ</a>
+                      </li>
+                    </ul>
+                    <ul className="nav navbar-nav navbar-right">
+                      <li>
+                        {/* <a className="page-scroll btn btn-default" href="javascript:void(0);" data-toggle="modal" data-target="#popup_sc_product" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#update_frm&quot;).html(&quot;FAQ Script&quot;); $(&quot;#contact_fr&quot;).val(&quot;FAQ Script&quot;);" id="buy_now_1">
                             <span><img src="https://www.logicspice.com/app/webroot/img/images/enquiry_btn_bg.png" alt="Enquiry"></span> Enquire Now
                         </a> */}
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </nav>
-          </div>
-        </section>
-      )}
-    </section>
+              </nav>
+            </div>
+          </section>
+        )}
+      </section>
       <section className="FaqBannerSection">
         <div className="FaqBannerLeftImg">
           <Image
@@ -1280,8 +1249,8 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-md-7">
-                <div className="ecommerce__Quick_FAQ">
-                  {/* <MDBAccordion v-model="activeItem" borderless>
+                <div className=" CustomQuickFAQScript">
+                  <MDBAccordion v-model="activeItem" borderless>
                     <MDBAccordionItem
                       headerTitle="Are you given source code modifiable?"
                       collapseId="flush-collapse1"
@@ -1346,196 +1315,7 @@ const Page = () => {
                         the copyrights for our softwares.
                       </p>
                     </MDBAccordionItem>
-                  </MDBAccordion> */}
-                  <Accordion
-                    expanded={expanded === "panel1"}
-                    onChange={handleChange("panel1")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel1" ? (
-                          <IconButton>
-                            <RemoveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton>
-                            <AddIcon />
-                          </IconButton>
-                        )
-                      }
-                      aria-controls="panel1d-content"
-                      id="panel1d-header"
-                    >
-                      <Typography>
-                        Are you given source code modifiable?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, our scripts are flexible. Clients can customize
-                        according to their requirements.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel2"}
-                    onChange={handleChange("panel2")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel2" ? (
-                          <IconButton>
-                            <RemoveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton>
-                            <AddIcon />
-                          </IconButton>
-                        )
-                      }
-                      aria-controls="panel2d-content"
-                      id="panel2d-header"
-                    >
-                      <Typography>
-                        Do Logicspice give technical support?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, we believe in long-term relationships and provide
-                        technical support to the client at an affordable cost.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel3"}
-                    onChange={handleChange("panel3")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel3" ? (
-                          <IconButton>
-                            <RemoveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton>
-                            <AddIcon />
-                          </IconButton>
-                        )
-                      }
-                      aria-controls="panel3d-content"
-                      id="panel3d-header"
-                    >
-                      <Typography>
-                        Are you willing to advise us with ideas?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Sure, we fulfill the client. Your suggestions or ideas
-                        are always welcomed which can make your business more
-                        interactive.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel4"}
-                    onChange={handleChange("panel4")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel4" ? (
-                          <IconButton>
-                            <RemoveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton>
-                            <AddIcon />
-                          </IconButton>
-                        )
-                      }
-                      aria-controls="panel4d-content"
-                      id="panel4d-header"
-                    >
-                      <Typography>
-                        Will you deliver the exact product as shown in the demo?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, we deliver the exact product. We don’t compromise
-                        with quality at all.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel5"}
-                    onChange={handleChange("panel5")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel5" ? (
-                          <IconButton>
-                            <RemoveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton>
-                            <AddIcon />
-                          </IconButton>
-                        )
-                      }
-                      aria-controls="panel5d-content"
-                      id="panel5d-header"
-                    >
-                      <Typography>
-                        Can I use your script without any programming skills?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, you can directly install our given script and can
-                        manage everything in the admin panel, which is very
-                        user-friendly.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel6"}
-                    onChange={handleChange("panel6")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel6" ? (
-                          <IconButton>
-                            <RemoveIcon />
-                          </IconButton>
-                        ) : (
-                          <IconButton>
-                            <AddIcon />
-                          </IconButton>
-                        )
-                      }
-                      aria-controls="panel6d-content"
-                      id="panel6d-header"
-                    >
-                      <Typography>
-                        Can I remove your company proprietary notices?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        With an extra charge, you are allowed to modify the
-                        branding. You can remove our company information and put
-                        yours. However, you cannot put &quot;copyright by&quot; as
-                        Logicspice owns the copyrights for our software.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                  </MDBAccordion>
                 </div>
               </div>
             </div>

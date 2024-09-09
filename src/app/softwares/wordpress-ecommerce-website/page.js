@@ -23,6 +23,44 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
 const Page = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const panelStyle = {
+    marginBottom: "10px",
+    // border: '1px solid #ddd',
+    borderBottom: "1px solid #ddd",
+  };
+
+  const headingStyle = {
+    // backgroundColor: '#f7f7f7',
+    padding: "20px 0",
+  };
+
+  const titleStyle = {
+    textDecoration: "none",
+    // fontWeight: "bold",
+    color: "#333",
+    display: "block",
+    fontSize: "18px",
+  };
+
+  const collapseStyle = {
+    display: "none",
+    transition: "all 0.3s ease",
+  };
+
+  const showStyle = {
+    display: "block",
+  };
+
+  const bodyStyle = {
+    padding: "7px",
+    // borderTop: '1px solid #ddd',
+  };
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
@@ -1915,410 +1953,349 @@ See how it work yourself!"
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               <div className="panel-group faq_quick_sec" id="accordion">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="What is an eCommerce website?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      An eCommerce website is an online platform where
-                      businesses can sell products or services to customers over
-                      the internet. It typically includes features such as
-                      product listings, shopping carts, and secure payment
-                      processing.
-                    </p>
-                  </MDBAccordionItem>
+                <div id="accordion">
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse1"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(0);
+                        }}
+                        style={titleStyle}
+                      >
+                        What is an eCommerce website?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 0 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          An eCommerce website is an online platform where
+                          businesses can sell products or services to customers
+                          over the internet. It typically includes features such
+                          as product listings, shopping carts, and secure
+                          payment processing.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <MDBAccordionItem
-                    headerTitle="What is WordPress?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      WordPress is a popular content management system (CMS)
-                      that allows users to create and manage websites. It is
-                      known for its ease of use, flexibility, and wide range of
-                      available plugins and themes.
-                    </p>
-                  </MDBAccordionItem>
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse2"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(1);
+                        }}
+                        style={titleStyle}
+                      >
+                        What is WordPress?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 1 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          WordPress is a popular content management system (CMS)
+                          that allows users to create and manage websites. It is
+                          known for its ease of use, flexibility, and wide range
+                          of available plugins and themes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <MDBAccordionItem
-                    headerTitle="What is WooCommerce?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      WooCommerce is a plugin for WordPress that adds eCommerce
-                      functionality to a website. It allows users to create an
-                      online store, add products, manage inventory, and process
-                      payments.
-                    </p>
-                  </MDBAccordionItem>
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse3"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(2);
+                        }}
+                        style={titleStyle}
+                      >
+                        What is WooCommerce?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 2 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          WooCommerce is a plugin for WordPress that adds
+                          eCommerce functionality to a website. It allows users
+                          to create an online store, add products, manage
+                          inventory, and process payments.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <MDBAccordionItem
-                    headerTitle="What are the benefits of using WordPress for eCommerce?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      Some benefits of using WordPress for eCommerce include its
-                      ease of use, flexibility, and scalability. WordPress also
-                      offers a wide range of plugins and themes that can help
-                      you customize your online store and enhance its
-                      functionality. The 3rd party plugins can be customized to
-                      some extent, as the service is provided by the 3rd party,
-                      also if you want the upgraded features,we can purchase the
-                      paid subscriptions from the 3rd party plugin owners.
-                    </p>
-                  </MDBAccordionItem>
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse4"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(3);
+                        }}
+                      >
+                        What are the benefits of using WordPress for eCommerce?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 3 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          Some benefits of using WordPress for eCommerce include
+                          its ease of use, flexibility, and scalability.
+                          WordPress also offers a wide range of plugins and
+                          themes that can help you customize your online store
+                          and enhance its functionality. The 3rd party plugins
+                          can be customized to some extent, as the service is
+                          provided by the 3rd party, also if you want the
+                          upgraded features,we can purchase the paid
+                          subscriptions from the 3rd party plugin owners.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I use WordPress for a large eCommerce website?"
-                    collapseId="flush-collapse6"
-                  >
-                    <p>
-                      Yes, WordPress can be used for large eCommerce websites.
-                      However, you may need to optimize your website for
-                      performance and scalability, and consider using dedicated
-                      hosting to handle high levels of traffic.
-                    </p>
-                  </MDBAccordionItem>
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse6"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(4);
+                        }}
+                      >
+                        Can I use WordPress for a large eCommerce website?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 4 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          Yes, WordPress can be used for large eCommerce
+                          websites. However, you may need to optimize your
+                          website for performance and scalability, and consider
+                          using dedicated hosting to handle high levels of
+                          traffic.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <MDBAccordionItem
-                    headerTitle="Is WordPress secure for eCommerce?"
-                    collapseId="flush-collapse7"
-                  >
-                    <p>
-                      WordPress itself is secure, but it is important to take
-                      steps to ensure the security of your eCommerce website.
-                      This includes keeping WordPress and all plugins up to
-                      date, using strong passwords, and implementing security
-                      measures such as SSL encryption.
-                    </p>
-                  </MDBAccordionItem>
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse7"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(5);
+                        }}
+                      >
+                        Is WordPress secure for eCommerce?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 5 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          WordPress itself is secure, but it is important to
+                          take steps to ensure the security of your eCommerce
+                          website. This includes keeping WordPress and all
+                          plugins up to date, using strong passwords, and
+                          implementing security measures such as SSL encryption.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                  <MDBAccordionItem
-                    headerTitle="What kind of support is provided with the software?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      You will receive three months of support from the date of
-                      purchase for any bugs or issues that may arise in the
-                      standard software features that have already been
-                      developed. This support includes assistance with
-                      identifying, troubleshooting, and resolving any bugs or
-                      issues that affect the functionality of the software.
-                    </p>
-                  </MDBAccordionItem>
-                  <MDBAccordionItem
-                    headerTitle="Am I permitted to eliminate your company's proprietary notices?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      You have the flexibility to modify the script by removing
-                      your company information and substituting it with yours.
-                      However, it is not permissible to include "copyright by"
-                      since exclusive copyright ownership for the software rests
-                      with us.
-                    </p>
-                  </MDBAccordionItem>
-                  <MDBAccordionItem
-                    headerTitle="How long does it take to receive the software after I purchase it?
-                    "
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      It will take a minimum 48 hours after payment.You will
-                      receive an email message with login details for your
-                      personal account where the software can be downloaded.
-                    </p>
-                  </MDBAccordionItem>
-                  <MDBAccordionItem
-                    headerTitle="Can I use your software without any programming skills?
-                    "
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Yes, you can manage almost everything in the WordPress
-                      admin panel which is very user friendly.
-                    </p>
-                  </MDBAccordionItem>
-                  <MDBAccordionItem
-                    headerTitle="Will you deliver the exact product as shown in the demo?
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse8"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(6);
+                        }}
+                      >
+                        What kind of support is provided with the software?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 6 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          You will receive three months of support from the date
+                          of purchase for any bugs or issues that may arise in
+                          the standard software features that have already been
+                          developed. This support includes assistance with
+                          identifying, troubleshooting, and resolving any bugs
+                          or issues that affect the functionality of the
+                          software.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                    "
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Yes, we deliver the exact product. We don't compromise
-                      with quality at all
-                    </p>
-                  </MDBAccordionItem>
-                  <MDBAccordionItem
-                    headerTitle="Do you offer a Money Back Guarantee?
-                    "
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Yes, we provide a 30 days money back guarantee to ensure
-                      customer satisfaction with our software. If, for any
-                      reason, you decide to stop using the product, you can
-                      request a refund. We will reimburse the entire amount,
-                      excluding the installation and configuration charges,
-                      which are either USD 65 or 20% of the application cost,
-                      whichever is higher. Please note that the money back
-                      guarantee does not apply to customers who have received
-                      updates as per their specific requests, taking into
-                      account the significant efforts and time invested by the
-                      team for their project.
-                    </p>
-                  </MDBAccordionItem>
-                  <MDBAccordionItem
-                    headerTitle="Are you willing to advise us with ideas?
-                    "
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Sure, we fulfill the client requirements always while
-                      doing all customization work offered with additional cost.
-                      Although client suggestions or ideas are always welcomed
-                      which can make your business more usable.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
-                {/* <Accordion
-                  expanded={expanded === "panel1"}
-                  onChange={handleChange("panel1")}
-                >
-                  <AccordionSummary>
-                    <Typography>What is an eCommerce website?</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      An eCommerce website is an online platform where
-                      businesses can sell products or services to customers over
-                      the internet. It typically includes features such as
-                      product listings, shopping carts, and secure payment
-                      processing.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel2"}
-                  onChange={handleChange("panel2")}
-                >
-                  <AccordionSummary>
-                    <Typography>What is WordPress?</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      WordPress is a popular content management system (CMS)
-                      that allows users to create and manage websites. It is
-                      known for its ease of use, flexibility, and wide range of
-                      available plugins and themes.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel3"}
-                  onChange={handleChange("panel3")}
-                >
-                  <AccordionSummary>
-                    <Typography>What is WooCommerce?</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      WooCommerce is a plugin for WordPress that adds eCommerce
-                      functionality to a website. It allows users to create an
-                      online store, add products, manage inventory, and process
-                      payments.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel4"}
-                  onChange={handleChange("panel4")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      What are the benefits of using WordPress for eCommerce?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Some benefits of using WordPress for eCommerce include its
-                      ease of use, flexibility, and scalability. WordPress also
-                      offers a wide range of plugins and themes that can help
-                      you customize your online store and enhance its
-                      functionality.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel5"}
-                  onChange={handleChange("panel5")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      Can I use WordPress for a large eCommerce website?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Yes, WordPress can be used for large eCommerce websites.
-                      However, you may need to optimize your website for
-                      performance and scalability, and consider using dedicated
-                      hosting to handle high levels of traffic.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel6"}
-                  onChange={handleChange("panel6")}
-                >
-                  <AccordionSummary>
-                    <Typography>Is WordPress secure for eCommerce?</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      WordPress itself is secure, but it is important to take
-                      steps to ensure the security of your eCommerce website.
-                      This includes keeping WordPress and all plugins up to
-                      date, using strong passwords, and implementing security
-                      measures such as SSL encryption.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel7"}
-                  onChange={handleChange("panel7")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      What kind of support is provided with the software?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      You will receive three months of support from the date of
-                      purchase for any bugs or issues that may arise in the
-                      standard software features that have already been
-                      developed. This support includes assistance with
-                      identifying, troubleshooting, and resolving any bugs or
-                      issues that affect the functionality of the software.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel8"}
-                  onChange={handleChange("panel8")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      Am I permitted to eliminate your company's proprietary
-                      notices?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      You have the flexibility to modify the script by removing
-                      your company information and substituting it with yours.
-                      However, it is not permissible to include "copyright by"
-                      since exclusive copyright ownership for the software rests
-                      with us.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel9"}
-                  onChange={handleChange("panel9")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      How long does it take to receive the software after I
-                      purchase it?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      It will take a minimum of 48 hours after payment. You will
-                      receive an email message with login details for your
-                      personal account where the software can be downloaded.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel10"}
-                  onChange={handleChange("panel10")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      Can I use your software without any programming skills?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Yes, you can manage almost everything in the WordPress
-                      admin panel, which is very user-friendly.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel11"}
-                  onChange={handleChange("panel11")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      Will you deliver the exact product as shown in the demo?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Yes, we deliver the exact product. We don't compromise
-                      with quality at all.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel12"}
-                  onChange={handleChange("panel12")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      Do you offer a Money Back Guarantee?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Yes, we provide a 30-day money-back guarantee to ensure
-                      customer satisfaction with our software. If, for any
-                      reason, you decide to stop using the product, you can
-                      request a refund. We will reimburse the entire amount,
-                      excluding the installation and configuration charges,
-                      which are either USD 65 or 20% of the application cost,
-                      whichever is higher. Please note that the money-back
-                      guarantee does not apply to customers who have received
-                      updates as per their specific requests, considering the
-                      significant efforts and time invested by the team for
-                      their project.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  expanded={expanded === "panel13"}
-                  onChange={handleChange("panel13")}
-                >
-                  <AccordionSummary>
-                    <Typography>
-                      Are you willing to advise us with ideas?
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Sure, we fulfill the client requirements always while
-                      doing all customization work offered with additional cost.
-                      Although client suggestions or ideas are always welcomed,
-                      which can make your business more usable.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion> */}
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse201"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(7);
+                        }}
+                      >
+                        Am I permitted to eliminate your company's proprietary
+                        notices?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 7 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          You have the flexibility to modify the script by
+                          removing your company information and substituting it
+                          with yours. However, it is not permissible to include
+                          "copyright by" since exclusive copyright ownership for
+                          the software rests with us.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse202"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(8);
+                        }}
+                      >
+                        How long does it take to receive the software after I
+                        purchase it?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 8 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          It will take a minimum 48 hours after payment.You will
+                          receive an email message with login details for your
+                          personal account where the software can be downloaded.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse203"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(9);
+                        }}
+                      >
+                        Can I use your software without any programming skills?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 9 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          Yes, you can manage almost everything in the WordPress
+                          admin panel which is very user friendly.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse204"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(10);
+                        }}
+                      >
+                        Will you deliver the exact product as shown in the demo?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 10 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          Yes, we deliver the exact product. We don't compromise
+                          with quality at all.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse07"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(11);
+                        }}
+                      >
+                        Do you offer a Money Back Guarantee?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 11 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          Yes, we provide a 30 days money back guarantee to
+                          ensure customer satisfaction with our software. If,
+                          for any reason, you decide to stop using the product,
+                          you can request a refund. We will reimburse the entire
+                          amount, excluding the installation and configuration
+                          charges, which are either USD 65 or 20% of the
+                          application cost, whichever is higher. Please note
+                          that the money back guarantee does not apply to
+                          customers who have received updates as per their
+                          specific requests, taking into account the significant
+                          efforts and time invested by the team for their
+                          project.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={panelStyle} data-aos="fade-up">
+                    <div style={headingStyle}>
+                      <a
+                        href="#collapse504"
+                        style={titleStyle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleAccordion(12);
+                        }}
+                      >
+                        Are you willing to advise us with ideas?
+                      </a>
+                    </div>
+                    <div style={activeIndex === 12 ? showStyle : collapseStyle}>
+                      <div style={bodyStyle}>
+                        <p>
+                          Sure, we fulfill the client requirements always while
+                          doing all customization work offered with additional
+                          cost. Although client suggestions or ideas are always
+                          welcomed which can make your business more usable.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

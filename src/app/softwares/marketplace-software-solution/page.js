@@ -22,6 +22,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
@@ -117,8 +119,6 @@ const Page = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
-  
 
   useEffect(() => {
     getData();
@@ -1744,7 +1744,7 @@ See how it work yourself!"
       </section>
       <section className="ecommerce_faq_section" id="faq">
         <div className="container">
-          <div className="ecommerce__Quick_FAQ_Script">
+          <div className="ecommerce__Quick_FAQ_Script CustomQuickFAQScript">
             <div className="row">
               <div className="col-md-5" data-aos="fade-up">
                 <h4 className="title_main">
@@ -1761,7 +1761,7 @@ See how it work yourself!"
                   />
                 </div>
               </div>
-              <div className="col-md-7">
+              {/* <div className="col-md-7">
                 <div className="ecommerce__Quick_FAQ">
                   <Accordion
                     expanded={expanded === "panel1"}
@@ -1987,6 +1987,146 @@ See how it work yourself!"
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
+                </div>
+              </div> */}
+              <div className="col-md-7">
+                <div className="panel-group faq_quick_sec" id="accordion">
+                  <MDBAccordion v-model="activeItem" borderless>
+                    <MDBAccordionItem
+                      headerTitle="Is the source code modifiable?"
+                      collapseId="flush-collapse1"
+                    >
+                      <p>
+                        Yes, most of the softwares is completely flexible and
+                        clients can customize it as per their requirements.
+                        However, 1-2 core files are encrypted due to licensing
+                        purposes, because we will allow you to run the script on
+                        the specific domain for which encryption will be done in
+                        1-2 core files, rest of the code is open to make changes
+                        and those encrypted files will be part of the codebase
+                        as well.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="How much time will it take to make it live?"
+                      collapseId="flush-collapse2"
+                    >
+                      <p>
+                        The whole process will take maximum 1 week time and the
+                        rest depends on your response time and customization
+                        requirements.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="How will you deal with bugs and issues in the product?"
+                      collapseId="flush-collapse4"
+                    >
+                      <p>
+                        We will communicate with you via live chat, phone call,
+                        whatsapp, skype, and email during our business hours and
+                        try to solve your problem as soon as possible.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Does logicspice provide technical support?"
+                      collapseId="flush-collapse5"
+                    >
+                      <p>
+                        Yes, we are providing free 3 months technical support on
+                        the existing features and functionalities of the
+                        software.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Do I own my software completely?
+"
+                      collapseId="flush-collapse6"
+                    >
+                      <p>
+                        Yes, you will own the license to use it for the domain
+                        you purchased for.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Do I need to provide a Google Maps API key? If yes, how
+                        to generate a Google Map API key?"
+                      collapseId="flush-collapse7"
+                    >
+                      <p>
+                        Yes, you need to provide a map API key. Please follow
+                        the steps mentioned in the below URL to generate the
+                        Google map API key:
+                        https://developers.google.com/maps/documentation/javascript/get-api-key.
+                        You need to set up your billing details over that.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle=" Can I update some design and functionality in the
+                        application code myself?"
+                      collapseId="flush-collapse3"
+                    >
+                      <p>
+                        Yes, you will have access to all the code, except for
+                        some of the core encrypted files.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Will I be able to use it on multiple domains after I
+                        purchase this software?"
+                      collapseId="flush-collapse8"
+                    >
+                      <p>
+                        You will be licensed to use it only for the domain you
+                        purchased for.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle=" Can I resell the software? Will I have rights over the
+                        software code?"
+                      collapseId="flush-collapse9"
+                    >
+                      <p>
+                        No, you can't resell the software. All rights will
+                        remain with Logicspice only.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Do you offer a Money Back Guarantee?"
+                      collapseId="flush-collapse10"
+                    >
+                      <p>
+                        Yes, we offer a 30 days money-back guarantee to ensure
+                        customer satisfaction with our software. If for any
+                        reason, you wish to discontinue using the product, you
+                        can ask us for a refund. We will refund your total money
+                        except the installation and configuration charges, which
+                        are USD 65 or 20% of the application cost, whichever is
+                        greater.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Along with hosting server details, what other recommendations?"
+                      collapseId="flush-collapse11"
+                    >
+                      <p>
+                        We recommend you purchase an SSL certificate along with
+                        a hosting server which is Linux based, considering that
+                        an SSL certificate is necessary for all the websites
+                        these days and it provides a secure layer to the website
+                        as well.
+                      </p>
+                    </MDBAccordionItem>
+                  </MDBAccordion>
                 </div>
               </div>
             </div>

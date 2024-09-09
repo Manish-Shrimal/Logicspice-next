@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import 'react-tabs/style/react-tabs.css';
+import "react-tabs/style/react-tabs.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -43,7 +43,9 @@ const Customizeweb = () => {
             <div className="col-sm-6">
               <h3>Providing a feasible and cost effective solution</h3>
               <p>
-              At Logicspice, we believe in providing a feasible and cost effective solution to match with a fast pace world. We do web development and
+                At Logicspice, we believe in providing a feasible and cost
+                effective solution to match with a fast pace world. We do web
+                development and
                 <a
                   className="inline-link"
                   href="/services/mobile-app-development/"
@@ -51,7 +53,9 @@ const Customizeweb = () => {
                   {" "}
                   mobile app development{" "}
                 </a>
-                (iPhone and Android) based on tried-and-tested subsystems. In addition to our expertise in mobile and web development, we stand as a leading Laravel development company. Our dedicated
+                (iPhone and Android) based on tried-and-tested subsystems. In
+                addition to our expertise in mobile and web development, we
+                stand as a leading Laravel development company. Our dedicated
                 <a
                   className="inline-link"
                   href="/services/laravel-development/"
@@ -59,15 +63,18 @@ const Customizeweb = () => {
                   {" "}
                   Laravel app development services{" "}
                 </a>
-                offer cutting-edge solutions to enhance your web applications. Our expertise extends to crafting hybrid mobile app development & custom web app development services that elevate user experiences, ensuring robust and scalable solutions that meet the demands of the modern digital landscape.
+                offer cutting-edge solutions to enhance your web applications.
+                Our expertise extends to crafting hybrid mobile app development
+                & custom web app development services that elevate user
+                experiences, ensuring robust and scalable solutions that meet
+                the demands of the modern digital landscape.
               </p>
               <p>
-              Logicspice has been in the business for over 18 years. To know more about us: who we are, what we do, how we work, our corporate culture and values.
+                Logicspice has been in the business for over 18 years. To know
+                more about us: who we are, what we do, how we work, our
+                corporate culture and values.
               </p>
-              <a
-                href="/company/about-us"
-                className="btn btn-primary tab-btn"
-              >
+              <a href="/company/about-us" className="btn btn-primary tab-btn">
                 Read More
               </a>
             </div>
@@ -208,6 +215,7 @@ const Customizeweb = () => {
       </TabPanel>
 
       <TabPanel>
+        <div className="testinomials_review">
         <Slider {...settings}>
           <div>
             <ul>
@@ -232,8 +240,8 @@ const Customizeweb = () => {
                         &quot;Exactly the best team available online ! I have
                         been working and communicating with a few companies over
                         the internet and i didn&apos;t see a single better
-                        <a className="second_show new_csx_shw">[...]</a>
-                        <span className="hidendata" style={{ display: "none" }}>
+                        <a className="second_show new_csx_shw"></a>
+                        <span className="hidendata">
                           company than logicspice. They are so skilled and
                           professional. Their knowledge about coding is
                           incredible. And they never say &quot;no&quot; or
@@ -284,13 +292,13 @@ const Customizeweb = () => {
                         &quot;Manish was very cooperative and professional
                         during the project. The team was great, the project was
                         very complicated and they tried
-                        <a
+                        {/* <a
                           style={{ cursor: "pointer", color: "#fff" }}
                           className="second_show"
                         >
                           [...]
-                        </a>
-                        <span className="hidendata" style={{ display: "none" }}>
+                        </a> */}
+                        <span className="hidendata" >
                           their best to complete it with the best diligence. I
                           will definitely contact this company in the future for
                           my project updates and would recommend to anyone who
@@ -327,13 +335,13 @@ const Customizeweb = () => {
                         &quot;Best project management experience/journey I had.
                         Great team spirit, very flexible and understanding while
                         maintaining time
-                        <a
+                        {/* <a
                           style={{ cursor: "pointer", color: "#fff" }}
                           className="second_show"
                         >
                           [...]
-                        </a>
-                        <span className="hidendata" style={{ display: "none" }}>
+                        </a> */}
+                        <span className="hidendata" >
                           and budget target.Top tear professional communication
                           and support.&quot;
                         </span>
@@ -370,13 +378,13 @@ const Customizeweb = () => {
                         &quot;Excellent work again from logicspice! They
                         definitely put their best effort into the project along
                         with very valuable inputs regarding possible
-                        <a
+                        {/* <a
                           style={{ cursor: "pointer", color: "#fff" }}
                           className="second_show"
                         >
                           [...]
-                        </a>
-                        <span className="hidendata" style={{ display: "none" }}>
+                        </a> */}
+                        <span className="hidendata" >
                           enhancements of the web project. With logicspice you
                           don&apos;t just hire someone to execute your project
                           specification but much more someone who helps you
@@ -398,6 +406,8 @@ const Customizeweb = () => {
             </ul>
           </div>
         </Slider>
+        </div>
+       
       </TabPanel>
 
       <TabPanel>
@@ -528,6 +538,3 @@ const Customizeweb = () => {
 };
 
 export default Customizeweb;
-
-
-

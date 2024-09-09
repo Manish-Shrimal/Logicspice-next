@@ -21,6 +21,44 @@ import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 const Page = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const panelStyle = {
+    marginBottom: "10px",
+    // border: '1px solid #ddd',
+    borderBottom: "1px solid #ddd",
+  };
+
+  const headingStyle = {
+    // backgroundColor: '#f7f7f7',
+    padding: "20px 0",
+  };
+
+  const titleStyle = {
+    textDecoration: "none",
+    // fontWeight: "bold",
+    color: "#333",
+    display: "block",
+    fontSize: "18px",
+  };
+
+  const collapseStyle = {
+    display: "none",
+    transition: "all 0.3s ease",
+  };
+
+  const showStyle = {
+    display: "block",
+  };
+
+  const bodyStyle = {
+    padding: "7px",
+    // borderTop: '1px solid #ddd',
+  };
   const [showModal, setShowModal] = useState(false);
   const [jobportal, setJobportal] = useState(false);
   const [buyjobportal, setBuyJobportal] = useState(false);
@@ -2917,7 +2955,7 @@ const Page = () => {
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
-              <div className="panel-group faq_quick_sec" id="accordion">
+              {/* <div className="panel-group faq_quick_sec" id="accordion">
                 <div
                   className="panel panel-default aos-init aos-animate"
                   data-aos="fade-up"
@@ -3256,6 +3294,342 @@ const Page = () => {
                         hosting server, considering that an SSL certificate is
                         necessary for all the websites these days and it
                         provides a secure layer to the website as well.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+               <div id="accordion">
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse1"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(0);
+                      }}
+                      style={titleStyle}
+                    >
+                      <span>01. </span> Can a Jobseeker upload his CV to apply
+                      for job?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 0 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        No. The information about the jobseeker will go from his
+                        profile to the employer that he is applying the job for.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(1);
+                      }}
+                      style={titleStyle}
+                    >
+                      <span>02. </span> Will there be any installation charges
+                      when I purchase the job portal script?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 1 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        No. The installation of our Job Portal Product will be
+                        absolutely free of cost.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse3"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(2);
+                      }}
+                      style={titleStyle}
+                    >
+                      <span>03. </span> Can jobseeker download the CV that he
+                      has created on this website?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 2 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        Yes. Once the job seeker creates his CV, he can download
+                        the same in a PDF format.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse4"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(3);
+                      }}
+                    >
+                      <span>04. </span> Can employer or jobseeker write blog
+                      posts?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 3 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        The employers and jobseekers cannot write blog posts.
+                        The blog posts will be written by the admin, and
+                        employers & Job Seekers can view them.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse6"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(4);
+                      }}
+                    >
+                      <span>05. </span> Once I purchase the job portal script,
+                      how many days will it take to go online?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 4 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        It takes 2 working days generally, provided all the
+                        information to make it live has been given. If you want
+                        customizations, then the time taken to implement your
+                        Job portal depends on the level of customization and
+                        data migration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse7"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(5);
+                      }}
+                    >
+                      <span>06. </span> How can Jobseeker apply for a job?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 5 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        Jobseeker can send their details directly to the job
+                        company or they can attach a cover letter along with
+                        their application. They can edit, add, or delete their
+                        cover letter from the profile.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse8"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(6);
+                      }}
+                    >
+                      <span>07. </span> How can Jobseeker create job alerts?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 6 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        Jobseekers will be able to manage the alerts that will
+                        help them receive emails if the job is available
+                        according to their set criteria. They can add alerts by
+                        providing the information like designation of job
+                        required and location of job.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse201"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(7);
+                      }}
+                    >
+                      <span>08. </span> Can I update some design and
+                      functionality in application code myself?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 7 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        Yes, you will have access to all the code, except some
+                        of the core encrypted files.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse202"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(8);
+                      }}
+                    >
+                      <span>09. </span> Will I be able to use it on multiple
+                      domains after I purchase this script?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 8 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        You will be licensed to use it only for the domain you
+                        purchased it for.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse203"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(9);
+                      }}
+                    >
+                      <span>10. </span> Can I resell the script? Will I have
+                      rights over the script code?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 9 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        All rights will remain with Logicspice only, and you
+                        cannot resell it.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse204"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(10);
+                      }}
+                    >
+                      <span>11. </span> Do you offer Money Back Guarantee?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 10 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        Yes, we offer a 30-day money back guarantee to ensure
+                        customer satisfaction with our software. If for any
+                        reason you wish to discontinue using the product, you
+                        can ask us for a refund. We will refund your total money
+                        except for the installation and configuration charges,
+                        which is USD 65 or 20% of the application cost,
+                        whichever is greater. Any cost of customization will not
+                        be refunded.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse07"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(11);
+                      }}
+                    >
+                      <span>12. </span> Do I need to provide Google map API key?
+                      If yes, how to generate Google map API key?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 11 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        Yes, you need to provide a map API key. Please follow
+                        the steps mentioned in the below URL to generate a
+                        Google map API key:{" "}
+                        <a
+                          href="https://developers.google.com/maps/documentation/javascript/get-api-key"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Generate Google Map API Key
+                        </a>
+                        . You need to set up your billing details over that.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse504"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(12);
+                      }}
+                    >
+                      <span>13. </span> Along with hosting server details, what
+                      other recommendations?
+                    </a>
+                  </div>
+                  <div style={activeIndex === 12 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
+                      <p>
+                        We recommend you purchase an SSL certificate along with
+                        a hosting server, considering that an SSL certificate is
+                        necessary for all websites these days and it provides a
+                        secure layer to the website as well.
                       </p>
                     </div>
                   </div>

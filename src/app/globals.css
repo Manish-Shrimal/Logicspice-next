@@ -104,6 +104,7 @@ body {
   }
 }
 
+
 .fieldRequired {
   color: red !important;
   border: 1px solid red !important;
@@ -6816,6 +6817,7 @@ body.modal-open .quote_pop_plus {
   padding: 10px 0 0;
   text-align: left;
   color: #fff;
+  font-size:14px;
 }
 
 .customize-top .titleoftestimthis {
@@ -7119,6 +7121,36 @@ button.close {
   margin-top: 0;
 }
 
+
+/* Review Modal Start  */
+
+.thank_ss {
+  display: block;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 25px;
+  color: #2e8e21;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.hh_cls {
+  float: none;
+  font-size: 25px;
+  margin: 25px auto 35px;
+}
+
+.panelThank button {
+  background-color: #451095;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 24px;
+  padding: 5px 40px;
+}
+.review_model textarea.form-control{height:100px !important}
 .review_model .modal-header{
   background-color: #451095!important;
   padding: 15px!important;
@@ -7137,11 +7169,13 @@ button.close {
   height: 40px!important;
 }
 
-.review_model .textarea .form-control {
+.review_model .textarea  {
   min-width: 100%!important;
   max-width: 100%!important;
   height: auto!important;
 }
+
+/* Review modal CSS end */
 
 
 .take-a-look .swiper-button-prev:after, .swiper-button-next:after{
@@ -7150,3 +7184,8 @@ button.close {
 }
 
 .process_sect ul li:hover .icon_process img{filter: grayscale(0%);}
+
+
+.testinomials_review .slick-dots{
+  bottom: -40px!important;
+}

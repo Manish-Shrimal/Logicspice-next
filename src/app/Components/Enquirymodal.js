@@ -46,7 +46,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     const pathSegments = currentUrl.split('/');
     const lastSegment = pathSegments[pathSegments.length - 1];
 
-    console.log(lastSegment, "lastSegment");
+    // console.log(lastSegment, "lastSegment");
 
     setFormData((prevData) => ({
       ...prevData,

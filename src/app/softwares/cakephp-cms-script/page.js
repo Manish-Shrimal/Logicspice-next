@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import Image from "next/image";
@@ -16,6 +16,8 @@ const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -26,10 +28,28 @@ const Page = () => {
   const openModal = () => {
     setShowModal(!showModal);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 100) {
+        // Adjust this value based on when you want the navbar to appear
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <NavBar />
+    
       <section className="product_top_sectins">
         <Image
           unoptimized={true}
@@ -291,7 +311,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="product_middle_menu_box">
+      {/* <section className="product_middle_menu_box">
         <section className="product_middle_menu">
           <div className="container">
             <nav className="navbar navbar-expand-lg navbar-default">
@@ -361,7 +381,7 @@ const Page = () => {
             </nav>
           </div>
         </section>
-      </section>
+      </section> */}
       <section className="Frequently_Asked_Questions" id="features">
         <div className="container">
           <h2>
@@ -411,6 +431,187 @@ const Page = () => {
             user.
           </p>
         </div>
+      </section>
+      <section className="product_middle_menu_box">
+        {isScrolled && (
+          <section className="product_middle_menu top-fixed">
+            <div className="container">
+              <nav className="navbar navbar-expand-lg navbar-default">
+                <div className="container-fluid">
+                  {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+                  <div className="navbar-header">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul className="navbar-nav me-auto">
+                      <li>
+                        <Link href="#features">Features</Link>
+                      </li>
+                      <li>
+                        <Link href="#technologies">Technologies</Link>
+                      </li>
+                      <li>
+                        <Link href="#support">Support</Link>
+                      </li>
+                      <li>
+                        <Link href="#reviews">Reviews</Link>
+                      </li>
+                    </ul>
+                    <ul className="navbar-nav ms-auto navbar-right">
+                      <li>
+                        <Link
+                          className="page-scroll btn btn-default"
+                          href="javascript:void(0);"
+                          id="buy_now_1"
+                          onClick={openModal}
+                        >
+                          <span>
+                            <Image
+                              unoptimized={true}
+                              width={30}
+                              height={100}
+                              src="/img/leadgeneration/enquiry_btn_bg.png"
+                              alt="enquiry"
+                            />
+                          </span>{" "}
+                          Enquire Now
+                          {
+                            <Enquirymodal
+                              modalStatus={showModal}
+                              toggle={openModal}
+                              title="Cake php CMS Script"
+                            />
+                          }
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </section>
+        )}
+
+        <section className="Frequently_Asked_Questions" id="features">
+          <div className="container">
+            <h3>
+              Contact form php <span>Script</span>
+            </h3>
+            <p>
+              Logicspice <strong>lead generation form builder</strong> can be
+              embedded easily onto your website which is fully customizable to
+              match your company’s brand. Customize it in your own way and
+              Download the free lead generation PHP form script.{" "}
+            </p>
+            <p>
+              Custom contact forms are essentially a handshake between you and
+              your business prospects. The forms are essential for initiating
+              the engagement between a business and customer. Customize your
+              form to automatically send email notifications after a lead
+              submits the form.{" "}
+            </p>
+            <p>
+              This is very simple but powerful contact form generator. Forms are
+              fully compatible with WordPress, Drupal, Joomla, or any other web
+              site where you have option to add HTML code.{" "}
+            </p>
+            <p>
+              These lead management <strong>PHP script</strong> also includes a
+              captcha so, that users can be differentiated from bots. Captcha is
+              an important tool that prevents fake lead generation from
+              automated computers. Whenever a user would fill a form, he has to
+              input the answer to the mathematical question asked in the
+              captcha. If you don’t use a captcha in a lead generation, it could
+              result in degradation of the quality of leads generated so, keep
+              the security measures in mind it is necessary to have captcha in
+              forms.
+            </p>
+          </div>
+        </section>
+        <section className="used_technology_section" id="technologies">
+          <div className="container">
+            <h4 className="title_main">
+              <span>Used Technologies</span> and Server Requirements
+            </h4>
+            <div className="used_technology_section_dataa">
+              <ul>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/bootstrap.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">Bootstrap</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/css.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">CSS3</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">HTML5</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/tech_php_icon.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">PHP</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/javascript.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">Javascript</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
       <section className="used_technology_section" id="technologies">
         <div className="container">
