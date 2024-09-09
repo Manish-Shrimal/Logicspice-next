@@ -39,6 +39,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
+      <div style={{paddingTop: "140px"}}>
       <section className="breadcrems_header">
         <div className="container">
           <div className="row">
@@ -5557,6 +5558,8 @@ const Page = () => {
         </div>
       </div>
       <Footer />
+      </div>
+      
     </>
   );
 };

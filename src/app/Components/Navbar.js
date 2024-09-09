@@ -1,5 +1,6 @@
 "use client";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 import "../globals.css";
 import "../resposive.css";
@@ -37,7 +38,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="header home-header  ">
+      <header className="header home-header fixed  ">
         <nav className="navbar navbar-light  navbar-expand-lg navbar-default mega-menu  ">
           <div className="container">
             <div className="navbar-brand">
@@ -385,6 +386,7 @@ const Navbar = () => {
                                   <i className="menu_icon_all icon_faq"></i>
                                 </span>
                                 <span>FAQ Script</span>
+                                <span class="free_sc1" style={{marginLeft: "8px"}}>Free</span>
                               </Link>
                             </li>
                             <li>
@@ -393,6 +395,7 @@ const Navbar = () => {
                                   <i className="menu_icon_all icon_angularjsblog"></i>
                                 </span>
                                 <span>Blog Script</span>
+                                <span class="free_sc1" style={{marginLeft: "8px"}}>Free</span>
                               </Link>
                             </li>
                             <li>
@@ -401,6 +404,7 @@ const Navbar = () => {
                                   <i className="menu_icon_all icon_lead_gene"></i>
                                 </span>
                                 <span>Lead Generation Form</span>
+                                <span class="free_sc1" style={{marginLeft: "8px"}}>Free</span>
                               </Link>
                             </li>
                             <li>
@@ -409,6 +413,7 @@ const Navbar = () => {
                                   <i className="menu_icon_all icon_temp"></i>
                                 </span>
                                 <span>Free Templates</span>
+                                <span class="nws_sc1" style={{marginLeft: "8px"}}>New</span>
                               </Link>
                             </li>
 
@@ -767,12 +772,12 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <a href="/custom-solutions/website-calculator-builder">
+                              <Link href="/custom-solutions/website-calculator-builder">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_calc"></i>{" "}
                                 </span>
                                 <span>Website Calculator Builder</span>
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <Link href="/custom-solutions/erp-system-software-development">
@@ -839,9 +844,9 @@ const Navbar = () => {
                                     src="/img/footer/fleg_icon2.png"
                                     alt="Logicspice Contact No. - USA"
                                   />
-                                  <a href="tel:+1-616-929-4064">
+                                  <Link href="tel:+1-616-929-4064">
                                     +1-616-929-4064
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
                                   <Image
@@ -850,9 +855,9 @@ const Navbar = () => {
                                     src="/img/footer/fleg_icon1.png"
                                     alt="Logicspice Contact No. - UK"
                                   />
-                                  <a href="tel:+44782-404-8483">
+                                  <Link href="tel:+44782-404-8483">
                                     +44782-404-8483
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
                                   <Image
@@ -861,9 +866,9 @@ const Navbar = () => {
                                     src="/img/footer/fleg_icon3.png"
                                     alt="Logicspice Contact No. - India"
                                   />
-                                  <a href="tel:+91-9829559922">
+                                  <Link href="tel:+91-9829559922">
                                     +91-9829559922
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
                                   <Image
@@ -891,9 +896,9 @@ const Navbar = () => {
                                   </span>
                                 </li>
                               </ul>
-                              <a href="/contact-us" className="btn btn-primary">
+                              <Link href="/contact-us" className="btn btn-primary">
                                 Contact Us
-                              </a>
+                              </Link>
                             </div>
                             <div className="hr_enquiry">
                               <p>For HR Inquiry</p>
@@ -905,9 +910,9 @@ const Navbar = () => {
                                     src="/img/footer/fleg_icon3.png"
                                     alt="Logicspice Contact No. - India"
                                   />{" "}
-                                  <a href="tel:+91-7727974242">
+                                  <Link href="tel:+91-7727974242">
                                     +91-7727974242
-                                  </a>
+                                  </Link>
                                 </li>
                                 <li>
                                   <Image
@@ -919,9 +924,9 @@ const Navbar = () => {
                                   <span> hr@logicspice.com </span>
                                 </li>
                               </ul>
-                              <a href="/apply-now" className="btn btn-primary">
+                              <Link href="/apply-now" className="btn btn-primary">
                                 Apply Now
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </div>

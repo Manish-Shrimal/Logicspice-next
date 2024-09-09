@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, {useRef, useEffect, useState } from "react";
 import Navbar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import "../elements.css";
@@ -8,7 +8,9 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.css";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import axios from "axios";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Swal from "sweetalert2";
 
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
@@ -19,46 +21,124 @@ const Page = () => {
     setModalOpen(!modalOpen);
   };
 
+  const resumeFile = useRef(null);
+
   const [formData, setFormData] = useState({
-    post: "",
-    image: null,
-    firstName: "",
-    middleName: "",
-    lastName: "",
-    dob: "",
-    fatherName: "",
-    motherName: "",
-    fatherOccupation: "",
-    motherOccupation: "",
-    category: "",
-    gender: "",
-    maritalStatus: "",
-    physicalChallenged: "",
-    currentAddress: "",
-    permanentAddress: "",
-    emailAddress: "",
-    Phone: "",
-    matricCourse: "",
-    matricCollege: "",
-    matricUniversity: "",
-    matricYear: "",
-    matricPercentage: "",
-    SecondaryCourse: "",
-    secondaryCollege: "",
-    secondaryUniversity: "",
-    secondaryYear: "",
-    secondaryPercentage: "",
-    graduationCourse: "",
-    graduationCollege: "",
-    graduationUniversity: "",
-    graduationYear: "",
-    graduationPercentage: "",
-    expYear: "",
-    expMonth: "",
-    expectedSalary:"",
-    place: "",
-    resume: "",
-  });
+    post:"",
+    first_name:"",
+    second_name:"",
+    last_name:"",
+    dob:"",
+    father_name:"",
+    mother_name:"",
+    father_occupation:"",
+    mother_occupation:"",
+    category:"",
+    gender:"",
+    marital_status:"",
+    physical_challenged:"",
+    current_address:"",
+    permanent_address:"",
+    email_address:"",
+    phone:"",
+    matric_course:"",
+    matric_college:"",
+    matric_university:"",
+    matric_year:"",
+    matric_percentage:"",
+    secondary_course:"",
+    secondary_college:"",
+    secondary_university:"",
+    secondary_year:"",
+    secondary_percentage:"",
+    graduation_course:"",
+    graduation_college:"",
+    graduation_university:"",
+    graduation_year:"",
+    graduation_percentage:"",
+    pg_course:"",
+    pg_college:"",
+    pg_university:"",
+    pg_year:"",
+    pg_percentage:"",
+    other_course:"",
+    other_college:"",
+    other_university:"",
+    other_year:"",
+    other_percentage:"",
+    work_experience_year:"",
+    work_experience_months:"",
+    start_date:"",
+    end_date:"",
+    organization:"",
+    designation:"",
+    leaving_reason:"",
+    start_date1:"",
+    end_date1:"",
+    organization1:"",
+    designation1:"",
+    leaving_reason1:"",
+    start_date2:"",
+    end_date2:"",
+    organization2:"",
+    designation2:"",
+    leaving_reason2:"",
+    start_date3:"",
+    end_date3:"",
+    organization3:"",
+    designation3:"",
+    leaving_reason3:"",
+    current_salary:"",
+    expected_salary:"",
+    notice_period:"",
+    pursuing:"",
+    certifications:"",
+    career_goals:"",
+    place:"",
+    resume:null,
+    image:null
+  })
+
+  // const [formData, setFormData] = useState({
+  //   post: "",
+  //   image: null,
+  //   firstName: "",
+  //   middleName: "",
+  //   lastName: "",
+  //   dob: "",
+  //   fatherName: "",
+  //   motherName: "",
+  //   fatherOccupation: "",
+  //   motherOccupation: "",
+  //   category: "",
+  //   gender: "",
+  //   maritalStatus: "",
+  //   physicalChallenged: "",
+  //   currentAddress: "",
+  //   permanentAddress: "",
+  //   emailAddress: "",
+  //   Phone: "",
+  //   matricCourse: "",
+  //   matricCollege: "",
+  //   matricUniversity: "",
+  //   matricYear: "",
+  //   matricPercentage: "",
+  //   SecondaryCourse: "",
+  //   secondaryCollege: "",
+  //   secondaryUniversity: "",
+  //   secondaryYear: "",
+  //   secondaryPercentage: "",
+  //   graduationCourse: "",
+  //   graduationCollege: "",
+  //   graduationUniversity: "",
+  //   graduationYear: "",
+  //   graduationPercentage: "",
+  //   expYear: "",
+  //   expMonth: "",
+  //   expectedSalary:"",
+  //   place: "",
+  //   resume: "",
+  // });
 
   const onRecaptchaChange = (token) => {
     setFormData((prevData) => ({
@@ -89,69 +169,106 @@ const Page = () => {
     }));
   };
 
+  const handleFileUpload = (event) => {
+    const uploadedFile = event.target.files[0];
+    resumeFile.current = uploadedFile;
+
+    if (uploadedFile) {
+      const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+
+      if (!allowedExtensions.exec(uploadedFile.name)) {
+        setErrors({
+          ...errors,
+          resume: "Invalid file type. Please upload a PDF, DOC, or DOCX file.",
+        });
+        return;
+      }
+
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      if (uploadedFile.size > maxSize) {
+        setErrors({
+          ...errors,
+          resume: "File size exceeds the 5MB limit.",
+        });
+        return;
+      }
+
+      // Clear previous errors
+      setErrors({ ...errors, resume: null });
+      setFormData({ ...formData, resume: uploadedFile });
+    }
+
+  };
+
+  const handleImageFileUpload = (event) => {
+    const uploadedFile = event.target.files[0];
+    resumeFile.current = uploadedFile;
+
+    if (uploadedFile) {
+      const allowedExtensions = /(\.png|\.jpg|\.jpeg)$/i;
+
+      if (!allowedExtensions.exec(uploadedFile.name)) {
+        setErrors({
+          ...errors,
+          image: "Invalid file type. Please upload a PDF, DOC, or DOCX file.",
+        });
+        return;
+      }
+
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      if (uploadedFile.size > maxSize) {
+        setErrors({
+          ...errors,
+          image: "File size exceeds the 5MB limit.",
+        });
+        return;
+      }
+
+      // Clear previous errors
+      setErrors({ ...errors, image: null });
+      setFormData({ ...formData, image: uploadedFile });
+    }
+
+  };
+
   const validateForm = () => {
     const newErrors = {};
 
     if (!formData.post) newErrors.post = "This field is required.";
-    if (!formData.firstName) newErrors.firstName = "This field is required.";
-    if (!formData.lastName) newErrors.lastName = "This field is required.";
+    if (!formData.first_name) newErrors.firstName = "This field is required.";
+    if (!formData.last_name) newErrors.lastName = "This field is required.";
     if (!formData.dob) newErrors.dob = "This field is required.";
-    if (!formData.fatherName) newErrors.fatherName = "This field is required.";
-    if (!formData.motherName) newErrors.motherName = "This field is required.";
-    if (!formData.fatherOccupation)
-      newErrors.fatherOccupation = "This field is required.";
-    if (!formData.motherOccupation)
-      newErrors.motherOccupation = "This field is required.";
+    if (!formData.father_name) newErrors.fatherName = "This field is required.";
+    if (!formData.mother_name) newErrors.motherName = "This field is required.";
+    if (!formData.father_occupation) newErrors.fatherOccupation = "This field is required.";
+    if (!formData.mother_occupation) newErrors.motherOccupation = "This field is required.";
     if (!formData.category) newErrors.category = "This field is required.";
     if (!formData.gender) newErrors.gender = "This field is required.";
-    if (!formData.maritalStatus)
-      newErrors.maritalStatus = "This field is required.";
-    if (!formData.currentAddress)
-      newErrors.currentAddress = "This field is required.";
-    if (!formData.permanentAddress)
-      newErrors.permanentAddress = "This field is required.";
-    if (!formData.emailAddress)
-      newErrors.emailAddress = "This field is required.";
-    if (!formData.Phone) newErrors.Phone = "This field is required.";
-    if (!formData.matricCourse)
-      newErrors.matricCourse = "This field is required.";
-    if (!formData.matricCollege)
-      newErrors.matricCollege = "This field is required.";
-    if (!formData.matricUniversity)
-      newErrors.matricUniversity = "This field is required.";
-    if (!formData.matricYear) newErrors.matricYear = "This field is required.";
-    if (!formData.matricPercentage)
-      newErrors.matricPercentage = "This field is required.";
-    if (!formData.SecondaryCourse)
-      newErrors.SecondaryCourse = "This field is required.";
-    if (!formData.SecondaryCollege)
-      newErrors.SecondaryCollege = "This field is required.";
-    if (!formData.SecondaryUniversity)
-      newErrors.SecondaryUniversity = "This field is required.";
-    if (!formData.SecondaryYear)
-      newErrors.SecondaryYear = "This field is required.";
-    if (!formData.SecondaryPercentage)
-      newErrors.SecondaryPercentage = "This field is required.";
-    if (!formData.graduationCourse)
-      newErrors.graduationCourse = "This field is required.";
-    if (!formData.graduationCollege)
-      newErrors.graduationCollege = "This field is required.";
-    if (!formData.graduationUniversity)
-      newErrors.graduationUniversity = "This field is required.";
-    if (!formData.graduationYear)
-      newErrors.graduationYear = "This field is required.";
-    if (!formData.graduationPercentage)
-      newErrors.graduationPercentage = "This field is required.";
-    if (!formData.expYear)
-      newErrors.expYear = "This field is required.";
-    if (!formData.expMonth)
-      newErrors.expMonth = "This field is required.";
-    if (!formData.expectedSalary)
-      newErrors.expectedSalary = "This field is required.";
-    if (!formData.place)
-      newErrors.place = "This field is required.";
-    if (!formData.resume)
-      newErrors.resume = "This field is required.";
+    if (!formData.marital_status) newErrors.maritalStatus = "This field is required.";
+    if (!formData.current_address) newErrors.currentAddress = "This field is required.";
+    if (!formData.permanent_address) newErrors.permanentAddress = "This field is required.";
+    if (!formData.email_address) newErrors.emailAddress = "This field is required.";
+    if (!formData.phone) newErrors.Phone = "This field is required.";
+    if (!formData.matric_course) newErrors.matricCourse = "This field is required.";
+    if (!formData.matric_college) newErrors.matricCollege = "This field is required.";
+    if (!formData.matric_university) newErrors.matricUniversity = "This field is required.";
+    if (!formData.matric_year) newErrors.matricYear = "This field is required.";
+    if (!formData.matric_percentage) newErrors.matricPercentage = "This field is required.";
+    if (!formData.secondary_course) newErrors.SecondaryCourse = "This field is required.";
+    if (!formData.secondary_college) newErrors.SecondaryCollege = "This field is required.";
+    if (!formData.secondary_university) newErrors.SecondaryUniversity = "This field is required.";
+    if (!formData.secondary_year) newErrors.SecondaryYear = "This field is required.";
+    if (!formData.secondary_percentage) newErrors.SecondaryPercentage = "This field is required.";
+    if (!formData.graduation_course) newErrors.graduationCourse = "This field is required.";
+    if (!formData.graduation_college) newErrors.graduationCollege = "This field is required.";
+    if (!formData.graduation_university) newErrors.graduationUniversity = "This field is required.";
+    if (!formData.graduation_year) newErrors.graduationYear = "This field is required.";
+    if (!formData.graduation_percentage) newErrors.graduationPercentage = "This field is required.";
+    if (!formData.work_experience_year) newErrors.expYear = "This field is required.";
+    if (!formData.work_experience_months) newErrors.expMonth = "This field is required.";
+    if (!formData.expected_salary) newErrors.expectedSalary = "This field is required.";
+    if (!formData.place) newErrors.place = "This field is required.";
+    if (!formData.resume) newErrors.resume = "This field is required.";
 
     return newErrors;
   };
@@ -165,50 +282,102 @@ const Page = () => {
       return;
     }
 
-    setLoader(true);
+    // setLoader(true);
     try {
-      // const response = await axios.post(BaseAPI + "/pages/contact", formData);
+
+      console.log('hi')
+
+      const response = await axios.post(BaseAPI + "/applicationform", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
       if (response.data.status === 200) {
-        setResultSuccess(true);
+        // setResultSuccess(true);
+
+        if (response.data.status === 200) {
+          Swal.fire({
+            icon: "success",
+            title: "Successfully Applied",
+            text: response.data.message,
+          });
+        }
+
         setFormData({
-          post: "",
-          image: null,
-          firstName: "",
-          middleName: "",
-          lastName: "",
-          dob: "",
-          fatherName: "",
-          motherName: "",
-          fatherOccupation: "",
-          motherOccupation: "",
-          category: "",
-          gender: "",
-          maritalStatus: "",
-          physicalChallenged: "",
-          currentAddress: "",
-          permanentAddress: "",
-          emailAddress: "",
-          Phone: "",
-          matricCourse: "",
-          matricCollege: "",
-          matricUniversity: "",
-          matricYear: "",
-          matricPercentage: "",
-          SecondaryCourse: "",
-          SecondaryCollege: "",
-          SecondaryUniversity: "",
-          SecondaryYear: "",
-          SecondaryPercentage: "",
-          graduationCourse: "",
-          graduationCollege: "",
-          graduationUniversity: "",
-          graduationYear: "",
-          graduationPercentage: "",
-          expYear: "",
-          expMonth: "",
-          expectedSalary:"",
-          place: "",
-          resume: "",
+          post:"",
+          first_name:"",
+          second_name:"",
+          last_name:"",
+          dob:"",
+          father_name:"",
+          mother_name:"",
+          father_occupation:"",
+          mother_occupation:"",
+          category:"",
+          gender:"",
+          marital_status:"",
+          physical_challenged:"",
+          current_address:"",
+          permanent_address:"",
+          email_address:"",
+          phone:"",
+          matric_course:"",
+          matric_college:"",
+          matric_university:"",
+          matric_year:"",
+          matric_percentage:"",
+          secondary_course:"",
+          secondary_college:"",
+          secondary_university:"",
+          secondary_year:"",
+          secondary_percentage:"",
+          graduation_course:"",
+          graduation_college:"",
+          graduation_university:"",
+          graduation_year:"",
+          graduation_percentage:"",
+          pg_course:"",
+          pg_college:"",
+          pg_university:"",
+          pg_year:"",
+          pg_percentage:"",
+          other_course:"",
+          other_college:"",
+          other_university:"",
+          other_year:"",
+          other_percentage:"",
+          work_experience_year:"",
+          work_experience_months:"",
+          start_date:"",
+          end_date:"",
+          organization:"",
+          designation:"",
+          leaving_reason:"",
+          start_date1:"",
+          end_date1:"",
+          organization1:"",
+          designation1:"",
+          leaving_reason1:"",
+          start_date2:"",
+          end_date2:"",
+          organization2:"",
+          designation2:"",
+          leaving_reason2:"",
+          start_date3:"",
+          end_date3:"",
+          organization3:"",
+          designation3:"",
+          leaving_reason3:"",
+          current_salary:"",
+          expected_salary:"",
+          notice_period:"",
+          pursuing:"",
+          certifications:"",
+          career_goals:"",
+          place:"",
+          resume:null,
+          image:null
         });
       }
     } catch (error) {
@@ -245,15 +414,15 @@ const Page = () => {
                       </label>
                     </div>
                     {/* {errors.post && (
-              <label
-                htmlFor="post"
-                className="error"
-                style={{ display: 'inline-block' }}
-              >
-                {errors.post}
-              </label>
-              
-            )} */}
+                      <label
+                        htmlFor="post"
+                        className="error"
+                        style={{ display: 'inline-block' }}
+                      >
+                        {errors.post}
+                      </label>
+                      
+                    )} */}
                   </div>
                 </div>
                 <div className="appliction-top-right">
@@ -272,7 +441,7 @@ const Page = () => {
                       name="image"
                       className="form-control"
                       id="add_image"
-                      onChange={handleChange}
+                      onChange={handleFileUpload}
                     />
                   </div>
                 </div>
@@ -292,12 +461,12 @@ const Page = () => {
                       <div className="personal-detals-tr">
                         <div className="personal-detals-td">
                           <input
-                            name="firstName"
+                            name="first_name"
                             placeholder="First Name*"
                             className="form-control required"
                             type="text"
                             id="firstName"
-                            value={formData.firstName}
+                            value={formData.first_name}
                             onChange={handleChange}
                           />
                           <label
@@ -308,34 +477,34 @@ const Page = () => {
                           </label>
                         </div>
                         {/* <label
-                      htmlFor="firstName"
-                      className="error"
-                      style={{
-                        display: formData.firstName ? "none" : "inline-block",
-                      }}
-                    >
-                      This field is required.
-                    </label> */}
+                          htmlFor="firstName"
+                          className="error"
+                          style={{
+                            display: formData.firstName ? "none" : "inline-block",
+                          }}
+                        >
+                          This field is required.
+                        </label> */}
 
                         <div className="personal-detals-td">
                           <input
-                            name="middleName"
+                            name="second_name"
                             placeholder="Middle Name"
                             className="form-control"
                             type="text"
                             id="middleName"
-                            value={formData.middleName}
+                            value={formData.second_name}
                             onChange={handleChange}
                           />
                         </div>
                         <div className="personal-detals-td">
                           <input
-                            name="lastName"
+                            name="last_name"
                             placeholder="Last Name*"
                             className="form-control required"
                             type="text"
                             id="lastName"
-                            value={formData.lastName}
+                            value={formData.last_name}
                             onChange={handleChange}
                           />
                           <label
@@ -345,14 +514,14 @@ const Page = () => {
                             {errors.lastName}
                           </label>
                           {/* <label
-                      htmlFor="lastName"
-                      className="error"
-                      style={{
-                        display: formData.lastName ? "none" : "inline-block",
-                      }}
-                    >
-                      This field is required.
-                    </label> */}
+                            htmlFor="lastName"
+                            className="error"
+                            style={{
+                              display: formData.lastName ? "none" : "inline-block",
+                            }}
+                          >
+                            This field is required.
+                          </label> */}
                         </div>
                       </div>
                     </div>
@@ -375,10 +544,9 @@ const Page = () => {
                             <input
                               name="dob"
                               id="dob"
-                              readOnly
                               placeholder="Date of birth*"
                               className="form-control required"
-                              type="text"
+                              type="date"
                               value={formData.dob}
                               onChange={handleChange}
                             />
@@ -401,12 +569,12 @@ const Page = () => {
                           </div>
                           <div className="personal-detals-td">
                             <input
-                              name="fatherName"
+                              name="father_name"
                               placeholder="Father's Name*"
                               className="form-control required"
                               type="text"
                               id="fatherName"
-                              value={formData.fatherName}
+                              value={formData.father_name}
                               onChange={handleChange}
                             />
                             <label
@@ -429,12 +597,12 @@ const Page = () => {
                           </div>
                           <div className="personal-detals-td">
                             <input
-                              name="motherName"
+                              name="mother_name"
                               placeholder="Mother's Name*"
                               className="form-control required"
                               type="text"
                               id="motherName"
-                              value={formData.motherName}
+                              value={formData.mother_name}
                               onChange={handleChange}
                             />
                             <label
@@ -472,12 +640,12 @@ const Page = () => {
                         <div className="personal-detals-tr">
                           <div className="personal-detals-td">
                             <input
-                              name="fatherOccupation"
+                              name="father_occupation"
                               placeholder="Father's Occupation*"
                               className="form-control required"
                               type="text"
                               id="fatherOccupation"
-                              value={formData.fatherOccupation}
+                              value={formData.father_occupation}
                               onChange={handleChange}
                             />
                             <label
@@ -500,12 +668,12 @@ const Page = () => {
                           </div>
                           <div className="personal-detals-td">
                             <input
-                              name="motherOccupation"
+                              name="mother_occupation"
                               placeholder="Mother's Occupation*"
                               className="form-control required"
                               type="text"
                               id="motherOccupation"
-                              value={formData.motherOccupation}
+                              value={formData.mother_occupation}
                               onChange={handleChange}
                             />
                             <label
@@ -602,10 +770,10 @@ const Page = () => {
                           </div>
                           <div className="personal-detals-td">
                             <select
-                              name="maritalStatus"
+                              name="marital_status"
                               className="form-control form-select required"
                               id="maritalStatus"
-                              value={formData.maritalStatus}
+                              value={formData.marital_status}
                               onChange={handleChange}
                             >
                               <option value="">Select Marital Status</option>
@@ -633,10 +801,10 @@ const Page = () => {
                           </div>
                           <div className="personal-detals-td">
                             <select
-                              name="physicalChallenged"
+                              name="physical_challenged"
                               className="form-control form-select"
                               id="physicalChallenged"
-                              value={formData.physicalChallenged}
+                              value={formData.physical_challenged}
                               onChange={handleChange}
                             >
                               <option value="">
@@ -664,12 +832,12 @@ const Page = () => {
                         <div class="personal-detals-tr">
                           <div class="personal-detals-td">
                             <textarea
-                              name="currentAddress"
+                              name="current_address"
                               placeholder="current Address*"
                               className="form-control required"
                               type="text"
                               id="currentAddress"
-                              value={formData.currentAddress}
+                              value={formData.current_address}
                               onChange={handleChange}
                             ></textarea>
                             <label
@@ -681,12 +849,12 @@ const Page = () => {
                           </div>
                           <div class="personal-detals-td">
                             <textarea
-                              name="permanentAddress"
-                              placeholder="permanent_address"
+                              name="permanent_address"
+                              placeholder="Permanent Address"
                               className="form-control required"
                               type="text"
                               id="permanentAddress"
-                              value={formData.permanentAddress}
+                              value={formData.permanent_address}
                               onChange={handleChange}
                             ></textarea>
                             <label
@@ -698,12 +866,12 @@ const Page = () => {
                           </div>
                           <div class="personal-detals-td">
                             <input
-                              name="emailAddress"
-                              placeholder="email_address"
+                              name="email_address"
+                              placeholder="Email Address"
                               className="form-control required"
                               type="text"
                               id="emailAddress"
-                              value={formData.emailAddress}
+                              value={formData.email_address}
                               onChange={handleChange}
                             />
                             <label
@@ -715,12 +883,12 @@ const Page = () => {
                           </div>
                           <div class="personal-detals-td">
                             <input
-                              name="Phone"
+                              name="phone"
                               placeholder="Phone Number"
                               className="form-control required"
                               type="text"
                               id="Phone"
-                              value={formData.Phone}
+                              value={formData.phone}
                               onChange={handleChange}
                             />
                             <label
@@ -733,6 +901,7 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
+
                     <div class="application-details">
                       <h3>ACADEMIC DETAILS :</h3>
                       <div class="personal-detals">
@@ -766,10 +935,11 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="matricCourse"
+                                  name="matric_course"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.matricCourse}
+                                  placeholder="Course/Subjects*"
+                                  value={formData.matric_course}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -781,10 +951,11 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="matricCollege"
+                                  name="matric_college"
                                   className="form-control  required"
+                                  placeholder="School/College &amp; City*"
                                   id="gender"
-                                  value={formData.matricCollege}
+                                  value={formData.matric_college}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -796,10 +967,11 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="matricUniversity"
+                                  name="matric_university"
                                   className="form-control required"
+                                  placeholder="University*"
                                   id="gender"
-                                  value={formData.matricUniversity}
+                                  value={formData.matric_university}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -812,11 +984,12 @@ const Page = () => {
                               <div class="personal-detals-td">
                                 <div class="input select">
                                   <select
-                                    name="matricYear"
+                                    name="matric_year"
                                     placeholder="Year of passing"
+                                    
                                     className="form-control form-select required"
                                     id="matricYear"
-                                    value={formData.matricYear}
+                                    value={formData.matric_year}
                                     onChange={handleChange}
                                   >
                                     <option value="">Year of passing*</option>
@@ -898,10 +1071,11 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="matricPercentage"
+                                  name="matric_percentage"
                                   className="form-control  required"
+                                  placeholder="Percentage*"
                                   id="gender"
-                                  value={formData.matricPercentage}
+                                  value={formData.matric_percentage}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -920,11 +1094,11 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="SecondaryCourse"
+                                  name="secondary_course"
                                   placeholder="Course/Subjects*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.SecondaryCourse}
+                                  value={formData.secondary_course}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -936,11 +1110,11 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="matricPercentage"
+                                  name="secondary_college"
                                   placeholder="School/College &amp; City*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.SecondaryCollege}
+                                  value={formData.secondary_college}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -957,11 +1131,11 @@ const Page = () => {
                                   // class="form-control required"
                                   // type="text"
                                   // id="ApplicationSecondaryUniversity"
-                                  name="SecondaryUniversity"
+                                  name="secondary_university"
                                   placeholder="University*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.SecondaryUniversity}
+                                  value={formData.secondary_university}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -974,11 +1148,11 @@ const Page = () => {
                               <div class="personal-detals-td">
                                 <div class="input select">
                                   <select
-                                    name="SecondaryYear"
-                                    placeholder="University*"
+                                    name="secondary_year"
+                                    placeholder="Year of passing*"
                                     className="form-control  required"
                                     id="gender"
-                                    value={formData.SecondaryYear}
+                                    value={formData.secondary_year}
                                     onChange={handleChange}
                                   >
                                     <option value="">Year of passing*</option>
@@ -1066,11 +1240,11 @@ const Page = () => {
                                   // class="form-control required positiveNumber"
                                   // type="text"
                                   // id="ApplicationSecondaryPercentage"
-                                  name="SecondaryPercentage"
+                                  name="secondary_percentage"
                                   placeholder="Percentage*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.SecondaryPercentage}
+                                  value={formData.secondary_percentage}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -1094,11 +1268,11 @@ const Page = () => {
                                   // class="form-control required"
                                   // type="text"
                                   // id="ApplicationGraduationCourse"
-                                  name="graduationCourse"
+                                  name="graduation_course"
                                   placeholder="Course/Subjects*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.graduationCourse}
+                                  value={formData.graduation_course}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -1115,11 +1289,11 @@ const Page = () => {
                                   // class="form-control required"
                                   // type="text"
                                   // id="ApplicationGraduationCollege"
-                                  name="graduationCollege"
+                                  name="graduation_college"
                                   placeholder="School/College &amp; City*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.graduationCollege}
+                                  value={formData.graduation_college}
                                   onChange={handleChange}
 
                                 />
@@ -1137,11 +1311,11 @@ const Page = () => {
                                   // class="form-control required"
                                   // type="text"
                                   // id="ApplicationGraduationUniversity"
-                                  name="graduationUniversity"
+                                  name="graduation_university"
                                   placeholder="University*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.graduationUniversity}
+                                  value={formData.graduation_university}
                                   onChange={handleChange}
                                 />
                                 <label
@@ -1157,11 +1331,11 @@ const Page = () => {
                                     // name="data[Application][graduation_year]"
                                     // class="form-control required"
                                     // id="ApplicationGraduationYear"
-                                    name="graduationYear"
+                                    name="graduation_year"
                                     placeholder="University*"
                                     className="form-control form-select  required"
                                     id="gender"
-                                    value={formData.graduationYear}
+                                    value={formData.graduation_year}
                                     onChange={handleChange}
                                   >
                                     <option value="">Year of passing*</option>
@@ -1249,11 +1423,11 @@ const Page = () => {
                                   // class="form-control required positiveNumber"
                                   // type="text"
                                   // id="ApplicationGraduationPercentage"
-                                  name="graduationPercentage"
+                                  name="graduation_percentage"
                                   placeholder="Percentage*"
                                   className="form-control  required"
                                   id="gender"
-                                  value={formData.graduationPercentage}
+                                  value={formData.graduation_percentage}
                                   onChange={handleChange}
                                   
                                 />
@@ -1273,37 +1447,45 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][pg_course]"
+                                  name="pg_course"
                                   placeholder="Course/Subjects"
                                   class="form-control "
                                   type="text"
                                   id="ApplicationPgCourse"
+                                  value={formData.pg_course}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][pg_college]"
+                                  name="pg_college"
                                   placeholder="School/College &amp; City"
                                   class="form-control "
                                   type="text"
                                   id="ApplicationPgCollege"
+                                  value={formData.pg_college}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][pg_university]"
+                                  name="pg_university"
                                   placeholder="University"
                                   class="form-control "
                                   type="text"
                                   id="ApplicationPgUniversity"
+                                  value={formData.pg_university}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <div class="input select">
                                   <select
-                                    name="data[Application][pg_year]"
+                                    name="pg_year"
                                     class="form-control"
                                     id="ApplicationPgYear"
+                                    value={formData.pg_year}
+                                    onChange={handleChange}
                                   >
                                     <option value="">Year of passing</option>
                                     <option value="0">1961</option>
@@ -1378,12 +1560,14 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][pg_percentage]"
+                                  name="pg_percentage"
                                   placeholder="Percentage"
                                   max="100"
                                   class="form-control positiveNumber"
                                   type="text"
                                   id="ApplicationPgPercentage"
+                                  value={formData.pg_percentage}
+                                  onChange={handleChange}
                                 />
                               </div>
                             </div>
@@ -1395,37 +1579,45 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][other_course]"
+                                  name="other_course"
                                   placeholder="Course/Subjects"
                                   class="form-control "
                                   type="text"
                                   id="ApplicationOtherCourse"
+                                  value={formData.other_course}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][other_college]"
+                                  name="other_college"
                                   placeholder="School/College &amp; City"
                                   class="form-control "
                                   type="text"
                                   id="ApplicationOtherCollege"
+                                  value={formData.other_college}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][other_university]"
+                                  name="other_university"
                                   placeholder="University"
                                   class="form-control "
                                   type="text"
                                   id="ApplicationOtherUniversity"
+                                  value={formData.other_university}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <div class="input select">
                                   <select
-                                    name="data[Application][other_year]"
+                                    name="other_year"
                                     class="form-control"
                                     id="ApplicationOtherYear"
+                                    value={formData.other_year}
+                                    onChange={handleChange}
                                   >
                                     <option value="">Year of passing</option>
                                     <option value="0">1961</option>
@@ -1500,12 +1692,14 @@ const Page = () => {
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][other_percentage]"
+                                  name="other_percentage"
                                   placeholder="Percentage"
                                   max="100"
                                   class="form-control positiveNumber"
                                   type="text"
                                   id="ApplicationOtherPercentage"
+                                  value={formData.other_percentage}
+                                  onChange={handleChange}
                                 />
                               </div>
                             </div>
@@ -1513,6 +1707,7 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
+
                     <div class="application-details">
                       <h3>WORK EXPERIENCE :</h3>
                       <h6>Total Work Experience:</h6>
@@ -1525,12 +1720,12 @@ const Page = () => {
                               // id="exp_year"
                               // class="form-control required"
                               // onchange="if (!window.__cfRLUnblockHandlers) return false; getYear(this.value)"
-                              name="expYear"
+                              name="work_experience_year"
                               
                               className="form-control required"
                               type="text"
                               id="expYear"
-                              value={formData.expYear}
+                              value={formData.work_experience_year}
                               onChange={handleChange}
                             >
                               <option value="">Year*</option>
@@ -1604,12 +1799,12 @@ const Page = () => {
                               // id="exp_month"
                               // class="form-control required"
                               // onchange="if (!window.__cfRLUnblockHandlers) return false; getMonth(this.value)"
-                              name="expMonth"
+                              name="work_experience_months"
                               
                               className="form-control required"
                               type="text"
                               id="expMonth"
-                              value={formData.expMonth}
+                              value={formData.work_experience_months}
                               onChange={handleChange}
                             >
                               <option value="">Months*</option>
@@ -1647,6 +1842,7 @@ const Page = () => {
                           </div>{" "}
                         </div>
                       </div>
+
                       <div class="personal-detals">
                         <div class="personal-detals-bx accdemic-detals-bx">
                           <div class="personal-detals-table">
@@ -1664,196 +1860,228 @@ const Page = () => {
                             <div class="personal-detals-tr">
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][start_date]"
+                                  name="start_date"
                                   id="start_date"
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.start_date}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][end_date]"
+                                  name="end_date"
                                   id="end_date"
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.end_date}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][organization]"
+                                  name="organization"
                                   placeholder="Name of Organization"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationOrganization"
+                                  value={formData.organization}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][designation]"
+                                  name="designation"
                                   placeholder="Designation"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationDesignation"
+                                  value={formData.designation}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][leaving_reason]"
+                                  name="leaving_reason"
                                   placeholder="Reason of Leaving"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationLeavingReason"
+                                  value={formData.leaving_reason}
+                                  onChange={handleChange}
                                 />
                               </div>
                             </div>
                             <div class="personal-detals-tr">
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][start_date1]"
+                                  name="start_date1"
                                   id="start_date1"
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.start_date1}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][end_date1]"
+                                  name="end_date1"
                                   id="end_date1"
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.end_date1}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][organization1]"
+                                  name="organization1"
                                   placeholder="Name of Organization"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationOrganization1"
+                                  value={formData.organization1}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][designation1]"
+                                  name="designation1"
                                   placeholder="Designation"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationDesignation1"
+                                  value={formData.designation1}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][leaving_reason1]"
+                                  name="leaving_reason1"
                                   placeholder="Reason of Leaving"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationLeavingReason1"
+                                  value={formData.leaving_reason1}
+                                  onChange={handleChange}
                                 />
                               </div>
                             </div>
                             <div class="personal-detals-tr">
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][start_date2]"
+                                  name="start_date2"
                                   id="start_date2"
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.start_date2}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][end_date2]"
+                                  name="end_date2"
                                   id="end_date2"
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.organization2}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][organization2]"
+                                  name="organization2"
                                   placeholder="Name of Organization"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationOrganization2"
+                                  value={formData.organization2}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][designation2]"
+                                  name="designation2"
                                   placeholder="Designation"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationDesignation2"
+                                  value={formData.designation2}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][leaving_reason2]"
+                                  name="leaving_reason2"
                                   placeholder="Reason of Leaving"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationLeavingReason2"
+                                  value={formData.leaving_reason2}
+                                  onChange={handleChange}
                                 />
                               </div>
                             </div>
                             <div class="personal-detals-tr">
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][start_date3]"
+                                  name="start_date3"
                                   id="start_date3"
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.start_date3}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][end_date3]"
+                                  name="end_date3"
                                   id="end_date3"
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
-                                  readonly="readonly"
-                                  type="text"
+                                  type="date"
+                                  value={formData.end_date3}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][organization3]"
+                                  name="organization3"
                                   placeholder="Name of Organization"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationOrganization3"
+                                  value={formData.organization3}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][designation3]"
+                                  name="designation3"
                                   placeholder="Designation"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationDesignation3"
+                                  value={formData.designation3}
+                                  onChange={handleChange}
                                 />
                               </div>
                               <div class="personal-detals-td">
                                 <input
-                                  name="data[Application][leaving_reason3]"
+                                  name="leaving_reason3"
                                   placeholder="Reason of Leaving"
                                   class="form-control"
                                   type="text"
                                   id="ApplicationLeavingReason3"
+                                  value={formData.leaving_reason3}
+                                  onChange={handleChange}
                                 />
                               </div>
                             </div>
@@ -1865,12 +2093,14 @@ const Page = () => {
                         <label>Current/Last Salary:</label>
                         <div class="current-input">
                           <input
-                            name="data[Application][current_salary]"
+                            name="current_salary"
                             placeholder="Current Salary"
                             class="form-control number"
                             min="0"
                             type="text"
                             id="ApplicationCurrentSalary"
+                            value={formData.current_salary}
+                            onChange={handleChange}
                           />
                         </div>
                       </div>
@@ -1884,19 +2114,19 @@ const Page = () => {
                             // min="1"
                             // type="text"
                             // id="ApplicationExpectedSalary"
-                            name="expectedSalary"
-                                  placeholder="Expected Salary"
-                                  className="form-control  required"
-                                  id="gender"
-                                  value={formData.expectedSalary}
-                                  onChange={handleChange}
-                                />
-                                <label
-                                  className="error"
-                                  style={{ display: "inline-block" }}
-                                >
-                                  {errors.expectedSalary}
-                                </label>
+                            name="expected_salary"
+                              placeholder="Expected Salary"
+                              className="form-control  required"
+                              id="gender"
+                              value={formData.expected_salary}
+                              onChange={handleChange}
+                            />
+                            <label
+                              className="error"
+                              style={{ display: "inline-block" }}
+                            >
+                              {errors.expectedSalary}
+                            </label>
                           
                         </div>
                       </div>
@@ -1906,10 +2136,12 @@ const Page = () => {
                         </label>
                         <div class="current-input">
                           <input
-                            name="data[Application][notice_period]"
+                            name="notice_period"
                             class="form-control"
                             type="text"
                             id="ApplicationNoticePeriod"
+                            value={formData.notice_period}
+                            onChange={handleChange}
                           />
                         </div>
                       </div>
@@ -1922,9 +2154,11 @@ const Page = () => {
                         <div class="current-input">
                           <div class="current-input">
                             <textarea
-                              name="data[Application][pursuing]"
+                              name="pursuing"
                               class="form-control"
                               id="ApplicationPursuing"
+                              value={formData.pursuing}
+                              onChange={handleChange}
                             ></textarea>
                           </div>
                         </div>
@@ -1934,9 +2168,11 @@ const Page = () => {
                         <div class="current-input">
                           <div class="current-input">
                             <textarea
-                              name="data[Application][certifications]"
+                              name="certifications"
                               class="form-control"
                               id="ApplicationCertifications"
+                              value={formData.certifications}
+                              onChange={handleChange}
                             ></textarea>
                           </div>
                         </div>
@@ -1946,9 +2182,11 @@ const Page = () => {
                         <div class="current-input">
                           <div class="current-input">
                             <textarea
-                              name="data[Application][career_goals]"
+                              name="career_goals"
                               class="form-control"
                               id="ApplicationCareerGoals"
+                              value={formData.career_goals}
+                              onChange={handleChange}
                             ></textarea>
                           </div>
                         </div>
@@ -2000,8 +2238,7 @@ const Page = () => {
                                   type="file"
                                   className="form-control  required"
                                   id="resume"
-                                  value={formData.resume}
-                                  onChange={handleChange}
+                                  onChange={handleFileUpload}
                                 />
                                 <label
                                   className="error"

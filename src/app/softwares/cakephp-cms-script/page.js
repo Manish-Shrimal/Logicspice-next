@@ -10,10 +10,12 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import "../../resposive.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -21,12 +23,16 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  const openModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <Image unoptimized={true}
+        <Image
+          unoptimized={true}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -78,7 +84,8 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image unoptimized={true}
+              <Image
+                unoptimized={true}
                 src="/img/jobboard/stars.png"
                 alt="stars"
                 className=""
@@ -147,7 +154,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/unique_signupicon.png"
                         alt="Easy Registration"
@@ -168,7 +176,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/great_profile_managment_icon.png"
                         alt="Great Profile Management"
@@ -190,7 +199,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/fully_responsive_icon.png"
                         alt="Fully Responsive"
@@ -212,7 +222,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Lost Password Recovery"
@@ -234,7 +245,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/search_filter_icon.png"
                         alt="Search Filter"
@@ -256,7 +268,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/payment_options_icon.png"
                         alt="Payment Options"
@@ -319,20 +332,28 @@ const Page = () => {
                   </ul>
                   <ul className="navbar-nav ms-auto navbar-right">
                     <li>
-                      <a
+                      <Link
                         className="page-scroll btn btn-default"
                         href="javascript:void(0);"
+                        onClick={openModal}
                       >
                         <span>
-                          <Image unoptimized={true}
+                          <Image
+                            width={40}
+                            height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
-                            height={100}
-                            width={40}
                           />
                         </span>{" "}
                         Enquire Now
-                      </a>
+                        {
+                          <Enquirymodal
+                            modalStatus={showModal}
+                            toggle={openModal}
+                            title="CakePhp Cms Script"
+                          />
+                        }
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -400,7 +421,8 @@ const Page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/apple_phn_icon.png"
                     height={40}
                     width={40}
@@ -411,7 +433,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_java_icon.png"
                     alt="Java"
                     height={40}
@@ -422,7 +445,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/andoird_icon.png"
                     alt="Android"
                     height={40}
@@ -433,7 +457,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
                     height={40}
@@ -444,7 +469,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
                     height={40}
@@ -455,7 +481,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/bootstrap.png"
                     alt="manager_icn"
                     height={40}
@@ -466,7 +493,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -477,7 +505,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -499,7 +528,8 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -510,7 +540,8 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -764,7 +795,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

@@ -18,6 +18,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -52,8 +58,8 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
   const [activeTab, setActiveTab] = useState("tab2");
-  const [sellerTab, setSellerTab] = useState(true);
-  const [buyerTab, setBuyerTab] = useState(false);
+  const [sellerTab, setSellerTab] = useState(false);
+  const [buyerTab, setBuyerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
 
   const handleSellerTab = () => {
@@ -88,6 +94,49 @@ const Page = () => {
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   useEffect(() => {
@@ -271,7 +320,7 @@ See how it work yourself!"
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -1371,7 +1420,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
@@ -1382,7 +1431,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={50}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1393,7 +1442,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1404,7 +1453,7 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1451,7 +1500,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1462,7 +1511,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1473,7 +1522,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1484,7 +1533,7 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1695,7 +1744,7 @@ See how it work yourself!"
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="How can a tenant search for properties to rent around their location?"
                     collapseId="flush-collapse1"
@@ -1772,7 +1821,125 @@ See how it work yourself!"
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                      <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography>How can a tenant search for properties to rent around their location?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Tenant can search by selecting the type of property he wants along with the amenities, and all the properties matching the criteria will be listed to the tenant.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+      >
+        <AccordionSummary
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Typography>How can the property owner manage their booking requests that they have received on their properties?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Owners can view a list of booking requests received by them for their properties and can accept or reject them. They can view the duration for which the tenant has sent the request.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary
+          aria-controls="panel3-content"
+          id="panel3-header"
+        >
+          <Typography>How many days will it take to implement the script?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Generally, it takes 7 days to implement the vacation rental script as per your requirement.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel4'}
+        onChange={handleChange('panel4')}
+      >
+        <AccordionSummary
+          aria-controls="panel4-content"
+          id="panel4-header"
+        >
+          <Typography>Can tenant contact a Landowner if they are interested in renting their property?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes. Landlords/Tenants can access one-to-one real-time text chat feature over the site. They will be able to view the messages sent to them in real-time by tenants in their chat box.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel5'}
+        onChange={handleChange('panel5')}
+      >
+        <AccordionSummary
+          aria-controls="panel5-content"
+          id="panel5-header"
+        >
+          <Typography>Can a landlord upload more than one property to the website?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, landlords can add more than one property with multiple pictures and other details of amenities.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel6'}
+        onChange={handleChange('panel6')}
+      >
+        <AccordionSummary
+          aria-controls="panel6-content"
+          id="panel6-header"
+        >
+          <Typography>What information is required from the tenant while sending a booking request to a Landlord?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            The tenants will choose the start date and end date of the rental period from a calendar. They can see their total rent on the request page along with moving fees.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel7'}
+        onChange={handleChange('panel7')}
+      >
+        <AccordionSummary
+          aria-controls="panel7-content"
+          id="panel7-header"
+        >
+          <Typography>Along with hosting server details, what other recommendations?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and it provides a secure layer to the website as well.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
               </div>
             </div>
           </div>
@@ -1892,83 +2059,7 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section className="latest_feature_product">
-        <div className="container">
-          <h2 className="title_main">Other Popular Softwares</h2>
-          <div className="other-product-box">
-            <div className="row">
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>whatsapp clone</h3>
-                        <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
-                            height={100}
-                            src="/img/jobboard/ls-chat-logo.png"
-                            alt="WhatsApp Clone App"
-                          />
-                        </div>
-                        <p>
-                          <span>Readymade WhatsApp Clone Script.</span>{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Fiverr clone</h3>
 
-                        <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
-                            height={100}
-                            src="/img/jobboard/gigger_logo_new.png"
-                            alt="fiverr-clone"
-                          />
-                        </div>
-                        <p>
-                          <span>On Demand Marketplace Software</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <a title="View Detail" target="_black">
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Uship clone</h3>
-
-                        <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
-                            height={100}
-                            src="/img/jobboard/logictic_logo_new.png"
-                            alt="logistic-marketplace-software"
-                          />
-                        </div>
-                        <p>
-                          <span>Similar to Uship Clone, Shiply Clone.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a

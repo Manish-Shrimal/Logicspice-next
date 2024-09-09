@@ -18,6 +18,13 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -55,6 +62,91 @@ const Page = () => {
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   useEffect(() => {
@@ -269,7 +361,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`fund_raiserbg ddlj ${sellerTab ? "active" : ""}`}
@@ -1595,7 +1687,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1606,7 +1698,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
-                        width={40}
+                        width={50}
                         height={100}
                       />
                     </div>
@@ -1617,7 +1709,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
-                        width={40}
+                        width={50}
                         height={100}
                       />
                     </div>
@@ -1628,7 +1720,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
-                        width={40}
+                        width={50}
                         height={100}
                       />
                     </div>
@@ -1675,7 +1767,7 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
-                    width={50}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1686,7 +1778,7 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
-                    width={50}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1697,7 +1789,7 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
-                    width={50}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1912,7 +2004,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Can we change the fees we charge as website owner?"
                     collapseId="flush-collapse1"
@@ -2000,7 +2092,95 @@ const Page = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+  <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+    <Typography>Can we change the fees we charge as website owner?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Yes, from the website admin panel, you can manage the charges, fees, or commission.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+  <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+    <Typography>Why should I buy this script?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      You get the following benefits of using LS Crowd Funding Script:
+      <br />
+      1. Easy to use, user-friendly script with all the major features according to the latest market trend.
+      <br />
+      2. Cost-effective
+      <br />
+      3. Supports unlimited users
+      <br />
+      4. Easily scalable and customizable solution
+      <br />
+      5. Targets social networks to spread awareness of your created project.
+      <br />
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+  <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+    <Typography>Along with hosting server details, what other recommendations?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days, and it provides a secure layer to the website as well.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+  <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+    <Typography>Can I update some design and functionality in the application code myself?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Yes, you will have access to all the code, except some of the core encrypted files.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+  <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+    <Typography>Will I be able to use it on multiple domains after I purchase this script?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      No, you will be licensed to use it only for the domain you purchased it for.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+  <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+    <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      No, you can’t resell the script. All rights will remain with Logicspice only.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+  <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
+    <Typography>Do you offer a money-back guarantee?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Yes, we offer a 30-day money-back guarantee to ensure customer satisfaction with our software. If for any reason you wish to discontinue using the product, you can ask us for a refund. We will refund your total money except for the installation and configuration charges, which are USD 65 or 20% of the application cost, whichever is greater.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
               </div>
             </div>
           </div>

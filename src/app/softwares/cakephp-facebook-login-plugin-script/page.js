@@ -10,6 +10,8 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import "../../resposive.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
@@ -21,6 +23,13 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => {
+    
+
+    setShowModal(!showModal);
+  };
+
 
   return (
     <>
@@ -296,20 +305,28 @@ const Page = () => {
                   </ul>
                   <ul className="navbar-nav ms-auto navbar-right">
                     <li>
-                      <a
+                    <Link
                         className="page-scroll btn btn-default"
                         href="javascript:void(0);"
+                        onClick={openModal}
                       >
                         <span>
-                          <Image unoptimized={true}
+                          <Image
+                            width={40}
+                            height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
-                            height={100}
-                            width={40}
                           />
                         </span>{" "}
                         Enquire Now
-                      </a>
+                        {
+                          <Enquirymodal
+                            modalStatus={showModal}
+                            toggle={openModal}
+                            title="Cakephp Facebook Login Plugin Script"
+                          />
+                        }
+                      </Link>
                     </li>
                   </ul>
                 </div>

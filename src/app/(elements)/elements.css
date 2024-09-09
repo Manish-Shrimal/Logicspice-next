@@ -1383,7 +1383,8 @@ label {
 	border-right: 1px solid #333;
 	display: table-cell;
 	padding: 10px;
-	text-align: center
+	text-align: center;
+	color: #000!important;
 }
 
 .personal-detals-td {
@@ -1392,7 +1393,9 @@ label {
 	display: table-cell;
 	padding: 10px;
 	text-align: center;
-	vertical-align: top
+	vertical-align: top;
+	color: #000!important;
+
 }
 
 
@@ -1413,12 +1416,14 @@ label {
 .currwnt-bx label {
 	font-weight: 700;
 	margin-bottom: 5px;
+	color: #000!important;
 }
 
 .currwnt-bx {
 	display: inline-block;
 	width: 100%;
-	padding-top: 20px
+	padding-top: 20px;
+	color: #000!important;
 }
 
 .places-bx-left {

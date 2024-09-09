@@ -11,6 +11,9 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -342,7 +345,7 @@ const Page = () => {
               ></iframe>
             </div>
             <div className="col-md-6">
-              <div className="service-market-ttd JobBoardServiceMarketFeatures">
+              <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
                   <li>Post Unlimited Jobs</li>
                   <li>Responsive &amp; SEO Friendly</li>
@@ -395,7 +398,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="JobBoardNewtab">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -2515,7 +2518,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
                         alt="ReactJS Development"
@@ -2527,7 +2530,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={60}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
@@ -2539,7 +2542,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={60}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -2551,7 +2554,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -2563,7 +2566,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -2575,7 +2578,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={50}
                         height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
@@ -2588,7 +2591,7 @@ const Page = () => {
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
-                        width={100}
+                        width={50}
                         height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
@@ -3258,6 +3261,10 @@ const Page = () => {
                   </div>
                 </div>
               </div>
+             
+              
+
+              
             </div>
           </div>
         </div>
@@ -3271,8 +3278,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={700}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/job_portal_script_apply_jobs.png"
                     alt="Job Application"
                   />
@@ -3289,8 +3296,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={700}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/Job_portal_script_create_job.png"
                     alt="Create New Job"
                   />
@@ -3307,8 +3314,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={700}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/job_portal_system_search_jobs.png"
                     alt="Job Search"
                   />
@@ -3325,8 +3332,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={700}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/make_a_cv_job_portal_app.png"
                     alt="Create CV"
                   />
@@ -3344,8 +3351,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={700}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/Manage_jobs_job_portal_script.png"
                     alt="Job Management"
                   />
@@ -3362,8 +3369,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={700}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
                     alt="Membership Plan"
                   />

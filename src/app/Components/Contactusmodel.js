@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
@@ -41,13 +40,13 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-  
+
     // Update the form data
     setFormData((prevData) => ({
       ...prevData,
       [id]: value,
     }));
-  
+
     // Clear the specific error message for the field being typed into
     setErrors((prevErrors) => {
       const newErrors = { ...prevErrors };
@@ -63,7 +62,6 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
       return newErrors;
     });
   };
-  
 
   const validateForm = () => {
     const newErrors = {};
@@ -112,7 +110,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
             email: "",
             phone_no: "",
             message: "",
-          }))
+          }));
         }
       } catch (error) {
         console.error("Submission error:", error.message);
@@ -125,7 +123,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
       ...prevData,
       recaptchaToken: token,
     }));
-    if(token){
+    if (token) {
       setErrors((prevError) => ({
         ...prevError,
         recaptchaerror: "",
@@ -139,7 +137,6 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
     setLoader(false);
     toggle();
   };
-
 
   const stopPropagation = (e) => {
     e.stopPropagation();
@@ -173,7 +170,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
               </button>
               <div className="row m-0">
                 <div className="col-sm-6 col-md-8 padding-no">
-                  {!resultSuccess ? ( 
+                  {!resultSuccess ? (
                     <>
                       <div className="modal-header">
                         <h4 className="modal-title" id="myModalLabel">
@@ -295,7 +292,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                               {errors.messageerror}
                             </div>
                           </div>
-                          <div className="form-group buttonSubmit">
+                          <div className="form-group buttonSubmit" style={{ display: "flex", justifyContent: "space-between" }}>
                             <div className="form-group-google">
                               <ReCAPTCHA
                                 key={recaptchaKey}
@@ -306,7 +303,10 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 {errors.reacptchaerror}
                               </div>
                             </div>
-                            <div className="form-group-btn">
+                            <div
+                              className="form-group-btn"
+                              style={{margin: "18px 0"}}
+                            >
                               <input
                                 type="hidden"
                                 id="postUrl"
@@ -318,7 +318,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 id="googletrack"
                                 className="btn btn-primary"
                               >
-                                Submit your query
+                                SEND YOUR INQUIRY
                               </button>
                               {loader && (
                                 <div className="side_page" id="loadloader6">

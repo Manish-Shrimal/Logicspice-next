@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -8,6 +9,13 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 import {
   MDBAccordion,
   MDBAccordionItem,
@@ -17,13 +25,16 @@ import {
   MDBModalTitle,
   MDBModalFooter,
 } from "mdb-react-ui-kit";
-import React, { useRef, useState } from "react";
+
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -31,16 +42,118 @@ const Page = () => {
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
+  const openModal = () => {
+    setShowModal(!showModal);
+  };
   const submitView = (event) => {
     event.preventDefault();
     // Add your form submission logic here
     console.log("Form submitted");
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 100) {
+        // Adjust this value based on when you want the navbar to appear
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor:
+  //     theme.palette.mode === "dark"
+  //       ? "rgba(255, 255, 255, .05)"
+  //       : "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
   return (
     <>
       <NavBar />
       <section className="product_top_sectins">
-        <Image unoptimized={true}
+        <Image
+          unoptimized={true}
           width={100}
           height={100}
           src="/img/leadgeneration/bg.png"
@@ -49,7 +162,7 @@ const Page = () => {
         />
         <div className="container">
           <h1>LS Lead Generation Form</h1>
-          <h2>Contact Form PHP Scrip</h2>
+          <h2>Contact Form PHP Script</h2>
 
           <div className="both-left-p-sec">
             <h3>
@@ -92,7 +205,8 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image unoptimized={true}
+              <Image
+                unoptimized={true}
                 width={100}
                 height={100}
                 src="/img/jobboard/stars.png"
@@ -435,26 +549,26 @@ const Page = () => {
                                 </div>
                               </div>
                             </div>
-                            <div
-                              className="lfsavebtn"
-                              id="lfsavebtn"
-                              style={{ display: "block" }}
-                            >
-                              <input
-                                type="submit"
-                                value="Preview Form"
-                                id=""
-                                className="viewsaveform"
-                              />
-                              <input
-                                type="button"
-                                onClick={() => openmodel()}
-                                className="saveform"
-                                id=""
-                                value="Download Form"
-                              />
-                            </div>
                           </form>
+                          <div
+                            className="lfsavebtn"
+                            id="lfsavebtn"
+                            style={{ display: "block" }}
+                          >
+                            <input
+                              type="submit"
+                              value="Preview Form"
+                              id=""
+                              className="viewsaveform"
+                            />
+                            <input
+                              type="button"
+                              onClick={() => openmodel()}
+                              className="saveform"
+                              id=""
+                              value="Download Form"
+                            />
+                          </div>
                         </div>
                         <input
                           type="hidden"
@@ -596,7 +710,8 @@ const Page = () => {
                       />
                     </div>
                     <div v-if="loader" id="loadloader">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/loading-old.gif"
@@ -634,7 +749,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -658,7 +774,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -682,7 +799,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -706,7 +824,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -730,7 +849,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -752,7 +872,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <Link href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         className="media-object"
@@ -778,67 +899,78 @@ const Page = () => {
       </section>
 
       <section className="product_middle_menu_box">
-        <section className="product_middle_menu">
-          <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-default">
-              <div className="container-fluid">
-                {/* <!-- Brand and toggle get grouped for better mobile display --> */}
-                <div className="navbar-header">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+        {isScrolled && (
+          <section className="product_middle_menu top-fixed">
+            <div className="container">
+              <nav className="navbar navbar-expand-lg navbar-default">
+                <div className="container-fluid">
+                  {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+                  <div className="navbar-header">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
                   >
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
+                    <ul className="navbar-nav me-auto">
+                      <li>
+                        <Link href="#features">Features</Link>
+                      </li>
+                      <li>
+                        <Link href="#technologies">Technologies</Link>
+                      </li>
+                      <li>
+                        <Link href="#support">Support</Link>
+                      </li>
+                      <li>
+                        <Link href="#reviews">Reviews</Link>
+                      </li>
+                    </ul>
+                    <ul className="navbar-nav ms-auto navbar-right">
+                      <li>
+                        <Link
+                          className="page-scroll btn btn-default"
+                          href="javascript:void(0);"
+                          id="buy_now_1"
+                          onClick={openModal}
+                        >
+                          <span>
+                            <Image
+                              unoptimized={true}
+                              width={30}
+                              height={100}
+                              src="/img/leadgeneration/enquiry_btn_bg.png"
+                              alt="enquiry"
+                            />
+                          </span>{" "}
+                          Enquire Now
+                          {
+                            <Enquirymodal
+                              modalStatus={showModal}
+                              toggle={openModal}
+                              title="Contact form php Script"
+                            />
+                          }
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div
-                  className="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <ul className="navbar-nav me-auto">
-                    <li>
-                      <Link href="#features">Features</Link>
-                    </li>
-                    <li>
-                      <Link href="#technologies">Technologies</Link>
-                    </li>
-                    <li>
-                      <Link href="#support">Support</Link>
-                    </li>
-                    <li>
-                      <Link href="#reviews">Reviews</Link>
-                    </li>
-                  </ul>
-                  <ul className="navbar-nav ms-auto navbar-right">
-                    <li>
-                      <Link
-                        className="page-scroll btn btn-default"
-                        href="javascript:void(0);"
-                        id="buy_now_1"
-                        onClick={() => openEnquiryModal()}
-                      >
-                        <span>
-                          <Image unoptimized={true}
-                            width={60}
-                            height={100}
-                            src="/img/leadgeneration/enquiry_btn_bg.png"
-                            alt="enquiry"
-                          />
-                        </span>{" "}
-                        Enquire Now
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </section>
+              </nav>
+            </div>
+          </section>
+        )}
+
         <section className="Frequently_Asked_Questions" id="features">
           <div className="container">
             <h3>
@@ -884,8 +1016,9 @@ const Page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={45}
                       height={100}
                       src="/img/jobboard/bootstrap.png"
                       alt="manager_icn"
@@ -895,8 +1028,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={45}
                       height={100}
                       src="/img/jobboard/css.png"
                       alt="manager_icn"
@@ -906,8 +1040,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={45}
                       height={100}
                       src="/img/jobboard/html-5.png"
                       alt="manager_icn"
@@ -917,8 +1052,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={45}
                       height={100}
                       src="/img/jobboard/tech_php_icon.png"
                       alt="manager_icn"
@@ -928,8 +1064,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={45}
                       height={100}
                       src="/img/jobboard/javascript.png"
                       alt="manager_icn"
@@ -952,8 +1089,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -963,8 +1101,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1138,7 +1277,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Are your given source code modifiable?"
                     collapseId="flush-collapse1"
@@ -1202,7 +1341,140 @@ const Page = () => {
                   >
                     <p>Yes, its totally free.</p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      Are your given source code modifiable?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, our given scripts are flexible. Clients can customize
+                      according to their requirement.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>How can I get my form delivered?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You can simply download it once you complete adding the
+                      fields and text in the form.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      Which technology will the generated forms support?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>HTML, JavaScript, Bootstrap, PHP</Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      Can I use your script without any programming skills?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You need to have basic knowledge of HTML and JavaScript to
+                      integrate the form into your website.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      How many forms can I generate at a time?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We provide unlimited downloads. You can download any
+                      number of forms.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Can I change the fields label according to my requirement
+                      in the form?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we provide you the option to create fields and rename
+                      the labels as per your requirement.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel7d-content"
+                    id="panel7d-header"
+                  >
+                    <Typography>
+                      Is it free to download these customized lead generation
+                      forms?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>Yes, it's totally free.</Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -1216,7 +1488,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

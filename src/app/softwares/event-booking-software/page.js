@@ -17,6 +17,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   var settings = {
     dots: true,
@@ -94,6 +100,91 @@ const Page = () => {
     }
   };
 
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -121,7 +212,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                           width={100}
@@ -134,7 +226,11 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -154,7 +250,8 @@ const Page = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                       width={100}
@@ -175,11 +272,12 @@ const Page = () => {
 
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   src="/img/softwares-banner-img/lsevent-mobile.png"
                   alt="Event_Booking_Software"
                   className="lazy"
-                  width={350}
+                  width={335}
                   height={500 / (100 / 100)}
                 />
               </div>
@@ -248,7 +346,7 @@ const Page = () => {
           <div className="tatxt_txt_job"></div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -294,7 +392,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/eventbooking/mobile-event-customer.webp"
                             alt="Customer App Feature"
                             width={300}
@@ -307,7 +406,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                   width={100}
@@ -326,7 +426,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                   width={100}
@@ -345,7 +446,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                   width={100}
@@ -366,7 +468,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
                                   width={100}
@@ -385,7 +488,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/outstanding_booking.png"
                                   width={100}
@@ -404,7 +508,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/payment_history.png"
                                   width={100}
@@ -423,7 +528,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_tickets.png"
                                   width={100}
@@ -442,7 +548,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   width={100}
@@ -461,7 +568,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/favourite_classified.png"
                                   width={100}
@@ -480,7 +588,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
                                   width={100}
@@ -499,7 +608,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/filter_tickets.png"
                                   width={100}
@@ -518,7 +628,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/accepet_reject_reque.png"
                                   width={100}
@@ -537,7 +648,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/tickets_list.png"
                                   width={100}
@@ -572,7 +684,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/eventbooking/organizer-mobile.webp"
                             alt="Organizer App Features"
                             width={300}
@@ -585,7 +698,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                   width={100}
@@ -604,7 +718,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                   width={100}
@@ -624,7 +739,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_address3.png"
                                   width={100}
@@ -643,7 +759,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/upcoming_eve.png"
                                   width={100}
@@ -662,7 +779,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/articles.png"
                                   width={100}
@@ -681,7 +799,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/coupon-codes.png"
                                   width={100}
@@ -701,7 +820,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_communica.png"
                                   width={100}
@@ -721,7 +841,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/accepet_reject_reque.png"
                                   width={100}
@@ -741,7 +862,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   width={100}
@@ -760,7 +882,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                   width={100}
@@ -796,7 +919,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/eventbooking/event-website.webp"
                             alt="Admin Panel"
                             width={300}
@@ -809,7 +933,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                   width={100}
@@ -828,7 +953,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                   width={100}
@@ -848,7 +974,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                   width={100}
@@ -867,7 +994,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/transporter_list.png"
                                   width={100}
@@ -886,7 +1014,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/self_profile.png"
                                   width={100}
@@ -906,7 +1035,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/multiple_picture.png"
                                   width={100}
@@ -926,7 +1056,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_address3.png"
                                   width={100}
@@ -945,7 +1076,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/articles.png"
                                   width={100}
@@ -964,7 +1096,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/accepet_reject_reque.png"
                                   width={100}
@@ -983,7 +1116,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_selling_order.png"
                                   width={100}
@@ -1002,7 +1136,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/outstanding_booking.png"
                                   width={100}
@@ -1021,7 +1156,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   width={100}
@@ -1040,7 +1176,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                   width={100}
@@ -1059,7 +1196,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                   width={100}
@@ -1127,8 +1265,9 @@ const Page = () => {
             <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
-                subscription-based hassle-free model, available at just USD 145
-                per month.
+                subscription-based hassle-free model, available at just{" "}
+                <strong>USD 45 per month , </strong>
+                limited offer available for the first year.
               </p>
               <p>Key Benefits:</p>
               <ul>
@@ -1146,9 +1285,9 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    Zero Setup Fees:- There are no additional charges for the
-                    setup and installation of the software, making it easier for
-                    customers to get started.
+                    <strong>Zero Setup Fees:-</strong> There are no additional
+                    charges for the setup and installation of the software,
+                    making it easier for customers to get started.
                   </span>
                 </li>
                 <li>
@@ -1176,8 +1315,8 @@ const Page = () => {
                   <span>
                     Enduring Support: We are committed to providing lifelong
                     assistance through our subscription model. If any software
-                    issues arise, our dedicated technical team will promptly
-                    address them during office hours.
+                    issues arise, <strong>our dedicated technical team </strong>{" "}
+                    will promptly address them during office hours.
                   </span>
                 </li>
                 <li>
@@ -1240,7 +1379,8 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -1326,7 +1466,8 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/images/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1351,7 +1492,8 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/eventbooking/event-how-it-works.webp"
               alt="icon"
               title=""
@@ -1360,14 +1502,14 @@ const Page = () => {
               height={100}
             />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
       </div>
 
@@ -1381,10 +1523,11 @@ const Page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="Laravel Development"
-                      width={40}
+                      width={60}
                       height={100}
                     />
                   </div>
@@ -1392,10 +1535,11 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/html-5.png"
                       alt="HTML5"
-                      width={40}
+                      width={50}
                       height={100}
                     />
                   </div>
@@ -1403,10 +1547,11 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/tech_mysql_icon.png"
                       alt="MySQL"
-                      width={40}
+                      width={60}
                       height={100}
                     />
                   </div>
@@ -1414,10 +1559,11 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
-                      width={40}
+                      width={60}
                       height={100}
                     />
                   </div>
@@ -1461,10 +1607,11 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
-                    width={40}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1472,10 +1619,11 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
-                    width={40}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1486,10 +1634,11 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
-                    width={40}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1497,10 +1646,11 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
-                    width={40}
+                    width={50}
                     height={100}
                   />
                 </div>
@@ -1648,7 +1798,8 @@ const Page = () => {
                       </span>
                       John, USA{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           width={20}
@@ -1682,7 +1833,8 @@ const Page = () => {
                       </span>
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
                           width={20}
@@ -1715,7 +1867,8 @@ const Page = () => {
                       </span>
                       mike wilshon, AUS{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
                           width={20}
@@ -1730,7 +1883,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Once I purchase this script, how many days will it take to go online?"
                     collapseId="flush-collapse1"
@@ -1793,7 +1946,130 @@ const Page = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      Once I purchase this script, how many days will it take to
+                      go online?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      It generally takes 2 working days, provided all the
+                      necessary information has been given.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>Can I get help for customization?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we have an experienced team of developers to help you
+                      with customization as per your requirements.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      Can I resell the script? Will I have rights over the
+                      script code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can't resell the script. All rights will remain
+                      with Logicspice only.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      Will I be able to use it on multiple domains after I
+                      purchase this script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You will be licensed to use it only for the domain you
+                      purchased it for.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can I use your script without any programming skills?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you can directly install our script and manage
+                      everything through the admin panel, which is very
+                      user-friendly.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We recommend you purchase an SSL certificate along with a
+                      hosting server, as it provides a secure layer to your
+                      website.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -1809,6 +2085,7 @@ const Page = () => {
               id="features1_li"
               className={`${userTab ? "active" : ""}`}
               onClick={() => handleUserTab()}
+              style={{ cursor: "pointer" }}
             >
               <a>User Features</a>
             </li>
@@ -1816,6 +2093,7 @@ const Page = () => {
               id="features2_li"
               className={`${organizerTab ? "active" : ""}`}
               onClick={() => handleOrganizerTab()}
+              style={{ cursor: "pointer" }}
             >
               <a>Organizer Features</a>
             </li>
@@ -1823,6 +2101,7 @@ const Page = () => {
               id="features3_li"
               className={`${adminTab ? "active" : ""}`}
               onClick={() => handleAdminTab()}
+              style={{ cursor: "pointer" }}
             >
               <a>Admin Panel</a>
             </li>
@@ -1835,7 +2114,8 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/inventory-management/admin-dashboard.jpg"
                           alt="admin-dashboard"
                           width={1075}
@@ -1848,7 +2128,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/inventory-management/supplier.jpg"
                           alt="Supplier"
                           width={1075}
@@ -1861,7 +2142,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/inventory-management/customer.jpg"
                           alt="customer"
                           width={1075}
@@ -1874,7 +2156,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/inventory-management/category-list.jpg"
                           alt="category-list"
                           width={1075}
@@ -1887,7 +2170,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/inventory-management/products-management.jpg"
                           alt="Products Management"
                           width={1075}
@@ -1900,7 +2184,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/membership_plan_job_portal_script.png"
                           alt="Membership Plan"
                           width={1075}
@@ -1921,6 +2206,201 @@ const Page = () => {
               </>
             )}
           </div>
+          {organizerTab && (
+            <>
+              <div id="joblboardslide">
+                <Slider {...settings}>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/admin-dashboard.jpg"
+                        alt="admin-dashboard"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Admin Dashboard</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/supplier.jpg"
+                        alt="Supplier"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Supplier</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/customer.jpg"
+                        alt="customer"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Customer</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/category-list.jpg"
+                        alt="category-list"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Category List</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/products-management.jpg"
+                        alt="Products Management"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Products Management</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/jobboard/membership_plan_job_portal_script.png"
+                        alt="Membership Plan"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Membership Plan</div>
+                      <div className="pro-feat-detai">
+                        Employers buy membership plan which suits their
+                        requirement best.They can renew or update your
+                        membership plan at any time.
+                      </div>
+                    </div>
+                  </div>
+                </Slider>
+              </div>
+            </>
+          )}
+          {/* </div> */}
+          {adminTab && (
+            <>
+              <div id="joblboardslide">
+                <Slider {...settings}>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/admin-dashboard.jpg"
+                        alt="admin-dashboard"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Admin Dashboard</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/supplier.jpg"
+                        alt="Supplier"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Supplier</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/customer.jpg"
+                        alt="customer"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Customer</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/category-list.jpg"
+                        alt="category-list"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Category List</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/inventory-management/products-management.jpg"
+                        alt="Products Management"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Products Management</div>
+                    </div>
+                  </div>
+                  <div className="SliderMainBx">
+                    <div className="feat-slide-img">
+                      <Image
+                        unoptimized={true}
+                        src="/img/jobboard/membership_plan_job_portal_script.png"
+                        alt="Membership Plan"
+                        width={1075}
+                        height={100}
+                      />
+                    </div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Membership Plan</div>
+                      <div className="pro-feat-detai">
+                        Employers buy membership plan which suits their
+                        requirement best.They can renew or update your
+                        membership plan at any time.
+                      </div>
+                    </div>
+                  </div>
+                </Slider>
+              </div>
+            </>
+          )}
           {/* </div> */}
         </div>
       </section>
@@ -1969,7 +2449,8 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>eBay Clone</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/jobboard/ecart_new.png"
                             alt="eBay Clone Script Logo"
                             className=""
@@ -1983,6 +2464,13 @@ const Page = () => {
                             designed.
                           </span>
                         </p>
+                        <div class="other-socila-pr-icon">
+                          <i class="fa fa-globe" aria-hidden="true"></i>
+                          {/* <i class="fa fa-android" aria-hidden="true"></i> */}
+                          <i class="fa-brands fa-android"></i>
+                          {/* <i class="fa fa-apple" aria-hidden="true"></i> */}
+                          <i class="fa-brands fa-apple"></i>
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -1993,14 +2481,15 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/softwares/appointment-scheduling-software'"
+                    href="/softwares/appointment-scheduling-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Appointment Booking System</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/jobboard/abs_logo_new.png"
                             alt="Fiverr Clone Script Logo"
                             className=""
@@ -2014,6 +2503,10 @@ const Page = () => {
                             enables owners to manage.
                           </span>
                         </p>
+                        <div class="other-socila-pr-icon">
+                          <i class="fa fa-globe" aria-hidden="true"></i>
+                       
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -2031,7 +2524,8 @@ const Page = () => {
                         <h3>News Management System</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/jobboard/news_logo_new.png"
                             alt="news-management-system"
                             className=""
@@ -2045,6 +2539,10 @@ const Page = () => {
                             flow of information.
                           </span>{" "}
                         </p>
+                        <div class="other-socila-pr-icon">
+                          <i class="fa fa-globe" aria-hidden="true"></i>
+                         
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -2060,7 +2558,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}

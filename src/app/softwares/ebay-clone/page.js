@@ -14,6 +14,12 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -59,8 +65,8 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
   const [activeTab, setActiveTab] = useState("tab2");
-  const [sellerTab, setSellerTab] = useState(true);
-  const [buyerTab, setBuyerTab] = useState(false);
+  const [sellerTab, setSellerTab] = useState(false);
+  const [buyerTab, setBuyerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
 
   const handleSellerTab = () => {
@@ -82,6 +88,89 @@ const Page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
   return (
     <>
       <NavBar />
@@ -96,7 +185,11 @@ const Page = () => {
               <div className="job-valu">
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
+                  <div
+                    className=" btn-get"
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
+                  >
                     <button>Get Demo Access!</button>
                     {
                       <Enquirymodal
@@ -110,7 +203,8 @@ const Page = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                       width={100}
@@ -133,7 +227,8 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   alt="Ebay Clone"
                   src="/img/softwares-banner-img/ebaybanner-img.png"
                   width={450}
@@ -256,7 +351,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`food_app_job ddlj ${sellerTab ? "active" : ""}`}
@@ -289,7 +384,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/ebay/ebay_User_website.jpg"
                             alt="Customer Panel"
                             width={400}
@@ -302,7 +398,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                   width={100}
@@ -322,7 +419,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_restaurants.png"
                                   width={100}
@@ -343,7 +441,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                   width={100}
@@ -363,7 +462,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_customers.png"
                                   width={100}
@@ -383,7 +483,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_cuisines.png"
                                   width={100}
@@ -403,7 +504,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_1.png"
                                   width={100}
@@ -423,7 +525,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_1.png"
                                   width={100}
@@ -443,7 +546,8 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_3.png"
                                   width={100}
@@ -463,7 +567,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_5.png"
                                   width={100}
@@ -484,7 +589,8 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
                                   width={100}
@@ -505,7 +611,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_10.png"
                                   width={100}
@@ -525,7 +632,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
                                   width={100}
@@ -557,7 +665,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/ebay/ebay_User.png"
                             alt="Store Vendors Panel"
                             width={400}
@@ -570,7 +679,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   width={100}
@@ -591,7 +701,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/received-orders.png"
                                   width={100}
@@ -610,7 +721,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-Charges.png"
                                   width={100}
@@ -629,7 +741,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/kitchen-staff.png"
                                   width={100}
@@ -649,7 +762,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-person.png"
                                   width={100}
@@ -669,7 +783,8 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/order-status.png"
                                   width={100}
@@ -690,7 +805,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
                                   width={100}
@@ -710,7 +826,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_6.png"
                                   width={100}
@@ -731,7 +848,8 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_3.png"
                                   width={100}
@@ -751,7 +869,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
                                   width={100}
@@ -772,7 +891,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_7.png"
                                   width={100}
@@ -791,7 +911,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_6.png"
                                   width={100}
@@ -810,7 +931,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_11.png"
                                   width={100}
@@ -830,7 +952,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_10.png"
                                   width={100}
@@ -850,7 +973,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_5.png"
                                   width={100}
@@ -881,7 +1005,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/ebay/ebay_admin.png"
                             alt="Admin Panel"
                             width={400}
@@ -894,7 +1019,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
                                   width={100}
@@ -913,7 +1039,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/search_restaurant.png"
                                   width={100}
@@ -933,7 +1060,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/filter_restaurant.png"
                                   width={100}
@@ -953,7 +1081,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_restaurant_dtl.png"
                                   width={100}
@@ -973,7 +1102,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   width={100}
@@ -994,7 +1124,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   width={100}
@@ -1014,7 +1145,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_1.png"
                                   width={100}
@@ -1034,7 +1166,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_2.png"
                                   width={100}
@@ -1054,7 +1187,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_3.png"
                                   width={100}
@@ -1075,7 +1209,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_4.png"
                                   width={100}
@@ -1097,7 +1232,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_6.png"
                                   width={100}
@@ -1119,7 +1255,8 @@ const Page = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_5.png"
                                   width={100}
@@ -1140,7 +1277,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_7.png"
                                   width={100}
@@ -1162,7 +1300,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_9.png"
                                   width={100}
@@ -1183,7 +1322,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/eBay_8.png"
                                   width={100}
@@ -1340,7 +1480,8 @@ const Page = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1366,10 +1507,11 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1377,10 +1519,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
-                        width={40}
+                        width={50}
                         height={100}
                       />
                     </div>
@@ -1388,10 +1531,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1399,10 +1543,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1446,10 +1591,11 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
-                    width={50}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1457,10 +1603,11 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
-                    width={50}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1468,10 +1615,11 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
-                    width={50}
+                    width={60}
                     height={100}
                   />
                 </div>
@@ -1479,7 +1627,8 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     width={40}
@@ -1622,7 +1771,8 @@ const Page = () => {
                       </span>
                       <span id="client-name">Jack caron, UK</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/uk_flag_img.png"
                           alt="mobile app development in UK"
                           width={20}
@@ -1648,7 +1798,8 @@ const Page = () => {
                       </span>
                       W. Desuza, USA{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           width={20}
@@ -1676,7 +1827,8 @@ const Page = () => {
                       </span>
                       Marian Keli, Belgium{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/belgium_flag_img.png"
                           alt="mobile app development in Belgium"
                           width={20}
@@ -1691,7 +1843,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="What is the limit to add vendors from admin panel ?"
                     collapseId="flush-collapse1"
@@ -1808,7 +1960,243 @@ const Page = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography>
+                      What is the limit to add vendors from admin panel?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      There is no limit as such. You can add multiple vendors
+                      from the same account. Also, the admin can remove/delete
+                      or deactivate the vendor account if it is not in use.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2-content"
+                    id="panel2-header"
+                  >
+                    <Typography>
+                      Does customer have to create an account before ordering a
+                      product?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, for ordering any product, the customer will have to
+                      create an account first, then continue with the ordering
+                      process.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3-content"
+                    id="panel3-header"
+                  >
+                    <Typography>
+                      Can I get customization into an existing project? How long
+                      would it take to do that?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you can get customization done here and generally
+                      time depends on the amount of work to be done.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4-content"
+                    id="panel4-header"
+                  >
+                    <Typography>
+                      How long is the technical support provided by Logicspice?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We desire to keep long-term relationships with our
+                      clients, so we are always ready to provide technical
+                      support 24/7 and as long as required.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5-content"
+                    id="panel5-header"
+                  >
+                    <Typography>
+                      Are there any hidden charges or installation charges?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, we don’t have any hidden charges and after buying a
+                      product, installation will be done from our end, which
+                      will be free.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6-content"
+                    id="panel6-header"
+                  >
+                    <Typography>
+                      Do I have the rights to resell the script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you don’t have the right to resell the script. All
+                      rights will remain with Logicspice only. You can sell the
+                      vendor panel on a subscription basis.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel7-content"
+                    id="panel7-header"
+                  >
+                    <Typography>
+                      Can I update some design and functionality in the
+                      application code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you will have access to all the code, except for some
+                      of the core encrypted files.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel8"}
+                  onChange={handleChange("panel8")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel8-content"
+                    id="panel8-header"
+                  >
+                    <Typography>
+                      Will I be able to use it on multiple domains after I
+                      purchase this script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You will be licensed to use it only for the domain you
+                      purchased for.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel9"}
+                  onChange={handleChange("panel9")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel9-content"
+                    id="panel9-header"
+                  >
+                    <Typography>
+                      Can I resell the script? Will I have rights over the
+                      script code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can’t resell the script. All rights will remain
+                      with Logicspice only.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel10"}
+                  onChange={handleChange("panel10")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel10-content"
+                    id="panel10-header"
+                  >
+                    <Typography>
+                      Do you offer a Money Back Guarantee?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we offer a 30-day money back guarantee to ensure
+                      customer satisfaction of our software. If for any reason,
+                      you wish to discontinue using the product, you can ask us
+                      for a refund. We will refund your total money except the
+                      installation and configuration charges, which is USD 65 or
+                      20% of the application cost, whichever is greater.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel11"}
+                  onChange={handleChange("panel11")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel11-content"
+                    id="panel11-header"
+                  >
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We recommend you purchase an SSL certificate along with a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all websites these days and it provides a
+                      secure layer to the website as well.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -1821,7 +2209,8 @@ const Page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/ebay/ebay01.jpg"
                     alt="Add Menu For Restaurants"
                     width={1075}
@@ -1832,7 +2221,8 @@ const Page = () => {
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/ebay/ebay02.jpg"
                     alt="List/Filter/Sort Restaurants"
                     width={1075}
@@ -1843,7 +2233,8 @@ const Page = () => {
 
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/ebay/ebay03.jpg"
                     alt="Menu Management For Restaurant"
                     width={1075}
@@ -1853,7 +2244,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/ebay/ebay04.jpg"
                     alt="View Received Orders"
                     width={1075}
@@ -1863,7 +2255,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/ebay/ebay05.jpg"
                     alt="View Restaurant Detail"
                     width={1075}
@@ -1893,14 +2286,15 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}

@@ -17,6 +17,12 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -88,6 +94,91 @@ const Page = () => {
     setAdminTab(true);
   };
 
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
@@ -113,7 +204,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
@@ -150,7 +242,8 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -200,10 +293,11 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
-                  width={226}
+                <Image
+                  unoptimized={true}
+                  width={330}
                   height={100 / (100 / 100)}
-                  src="/img/freelancerclone/lsfreelancer-mobile.png"
+                  src="/img/freelancerclone/lsfreelancer-banner-img.png"
                   alt="Freelancer_clone"
                 />
               </div>
@@ -312,7 +406,7 @@ See how it work yourself!"
           </div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -347,7 +441,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/freelancerclone/freelancer_employee.png"
@@ -360,7 +455,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -380,7 +476,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -400,7 +497,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -420,7 +518,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -440,7 +539,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -461,7 +561,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -481,7 +582,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -501,7 +603,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -520,7 +623,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -540,7 +644,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -559,7 +664,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -578,7 +684,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -609,7 +716,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/freelancerclone/freelancer_login.png"
@@ -622,7 +730,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -643,7 +752,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -664,7 +774,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -684,7 +795,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -704,7 +816,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -724,7 +837,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -748,7 +862,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -768,7 +883,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -787,7 +903,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -807,7 +924,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -826,7 +944,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -846,7 +965,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -877,7 +997,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/freelancerclone/freelancer_admin.png"
@@ -890,7 +1011,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -906,7 +1028,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -926,7 +1049,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -946,7 +1070,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -966,7 +1091,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -986,7 +1112,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1008,7 +1135,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1028,7 +1156,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1049,7 +1178,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1070,7 +1200,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1091,7 +1222,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1112,7 +1244,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1294,6 +1427,17 @@ See how it work yourself!"
                 >
                   Get Demo Access!
                 </a> */}
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Get Demo Access!</button>
+                  {
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of Groupon Clone Script.
+See how it work yourself!"
+                    />
+                  }
+                </div>
                 <Link
                   className="btn fiverr-buys"
                   href="/buy-now/freelancer-clone"
@@ -1320,7 +1464,8 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1411,7 +1556,8 @@ See how it work yourself!"
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={20}
                     height={100}
                     src="/img/images/why-logic-icon.png"
@@ -1432,7 +1578,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-bx1">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/coding.png"
@@ -1453,7 +1600,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-bx2">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/data-complexity.png"
@@ -1475,7 +1623,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-bx3">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/coordinate.png"
@@ -1500,7 +1649,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-bx4">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/customize.png"
@@ -1520,7 +1670,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-bx5">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/smartphone-icon.png"
@@ -1540,7 +1691,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-bx6">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/data.png"
@@ -1562,7 +1714,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/web-icon.png"
@@ -1586,7 +1739,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/encrypted.png"
@@ -1609,7 +1763,8 @@ See how it work yourself!"
                     <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/history-icon.png"
@@ -1634,7 +1789,8 @@ See how it work yourself!"
                     <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/seouser-friendly.png"
@@ -1654,7 +1810,8 @@ See how it work yourself!"
                     <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/one-stop-solution.png"
@@ -1674,7 +1831,8 @@ See how it work yourself!"
                     <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/third-party-api.png"
@@ -1694,7 +1852,8 @@ See how it work yourself!"
                     <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                       <div className="caption">
                         <div className="best-partner-img-bx">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/jobboard/cost-effective.png"
@@ -1729,7 +1888,8 @@ See how it work yourself!"
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={900}
               height={100}
               src="/img/freelancerclone/online-freelancer.png"
@@ -1776,7 +1936,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/freelancerclone/gigaminute.jpg"
@@ -1801,7 +1962,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/freelancerclone/iworks.jpg"
@@ -1826,7 +1988,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/freelancerclone/ujuzitu.jpg"
@@ -1851,7 +2014,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/freelancerclone/xirfad.jpg"
@@ -1876,7 +2040,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/freelancerclone/shineywise.jpg"
@@ -1901,7 +2066,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/freelancerclone/community.jpg"
@@ -1935,8 +2101,9 @@ See how it work yourself!"
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
                         alt="ReactJS Development"
@@ -1946,8 +2113,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={60}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
@@ -1957,8 +2125,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1968,8 +2137,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1979,8 +2149,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1990,8 +2161,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
@@ -2002,8 +2174,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
@@ -2050,8 +2223,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -2061,8 +2235,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -2072,8 +2247,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -2083,8 +2259,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -2234,7 +2411,8 @@ See how it work yourself!"
                       </span>
                       John, USA{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={20}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
@@ -2268,7 +2446,8 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={20}
                           height={100}
                           src="/img/jobboard/german.png"
@@ -2301,7 +2480,8 @@ See how it work yourself!"
                       </span>
                       mike wilshon, AUS{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={20}
                           height={100}
                           src="/img/jobboard/australia_flag_img.png"
@@ -2316,7 +2496,7 @@ See how it work yourself!"
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Can the Employer give rating to a Worker even if they havent completed the project?"
                     collapseId="flush-collapse1"
@@ -2432,7 +2612,245 @@ See how it work yourself!"
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      Can the Employer give a rating to a Worker even if they
+                      haven't completed the project?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No. The Employer and Worker can rate each other only when
+                      they have completed the project.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>
+                      Can the Employer contact a Worker if they are interested
+                      in taking their services?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes. The Employer can send messages to the Worker, but not
+                      before the Worker has posted a bid on the project that is
+                      uploaded by the Employer.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      How many days will it take to implement the customization?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      The time taken to implement your Freelancer Custom
+                      development depends on the level of customization and data
+                      migration. The time frame generally ranges from 5-6 weeks.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      How can a Worker get hired for a project by the Employer?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      The Worker can post a bid along with a proposal on a
+                      project of their skills. The Employer can review the bid
+                      and award the project to the Worker whose proposal they
+                      prefer.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can an Employer upload more than one project on the
+                      website?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, an Employer can upload multiple projects on the
+                      website.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      What information is the Worker required to send while
+                      posting a bid on a project?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      The Worker is required to enter the estimated budget, time
+                      frame, and a description of their understanding of the
+                      project while posting a bid.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel7d-content"
+                    id="panel7d-header"
+                  >
+                    <Typography>
+                      Can I update some design and functionality in the
+                      application code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you will have access to all the code, except some of
+                      the core encrypted files.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel8"}
+                  onChange={handleChange("panel8")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel8d-content"
+                    id="panel8d-header"
+                  >
+                    <Typography>
+                      Will I be able to use it on multiple domains after I
+                      purchase this script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You will be licensed to use it only for the domain you
+                      purchased it for.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel9"}
+                  onChange={handleChange("panel9")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel9d-content"
+                    id="panel9d-header"
+                  >
+                    <Typography>
+                      Can I resell the script? Will I have rights over the
+                      script code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can't resell the script. All rights will remain
+                      with Logicspice only.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel10"}
+                  onChange={handleChange("panel10")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel10d-content"
+                    id="panel10d-header"
+                  >
+                    <Typography>
+                      Do you offer a Money Back Guarantee?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we offer a 30-day money-back guarantee to ensure
+                      customer satisfaction with our software. If for any reason
+                      you wish to discontinue using the product, you can request
+                      a refund. We will refund your total money except for the
+                      installation and configuration charges, which are USD 65
+                      or 20% of the application cost, whichever is greater.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel11"}
+                  onChange={handleChange("panel11")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel11d-content"
+                    id="panel11d-header"
+                  >
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We recommend you purchase an SSL certificate along with a
+                      hosting server, as an SSL certificate is necessary for all
+                      websites these days and provides a secure layer to the
+                      website.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -2445,7 +2863,8 @@ See how it work yourself!"
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/freelancerclone/freelancer_profile.png"
@@ -2462,7 +2881,8 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/freelancerclone/find_freelancer .png"
@@ -2479,7 +2899,8 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/freelancerclone/bid_over_projects.png"
@@ -2496,7 +2917,8 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/freelancerclone/project_listing.png"
@@ -2512,7 +2934,8 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/freelancerclone/project_details.png"
@@ -2556,7 +2979,7 @@ See how it work yourself!"
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/fiverr-clone"
@@ -2566,8 +2989,9 @@ See how it work yourself!"
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
+                          <Image
+                            unoptimized={true}
+                            width={150}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
@@ -2579,13 +3003,13 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/logistic-marketplace-software"
@@ -2595,7 +3019,8 @@ See how it work yourself!"
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/logictic_logo_new.png"
@@ -2608,12 +3033,12 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/job-board-software"
@@ -2623,7 +3048,8 @@ See how it work yourself!"
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
@@ -2636,7 +3062,7 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -2649,7 +3075,8 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={50}
               height={50}
               src="/img/images/whatsapp.png"

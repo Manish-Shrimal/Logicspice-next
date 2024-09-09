@@ -10,16 +10,24 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
   const toggleModal = () => {
     setModalOpen(!modalOpen);
+  };
+
+  const openModal = () => {
+    
+
+    setShowModal(!showModal);
   };
 
   return (
@@ -309,16 +317,24 @@ const Page = () => {
                       <Link
                         className="page-scroll btn btn-default"
                         href="javascript:void(0);"
+                        onClick={openModal}
                       >
                         <span>
                           <Image
-                            width={100}
+                            width={40}
                             height={100}
                             src="/img/leadgeneration/enquiry_btn_bg.png"
                             alt="enquiry"
                           />
                         </span>{" "}
                         Enquire Now
+                        {
+                          <Enquirymodal
+                            modalStatus={showModal}
+                            toggle={openModal}
+                            title="Wordpress Twitter Login Plugin"
+                          />
+                        }
                       </Link>
                     </li>
                   </ul>
@@ -356,7 +372,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/apple_phn_icon.png"
                     alt="iOS"
@@ -367,7 +383,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/tech_java_icon.png"
                     alt="Java"
@@ -378,7 +394,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/andoird_icon.png"
                     alt="Android"
@@ -389,7 +405,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
@@ -400,7 +416,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
@@ -411,7 +427,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/bootstrap.png"
                     alt="manager_icn"
@@ -422,7 +438,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
@@ -433,7 +449,7 @@ const Page = () => {
               <li>
                 <div className="icntechimg">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
@@ -455,7 +471,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -466,7 +482,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image
-                    width={100}
+                    width={40}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"

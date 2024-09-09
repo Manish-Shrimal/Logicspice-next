@@ -32,6 +32,7 @@ h5,
 h6 {
   font-family: "lato", sans-serif;
   color: #505458;
+  font-weight: 500 !important;
 }
 
 a {
@@ -1684,8 +1685,11 @@ bread-top {
   z-index: 999;
 }
 
-.header.home-header.affix {
+.header.home-header {
   position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid #eee;
+  z-index: 999;
 }
 
 .nav>li.hide-main {
@@ -1740,9 +1744,11 @@ bread-top {
 .header.home-header {
   /* left:0;position:absolute;top:0; */
   width: 100%;
-  z-index: 999;
+ 
   box-shadow: none;
-  background: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid #eee;
+  z-index: 999;
 }
 
 /* .header.home-header {
@@ -2465,7 +2471,7 @@ positivitymain {
 }
 
 .headings {
-  padding-bottom: 25px;
+  padding-bottom: 40px!important;
   text-align: center;
 }
 
@@ -2612,7 +2618,7 @@ positivitymain {
 
 /* Hire section Css  */
 .headings {
-  padding-bottom: 25px;
+  padding-bottom: 40px !important;
   text-align: center;
 }
 
@@ -2647,7 +2653,7 @@ positivitymain {
   padding: 0 15px;
   text-align: center;
   width: 25%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .hiring-list strong {
@@ -2838,7 +2844,7 @@ positivitymain {
 .HomeSlider {
   display: inline-block;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 140px;
   float: left;
   direction: rtl;
   height: 420px;
@@ -3521,7 +3527,7 @@ positivitymain {
   position: absolute;
   text-align: center;
   top: 0;
-  width: 90%;
+  width: 87%;
   opacity: 0;
   transition: all 0.3s ease-in 0s;
 }
@@ -7084,3 +7090,63 @@ button.close {
 .slick-dots li button:before {
   font-size: 10px !important;
 }
+
+.form-group-google {
+  float: left!important;
+  width: 48%!important;
+}
+
+
+.free_sc1 {
+  background: url(/img/header/free.png) no-repeat scroll center center;
+  font-size: 0;
+  width: 42px;
+  height: 37px;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: top;
+  margin-top: 0;
+}
+
+.nws_sc1 {
+  background: url(/img/header/new.png) no-repeat scroll center center;
+  font-size: 0;
+  width: 42px;
+  height: 37px;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: top;
+  margin-top: 0;
+}
+
+.review_model .modal-header{
+  background-color: #451095!important;
+  padding: 15px!important;
+  border-bottom: 1px solid #e5e5e5!important;
+  color: #fff!important;
+}
+
+.review_model .modal-title{
+  color: #fff!important;
+}
+
+.review_model .input-group .input-group-text{
+  min-height: 40px!important;
+}
+.review_model .form-control{
+  height: 40px!important;
+}
+
+.review_model .textarea .form-control {
+  min-width: 100%!important;
+  max-width: 100%!important;
+  height: auto!important;
+}
+
+
+.take-a-look .swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 30px!important;
+  color: #3c3c3c!important;
+}
+
+.process_sect ul li:hover .icon_process img{filter: grayscale(0%);}

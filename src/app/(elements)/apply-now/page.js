@@ -38,7 +38,7 @@
 //                 <li>
 //                   <a href="/">Home</a>
 //                 </li>
-                
+
 //                 <li>We Are Hiring</li>
 //               </ol>
 //             </div>
@@ -46,9 +46,9 @@
 //         </div>
 //       </section>
 //       <section className="content_area SubmitResume ">
-      
+
 //         <div className="container">
-       
+
 //           <div className="ersu_message suuu_msg" id="suc_msg">
 //             {" "}
 //           </div>
@@ -235,49 +235,81 @@
 
 // export default Page;
 
-
-
-
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import "../elements.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.css";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const resumeFile = useRef(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     contact: "",
-    cityState: "",
-    currentCtc: "",
-    expectedCtc: "",
-    noticeDays: "",
-    applyFor: "",
-    resume: null,
+    city_state: "",
+    apply_for: "",
+    resume: "",
+    current_ctc: "",
+    expected_ctc: "",
+    notice_days: "",
   });
-
-  const [errors, setErrors] = useState({});
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: files ? files[0] : value,
+      [name]: value,
     });
     setErrors({ ...errors, [name]: "" }); // Clear errors when user starts typing
   };
 
-  const handleSubmit = (e) => {
+  const handleFileUpload = (event) => {
+    const uploadedFile = event.target.files[0];
+    resumeFile.current = uploadedFile;
+
+    if (uploadedFile) {
+      const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+
+      if (!allowedExtensions.exec(uploadedFile.name)) {
+        setErrors({
+          ...errors,
+          resume: "Invalid file type. Please upload a PDF, DOC, or DOCX file.",
+        });
+        return;
+      }
+
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      if (uploadedFile.size > maxSize) {
+        setErrors({
+          ...errors,
+          resume: "File size exceeds the 5MB limit.",
+        });
+        return;
+      }
+
+      // Clear previous errors
+      setErrors({ ...errors, resume: null });
+      setFormData({ ...formData, resume: uploadedFile });
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newErrors = {};
@@ -290,21 +322,51 @@ const Page = () => {
       newErrors.email = "Email address is invalid";
     }
     if (!formData.contact) newErrors.contact = "Contact Number is required";
-    if (!formData.cityState) newErrors.cityState = "City and State are required";
-    if (!formData.currentCtc) newErrors.currentCtc = "Current CTC is required";
-    if (!formData.expectedCtc) newErrors.expectedCtc = "Expected CTC is required";
-    if (!formData.noticeDays) newErrors.noticeDays = "Notice Days are required";
-    if (!formData.applyFor) newErrors.applyFor = "Job title is required";
-    if (!formData.resume) newErrors.resume = "Resume is required";
+    if (!formData.city_state)
+      newErrors.city_state = "City and State are required";
+    if (!formData.current_ctc)
+      newErrors.current_ctc = "Current CTC is required";
+    if (!formData.expected_ctc)
+      newErrors.expected_ctc = "Expected CTC is required";
+    if (!formData.notice_days)
+      newErrors.notice_days = "Notice Days are required";
+    if (!formData.apply_for) newErrors.apply_for = "Job title is required";
+    if (!resumeFile.current) newErrors.resume = "Resume is required";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
 
-    // If no errors, proceed with form submission
-    console.log(formData);
-    // Submit form data via fetch or axios
+    try {
+      const data = new FormData();
+      data.append("name", formData.name);
+      data.append("email", formData.email);
+      data.append("contact", formData.contact);
+      data.append("city_state", formData.city_state);
+      data.append("apply_for", formData.apply_for);
+      data.append("current_ctc", formData.current_ctc);
+      data.append("expected_ctc", formData.expected_ctc);
+      data.append("notice_days", formData.notice_days);
+      data.append("resume", resumeFile.current);
+
+      const response = await axios.post(BaseAPI + "/applynow", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      if (response.data.status === 200) {
+        Swal.fire({
+          icon: "success",
+          title: "Successfully Applied",
+          text: response.data.message,
+        });
+      }
+
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -345,12 +407,7 @@ const Page = () => {
               (See our current openings)
             </Link>
           </h3>
-          <form
-            onSubmit={handleSubmit}
-            encType="multipart/form-data"
-            name="applynow"
-            id="applynow"
-          >
+          <form onSubmit={handleSubmit}>
             <div className="form-group row">
               <div className="col-md-6">
                 <input
@@ -358,7 +415,9 @@ const Page = () => {
                   placeholder="Your Name*"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`required form-control ${errors.name ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.name ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobName"
                 />
@@ -372,7 +431,9 @@ const Page = () => {
                   placeholder="Email*"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`required form-control email ${errors.email ? "is-invalid" : ""}`}
+                  className={`required form-control email ${
+                    errors.email ? "is-invalid" : ""
+                  }`}
                   type="email"
                   id="AppliedjobEmail"
                 />
@@ -388,7 +449,9 @@ const Page = () => {
                   placeholder="Contact Number*"
                   value={formData.contact}
                   onChange={handleChange}
-                  className={`required form-control ${errors.contact ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.contact ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobContact"
                 />
@@ -398,76 +461,86 @@ const Page = () => {
               </div>
               <div className="col-md-6">
                 <input
-                  name="cityState"
+                  name="city_state"
                   placeholder="Current city &amp; state*"
-                  value={formData.cityState}
+                  value={formData.city_state}
                   onChange={handleChange}
-                  className={`required form-control ${errors.cityState ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.city_state ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobCityState"
                 />
-                {errors.cityState && (
-                  <div className="invalid-feedback">{errors.cityState}</div>
+                {errors.city_state && (
+                  <div className="invalid-feedback">{errors.city_state}</div>
                 )}
               </div>
             </div>
             <div className="form-group row">
               <div className="col-md-6">
                 <input
-                  name="currentCtc"
+                  name="current_ctc"
                   placeholder="Current CTC(LPA)*"
-                  value={formData.currentCtc}
+                  value={formData.current_ctc}
                   onChange={handleChange}
-                  className={`required form-control ${errors.currentCtc ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.current_ctc ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobCurrenctCtc"
                 />
-                {errors.currentCtc && (
-                  <div className="invalid-feedback">{errors.currentCtc}</div>
+                {errors.current_ctc && (
+                  <div className="invalid-feedback">{errors.current_ctc}</div>
                 )}
               </div>
               <div className="col-md-6">
                 <input
-                  name="expectedCtc"
+                  name="expected_ctc"
                   placeholder="Expected CTC(LPA)*"
-                  value={formData.expectedCtc}
+                  value={formData.expected_ctc}
                   onChange={handleChange}
-                  className={`required form-control ${errors.expectedCtc ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.expected_ctc ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobExpectedCtc"
                 />
-                {errors.expectedCtc && (
-                  <div className="invalid-feedback">{errors.expectedCtc}</div>
+                {errors.expected_ctc && (
+                  <div className="invalid-feedback">{errors.expected_ctc}</div>
                 )}
               </div>
             </div>
             <div className="form-group row">
               <div className="col-md-6">
                 <input
-                  name="noticeDays"
+                  name="notice_days"
                   placeholder="Notice Days*"
-                  value={formData.noticeDays}
+                  value={formData.notice_days}
                   onChange={handleChange}
-                  className={`required form-control ${errors.noticeDays ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.notice_days ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobNoticeDays"
                 />
-                {errors.noticeDays && (
-                  <div className="invalid-feedback">{errors.noticeDays}</div>
+                {errors.notice_days && (
+                  <div className="invalid-feedback">{errors.notice_days}</div>
                 )}
               </div>
               <div className="col-md-6">
                 <input
-                  name="applyFor"
+                  name="apply_for"
                   placeholder="Apply For*"
-                  value={formData.applyFor}
+                  value={formData.apply_for}
                   onChange={handleChange}
-                  className={`required form-control ${errors.applyFor ? "is-invalid" : ""}`}
+                  className={`required form-control ${
+                    errors.apply_for ? "is-invalid" : ""
+                  }`}
                   type="text"
                   id="AppliedjobApplyFor"
                 />
-                {errors.applyFor && (
-                  <div className="invalid-feedback">{errors.applyFor}</div>
+                {errors.apply_for && (
+                  <div className="invalid-feedback">{errors.apply_for}</div>
                 )}
               </div>
             </div>
@@ -477,7 +550,7 @@ const Page = () => {
                 <input
                   type="file"
                   name="resume"
-                  onChange={handleChange}
+                  onChange={handleFileUpload}
                   className={`required ${errors.resume ? "is-invalid" : ""}`}
                   id="AppliedjobResume"
                 />
@@ -528,4 +601,3 @@ const Page = () => {
 };
 
 export default Page;
-

@@ -28,6 +28,7 @@ const Looksilder = () => {
       classname: "",
       originalImage: "/img/home/look/iwork-logo.webp",
       alt: "iwork",
+      
       text: "iWorks supports Multilingual and Social Media Sign in and Sign Up Features.",
       link: "/case-studies/iworks",
     },
@@ -51,6 +52,7 @@ const Looksilder = () => {
       notMobileImage: "/img/home/look/We-do.webp",
       classname: "beano",
       originalImage: "/img/home/look/logo-we-do.webp",
+      width: "250px!important",
       alt: "We do it Cheaper",
       text: "We Do it Cheaper supports Buyer and Freelancer management.",
       link: "/case-studies/we-do-it-cheaper",
@@ -83,47 +85,7 @@ const Looksilder = () => {
 
   return (
     <>
-      {/* <Slider {...settings}>
-        
      
-        {takeAlookData.map((lookData, index) => (
-        <div key={index} className="row d-flex">
-          <div className="col-md-7">
-            <Image
-              data-aos="fade-right"
-              src={lookData.notMobileImage}
-              className={lookData.classname}
-              alt={lookData.alt}
-              width={500} // Adjust width and height according to your design
-              height={300}
-            />
-          </div>
-          <div className="col-md-5">
-            <Image
-              src={lookData.originalImage}
-              alt={lookData.alt}
-              width={150}
-              height={50}
-            />
-            <p className="to_matf">{lookData.text}</p>
-            <a href={lookData.link} className="case-study">
-              Case Study
-            </a>
-            <p className="have_look">Have a look on similar Project </p>
-            <div className="multibutton">
-              <Link href="/company/portfolio" className="btn btn-primary">
-                Portfolio
-              </Link>
-              <Link href="/contact-us" className="btn btn-default">
-                Request a quote
-              </Link>
-            </div>
-          </div>
-        </div>
-      ))}
-       
-    
-      </Slider> */}
       <div id="">
         <Swiper
           slidesPerView={1}

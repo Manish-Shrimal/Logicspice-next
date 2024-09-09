@@ -18,6 +18,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -83,6 +89,50 @@ const Page = () => {
       console.log(error.message);
     }
   };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
 
   useEffect(() => {
     getData();
@@ -244,7 +294,7 @@ See how it work yourself!!"
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job tab_bbx_job_classified">
-              <ul className="">
+              <ul className="tab_listing">
                 <li
                   id="tab1_li"
                   className={`online_student ddlj ${sellerTab ? "active" : ""}`}
@@ -1140,20 +1190,20 @@ See how it work yourself!"
             <Image unoptimized={true}
               width={900}
               height={100}
-              src="/img/jobboard/Job_board_for_page.jpg"
+              src="/img/onlineexam/online_test.jpg"
               alt="icon"
               title=""
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
       </div>
       <section className="used_technology_section" id="technologies">
@@ -1168,8 +1218,8 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                        width={60}
+                        height={100 / (100 / 100)}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
                       />
@@ -1179,8 +1229,8 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                        width={60}
+                        height={100 / (100 / 100)}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                       />
@@ -1190,8 +1240,8 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                        width={60}
+                        height={100 / (100 / 100)}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -1201,8 +1251,8 @@ See how it work yourself!"
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                        width={60}
+                        height={100 / (100 / 100)}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -1248,8 +1298,8 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                   width={60}
+                   height={100 / (100 / 100)}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1259,8 +1309,8 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                    width={60}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1270,8 +1320,8 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                  width={60}
+                  height={100 / (100 / 100)}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                   />
@@ -1281,8 +1331,8 @@ See how it work yourself!"
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                   width={60}
+                   height={100 / (100 / 100)}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1519,9 +1569,10 @@ See how it work yourself!"
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ&apos;s</h4>
+              <h4 className="title_main">Quick FAQ
+              </h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="How candidate can search for online exams ?"
                     collapseId="flush-collapse1"
@@ -1648,7 +1699,227 @@ See how it work yourself!"
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography>How can a candidate search for online exams?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Candidates can view a list of all exams on their Dashboard.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+      >
+        <AccordionSummary
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Typography>Will admin be able to add test papers?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Admin can manage (add/edit/delete) test papers along with other details.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary
+          aria-controls="panel3-content"
+          id="panel3-header"
+        >
+          <Typography>What will be the pattern of the Online Test?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Candidates will take the online test in the Multiple Choice Question (MCQ) pattern.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel4'}
+        onChange={handleChange('panel4')}
+      >
+        <AccordionSummary
+          aria-controls="panel4-content"
+          id="panel4-header"
+        >
+          <Typography>Can candidates see the Test Result?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, they can see detailed exam results along with all the details.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel5'}
+        onChange={handleChange('panel5')}
+      >
+        <AccordionSummary
+          aria-controls="panel5-content"
+          id="panel5-header"
+        >
+          <Typography>Can candidates receive a Certificate after passing the Exam?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, candidates can download a Score Certificate Copy.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel6'}
+        onChange={handleChange('panel6')}
+      >
+        <AccordionSummary
+          aria-controls="panel6-content"
+          id="panel6-header"
+        >
+          <Typography>Can Candidates register using any social accounts?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, we have provided Sign Up/Login using Google and LinkedIn.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel7'}
+        onChange={handleChange('panel7')}
+      >
+        <AccordionSummary
+          aria-controls="panel7-content"
+          id="panel7-header"
+        >
+          <Typography>Can Candidates see correct Answers?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, candidates will be able to view the number of correct and wrong answers after submitting the test.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel8'}
+        onChange={handleChange('panel8')}
+      >
+        <AccordionSummary
+          aria-controls="panel8-content"
+          id="panel8-header"
+        >
+          <Typography>Can Candidates see their appeared tests?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, candidates can see all the exams they have appeared for under the Exam History section.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel9'}
+        onChange={handleChange('panel9')}
+      >
+        <AccordionSummary
+          aria-controls="panel9-content"
+          id="panel9-header"
+        >
+          <Typography>Can I update some design and functionality in the application code myself?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, you will have access to all the code, except some core encrypted files.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel10'}
+        onChange={handleChange('panel10')}
+      >
+        <AccordionSummary
+          aria-controls="panel10-content"
+          id="panel10-header"
+        >
+          <Typography>Will I be able to use it on multiple domains, after I purchase this script?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            You will be licensed to use it only for the domain you purchased it for.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel11'}
+        onChange={handleChange('panel11')}
+      >
+        <AccordionSummary
+          aria-controls="panel11-content"
+          id="panel11-header"
+        >
+          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No, you can&apos;t resell the script. All rights will remain with Logicspice only.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel12'}
+        onChange={handleChange('panel12')}
+      >
+        <AccordionSummary
+          aria-controls="panel12-content"
+          id="panel12-header"
+        >
+          <Typography>Do you offer a Money Back Guarantee?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, we offer a 30-day money-back guarantee to ensure customer satisfaction with our software. If for any reason, you wish to discontinue using the product, you can ask us for a refund. We will refund your total money except for the installation and configuration charges, which are USD 65 or 20% of the application cost, whichever is greater.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel13'}
+        onChange={handleChange('panel13')}
+      >
+        <AccordionSummary
+          aria-controls="panel13-content"
+          id="panel13-header"
+        >
+          <Typography>Along with hosting server details, what other recommendations?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days, providing a secure layer to the website.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
               </div>
             </div>
           </div>
@@ -1789,7 +2060,7 @@ See how it work yourself!"
 
                         <div className="other-project-logo">
                           <Image unoptimized={true}
-                            width={250}
+                            width={150}
                             height={100}
                             src="/img/jobboard/udemy_new.png"
                             alt="Udemy Clone"
@@ -1815,7 +2086,7 @@ See how it work yourself!"
 
                         <div className="other-project-logo">
                           <Image unoptimized={true}
-                            width={250}
+                            width={150}
                             height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"

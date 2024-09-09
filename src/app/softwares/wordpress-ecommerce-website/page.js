@@ -15,6 +15,13 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
@@ -75,6 +82,48 @@ const Page = () => {
     }
   };
 
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      // expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor:
+      theme.palette.mode === "dark"
+        ? "rgba(255, 255, 255, .05)"
+        : "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
   useEffect(() => {
     getData();
   }, []);
@@ -99,7 +148,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
@@ -136,7 +186,8 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -149,8 +200,9 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
-                  width={300}
+                <Image
+                  unoptimized={true}
+                  width={275}
                   height={100 / (100 / 100)}
                   alt="WordPress eCommerce Website"
                   src="/img/wordpress-ecommerce/wordpress-ecommerce-banner-img.png"
@@ -197,17 +249,16 @@ See how it work yourself!"
             <div className="col-md-12">
               <div className="service-market-ttd-new event-ttd-new">
                 <ul>
-                  <li>Post Unlimited Projects</li>
-                  <li>Social Media Sharing</li>
-                  <li>Multi-Currency</li>
-                  <li>Blog Management</li>
-                  <li>Inbuilt Message Feature</li>
-                  <li>White Labeled Script</li>
-                  <li>Gmail, Facebook Sign In</li>
-                  <li>Multi-Language(French, English)</li>
-                  <li>Direct Funding without Sign Up</li>
-                  <li>One time License Fee</li>
-                  <li>Responsive website (mobile friendly)</li>
+                  <li>Product Management</li>
+                  <li>Shopping Cart</li>
+                  <li>Payment Gateways</li>
+                  <li>Customizable Themes</li>
+                  <li>Order Management</li>
+                  <li>Mobile Responsiveness</li>
+                  <li>Search and Filtering</li>
+                  <li>Secure Checkout</li>
+                  <li>Shipping Options</li>
+                  <li>SEO Optimization</li>
                 </ul>
               </div>
             </div>
@@ -235,10 +286,10 @@ See how it work yourself!"
             engines and track your success with advanced analytics. Upgrade your
             online store with our customized WordPress eCommerce websites.
           </div>
-
+          <div class="tatxt_txt_job"></div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -271,7 +322,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100 / (100 / 100)}
                             src="/img/wordpress-ecommerce/worspress-ecommerce-customer.png"
@@ -284,7 +336,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -304,7 +357,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -324,7 +378,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -344,7 +399,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -364,7 +420,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -384,7 +441,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -405,7 +463,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -425,7 +484,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -445,7 +505,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -480,7 +541,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100 / (100 / 100)}
                             src="/img/wordpress-ecommerce/worspress-buyer-mobile.png"
@@ -493,7 +555,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -513,7 +576,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -533,7 +597,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -553,7 +618,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -574,7 +640,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -596,7 +663,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -617,7 +685,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -637,7 +706,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -668,7 +738,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100 / (100 / 100)}
                             src="/img/wordpress-ecommerce/worspress-ecommerce-website.png"
@@ -681,7 +752,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -701,7 +773,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -721,7 +794,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -741,7 +815,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -761,7 +836,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -782,7 +858,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -801,7 +878,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -821,7 +899,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -840,7 +919,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1052,7 +1132,8 @@ See how it work yourself!"
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1128,7 +1209,8 @@ See how it work yourself!"
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
@@ -1147,7 +1229,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/coding.png"
@@ -1168,7 +1251,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/data-complexity.png"
@@ -1190,7 +1274,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/coordinate.png"
@@ -1215,7 +1300,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/customize.png"
@@ -1235,7 +1321,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/smartphone-icon.png"
@@ -1255,7 +1342,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/data.png"
@@ -1277,7 +1365,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/web-icon.png"
@@ -1301,7 +1390,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/encrypted.png"
@@ -1322,7 +1412,8 @@ See how it work yourself!"
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/history-icon.png"
@@ -1345,7 +1436,8 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/seouser-friendly.png"
@@ -1365,7 +1457,8 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/one-stop-solution.png"
@@ -1385,7 +1478,8 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/third-party-api.png"
@@ -1405,7 +1499,8 @@ See how it work yourself!"
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/cost-effective.png"
@@ -1428,7 +1523,7 @@ See how it work yourself!"
       <section className="used_technology_section" id="technologies">
         <div className="container">
           <h4 className="title_main">
-            <span>Used Technologies</span> and Server Requirements
+            <span>Utilized Technologies</span> and Server Requirements
           </h4>
           <div className="used_technology_section_dataa">
             <div className="row">
@@ -1436,8 +1531,9 @@ See how it work yourself!"
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={60}
                         height={100}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
@@ -1447,8 +1543,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={50}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1458,8 +1555,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1469,8 +1567,9 @@ See how it work yourself!"
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                        width={40}
+                      <Image
+                        unoptimized={true}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1517,8 +1616,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1528,8 +1628,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1539,8 +1640,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1550,8 +1652,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1568,7 +1671,8 @@ See how it work yourself!"
           <div className="row">
             <div className="col-xs-12 col-md-3 col-lg-3 CustomerReviewsImgMobile">
               <div className="CustomerReviewsImg">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={100 / (100 / 100)}
                   alt="customer-reviews"
@@ -1598,7 +1702,8 @@ See how it work yourself!"
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           alt="customer-reviews"
@@ -1608,7 +1713,8 @@ See how it work yourself!"
                       <span>
                         Emily, Canada
                         <i className="contry-flag">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             alt="customer-reviews"
@@ -1634,7 +1740,8 @@ See how it work yourself!"
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           alt="customer-reviews"
@@ -1644,7 +1751,8 @@ See how it work yourself!"
                       <span>
                         James, USA
                         <i className="contry-flag">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             alt="customer-reviews"
@@ -1670,7 +1778,8 @@ See how it work yourself!"
                     </div>
                     <div className="CustomerReviewsClient">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           alt="customer-reviews"
@@ -1680,7 +1789,8 @@ See how it work yourself!"
                       <span>
                         Sophie, UK
                         <i className="contry-flag">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             alt="customer-reviews"
@@ -1805,95 +1915,410 @@ See how it work yourself!"
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               <div className="panel-group faq_quick_sec" id="accordion">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
-                    headerTitle="Can we change the fees we charge as website owner?"
+                    headerTitle="What is an eCommerce website?"
                     collapseId="flush-collapse1"
                   >
                     <p>
-                      Yes, From the website admin panel, you can manage the
-                      charges, fees or commission.
+                      An eCommerce website is an online platform where
+                      businesses can sell products or services to customers over
+                      the internet. It typically includes features such as
+                      product listings, shopping carts, and secure payment
+                      processing.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Why should I buy this script ?"
+                    headerTitle="What is WordPress?"
                     collapseId="flush-collapse2"
                   >
                     <p>
-                      You get following benefits of using LS Crowd Funding
-                      Script -<br />
-                      1. Easy to use, User friendly Script with all the major
-                      features to the latest market trend.
-                      <br />
-                      2. Cost Effective
-                      <br />
-                      3. Support Unlimited Users
-                      <br />
-                      4. Easily scalable and Customizable solution
-                      <br />
-                      5. Target Social network to spread awareness to your
-                      created project.
-                      <br />
+                      WordPress is a popular content management system (CMS)
+                      that allows users to create and manage websites. It is
+                      known for its ease of use, flexibility, and wide range of
+                      available plugins and themes.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Can I update some design and functionality in application code myself?"
+                    headerTitle="What is WooCommerce?"
                     collapseId="flush-collapse4"
                   >
                     <p>
-                      Yes, You will have access of the all the code, except some
-                      of the core encrypted files.
+                      WooCommerce is a plugin for WordPress that adds eCommerce
+                      functionality to a website. It allows users to create an
+                      online store, add products, manage inventory, and process
+                      payments.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle=" Will I be able to use it on multiple domains, after I purchase this script?"
+                    headerTitle="What are the benefits of using WordPress for eCommerce?"
                     collapseId="flush-collapse5"
                   >
                     <p>
-                      You will be licensed to use it only for the domain, you
-                      purchased for.
+                      Some benefits of using WordPress for eCommerce include its
+                      ease of use, flexibility, and scalability. WordPress also
+                      offers a wide range of plugins and themes that can help
+                      you customize your online store and enhance its
+                      functionality. The 3rd party plugins can be customized to
+                      some extent, as the service is provided by the 3rd party,
+                      also if you want the upgraded features,we can purchase the
+                      paid subscriptions from the 3rd party plugin owners.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle=" Can I resell the script? Will I have rights over the script code?"
+                    headerTitle="Can I use WordPress for a large eCommerce website?"
                     collapseId="flush-collapse6"
                   >
                     <p>
-                      No, You can’t resell the script. All rights will remain
-                      with Logicspice only.
+                      Yes, WordPress can be used for large eCommerce websites.
+                      However, you may need to optimize your website for
+                      performance and scalability, and consider using dedicated
+                      hosting to handle high levels of traffic.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Do you offer Money Back Guarantee?"
+                    headerTitle="Is WordPress secure for eCommerce?"
                     collapseId="flush-collapse7"
                   >
                     <p>
-                      Yes, we offer 30 days money back guarantee to ensure
-                      customer satisfaction of our softwares. If for any reason,
-                      you wish to discontinue using the product, you can ask us
-                      for refund. We will refund your total money except the
-                      installation and configuration charges, which is USD 65 or
-                      20% of application cost, whichever is greater.
+                      WordPress itself is secure, but it is important to take
+                      steps to ensure the security of your eCommerce website.
+                      This includes keeping WordPress and all plugins up to
+                      date, using strong passwords, and implementing security
+                      measures such as SSL encryption.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
+                    headerTitle="What kind of support is provided with the software?"
                     collapseId="flush-collapse3"
                   >
                     <p>
-                      We recommend you purchase SSL certificate along with a
-                      hosting server, considering that an SSL certificate is
-                      necessary for all the websites these days and it provides
-                      a secure layer to the website as well.
+                      You will receive three months of support from the date of
+                      purchase for any bugs or issues that may arise in the
+                      standard software features that have already been
+                      developed. This support includes assistance with
+                      identifying, troubleshooting, and resolving any bugs or
+                      issues that affect the functionality of the software.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                  <MDBAccordionItem
+                    headerTitle="Am I permitted to eliminate your company's proprietary notices?"
+                    collapseId="flush-collapse3"
+                  >
+                    <p>
+                      You have the flexibility to modify the script by removing
+                      your company information and substituting it with yours.
+                      However, it is not permissible to include "copyright by"
+                      since exclusive copyright ownership for the software rests
+                      with us.
+                    </p>
+                  </MDBAccordionItem>
+                  <MDBAccordionItem
+                    headerTitle="How long does it take to receive the software after I purchase it?
+                    "
+                    collapseId="flush-collapse3"
+                  >
+                    <p>
+                      It will take a minimum 48 hours after payment.You will
+                      receive an email message with login details for your
+                      personal account where the software can be downloaded.
+                    </p>
+                  </MDBAccordionItem>
+                  <MDBAccordionItem
+                    headerTitle="Can I use your software without any programming skills?
+                    "
+                    collapseId="flush-collapse3"
+                  >
+                    <p>
+                      Yes, you can manage almost everything in the WordPress
+                      admin panel which is very user friendly.
+                    </p>
+                  </MDBAccordionItem>
+                  <MDBAccordionItem
+                    headerTitle="Will you deliver the exact product as shown in the demo?
+
+                    "
+                    collapseId="flush-collapse3"
+                  >
+                    <p>
+                      Yes, we deliver the exact product. We don't compromise
+                      with quality at all
+                    </p>
+                  </MDBAccordionItem>
+                  <MDBAccordionItem
+                    headerTitle="Do you offer a Money Back Guarantee?
+                    "
+                    collapseId="flush-collapse3"
+                  >
+                    <p>
+                      Yes, we provide a 30 days money back guarantee to ensure
+                      customer satisfaction with our software. If, for any
+                      reason, you decide to stop using the product, you can
+                      request a refund. We will reimburse the entire amount,
+                      excluding the installation and configuration charges,
+                      which are either USD 65 or 20% of the application cost,
+                      whichever is higher. Please note that the money back
+                      guarantee does not apply to customers who have received
+                      updates as per their specific requests, taking into
+                      account the significant efforts and time invested by the
+                      team for their project.
+                    </p>
+                  </MDBAccordionItem>
+                  <MDBAccordionItem
+                    headerTitle="Are you willing to advise us with ideas?
+                    "
+                    collapseId="flush-collapse3"
+                  >
+                    <p>
+                      Sure, we fulfill the client requirements always while
+                      doing all customization work offered with additional cost.
+                      Although client suggestions or ideas are always welcomed
+                      which can make your business more usable.
+                    </p>
+                  </MDBAccordionItem>
+                </MDBAccordion> */}
+                {/* <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary>
+                    <Typography>What is an eCommerce website?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      An eCommerce website is an online platform where
+                      businesses can sell products or services to customers over
+                      the internet. It typically includes features such as
+                      product listings, shopping carts, and secure payment
+                      processing.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary>
+                    <Typography>What is WordPress?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      WordPress is a popular content management system (CMS)
+                      that allows users to create and manage websites. It is
+                      known for its ease of use, flexibility, and wide range of
+                      available plugins and themes.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary>
+                    <Typography>What is WooCommerce?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      WooCommerce is a plugin for WordPress that adds eCommerce
+                      functionality to a website. It allows users to create an
+                      online store, add products, manage inventory, and process
+                      payments.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      What are the benefits of using WordPress for eCommerce?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Some benefits of using WordPress for eCommerce include its
+                      ease of use, flexibility, and scalability. WordPress also
+                      offers a wide range of plugins and themes that can help
+                      you customize your online store and enhance its
+                      functionality.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      Can I use WordPress for a large eCommerce website?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, WordPress can be used for large eCommerce websites.
+                      However, you may need to optimize your website for
+                      performance and scalability, and consider using dedicated
+                      hosting to handle high levels of traffic.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary>
+                    <Typography>Is WordPress secure for eCommerce?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      WordPress itself is secure, but it is important to take
+                      steps to ensure the security of your eCommerce website.
+                      This includes keeping WordPress and all plugins up to
+                      date, using strong passwords, and implementing security
+                      measures such as SSL encryption.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      What kind of support is provided with the software?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You will receive three months of support from the date of
+                      purchase for any bugs or issues that may arise in the
+                      standard software features that have already been
+                      developed. This support includes assistance with
+                      identifying, troubleshooting, and resolving any bugs or
+                      issues that affect the functionality of the software.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel8"}
+                  onChange={handleChange("panel8")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      Am I permitted to eliminate your company's proprietary
+                      notices?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You have the flexibility to modify the script by removing
+                      your company information and substituting it with yours.
+                      However, it is not permissible to include "copyright by"
+                      since exclusive copyright ownership for the software rests
+                      with us.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel9"}
+                  onChange={handleChange("panel9")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      How long does it take to receive the software after I
+                      purchase it?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      It will take a minimum of 48 hours after payment. You will
+                      receive an email message with login details for your
+                      personal account where the software can be downloaded.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel10"}
+                  onChange={handleChange("panel10")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      Can I use your software without any programming skills?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you can manage almost everything in the WordPress
+                      admin panel, which is very user-friendly.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel11"}
+                  onChange={handleChange("panel11")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      Will you deliver the exact product as shown in the demo?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we deliver the exact product. We don't compromise
+                      with quality at all.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel12"}
+                  onChange={handleChange("panel12")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      Do you offer a Money Back Guarantee?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we provide a 30-day money-back guarantee to ensure
+                      customer satisfaction with our software. If, for any
+                      reason, you decide to stop using the product, you can
+                      request a refund. We will reimburse the entire amount,
+                      excluding the installation and configuration charges,
+                      which are either USD 65 or 20% of the application cost,
+                      whichever is higher. Please note that the money-back
+                      guarantee does not apply to customers who have received
+                      updates as per their specific requests, considering the
+                      significant efforts and time invested by the team for
+                      their project.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel13"}
+                  onChange={handleChange("panel13")}
+                >
+                  <AccordionSummary>
+                    <Typography>
+                      Are you willing to advise us with ideas?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Sure, we fulfill the client requirements always while
+                      doing all customization work offered with additional cost.
+                      Although client suggestions or ideas are always welcomed,
+                      which can make your business more usable.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion> */}
               </div>
             </div>
           </div>
@@ -1934,8 +2359,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={100}
+                          <Image
+                            unoptimized={true}
+                            width={200}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="Fiverr clone"
@@ -1960,8 +2386,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={100}
+                          <Image
+                            unoptimized={true}
+                            width={270}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job Board Software Logo"
@@ -1986,8 +2413,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={100}
+                          <Image
+                            unoptimized={true}
+                            width={200}
                             height={100}
                             src="/img/jobboard/ecommerce_logo_new.png"
                             alt="eCommerce Software"
@@ -2012,7 +2440,8 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

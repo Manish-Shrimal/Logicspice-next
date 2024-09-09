@@ -17,6 +17,12 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -85,6 +91,91 @@ const Page = () => {
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   useEffect(() => {
@@ -268,7 +359,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`food_app_job ddlj ${sellerTab ? "active" : ""}`}
@@ -1422,7 +1513,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
@@ -1433,7 +1524,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={50}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1444,7 +1535,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1455,7 +1546,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1524,7 +1615,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1535,7 +1626,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1546,7 +1637,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1557,7 +1648,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1765,9 +1856,9 @@ const Page = () => {
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ&apos;s</h4>
+              <h4 className="title_main">Quick FAQ</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Can customer give a review/rating even if they have not ordered food from that restaurant?"
                     collapseId="flush-collapse1"
@@ -1901,7 +1992,210 @@ const Page = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                  <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography>Can customer give a review/rating even if they have not ordered food from that restaurant?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No. The customer can only review/rate the restaurant once their order has been delivered.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+      >
+        <AccordionSummary
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Typography>Once I purchase the product, how many days will it take to go online?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Time taken to implement your product depends on the level of customization and data migration. The time frame generally ranges from 7 business days to 30-40 days for complex implementations.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary
+          aria-controls="panel3-content"
+          id="panel3-header"
+        >
+          <Typography>Will there be any installation charges when I purchase the product?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No. The installation of the product will be absolutely free of cost.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel4'}
+        onChange={handleChange('panel4')}
+      >
+        <AccordionSummary
+          aria-controls="panel4-content"
+          id="panel4-header"
+        >
+          <Typography>Can customer cancel an order once they have placed it?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, a customer can cancel their order, but only until the restaurant has confirmed it. Once the order is confirmed, the customer cannot cancel it.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel5'}
+        onChange={handleChange('panel5')}
+      >
+        <AccordionSummary
+          aria-controls="panel5-content"
+          id="panel5-header"
+        >
+          <Typography>Can customer track their order status on the website?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, customers can see if their order has been confirmed, canceled, or delivered. Also, restaurants can add custom order statuses to keep customers updated on each step of the order delivery.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel6'}
+        onChange={handleChange('panel6')}
+      >
+        <AccordionSummary
+          aria-controls="panel6-content"
+          id="panel6-header"
+        >
+          <Typography>How will the customer be informed of changed order status?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            The customer will receive an email whenever the restaurant owner changes the order status on their end.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel7'}
+        onChange={handleChange('panel7')}
+      >
+        <AccordionSummary
+          aria-controls="panel7-content"
+          id="panel7-header"
+        >
+          <Typography>Can the customer save their address once they have ordered from the website?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, customers can save their delivery addresses on the website. Once they order food for the first time, their address is saved. When ordering again, they will be offered to select the previous address. Customers can also manage their saved addresses and edit or delete old addresses.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel8'}
+        onChange={handleChange('panel8')}
+      >
+        <AccordionSummary
+          aria-controls="panel8-content"
+          id="panel8-header"
+        >
+          <Typography>Can I update some design and functionality in the application code myself?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, you will have access to all the code, except some of the core encrypted files.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel9'}
+        onChange={handleChange('panel9')}
+      >
+        <AccordionSummary
+          aria-controls="panel9-content"
+          id="panel9-header"
+        >
+          <Typography>Will I be able to use it on multiple domains after I purchase this script?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            You will be licensed to use it only for the domain you purchased for.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel10'}
+        onChange={handleChange('panel10')}
+      >
+        <AccordionSummary
+          aria-controls="panel10-content"
+          id="panel10-header"
+        >
+          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No, you can’t resell the script. All rights will remain with Logicspice only.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel11'}
+        onChange={handleChange('panel11')}
+      >
+        <AccordionSummary
+          aria-controls="panel11-content"
+          id="panel11-header"
+        >
+          <Typography>Do you offer Money Back Guarantee?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, we offer a 30-day money-back guarantee to ensure customer satisfaction with our software. If for any reason, you wish to discontinue using the product, you can ask us for a refund. We will refund your total money except the installation and configuration charges, which is USD 65 or 20% of the application cost, whichever is greater.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel12'}
+        onChange={handleChange('panel12')}
+      >
+        <AccordionSummary
+          aria-controls="panel12-content"
+          id="panel12-header"
+        >
+          <Typography>Along with hosting server details, what other recommendations?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and provides a secure layer to the website as well.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
               </div>
             </div>
           </div>

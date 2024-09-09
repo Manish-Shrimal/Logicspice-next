@@ -6,7 +6,6 @@ import "@/app/softwares/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
-import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import "../../resposive.css";
@@ -15,6 +14,14 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
@@ -69,6 +76,50 @@ const Page = () => {
     }
   };
 
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      // transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    ...theme.applyStyles("dark", {
+      backgroundColor: "rgba(255, 255, 255, .05)",
+    }),
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
+  
+
   useEffect(() => {
     getData();
   }, []);
@@ -93,7 +144,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/images/more-info.png"
@@ -139,7 +191,8 @@ See how it work yourself!"
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -153,8 +206,9 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
-                  width={450}
+                <Image
+                  unoptimized={true}
+                  width={420}
                   height={100 / (100 / 100)}
                   className=""
                   src="/img/marketplacesoftware/marketplace-banner-img.png"
@@ -241,7 +295,7 @@ See how it work yourself!"
           </div>
           <div className="tab_bbx_job MarketplaceSoftwareBBx">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -279,9 +333,10 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
@@ -299,9 +354,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_alert.png"
                                 />
@@ -318,9 +374,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_profile.png"
                                 />
@@ -337,9 +394,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/save_fav.png"
                                 />
@@ -357,9 +415,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/apply_job.png"
                                 />
@@ -376,9 +435,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/search_job.png"
                                 />
@@ -395,9 +455,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/applied_job.png"
                                 />
@@ -414,9 +475,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/share_job.png"
                                 />
@@ -433,9 +495,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_edu.png"
                                 />
@@ -451,9 +514,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_exp.png"
                                 />
@@ -484,9 +548,10 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage-availability-icon.png"
                                 />
@@ -503,9 +568,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage-services-icon.png"
                                 />
@@ -523,9 +589,10 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage-outstanding-icon.png"
                                 />
@@ -542,9 +609,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/accept-requests-icon.png"
                                 />
@@ -561,9 +629,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage-requests-icon.png"
                                 />
@@ -580,9 +649,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage-event-icon.png"
                                 />
@@ -599,9 +669,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/view-booking-icon.png"
                                 />
@@ -618,9 +689,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/view-review-icon.png"
                                 />
@@ -637,9 +709,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/preview-public-icon.png"
                                 />
@@ -655,9 +728,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/social-media-icon.png"
                                 />
@@ -674,9 +748,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/promotions-discounts-icon.png"
                                 />
@@ -693,9 +768,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/notification-icon.png"
                                 />
@@ -730,9 +806,10 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -749,9 +826,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                 />
@@ -769,9 +847,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                 />
@@ -788,9 +867,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_skill.png"
                                 />
@@ -807,9 +887,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_emp.png"
                                 />
@@ -826,9 +907,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_job.png"
                                 />
@@ -845,9 +927,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_news.png"
                                 />
@@ -864,9 +947,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/course_details.png"
                                 />
@@ -883,9 +967,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
                                 />
@@ -902,9 +987,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_blog.png"
                                 />
@@ -921,9 +1007,10 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                 />
@@ -982,7 +1069,8 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img1">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/marketplacesoftware/freelance-icon.png"
@@ -1011,7 +1099,8 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img2">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/marketplacesoftware/rental-icon.png"
@@ -1040,7 +1129,8 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img3">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/marketplacesoftware/logistics-icon.png"
@@ -1068,7 +1158,8 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img4">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/marketplacesoftware/home-cleaning-icon.png"
@@ -1097,7 +1188,8 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img5">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/marketplacesoftware/scheduling-icon.png"
@@ -1126,7 +1218,8 @@ See how it work yourself!"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img6">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/marketplacesoftware/appointment-booking-icon.png"
@@ -1272,7 +1365,8 @@ See how it work yourself!"
               <div className="jocpp">
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1346,7 +1440,8 @@ See how it work yourself!"
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
@@ -1370,8 +1465,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1381,8 +1477,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1392,10 +1489,11 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
-                    src="/img/jobboard/free_installiicon.png"
+                    src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                   />
                 </div>
@@ -1403,8 +1501,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1421,7 +1520,8 @@ See how it work yourself!"
         id="reviews"
       >
         <div className="ecommerce_review__img">
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             width={450}
             height={100 / (100 / 100)}
             src="/img/marketplacesoftware/faq-review-img.png"
@@ -1456,7 +1556,8 @@ See how it work yourself!"
                     </span>
                     Mark Henry&sbquo; Australia
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={25}
                         height={100}
                         src="/img/jobboard/australia_flag_img.png"
@@ -1488,7 +1589,8 @@ See how it work yourself!"
                     </span>
                     <span id="client-name">Davian Smith&sbquo; Italy</span>{" "}
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={25}
                         height={100}
                         src="/img/jobboard/italy_flag.png"
@@ -1520,7 +1622,8 @@ See how it work yourself!"
                     </span>
                     <span id="client-name">Iam Convey&sbquo; USA</span>{" "}
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={25}
                         height={100}
                         src="/img/jobboard/usa_flag_img.png"
@@ -1649,7 +1752,8 @@ See how it work yourself!"
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={450}
                     height={100 / (100 / 100)}
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
@@ -1659,138 +1763,230 @@ See how it work yourself!"
               </div>
               <div className="col-md-7">
                 <div className="ecommerce__Quick_FAQ">
-                  <MDBAccordion v-model="activeItem" borderless>
-                    <MDBAccordionItem
-                      headerTitle="Is the source code modifiable?"
-                      collapseId="flush-collapse1"
+                  <Accordion
+                    expanded={expanded === "panel1"}
+                    onChange={handleChange("panel1")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel1" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel1d-content"
+                      id="panel1d-header"
                     >
-                      <p>
-                        Yes&sbquo; most of the softwares is completely flexible
-                        and clients can customize it as per their requirements.
-                        However&sbquo; 1-2 core files are encrypted due to
-                        licensing purposes&sbquo; because we will allow you to
-                        run the script on the specific domain for which
-                        encryption will be done in 1-2 core files&sbquo; rest of
-                        the code is open to make changes and those encrypted
-                        files will be part of the codebase as well.
-                      </p>
-                    </MDBAccordionItem>
+                      <Typography>Is the source code modifiable?</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, most of the software is completely flexible and
+                        clients can customize it as per their requirements.
+                        However, 1-2 core files are encrypted due to licensing
+                        purposes because we will allow you to run the script on
+                        the specific domain for which encryption will be done in
+                        1-2 core files; the rest of the code is open to make
+                        changes and those encrypted files will be part of the
+                        codebase as well.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="How much time will it take to make it live?"
-                      collapseId="flush-collapse2"
+                  <Accordion
+                    expanded={expanded === "panel2"}
+                    onChange={handleChange("panel2")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel2" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel2d-content"
+                      id="panel2d-header"
                     >
-                      <p>
-                        The whole process will take maximum 1 week time and the
+                      <Typography>
+                        How much time will it take to make it live?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        The whole process will take a maximum of 1 week, and the
                         rest depends on your response time and customization
                         requirements.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="How will you deal with bugs and issues in the product?"
-                      collapseId="flush-collapse3"
+                  <Accordion
+                    expanded={expanded === "panel3"}
+                    onChange={handleChange("panel3")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel3" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel3d-content"
+                      id="panel3d-header"
                     >
-                      <p>
-                        We will communicate with you via live chat&sbquo; phone
-                        call&sbquo; whatsapp&sbquo; skype&sbquo; and email
-                        during our business hours and try to solve your problem
-                        as soon as possible.
-                      </p>
-                    </MDBAccordionItem>
+                      <Typography>
+                        How will you deal with bugs and issues in the product?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        We will communicate with you via live chat, phone call,
+                        WhatsApp, Skype, and email during our business hours and
+                        try to solve your problem as soon as possible.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Does logicspice provide technical support?"
-                      collapseId="flush-collapse4"
+                  <Accordion
+                    expanded={expanded === "panel4"}
+                    onChange={handleChange("panel4")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel4" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel4d-content"
+                      id="panel4d-header"
                     >
-                      <p>
-                        Yes&sbquo; we are providing free 3 months technical
-                        support on the existing features and functionalities of
-                        the software.
-                      </p>
-                    </MDBAccordionItem>
+                      <Typography>
+                        Does Logicspice provide technical support?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, we are providing free 3 months technical support on
+                        the existing features and functionalities of the
+                        software.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Do I own my software completely?"
-                      collapseId="flush-collapse5"
+                  <Accordion
+                    expanded={expanded === "panel5"}
+                    onChange={handleChange("panel5")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel5" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel5d-content"
+                      id="panel5d-header"
                     >
-                      <p>
-                        Yes&sbquo; you will own the license to use it for the
-                        domain you purchased for.
-                      </p>
-                    </MDBAccordionItem>
+                      <Typography>Do I own my software completely?</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, you will own the license to use it for the domain
+                        you purchased for.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Do I need to provide a Google Maps API key? If yes&sbquo; how to generate a Google Map API key?"
-                      collapseId="flush-collapse6"
+                  <Accordion
+                    expanded={expanded === "panel6"}
+                    onChange={handleChange("panel6")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel6" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel6d-content"
+                      id="panel6d-header"
                     >
-                      <p>
-                        Yes&sbquo; you need to provide a map API key. Please
-                        follow the steps mentioned in the below URL to generate
-                        the Google map API key:
-                        https://developers.google.com/maps/documentation/javascript/get-api-key.
-                        You need to set up your billing details over that.
-                      </p>
-                    </MDBAccordionItem>
+                      <Typography>
+                        Do I need to provide a Google Maps API key? If yes, how
+                        to generate a Google Map API key?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, you need to provide a map API key. Please follow
+                        the steps mentioned in the below URL to generate the
+                        Google Maps API key:
+                        <a
+                          href="https://developers.google.com/maps/documentation/javascript/get-api-key"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Google Maps API Key
+                        </a>
+                        . You need to set up your billing details over that.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Can I update some design and functionality in the application code myself?"
-                      collapseId="flush-collapse7"
+                  <Accordion
+                    expanded={expanded === "panel7"}
+                    onChange={handleChange("panel7")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel7" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel7d-content"
+                      id="panel7d-header"
                     >
-                      <p>
-                        Yes&sbquo; you will have access to all the code&sbquo;
-                        except some of the core encrypted files.
-                      </p>
-                    </MDBAccordionItem>
+                      <Typography>
+                        Can I update some design and functionality in the
+                        application code myself?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, you will have access to all the code, except for
+                        some of the core encrypted files.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Will I be able to use it on multiple domains&sbquo; after I purchase this software?"
-                      collapseId="flush-collapse8"
+                  <Accordion
+                    expanded={expanded === "panel8"}
+                    onChange={handleChange("panel8")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel8" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel8d-content"
+                      id="panel8d-header"
                     >
-                      <p>
+                      <Typography>
+                        Will I be able to use it on multiple domains after I
+                        purchase this software?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         You will be licensed to use it only for the domain you
                         purchased for.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Can I resell the software? Will I have rights over the software code?"
-                      collapseId="flush-collapse9"
+                  <Accordion
+                    expanded={expanded === "panel9"}
+                    onChange={handleChange("panel9")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel9" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel9d-content"
+                      id="panel9d-header"
                     >
-                      <p>
-                        No&sbquo; you can&apos;t resell the software. All rights
-                        will remain with Logicspice only.
-                      </p>
-                    </MDBAccordionItem>
-
-                    <MDBAccordionItem
-                      headerTitle="Do you offer a Money Back Guarantee?"
-                      collapseId="flush-collapse10"
-                    >
-                      <p>
-                        Yes&sbquo; we offer a 30 days money-back guarantee to
-                        ensure customer satisfaction with our software. If for
-                        any reason&sbquo; you wish to discontinue using the
-                        product&sbquo; you can ask us for a refund. We will
-                        refund your total money except the installation and
-                        configuration charges&sbquo; which are USD 65 or 20% of
-                        the application cost&sbquo; whichever is greater.
-                      </p>
-                    </MDBAccordionItem>
-
-                    <MDBAccordionItem
-                      headerTitle="Along with hosting server details&sbquo; what other recommendations?"
-                      collapseId="flush-collapse12"
-                    >
-                      <p>
-                        We recommend you purchase an SSL certificate along with
-                        a hosting server which is Linux based&sbquo; considering
-                        that an SSL certificate is necessary for all the
-                        websites these days and it provides a secure layer to
-                        the website as well.
-                      </p>
-                    </MDBAccordionItem>
-                  </MDBAccordion>
+                      <Typography>
+                        Can I resell the software? Will I have rights over the
+                        software code?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        No, you can’t resell the software. All rights will
+                        remain with Logicspice only.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
                 </div>
               </div>
             </div>
@@ -1822,7 +2018,7 @@ See how it work yourself!"
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/fiverr-clone"
@@ -1831,8 +2027,9 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
+                          <Image
+                            unoptimized={true}
+                            width={180}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
@@ -1844,12 +2041,12 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/logistic-marketplacesoftware"
@@ -1859,8 +2056,9 @@ See how it work yourself!"
                         <h3>Uship clone</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
+                          <Image
+                            unoptimized={true}
+                            width={180}
                             height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplacesoftware"
@@ -1874,12 +2072,12 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <a
+                  <Link
                     title="View Detail"
                     target="_black"
                     href="/softwares/appointment-scheduling-software/"
@@ -1889,8 +2087,9 @@ See how it work yourself!"
                         <h3>Appointment Booking System</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
+                          <Image
+                            unoptimized={true}
+                            width={180}
                             height={100}
                             src="/img/jobboard/abs_logo_new.png"
                             alt="Fiverr Clone Script Logo"
@@ -1905,7 +2104,7 @@ See how it work yourself!"
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1918,7 +2117,8 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

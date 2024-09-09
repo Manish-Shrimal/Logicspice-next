@@ -9,12 +9,24 @@ import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Whylogicspice from "@/app/Components/Whylogicspice";
+import Reviewmodals from "@/app/Components/Reviewmodals";
+
 
 import "slick-carousel/slick/slick-theme.css";
 const Page = () => {
   var settings = {
     dots: true,
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -26,19 +38,124 @@ const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
+
+  const openReviewModel = () => {
+    setShowReviewModal(!showReviewModal);
+  };
   const handleSellerTab = () => {
     setSellerTab(true);
     setAdminTab(false);
+  };
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
   };
 
   const handleAdminTab = () => {
     setSellerTab(false);
     setAdminTab(true);
   };
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
 
   const opendiv = (tabId) => {
     setActiveTab(tabId);
+  };
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  const [showInfo, setShowInfo] = useState(false);
+
+  const toggleInfo = () => {
+    setShowInfo(!showInfo);
+  };
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+  
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+  
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+  
+  const [expanded, setExpanded] = React.useState("panel1");
+  
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
   return (
     <>
@@ -57,7 +174,8 @@ const Page = () => {
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
                   <div className="free-img">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/blogscript/free-img.png"
@@ -72,12 +190,20 @@ const Page = () => {
 
                   <Link
                     href="#"
-                    className="btn btn-get"
+                    className=" btn-get"
                     id="buy_now_1"
-                    onClick={() => openDemoModel()}
+                    onClick={openModal}
+                    style={{ textAlign: "center" }}
                   >
                     Live Demo
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Please fill the form below and get access to the live demo of Whatsapp Clone.
+See how it work yourself!"
+                    />
                   </Link>
+
                   <Link
                     href="#"
                     className="btn fiverr-buys NewGreenBtnJob"
@@ -89,7 +215,8 @@ const Page = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -110,7 +237,8 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={400}
                   height={100 / (100 / 100)}
                   alt="blog-script-mobile"
@@ -175,14 +303,14 @@ const Page = () => {
           <div className="job_or_title">
             <h2 className="taxt_tt_job">Blog Script Features</h2>
           </div>
-          <div className="tatxt_txt_job">
+          <div className="tatxt_txt_job" style={{ textAlign: "start" }}>
             Using our Blog Script, users or bloggers will be able to create
             their own blog sites within minutes. This script is fully responsive
             and is compatible with any screen with web, tablet and mobile view.
           </div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job tab_bbx_job_classified">
-              <ul className="">
+              <ul className="tab_listing">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -209,7 +337,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/blogscript/blogscript-user.png"
@@ -222,9 +351,10 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/tickets_list.png"
                                 />
@@ -242,9 +372,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/recent-blog.png"
                                 />
@@ -261,9 +392,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/equipment_search.png"
                                 />
@@ -280,9 +412,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/social_login.png"
                                 />
@@ -299,9 +432,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
                                 />
@@ -318,9 +452,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_blog.png"
                                 />
@@ -348,7 +483,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/blogscript/blogscrit_admin_mac.png"
@@ -361,9 +497,10 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
                                 />
@@ -379,9 +516,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_user.png"
                                 />
@@ -398,9 +536,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/equipment_search.png"
                                 />
@@ -418,9 +557,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
                                 />
@@ -438,9 +578,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_category.png"
                                 />
@@ -457,9 +598,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_cat.png"
                                 />
@@ -476,9 +618,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_bookings.png"
                                 />
@@ -496,9 +639,10 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
-                                  width={100}
-                                  height={100}
+                                <Image
+                                  unoptimized={true}
+                                  width={47}
+                                  height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/active_deactive.png"
                                 />
@@ -578,306 +722,22 @@ const Page = () => {
             </h2>
             <br />
             <div className="logic-parter">
-              <a href="javascript:void(0);" className="ylogicspice">
+              <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
-                    width={20}
-                    height={100}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
+                    width={20}
+                    height={20}
                   />
                 </i>
                 <span>Why Logicspice</span>
               </a>
+              <Whylogicspice open={showInfo} />
             </div>
           </div>
-          <template v-if="whylogicspice">
-            <div className="small_bbx_job_new">
-              <div className="row">
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-bx1">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/coding.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Optimized Code with proper commenting</h3>
-                      <p>
-                        Our script code is fully optimized, which results in
-                        quick load time and, Code is properly commented for each
-                        function and module so anyone can easily update the code
-                        in future.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-bx2">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/data-complexity.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Strong Framework of PHP & Well managed database</h3>
-                      <p>
-                        We used popular and strong Framework of PHP with latest
-                        versions to keep the code up to date and prevalent for
-                        longer duration. Our experienced team managed all the
-                        database tables with complete flexibility for extension
-                        versions in future.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-bx3">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/coordinate.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>
-                        Quick Response and
-                        <br /> Coordination
-                      </h3>
-                      <p>
-                        Customers will always get a quick response from our
-                        technical support team, with the best possible solution.
-                        Expect our response within 24 hours.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-bx4">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/customize.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Customization at affordable price</h3>
-                      <p>
-                        We provide customization of our scripts, to meet
-                        customer expectations with best affordable price and
-                        minimum turn-around time.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-bx5">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/smartphone-icon.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Mobile Friendly Script</h3>
-                      <p>
-                        Our Script is mobile friendly so, users can easily
-                        access all the features through mobile devices that
-                        gives improved user experience with portability.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-bx6">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/data.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Dedicated Support Team</h3>
-                      <p>
-                        You will get the dedicated support team while purchasing
-                        the script or product. Technical support team will
-                        resolve your query quickly in a given time.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-box thumbnail-bx7">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/web-icon.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Global company with agile development approach</h3>
-                      <p>
-                        Our customers are almost equally spread around the globe
-                        and we provide international standard solutions for USA,
-                        UK, Europe, Australia, UAE and other countries. We
-                        follow a transparent work process and divide all the
-                        development processes into small phases. We can use the
-                        latest technology and standards that assure the smooth
-                        development and execution.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-box thumbnail-bx8">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/encrypted.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>
-                        Customer information and application level security
-                      </h3>
-                      <p>
-                        Security of customer data and application is a major
-                        aspect of any of the solutions, Logicspice provides. Our
-                        programming is robust and secure that assures password
-                        encryption.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new thumbnail-box thumbnail-bx9">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/history-icon.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Experienced workforce with 3000+ project history</h3>
-                      <p>
-                        We are a team of experienced web and mobile app
-                        developers, having expertise in handling complex tasks
-                        since the past 16+ years. We delivered lots of projects
-                        with 100% client satisfaction on different platforms
-                        with high levels of standards.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/seouser-friendly.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Seo Friendly Development</h3>
-                      <p>
-                        Our developed websites are SEO optimized so it can rank
-                        better on Google.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/one-stop-solution.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>One Stop Solution</h3>
-                      <p>
-                        We offer complete design & development solutions along
-                        with the business strategy, all under one roof.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/third-party-api.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Integration With Third Party Api</h3>
-                      <p>
-                        We integrate your website with third party API on our
-                        end to serve you better.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-sm-4 col-md-4">
-                  <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
-                    <div className="caption">
-                      <div className="best-partner-img-bx">
-                        <Image unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/jobboard/cost-effective.png"
-                          alt="img"
-                        />
-                      </div>
-                      <h3>Cost Effective</h3>
-                      <p>
-                        Powerful technology back-end with basic ready-made
-                        modules save time and hence overall project cost for
-                        your script gets reduced.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </template>
         </div>
       </section>
 
@@ -891,8 +751,9 @@ const Page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="Laravel Development"
@@ -903,8 +764,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/html-5.png"
                       alt="HTML5"
@@ -914,8 +776,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_mysql_icon.png"
                       alt="MySQL"
@@ -925,8 +788,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
@@ -972,8 +836,9 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -983,8 +848,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -994,8 +860,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1005,8 +872,9 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1119,13 +987,15 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="col-md-7">
-                  <Link
-                    href="#"
-                    className="btn btn-primary"
-                    onClick={() => openReviewModel()}
-                  >
-                    Rate and Review product{" "}
-                  </Link>
+                <a className="btn btn-primary" onClick={openReviewModel}>
+                    Rate and Review product
+                  </a>
+
+                  <Reviewmodals
+                    modalStatus={showReviewModal}
+                    toggle={openReviewModel}
+                    title=" Whatsapp Clone"
+                  />
                 </div>
                 <div className="col-md-12">
                   <div className="customers_review_sec_row">
@@ -1152,8 +1022,9 @@ const Page = () => {
                       </span>
                       Adam Wilson, USA{" "}
                       <span>
-                        <Image unoptimized={true}
-                          width={100}
+                        <Image
+                          unoptimized={true}
+                          width={25}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
@@ -1184,8 +1055,9 @@ const Page = () => {
                       </span>
                       <span id="client-name">Jason Dinsmore, Germany</span>{" "}
                       <span>
-                        <Image unoptimized={true}
-                          width={100}
+                        <Image
+                          unoptimized={true}
+                          width={25}
                           height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in german"
@@ -1217,8 +1089,9 @@ const Page = () => {
                       </span>
                       Emma Davis, AUS{" "}
                       <span>
-                        <Image unoptimized={true}
-                          width={100}
+                        <Image
+                          unoptimized={true}
+                          width={25}
                           height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"
@@ -1232,7 +1105,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Are your given source code modifiable?"
                     collapseId="flush-collapse1"
@@ -1296,7 +1169,131 @@ const Page = () => {
                       only Logicspice own the copyrights for our softwares.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      Are your given source code modifiable?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, our scripts are flexible. Clients can customize
+                      according to their requirement.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>
+                      Do Logicspice give technical support?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we believe in long-term relationships and provide
+                      technical support to the client at an affordable cost.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      Are you willing to advise us with ideas?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Sure, we fulfill the requirement of the client. Your
+                      suggestions or ideas are always welcomed which can make
+                      your business more interactive.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      Will you deliver the exact product as shown in the demo?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we deliver the exact product. We don’t compromise
+                      with quality at all.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can I use your script without any programming skills?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you can directly install our given script and manage
+                      everything in the admin panel, which is very
+                      user-friendly.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Can I remove your company proprietary notices?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      With an extra charge, you are allowed to modify the
+                      branding. You can remove our company information and put
+                      yours. However, you cannot put "copyright by" because only
+                      Logicspice owns the copyrights for our software.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -1310,9 +1307,10 @@ const Page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/blogscript/blog-banners1.jpg"
                     alt="Post Classified"
                   />
@@ -1321,25 +1319,62 @@ const Page = () => {
                   <div className="titleof_scnew">Blog Script List</div>
                 </div>
               </div>
-
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  {" "}
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
-                    src="/img/blogscript/blog-banners2.jpg"
-                    alt="Classifieds Management"
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
+                    src="/img/blogscript/blog-banners1.jpg"
+                    alt="Post Classified"
                   />
                 </div>
                 <div className="hands-proved">
-                  <div className="titleof_scnew">Blog Script List</div>{" "}
+                  <div className="titleof_scnew">Blog Script List</div>
                 </div>
               </div>
             </Slider>
           </div>
         </div>
       </section>
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Whatsapp Clone"
+                  />
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              unoptimized={true}
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
 
       <Footer />
     </>

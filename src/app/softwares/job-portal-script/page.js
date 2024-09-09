@@ -17,6 +17,9 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -257,7 +260,7 @@ const Page = () => {
             Crafting a personalized job portal has never been this empowering.
             Our LS Jobber offers a gateway for businesses and companies to
             establish their own
-            <strong>bespoke white label job portals</strong>. Not just that,
+            <strong> bespoke white label job portals</strong>. Not just that,
             entrepreneurs can seamlessly integrate recruiters into the hiring
             process, streamlining the journey from opportunity to employment.
             With its <i>advanced functionalities</i> and{" "}
@@ -284,7 +287,7 @@ const Page = () => {
               ></iframe>
             </div>
             <div className="col-md-6">
-              <div className="service-market-ttd JobBoardServiceMarketFeatures">
+              <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
                   <li>Post Unlimited Jobs</li>
                   <li>Responsive & SEO Friendly</li>
@@ -330,7 +333,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="JobBoardNewtab">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -2289,14 +2292,14 @@ const Page = () => {
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
 
         <Modal
@@ -2512,7 +2515,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
                         alt="ReactJS Development"
@@ -2523,8 +2526,8 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                       width={60}
+                       height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -2534,8 +2537,8 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                       width={60}
+                       height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                       />
@@ -2545,8 +2548,8 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                       width={60}
+                       height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -2556,8 +2559,8 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                       width={60}
+                       height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -2567,8 +2570,8 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                      width={60}
+                      height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
                         className="lazy"
@@ -2579,8 +2582,8 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
-                        height={100}
+                       width={60}
+                       height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
                         className="lazy"
@@ -3258,6 +3261,7 @@ const Page = () => {
           </div>
         </div>
       </section>
+      
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="title_main">LS Jobber Features</h2>

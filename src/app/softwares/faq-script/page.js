@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/softwares/softwares.css";
@@ -10,11 +10,21 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import { IconButton } from "@mui/material";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -44,12 +54,115 @@ const Page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      // transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    ...theme.applyStyles("dark", {
+      backgroundColor: "rgba(255, 255, 255, .05)",
+    }),
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 100) { // Adjust this value based on when you want the navbar to appear
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
       <NavBar />
+      <section className="product_middle_menu_box">
+      {isScrolled && (
+        <section className="product_middle_menu top-fixed">
+          <div className="container">
+            <nav className="navbar navbar-default">
+              <div className="container-fluid">
+                <div className="navbar-header">
+                  <button
+                    type="button"
+                    className="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-2"
+                    aria-expanded="false"
+                  >
+                    <span className="sr-only">Toggle navigation</span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                  </button>
+                </div>
+                <div
+                  className="collapse navbar-collapse"
+                  id="bs-example-navbar-collapse-2"
+                >
+                  <ul className="nav navbar-nav">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#technologies">Technologies</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                  </ul>
+                  <ul className="nav navbar-nav navbar-right">
+                    <li>
+                      {/* <a className="page-scroll btn btn-default" href="javascript:void(0);" data-toggle="modal" data-target="#popup_sc_product" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#update_frm&quot;).html(&quot;FAQ Script&quot;); $(&quot;#contact_fr&quot;).val(&quot;FAQ Script&quot;);" id="buy_now_1">
+                            <span><img src="https://www.logicspice.com/app/webroot/img/images/enquiry_btn_bg.png" alt="Enquiry"></span> Enquire Now
+                        </a> */}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </section>
+      )}
+    </section>
       <section className="FaqBannerSection">
         <div className="FaqBannerLeftImg">
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             src="/img/faqscript/faqbanner-leftimg.png"
             alt="icon"
             width={35}
@@ -57,7 +170,8 @@ const Page = () => {
           />
         </div>
         <div className="FaqBannerRightImg">
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             src="/img/faqscript/faqbanner-rightimg.png"
             alt="icon"
             width={100}
@@ -95,7 +209,8 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-5 col-md-5">
               <div className="FaqBannerImgTop">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   src="/img/faqscript/faqbannerimg.png"
                   width={300}
                   height={500 / (100 / 100)}
@@ -134,14 +249,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon1.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon1hover.png"
                       alt="FAQ Script"
@@ -164,14 +281,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon2.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon2hover.png"
                       alt="FAQ Script"
@@ -194,14 +313,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon3.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon3hover.png"
                       alt="FAQ Script"
@@ -224,14 +345,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon4.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon4hover.png"
                       alt="FAQ Script"
@@ -254,14 +377,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon5.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon5hover.png"
                       alt="FAQ Script"
@@ -281,14 +406,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon6.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon6hover.png"
                       alt="FAQ Script"
@@ -308,14 +435,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon7.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon7hover.png"
                       alt="FAQ Script"
@@ -339,14 +468,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon9.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon9hover.png"
                       alt="FAQ Script"
@@ -369,14 +500,16 @@ const Page = () => {
               >
                 <div className="FaqLatestFeatures">
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/faq-Features-icon8.png"
                       alt="FAQ Script"
                       width={50}
                       height={100}
                     />
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIconHover"
                       src="/img/faqscript/faq-Features-icon8hover.png"
                       alt="FAQ Script"
@@ -418,7 +551,8 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className=""
                       src="/img/faqscript/FaqUserIcon.png"
                       alt="FAQ Script"
@@ -437,11 +571,12 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       className="FeaturesIcon"
                       src="/img/faqscript/FaqAdminIcon.png"
                       alt="FAQ Script"
-                      width={50}
+                      width={200}
                       height={100}
                     />
                   </i>
@@ -460,7 +595,8 @@ const Page = () => {
                       <div className="row">
                         <div className="col-xs-12 col-sm-6 col-md-5">
                           <div className="FaqUserImg">
-                            <Image unoptimized={true}
+                            <Image
+                              unoptimized={true}
                               className="FeaturesIcon"
                               src="/img/faqscript/FaqUserimg.jpg"
                               alt="FAQ Script"
@@ -670,14 +806,16 @@ const Page = () => {
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-5">
                           <div className="FaqUserImg">
-                            <Image unoptimized={true}
+                            <Image
+                              unoptimized={true}
                               className="FeaturesIcon FeaturesImgDesktop"
                               src="/img/faqscript/FaqAdminimg.jpg"
                               alt="FAQ Script"
                               width={100}
                               height={100}
                             />
-                            <Image unoptimized={true}
+                            <Image
+                              unoptimized={true}
                               className="FeaturesImgmobile"
                               src="/img/faqscript/FaqAdminImgMobile.jpg"
                               alt="FAQ Script"
@@ -821,10 +959,11 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -832,10 +971,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
-                        width={40}
+                        width={50}
                         height={100}
                       />
                     </div>
@@ -843,10 +983,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -854,10 +995,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -898,7 +1040,8 @@ const Page = () => {
         data-aos="fade-up"
       >
         <div className="ecommerce_review__img">
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             src="/img/marketplacesoftware/faq-review-img.png"
             alt="Laravel Development"
             width={500}
@@ -931,7 +1074,8 @@ const Page = () => {
                     </span>
                     Marcus Cruz, Canada
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/canada-flag.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
@@ -961,7 +1105,8 @@ const Page = () => {
                     </span>
                     <span id="client-name">Lisa Jonhathan, Switzerland</span>{" "}
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/switzerland_flag_img.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
@@ -991,7 +1136,8 @@ const Page = () => {
                     </span>
                     <span id="client-name">John, USA</span>{" "}
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/usa_flag_img.png"
                         alt="Laravel Development"
                         style={{ width: "27px", marginLeft: "3px" }}
@@ -1124,7 +1270,8 @@ const Page = () => {
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/marketplacesoftware/FaqLaravelImg.png"
                     alt="laravel web development"
                     width={300}
@@ -1134,7 +1281,7 @@ const Page = () => {
               </div>
               <div className="col-md-7">
                 <div className="ecommerce__Quick_FAQ">
-                  <MDBAccordion v-model="activeItem" borderless>
+                  {/* <MDBAccordion v-model="activeItem" borderless>
                     <MDBAccordionItem
                       headerTitle="Are you given source code modifiable?"
                       collapseId="flush-collapse1"
@@ -1199,7 +1346,196 @@ const Page = () => {
                         the copyrights for our softwares.
                       </p>
                     </MDBAccordionItem>
-                  </MDBAccordion>
+                  </MDBAccordion> */}
+                  <Accordion
+                    expanded={expanded === "panel1"}
+                    onChange={handleChange("panel1")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel1" ? (
+                          <IconButton>
+                            <RemoveIcon />
+                          </IconButton>
+                        ) : (
+                          <IconButton>
+                            <AddIcon />
+                          </IconButton>
+                        )
+                      }
+                      aria-controls="panel1d-content"
+                      id="panel1d-header"
+                    >
+                      <Typography>
+                        Are you given source code modifiable?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, our scripts are flexible. Clients can customize
+                        according to their requirements.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+
+                  <Accordion
+                    expanded={expanded === "panel2"}
+                    onChange={handleChange("panel2")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel2" ? (
+                          <IconButton>
+                            <RemoveIcon />
+                          </IconButton>
+                        ) : (
+                          <IconButton>
+                            <AddIcon />
+                          </IconButton>
+                        )
+                      }
+                      aria-controls="panel2d-content"
+                      id="panel2d-header"
+                    >
+                      <Typography>
+                        Do Logicspice give technical support?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, we believe in long-term relationships and provide
+                        technical support to the client at an affordable cost.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+
+                  <Accordion
+                    expanded={expanded === "panel3"}
+                    onChange={handleChange("panel3")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel3" ? (
+                          <IconButton>
+                            <RemoveIcon />
+                          </IconButton>
+                        ) : (
+                          <IconButton>
+                            <AddIcon />
+                          </IconButton>
+                        )
+                      }
+                      aria-controls="panel3d-content"
+                      id="panel3d-header"
+                    >
+                      <Typography>
+                        Are you willing to advise us with ideas?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Sure, we fulfill the client. Your suggestions or ideas
+                        are always welcomed which can make your business more
+                        interactive.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+
+                  <Accordion
+                    expanded={expanded === "panel4"}
+                    onChange={handleChange("panel4")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel4" ? (
+                          <IconButton>
+                            <RemoveIcon />
+                          </IconButton>
+                        ) : (
+                          <IconButton>
+                            <AddIcon />
+                          </IconButton>
+                        )
+                      }
+                      aria-controls="panel4d-content"
+                      id="panel4d-header"
+                    >
+                      <Typography>
+                        Will you deliver the exact product as shown in the demo?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, we deliver the exact product. We don’t compromise
+                        with quality at all.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+
+                  <Accordion
+                    expanded={expanded === "panel5"}
+                    onChange={handleChange("panel5")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel5" ? (
+                          <IconButton>
+                            <RemoveIcon />
+                          </IconButton>
+                        ) : (
+                          <IconButton>
+                            <AddIcon />
+                          </IconButton>
+                        )
+                      }
+                      aria-controls="panel5d-content"
+                      id="panel5d-header"
+                    >
+                      <Typography>
+                        Can I use your script without any programming skills?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        Yes, you can directly install our given script and can
+                        manage everything in the admin panel, which is very
+                        user-friendly.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+
+                  <Accordion
+                    expanded={expanded === "panel6"}
+                    onChange={handleChange("panel6")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel6" ? (
+                          <IconButton>
+                            <RemoveIcon />
+                          </IconButton>
+                        ) : (
+                          <IconButton>
+                            <AddIcon />
+                          </IconButton>
+                        )
+                      }
+                      aria-controls="panel6d-content"
+                      id="panel6d-header"
+                    >
+                      <Typography>
+                        Can I remove your company proprietary notices?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        With an extra charge, you are allowed to modify the
+                        branding. You can remove our company information and put
+                        yours. However, you cannot put "copyright by" as
+                        Logicspice owns the copyrights for our software.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
                 </div>
               </div>
             </div>
@@ -1212,7 +1548,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}

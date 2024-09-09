@@ -18,6 +18,14 @@ import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Head from "next/head";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 const Page = () => {
   var settings = {
@@ -97,6 +105,47 @@ const Page = () => {
 
   const opendiv = (tabId) => {
     setActiveTab(tabId);
+  };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      // transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    ...theme.applyStyles("dark", {
+      backgroundColor: "rgba(255, 255, 255, .05)",
+    }),
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
   return (
     <>
@@ -282,7 +331,7 @@ const Page = () => {
                   }`}
                   onClick={() => handleSellerTab()}
                 >
-                  <a>Jobseeker App Features </a>
+                  <a>Billers / Staff </a>
                 </li>
                 <li
                   id="tab2_li"
@@ -291,7 +340,7 @@ const Page = () => {
                   }`}
                   onClick={() => handleBuyerTab()}
                 >
-                  <a>Employer App Features </a>
+                  <a>Supplier Mode </a>
                 </li>
                 <li
                   id="tab3_li"
@@ -334,8 +383,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/ragister-icon.png"
                               />
@@ -354,8 +403,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_alert.png"
                               />
@@ -376,8 +425,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_profile.png"
                               />
@@ -397,8 +446,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/save_fav.png"
                               />
@@ -417,8 +466,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/apply_job.png"
                               />
@@ -438,8 +487,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/search_job.png"
                               />
@@ -458,8 +507,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/applied_job.png"
                               />
@@ -478,8 +527,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/share_job.png"
                               />
@@ -499,8 +548,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_edu.png"
                               />
@@ -543,8 +592,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-availability-icon.png"
                               />
@@ -563,8 +612,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-services-icon.png"
                               />
@@ -585,8 +634,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-outstanding-icon.png"
                               />
@@ -605,8 +654,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/accept-requests-icon.png"
                               />
@@ -625,8 +674,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-requests-icon.png"
                               />
@@ -668,8 +717,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-availability-icon.png"
                               />
@@ -688,8 +737,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-services-icon.png"
                               />
@@ -709,8 +758,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-outstanding-icon.png"
                               />
@@ -729,8 +778,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/accept-requests-icon.png"
                               />
@@ -749,8 +798,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-requests-icon.png"
                               />
@@ -769,8 +818,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage-requests-icon.png"
                               />
@@ -813,8 +862,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/secure_login.png"
                               />
@@ -830,8 +879,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/admin_dash.png"
                               />
@@ -852,8 +901,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/configuration.png"
                               />
@@ -873,8 +922,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_skill.png"
                               />
@@ -895,8 +944,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_emp.png"
                               />
@@ -916,8 +965,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_job.png"
                               />
@@ -938,8 +987,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_news.png"
                               />
@@ -959,8 +1008,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/course_details.png"
                               />
@@ -982,8 +1031,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_cat.png"
                               />
@@ -1003,8 +1052,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_blog.png"
                               />
@@ -1024,8 +1073,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -1044,8 +1093,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -1067,8 +1116,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -1087,8 +1136,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -1109,8 +1158,8 @@ const Page = () => {
                             <i>
                               <Image
                                 unoptimized={true}
-                                width={100}
-                                height={100}
+                                width={47}
+                                height={100 / (100 / 100)}
                                 alt="img"
                                 src="/img/jobboard/manage_banner.png"
                               />
@@ -1680,7 +1729,7 @@ const Page = () => {
                 <div className="supportsetting_icn">
                   <Image
                     unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1692,7 +1741,7 @@ const Page = () => {
                 <div className="supportsetting_icn">
                   <Image
                     unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1704,7 +1753,7 @@ const Page = () => {
                 <div className="supportsetting_icn">
                   <Image
                     unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1716,7 +1765,7 @@ const Page = () => {
                 <div className="supportsetting_icn">
                   <Image
                     unoptimized={true}
-                    width={40}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1980,40 +2029,78 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-md-7">
-                <div className="ecommerce__Quick_FAQ">
-                  <MDBAccordion v-model="activeItem" borderless>
-                    <MDBAccordionItem
-                      headerTitle="Why should I use inventory management software?"
-                      collapseId="flush-collapse1"
+                <div className="panel-group ecommerce__Quick_FAQ">
+                  <Accordion
+                    expanded={expanded === "panel1"}
+                    onChange={handleChange("panel1")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel1" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel1d-content"
+                      id="panel1d-header"
                     >
-                      <p>
+                      <Typography>
+                        Why should I use inventory management software?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         Our inventory management solution is designed to elevate
                         your business. It not only enhances sales but also saves
                         valuable time, mitigates errors, and reduces the
                         workload on your team. Ultimately, it fosters increased
                         productivity and contributes to heightened customer
                         satisfaction.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="What is the best way to Manage Inventory?"
-                      collapseId="flush-collapse2"
+                  <Accordion
+                    expanded={expanded === "panel2"}
+                    onChange={handleChange("panel2")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel2" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel2d-content"
+                      id="panel2d-header"
                     >
-                      <p>
+                      <Typography>
+                        What is the best way to Manage Inventory?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         The choice of an inventory management solution should
                         align with your priorities, budget constraints, customer
                         expectations, the scale of your business, and various
                         other variables. Making the right decision requires a
                         thoughtful consideration of these factors.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="What results can I expect by using the Inventory Management System?"
-                      collapseId="flush-collapse3"
+                  <Accordion
+                    expanded={expanded === "panel3"}
+                    onChange={handleChange("panel3")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel3" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel3d-content"
+                      id="panel3d-header"
                     >
-                      <p>
+                      <Typography>
+                        What results can I expect by using the Inventory
+                        Management System?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         By using the Inventory Management System, you can expect
                         improved operational efficiency, greater accuracy in
                         inventory management, cost savings, faster order
@@ -2021,14 +2108,28 @@ const Page = () => {
                         layouts, increased customer satisfaction, reduced
                         workload, and enhanced compliance and reporting
                         capabilities.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="How do I get the best value for my money with Inventory Management System?"
-                      collapseId="flush-collapse4"
+                  <Accordion
+                    expanded={expanded === "panel4"}
+                    onChange={handleChange("panel4")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel4" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel4d-content"
+                      id="panel4d-header"
                     >
-                      <p>
+                      <Typography>
+                        How do I get the best value for my money with Inventory
+                        Management System?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         To get the best value from an Inventory Management
                         System, consider the costs of transitioning from a
                         cheaper solution or Excel. This is crucial in a rapidly
@@ -2037,60 +2138,126 @@ const Page = () => {
                         customization, integration, and scalability. Calculate
                         potential ROI and stay mindful of industry changes to
                         make an informed decision.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Can Admin be able to add multiple items/products?"
-                      collapseId="flush-collapse5"
+                  <Accordion
+                    expanded={expanded === "panel5"}
+                    onChange={handleChange("panel5")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel5" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel5d-content"
+                      id="panel5d-header"
                     >
-                      <p>
+                      <Typography>
+                        Can Admin be able to add multiple items/products?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         Indeed, the admin has the ability to add numerous items
                         or products.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Can an Admin be able to add the same item/product from multiple suppliers?"
-                      collapseId="flush-collapse6"
+                  <Accordion
+                    expanded={expanded === "panel6"}
+                    onChange={handleChange("panel6")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel6" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel6d-content"
+                      id="panel6d-header"
                     >
-                      <p>
+                      <Typography>
+                        Can an Admin be able to add the same item/product from
+                        multiple suppliers?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         Yes, the admin has the capability to add identical items
                         or products from various suppliers.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Can Admin be able to add multiple suppliers?"
-                      collapseId="flush-collapse7"
+                  <Accordion
+                    expanded={expanded === "panel7"}
+                    onChange={handleChange("panel7")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel7" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel7d-content"
+                      id="panel7d-header"
                     >
-                      <p>
+                      <Typography>
+                        Can Admin be able to add multiple suppliers?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         Yes, there are no limitations on the number of suppliers
                         that can be added by the admin.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="Is Admin able to generate reports at any time?"
-                      collapseId="flush-collapse8"
+                  <Accordion
+                    expanded={expanded === "panel8"}
+                    onChange={handleChange("panel8")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel8" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel8d-content"
+                      id="panel8d-header"
                     >
-                      <p>
+                      <Typography>
+                        Is Admin able to generate reports at any time?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
                         Yes, the admin has the freedom to generate reports
                         whenever they choose.
-                      </p>
-                    </MDBAccordionItem>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
 
-                    <MDBAccordionItem
-                      headerTitle="How many days will it take to implement?"
-                      collapseId="flush-collapse9"
+                  <Accordion
+                    expanded={expanded === "panel9"}
+                    onChange={handleChange("panel9")}
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        expanded === "panel9" ? <RemoveIcon /> : <AddIcon />
+                      }
+                      aria-controls="panel9d-content"
+                      id="panel9d-header"
                     >
-                      <p>
-                        The whole process will take maximum 1 week time and the
+                      <Typography>
+                        How many days will it take to implement?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        The whole process will take a maximum of 1 week, and the
                         rest depends on your response time and customization
                         requirements.
-                      </p>
-                    </MDBAccordionItem>
-                  </MDBAccordion>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
                 </div>
               </div>
             </div>
@@ -2108,8 +2275,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={100}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/inventory-management/admin-dashboard.jpg"
                     alt="admin-dashboard"
                   />
@@ -2122,8 +2289,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={100}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/inventory-management/supplier.jpg"
                     alt="Supplier"
                   />
@@ -2136,8 +2303,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={100}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/inventory-management/customer.jpg"
                     alt="customer"
                   />
@@ -2150,8 +2317,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={100}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/inventory-management/category-list.jpg"
                     alt="category-list"
                   />
@@ -2164,8 +2331,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={100}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/inventory-management/products-management.jpg"
                     alt="Products Management"
                   />
@@ -2178,8 +2345,8 @@ const Page = () => {
                 <div className="feat-slide-img">
                   <Image
                     unoptimized={true}
-                    width={100}
-                    height={100}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
                     alt="Membership Plan"
                   />
@@ -2209,7 +2376,7 @@ const Page = () => {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="vedanta"
+                    title="Inventory Managment System"
                   />
                 }
               </div>
@@ -2235,7 +2402,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={100}
+                            width={200}
                             height={100}
                             src="/img/jobboard/business-logo.png"
                             alt="business-directory-system"
@@ -2264,7 +2431,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={100}
+                            width={200}
                             height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplace-software"
@@ -2293,7 +2460,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={100}
+                            width={200}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"

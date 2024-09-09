@@ -16,6 +16,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
@@ -83,6 +89,91 @@ const Page = () => {
     }
   };
 
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem"  }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -106,7 +197,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
@@ -145,7 +237,8 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -174,7 +267,8 @@ See how it work yourself!"
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={320}
                   height={500 / (100 / 100)}
                   alt="Groupon Clone"
@@ -264,7 +358,7 @@ See how it work yourself!"
           </div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul>
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`admin_app_job ddlj ${AdminTab ? "active" : ""}`}
@@ -299,7 +393,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/grouponclone/groupon-site.png
@@ -313,7 +408,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -329,7 +425,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -348,7 +445,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -369,7 +467,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -388,7 +487,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -409,7 +509,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -428,7 +529,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -448,7 +550,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -467,7 +570,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -484,7 +588,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -500,7 +605,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -521,7 +627,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -540,7 +647,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -575,7 +683,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/grouponclone/groupon_user_mobile.png"
@@ -588,7 +697,8 @@ See how it work yourself!"
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -607,7 +717,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -626,7 +737,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -646,7 +758,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -664,7 +777,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -684,7 +798,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -704,7 +819,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -725,7 +841,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -746,7 +863,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -766,7 +884,8 @@ See how it work yourself!"
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -785,7 +904,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -815,7 +935,8 @@ See how it work yourself!"
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/grouponclone/groupon_user_mobile.png"
@@ -829,7 +950,8 @@ See how it work yourself!"
                             <li>
                               <i>
                                 {" "}
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/jobboard/Request_management.png"
@@ -848,7 +970,8 @@ See how it work yourself!"
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/jobboard/review_feature.png"
@@ -868,7 +991,8 @@ See how it work yourself!"
                             <li>
                               <i>
                                 {" "}
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/jobboard/equipment-management.png"
@@ -888,7 +1012,8 @@ See how it work yourself!"
                             <li>
                               <i>
                                 {" "}
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/jobboard/email.png"
@@ -910,7 +1035,8 @@ See how it work yourself!"
                             <li>
                               <i>
                                 {" "}
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/jobboard/eBay_5.png"
@@ -931,7 +1057,8 @@ See how it work yourself!"
                             <li>
                               <i>
                                 {" "}
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/jobboard/manage_pages.png"
@@ -1134,7 +1261,8 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1209,7 +1337,8 @@ See how it work yourself!"
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={20}
                     height={100}
                     src="/img/images/why-logic-icon.png"
@@ -1235,8 +1364,9 @@ See how it work yourself!"
               <ul>
                 <li data-aos="fade-up" className="aos-init aos-animate">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="CakePHP Development"
@@ -1246,8 +1376,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up" className="aos-init aos-animate">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/html-5.png"
                       alt="HTML5"
@@ -1257,8 +1388,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up" className="aos-init aos-animate">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_mysql_icon.png"
                       alt="MySQL"
@@ -1268,8 +1400,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up" className="aos-init aos-animate">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
@@ -1279,8 +1412,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up" className="aos-init aos-animate">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/apple_phn_icon.png"
                       alt="MySQL"
@@ -1291,8 +1425,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up" className="aos-init aos-animate">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/andoird_icon.png"
                       alt="Apache"
@@ -1344,8 +1479,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1355,8 +1491,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1366,8 +1503,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1377,8 +1515,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -1526,7 +1665,8 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">Clark - Methew, Canada</span>{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={20}
                           height={100}
                           src="/img/grouponclone/canada_flag_img.png"
@@ -1561,7 +1701,8 @@ See how it work yourself!"
                       </span>
                       Rafish Saabdeen, Dubai [UAE]{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={20}
                           height={100}
                           src="/img/grouponclone/uae_flag_iimg.png"
@@ -1599,7 +1740,8 @@ See how it work yourself!"
                       </span>
                       Adom, USA{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={20}
                           height={100}
                           src="/img/grouponclone/usa_flag_img.png"
@@ -1616,107 +1758,110 @@ See how it work yourself!"
               <h4 className="title_main">Quick FAQ</h4>
 
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="How can a customer search for deals around his location?"
-                    collapseId="flush-collapse1"
+              
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                  
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                    className="aos-init aos-animate"
                   >
-                    <p>
+                    <Typography>
+                      How can a customer search for deals around his location?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
                       Location of customers is auto detected on the website or
                       customers can select their city on the website and all the
                       deals available nearby will be listed to the customer.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can the Customer give a rating to a deal even if they haven't purchased it?"
-                    collapseId="flush-collapse2"
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
                   >
-                    <p>
+                    <Typography>
+                      Can the Customer give a rating to a deal even if they
+                      haven't purchased it?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
                       No. Customers can give ratings for the deal only after
                       they purchase the deal. Customers can also write a review
                       along with the rating.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can a Business Owner upload multiple deals to the website?"
-                    collapseId="flush-collapse3"
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
                   >
-                    <p>
+                    <Typography>
+                      Can a Business Owner upload multiple deals to the website?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
                       Yes, Business Owners can add more than one deal with
                       multiple pictures and other details.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Are there any hidden charges or installation charges ?"
-                    collapseId="flush-collapse4"
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
                   >
-                    <p>
-                      No. we don’t have any type of hidden charges and after
-                      buying a product, installation will be done from our end
-                      which will be free.{" "}
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I update some design and functionality in application code myself?"
-                    collapseId="flush-collapse8"
+                    <Typography>
+                      Are there any hidden charges or installation charges ?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No. we don&apos;t have any type of hidden charges and
+                      after buying a product, installation will be done from our
+                      end which will be free.{" "}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
                   >
-                    <p>
+                    <Typography>
+                      {" "}
+                      Can I update some design and functionality in application
+                      code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
                       Yes, You will have access of the all the code, except some
                       of the core encrypted files.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Will I be able to use it on multiple domains, after I purchase this script?"
-                    collapseId="flush-collapse9"
-                  >
-                    <p>
-                      You will be licensed to use it only for the domain, you
-                      purchased for.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I resell the script? Will I have rights over the script code?"
-                    collapseId="flush-collapse10"
-                  >
-                    <p>
-                      All rights will remain with Logicspice only, and you can
-                      not resell it.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Do you offer Money Back Guarantee?"
-                    collapseId="flush-collapse11"
-                  >
-                    <p>
-                      Yes, we offer 30 days money back guarantee to ensure
-                      customer satisfaction of our softwares. If for any reason,
-                      you wish to discontinue using the product, you can ask us
-                      for refund. We will refund your total money except the
-                      installation and configuration charges, which is USD 65 or
-                      20% of application cost, whichever is greater. Any cost of
-                      customization will not be refunded.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
-                    collapseId="flush-collapse12"
-                  >
-                    <p>
-                      We recommend you purchase SSL certificate along with a
-                      hosting server, considering that an SSL certificate is
-                      necessary for all the websites these days and it provides
-                      a secure layer to the website as well.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -1730,7 +1875,8 @@ See how it work yourself!"
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/grouponclone/groupon_home.png"
@@ -1743,7 +1889,8 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/grouponclone/list.png"
@@ -1756,7 +1903,8 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={1075}
                     height={100}
                     src="/img/grouponclone/business.png"
@@ -1806,7 +1954,8 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Job Board Software</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/grouponclone/job-board-logo.png"
@@ -1833,7 +1982,8 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/grouponclone/rms_new.png"
@@ -1863,7 +2013,8 @@ See how it work yourself!"
                       <div className="other-caption-bx">
                         <h3>Equipment Rental Script</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/grouponclone/equipment_logo_new.png"
@@ -1892,7 +2043,8 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={50}
               height={50}
               src="/img/images/whatsapp.png"

@@ -84,11 +84,11 @@ const Page = () => {
     setAdminTab(false);
   };
 
-  const [expanded, setExpanded] = React.useState("panel1");
+  // const [expanded, setExpanded] = React.useState("panel1");
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
 
   const handleBuyerTab = () => {
     setSellerTab(false);
@@ -119,6 +119,41 @@ const Page = () => {
     setShowModal(!showModal);
   };
 
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor:
+  //     theme.palette.mode === "dark"
+  //       ? "rgba(255, 255, 255, .05)"
+  //       : "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -137,10 +172,7 @@ const Page = () => {
       {...props}
     />
   ))(({ theme }) => ({
-    backgroundColor:
-      theme.palette.mode === "dark"
-        ? "rgba(255, 255, 255, .05)"
-        : "rgba(0, 0, 0, .03)",
+    backgroundColor: "rgba(0, 0, 0, .03)",
     flexDirection: "row-reverse",
     "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
       transform: "rotate(90deg)",
@@ -148,12 +180,22 @@ const Page = () => {
     "& .MuiAccordionSummary-content": {
       marginLeft: theme.spacing(1),
     },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
   }));
 
   const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     padding: theme.spacing(2),
     borderTop: "1px solid rgba(0, 0, 0, .125)",
   }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
     <>
@@ -175,7 +217,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                           width={100}
@@ -227,7 +270,8 @@ const Page = () => {
                     <a href="#subscriptionprice">click here</a>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -257,11 +301,12 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   src="/img/businessdirectory/Business_Directory_Banner_Img.png"
                   alt="business-directory-system"
-                  width={500}
-                  height={100}
+                  width={800}
+                  height={100 / (100 / 100)}
                 />
               </div>
             </div>
@@ -304,59 +349,49 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            {/* <div className="col-md-6 job-video">
+            <div className="col-md-6 job-video">
               <iframe
                 width="100%"
                 height="312"
-                src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0"
+                src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0&autoplay=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen=""
               ></iframe>
-            </div> */}
-   <div className="col-md-6 job-video">
-  <iframe
-    width="100%"
-    height="312"
-    src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0&autoplay=1"
-    title="YouTube video player"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen=""
-  ></iframe>
-</div>
-
+            </div>
 
             <div className="col-md-6">
-              <div className="service-market-ttd">
+              <div className="service-market-ttd-new">
                 <ul>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Business owners can create their business profiles through
                     which they can list all their business information
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Customers receive correct information about business because
                     the information can be verified.
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Business owners can add products/services here to promote
                     them.
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Customers can search for businesses around them using the
                     city and state filters.
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Business owners can receive reviews about their business.
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Customers can give ratings to the businesses, which can be
                     viewed by other customers.
                   </li>
-                  <li>Responsive website (mobile friendly)</li>
-                  <li>White labeled software</li>
-                  <li>One time License Fee</li>
+                  <li style={{ width: "100%" }}>
+                    Responsive website (mobile friendly)
+                  </li>
+                  <li style={{ width: "100%" }}>White labeled software</li>
+                  <li style={{ width: "100%" }}>One time License Fee</li>
                 </ul>
               </div>
             </div>
@@ -378,7 +413,7 @@ const Page = () => {
           </div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul>
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -414,7 +449,8 @@ const Page = () => {
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right costomer_tab_rightleft">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/businessdirectory/business-directory_user_mobile.png"
                           alt="User"
                           width={400}
@@ -428,7 +464,8 @@ const Page = () => {
                           <li>
                             <i>
                               {" "}
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 src="/img/jobboard/manage_profile.png"
                                 alt="Business Search"
                                 width={100}
@@ -448,7 +485,8 @@ const Page = () => {
                           <li>
                             <i>
                               {" "}
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 src="/img/jobboard/send_mail.png"
                                 alt="Review Feature"
                                 width={100}
@@ -467,7 +505,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 src="/img/jobboard/review_feature.png"
                                 alt="Business Listing"
                                 width={100}
@@ -487,7 +526,8 @@ const Page = () => {
                           <li>
                             <i>
                               {" "}
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 src="/img/jobboard/manage_city.png"
                                 alt="Review Feature"
                                 width={100}
@@ -507,7 +547,8 @@ const Page = () => {
                           <li>
                             <i>
                               {" "}
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 src="/img/jobboard/reviews_ratings.png"
                                 alt="Offers Section"
                                 width={100}
@@ -528,7 +569,8 @@ const Page = () => {
                           <li>
                             <i>
                               {" "}
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 src="/img/jobboard/manage_news.png"
                                 alt="Business Detail"
                                 width={100}
@@ -559,7 +601,8 @@ const Page = () => {
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/businessdirectory/business-directory_user_mobile.png"
                           alt="User"
                           width={400}
@@ -572,7 +615,8 @@ const Page = () => {
                         <ul>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/ragister-icon.png"
                                 width={100}
@@ -591,7 +635,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/create-project.png"
                                 width={100}
@@ -610,7 +655,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/search_location.png"
                                 width={100}
@@ -628,7 +674,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/crm-management.png"
                                 width={100}
@@ -647,7 +694,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage-project.png"
                                 width={100}
@@ -667,7 +715,8 @@ const Page = () => {
 
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_services.png"
                                 width={100}
@@ -686,7 +735,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/form-management.png"
                                 width={100}
@@ -708,7 +758,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/enquiry-management.png"
                                 width={100}
@@ -728,7 +779,8 @@ const Page = () => {
 
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/catalog-management.png"
                                 width={100}
@@ -747,7 +799,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/fov_cant.png"
                                 width={100}
@@ -767,7 +820,8 @@ const Page = () => {
 
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_news.png"
                                 width={100}
@@ -788,7 +842,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_cat.png"
                                 width={100}
@@ -818,7 +873,8 @@ const Page = () => {
                   <div className="row">
                     <div className="col-lg-4 col-md-3 ">
                       <div className="costomer_tab_right costomer_tab_rightleft2">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/businessdirectory/business-directory-admin.png"
                           alt="Admin Panel"
                           width={400}
@@ -831,7 +887,8 @@ const Page = () => {
                         <ul>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/secure_login.png"
                                 width={100}
@@ -850,7 +907,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/admin_dash.png"
                                 width={100}
@@ -869,7 +927,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_user.png"
                                 width={100}
@@ -888,7 +947,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/social_login.png"
                                 width={100}
@@ -908,7 +968,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage-project.png"
                                 width={100}
@@ -928,7 +989,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_services.png"
                                 width={100}
@@ -948,7 +1010,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/postan_ad.png"
                                 width={100}
@@ -968,7 +1031,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_news.png"
                                 width={100}
@@ -987,7 +1051,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/manage_plan.png"
                                 width={100}
@@ -1007,7 +1072,8 @@ const Page = () => {
 
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/search_location.png"
                                 width={100}
@@ -1026,7 +1092,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/view_category.png"
                                 width={100}
@@ -1045,7 +1112,8 @@ const Page = () => {
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 alt="img"
                                 src="/img/jobboard/send_mail.png"
                                 width={100}
@@ -1264,7 +1332,8 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -1347,7 +1416,8 @@ const Page = () => {
               </Link>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1391,7 +1461,8 @@ const Page = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/businessdirectory/dishit.jpg"
                     alt="icon"
                     title=""
@@ -1416,7 +1487,8 @@ const Page = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/businessdirectory/mexperts.jpg"
                     alt="icon"
                     title=""
@@ -1441,7 +1513,8 @@ const Page = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/businessdirectory/salorapido.jpg"
                     alt="icon"
                     title=""
@@ -1474,7 +1547,8 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_cakephp_icon.png"
                         alt="CakePHP Development"
                         width={60}
@@ -1485,10 +1559,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
-                        width={40}
+                        width={60}
                         height={40}
                       />
                     </div>
@@ -1496,10 +1571,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
-                        width={40}
+                        width={60}
                         height={40}
                       />
                     </div>
@@ -1507,10 +1583,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
-                        width={40}
+                        width={60}
                         height={40}
                       />
                     </div>
@@ -1518,10 +1595,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="iOS"
-                        width={40}
+                        width={50}
                         height={40}
                       />
                     </div>
@@ -1529,10 +1607,11 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up" className="aos-init aos-animate">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
-                        width={40}
+                        width={50}
                         height={40}
                       />
                     </div>
@@ -1582,40 +1661,44 @@ const Page = () => {
             <ul>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     height={50}
-                    width={50}
+                    width={60}
                   />
                 </div>
                 <div className="supportsettingtext">Free Support</div>
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={50}
-                    width={50}
+                    width={60}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     height={50}
-                    width={50}
+                    width={60}
                   />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
               </li>
               <li data-aos="fade" className="aos-init aos-animate">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1763,7 +1846,8 @@ const Page = () => {
                       </span>
                       Clark - Methew, Canada{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/canada_flag_img.png"
                           alt="mobile app development in Canada"
                           style={{ width: "20px", marginLeft: "3px" }}
@@ -1799,7 +1883,8 @@ const Page = () => {
                         Rafish Saabdeen, Dubai [UAE]{" "}
                       </span>{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in Dubai"
                           height={20}
@@ -1834,7 +1919,8 @@ const Page = () => {
                       </span>
                       Adom, USA{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/uae_flag_iimg.png"
                           alt="mobile app development in USA"
                           style={{ width: "20px", marginLeft: "3px" }}
@@ -1850,113 +1936,6 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="How can a customer search for businesses around his location?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      A Customer can enter his zip/postal code on the website
-                      and all the businesses that are around will be listed to
-                      the customer.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can the customer give rating to a business even if he hasn&apos;t visited the store?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      Yes, customer can give rating out of 5 even if they
-                      haven&apos;t visited the store. Customer can also write a
-                      review along with the rating.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can a business owner upload multiple services to the website?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Yes, the business owner can upload multiple
-                      services/products that he deals in.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="How can a customer ensure the authenticity of the information of different businesses?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      Whenever a business owner creates a page for his business,
-                      it has to be approved by the admin.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can a user view the contact information of the seller?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      Yes. If a seller chooses to share his contact information
-                      on the website, the customer can see it.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I update some design and functionality in the application code myself?"
-                    collapseId="flush-collapse6"
-                  >
-                    <p>Yes, You will have access to all the code.</p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Will I be able to use it on multiple domains, after I purchase this software?"
-                    collapseId="flush-collapse7"
-                  >
-                    <p>
-                      You will be licensed to use it only for the domain, you
-                      purchased for.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I resell the software? Will I have rights over the software code?"
-                    collapseId="flush-collapse8"
-                  >
-                    <p>
-                      No, You can&apos;t resell the software. All rights will
-                      remain with Logicspice only.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Do you offer Money Back Guarantee?"
-                    collapseId="flush-collapse9"
-                  >
-                    <p>
-                      Yes, we offer 30 days money-back guarantee to ensure
-                      customer satisfaction with our software. If for any
-                      reason, you wish to discontinue using the product, you can
-                      ask us for a refund. We will refund your total money
-                      except the installation and configuration charges, which
-                      is USD 65 or 20% of the application cost, whichever is
-                      greater.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
-                    collapseId="flush-collapse10"
-                  >
-                    <p>
-                      We recommend you purchase an SSL certificate along with a
-                      hosting server, considering that an SSL certificate is
-                      necessary for all websites these days and it provides a
-                      secure layer to the website as well.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
                 <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
@@ -2087,7 +2066,7 @@ const Page = () => {
           <h2 className="title_main">
             PHP Business Directory Software Features
           </h2>
-          <div id="equipment_sldier">
+          {/* <div id="equipment_sldier">
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
@@ -2168,6 +2147,82 @@ const Page = () => {
                 </div>
               </SwiperSlide>
             </Swiper>
+          </div> */}
+          <div id="joblboardslide">
+            <Slider {...settings}>
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    unoptimized={true}
+                    src="/img/businessdirectory/BusinessDetails.png"
+                    alt="Business Details"
+                    height={1075}
+                    width={1075}
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Business Details</div>
+                  <div className="pro-feat-detai">
+                    Business details like title, image, description, place,
+                    categories, list of reviews and ratings.
+                  </div>
+                </div>
+              </div>
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    unoptimized={true}
+                    src="/img/businessdirectory/BusinessListing.png"
+                    alt="Business Listing"
+                    height={1075}
+                    width={1075}
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Service Listing</div>
+                  <div className="pro-feat-detai">
+                    Users can view a list of business according to their search
+                    criteria with the details of the business.
+                  </div>
+                </div>
+              </div>
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    unoptimized={true}
+                    src="/img/businessdirectory/add-business-new.png"
+                    alt="add-business"
+                    height={1075}
+                    width={1075}
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Add Business</div>
+                  <div className="pro-feat-detai">
+                    Users can view discount that is being offered and offer
+                    title, image and description.{" "}
+                  </div>
+                </div>
+              </div>
+              <div className="SliderMainBx">
+                <div className="feat-slide-img">
+                  <Image
+                    unoptimized={true}
+                    src="/img/businessdirectory/PopularPlacesNew.png"
+                    alt="Popular Places"
+                    height={1075}
+                    width={1075}
+                  />
+                </div>
+                <div className="hands-proved">
+                  <div className="titleof_scnew">Search Products</div>
+                  <div className="pro-feat-detai">
+                    Users can see the popular businesses on the website and
+                    sorted according to their rating and number of reviews.
+                  </div>
+                </div>
+              </div>
+            </Slider>
           </div>
         </div>
       </section>
@@ -2206,7 +2261,8 @@ const Page = () => {
                         <h3>Classified Ads Script</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/jobboard/classified_logo_new.png"
                             alt="Classified Ads Script"
                             className=""
@@ -2234,7 +2290,8 @@ const Page = () => {
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"
                             className=""
@@ -2262,7 +2319,8 @@ const Page = () => {
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
                             className=""
@@ -2288,7 +2346,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

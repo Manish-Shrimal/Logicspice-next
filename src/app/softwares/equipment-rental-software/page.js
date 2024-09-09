@@ -17,6 +17,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   var settings = {
     dots: true,
@@ -86,6 +92,50 @@ const Page = () => {
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+  
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+  
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+  
+  const [expanded, setExpanded] = React.useState("panel1");
+  
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   useEffect(() => {
@@ -210,7 +260,7 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section className="client-say crowdfunding-say">
+      <section className="client-say ">
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
@@ -224,35 +274,35 @@ const Page = () => {
               ></iframe>
             </div>
             <div className="col-md-6">
-              <div className="service-market-ttd">
-                <ul>
-                  <li>
+              <div className="job-portal-ttd" style={{width : "100%"}}>
+                <ul >
+                  <li style={{width : "100%"}}>
                     Charge borrower for renting the equipment on weekly, daily
                     or hourly basis.
                   </li>
-                  <li>
+                  <li style={{width : "100%"}}>
                     Automatic email notifications send to the renter and
                     borrower on new request and review.
                   </li>
-                  <li>
+                  <li style={{width : "100%"}}>
                     This equipment rental script is specially designed for high
                     rate performance so it can work with heavy database.
                   </li>
-                  <li>
+                  <li style={{width : "100%"}}>
                     Easily install this equipment rental software in your system
                     by following some steps.
                   </li>
-                  <li>
+                  <li style={{width : "100%"}}>
                     The script comes with seo friendly URLs to increase the
                     readability of the search engine.
                   </li>
-                  <li>
+                  <li style={{width : "100%"}}>
                     Equipment booking software is fully optimized for mobile
                     devices and works perfectly on all screen size.
                   </li>
-                  <li>Responsive website (mobile friendly)</li>
-                  <li>White labeled script </li>
-                  <li>One time License Fee</li>
+                  <li style={{width : "100%"}}>Responsive website (mobile friendly)</li>
+                  <li style={{width : "100%"}}>White labeled script </li>
+                  <li style={{width : "100%"}}>One time License Fee</li>
                 </ul>
               </div>
             </div>
@@ -274,7 +324,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`renter_user ddlj ${renterTab ? "active" : ""}`}
@@ -1427,22 +1477,22 @@ const Page = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Image unoptimized={true}
-              src="/img/fiverrclone/gigger-how-it-works.jpg"
+              src="/img/jobboard/machine_rental.webp"
               alt="icon"
               title=""
               className="img-fluid"
               width={900}
-              height={100}
+              height={100 / (100 / 100)}
             />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
 
         <Modal
@@ -1474,12 +1524,12 @@ const Page = () => {
                     rel="noopener noreferrer"
                   >
                     <Image unoptimized={true}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/images/simplax.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"
                       width={900}
-                      height={100}
+                      height={100 / (100 / 100)}
                     />
                   </Link>
                 </div>
@@ -1499,12 +1549,12 @@ const Page = () => {
                     rel="noopener noreferrer"
                   >
                     <Image unoptimized={true}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/images/waku.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
                       width={900}
-                      height={100}
+                      height={100 / (100 / 100)}
                     />
                   </Link>
                 </div>
@@ -1524,12 +1574,12 @@ const Page = () => {
                     rel="noopener noreferrer"
                   >
                     <Image unoptimized={true}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/images/yelloh.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
                       width={900}
-                      height={100}
+                      height={100 / (100 / 100)}
                     />
                   </Link>
                 </div>
@@ -1560,7 +1610,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1571,7 +1621,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
-                        width={40}
+                        width={50}
                         height={100}
                       />
                     </div>
@@ -1582,7 +1632,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1593,7 +1643,7 @@ const Page = () => {
                       <Image unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
-                        width={40}
+                        width={60}
                         height={100}
                       />
                     </div>
@@ -1640,8 +1690,8 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
-                    width={50}
-                    height={100}
+                    width={60}
+                    height={100 / (100 / 100)}
                   />
                 </div>
                 <div className="supportsettingtext">Free Support</div>
@@ -1651,8 +1701,8 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
-                    width={50}
-                    height={100}
+                    width={60}
+                    height={100 / (100 / 100)}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
@@ -1662,8 +1712,8 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
-                    width={50}
-                    height={100}
+                    width={60}
+                    height={100 / (100 / 100)}
                   />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
@@ -1673,8 +1723,8 @@ const Page = () => {
                   <Image unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
-                    width={40}
-                    height={100}
+                    width={60}
+                    height={100 / (100 / 100)}
                   />
                 </div>
                 <div className="supportsettingtext">Easily scalable</div>
@@ -1791,7 +1841,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="PHP Business Directory Script"
+                    title="Equipment Rental Script"
                   />
                 </div>
                 <div className="col-md-12">
@@ -1883,7 +1933,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Can borrower give a review/rating even if they have not rented the equipment?"
                     collapseId="flush-collapse1"
@@ -1992,7 +2042,117 @@ const Page = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+  <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+    <Typography>Can the borrower give a review/rating even if they have not rented the equipment?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      No. The borrower can only review/rate the product once their request has been accepted by the renter.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+  <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+    <Typography>When will the renter/borrower receive emails?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      The users will receive emails whenever they have an update. For example, when they sign up, when they have a new request, or when their request is accepted.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+  <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+    <Typography>Along with hosting server details, what other recommendations?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and it provides a secure layer to the website as well.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+  <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+    <Typography>What kind of equipment can be added to the equipment rental software?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Any type of industrial equipment can be added to the system. The renter can mark if the equipment is for sale or not.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+  <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+    <Typography>Will there be an installation charge when I purchase the product?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      No. The installation of our equipment rental product will be absolutely free of cost.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+  <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+    <Typography>Once I purchase the equipment rental software, how many days will it take to go online?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      The time taken to implement depends on the level of customization and data migration. It takes approximately 7 days to implement.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+  <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
+    <Typography>Can I update some design and functionality in the application code myself?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Yes, you will have access to all the code, except some of the core encrypted files.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
+  <AccordionSummary aria-controls="panel8d-content" id="panel8d-header">
+    <Typography>Will I be able to use it on multiple domains after I purchase this script?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      You will be licensed to use it only for the domain you purchased it for.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
+  <AccordionSummary aria-controls="panel9d-content" id="panel9d-header">
+    <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      No, you can't resell the script. All rights will remain with Logicspice only.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')}>
+  <AccordionSummary aria-controls="panel10d-content" id="panel10d-header">
+    <Typography>Do you offer a Money Back Guarantee?</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Yes, we offer a 30-day money-back guarantee to ensure customer satisfaction with our software. If for any reason you wish to discontinue using the product, you can ask us for a refund. We will refund your total money except the installation and configuration charges, which is USD 65 or 20% of the application cost, whichever is greater.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
               </div>
             </div>
           </div>
@@ -2210,7 +2370,7 @@ const Page = () => {
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
                             className=""
-                            width={250}
+                            width={150}
                             height={100}
                           />
                         </div>
@@ -2233,7 +2393,7 @@ const Page = () => {
                             src="/img/jobboard/groupon-clone-logo.png"
                             alt="Groupon clone"
                             className=""
-                            width={250}
+                            width={150}
                             height={100}
                           />
                         </div>

@@ -1953,7 +1953,7 @@ section {
         width: 47px;
         display: inline-block;
         vertical-align: middle;
-        margin-right: 8px;
+        /* margin-right: 8px; */
     }
     .tab_bbx_ecommerce ul li span{
         padding-top: 0;

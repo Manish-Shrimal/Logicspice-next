@@ -16,6 +16,12 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 
 const AppointmentSchedulingSoftware = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -86,6 +92,90 @@ const AppointmentSchedulingSoftware = () => {
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+  
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+  
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+  
+  const [expanded, setExpanded] = React.useState("panel1");
+  
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   useEffect(() => {
@@ -187,7 +277,7 @@ const AppointmentSchedulingSoftware = () => {
                   alt="Appointment Booking System"
                   src="/img/softwares-banner-img/abs_banner_img.png"
                   height={400}
-                  width={400}
+                  width={375}
                 />
               </div>
             </div>
@@ -262,7 +352,7 @@ const AppointmentSchedulingSoftware = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`food_app_job ddlj ${sellerTab ? "active" : ""}`}
@@ -1383,7 +1473,7 @@ const AppointmentSchedulingSoftware = () => {
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                         height={40}
-                        width={40}
+                        width={60}
                       />
                     </div>
                     <div className="icntechimg_nm">Laravel</div>
@@ -1394,7 +1484,7 @@ const AppointmentSchedulingSoftware = () => {
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         height={40}
-                        width={40}
+                        width={50}
                       />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
@@ -1405,7 +1495,7 @@ const AppointmentSchedulingSoftware = () => {
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         height={40}
-                        width={40}
+                        width={60}
                       />
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
@@ -1416,7 +1506,7 @@ const AppointmentSchedulingSoftware = () => {
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         height={40}
-                        width={40}
+                        width={60}
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
@@ -1463,7 +1553,7 @@ const AppointmentSchedulingSoftware = () => {
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     height={50}
-                    width={50}
+                    width={60}
                   />
                 </div>
                 <div className="supportsettingtext">Free Support</div>
@@ -1474,7 +1564,7 @@ const AppointmentSchedulingSoftware = () => {
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={50}
-                    width={50}
+                    width={60}
                   />
                 </div>
                 <div className="supportsettingtext">Free Brand Removal</div>
@@ -1485,7 +1575,7 @@ const AppointmentSchedulingSoftware = () => {
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     height={50}
-                    width={50}
+                    width={60}
                   />
                 </div>
                 <div className="supportsettingtext">Free Installation</div>
@@ -1711,9 +1801,9 @@ const AppointmentSchedulingSoftware = () => {
               </div>
             </div>
             <div className="col-md-6 Quick_FAQ">
-              <h4 className="title_main">FAQ&apos;s</h4>
+              <h4 className="title_main">Quick FAQ</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="How can Customer book an appointment on the website?"
                     collapseId="flush-collapse1"
@@ -1814,7 +1904,160 @@ const AppointmentSchedulingSoftware = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                
+      <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <Typography>How can Customer book an appointment on the website?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Customers can view the availability of the professional they want to book an appointment with, send a booking request by selecting the date, and make payment for the same.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+      >
+        <AccordionSummary
+          aria-controls="panel2-content"
+          id="panel2-header"
+        >
+          <Typography>Can I get help for customization?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, we have an experienced team of developers to help you with customization as per your requirements.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary
+          aria-controls="panel3-content"
+          id="panel3-header"
+        >
+          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No, you can&apos;t resell the script. All rights will remain with Logicspice only.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel4'}
+        onChange={handleChange('panel4')}
+      >
+        <AccordionSummary
+          aria-controls="panel4-content"
+          id="panel4-header"
+        >
+          <Typography>Can I update some design and functionality in the application code myself?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, you will have access to all the code, except some of the core encrypted files.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel5'}
+        onChange={handleChange('panel5')}
+      >
+        <AccordionSummary
+          aria-controls="panel5-content"
+          id="panel5-header"
+        >
+          <Typography>Will I be able to use it on multiple domains after I purchase this script?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, customers can see if their order has been confirmed, canceled, or delivered. Also, restaurants can add custom order statuses to keep customers updated about each step of the order delivery.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel6'}
+        onChange={handleChange('panel6')}
+      >
+        <AccordionSummary
+          aria-controls="panel6-content"
+          id="panel6-header"
+        >
+          <Typography>You will be licensed to use it only for the domain you purchased for.</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Customers will receive an email whenever the restaurant owner changes the order status on their end.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel7'}
+        onChange={handleChange('panel7')}
+      >
+        <AccordionSummary
+          aria-controls="panel7-content"
+          id="panel7-header"
+        >
+          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No, you can&apos;t resell the script. All rights will remain with Logicspice only.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel8'}
+        onChange={handleChange('panel8')}
+      >
+        <AccordionSummary
+          aria-controls="panel8-content"
+          id="panel8-header"
+        >
+          <Typography>Do you offer Money Back Guarantee?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, we offer a 30-day money-back guarantee to ensure customer satisfaction with our software. If for any reason, you wish to discontinue using the product, you can ask us for a refund. We will refund your total money except the installation and configuration charges, which is USD 65 or 20% of the application cost, whichever is greater.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel9'}
+        onChange={handleChange('panel9')}
+      >
+        <AccordionSummary
+          aria-controls="panel9-content"
+          id="panel9-header"
+        >
+          <Typography>Along with hosting server details, what other recommendations?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and provides a secure layer to the website as well.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
               </div>
             </div>
           </div>

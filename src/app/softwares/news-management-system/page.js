@@ -18,6 +18,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -79,6 +85,49 @@ const Page = () => {
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
 
   useEffect(() => {
@@ -241,7 +290,7 @@ See how it work yourself!"
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job tab_bbx_job_classified">
-              <ul className="">
+              <ul className="tab_listing">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -1133,7 +1182,7 @@ See how it work yourself!"
                     <div className="icntechimg">
                       <Image unoptimized={true}
                         height={100}
-                        width={40}
+                        width={60}
                         src="/img/jobboard/frame_wordpress_icon.png"
                         alt="Wordpress Development"
                       />
@@ -1144,7 +1193,7 @@ See how it work yourself!"
                     <div className="icntechimg">
                       <Image unoptimized={true}
                         height={100}
-                        width={40}
+                        width={50}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                       />
@@ -1155,7 +1204,7 @@ See how it work yourself!"
                     <div className="icntechimg">
                       <Image unoptimized={true}
                         height={100}
-                        width={40}
+                        width={60}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -1166,7 +1215,7 @@ See how it work yourself!"
                     <div className="icntechimg">
                       <Image unoptimized={true}
                         height={100}
-                        width={40}
+                        width={60}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -1177,7 +1226,7 @@ See how it work yourself!"
                     <div className="icntechimg">
                       <Image unoptimized={true}
                         height={100}
-                        width={40}
+                        width={50}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Android"
                       />
@@ -1228,7 +1277,7 @@ See how it work yourself!"
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
                     height={100}
-                    width={40}
+                    width={60}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1239,7 +1288,7 @@ See how it work yourself!"
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
                     height={100}
-                    width={40}
+                    width={60}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1250,7 +1299,7 @@ See how it work yourself!"
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
                     height={100}
-                    width={40}
+                    width={60}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                   />
@@ -1261,7 +1310,7 @@ See how it work yourself!"
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
                     height={100}
-                    width={40}
+                    width={50}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1473,7 +1522,7 @@ See how it work yourself!"
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Does your software support multi-language?"
                     collapseId="flush-collapse1"
@@ -1542,7 +1591,106 @@ See how it work yourself!"
                       provides a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <div>
+      <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary aria-controls="panel1-content" id="panel1-header">
+          <Typography>Does your software support multi-language?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes. Our software supports multi-language.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+      >
+        <AccordionSummary aria-controls="panel2-content" id="panel2-header">
+          <Typography>Where can I get a live demo?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Please click on the Live Demo button on this page above and submit your request for a live demo, and you will get live demo details by email immediately.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+      >
+        <AccordionSummary aria-controls="panel3-content" id="panel3-header">
+          <Typography>Once I purchase this script, how many days will it take to go online?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            It will take 2 working days generally, provided all the information to make it live has been provided.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel4'}
+        onChange={handleChange('panel4')}
+      >
+        <AccordionSummary aria-controls="panel4-content" id="panel4-header">
+          <Typography>Can I get help for customization?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Yes, we have an experienced team of developers to help you with customization as per your requirements.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel5'}
+        onChange={handleChange('panel5')}
+      >
+        <AccordionSummary aria-controls="panel5-content" id="panel5-header">
+          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            No, you can't resell the script. All rights will remain with Logicspice only.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel6'}
+        onChange={handleChange('panel6')}
+      >
+        <AccordionSummary aria-controls="panel6-content" id="panel6-header">
+          <Typography>Will I be able to use it on multiple domains after I purchase this script?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            You will be licensed to use it only for the domain you purchased for.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion
+        expanded={expanded === 'panel7'}
+        onChange={handleChange('panel7')}
+      >
+        <AccordionSummary aria-controls="panel7-content" id="panel7-header">
+          <Typography>Along with hosting server details, what other recommendations?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and it provides a secure layer to the website as well.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
               </div>
             </div>
           </div>

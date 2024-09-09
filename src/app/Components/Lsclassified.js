@@ -10,11 +10,24 @@ import Image from "next/image";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Lsclassified = () => {
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
   return (
     <>
-      <>
+      {/* <>
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
@@ -29,9 +42,9 @@ const Lsclassified = () => {
           <SwiperSlide>
             <div class="feat-slide-img">
               <Image
-                width={100}
-                height={100}
-                src="/img/classifier/Advanced_Filters.jpg"
+                 width={1500}
+                 height={100 / (100 / 100)}
+                src="/img/classified/Advanced_Filters.jpg"
                 alt="Advanced Filters"
               />
             </div>
@@ -41,10 +54,10 @@ const Lsclassified = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div class="feat-slide-img">
-              <Image
-                width={100}
-                height={100}
-                src="/img/classifier/Classifieds_Management.jpg"
+              <Image unoptimized={true}
+                width={1500}
+                height={100 / (100 / 100)}
+                src="/img/classified/Classifieds_Management.jpg"
                 alt="Classifieds Management"
               />
             </div>
@@ -55,9 +68,10 @@ const Lsclassified = () => {
           <SwiperSlide>
             <div class="feat-slide-img">
               <Image
-                width={100}
-                height={100}
-                src="/img/classifier/Post_Classfied.jpg"
+               unoptimized={true}
+               width={1500}
+               height={100 / (100 / 100)}
+                src="/img/classified/Post_Classfied.jpg"
                 alt="Post Classified"
               />
             </div>
@@ -68,9 +82,10 @@ const Lsclassified = () => {
           <SwiperSlide>
             <div class="feat-slide-img">
               <Image
-                width={100}
-                height={100}
-                src="/img/classifier/Multiple_Picture_Upload.jpg"
+               unoptimized={true}
+               width={1500}
+               height={100 / (100 / 100)}
+                src="/img/classified/Multiple_Picture_Upload.jpg"
                 alt="Multiple Picture Upload"
               />
             </div>
@@ -81,9 +96,10 @@ const Lsclassified = () => {
           <SwiperSlide>
             <div class="feat-slide-img">
               <Image
-                width={100}
-                height={100}
-                src="/img/classifier/Location_Based.jpg"
+               unoptimized={true}
+               width={1500}
+               height={100 / (100 / 100)}
+                src="/img/classified/Location_Based.jpg"
                 alt="Location Based"
               />
             </div>
@@ -92,7 +108,67 @@ const Lsclassified = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </>
+      </> */}
+      <div id="">
+        <Slider {...settings}>
+          <div className="SliderMainBx">
+            <div class="feat-slide-img">
+              <Image
+                width={1500}
+                height={100 / (100 / 100)}
+                src="/img/classified/Advanced_Filters.jpg"
+                alt="Advanced Filters"
+              />
+            </div>
+            <div class="hands-proved">
+              <div class="titleof_scnew">Advanced Filters</div>
+            </div>
+          </div>
+          <div className="SliderMainBx">
+            <div class="feat-slide-img">
+              <Image
+                unoptimized={true}
+                width={1500}
+                height={100 / (100 / 100)}
+                src="/img/classified/Classifieds_Management.jpg"
+                alt="Classifieds Management"
+              />
+            </div>
+            <div class="hands-proved">
+              <div class="titleof_scnew">Classifieds Management</div>
+            </div>
+          </div>
+          <div className="SliderMainBx">
+            <div class="feat-slide-img">
+              <Image
+                unoptimized={true}
+                width={1500}
+                height={100 / (100 / 100)}
+                src="/img/classified/Multiple_Picture_Upload.jpg"
+                alt="Multiple Picture Upload"
+              />
+            </div>
+            <div class="hands-proved">
+              <div class="titleof_scnew">Multiple Picture Upload</div>
+            </div>
+          </div>
+          <div className="SliderMainBx">
+          <div class="feat-slide-img">
+              <Image
+               unoptimized={true}
+               width={1500}
+               height={100 / (100 / 100)}
+                src="/img/classified/Location_Based.jpg"
+                alt="Location Based"
+              />
+            </div>
+            <div class="hands-proved">
+              <div class="titleof_scnew">Location Based</div>
+            </div>
+          </div>
+          
+        </Slider>
+      </div>
     </>
   );
 };

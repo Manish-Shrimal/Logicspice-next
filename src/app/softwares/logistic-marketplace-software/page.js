@@ -24,6 +24,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [jobportal, setJobportal] = useState(false);
@@ -41,8 +47,6 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-    
-
     setShowModal(!showModal);
   };
   const openReviewModel = () => {
@@ -94,6 +98,90 @@ const Page = () => {
     }
   };
 
+  // const Accordion = styled((props) => (
+  //   <MuiAccordion disableGutters elevation={0} square {...props} />
+  // ))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  //   "&:not(:last-child)": {
+  //     borderBottom: 0,
+  //   },
+  //   "&::before": {
+  //     display: "none",
+  //   },
+  // }));
+
+  // const AccordionSummary = styled((props) => (
+  //   <MuiAccordionSummary
+  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+  //     {...props}
+  //   />
+  // ))(({ theme }) => ({
+  //   backgroundColor: "rgba(0, 0, 0, .03)",
+  //   flexDirection: "row-reverse",
+  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+  //     transform: "rotate(90deg)",
+  //   },
+  //   "& .MuiAccordionSummary-content": {
+  //     marginLeft: theme.spacing(1),
+  //   },
+  //   ...theme.applyStyles("dark", {
+  //     backgroundColor: "rgba(255, 255, 255, .05)",
+  //   }),
+  // }));
+
+  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  //   padding: theme.spacing(2),
+  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
+  // }));
+
+  // const [expanded, setExpanded] = React.useState("panel1");
+
+  // const handleChange = (panel) => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -117,7 +205,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
@@ -154,7 +243,8 @@ See how it work yourself!"
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -182,7 +272,8 @@ See how it work yourself!"
 
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={450}
                   height={100 / (100 / 100)}
                   className="lazy"
@@ -233,14 +324,14 @@ See how it work yourself!"
               ></iframe>
             </div>
             <div className="col-md-6">
-              <div className="service-market-ttd JobBoardServiceMarketFeatures ServiceMarketFeaturesFull">
+              <div className="service-market-ttd-new JobBoardServiceMarketFeatures ServiceMarketFeaturesFull">
                 <ul>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Choose from multiple requests &#58; Users can check the
                     multiple quotations received for their enquiry and
                     communicate with them.
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Push notification with direct reply &#58; When any
                     transporter and user send message to each other.
                   </li>
@@ -252,18 +343,20 @@ See how it work yourself!"
                       minHeight: "0",
                     }}
                   ></li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Communicate with the service provider online :&#58; Customer
                     can communicate with the transporter through the chat
                     process.
                   </li>
-                  <li>
+                  <li style={{ width: "100%" }}>
                     Track the shipping process &#58; Customer can track their
                     shipment in either it&apos;s shipped&rsquo; packed or more.
                   </li>
-                  <li>Responsive website (mobile friendly)</li>
-                  <li>White-labeled software</li>
-                  <li>One time License Fee</li>
+                  <li style={{ width: "100%" }}>
+                    Responsive website (mobile friendly)
+                  </li>
+                  <li style={{ width: "100%" }}>White-labeled software</li>
+                  <li style={{ width: "100%" }}>One time License Fee</li>
                 </ul>
               </div>
             </div>
@@ -285,7 +378,7 @@ See how it work yourself!"
 
           <div className="tab_bbx_job ">
             <div className="tab_bbx_top_job">
-              <ul>
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`food_app_job ddlj ddlj ${
@@ -302,7 +395,7 @@ See how it work yourself!"
                   }`}
                   onClick={() => handleBuyerTab()}
                 >
-                  <a>Employer App Features </a>
+                  <a>Transporters </a>
                 </li>
                 <li
                   id="tab3_li"
@@ -320,7 +413,8 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right costomer_tab_rightleft">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={300}
                           height={100}
                           src="/img/logisticmarketplace/logistic_customer.png"
@@ -333,7 +427,8 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -352,7 +447,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -372,7 +468,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -393,7 +490,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -412,7 +510,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -433,7 +532,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -454,7 +554,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -474,7 +575,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -493,7 +595,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -513,7 +616,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -532,7 +636,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -548,7 +653,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -576,7 +682,8 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3">
                       <div className="costomer_tab_right">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={300}
                           height={100}
                           src="/img/logisticmarketplace/logistic-transporters.png"
@@ -589,7 +696,8 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -609,7 +717,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -629,7 +738,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -649,7 +759,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -673,7 +784,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -693,7 +805,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -713,7 +826,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -737,7 +851,8 @@ See how it work yourself!"
 
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -757,7 +872,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -776,7 +892,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -796,7 +913,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -815,7 +933,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -846,7 +965,8 @@ See how it work yourself!"
                   <div className="row">
                     <div className="col-lg-4 col-md-3 ">
                       <div className="costomer_tab_right costomer_tab_rightleft2">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={300}
                           height={100}
                           src="/img/logisticmarketplace/logistic_admin_mac.png"
@@ -859,7 +979,8 @@ See how it work yourself!"
                         <ul>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -880,7 +1001,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -902,7 +1024,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -923,7 +1046,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -944,7 +1068,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -963,7 +1088,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -984,7 +1110,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1005,7 +1132,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1026,7 +1154,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1044,7 +1173,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1064,7 +1194,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1084,7 +1215,8 @@ See how it work yourself!"
                           </li>
                           <li>
                             <i>
-                              <Image unoptimized={true}
+                              <Image
+                                unoptimized={true}
                                 width={100}
                                 height={100}
                                 alt="img"
@@ -1308,7 +1440,8 @@ See how it work yourself!"
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1489,8 +1622,9 @@ See how it work yourself!"
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
@@ -1513,23 +1647,16 @@ See how it work yourself!"
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image unoptimized={true}
-              width={100}
-              height={100}
+            <Image
+              unoptimized={true}
+              width={900}
+              height={100 / (100 / 100)}
               src="/img/logisticmarketplace/logistics_marketplace.jpg"
               alt="icon"
               title=""
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
         </Modal>
 
         <Modal
@@ -1560,7 +1687,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1585,7 +1713,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1610,7 +1739,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1635,7 +1765,8 @@ See how it work yourself!"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/fiverrclone/salorapido.jpg"
@@ -1647,7 +1778,8 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
@@ -1665,7 +1797,8 @@ See how it work yourself!"
                 </div>
                 <div className="SliderMainBx">
                   <div className="feat-slide-img">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
@@ -1705,8 +1838,9 @@ See how it work yourself!"
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/tech_cakephp_icon.png"
                       alt="CakePHP Development"
@@ -1716,8 +1850,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/html-5.png"
                       alt="HTML5"
@@ -1727,8 +1862,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_mysql_icon.png"
                       alt="MySQL"
@@ -1738,8 +1874,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
@@ -1749,8 +1886,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/apple_phn_icon.png"
                       alt="MySQL"
@@ -1761,8 +1899,9 @@ See how it work yourself!"
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={100}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/andoird_icon.png"
                       alt="Apache"
@@ -1815,8 +1954,9 @@ See how it work yourself!"
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1826,8 +1966,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1840,8 +1981,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1851,8 +1993,9 @@ See how it work yourself!"
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={100}
+                  <Image
+                    unoptimized={true}
+                    width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
@@ -2000,7 +2143,8 @@ See how it work yourself!"
                       </span>
                       Kunal S.&rsquo; India{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/jobboard/india_flag_img.png"
@@ -2036,8 +2180,9 @@ See how it work yourself!"
                       </span>
                       <span id="client-name">Alena&rsquo; USA</span>{" "}
                       <span>
-                        <Image unoptimized={true}
-                          width={100}
+                        <Image
+                          unoptimized={true}
+                          width={25}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
@@ -2070,7 +2215,8 @@ See how it work yourself!"
                       </span>
                       Mohammed Shozeb&rsquo; UAE{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/jobboard/uae_flag_iimg.png"
@@ -2086,127 +2232,237 @@ See how it work yourself!"
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Is the source code modifiable?"
-                    collapseId="flush-collapse1"
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                    className="aos-init aos-animate"
                   >
-                    <p>
-                      Yes&rsquo; most of the software is completely flexible and
-                      client can customize it as per their requirements.
-                      However&rsquo; some parts of it are encoded.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>Is the source code modifiable?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, most of the software is completely flexible and
+                      clients can customize it as per their requirements.
+                      However, some parts of it are encoded.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="How much time it will take to make it live?"
-                    collapseId="flush-collapse2"
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
                   >
-                    <p>
-                      The whole process will take around 1 week and the rest
+                    <Typography>
+                      How much time will it take to make it live?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      The whole process will take around 1 week, and the rest
                       depends on your response time and customization
                       requirements.
-                    </p>
-                  </MDBAccordionItem>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="How will you deal with bugs and issues in the product?"
-                    collapseId="flush-collapse3"
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
                   >
-                    <p>
-                      We will communicate with you via chat&rsquo; phone
-                      call&rsquo; skype&rsquo; and email during our business
-                      hours and try to solve your problem as soon as possible.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      How will you deal with bugs and issues in the product?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We will communicate with you via chat, phone call, Skype,
+                      and email during our business hours and try to solve your
+                      problem as soon as possible.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Does logicspice provide technical support?"
-                    collapseId="flush-collapse4"
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
                   >
-                    <p>
-                      Yes&rsquo; we are providing free 3 months technical
-                      support.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Does Logicspice provide technical support?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we are providing free 3 months of technical support.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Do I own my software completely?"
-                    collapseId="flush-collapse5"
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
                   >
-                    <p>
-                      Yes&rsquo; you will own the license to use it for the
-                      domain you purchased for.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>Do I own my software completely?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you will own the license to use it for the domain you
+                      purchased it for.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Do I need to provide a Google Maps API key? If yes&rsquo; how to generate a Google Map API key?"
-                    collapseId="flush-collapse6"
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
                   >
-                    <p>
-                      Yes&rsquo; you need to provide a map API key. Please
-                      follow the steps mentioned in the below URL to generate
-                      the Google map API key:
+                    <Typography>
+                      Do I need to provide a Google Maps API key? If yes, how to
+                      generate a Google Map API key?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you need to provide a map API key. Please follow the
+                      steps mentioned in the following URL to generate the
+                      Google map API key:
                       https://developers.google.com/maps/documentation/javascript/get-api-key.
                       You need to set up your billing details over that.
-                    </p>
-                  </MDBAccordionItem>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I update some design and functionality in the application code myself?"
-                    collapseId="flush-collapse7"
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel7d-content"
+                    id="panel7d-header"
                   >
-                    <p>Yes&rsquo; You will have access to all the code.</p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Can I update some design and functionality in the
+                      application code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you will have access to all the code.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Will I be able to use it on multiple domains&rsquo; after I purchase this software?"
-                    collapseId="flush-collapse8"
+                <Accordion
+                  expanded={expanded === "panel8"}
+                  onChange={handleChange("panel8")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel8d-content"
+                    id="panel8d-header"
                   >
-                    <p>
-                      You will be licensed to use it only for the domain&rsquo;
-                      you purchased for.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Will I be able to use it on multiple domains after I
+                      purchase this software?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You will be licensed to use it only for the domain you
+                      purchased it for.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I resell the software? Will I have rights over the software code?"
-                    collapseId="flush-collapse9"
+                <Accordion
+                  expanded={expanded === "panel9"}
+                  onChange={handleChange("panel9")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel9d-content"
+                    id="panel9d-header"
                   >
-                    <p>
-                      No&rsquo; You can\92t resell the software. All rights will
-                      remain with Logicspice only.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Can I resell the software? Will I have rights over the
+                      software code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can't resell the software. All rights will remain
+                      with Logicspice only.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Do you offer Money Back Guarantee?"
-                    collapseId="flush-collapse10"
+                <Accordion
+                  expanded={expanded === "panel10"}
+                  onChange={handleChange("panel10")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel10d-content"
+                    id="panel10d-header"
                   >
-                    <p>
-                      Yes&rsquo; we offer 30 days money-back guarantee to ensure
-                      customer satisfaction with our software. If for any
-                      reason&rsquo; you wish to discontinue using the
-                      product&rsquo; you can ask us for a refund. We will refund
-                      your total money except the installation and configuration
-                      charges&rsquo; which is USD 65 or 20% of the application
-                      cost&rsquo; whichever is greater.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Do you offer a Money Back Guarantee?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we offer a 30-day money-back guarantee to ensure
+                      customer satisfaction with our software. If for any reason
+                      you wish to discontinue using the product, you can ask us
+                      for a refund. We will refund your total money except the
+                      installation and configuration charges, which is USD 65 or
+                      20% of the application cost, whichever is greater.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Along with hosting server details&rsquo; what other recommendations?"
-                    collapseId="flush-collapse12"
+                <Accordion
+                  expanded={expanded === "panel11"}
+                  onChange={handleChange("panel11")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel11d-content"
+                    id="panel11d-header"
                   >
-                    <p>
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
                       We recommend you purchase an SSL certificate along with a
-                      hosting server&rsquo; considering that an SSL certificate
-                      is necessary for all websites these days and it provides a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all websites these days and it provides a
                       secure layer to the website as well.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -2221,9 +2477,10 @@ See how it work yourself!"
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/logisticmarketplace/add_shipment.png"
                     alt="Add Shipment"
                   />
@@ -2239,9 +2496,10 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/logisticmarketplace/search_for_transporters.png"
                     alt="Search for transporters"
                   />
@@ -2256,9 +2514,10 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/logisticmarketplace/search_inquiries.png"
                     alt="Search enquiries"
                   />
@@ -2273,9 +2532,10 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/logisticmarketplace/submit_quote.png"
                     alt="Submit quote"
                   />
@@ -2290,9 +2550,10 @@ See how it work yourself!"
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
-                    width={100}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={1500}
+                    height={100 / (100 / 100)}
                     src="/img/logisticmarketplace/transporter_details.png"
                     alt="Transporter details"
                   />
@@ -2346,8 +2607,9 @@ See how it work yourself!"
                         <h3>Freelancer Clone</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={100}
+                          <Image
+                            unoptimized={true}
+                            width={180}
                             height={100}
                             src="/img/jobboard/freelancer_logo_new.png"
                             alt="Freelancer Clone"
@@ -2377,8 +2639,9 @@ See how it work yourself!"
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={100}
+                          <Image
+                            unoptimized={true}
+                            width={250}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job board software"
@@ -2405,8 +2668,9 @@ See how it work yourself!"
                         <h3>WhatsApp Clone App</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={100}
+                          <Image
+                            unoptimized={true}
+                            width={180}
                             height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
@@ -2435,7 +2699,8 @@ See how it work yourself!"
         className="modal-service"
       >
         <MDBModalBody>
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             width={100}
             height={100}
             src="/img/logisticmarketplace/logistics_marketplace.jpg"
@@ -2461,7 +2726,8 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://loadboard.trucking21.com/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/loadboard.jpg"
@@ -2478,7 +2744,8 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://loadmoversgh.com/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/loadmoversgh.jpg"
@@ -2494,7 +2761,8 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://fletes24.com/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/fletes24.jpg"
@@ -2510,7 +2778,8 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://logistics.onestop.global/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/logisticsonestop.jpg"
@@ -2526,7 +2795,8 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="https://afodel.com/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/afodel.jpg"
@@ -2542,7 +2812,8 @@ See how it work yourself!"
                 </Link>
               </div>
               <Link href="http://esseltransport.co.ke/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/logisticmarketplace/esseltransport.jpg"
@@ -2561,7 +2832,8 @@ See how it work yourself!"
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&rsquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

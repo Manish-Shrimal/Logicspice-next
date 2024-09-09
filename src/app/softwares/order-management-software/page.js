@@ -158,7 +158,7 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image unoptimized={true}
-                  width={350}
+                  width={330}
                   height={100 / (100 / 100)}
                   alt="Order Management"
                   src="/img/ordermanagement/order-management-banner-img.png"
@@ -202,7 +202,7 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6 job-video">
               <Image unoptimized={true}
-                width={400}
+                width={500}
                 height={100 / (100 / 100)}
                 alt="Order Management"
                 src="/img/ordermanagement/order-management-img.png"
@@ -241,7 +241,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -1083,7 +1083,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
@@ -1094,7 +1094,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={50}
                         height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
@@ -1105,7 +1105,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
@@ -1116,7 +1116,7 @@ const Page = () => {
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image unoptimized={true}
-                        width={40}
+                        width={60}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
@@ -1160,7 +1160,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
@@ -1173,7 +1173,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
@@ -1186,7 +1186,7 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
+                    width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
@@ -1199,8 +1199,8 @@ const Page = () => {
               <li data-aos="fade">
                 <div className="supportsetting_icn">
                   <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                   width={50}
+                   height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1423,7 +1423,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title=" Free Script"
+                    title=" Order Management Status"
                   />
                 </div>
                 <div className="main-rait">
@@ -1646,7 +1646,7 @@ const Page = () => {
                         <h3>Inventory Management Software</h3>
                         <div className="other-project-logo">
                           <Image unoptimized={true}
-                            width={100}
+                            width={200}
                             height={100}
                             src="/img/jobboard/inventory-management-logo.png"
                             alt="Inventory Management Software"
@@ -1673,7 +1673,7 @@ const Page = () => {
 
                         <div className="other-project-logo">
                           <Image unoptimized={true}
-                            width={100}
+                            width={200}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job Board Software"
@@ -1700,8 +1700,8 @@ const Page = () => {
 
                         <div className="other-project-logo">
                           <Image unoptimized={true}
-                            width={100}
-                            height={100}
+                           width={200}
+                           height={100}
                             src="/img/jobboard/ecommerce_logo_new.png"
                             alt="ecommerce website"
                           />

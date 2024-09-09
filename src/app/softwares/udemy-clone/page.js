@@ -26,6 +26,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [jobportal, setJobportal] = useState(false);
@@ -118,6 +124,49 @@ const Page = () => {
     }
   };
 
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -144,7 +193,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/softwares-banner-img/more-info.png"
@@ -171,16 +221,14 @@ const Page = () => {
                       />
                     }
                   </div>
-                  <Link
-                    className="btn fiverr-buys"
-                    href="/buy-now/udemy-clone"
-                  >
+                  <Link className="btn fiverr-buys" href="/buy-now/udemy-clone">
                     Buy Now
                   </Link>
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       alt="crowd_funding_script"
@@ -209,8 +257,9 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
-                  width={400}
+                <Image
+                  unoptimized={true}
+                  width={380}
                   height={100 / (100 / 100)}
                   alt="crowd_funding_script"
                   src="/img/softwares-banner-img/udemy-banner-img.png"
@@ -265,7 +314,7 @@ const Page = () => {
               ></iframe>
             </div>
             <div className="col-md-6">
-              <div className="service-market-ttd JobBoardServiceMarketFeatures">
+              <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
                   <li>Easily Manage Courses</li>
                   <li>Responsive website</li>
@@ -297,9 +346,10 @@ const Page = () => {
               very easily. It’s easily compatible with different devices.
             </div>
           </div>
+          <div class="tatxt_txt_job"></div>
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="">
+              <ul className="fiverrClone">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -334,7 +384,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/udemyclone/mobile-udemy-clone.png"
@@ -347,7 +398,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -366,7 +418,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -385,7 +438,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -396,7 +450,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -415,7 +470,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -435,7 +491,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -454,7 +511,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -473,7 +531,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -493,7 +552,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -509,7 +569,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -528,7 +589,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -548,7 +610,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -567,7 +630,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -597,7 +661,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/udemyclone/instructor-mobile.png"
@@ -610,7 +675,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -629,7 +695,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -648,7 +715,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -667,7 +735,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -697,7 +766,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={300}
                             height={100}
                             src="/img/udemyclone/udemy-website.png"
@@ -710,7 +780,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -726,7 +797,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -745,7 +817,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -765,7 +838,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -785,7 +859,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -804,7 +879,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -823,7 +899,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -842,7 +919,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -860,7 +938,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -880,7 +959,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1070,7 +1150,8 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -1186,7 +1267,8 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={20}
                     height={100}
                     src="/img/jobboard/why-logic-icon.png"
@@ -1210,23 +1292,24 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image unoptimized={true}
-              width={100}
-              height={100}
+            <Image
+              unoptimized={true}
+              width={900}
+              height={100 / (100 / 100)}
               src="/img/udemyclone/udemy-how-it-works.jpg"
               alt="icon"
               title=""
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
 
         <Modal
@@ -1245,138 +1328,28 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="http://learnybee.in/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      learnybee.in
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="http://learnybee.in/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100 / (100 / 100)}
+                      src="/img/udemyclone/learnybee.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
                     />
                   </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="feat-slide-img">
-                    <Image unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
-                    />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Job Management</div>
-                    <div className="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="feat-slide-img">
-                    <Image unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
-                    />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Membership Plan</div>
-                    <div className="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
                 </div>
               </Slider>
             </div>
@@ -1402,8 +1375,9 @@ const Page = () => {
               <ul>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/LaravelLogo.png"
                       alt="Laravel Development"
@@ -1413,8 +1387,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/html-5.png"
                       alt="HTML5"
@@ -1424,8 +1399,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_mysql_icon.png"
                       alt="MySQL"
@@ -1435,8 +1411,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/jobboard/tech_apache_icon.png"
                       alt="Apache"
@@ -1446,8 +1423,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/apple_phn_icon.png"
                       alt="MySQL"
@@ -1458,8 +1436,9 @@ const Page = () => {
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
-                    <Image unoptimized={true}
-                      width={40}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/jobboard/andoird_icon.png"
                       alt="Apache"
@@ -1512,9 +1491,10 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                   />
@@ -1523,9 +1503,10 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                   />
@@ -1537,9 +1518,10 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                   />
@@ -1548,9 +1530,10 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
-                    width={40}
-                    height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100 / (100 / 100)}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                   />
@@ -1699,7 +1682,8 @@ const Page = () => {
                       </span>
                       John, USA{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={25}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
@@ -1733,7 +1717,8 @@ const Page = () => {
                       </span>
                       <span id="client-name">D. Smith, Germany</span>{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={25}
                           height={100}
                           src="/img/jobboard/german.png"
@@ -1766,7 +1751,8 @@ const Page = () => {
                       </span>
                       mike wilshon, AUS{" "}
                       <span>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={25}
                           height={100}
                           src="/img/jobboard/australia_flag_img.png"
@@ -1781,7 +1767,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&lsquo;s</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Once I purchase this script, how many days will it take to go online?"
                     collapseId="flush-collapse1"
@@ -1867,61 +1853,136 @@ const Page = () => {
                       a secure layer to the website as well.
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      Once I purchase this script, how many days will it take to
+                      go online?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      It generally takes 2 working days, provided all the
+                      information needed to make it live has been given.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>Can I get help with customization?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we have an experienced team of developers to help you
+                      with customization as per your requirements.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      Will it be installed on my own server?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Once you purchase the software, our expert installation
+                      team will install the software on your server. The
+                      installation is free of cost. If you are a tech person,
+                      you can install it yourself with the help of the
+                      installation document.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      Will I be able to use it on multiple domains after I
+                      purchase this script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      You will be licensed to use it only for the domain you
+                      purchased it for.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can I resell the script? Will I have rights over the
+                      script code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can't resell the script. All rights will remain
+                      with Logicspice only.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Can I update some design and functionality in the
+                      application code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you will have access to all the code, except some of
+                      the core encrypted files.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* <section className="content_area feature_inner" id="features">
-    <div className="container">
-        <h2 className="title_main">Crowdfunding Features</h2>
-        <div id="joblboardslide">
-        <Slider {...settings}>
-            <div className="SliderMainBx">
-
-            <div className="feat-slide-img"><Image unoptimized={true} width={100} height={100} src="/img/udemyclone/dashboard.png" alt="dashboard"/></div>
-            <div className="hands-proved">
-                        <div className="titleof_scnew">Admin Dashboard</div>
-                        <div className="pro-feat-detai">Admin can be able to view the direct link of all the management and also be able to statistics of Student and Instructor.</div>
-                    </div>
-            </div>
-            <div className="SliderMainBx">
-            <div className="feat-slide-img"><Image unoptimized={true} width={100} height={100} src="/img/udemyclone/configuration.png" alt="Configuration"/></div>
-            <div className="hands-proved">
-                        <div className="titleof_scnew">Configuration</div>
-                        <div className="pro-feat-detai">Admin is able to update his email, username, password, contact Information, social links and configure settings.</div>
-                    </div>
-            </div>
-            <div className="SliderMainBx">
-            <div className="feat-slide-img"><Image unoptimized={true} width={100} height={100} src="/img/udemyclone/admin_manage_courses.png" alt="Manage Courses"/></div>
-            <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Courses</div>
-                        <div className="pro-feat-detai">Admin can view list of courses and able to manage courses
-   (delete, activate, deactivate)</div>
-                    </div>
-            </div>
-            <div className="SliderMainBx">
-            <div className="feat-slide-img"><Image unoptimized={true} width={100} height={100} src="/img/udemyclone/admin_manage_payments.png" alt="View Payments"/></div>
-            <div className="hands-proved">
-                        <div className="titleof_scnew">View Payments</div>
-                        <div className="pro-feat-detai">Admin can view a list of payments of orders.</div>
-                    </div>
-            </div>
-            <div className="SliderMainBx">
-                
-            <div className="feat-slide-img"><Image unoptimized={true} width={100} height={100} src="/img/udemyclone/manage_categories.png" alt="Manage Categories"/></div>
-            <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Categories</div>
-                        <div className="pro-feat-detai">Admin can manage all 3 levels of categories for courses.</div>
-                    </div>
-            </div>
-        </Slider>
-
-        </div>
-    </div>
-</section> */}
 
       <section className="content_area feature_inner">
         <div className="container">
@@ -1974,7 +2035,8 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/search_course.png"
@@ -1992,7 +2054,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/course_detail.png"
@@ -2009,7 +2072,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/my_user_courses.png"
@@ -2026,7 +2090,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/view_lecture_video.png"
@@ -2044,7 +2109,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/purchase_history.png"
@@ -2070,7 +2136,8 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/manage_courses.png"
@@ -2088,7 +2155,8 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/add_course.png"
@@ -2105,7 +2173,8 @@ const Page = () => {
 
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/my_courses_instructure.png"
@@ -2122,7 +2191,8 @@ const Page = () => {
 
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
                           src="/img/udemyclone/view_video.png"
@@ -2148,62 +2218,67 @@ const Page = () => {
                   <Slider {...settings}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
-                          src="/img/udemyclone/search_course.png"
+                          src="/img/udemyclone/dashboard.png"
                           alt="searchcourse"
                         />
                       </div>
                       <div className="hands-proved">
-                        <div className="titleof_scnew">Search Course</div>
+                        <div className="titleof_scnew">Admin Dashboard</div>
                         <div className="pro-feat-detai">
-                          Students will be able to view listings of course and
-                          can be able to filter on the basis of topic, level,
-                          price, duration and rating.
+                          Admin can be able to view the direct link of all the
+                          management and also be able to statistics of Student
+                          and Instructor.
                         </div>
                       </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
-                          src="/img/udemyclone/course_detail.png"
+                          src="/img/udemyclone/configuration.png"
                           alt="Configuration"
                         />
                       </div>
                       <div className="hands-proved">
-                        <div className="titleof_scnew">Course Detail</div>
+                        <div className="titleof_scnew">Configuration</div>
                         <div className="pro-feat-detai">
-                          Students can view details about the course and can
-                          purchase from here.
+                          Admin is able to update his email, username, password,
+                          contact Information, social links and configure
+                          settings.
                         </div>
                       </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
-                          src="/img/udemyclone/my_user_courses.png"
+                          src="/img/udemyclone/admin_manage_courses.png"
                           alt="Manage Courses"
                         />
                       </div>
                       <div className="hands-proved">
-                        <div className="titleof_scnew">My Courses</div>
+                        <div className="titleof_scnew">Manage Courses</div>
                         <div className="pro-feat-detai">
-                          Students can view the listing of his courses that they
-                          have purchased.
+                          Admin can view list of courses and able to manage
+                          courses (delete, activate, deactivate)
                         </div>
                       </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
-                          src="/img/udemyclone/view_lecture_video.png"
+                          src="/img/udemyclone/admin_manage_payments.png"
                           alt="View Payments"
                         />
                       </div>
@@ -2218,6 +2293,24 @@ const Page = () => {
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={900}
+                          height={100 / (100 / 100)}
+                          src="/img/udemyclone/manage_categories.png"
+                          alt="Manage Categories"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Manage Categories</div>
+                        <div className="pro-feat-detai">
+                          Admin can manage all 3 levels of categories for
+                          courses.
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div className="SliderMainBx">
+                      <div className="feat-slide-img">
                         <Image unoptimized={true}
                           width={900}
                           height={100 / (100 / 100)}
@@ -2226,13 +2319,12 @@ const Page = () => {
                         />
                       </div>
                       <div className="hands-proved">
-                        <div className="titleof_scnew">Purchase History</div>
+                        <div className="titleof_scnew">Manage Categories</div>
                         <div className="pro-feat-detai">
-                          Students can view the purchase history of when and how
-                          many courses he has purchased.
+                        Admin can manage all 3 levels of categories for courses.
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </Slider>
                 </div>
               </>
@@ -2277,7 +2369,8 @@ const Page = () => {
                         <h3>Job Board Software</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
@@ -2304,7 +2397,8 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/rms_new.png"
@@ -2335,8 +2429,9 @@ const Page = () => {
                         <h3>WhatsApp Clone App</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
-                            width={250}
+                          <Image
+                            unoptimized={true}
+                            width={150}
                             height={100}
                             src="/img/jobboard/ls-chat-logo.png"
                             alt="WhatsApp Clone App"
@@ -2364,7 +2459,8 @@ const Page = () => {
         className="modal-service"
       >
         <MDBModalBody>
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             width={100}
             height={100}
             src="/img/udemyclone/udemy-how-it-works.jpg"
@@ -2390,7 +2486,8 @@ const Page = () => {
                 </Link>
               </div>
               <Link href="http://learnybee.in/" target="_blank">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/udemyclone/learnybee.jpg"
@@ -2409,7 +2506,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"
