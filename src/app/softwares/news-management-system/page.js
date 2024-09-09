@@ -1658,7 +1658,7 @@ See how it work yourself!"
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            No, you can't resell the script. All rights will remain with Logicspice only.
+            No, you can&apos;t resell the script. All rights will remain with Logicspice only.
           </Typography>
         </AccordionDetails>
       </Accordion>

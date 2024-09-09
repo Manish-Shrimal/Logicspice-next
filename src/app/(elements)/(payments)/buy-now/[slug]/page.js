@@ -10,6 +10,7 @@ import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Cookies from "js-cookie";
 import { Router } from "next/navigation";
 import "@fortawesome/fontawesome-free/css/all.css";
+import Image from "next/image";
 
 
 const Page = ({ params }) => {
@@ -334,7 +335,7 @@ const Page = ({ params }) => {
       </section>
 
       <div className="main_cart_loader" id="loadercart">
-        <img src="/img/loader_large_blue.gif" alt="" />
+        <Image width={100} height={100} src="/img/loader_large_blue.gif" alt="" />
       </div>
 
       {productDetails && (

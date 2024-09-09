@@ -2623,7 +2623,7 @@ See how it work yourself!"
                   >
                     <Typography>
                       Can the Employer give a rating to a Worker even if they
-                      haven't completed the project?
+                      haven&apos;t completed the project?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
@@ -2799,7 +2799,7 @@ See how it work yourself!"
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can't resell the script. All rights will remain
+                      No, you can&apos;t resell the script. All rights will remain
                       with Logicspice only.
                     </Typography>
                   </AccordionDetails>

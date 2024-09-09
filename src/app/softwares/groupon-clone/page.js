@@ -1791,7 +1791,7 @@ See how it work yourself!"
                   >
                     <Typography>
                       Can the Customer give a rating to a deal even if they
-                      haven't purchased it?
+                      haven&apos;t purchased it?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>

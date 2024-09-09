@@ -1889,7 +1889,7 @@ See how it work yourself!"
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can't resell the script. All rights will remain
+                      No, you can&apos;t resell the script. All rights will remain
                       with Logicspice only.
                     </Typography>
                   </AccordionDetails>
@@ -1932,7 +1932,7 @@ See how it work yourself!"
                   <AccordionDetails>
                     <Typography>
                       We recommend you purchase an SSL certificate along with a
-                      hosting server, as it's necessary for website security.
+                      hosting server, as it&apos;s necessary for website security.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>

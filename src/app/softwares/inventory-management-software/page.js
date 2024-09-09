@@ -2011,7 +2011,7 @@ const Page = () => {
       </section>
       <section className="ecommerce_faq_section" id="faq">
         <div className="container">
-          <div className="ecommerce__Quick_FAQ_Script">
+          <div className="ecommerce__Quick_FAQ_Script CustomQuickFAQScript">
             <div className="row">
               <div className="col-md-5" data-aos="fade-up">
                 <h4 className="title_main">
@@ -2028,236 +2028,156 @@ const Page = () => {
                   />
                 </div>
               </div>
+
               <div className="col-md-7">
-                <div className="panel-group ecommerce__Quick_FAQ">
-                  <Accordion
-                    expanded={expanded === "panel1"}
-                    onChange={handleChange("panel1")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel1" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel1d-content"
-                      id="panel1d-header"
+                <div className="panel-group faq_quick_sec" id="accordion">
+                  <MDBAccordion v-model="activeItem" borderless>
+                    <MDBAccordionItem
+                      headerTitle="Why should I use inventory management software?"
+                      collapseId="flush-collapse1"
                     >
-                      <Typography>
-                        Why should I use inventory management software?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Our inventory management solution is designed to elevate
-                        your business. It not only enhances sales but also saves
-                        valuable time, mitigates errors, and reduces the
-                        workload on your team. Ultimately, it fosters increased
-                        productivity and contributes to heightened customer
-                        satisfaction.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Order Management Software is a comprehensive solution
+                        designed to automate the order processing workflow, from
+                        creation to fulfillment. It enhances efficiency in
+                        managing orders, inventory, and customer interactions.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel2"}
-                    onChange={handleChange("panel2")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel2" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel2d-content"
-                      id="panel2d-header"
+                    <MDBAccordionItem
+                      headerTitle="Why do I need Order Management Software?"
+                      collapseId="flush-collapse2"
                     >
-                      <Typography>
-                        What is the best way to Manage Inventory?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        The choice of an inventory management solution should
-                        align with your priorities, budget constraints, customer
-                        expectations, the scale of your business, and various
-                        other variables. Making the right decision requires a
-                        thoughtful consideration of these factors.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Order Management Software reduces errors, provides
+                        real-time inventory visibility, and ensures a seamless
+                        customer experience, aiding effective decision-making
+                        through insightful analytics.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel3"}
-                    onChange={handleChange("panel3")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel3" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel3d-content"
-                      id="panel3d-header"
+                    <MDBAccordionItem
+                      headerTitle="What features does Order Management Software typically include?"
+                      collapseId="flush-collapse4"
                     >
-                      <Typography>
-                        What results can I expect by using the Inventory
-                        Management System?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        By using the Inventory Management System, you can expect
-                        improved operational efficiency, greater accuracy in
-                        inventory management, cost savings, faster order
-                        fulfillment, enhanced planning capabilities, optimized
-                        layouts, increased customer satisfaction, reduced
-                        workload, and enhanced compliance and reporting
-                        capabilities.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Common features include order processing automation,
+                        real-time inventory management, multi-channel
+                        integration, customer relationship management, order
+                        tracking, and reporting.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel4"}
-                    onChange={handleChange("panel4")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel4" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel4d-content"
-                      id="panel4d-header"
+                    <MDBAccordionItem
+                      headerTitle="Can the software integrate with other business tools?"
+                      collapseId="flush-collapse5"
                     >
-                      <Typography>
-                        How do I get the best value for my money with Inventory
-                        Management System?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        To get the best value from an Inventory Management
-                        System, consider the costs of transitioning from a
-                        cheaper solution or Excel. This is crucial in a rapidly
-                        changing business environment. Evaluate factors like
-                        initial expenses, data migration, training,
-                        customization, integration, and scalability. Calculate
-                        potential ROI and stay mindful of industry changes to
-                        make an informed decision.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Many Order Management Software solutions offer
+                        integration with Customer Relationship Management (CRM),
+                        Enterprise Resource Planning (ERP), and accounting
+                        software. Confirm compatibility with your existing and
+                        future integrations.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel5"}
-                    onChange={handleChange("panel5")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel5" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel5d-content"
-                      id="panel5d-header"
+                    <MDBAccordionItem
+                      headerTitle="How user-friendly is the Order Management Software?"
+                      collapseId="flush-collapse6"
                     >
-                      <Typography>
-                        Can Admin be able to add multiple items/products?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Indeed, the admin has the ability to add numerous items
-                        or products.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Look for intuitive interfaces, customizable features,
+                        and adequate training options to ensure a smooth
+                        onboarding process.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel6"}
-                    onChange={handleChange("panel6")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel6" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel6d-content"
-                      id="panel6d-header"
+                    <MDBAccordionItem
+                      headerTitle="What kind of support is provided with the software?"
+                      collapseId="flush-collapse7"
                     >
-                      <Typography>
-                        Can an Admin be able to add the same item/product from
-                        multiple suppliers?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, the admin has the capability to add identical items
-                        or products from various suppliers.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Check for customer service, training resources, and
+                        ongoing assistance to meet your business needs.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel7"}
-                    onChange={handleChange("panel7")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel7" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel7d-content"
-                      id="panel7d-header"
+                    <MDBAccordionItem
+                      headerTitle="Am I permitted to eliminate your company's proprietary notices?"
+                      collapseId="flush-collapse3"
                     >
-                      <Typography>
-                        Can Admin be able to add multiple suppliers?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, there are no limitations on the number of suppliers
-                        that can be added by the admin.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        You have the flexibility to modify the script by
+                        removing your company information and substituting it
+                        with yours. However, it is not permissible to include
+                        &quot;copyright by&quot; since exclusive copyright ownership for
+                        the software rests with us.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel8"}
-                    onChange={handleChange("panel8")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel8" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel8d-content"
-                      id="panel8d-header"
+                    <MDBAccordionItem
+                      headerTitle="How long does it take to receive the software after I purchase it?"
+                      collapseId="flush-collapse8"
                     >
-                      <Typography>
-                        Is Admin able to generate reports at any time?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, the admin has the freedom to generate reports
-                        whenever they choose.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        It will take a minimum 48 hours after payment. You will
+                        receive an email message with login details for your
+                        personal account where the software can be downloaded.
+                      </p>
+                    </MDBAccordionItem>
 
-                  <Accordion
-                    expanded={expanded === "panel9"}
-                    onChange={handleChange("panel9")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel9" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel9d-content"
-                      id="panel9d-header"
+                    <MDBAccordionItem
+                      headerTitle="Can I use your software without any programming skills?"
+                      collapseId="flush-collapse9"
                     >
-                      <Typography>
-                        How many days will it take to implement?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        The whole process will take a maximum of 1 week, and the
-                        rest depends on your response time and customization
-                        requirements.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                      <p>
+                        Yes, you can directly install our given software and
+                        manage everything in the admin panel, which is very
+                        user-friendly.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Will you deliver the exact product as shown in the demo?"
+                      collapseId="flush-collapse10"
+                    >
+                      <p>
+                        Yes, we deliver the exact product. We don’t compromise
+                        with quality at all.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Do you offer a Money Back Guarantee?"
+                      collapseId="flush-collapse11"
+                    >
+                      <p>
+                        Yes, we provide a 30-day money-back guarantee to ensure
+                        customer satisfaction with our software. If, for any
+                        reason, you decide to stop using the product, you can
+                        request a refund. We will reimburse the entire amount,
+                        excluding the installation and configuration charges,
+                        which are either USD 65 or 20% of the application cost,
+                        whichever is higher. Please note that the money-back
+                        guarantee does not apply to customers who have received
+                        updates as per their specific requests, taking into
+                        account the significant efforts and time invested by the
+                        team for their project.
+                      </p>
+                    </MDBAccordionItem>
+
+                    <MDBAccordionItem
+                      headerTitle="Are you willing to advise us with ideas?"
+                      collapseId="flush-collapse12"
+                    >
+                      <p>
+                        Sure, we fulfill client requirements always while doing
+                        all customization work offered with additional cost.
+                        Although client suggestions or ideas are always
+                        welcomed, which can make your business more interactive.
+                      </p>
+                    </MDBAccordionItem>
+                  </MDBAccordion>
                 </div>
               </div>
             </div>

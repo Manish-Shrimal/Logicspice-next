@@ -17,11 +17,48 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Page = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const panelStyle = {
+    marginBottom: "10px",
+    // border: '1px solid #ddd',
+    borderBottom: "1px solid #ddd",
+  };
+
+  const headingStyle = {
+    // backgroundColor: '#f7f7f7',
+    padding: "20px 0",
+  };
+
+  const titleStyle = {
+    textDecoration: "none",
+    // fontWeight: "bold",
+    color: "#333",
+    display: "block",
+    fontSize: "18px",
+  };
+
+  const collapseStyle = {
+    display: "none",
+    transition: "all 0.3s ease",
+  };
+
+  const showStyle = {
+    display: "block",
+  };
+
+  const bodyStyle = {
+    padding: "7px",
+    // borderTop: '1px solid #ddd',
+  };
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [jobportal, setJobportal] = useState(false);
@@ -82,7 +119,7 @@ const Page = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        BaseAPI + "/product/Details/job-board-software"
+        BaseAPI + "/product/Details/job-portal-script"
       );
       // console.log(response.data.data)
       setPageData(response.data.data);
@@ -115,7 +152,8 @@ const Page = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/images/more-info.png"
@@ -170,7 +208,8 @@ const Page = () => {
                     <span className="AppPrice">
                       <span className="MoreInfo">
                         <i>
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/images/more-info.png"
@@ -197,7 +236,8 @@ const Page = () => {
                     <a href="#subscriptionprice">click here</a>
                   </div>{" "}
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -227,7 +267,8 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={370}
                   height={100 / (100 / 100)}
                   className="lazy"
@@ -367,7 +408,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={400}
                             height={100}
                             src="/img/jobboard/mobile-job-seeker.png"
@@ -380,7 +422,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -400,7 +443,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -422,7 +466,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -442,7 +487,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -462,7 +508,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -482,7 +529,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -503,7 +551,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -523,7 +572,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -544,7 +594,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -564,7 +615,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -585,7 +637,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -607,7 +660,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -628,7 +682,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -648,7 +703,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -668,7 +724,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -688,7 +745,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -708,7 +766,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -728,7 +787,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -749,7 +809,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -770,7 +831,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -803,7 +865,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={400}
                             height={100}
                             src="/img/jobboard/emplyer-mobile.png"
@@ -816,7 +879,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -836,7 +900,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -858,7 +923,8 @@ const Page = () => {
 
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -879,7 +945,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -903,7 +970,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -923,7 +991,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -943,7 +1012,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -964,7 +1034,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -984,7 +1055,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1004,7 +1076,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1024,7 +1097,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1044,7 +1118,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1065,7 +1140,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1085,7 +1161,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1105,7 +1182,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1125,7 +1203,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1145,7 +1224,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1167,7 +1247,8 @@ const Page = () => {
 
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1193,7 +1274,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1218,7 +1300,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1251,7 +1334,8 @@ const Page = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={400}
                             height={100}
                             src="/img/fiverrclone/gigger_deshboard.png"
@@ -1264,7 +1348,8 @@ const Page = () => {
                           <ul>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1281,7 +1366,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1303,7 +1389,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1325,7 +1412,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1346,7 +1434,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1368,7 +1457,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1391,7 +1481,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1412,7 +1503,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1434,7 +1526,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1457,7 +1550,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1478,7 +1572,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1498,7 +1593,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1518,7 +1614,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1539,7 +1636,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1560,7 +1658,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1580,7 +1679,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1604,7 +1704,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1627,7 +1728,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1652,7 +1754,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i className="JobBoardImg">
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className="lazy"
@@ -1673,7 +1776,8 @@ const Page = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="img"
@@ -1952,7 +2056,8 @@ const Page = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/jobboard/stars.png"
@@ -2259,7 +2364,8 @@ const Page = () => {
               </a>
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={20}
                     height={20}
                     src="/img/jobboard/why-logic-icon.png"
@@ -2283,7 +2389,8 @@ const Page = () => {
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={900}
               height={100}
               src="/img/jobboard/Job_board_for_page.jpg"
@@ -2292,14 +2399,6 @@ const Page = () => {
               className="img-fluid"
             />
           </Modal.Body>
-          {/* <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer> */}
         </Modal>
 
         <Modal
@@ -2330,7 +2429,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/sellfomote.jpg"
@@ -2355,7 +2455,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/ejtecs.webp"
@@ -2380,7 +2481,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/restrowizard.webp"
@@ -2405,7 +2507,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/healthandsocialcarejobs.webp"
@@ -2430,7 +2533,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/joblisto.webp"
@@ -2455,7 +2559,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/booyajobs.webp"
@@ -2480,7 +2585,8 @@ const Page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       width={900}
                       height={100}
                       src="/img/jobboard/jobseakers.webp"
@@ -2514,7 +2620,8 @@ const Page = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={60}
                         height={100}
                         src="/img/jobboard/tech_reactjs_icon.png"
@@ -2525,9 +2632,10 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                       width={60}
-                       height={100}
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
@@ -2536,9 +2644,10 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                       width={60}
-                       height={100}
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                       />
@@ -2547,9 +2656,10 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                       width={60}
-                       height={100}
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                       />
@@ -2558,9 +2668,10 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                       width={60}
-                       height={100}
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                       />
@@ -2569,9 +2680,10 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                      width={60}
-                      height={100}
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/apple_phn_icon.png"
                         alt="MySQL"
                         className="lazy"
@@ -2581,9 +2693,10 @@ const Page = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
-                       width={60}
-                       height={100}
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/andoird_icon.png"
                         alt="Apache"
                         className="lazy"
@@ -2642,7 +2755,8 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/jobboard/month_half_icon.png"
@@ -2653,7 +2767,8 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/jobboard/free_remove_icon.png"
@@ -2664,7 +2779,8 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/jobboard/free_instal.png"
@@ -2675,7 +2791,8 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={50}
                     height={100}
                     src="/img/jobboard/access_secure_code_icon.png"
@@ -2690,7 +2807,8 @@ const Page = () => {
       </section>
       <section className="ecommerce_review_section" id="reviews">
         <div className="ecommerce_review__img">
-          <Image unoptimized={true}
+          <Image
+            unoptimized={true}
             width={400}
             height={100}
             src="/img/jobboard/ecommerce-review-img.png"
@@ -2724,7 +2842,8 @@ const Page = () => {
                     </span>
                     John, USA
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/usa_flag_img.png"
@@ -2754,7 +2873,8 @@ const Page = () => {
                     </span>
                     <span id="client-name">D. Smith, Germany in USA</span>{" "}
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/german.png"
@@ -2786,7 +2906,8 @@ const Page = () => {
                     </span>
                     <span id="client-name">mike wilshon, AUS</span>{" "}
                     <span>
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/australia_flag_img.png"
@@ -2913,26 +3034,24 @@ const Page = () => {
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
-              <div className="panel-group faq_quick_sec" id="accordion">
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        aria-expanded="true"
-                        href="#collapse1"
-                      >
-                        <span>01. </span> Can a Jobseeker upload his CV to apply
-                        for job?
-                      </a>
-                    </div>
+
+              <div id="accordion">
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse1"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(0);
+                      }}
+                      style={titleStyle}
+                    >
+                      <span>01. </span> Can a Jobseeker upload his CV to apply
+                      for job?
+                    </a>
                   </div>
-                  <div id="collapse1" className="panel-collapse collapse in">
-                    <div className="panel-body">
+                  <div style={activeIndex === 0 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
                         No. The information about the jobseeker will go from his
                         profile to the employer that he is applying the job for.
@@ -2940,24 +3059,23 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse2"
-                      >
-                        <span>02. </span> Will there be any installation charges
-                        when I purchase the job portal script?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(1);
+                      }}
+                      style={titleStyle}
+                    >
+                      <span>02. </span> Will there be any installation charges
+                      when I purchase the job portal script?
+                    </a>
                   </div>
-                  <div id="collapse2" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 1 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
                         No. The installation of our Job Portal Product will be
                         absolutely free of cost.
@@ -2965,24 +3083,23 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse3"
-                      >
-                        <span>03. </span> Can jobseeker download the CV that he
-                        has created on this website?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse3"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(2);
+                      }}
+                      style={titleStyle}
+                    >
+                      <span>03. </span> Can jobseeker download the CV that he
+                      has created on this website?
+                    </a>
                   </div>
-                  <div id="collapse3" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 2 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
                         Yes. Once the job seeker creates his CV, he can download
                         the same in a PDF format.
@@ -2990,268 +3107,265 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse4"
-                      >
-                        <span>04. </span> Can employer or jobseeker write blog
-                        posts?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse4"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(3);
+                      }}
+                    >
+                      <span>04. </span> Can employer or jobseeker write blog
+                      posts?
+                    </a>
                   </div>
-                  <div id="collapse4" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 3 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        The employers and jobseekers can not write blog posts.
-                        The blog posts will be written by admin and employers
-                        &amp; Job Seekers can view them.
+                        The employers and jobseekers cannot write blog posts.
+                        The blog posts will be written by the admin, and
+                        employers & Job Seekers can view them.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse6"
-                      >
-                        <span>05. </span> Once I purchase the job portal script,
-                        how many days will it take to go online?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse6"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(4);
+                      }}
+                    >
+                      <span>05. </span> Once I purchase the job portal script,
+                      how many days will it take to go online?
+                    </a>
                   </div>
-                  <div id="collapse6" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 4 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
                         It takes 2 working days generally, provided all the
                         information to make it live has been given. If you want
-                        customizations, then time taken to implement your Job
-                        portal depends on the level of customization and data
-                        migration.
+                        customizations, then the time taken to implement your
+                        Job portal depends on the level of customization and
+                        data migration.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse7"
-                      >
-                        <span>06. </span> How can Jobseeker apply for a job?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse7"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(5);
+                      }}
+                    >
+                      <span>06. </span> How can Jobseeker apply for a job?
+                    </a>
                   </div>
-                  <div id="collapse7" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 5 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
                         Jobseeker can send their details directly to the job
-                        company or they can attached a cover letter along with
-                        their application. They can edit add or delete their
+                        company or they can attach a cover letter along with
+                        their application. They can edit, add, or delete their
                         cover letter from the profile.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse8"
-                      >
-                        <span>07. </span> How can Jobseeker create job alerts?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse8"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(6);
+                      }}
+                    >
+                      <span>07. </span> How can Jobseeker create job alerts?
+                    </a>
                   </div>
-                  <div id="collapse8" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 6 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
                         Jobseekers will be able to manage the alerts that will
-                        help them to receive emails if the job is available
+                        help them receive emails if the job is available
                         according to their set criteria. They can add alerts by
                         providing the information like designation of job
-                        required and location of job.{" "}
+                        required and location of job.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse201"
-                      >
-                        <span>08. </span> Can I update some design and
-                        functionality in application code myself?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse201"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(7);
+                      }}
+                    >
+                      <span>08. </span> Can I update some design and
+                      functionality in application code myself?
+                    </a>
                   </div>
-                  <div id="collapse201" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 7 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        Yes, You will have access of the all the code, except
-                        some of the core encrypted files.
+                        Yes, you will have access to all the code, except some
+                        of the core encrypted files.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse202"
-                      >
-                        <span>09. </span> Will I be able to use it on multiple
-                        domains, after I purchase this script?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse202"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(8);
+                      }}
+                    >
+                      <span>09. </span> Will I be able to use it on multiple
+                      domains after I purchase this script?
+                    </a>
                   </div>
-                  <div id="collapse202" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 8 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        You will be licensed to use it only for the domain, you
-                        purchased for.
+                        You will be licensed to use it only for the domain you
+                        purchased it for.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse203"
-                      >
-                        <span>10. </span> Can I resell the script? Will I have
-                        rights over the script code?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse203"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(9);
+                      }}
+                    >
+                      <span>10. </span> Can I resell the script? Will I have
+                      rights over the script code?
+                    </a>
                   </div>
-                  <div id="collapse203" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 9 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        All rights will remain with Logicspice only, and you can
-                        not resell it.
+                        All rights will remain with Logicspice only, and you
+                        cannot resell it.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse204"
-                      >
-                        <span>11. </span> Do you offer Money Back Guarantee?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse204"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(10);
+                      }}
+                    >
+                      <span>11. </span> Do you offer Money Back Guarantee?
+                    </a>
                   </div>
-                  <div id="collapse204" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 10 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        Yes, we offer 30 days money back guarantee to ensure
-                        customer satisfaction of our softwares. If for any
-                        reason, you wish to discontinue using the product, you
-                        can ask us for refund. We will refund your total money
-                        except the installation and configuration charges, which
-                        is USD 65 or 20% of application cost, whichever is
-                        greater. Any cost of customization will not be refunded.
+                        Yes, we offer a 30-day money back guarantee to ensure
+                        customer satisfaction with our software. If for any
+                        reason you wish to discontinue using the product, you
+                        can ask us for a refund. We will refund your total money
+                        except for the installation and configuration charges,
+                        which is USD 65 or 20% of the application cost,
+                        whichever is greater. Any cost of customization will not
+                        be refunded.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse07"
-                      >
-                        <span>12. </span> Do I need to provide Google map API
-                        key? If yes, how to generate Google map API key?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse07"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(11);
+                      }}
+                    >
+                      <span>12. </span> Do I need to provide Google map API key?
+                      If yes, how to generate Google map API key?
+                    </a>
                   </div>
-                  <div id="collapse07" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 11 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        Yes, you need to provide map API key. Please follow the
-                        steps mentioned in below URL to generate Google map API
-                        key:
-                        https://developers.google.com/maps/documentation/javascript/get-api-key.
-                        You need to setup your billing details over that.
+                        Yes, you need to provide a map API key. Please follow
+                        the steps mentioned in the below URL to generate a
+                        Google map API key:{" "}
+                        <a
+                          href="https://developers.google.com/maps/documentation/javascript/get-api-key"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Generate Google Map API Key
+                        </a>
+                        . You need to set up your billing details over that.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse504"
-                      >
-                        <span>13. </span> Along with hosting server details,
-                        what other recommendations?
-                      </a>
-                    </div>
+
+                <div style={panelStyle} data-aos="fade-up">
+                  <div style={headingStyle}>
+                    <a
+                      href="#collapse504"
+                      style={titleStyle}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleAccordion(12);
+                      }}
+                    >
+                      <span>13. </span> Along with hosting server details, what
+                      other recommendations?
+                    </a>
                   </div>
-                  <div id="collapse504" className="panel-collapse collapse">
-                    <div className="panel-body">
+                  <div style={activeIndex === 12 ? showStyle : collapseStyle}>
+                    <div style={bodyStyle}>
                       <p>
-                        We recommend you purchase SSL certificate along with a
-                        hosting server, considering that an SSL certificate is
-                        necessary for all the websites these days and it
-                        provides a secure layer to the website as well.
+                        We recommend you purchase an SSL certificate along with
+                        a hosting server, considering that an SSL certificate is
+                        necessary for all websites these days and it provides a
+                        secure layer to the website as well.
                       </p>
                     </div>
                   </div>
@@ -3261,7 +3375,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="title_main">LS Jobber Features</h2>
@@ -3269,7 +3383,8 @@ const Page = () => {
             <Slider {...settings}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/job_portal_script_apply_jobs.png"
@@ -3286,7 +3401,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/Job_portal_script_create_job.png"
@@ -3303,7 +3419,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/job_portal_system_search_jobs.png"
@@ -3320,7 +3437,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/make_a_cv_job_portal_app.png"
@@ -3338,7 +3456,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/Manage_jobs_job_portal_script.png"
@@ -3355,7 +3474,8 @@ const Page = () => {
               </div>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={900}
                     height={100}
                     src="/img/jobboard/membership_plan_job_portal_script.png"
@@ -3426,7 +3546,8 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/udemy_new.png"
@@ -3456,7 +3577,8 @@ const Page = () => {
                       <div className="other-caption-bx">
                         <h3>Recruitment Management Software</h3>
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/rms_new.png"
@@ -3487,7 +3609,8 @@ const Page = () => {
                         <h3>Fiverr clone</h3>
 
                         <div className="other-project-logo">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             width={250}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
@@ -3513,7 +3636,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

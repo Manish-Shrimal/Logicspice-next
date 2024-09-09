@@ -1289,7 +1289,7 @@ See how it work yourself!"
                     <Typography>
                       With an extra charge, you are allowed to modify the
                       branding. You can remove our company information and put
-                      yours. However, you cannot put "copyright by" because only
+                      yours. However, you cannot put &quot;copyright by&qout; because only
                       Logicspice owns the copyrights for our software.
                     </Typography>
                   </AccordionDetails>

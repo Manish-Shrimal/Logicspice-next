@@ -1472,7 +1472,7 @@ const Page = () => {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>Yes, it's totally free.</Typography>
+                    <Typography>Yes, it&apos;s totally free.</Typography>
                   </AccordionDetails>
                 </Accordion>
               </div>

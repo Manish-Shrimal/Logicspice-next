@@ -59,7 +59,8 @@ export default async function RootLayout({ children, params, searchParams }) {
 //   console.log(metadata);
 
   return (
-    <html lang="en">
+    
+      <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
@@ -72,5 +73,7 @@ export default async function RootLayout({ children, params, searchParams }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
       />
     </html>
+    
+    
   );
 }

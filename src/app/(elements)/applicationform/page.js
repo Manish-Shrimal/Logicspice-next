@@ -427,7 +427,10 @@ const Page = () => {
                 </div>
                 <div className="appliction-top-right">
                   <div className="upload-photo">
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
+                      unoptimized={true}
                       src={
                         formData.image
                           ? URL.createObjectURL(formData.image)
@@ -533,10 +536,10 @@ const Page = () => {
                             Date of birth
                           </div>
                           <div className="personal-detals-th">
-                            Father's Name
+                            Father&apos;s Name
                           </div>
                           <div className="personal-detals-th">
-                            Mother's Name
+                            Mother&apos;s Name
                           </div>
                         </div>
                         <div className="personal-detals-tr">
@@ -631,10 +634,10 @@ const Page = () => {
                       <div className="personal-detals-table">
                         <div className="personal-detals-tr">
                           <div className="personal-detals-th">
-                            Father's Occupation
+                            Father&apos;s Occupation
                           </div>
                           <div className="personal-detals-th">
-                            Mother's Occupation
+                            Mother&apos;s Occupation
                           </div>
                         </div>
                         <div className="personal-detals-tr">

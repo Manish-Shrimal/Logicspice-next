@@ -2632,7 +2632,7 @@ const Page = () => {
                   >
                     <Typography>
                       {" "}
-                      Can the User give rating to a gig even if they haven't
+                      Can the User give rating to a gig even if they haven&apos;t
                       purchased it?
                     </Typography>
                   </AccordionSummary>

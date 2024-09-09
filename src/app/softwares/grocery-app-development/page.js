@@ -1691,7 +1691,7 @@ See how it work yourself!"
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          <Typography>Can customers post a review about the store, even if the customers haven't visited the store yet?</Typography>
+          <Typography>Can customers post a review about the store, even if the customers haven&apos;t visited the store yet?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

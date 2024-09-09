@@ -2411,7 +2411,7 @@ See how it work yourself!"
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can't resell the software. All rights will remain
+                      No, you can&apos;t resell the software. All rights will remain
                       with Logicspice only.
                     </Typography>
                   </AccordionDetails>
