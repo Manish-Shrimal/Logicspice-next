@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
+
 const Page = () => {
   var settings = {
     dots: false,
@@ -79,8 +80,9 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-7">
               <div className="WebDevelopmentBannerImg">
                 <Image
-                     width={450}
-                     height={500 / (100 / 100)}
+                  unoptimized={true}
+                  width={430}
+                  height={400 / (100 / 100)}
                   src="/img/webdevelopment/web-development-img.png"
                   alt="Web Development Services"
                 />
@@ -97,6 +99,7 @@ const Page = () => {
             </li>
             <li>
               <Image
+                unoptimized={true}
                 width={100}
                 height={100}
                 src="/img/webdevelopment/client-logo-img1.png"
@@ -105,6 +108,7 @@ const Page = () => {
             </li>
             <li>
               <Image
+                unoptimized={true}
                 width={100}
                 height={100}
                 src="/img/webdevelopment/client-logo-img2.png"
@@ -113,6 +117,7 @@ const Page = () => {
             </li>
             <li>
               <Image
+                unoptimized={true}
                 width={100}
                 height={100}
                 src="/img/webdevelopment/client-logo-img3.png"
@@ -121,8 +126,9 @@ const Page = () => {
             </li>
             <li>
               <Image
-                    width={300}
-                    height={500 / (100 / 100)}
+                unoptimized={true}
+                width={300}
+                height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img4.png"
                 alt="Web Development Services"
               />
@@ -142,10 +148,7 @@ const Page = () => {
                   Web development is building platform-independent solutions
                   using an ideal combination of technologies to meet business
                   requirements. Our team ensures to deliver 100%{" "}
-                  <Link
-                    href="/custom-solutions"
-                    target="_blank"
-                  >
+                  <Link href="/custom-solutions" target="_blank">
                     customized web applications
                   </Link>{" "}
                   that work efficiently across multiple platforms and devices.
@@ -167,18 +170,18 @@ const Page = () => {
                   applications. Our commitment lies in developing authentic,
                   simplified applications, distinguishing us in web development
                   and design services. Our client-focused approach to{" "}
-                  <strong>custom web application development</strong>{" "}
-                  demonstrates our expertise and dedication to delivering
-                  high-quality, bespoke solutions that surpass clients&apos;
-                  expectations.
+                  <b>custom web application development</b> demonstrates our
+                  expertise and dedication to delivering high-quality, bespoke
+                  solutions that surpass clients&apos; expectations.
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="WebDevelopmentApplicationImg">
                 <Image
-                     width={500}
-                     height={500 / (100 / 100)}
+                  unoptimized={true}
+                  width={500}
+                  height={500 / (100 / 100)}
                   src="/img/webdevelopment/web-application-development-img.png"
                   alt="Web Development Services"
                 />
@@ -200,7 +203,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon1.png"
                       alt="Web Development Services"
@@ -220,7 +224,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon2.png"
                       alt="Web Development Services"
@@ -240,7 +245,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon3.png"
                       alt="Web Development Services"
@@ -257,7 +263,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon4.png"
                       alt="Web Development Services"
@@ -274,7 +281,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon5.png"
                       alt="Web Development Services"
@@ -293,7 +301,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon6.png"
                       alt="Web Development Services"
@@ -310,7 +319,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon7.png"
                       alt="Web Development Services"
@@ -330,7 +340,8 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon8.png"
                       alt="Web Development Services"
@@ -455,7 +466,8 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={70}
                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/goodluck-logo.png"
                       alt="Web Development Services"
@@ -475,10 +487,7 @@ const Page = () => {
                       </Link>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link
-                        href="https://www.logicspice.com/portfolio"
-                        className=""
-                      >
+                      <Link href="/company/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -486,8 +495,9 @@ const Page = () => {
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
                       <Image
-                         width={400}
-                         height={500 / (100 / 100)}
+                        unoptimized={true}
+                        width={450}
+                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/goodluck-img.png"
                         alt="Web Development Services"
                       />
@@ -495,7 +505,8 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -505,8 +516,9 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestRed">
                   <div className="WebProjectLogo">
                     <Image
-                       width={60}
-                       height={500 / (100 / 100)}
+                      unoptimized={true}
+                      width={200}
+                      height={500 / (100 / 100)}
                       src="/img/webdevelopment/salesagy-logo.png"
                       alt="Web Development Services"
                     />
@@ -530,10 +542,7 @@ const Page = () => {
                       <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link
-                        href="https://www.logicspice.com/portfolio"
-                        className=""
-                      >
+                      <Link href="/company/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -541,7 +550,8 @@ const Page = () => {
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
                       <Image
-                        width={400}
+                        unoptimized={true}
+                        width={450}
                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/salesagy-img.png"
                         alt="Web Development Services"
@@ -550,7 +560,8 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image
-                      width={100}
+                      unoptimized={true}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -561,8 +572,9 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestJobatHome">
                   <div className="WebProjectLogo">
                     <Image
-                       width={60}
-                       height={500 / (100 / 100)}
+                      unoptimized={true}
+                      width={120}
+                      height={500 / (100 / 100)}
                       src="/img/webdevelopment/jobathome-logo.png"
                       alt="Web Development Services"
                     />
@@ -573,7 +585,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://jobathome.fr/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -581,10 +593,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link
-                        href="https://www.logicspice.com/portfolio"
-                        className=""
-                      >
+                      <Link href="/company/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -592,8 +601,9 @@ const Page = () => {
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
                       <Image
-                       width={400}
-                       height={500 / (100 / 100)}
+                        unoptimized={true}
+                        width={400}
+                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/jobathome-img.png"
                         alt="Web Development Services"
                       />
@@ -601,6 +611,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -611,8 +622,9 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
                     <Image
-                       width={60}
-                       height={500 / (100 / 100)}
+                      unoptimized={true}
+                      width={260}
+                      height={500 / (100 / 100)}
                       src="/img/webdevelopment/fundcareusa-logo.png"
                       alt="Web Development Services"
                     />
@@ -623,7 +635,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://fundcareusa.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -631,10 +643,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link
-                        href="https://www.logicspice.com/portfolio"
-                        className=""
-                      >
+                      <Link href="/company/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -642,8 +651,9 @@ const Page = () => {
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
                       <Image
-                         width={400}
-                         height={500 / (100 / 100)}
+                        unoptimized={true}
+                        width={400}
+                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/fundcareusa-img.png"
                         alt="Web Development Services"
                       />
@@ -651,6 +661,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -662,7 +673,8 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestTacksm">
                   <div className="WebProjectLogo">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={200}
                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/tacksm-logo.png"
                       alt="Web Development Services"
@@ -674,7 +686,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://tacksm.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -682,10 +694,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link
-                        href="/portfolio"
-                        className=""
-                      >
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -693,8 +702,9 @@ const Page = () => {
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
                       <Image
-                         width={400}
-                         height={500 / (100 / 100)}
+                        unoptimized={true}
+                        width={400}
+                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/tacksm-img.png"
                         alt="Web Development Services"
                       />
@@ -702,6 +712,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -713,7 +724,8 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestVanessajo">
                   <div className="WebProjectLogo">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={230}
                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/vanessajo-logo.png"
                       alt="Web Development Services"
@@ -725,7 +737,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://www.vanessajo-ann.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -733,10 +745,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link
-                        href="/portfolio"
-                        className=""
-                      >
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -744,6 +753,7 @@ const Page = () => {
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
                       <Image
+                        unoptimized={true}
                         width={400}
                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/vanessajo-img.png"
@@ -753,6 +763,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image
+                      unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -782,7 +793,8 @@ const Page = () => {
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon1.png"
                       alt="img1"
@@ -803,7 +815,8 @@ const Page = () => {
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon2.png"
                       alt="img1"
@@ -822,7 +835,8 @@ const Page = () => {
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon3.png"
                       alt="img1"
@@ -844,7 +858,8 @@ const Page = () => {
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon4.png"
                       alt="img1"
@@ -863,7 +878,8 @@ const Page = () => {
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon5.png"
                       alt="img1"
@@ -872,10 +888,7 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <p>
                       Our{" "}
-                      <Link
-                        href="/services/website-design"
-                        target="_blank"
-                      >
+                      <Link href="/services/website-design" target="_blank">
                         web design
                       </Link>{" "}
                       and development team always focuses on client
@@ -889,7 +902,8 @@ const Page = () => {
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <Image
-                      width={60}
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon6.png"
                       alt="img1"
@@ -909,18 +923,15 @@ const Page = () => {
           </div>
         </div>
         <div className="col-sm-12 main_btn_hire">
-          <Link
-            href="/hire-web-developers"
-            className="btn btn-hire"
-          >
+          <Link href="/hire-web-developers" className="btn btn-hire">
             Hire a Web Developer
           </Link>
         </div>
       </section>
-      <section className="ecommerce_faq_section NewFaqDesignSection">
+      <section className="ecommerce_faq_section NewFaqDesignSection ">
         <div className="container">
           <div className="row">
-            <div className="row ecommerce__Quick_FAQ">
+            <div className="row ecommerce__Quick_FAQ CustomQuickFAQScript">
               <div className="col-md-5">
                 <h4 className="title_main">
                   Frequently <br />
@@ -928,6 +939,7 @@ const Page = () => {
                 </h4>
                 <div className="FaqImgBx">
                   <Image
+                    unoptimized={true}
                     width={450}
                     height={500 / (100 / 100)}
                     src="/img/webdevelopment/FaqLaravelImg.png"
@@ -941,6 +953,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="What is web development?"
                       collapseId="flush-collapse1"
+                       data-aos="fade-up"
                     >
                       <p>
                         Web development involves creating, building, and
@@ -953,6 +966,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="What services does Logicspice web development company offer?"
                       collapseId="flush-collapse2"
+                       data-aos="fade-up"
                     >
                       <p>
                         Logicspice, a web development company, offers various
@@ -964,6 +978,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="What sets Logicspice web application development company apart?"
                       collapseId="flush-collapse3"
+                       data-aos="fade-up"
                     >
                       <p>
                         Logicspice creates tailored websites based on specific
@@ -977,6 +992,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="How does a web development agency enhance my business?"
                       collapseId="flush-collapse4"
+                       data-aos="fade-up"
                     >
                       <p>
                         Logicspice web development agency can boost your online
@@ -989,6 +1005,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="Why should I opt for custom website development services?"
                       collapseId="flush-collapse5"
+                       data-aos="fade-up"
                     >
                       <p>
                         Custom website development services offer personalized
@@ -1004,6 +1021,7 @@ const Page = () => {
           </div>
         </div>
       </section>
+
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
@@ -1011,6 +1029,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

@@ -85,7 +85,8 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
                 <Image
-                  width={500}
+                  unoptimized={true}
+                  width={600}
                   height={500 / (100 / 100)}
                   src="/img/webhosting/web-hosting-banner-img.png"
                   alt="Web Hosting"
@@ -102,7 +103,8 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
                 <Image
-                  width={350}
+                  unoptimized={true}
+                  width={250}
                   height={500 / (100 / 100)}
                   src="/img/webhosting/web-hosting-logo-img.png"
                   alt="Web Hosting Services"
@@ -161,6 +163,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -168,6 +171,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -190,6 +194,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -197,6 +202,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -219,6 +225,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -226,6 +233,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -248,6 +256,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -255,6 +264,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -276,6 +286,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -283,6 +294,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -304,6 +316,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -311,6 +324,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -333,6 +347,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -340,6 +355,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -362,6 +378,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -369,6 +386,7 @@ const Page = () => {
                         alt="Web Hosting Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -406,6 +424,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/superlative_icon.png"
@@ -428,6 +447,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/complete_safety_icon.png"
@@ -449,6 +469,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/business_covered_icon.png"
@@ -469,6 +490,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/availability_help.png"
@@ -490,6 +512,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/regulated_icon.png"
@@ -511,6 +534,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/facilitated_wordpress_icon.png"
@@ -534,6 +558,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/staging_icon.png"
@@ -557,6 +582,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/webhosting/domain_icon.png"
@@ -583,10 +609,12 @@ const Page = () => {
             <div className=" row ">
               <div className="col-md-12 ecommerce__Quick_FAQ">
                 <h4 className="title_main">Quick FAQ</h4>
+                <div className="panel-group faq_quick_sec" id="accordion">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="01. What is web hosting ?"
                     collapseId="flush-collapse1"
+                     data-aos="fade-up"
                   >
                     <p>
                       Hosting refers to providing a location on a web server for
@@ -600,6 +628,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="02. What are the different types of Web Hosting Services?"
                     collapseId="flush-collapse2"
+                     data-aos="fade-up"
                   >
                     <p>
                       Logicspice offers different types of hosting and provides
@@ -619,6 +648,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="03. What is the difference between web hosting services and domains?"
                     collapseId="flush-collapse3"
+                     data-aos="fade-up"
                   >
                     <p>
                       When you type a website address into your browser&sbquo;
@@ -643,6 +673,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="04. How does a web hosting service work?"
                     collapseId="flush-collapse4"
+                     data-aos="fade-up"
                   >
                     <p>
                       Users&apos; impressions of your website are the result of
@@ -663,6 +694,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="05. Why do I need a website host?"
                     collapseId="flush-collapse5"
+                     data-aos="fade-up"
                   >
                     <p>
                       Your website cannot go live and become accessible to the
@@ -679,6 +711,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="06. Can I purchase hosting without a domain name?"
                     collapseId="flush-collapse6"
+                     data-aos="fade-up"
                   >
                     <p>
                       The answer is yes. You can purchase domain names from a
@@ -693,6 +726,8 @@ const Page = () => {
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -717,6 +752,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

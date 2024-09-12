@@ -27,7 +27,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="AngularBanner DjangoBanner">
+      <section className=" DjangoBanner">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6">
@@ -40,10 +40,7 @@ const Page = () => {
                   <strong>Django development company</strong> that provides
                   Django web development services of the highest quality to
                   clients worldwide. Our team employs the robust{" "}
-                  <Link
-                    href="/services/python-development"
-                    target="_blank"
-                  >
+                  <Link href="/services/python-development" target="_blank">
                     Python framework
                   </Link>{" "}
                   Django to develop innovative features and high-performance
@@ -89,7 +86,8 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
                 <Image
-                  width={600}
+                  unoptimized={true}
+                  width={500}
                   height={500 / (100 / 100)}
                   src="/img/djangodevelopment/django-banner-img.png"
                   alt="Django Web Development Services"
@@ -106,7 +104,8 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
                 <Image
-                  width={350}
+                  unoptimized={true}
+                  width={400}
                   height={500 / (100 / 100)}
                   src="/img/djangodevelopment/django-logo-img.png"
                   alt="Django Web Development Services"
@@ -135,7 +134,7 @@ const Page = () => {
                   Django web development is a powerful approach to building
                   robust and scalable web applications using Python. At
                   Logicspice, we offer comprehensive
-                  <strong>Django development services</strong>, providing our
+                  <strong>{" "}Django development services</strong>, providing our
                   clients with tailored solutions for their specific
                   requirements. Our team of skilled Python Django developers is
                   dedicated to delivering high-quality results. Whether you need
@@ -148,8 +147,7 @@ const Page = () => {
                   create dynamic and feature-rich websites that enhance user
                   experiences and meet your business objectives. Trust
                   Logicspice to make your Django web development services work
-                  seamlessly, delivering exceptional results for your online
-                  presence.
+                  seamlessly, delivering exceptional results for your online presence.
                 </p>
               </div>
             </div>
@@ -167,6 +165,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -174,6 +173,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -196,6 +196,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -203,6 +204,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -225,6 +227,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -232,6 +235,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -253,6 +257,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -260,6 +265,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -283,6 +289,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -290,6 +297,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -311,6 +319,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -318,6 +327,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -340,6 +350,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -347,6 +358,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -368,6 +380,7 @@ const Page = () => {
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
@@ -375,6 +388,7 @@ const Page = () => {
                         alt="Django Web Development Services"
                       />
                       <Image
+                        unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -406,6 +420,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/djangodevelopment/core_features_icon1.png"
@@ -425,6 +440,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/djangodevelopment/core_features_icon4.png"
@@ -444,6 +460,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/djangodevelopment/core_features_icon2.png"
@@ -463,6 +480,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/djangodevelopment/core_features_icon5.png"
@@ -481,6 +499,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/djangodevelopment/core_features_icon3.png"
@@ -499,6 +518,7 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
+                      unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/djangodevelopment/core_features_icon6.png"
@@ -528,6 +548,7 @@ const Page = () => {
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/djangodevelopment/django-why-icon1.png"
@@ -547,6 +568,7 @@ const Page = () => {
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/djangodevelopment/django-why-icon2.png"
@@ -566,6 +588,7 @@ const Page = () => {
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/djangodevelopment/django-why-icon3.png"
@@ -584,6 +607,7 @@ const Page = () => {
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/djangodevelopment/django-why-icon4.png"
@@ -603,6 +627,7 @@ const Page = () => {
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/djangodevelopment/django-why-icon5.png"
@@ -622,6 +647,7 @@ const Page = () => {
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/djangodevelopment/django-why-icon6.png"
@@ -717,7 +743,7 @@ const Page = () => {
       <section className="ecommerce_faq_section NewFaqDesignSection">
         <div className="container">
           <div className="row">
-            <div className=" row ecommerce__Quick_FAQ">
+            <div className=" row ecommerce__Quick_FAQ CustomQuickFAQScript">
               <div className="col-md-5">
                 <h4 className="title_main">
                   Frequently <br />
@@ -725,8 +751,9 @@ const Page = () => {
                 </h4>
                 <div className="FaqImgBx">
                   <Image
-                   width={650}
-                   height={500 / (100 / 100)}
+                    unoptimized={true}
+                    width={650}
+                    height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
@@ -737,6 +764,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="How can a Django development company improve the security of my website?"
                     collapseId="flush-collapse1"
+                    data-aos="fade-up"
                   >
                     <p>
                       A Django development company can leverage Django&apos;s
@@ -748,6 +776,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What kind of projects can a Django development agency handle?"
                     collapseId="flush-collapse2"
+                    data-aos="fade-up"
                   >
                     <p>
                       Logicspice Django development agency can manage various
@@ -759,6 +788,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What should I look for when I want to hire Django developer?"
                     collapseId="flush-collapse3"
+                    data-aos="fade-up"
                   >
                     <p>
                       When hiring a Django developer, consider their experience,
@@ -770,6 +800,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What advantages do Django development services offer over other web development services?"
                     collapseId="flush-collapse4"
+                    data-aos="fade-up"
                   >
                     <p>
                       Logicspice Django development services offer rapid
@@ -781,6 +812,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="How does a Python Django Developer ensure web application scalability?"
                     collapseId="flush-collapse5"
+                    data-aos="fade-up"
                   >
                     <p>
                       Logicspice Python Django backend developer designs your
@@ -803,6 +835,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

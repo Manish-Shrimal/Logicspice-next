@@ -15,7 +15,7 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
+    // console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -27,6 +27,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
+      <div className="angular_development">
       <section className="AngularBanner">
         <div className="container">
           <div className="row">
@@ -79,7 +80,7 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
-                <Image
+                <Image unoptimized={true}
                   width={600}
                   height={500 / (100 / 100)}
                   src="/img/angulardevelopment/angular-icon.png"
@@ -96,7 +97,7 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
-                <Image
+                <Image unoptimized={true}
                  width={350}
                  height={500 / (100 / 100)}
                   src="/img/angulardevelopment/angular-logo-img.png"
@@ -116,7 +117,7 @@ const Page = () => {
                   your business requirements. It is used to create the most
                   effective and adaptable web applications using a
                   well-organized and widely shared base of codes across
-                  different platforms. Our
+                  different platforms. Our{" "}
                   <strong>Angular Development Company</strong> pledges to
                   deliver 100% custom Angular Web Applications that operate
                   smoothly across various browsers.
@@ -152,14 +153,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon1.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -187,14 +188,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon2.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -216,14 +217,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon3.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -244,14 +245,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon4.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -273,14 +274,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon5.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -301,14 +302,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon6.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -330,14 +331,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon7.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -359,14 +360,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/angulardevelopment/angular-new-icon8.png"
                         alt="Angular Web Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -396,7 +397,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/angulardevelopment/core_features_icon1.png"
@@ -415,7 +416,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/angulardevelopment/core_features_icon4.png"
@@ -434,7 +435,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/angulardevelopment/core_features_icon2.png"
@@ -453,7 +454,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/angulardevelopment/core_features_icon5.png"
@@ -472,7 +473,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/angulardevelopment/core_features_icon3.png"
@@ -491,7 +492,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/angulardevelopment/core_features_icon6.png"
@@ -520,7 +521,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/angulardevelopment/angular-why-icon1.png"
@@ -539,7 +540,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/angulardevelopment/angular-why-icon2.png"
@@ -558,7 +559,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/angulardevelopment/angular-why-icon3.png"
@@ -577,7 +578,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/angulardevelopment/angular-why-icon4.png"
@@ -596,7 +597,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/angulardevelopment/angular-why-icon5.png"
@@ -615,7 +616,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/angulardevelopment/angular-why-icon6.png"
@@ -713,14 +714,14 @@ const Page = () => {
       <section className="ecommerce_faq_section NewFaqDesignSection">
         <div className="container">
           <div className="row">
-            <div className=" row ecommerce__Quick_FAQ">
+            <div className=" row ecommerce__Quick_FAQ CustomQuickFAQScript">
               <div className="col-md-5">
                 <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image
+                  <Image unoptimized={true}
                    width={650}
                    height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
@@ -814,7 +815,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"
@@ -828,6 +829,8 @@ const Page = () => {
       </div>
 
       <Footer />
+      </div>
+      
     </>
   );
 };

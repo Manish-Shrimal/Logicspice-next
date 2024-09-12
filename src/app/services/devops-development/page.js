@@ -52,8 +52,8 @@ const Page = () => {
                 <div className="LaravelText">
                   Logicspice offers premier global DevOps services&sbquo;
                   providing robust and advanced solutions. We guarantee seamless
-                  integration and swift delivery&sbquo; setting DevOps excellence
-                  standards.
+                  integration and swift delivery&sbquo; setting DevOps
+                  excellence standards.
                 </div>
                 <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
@@ -83,8 +83,10 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
-                <Image width={600}
-                   height={500 / (100 / 100)}
+                <Image
+                  unoptimized={true}
+                  width={600}
+                  height={500 / (100 / 100)}
                   src="/img/devopsdevelopment/devops-img.png"
                   alt="DevOps Development Services"
                 />
@@ -96,27 +98,29 @@ const Page = () => {
       <section className="laravel-descriptions cackphp-descriptions BigDataDescription DevOpsDescription">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+            <div className="col-xs-12 col-sm-5 col-md-5 pull-right">
               <div className="laravel_img">
-                <Image width={600}
+                <Image
+                  unoptimized={true}
+                  width={600}
                   height={500 / (100 / 100)}
                   src="/img/devopsdevelopment/devops-icon.png"
                   alt="DevOps Development Services"
                 />
               </div>
             </div>
-            <div className="col-sm-6 col-md-6 pull-left">
+            <div className="col-sm-7 col-md-7 pull-left">
               <div className="laravel-descriptions-bx">
                 <h2>
                   <strong>DevOps</strong>
                   <br /> Development
                 </h2>
                 <p>
-                  As a leading DevOps development company&sbquo; we pride ourselves on
-                  bridging the gap between software development and IT
-                  operations. Recognized among the top DevOps consulting
-                  companies&sbquo; we offer tailored DevOps consulting services to
-                  enterprises seeking to optimize their workflows.{" "}
+                  As a leading DevOps development company&sbquo; we pride
+                  ourselves on bridging the gap between software development and
+                  IT operations. Recognized among the top DevOps consulting
+                  companies&sbquo; we offer tailored DevOps consulting services
+                  to enterprises seeking to optimize their workflows.{" "}
                 </p>
                 <p>
                   With our comprehensive DevOps services and solutions&sbquo; we
@@ -125,19 +129,20 @@ const Page = () => {
                   are designed to ensure seamless integration&sbquo; automated
                   processes&sbquo; and enhanced collaboration. Whether you are
                   searching for a dedicated DevOps consulting company or
-                  exploring various DevOps companies for end-to-end solutions&sbquo;
-                  our team is equipped to guide and support you at every step of
-                  your DevOps journey.
+                  exploring various DevOps companies for end-to-end
+                  solutions&sbquo; our team is equipped to guide and support you
+                  at every step of your DevOps journey.
                 </p>
                 <p>
                   DevOps application streamlines development and operations to
                   achieve business goals through integrated tools and
                   methodologies. It leverages best practices and platforms like
-                  Jenkins&sbquo; Docker&sbquo; Kubernetes&sbquo; and Terraform to automate&sbquo;
-                  monitor&sbquo; and enhance the software delivery lifecycle. Our team
-                  is committed to delivering tailored DevOps solutions that
-                  ensure seamless collaboration and optimize the development
-                  pipeline across diverse environments.
+                  Jenkins&sbquo; Docker&sbquo; Kubernetes&sbquo; and Terraform
+                  to automate&sbquo; monitor&sbquo; and enhance the software
+                  delivery lifecycle. Our team is committed to delivering
+                  tailored DevOps solutions that ensure seamless collaboration
+                  and optimize the development pipeline across diverse
+                  environments.
                 </p>
               </div>
             </div>
@@ -156,13 +161,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/containerization-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/containerization-icon-white.png"
@@ -182,13 +191,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/cloud-automation-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/cloud-automation-white-icon.png"
@@ -208,13 +221,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/deployment-automation-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/deployment-automation-white-icon.png"
@@ -225,8 +242,8 @@ const Page = () => {
                   </div>
                   <h3>Deployment Automation</h3>
                   <p>
-                    Automate your release process&sbquo; ensuring faster and safer
-                    deliveries.
+                    Automate your release process&sbquo; ensuring faster and
+                    safer deliveries.
                   </p>
                 </div>
               </div>
@@ -234,13 +251,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/infrastructure-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/infrastructure-white-icon.png"
@@ -251,8 +272,8 @@ const Page = () => {
                   </div>
                   <h3>Infrastructure as Code</h3>
                   <p>
-                    Script your infrastructure needs&sbquo; a key component of our
-                    DevOps development services.
+                    Script your infrastructure needs&sbquo; a key component of
+                    our DevOps development services.
                   </p>
                 </div>
               </div>
@@ -260,13 +281,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/infrastructure-automation-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/infrastructure-automation-white-icon.png"
@@ -287,13 +312,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/monitoring-logging-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/monitoring-logging-white-icon.png"
@@ -313,13 +342,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/security-compliance-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/security-compliance-white-icon.png"
@@ -331,8 +364,8 @@ const Page = () => {
                   <h3>Security and Compliance</h3>
                   <p>
                     Prioritize your software&apos;s security with our dedicated
-                    DevOps practices&sbquo; ensuring your applications meet compliance
-                    standards.
+                    DevOps practices&sbquo; ensuring your applications meet
+                    compliance standards.
                   </p>
                 </div>
               </div>
@@ -340,13 +373,17 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/devopsdevelopment/configuration-management-icon.png"
                         alt="DevOps Development Services"
                       />
-                      <Image width={80}
+                      <Image
+                        unoptimized={true}
+                        width={80}
                         height={100}
                         className="on-hover"
                         src="/img/devopsdevelopment/configuration-management-white-icon.png"
@@ -357,8 +394,8 @@ const Page = () => {
                   </div>
                   <h3>Configuration Management</h3>
                   <p>
-                    Ensure consistent settings across development&sbquo; staging&sbquo; and
-                    production.
+                    Ensure consistent settings across development&sbquo;
+                    staging&sbquo; and production.
                   </p>
                 </div>
               </div>
@@ -377,7 +414,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image width={50}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/devopsdevelopment/operational-efficiency.png"
                       alt="img1"
@@ -386,7 +425,8 @@ const Page = () => {
                   <div className="laravel_core_features_detail">
                     <h3>Operational Efficiency</h3>
                     <p>
-                      Simplified workflows for faster&sbquo; error-free operations.
+                      Simplified workflows for faster&sbquo; error-free
+                      operations.
                     </p>
                   </div>
                 </div>
@@ -394,7 +434,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image width={50}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/devopsdevelopment/custom-infrastructure.png"
                       alt="img4"
@@ -412,7 +454,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image width={50}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/devopsdevelopment/flexible-rates.png"
                       alt="img2"
@@ -430,7 +474,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image width={50}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/devopsdevelopment/scalable-architecture.png"
                       alt="img5"
@@ -445,7 +491,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image width={50}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/devopsdevelopment/real-time-reporting.png"
                       alt="img3"
@@ -463,7 +511,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image width={50}
+                    <Image
+                      unoptimized={true}
+                      width={50}
                       height={100}
                       src="/img/devopsdevelopment/diverse-expertise.png"
                       alt="img6"
@@ -493,7 +543,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <Image width={60}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/devopsdevelopment/seamless-collaboration.png"
                       alt="img1"
@@ -502,8 +554,8 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>Seamless Collaboration</h3>
                     <p>
-                      DevOps ensures unified operations&sbquo; leading to efficient
-                      teamwork between developers and operators.
+                      DevOps ensures unified operations&sbquo; leading to
+                      efficient teamwork between developers and operators.
                     </p>
                   </div>
                 </div>
@@ -511,7 +563,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image width={60}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/devopsdevelopment/swift-market.png"
                       alt="img1"
@@ -529,7 +583,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <Image width={60}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/devopsdevelopment/peak-performance.png"
                       alt="img1"
@@ -538,8 +594,8 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>Peak Performance Levels</h3>
                     <p>
-                      With DevOps&sbquo; systems are stable and reliable&sbquo; minimizing
-                      operational hitches.
+                      With DevOps&sbquo; systems are stable and reliable&sbquo;
+                      minimizing operational hitches.
                     </p>
                   </div>
                 </div>
@@ -547,7 +603,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <Image width={60}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/devopsdevelopment/budget-friendly.png"
                       alt="img1"
@@ -556,8 +614,8 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>Budget-Friendly Fixes</h3>
                     <p>
-                      Catch issues early&sbquo; leading to cost-effective solutions
-                      and reduced overall expenses.
+                      Catch issues early&sbquo; leading to cost-effective
+                      solutions and reduced overall expenses.
                     </p>
                   </div>
                 </div>
@@ -565,7 +623,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <Image width={60}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/devopsdevelopment/easy-scalability.png"
                       alt="img1"
@@ -583,7 +643,9 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <Image width={60}
+                    <Image
+                      unoptimized={true}
+                      width={60}
                       height={100}
                       src="/img/devopsdevelopment/automated-quick.png"
                       alt="img1"
@@ -605,14 +667,17 @@ const Page = () => {
       <section className="ecommerce_faq_section NewFaqDesignSection">
         <div className="container">
           <div className="row">
-            <div className=" row ecommerce__Quick_FAQ">
+            <div className=" row ecommerce__Quick_FAQ CustomQuickFAQScript">
               <div className="col-md-5">
                 <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image width={500} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={500}
+                    height={100}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
                     alt="laravel web development"
                   />
@@ -623,67 +688,74 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What is DevOps&sbquo; and why are companies using it more nowadays?"
                     collapseId="flush-collapse1"
+                     data-aos="fade-up"
                   >
                     <p>
                       DevOps combines software development (Dev) and IT
                       operations (Ops) to speed up and improve the software
-                      delivery process. With DevOps&sbquo; companies can release new
-                      features faster&sbquo; fix problems quicker&sbquo; and offer more
-                      stable solutions. It&apos;s becoming popular because
-                      businesses need to adapt rapidly in our digital world.
+                      delivery process. With DevOps&sbquo; companies can release
+                      new features faster&sbquo; fix problems quicker&sbquo; and
+                      offer more stable solutions. It&apos;s becoming popular
+                      because businesses need to adapt rapidly in our digital
+                      world.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="Why is LogicSpice considered a top DevOps development company?"
                     collapseId="flush-collapse2"
+                     data-aos="fade-up"
                   >
                     <p>
                       LogicSpice stands out because of its commitment to quality
                       and speed. We use the best tools and methods to make
                       software development and IT operations work better
                       together. Our goal is to help businesses move faster
-                      without problems&sbquo; which is why many trust us for their
-                      DevOps needs.
+                      without problems&sbquo; which is why many trust us for
+                      their DevOps needs.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="How do DevOps services ensure that software is both high quality and delivered quickly?"
                     collapseId="flush-collapse3"
+                     data-aos="fade-up"
                   >
                     <p>
                       DevOps uses automated testing and deployment methods. This
                       means we can check the software for issues quickly and
-                      often. So&sbquo; by the time the software is ready for users&sbquo; it
-                      has been tested many times&sbquo; ensuring its quality while
-                      also getting it out fast.
+                      often. So&sbquo; by the time the software is ready for
+                      users&sbquo; it has been tested many times&sbquo; ensuring
+                      its quality while also getting it out fast.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="What tools are commonly used in DevOps&sbquo; and why?"
                     collapseId="flush-collapse4"
+                     data-aos="fade-up"
                   >
                     <p>
-                      Tools like Jenkins&sbquo; Docker&sbquo; and Kubernetes are popular in
-                      DevOps. Jenkins helps with automating different stages of
-                      development&sbquo; Docker packages software into units called
-                      containers&sbquo; and Kubernetes manages these containers. Using
-                      these tools makes the process smoother and more efficient.
+                      Tools like Jenkins&sbquo; Docker&sbquo; and Kubernetes are
+                      popular in DevOps. Jenkins helps with automating different
+                      stages of development&sbquo; Docker packages software into
+                      units called containers&sbquo; and Kubernetes manages
+                      these containers. Using these tools makes the process
+                      smoother and more efficient.
                     </p>
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
                     headerTitle="How does DevOps benefit businesses directly?"
                     collapseId="flush-collapse5"
+                     data-aos="fade-up"
                   >
                     <p>
-                      With DevOps&sbquo; businesses can release new software features
-                      faster&sbquo; which keeps customers happy. They can also respond
-                      to market changes more quickly and have fewer software
-                      problems. Overall&sbquo; it saves time and money while improving
-                      the product.
+                      With DevOps&sbquo; businesses can release new software
+                      features faster&sbquo; which keeps customers happy. They
+                      can also respond to market changes more quickly and have
+                      fewer software problems. Overall&sbquo; it saves time and
+                      money while improving the product.
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
@@ -698,7 +770,13 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={50} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              unoptimized={true}
+              width={50}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

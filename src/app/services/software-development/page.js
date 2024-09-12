@@ -30,8 +30,8 @@ const Page = () => {
     message: "",
     post_url: Domain + "/services/software-development",
     product_name: "Software development",
-    post_slug: "/services/software-development"
-  })
+    post_slug: "/services/software-development",
+  });
 
   const [error, setError] = useState({
     name: "",
@@ -58,8 +58,6 @@ const Page = () => {
         recaptchaerror: "",
       }));
     }
-
-    
   };
 
   const handleChange = (e) => {
@@ -71,41 +69,40 @@ const Page = () => {
     setError((prevError) => ({
       ...prevError,
       [name]: "",
-    }))
-  }
-
+    }));
+  };
 
   const submitQuoteForm = async (e) => {
     e.preventDefault();
-  
+
     const newErrors = {};
-  
+
     if (!isRecaptchaVerified) {
       newErrors.recaptchaerror = "Please verify that you are not a robot";
     }
-  
+
     if (formData.name === "") {
       newErrors.name = "Please enter your name";
     }
-  
+
     if (formData.email === "") {
       newErrors.email = "Please enter your email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
-  
+
     if (formData.message === "") {
       newErrors.message = "Please enter your message";
     }
-  
+
     if (Object.keys(newErrors).length > 0) {
       setError(newErrors);
       return;
     }
-  
+
     try {
       const response = await axios.post(BaseAPI + "/pages/quote", formData);
-  
+
       if (response.data.status === 200) {
         setFormData({
           name: "",
@@ -114,12 +111,13 @@ const Page = () => {
           phone_no: "",
           message: "",
         });
-  
+
         if (recaptchaRef.current) {
           recaptchaRef.current.reset();
         }
-  
-        document.querySelector("#successMessage").innerHTML = "Request message sent successfully";
+
+        document.querySelector("#successMessage").innerHTML =
+          "Request message sent successfully";
       }
     } catch (error) {
       console.log(error.message);
@@ -133,6 +131,7 @@ const Page = () => {
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
           <Image
+            unoptimized={true}
             width={1500}
             height={500 / (300 / 300)}
             src="/img/websitedesign/software-development-services.jpg"
@@ -140,140 +139,162 @@ const Page = () => {
           />
         </div>
 
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-6 col-md-8">
-              <p>
-                Equipped with best and highly experienced software developers,
-                we employ innovative technology to deliver customized solutions.
-                Additionally, we also make available the facility of offshore
-                software development to small enterprises and start-ups.{" "}
-              </p>
+        <div className="formAreaSection">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6 col-md-8">
+                <p>
+                  Equipped with best and highly experienced software developers,
+                  we employ innovative technology to deliver customized
+                  solutions. Additionally, we also make available the facility
+                  of offshore software development to small enterprises and
+                  start-ups.{" "}
+                </p>
 
-              <p>
-                We being a reliable software development company demonstrate
-                flexibility and scalability to meet the desired requirements of
-                our clients. Trusted by customers across world, we take
-                expertise in developing{" "}
-                <Link
-                  href="/custom-solutions"
-                  target="_blank"
-                  className="WebsiteTxtLink"
-                >
-                  Custom Softwares
-                </Link>
-                ,{" "}
-                <Link
-                  href="/services/website-design"
-                  target="_blank"
-                  className="WebsiteTxtLink"
-                >
-                  Website Designing
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href="/services/mobile-app-development"
-                  target="_blank"
-                  className="WebsiteTxtLink"
-                >
-                  Mobile Applications.
-                </Link>
-              </p>
+                <p>
+                  We being a reliable software development company demonstrate
+                  flexibility and scalability to meet the desired requirements
+                  of our clients. Trusted by customers across world, we take
+                  expertise in developing{" "}
+                  <Link
+                    href="/custom-solutions"
+                    target="_blank"
+                    className="WebsiteTxtLink"
+                  >
+                    Custom Softwares
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/services/website-design"
+                    target="_blank"
+                    className="WebsiteTxtLink"
+                  >
+                    Website Designing
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    href="/services/mobile-app-development"
+                    target="_blank"
+                    className="WebsiteTxtLink"
+                  >
+                    Mobile Applications.
+                  </Link>
+                </p>
 
-              <p>
-                We come with perfect software applications that we code and
-                design based on C#, C++, PHP, Java, Amazon Web Services and
-                JavaScript. Leveraging on our huge potential, we employ the use
-                of best in class resources, technologies and processes to design
-                and develop applications of superior value.{" "}
-              </p>
+                <p>
+                  We come with perfect software applications that we code and
+                  design based on C#, C++, PHP, Java, Amazon Web Services and
+                  JavaScript. Leveraging on our huge potential, we employ the
+                  use of best in class resources, technologies and processes to
+                  design and develop applications of superior value.{" "}
+                </p>
 
-              <p>
-                Softwares developed by us are based on modern methodology of
-                DevOps and Agile. The software development practice involves
-                automation and monitoring at basically every step of development
-                from integration to testing and all the way to releasing and
-                management of it.{" "}
-              </p>
-            </div>
-            <div className="col-sm-6 col-md-4">
-              <div className="form_quote form_top">
-              <form>
-                  <h4>Get a Quote</h4>
-                  <div className="form-group">
-                    <input
-                      name="name"
-                      placeholder="Your Full Name*"
-                      value={formData.name}
-                      size="40"
-                      className={`form-control required ${error.name ? 'fieldRequired' : ''}`}                      type="text"
-                      id="UserName"
-                      onChange={handleChange}
-                    />{" "}
-                  </div>
-                  <div className="form-group">
-                    <input
-                      name="email"
-                      placeholder="Email*"
-                      value={formData.email}
-                      size="40"
-                      className={`form-control required ${error.email ? 'fieldRequired' : ''}`}                      type="text"
-                      onChange={handleChange}
-                    />{" "}
-                  </div>
-                  <div className="form-group">
-                    <input
-                      name="phone_no"
-                      placeholder="Phone Number"
-                      value={formData.phone_no}
-                      size="40"
-                      className="form-control"
-                      type="text"
-                      onChange={handleChange}
-                    />{" "}
-                  </div>
-                  <div className="form-group">
-                    <input
-                      name="company"
-                      placeholder="Company Name"
-                      value={formData.company}
-                      size="40"
-                      className="form-control"
-                      type="text"
-                      onChange={handleChange}
-                    />{" "}
-                  </div>
-
-                  <div className="form-group">
-                    <textarea
-                      name="message"
-                      placeholder="Your Message*"
-                      size="40"
-                      value={formData.message}
-                      className={`form-control required ${error.message ? 'fieldRequired' : ''}`}                      type="text"
-                      onChange={handleChange}
-                    ></textarea>{" "}
-                  </div>
-                  
-                  <div className="form-group-google">
-                    <ReCAPTCHA
-                    ref={recaptchaRef}
-                      key={recaptchaKey}
-                      sitekey={recaptchaKey}
-                      onChange={onRecaptchaChange}
-                    />
-                    <div className="gcpc FormError recaptchaError" id="captcha_msg">
-                      {error.recaptchaerror}
+                <p>
+                  Softwares developed by us are based on modern methodology of
+                  DevOps and Agile. The software development practice involves
+                  automation and monitoring at basically every step of
+                  development from integration to testing and all the way to
+                  releasing and management of it.{" "}
+                </p>
+              </div>
+              <div className="col-sm-6 col-md-4">
+                <div className="form_quote form_top">
+                  <form>
+                    <h4>Get a Quote</h4>
+                    <div className="form-group">
+                      <input
+                        name="name"
+                        placeholder="Your Full Name*"
+                        value={formData.name}
+                        size="40"
+                        className={`form-control required ${
+                          error.name ? "fieldRequired" : ""
+                        }`}
+                        type="text"
+                        id="UserName"
+                        onChange={handleChange}
+                      />{" "}
                     </div>
-                  </div>
+                    <div className="form-group">
+                      <input
+                        name="email"
+                        placeholder="Email*"
+                        value={formData.email}
+                        size="40"
+                        className={`form-control required ${
+                          error.email ? "fieldRequired" : ""
+                        }`}
+                        type="text"
+                        onChange={handleChange}
+                      />{" "}
+                    </div>
+                    <div className="form-group">
+                      <input
+                        name="phone_no"
+                        placeholder="Phone Number"
+                        value={formData.phone_no}
+                        size="40"
+                        className="form-control"
+                        type="text"
+                        onChange={handleChange}
+                      />{" "}
+                    </div>
+                    <div className="form-group">
+                      <input
+                        name="company"
+                        placeholder="Company Name"
+                        value={formData.company}
+                        size="40"
+                        className="form-control"
+                        type="text"
+                        onChange={handleChange}
+                      />{" "}
+                    </div>
 
-                  <div id="successMessage" className="text-success fw-bold successMessage"></div>
+                    <div className="form-group">
+                      <textarea
+                        name="message"
+                        placeholder="Your Message*"
+                        size="40"
+                        value={formData.message}
+                        className={`form-control required ${
+                          error.message ? "fieldRequired" : ""
+                        }`}
+                        type="text"
+                        onChange={handleChange}
+                      ></textarea>{" "}
+                    </div>
 
-                  <div className="form-group">
-                    
-                    <button className="btn btn-primary btn-block" onClick={submitQuoteForm}>Submit</button>
-                  </div>
-                </form>
+                    <div className="form-group-google">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        key={recaptchaKey}
+                        sitekey={recaptchaKey}
+                        onChange={onRecaptchaChange}
+                      />
+                      <div
+                        className="gcpc FormError recaptchaError"
+                        id="captcha_msg"
+                      >
+                        {error.recaptchaerror}
+                      </div>
+                    </div>
+
+                    <div
+                      id="successMessage"
+                      className="text-success fw-bold successMessage"
+                    ></div>
+
+                    <div className="form-group">
+                      <button
+                        className="btn btn-primary btn-block"
+                        onClick={submitQuoteForm}
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -286,14 +307,14 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6 col-md-6">
               <div className="service_box Application1 ">
-                <h3>Software designing</h3>
+                <h3>Software Designing</h3>
                 <p>
                   Modify the look of your site or mobile app with easy
                   customization features of OpenCart.
                 </p>
               </div>
               <div className="service_box Application3">
-                <h3>Maintenance and support</h3>
+                <h3>Maintenance And Support</h3>
                 <p>
                   Equipped with expert professionals, we provide to clients
                   quality support so as to assist them with smooth IT
@@ -301,7 +322,7 @@ const Page = () => {
                 </p>
               </div>
               <div className="service_box Application2">
-                <h3>Software Product development </h3>
+                <h3>Software Product Development </h3>
                 <p>
                   When you partner with us, we provide you the facility of
                   opting for software development service in the form of
@@ -312,7 +333,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-6">
               <div className="service_box Application4">
-                <h3>Software testing</h3>
+                <h3>Software Testing</h3>
                 <p>
                   {" "}
                   As a top-notch custom software development company, we develop
@@ -322,7 +343,7 @@ const Page = () => {
                 </p>
               </div>
               <div className="service_box Application5">
-                <h3>Software re-designing</h3>
+                <h3>Software Re-Designing</h3>
                 <p>
                   Being one of the best software development companies in India,
                   we not only provide development services, rather we aid
@@ -344,6 +365,7 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
                 <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon1.png"
@@ -355,6 +377,7 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
                 <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon6.png"
@@ -366,6 +389,7 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
                 <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon5.png"
@@ -378,6 +402,7 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
                 <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon4.png"
@@ -389,6 +414,7 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
                 <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon3.png"
@@ -400,6 +426,7 @@ const Page = () => {
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
                 <Image
+                  unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon2.png"
@@ -449,6 +476,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"

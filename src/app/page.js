@@ -20,8 +20,10 @@ const Page = () => {
   return (
     <>
       <NavBar />
+      <div className="home-slider">
       <div className="container">
         <Slidersimple />
+      </div>
       </div>
 
       <section className="ServicesNewSection">
@@ -798,7 +800,7 @@ const Page = () => {
         </div>
       </section>
       {/* Hire section  */}
-      <section className="hire-expert-home" >
+      <section className="hire-expert-home">
         <div className="container">
           <div className="headings">
             <h2>HIRE DEVELOPER MINDS FOR DIFFERENT PLATFORM</h2>
@@ -1003,6 +1005,30 @@ const Page = () => {
       {/* Industries  */}
 
       <section className="ind-we-serv">
+        <div class="IndustriesIcon1">
+          <Image width={100} height={100} src="/img/home/industries/icon1.png" alt="" />
+        </div>
+        <div class="IndustriesIcon2">
+          <Image width={100} height={100} src="/img/home/industries/icon2.png" alt="" />
+        </div>
+        <div class="IndustriesIcon3">
+          <Image width={100} height={100} src="/img/home/industries/icon3.png" alt="" />
+        </div>
+        <div class="IndustriesIcon4">
+          <Image width={100} height={100} src="/img/home/industries/icon4.png" alt="" />
+        </div>
+        <div class="IndustriesIcon5">
+          <Image width={100} height={100} src="/img/home/industries/icon5.png" alt="" />
+        </div>
+        <div class="IndustriesIcon6">
+          <Image width={100} height={100} src="/img/home/industries/icon6.png" alt="" />
+        </div>
+        <div class="IndustriesIcon7">
+          <Image width={100} height={100} src="/img/home/industries/icon7.png" alt="" />
+        </div>
+        <div class="IndustriesIcon8">
+          <Image width={100} height={100} src="/img/home/industries/icon8.png" alt="" />
+        </div>
         <div className="container">
           <div className="headings headings_white">
             <h2>INDUSTRIES WE HAVE SERVED</h2>
@@ -1018,7 +1044,7 @@ const Page = () => {
               data-aos="fade-up"
               className="IndustriesBx1 aos-init aos-animate"
             >
-              <Link href="/industries/Hotels-apps" className="">
+              <Link href="/industries/Hotel-apps" className="">
                 <span>
                   <i className="ind_icons ind_icon1"></i>
                 </span>
@@ -1041,7 +1067,7 @@ const Page = () => {
               className="IndustriesBx3 aos-init aos-animate"
             >
               <Link
-                href="/industries/commercial-and-residential-real-estate-apps"
+                href="/industries/commercial-and-residential-apps"
                 className=""
               >
                 <span>
@@ -1054,7 +1080,7 @@ const Page = () => {
               data-aos="fade-up"
               className="IndustriesBx4 aos-init aos-animate"
             >
-              <Link href="/industries/Transportation-apps" className="">
+              <Link href="/industries/transportation-apps" className="">
                 <span>
                   <i className="ind_icons ind_icon4"></i>
                 </span>
@@ -1113,7 +1139,7 @@ const Page = () => {
               className="IndustriesBx8 aos-init aos-animate"
             >
               <Link
-                href="/industries/accountants-and-financial-services-apps"
+                href="/industries/accountants-and-financial-services-real-estate-apps"
                 className=""
               >
                 <span>

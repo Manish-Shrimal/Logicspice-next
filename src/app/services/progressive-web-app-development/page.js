@@ -108,7 +108,7 @@ const Page = () => {
             </div>
             <div className="col-md-6">
               <div className="images-section">
-                <Image
+                <Image  unoptimized={true}
                   width={500}
                   height={500 / (100 / 100)}
                   src="/img/progressivewebappdevelopment/pwa-banner-img.png"
@@ -310,7 +310,7 @@ const Page = () => {
             <div className="col-md-6"></div>
           </div>
           <div className="img_saaa">
-            <Image
+            <Image unoptimized={true}
               width={1075}
               height={500 / (100 / 100)}
               src="/img/progressivewebappdevelopment/pwa_banner.png"
@@ -333,7 +333,7 @@ const Page = () => {
             >
               <div className="new_libraries">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={500 / (100 / 100)}
                     src="/img/progressivewebappdevelopment/new_development_icon1.png"
@@ -352,7 +352,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/progressivewebappdevelopment/new_development_icon3.png"
@@ -374,7 +374,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/progressivewebappdevelopment/new_development_icon2.png"
@@ -398,7 +398,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/progressivewebappdevelopment/new_development_icon4.png"
@@ -422,7 +422,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/progressivewebappdevelopment/new_development_icon5.png"
@@ -473,7 +473,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

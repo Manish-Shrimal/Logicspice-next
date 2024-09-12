@@ -11,13 +11,18 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import "../../resposive.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -27,6 +32,48 @@ const Page = () => {
   };
   const openModal = () => {
     setShowModal(!showModal);
+  };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -48,8 +95,9 @@ const Page = () => {
 
   return (
     <>
-      <NavBar />
-    
+      {/* <NavBar /> */}
+      {!isScrolled && <NavBar />}
+
       <section className="product_top_sectins">
         <Image
           unoptimized={true}
@@ -920,71 +968,130 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Are your given source code modifiable?"
-                    collapseId="flush-collapse1"
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
                   >
-                    <p>
-                      Yes, our given scripts are flexible. Clients can customize
+                    <Typography>
+                      Are your given source code modifiable?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, our scripts are flexible. Clients can customize
                       according to their requirement.
-                    </p>
-                  </MDBAccordionItem>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Do logicspice give technical support?"
-                    collapseId="flush-collapse2"
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
                   >
-                    <p>
-                      Yes, we believe in long-term relationship and provide
-                      technical support to the client at affordable cost.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Do Logicspice give technical support?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we believe in long-term relationships and provide
+                      technical support to the client at an affordable cost.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Are you willing to advise us with ideas?"
-                    collapseId="flush-collapse3"
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
                   >
-                    <p>
-                      Sure, we fulfill the requirement of client. Your
-                      suggestion or ideas are always welcomed which can make
+                    <Typography>
+                      Are you willing to advise us with ideas?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Sure, we fulfill the requirement of the client. Your
+                      suggestions or ideas are always welcomed which can make
                       your business more interactive.
-                    </p>
-                  </MDBAccordionItem>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Will you deliver the exact product as shown in demo?"
-                    collapseId="flush-collapse4"
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
                   >
-                    <p>
-                      Yes, We deliver the exact product. We don&apos;t
-                      compromise with quality at all.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Will you deliver the exact product as shown in the demo?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we deliver the exact product. We don’t compromise
+                      with quality at all.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I use your script without any programming skills?"
-                    collapseId="flush-collapse5"
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
                   >
-                    <p>
-                      Yes, You can directly install our given script and can
-                      manage everything in admin panel which is very user
-                      friendly.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Can I use your script without any programming skills?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you can directly install our given script and manage
+                      everything in the admin panel, which is very
+                      user-friendly.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I remove your company proprietary notices?"
-                    collapseId="flush-collapse6"
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
                   >
-                    <p>
-                      You are allowed to modify the script. You can remove our
-                      company information and put yours. But you cannot put
-                      &quot;copyright by&quot; because only we own the
-                      copyrights for our products.{" "}
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion>
+                    <Typography>
+                      Can I remove your company proprietary notices?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      With an extra charge, you are allowed to modify the
+                      branding. You can remove our company information and put
+                      yours. However, you cannot put &quot;copyright by&qout;
+                      because only Logicspice owns the copyrights for our
+                      software.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>

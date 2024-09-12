@@ -41,7 +41,7 @@ const Page = () => {
   });
 
   const openModal = () => {
-    console.log(showModal);
+    // console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -140,7 +140,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-6">
               <div className="qa-img">
-                <Image
+                <Image unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   src="/img/softwaretestingservices/qa-img.png"
@@ -194,7 +194,7 @@ const Page = () => {
                 <div className="tesitng-fild">
                   <div className="testing-top">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                        width={50}
                        height={500 / (100 / 100)}
                         src="/img/softwaretestingservices/qa-icon1.png"
@@ -208,7 +208,7 @@ const Page = () => {
                     perfectly in the first attempt, it includes a number of
                     development phases and there are strong possibilities of
                     errors. So here the software testing process helps to
-                    achieve the &quot;perfect&quot; production quality of
+                    achieve the &apos;perfect&apos; production quality of
                     software/ product. In this manual testing our QA takes over
                     the role of an end-user and test the whole project workflow
                     process to identify bugs.{" "}
@@ -222,7 +222,7 @@ const Page = () => {
                 <div className="tesitng-fild">
                   <div className="testing-top">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={50}
                         height={100}
                         src="/img/softwaretestingservices/qa-icon2.png"
@@ -243,9 +243,9 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="testing-img">
-                  <Image
-                  width={500}
-                  height={500 / (100 / 100)}
+                  <Image unoptimized={true}
+                  width={450}
+                  height={1500 / (100 / 100)}
                     src="/img/softwaretestingservices/qa-img2.png"
                     alt="testing-img"
                   />
@@ -428,6 +428,7 @@ const Page = () => {
                 data-toggle="modal"
                 data-target="#contactFix"
                 className="btn btn-primary"
+                onClick={toggleModal}
               >
                 Get a Free Quote
               </a>
@@ -441,7 +442,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"

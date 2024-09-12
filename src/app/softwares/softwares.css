@@ -4488,11 +4488,11 @@ before {
   margin: 0 5px 7px 14px;
   padding: 9px 3px;
   width: 140px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 14px;
   border-radius: 5px;
-  background: #fff;
-  color: #6c6c6c;
+  background: linear-gradient(to bottom, rgba(226, 226, 226, 1) 0, rgba(219, 219, 219, 1) 50%, rgba(254, 254, 254, 1) 100%);
+  color: #000;
 }
 
 .add_field,
@@ -4513,10 +4513,10 @@ before {
 
 .af_r {
   margin: 5px 0;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
-.af_la {
+/* .af_la {
   float: left;
   margin: 6px 0 -12px 10px;
   width: auto;
@@ -4525,17 +4525,17 @@ before {
   font-size: 16px;
   background: #fff;
   position: relative;
-}
+} */
 
-.af_ra {
+/* .af_ra {
   float: left;
   width: 100%;
   border: 1px solid #e1e1e1;
   padding: 15px;
   border-radius: 6px;
-}
+} */
 
-.af_ra input[type="text"],
+/* .af_ra input[type="text"],
 .af_ra textarea {
   border: none;
   border-radius: 3px;
@@ -4545,7 +4545,7 @@ before {
   padding: 4px 10px;
   width: 100%;
   height: 31px;
-}
+} */
 
 .af_ra select {
   border: 1px solid #d6d6d6;
@@ -4691,21 +4691,32 @@ before {
 
 .lfha {
   /*border:1px dashed transparent;border-bottom:1px dashed #074376;*/
-  float: left;
+  /* float: left;
   width: 100%;
   padding: 28px;
   margin: 0%;
-  background: #f6f6f6;
+  background: #f6f6f6; */
+  border: 1px dashed transparent;
+  border-bottom: 1px dashed #074376;
+  float: left;
+  width: 98%;
+  padding: 2px 22px 5px 7px;
+  margin: 1%;
 }
 
 .lfha.setemail {
-  color: rgba(36, 36, 36, 0.8);
+  /* color: rgba(36, 36, 36, 0.8);
   font-size: 16px;
   margin: 0;
   padding: 36px 28px;
   text-align: left;
   background: #eeebeb;
-  width: 100%;
+  width: 100%; */
+  color: #252525;
+    font-size: 14px;
+    margin: 0 0 21px 5px;
+    padding: 5px 0 0 10px;
+    text-align: left;
 }
 
 .note {
@@ -4719,13 +4730,17 @@ before {
 }
 
 .af_ra.ssemail {
-  margin: 0px;
+  /* margin: 0px;
   width: 100%;
   padding: 10px 0 0;
-  border: none;
+  border: none; */
+
+    margin: 6px 0 11px 1px;
+    width: 92%;
+
 }
 
-/*.lfha:hover{border:1px dashed #074376}*/
+.lfha:hover{border:1px dashed #074376}
 .lf_va.chbb {
   width: 100%;
   text-align: left;
@@ -4949,12 +4964,20 @@ before {
 }
 
 .lfha.setemail .af_ra input[type="text"] {
-  height: 60px;
+  /* height: 60px;
   border: 1px #d6d3d3 solid;
   padding: 15px;
   border-radius: 6px;
   color: rgba(91, 91, 91, 0.8);
-  font-size: 16px;
+  font-size: 16px; */
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  color: #666;
+  float: left;
+  font-size: 15px;
+  padding: 4px 10px;
+  width: 100%;
+  height: 31px;
 }
 
 .ld_main_bx {
@@ -5856,3 +5879,50 @@ before {
   display: block;
   font-weight: 700;
 }
+
+/* Lead generation Css  */
+.add_field {
+  margin: 26px 0 0;
+  padding: 6px 0 0;
+}
+
+.af_la{
+  float: left;
+  margin: 6px 0 0;
+  width: 30%;
+  padding: 0 10px;
+  color: #252525;
+  font-size: 14px;
+}   
+.af_ra {
+  float: left;
+  width: 63%;
+}
+
+.af_ra input[type=text], .af_ra textarea {
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  color: #666;
+  float: left;
+  font-size: 15px;
+  padding: 4px 10px;
+  width: 100%;
+  height: 31px;
+}
+
+.ckbox_ch button.add-choice {
+  background: #f1484a;
+  border: 1px solid #f1484a;
+  border-radius: 3px;
+  padding: 1px 0 3px;
+}
+
+
+.ckbox_ch button.remove-choice {
+  background: #074376;
+  border: 1px solid #074376;
+  border-radius: 3px;
+  padding: 0 0 3px;
+}
+
+/* Lead generation Css end  */

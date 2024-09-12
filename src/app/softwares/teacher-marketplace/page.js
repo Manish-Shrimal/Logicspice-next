@@ -647,7 +647,7 @@ See how it work yourself!"
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_classNameified.png"
+                                  src="/img/jobboard/manage_classified.png"
                                 />
                               </i>
                               <span>
@@ -804,7 +804,7 @@ See how it work yourself!"
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/className_category.png"
+                                  src="/img/jobboard/class_category.png"
                                 />
                               </i>
                               <span>
@@ -942,7 +942,7 @@ See how it work yourself!"
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_classNameified.png"
+                                  src="/img/jobboard/manage_classified.png"
                                 />
                               </i>
                               <span>

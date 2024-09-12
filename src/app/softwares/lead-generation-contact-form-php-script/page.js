@@ -35,6 +35,8 @@ const Page = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
+  const [selectedField, setSelectedField] = useState("");
+  const [choices, setChoices] = useState([""]);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -50,6 +52,58 @@ const Page = () => {
     // Add your form submission logic here
     console.log("Form submitted");
   };
+
+  const loadTextBox = () => {
+    console.log("object loaded");
+    setSelectedField("SingleLineText");
+  };
+
+  const loadTextAreaBox = () => {
+    setSelectedField("ParagraphText");
+  };
+  const loadDropdown = () => {
+    setSelectedField("Dropdown");
+  };
+  const loadCheckBox = () => {
+    setSelectedField("Checkbox");
+  };
+  const loadRadioBtn = () => {
+    setSelectedField("MultipleDropdown");
+  };
+  const loadfilebox = () => {
+    setSelectedField("File");
+  };
+  const setFrom = () => {
+    setSelectedField("FormSetting");
+  };
+  const setEmail = () => {
+    setSelectedField("Email");
+  };
+  const addnewchoice = () => {
+    setChoices([...choices, ""]);
+  }
+  const FullName = () => {
+    setSelectedField("FullName");
+  }
+
+  const removeChoice = (index) => {
+    setChoices(choices.filter((_, i) => i !== index));
+    // setChoices("false");
+  };
+  const emailAddress = () =>{
+    setSelectedField("EmailAddress");
+  }
+  const contact = () => {
+    setSelectedField("Contact");
+  }
+  const comment = () => {
+    setSelectedField("Comment");
+  }
+
+  const handleInputChange = (event) => {
+    setChoices(event.target.value); // Update state with the current input value
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -67,45 +121,7 @@ const Page = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // const Accordion = styled((props) => (
-  //   <MuiAccordion disableGutters elevation={0} square {...props} />
-  // ))(({ theme }) => ({
-  //   border: `1px solid ${theme.palette.divider}`,
-  //   "&:not(:last-child)": {
-  //     borderBottom: 0,
-  //   },
-  //   "&::before": {
-  //     display: "none",
-  //   },
-  // }));
 
-  // const AccordionSummary = styled((props) => (
-  //   <MuiAccordionSummary
-  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-  //     {...props}
-  //   />
-  // ))(({ theme }) => ({
-  //   backgroundColor:
-  //     theme.palette.mode === "dark"
-  //       ? "rgba(255, 255, 255, .05)"
-  //       : "rgba(0, 0, 0, .03)",
-  //   flexDirection: "row-reverse",
-  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-  //     transform: "rotate(90deg)",
-  //   },
-  //   "& .MuiAccordionSummary-content": {
-  //     marginLeft: theme.spacing(1),
-  //   },
-  // }));
-
-  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  //   padding: theme.spacing(2),
-  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
-  // }));
-
-  // const handleChange = (panel) => (event, newExpanded) => {
-  //   setExpanded(newExpanded ? panel : false);
-  // };
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -150,7 +166,8 @@ const Page = () => {
   };
   return (
     <>
-      <NavBar />
+      {/* <NavBar  /> */}
+      {!isScrolled && <NavBar />}
       <section className="product_top_sectins">
         <Image
           unoptimized={true}
@@ -298,60 +315,1007 @@ const Page = () => {
                           <div className="ld_flist">
                             <ul>
                               <li
-                                onclick="loadTextBox('slt')"
+                                onClick={loadTextBox}
                                 className="lfsl"
                                 id="slt"
                               >
                                 Single Line Text
                               </li>
                               <li
-                                onclick="loadTextAreaBox('pt')"
+                                onClick={loadTextAreaBox}
                                 className="lfsl"
                                 id="pt"
                               >
                                 Paragraph Text
                               </li>
                               <li
-                                onclick="loadCheckBox('cb')"
+                                onClick={loadCheckBox}
                                 className="lfsl"
                                 id="cb"
                               >
                                 Checkboxes
                               </li>
                               <li
-                                onclick="loadRadioBtn('mc')"
+                                onClick={loadRadioBtn}
                                 className="lfsl"
                                 id="mc"
                               >
                                 Multiple Choice
                               </li>
                               <li
-                                onclick="loadDropdown('dd')"
+                                onClick={loadDropdown}
                                 className="lfsl"
                                 id="dd"
                               >
                                 Dropdown
                               </li>
                               <li
-                                onclick="loadfilebox('filebox')"
+                                onClick={loadfilebox}
                                 className="lfsl"
                                 id="filebox"
                               >
                                 File Upload
                               </li>
-                              <li
-                                onclick="setFrom('fs')"
-                                className="lfsl"
-                                id="fs"
-                              >
+                              <li onClick={setFrom} className="lfsl" id="fs">
                                 Form Settings
                               </li>
                             </ul>
                           </div>
-                          <div
-                            className="showaddform"
-                            id="showformdields"
-                          ></div>
+                          <div className="showaddform" id="showformdields">
+                            {selectedField === "SingleLineText" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="email"
+                                          id="textemail"
+                                          onclick="textemail()"
+                                        />{" "}
+                                        <span>Email</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="number"
+                                          id="textnumber"
+                                          onclick="textnumber()"
+                                        />{" "}
+                                        <span>Number</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Range</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="minlength"
+                                          value="0"
+                                          id="minlength"
+                                        />{" "}
+                                        <span>Minimum Character</span>
+                                      </div>
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="maxlength"
+                                          value=""
+                                          id="maxlength"
+                                        />{" "}
+                                        <span>Maximum Character</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Placeholder</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="placeholder"
+                                        id="placeholder"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "ParagraphText" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Range</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="minlength"
+                                          value="0"
+                                          id="minlength"
+                                        />{" "}
+                                        <span>Minimum Character</span>
+                                      </div>
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="maxlength"
+                                          value=""
+                                          id="maxlength"
+                                        />{" "}
+                                        <span>Maximum Character</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Placeholder</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="placeholder"
+                                        id="placeholder"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "Checkbox" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Choices</div>
+
+                                    <div class="af_ra" id="addChoices">
+                                      {choices.map((choice, index) => (
+                                        <div key={index} class="lf_va chbb">
+                                          <input
+                                            type="checkbox"
+                                            name="choices[]"
+                                            class="ckbox"
+                                            disabled
+                                          />{" "}
+                                          <span class="ckbox_ch">
+                                            <input
+                                              type="text"
+                                              name="textname"
+                                              value="Define Choice"
+                                              class="cboption"
+                                            />
+                                          </span>
+                                          <span class="ckbox_ch">
+                                            <button
+                                              class="add-choice"
+                                              onClick={addnewchoice}
+                                            >
+                                              +
+                                            </button>
+                                          </span>
+                                          {index > 0 && (
+                                            <span className="ckbox_ch">
+                                              <button
+                                                class="remove-choice"
+                                                onClick={() =>
+                                                  removeChoice(index)
+                                                }
+                                              >
+                                                -
+                                              </button>
+                                            </span>
+                                          )}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "MultipleDropdown" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Choices</div>
+                                    <div class="af_ra" id="addChoices">
+                                      <div class="lf_va chbb">
+                                        <input
+                                          type="radio"
+                                          name="choices[]"
+                                          class="ckbox"
+                                          disabled
+                                        />{" "}
+                                        <span class="ckbox_ch">
+                                          <input
+                                            type="text"
+                                            name=""
+                                            value=""
+                                            id=""
+                                            class="cboption"
+                                          />
+                                        </span>
+                                        <span class="ckbox_ch">
+                                          <button
+                                            class="add-choice"
+                                            onClick={addnewchoice}
+                                          >
+                                            +
+                                          </button>
+                                        </span>
+                                        {/* {index > 0 && (
+                                            <span className="ckbox_ch">
+                                              <button
+                                                class="remove-choice"
+                                                onClick={() =>
+                                                  removeChoice(index)
+                                                }
+                                              >
+                                                -
+                                              </button>
+                                            </span>
+                                          )} */}
+                                      </div>
+                                      {choices.map((choice, index) => (
+                                        <div key={index} class="lf_va chbb">
+                                          <input
+                                            type="radio"
+                                            name="choices"
+                                            class="ckbox"
+                                            disabled
+                                          />{" "}
+                                          <span class="ckbox_ch">
+                                            <input
+                                              type="text"
+                                              name=""
+                                              value=""
+                                              class="cboption"
+                                            />
+                                          </span>
+                                          <span class="ckbox_ch">
+                                            <button
+                                              class="add-choice"
+                                              onClick={addnewchoice}
+                                            >
+                                              +
+                                            </button>
+                                          </span>
+                                          {index > 0 && (
+                                            <span className="ckbox_ch">
+                                              <button
+                                                class="remove-choice"
+                                                onClick={() =>
+                                                  removeChoice(index)
+                                                }
+                                              >
+                                                -
+                                              </button>
+                                            </span>
+                                          )}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "Dropdown" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Options</div>
+                                    <div class="af_ra" id="addChoices">
+                                      <div class="lf_va chbb">
+                                        <span class="ckbox_ch">
+                                          <input
+                                            type="text"
+                                            name=""
+                                            value=""
+                                            id=""
+                                            placeholder="options"
+                                            class="cboption"
+                                            // onChange={handleInputChange}
+                                          />
+                                        </span>
+                                        <span class="ckbox_ch">
+                                          <button
+                                            class="add-choice"
+                                            onClick={addnewchoice}
+                                          >
+                                            +
+                                          </button>
+                                        </span>
+                                      </div>
+                                      {choices.map((choices, index) => (
+                                        <div key={index} class="lf_va chbb">
+                                          <span class="ckbox_ch">
+                                            <input
+                                              type="text"
+                                              name=""
+                                              value=""
+                                              class="cboption"
+                                              placeholder="options"
+                                            />
+                                          </span>
+                                          <span class="ckbox_ch">
+                                            <button
+                                              class="add-choice"
+                                              onClick={addnewchoice}
+                                            >
+                                              +
+                                            </button>
+                                          </span>
+                                          {index > 0 && (
+                                            <span className="ckbox_ch">
+                                              <button
+                                                class="remove-choice"
+                                                onClick={() =>
+                                                  removeChoice(index)
+                                                }
+                                              >
+                                                -
+                                              </button>
+                                            </span>
+                                          )}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "File" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "FormSetting" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Form Name</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="formtitle"
+                                        id="formtitle"
+                                        value="Untitled Form"
+                                        maxlength="50"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Description</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="formdescription"
+                                        id="formdescription"
+                                        value="This is my form, please fill it."
+                                        maxlength="100"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Text Color</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="color"
+                                        name="formtextcolor"
+                                        id="formtextcolor"
+                                        value="#222222"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Background Color</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="color"
+                                        name="formgbcolor"
+                                        id="formbgcolor"
+                                        value="#ffffff"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">
+                                      Form Title Background
+                                    </div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="color"
+                                        name="formgbtitlecolor"
+                                        id="formbgtitlecolor"
+                                        value="#dedede"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Button Color</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="color"
+                                        name="formbtncolor"
+                                        id="formbtncolor"
+                                        value="#074376"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Update Form Title"
+                                        onclick="updateFromTitle();"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "Email" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">
+                                      Receiver Email Address
+                                    </div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="formtitle"
+                                        id="formtitleemail"
+                                        value="youremail@gmail.com"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Update Email"
+                                        onclick="updateEmailField();"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "FullName" && (
+                              <div>
+                              <div class="add_field">
+                                <div class="af_r">
+                                  <div class="af_la">Field Label</div>
+                                  <div class="af_ra">
+                                    <input
+                                      type="text"
+                                      name="textname"
+                                      id="textbox"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="af_r">
+                                  <div class="af_la">Validation</div>
+                                  <div class="af_ra">
+                                    <div class="lf_va">
+                                      <input
+                                        type="checkbox"
+                                        name="validation[]"
+                                        value="required"
+                                        id="textrequired"
+                                      />{" "}
+                                      <span>Required</span>
+                                    </div>
+                                    <div class="lf_va">
+                                      <input
+                                        type="checkbox"
+                                        name="validation[]"
+                                        value="email"
+                                        id="textemail"
+                                        onclick="textemail()"
+                                      />{" "}
+                                      <span>Email</span>
+                                    </div>
+                                    <div class="lf_va">
+                                      <input
+                                        type="checkbox"
+                                        name="validation[]"
+                                        value="number"
+                                        id="textnumber"
+                                        onclick="textnumber()"
+                                      />{" "}
+                                      <span>Number</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="af_r">
+                                  <div class="af_la">Range</div>
+                                  <div class="af_ra">
+                                    <div class="lf_va_rng">
+                                      <input
+                                        type="text"
+                                        name="minlength"
+                                        value="0"
+                                        id="minlength"
+                                      />{" "}
+                                      <span>Minimum Character</span>
+                                    </div>
+                                    <div class="lf_va_rng">
+                                      <input
+                                        type="text"
+                                        name="maxlength"
+                                        value=""
+                                        id="maxlength"
+                                      />{" "}
+                                      <span>Maximum Character</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="af_r">
+                                  <div class="af_la">Placeholder</div>
+                                  <div class="af_ra">
+                                    <input
+                                      type="text"
+                                      name="placeholder"
+                                      id="placeholder"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="af_r">
+                                  <div class="af_la">&nbsp;</div>
+                                  <div class="af_ra">
+                                    <input
+                                      type="button"
+                                      value="Add to Form"
+                                      onclick="addTextBox(0);"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            )}
+                           {selectedField === "EmailAddress" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="email"
+                                          id="textemail"
+                                          onclick="textemail()"
+                                        />{" "}
+                                        <span>Email</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="number"
+                                          id="textnumber"
+                                          onclick="textnumber()"
+                                        />{" "}
+                                        <span>Number</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Range</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="minlength"
+                                          value="0"
+                                          id="minlength"
+                                        />{" "}
+                                        <span>Minimum Character</span>
+                                      </div>
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="maxlength"
+                                          value=""
+                                          id="maxlength"
+                                        />{" "}
+                                        <span>Maximum Character</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Placeholder</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="placeholder"
+                                        id="placeholder"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            {selectedField === "Contact" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="email"
+                                          id="textemail"
+                                          onclick="textemail()"
+                                        />{" "}
+                                        <span>Email</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="number"
+                                          id="textnumber"
+                                          onclick="textnumber()"
+                                        />{" "}
+                                        <span>Number</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Range</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="minlength"
+                                          value="0"
+                                          id="minlength"
+                                        />{" "}
+                                        <span>Minimum Character</span>
+                                      </div>
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="maxlength"
+                                          value=""
+                                          id="maxlength"
+                                        />{" "}
+                                        <span>Maximum Character</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Placeholder</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="placeholder"
+                                        id="placeholder"
+                                        placeholder="Your Mobile Number"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                             {selectedField === "Comment" && (
+                              <div>
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="textname"
+                                        id="textbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Range</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="minlength"
+                                          value="0"
+                                          id="minlength"
+                                        />{" "}
+                                        <span>Minimum Character</span>
+                                      </div>
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="maxlength"
+                                          value=""
+                                          id="maxlength"
+                                        />{" "}
+                                        <span>Maximum Character</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Placeholder</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="text"
+                                        name="placeholder"
+                                        id="placeholder"
+                                        placeholder="Comment"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+
+                          </div>
                         </div>
                         <div className="ld_main_r">
                           <form
@@ -409,12 +1373,12 @@ const Page = () => {
                             <div
                               className="lfha setemail "
                               id="frmIdEmail"
-                              onclick="setEmail()"
+                              onClick={setEmail}
                             >
                               <div className="setemail" id="cfromttitle">
                                 Email Address where you want to receive form
                                 data after submission{" "}
-                                <div className="af_ra ssemail">
+                                {/* <div className="af_ra ssemail">
                                   <input
                                     name="setemail"
                                     id="setemail"
@@ -425,20 +1389,33 @@ const Page = () => {
                                     type="text"
                                     value="youremail@gmail.com"
                                   />
+                                </div> */}
+                                <div class="af_ra ssemail">
+                                  <input
+                                    name="setemail"
+                                    id="setemail"
+                                    class=" required"
+                                    minlength="0"
+                                    maxlength=""
+                                    placeholder=""
+                                    type="text"
+                                    value="youremail@gmail.com"
+                                  />
                                 </div>
                               </div>
-                              <input
+                              {/* <input
                                 id="fordataidemail"
                                 name="jsondata[]"
                                 value='{"type":"setemail","email":"youremail@gmail.com"}'
                                 type="hidden"
-                              />{" "}
+                              />{" "} */}
                             </div>
                             <div className="ld_SS" id="show_from">
                               <div
                                 className="af_r_new"
                                 id="addfull_name2"
-                                onclick="editText('full_name2')"
+                                // onclick="editText('full_name2')"
+                                onClick={FullName}
                               >
                                 <div className="af_la">
                                   Full Name <span className="reqstar">*</span>
@@ -466,7 +1443,8 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addemail_address3"
-                                onclick="editText('email_address3')"
+                                // onclick="editText('email_address3')"
+                                onClick={emailAddress}
                               >
                                 <div className="af_la">
                                   Email Address{" "}
@@ -495,7 +1473,8 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addcontact_number4"
-                                onclick="editText('contact_number4')"
+                                // onclick="editText('contact_number4')"
+                                onClick={contact}
                               >
                                 <div className="af_la">
                                   Contact Number{" "}
@@ -524,7 +1503,8 @@ const Page = () => {
                               <div
                                 className="af_r_new"
                                 id="addcomment5"
-                                onclick="editTextArea('comment5')"
+                                // onclick="editTextArea('comment5')"
+                                onClick={comment}
                               >
                                 <div className="af_la">
                                   Comment <span className="reqstar">*</span>
@@ -1277,71 +2257,6 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Are your given source code modifiable?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      Yes, our given scripts are flexible. Clients can customize
-                      according to their requirement.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="How can I get my form delivered?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      You can simply download it once you complete adding the
-                      fields and text in the form.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Which technology will the generated forms support?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>HTML, Javascript, Bootstrap, PHP</p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I use your script without any programming skills?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      You need to have basic knowledge of HTML and javascript to
-                      integrate the form in your website.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="How many forms can I generate at a time?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      We provide unlimited downloads. You can download any
-                      number of forms.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I change the fields label according to my requirement in the form?"
-                    collapseId="flush-collapse6"
-                  >
-                    <p>
-                      Yes, we provide you the option to create fields and rename
-                      the labels as per your requirement.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Is it free to download these customize lead generation forms?"
-                    collapseId="flush-collapse7"
-                  >
-                    <p>Yes, its totally free.</p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
                 <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}

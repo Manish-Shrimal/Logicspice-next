@@ -75,59 +75,10 @@ const Page = () => {
   }, []);
   return (
     <>
-      <NavBar />
-      <section className="product_middle_menu_box">
-        {isScrolled && (
-          <section className="product_middle_menu top-fixed">
-            <div className="container">
-              <nav className="navbar navbar-default">
-                <div className="container-fluid">
-                  <div className="navbar-header">
-                    <button
-                      type="button"
-                      className="navbar-toggle collapsed"
-                      data-toggle="collapse"
-                      data-target="#bs-example-navbar-collapse-2"
-                      aria-expanded="false"
-                    >
-                      <span className="sr-only">Toggle navigation</span>
-                      <span className="icon-bar"></span>
-                      <span className="icon-bar"></span>
-                      <span className="icon-bar"></span>
-                    </button>
-                  </div>
-                  <div
-                    className="collapse navbar-collapse"
-                    id="bs-example-navbar-collapse-2"
-                  >
-                    <ul className="nav navbar-nav">
-                      <li>
-                        <a href="#features">Features</a>
-                      </li>
-                      <li>
-                        <a href="#technologies">Technologies</a>
-                      </li>
-                      <li>
-                        <a href="#reviews">Reviews</a>
-                      </li>
-                      <li>
-                        <a href="#faq">FAQ</a>
-                      </li>
-                    </ul>
-                    <ul className="nav navbar-nav navbar-right">
-                      <li>
-                        {/* <a className="page-scroll btn btn-default" href="javascript:void(0);" data-toggle="modal" data-target="#popup_sc_product" onclick="if (!window.__cfRLUnblockHandlers) return false; $(&quot;#update_frm&quot;).html(&quot;FAQ Script&quot;); $(&quot;#contact_fr&quot;).val(&quot;FAQ Script&quot;);" id="buy_now_1">
-                            <span><img src="https://www.logicspice.com/app/webroot/img/images/enquiry_btn_bg.png" alt="Enquiry"></span> Enquire Now
-                        </a> */}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </section>
-        )}
-      </section>
+      {/* <NavBar /> */}
+      {!isScrolled && <NavBar />}
+
+    
       <section className="FaqBannerSection">
         <div className="FaqBannerLeftImg">
           <Image
@@ -499,6 +450,152 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className="product_middle_menu_box">
+        {isScrolled && (
+          <section className="product_middle_menu top-fixed">
+            <div className="container">
+              <nav className="navbar navbar-expand-lg navbar-default">
+                <div className="container-fluid">
+                  {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+                  <div className="navbar-header">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul className="navbar-nav me-auto">
+                      <li>
+                        <Link href="#features">Features</Link>
+                      </li>
+                      <li>
+                        <Link href="#technologies">Technologies</Link>
+                      </li>
+                      <li>
+                        <Link href="#support">Support</Link>
+                      </li>
+                      <li>
+                        <Link href="#reviews">Reviews</Link>
+                      </li>
+                    </ul>
+                    <ul className="navbar-nav ms-auto navbar-right">
+                      <li>
+                        <Link
+                          className="page-scroll btn btn-default"
+                          href="javascript:void(0);"
+                          id="buy_now_1"
+                          onClick={openModal}
+                        >
+                          <span>
+                            <Image
+                              unoptimized={true}
+                              width={30}
+                              height={100}
+                              src="/img/leadgeneration/enquiry_btn_bg.png"
+                              alt="enquiry"
+                            />
+                          </span>{" "}
+                          Enquire Now
+                          {
+                            <Enquirymodal
+                              modalStatus={showModal}
+                              toggle={openModal}
+                              title="Contact form php Script"
+                            />
+                          }
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </section>
+        )}
+
+      
+        <section className="used_technology_section" id="technologies">
+          <div className="container">
+            <h4 className="title_main">
+              <span>Used Technologies</span> and Server Requirements
+            </h4>
+            <div className="used_technology_section_dataa">
+              <ul>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/bootstrap.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">Bootstrap</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/css.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">CSS3</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">HTML5</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/tech_php_icon.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">PHP</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/javascript.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">Javascript</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
       <section
         className="FaqScriptFeaturesSection aos-init aos-animate"

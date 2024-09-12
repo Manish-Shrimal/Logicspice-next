@@ -13,11 +13,24 @@ import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("case-study");
+
 
   const [selectedTab, setSelectedTab] = useState("about_app");
   var date = {
     dots: false,
     arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,  // Changed from 8 to 1
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
+  var settings = {
+    dots: true,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -255,7 +268,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Company"
                       src="/img/globalpages/icn_an.png"
@@ -269,8 +283,9 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                     unoptimized={true}
+                     width={35}
+                     height={100}
                       alt="App Development Company"
                       src="/img/globalpages/navigate_icon.png"
                     />
@@ -283,8 +298,9 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                     unoptimized={true}
+                     width={35}
+                     height={100}
                       alt="App Development Services"
                       src="/img/globalpages/security_icon.png"
                     />
@@ -394,7 +410,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="app development"
                       src="/img/globalpages/icon_ac.png"
@@ -408,8 +425,9 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                    unoptimized={true}
+                    width={35}
+                    height={100}
                       alt="mobile app development"
                       src="/img/globalpages/customiziable_app_icon.png"
                     />
@@ -422,7 +440,8 @@ const Page = () => {
                 <div className="app_shown_describe_bxt aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="mobile app development services"
                       src="/img/globalpages/userinterface_icon.png"
@@ -434,6 +453,294 @@ const Page = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section3">
+        <div className="container">
+          <ul className="nav nav-tabs" role="tablist">
+            <li
+              role="presentation"
+              className={activeTab === "case-study" ? "active" : ""}
+            >
+              <a
+                onClick={() => setActiveTab("case-study")}
+                style={{ display: "inline-block", cursor: "pointer" }}
+              >
+                Case Study
+              </a>
+            </li>
+            <li
+              role="presentation"
+              className={activeTab === "testimonial" ? "active" : ""}
+            >
+              <a
+                onClick={() => setActiveTab("testimonial")}
+                style={{ display: "inline-block", cursor: "pointer" }}
+              >
+                Testimonial
+              </a>
+            </li>
+          </ul>
+
+          <div className="tab-content">
+            <div
+              role="tabpanel"
+              className={`tab-pane ${
+                activeTab === "case-study" ? "active" : ""
+              }`}
+              id="case-study"
+            >
+              <div className="row">
+                <div className="col-md-3 col-sm-4">
+                  <div className="casestudy-col">
+                    <div className="casestudy-row" id="post-3343">
+                      <div className="case-col-img">
+                        <Image
+                          width={300}
+                          height={100}
+                          src="/img/globalpages/innre_img5.png"
+                          alt="Yolo Dome-logicspice"
+                        />
+                      </div>
+                      <div className="case-col-detail">
+                        <h3 className="casestudy-title">
+                          <a href="">
+                            <span>SimpleShark</span>
+                          </a>
+                        </h3>
+
+                        <div className="casestudy-details-para">
+                          <p>
+                            Yolo Dome-logicspice Yolo Dome Yolodome.com is an
+                            online travel website that provides users with
+                            facility to book a place to stay. Users can search
+                            for suitable rental places across the world. This
+                            website provides dif...
+                          </p>
+                          <a href="">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div
+              role="tabpanel"
+              className={`tab-pane ${
+                activeTab === "testimonial" ? "active" : ""
+              }`}
+              id="testimonial"
+            >
+              <section className="testimonial-hire">
+                <div className="container">
+                  <Slider {...settings}>
+                    <div>
+                      <div className="media">
+                        <div className="media-left">
+                          <Image
+                            width={100}
+                            height={100}
+                            className="media-object"
+                            src="/img/globalbusinesscountries/kesepara.jpg"
+                            alt="..."
+                          />
+                        </div>
+                        <div className="media-body">
+                          <h4 className="media-heading">
+                            C2C Ecommerce Website About Fashion
+                          </h4>
+                          <p>
+                            &quot;Exactly the best team available online ! I
+                            have been working and communicating with a few
+                            companies over the internet and i didn&apos;t see a
+                            single better company than logicspice. They are{" "}
+                            <a
+                              style={{ cursor: "pointer", color: "#31aae1" }}
+                              className="show_data"
+                            >
+                              More...
+                            </a>
+                            <span
+                              className="hidendata"
+                              style={{ display: "none" }}
+                            >
+                              {" "}
+                              so skilled and professional. Their knowledge about
+                              coding is incredible. And they never say
+                              &quot;no&quot; or &quot;we can&apos;t&quot; to any
+                              situation. Actually they are the best guys i have
+                              ever work with in my life. Their communication,
+                              kindness are so high level. Every step of my
+                              project, every progress of my project we need
+                              maybe 15 to 20 changes. And every time i wrote
+                              those needs to them, they did their work at most
+                              1-2 days. Their speed and work quality is amazing
+                              ! Final word to those who wants to hire them:
+                              don&apos;t think twice ! Literally they are the
+                              best team in this website. And also their work
+                              progress and milestones are literally clear as
+                              they said. I am advising them to all of my friends
+                              and i will hire them again for sure !&quot;
+                            </span>
+                          </p>
+                          <div className="author_name">
+                            Burak <span>Turkey</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="media">
+                        <div className="media-left">
+                          <Image
+                            width={100}
+                            height={100}
+                            className="media-object"
+                            src="/img/globalbusinesscountries/dsherevk.jpg"
+                            alt="..."
+                          />
+                        </div>
+                        <div className="media-body">
+                          <h4 className="media-heading">
+                            Website + Mobile App (iOs&amp;Android)
+                          </h4>
+                          <p>
+                            &quot;Manish was very cooperative and professional
+                            during the project. The team was great, the project
+                            was very complicated and they tried their best to
+                            complete it with the best diligence. I{" "}
+                            <a
+                              style={{ cursor: "pointer", color: "#31aae1" }}
+                              className="show_data"
+                            >
+                              More...
+                            </a>
+                            <span
+                              className="hidendata"
+                              style={{ display: "none" }}
+                            >
+                              {" "}
+                              will definitely contact this company in the future
+                              for my project updates and would recommend to
+                              anyone who is looking for a good quality
+                              work.&quot;
+                            </span>
+                          </p>
+                          <div className="author_name">
+                            Dmitry <span>Canada</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="media">
+                        <div className="media-left">
+                          <Image
+                            width={100}
+                            height={100}
+                            className="media-object"
+                            src="/img/globalbusinesscountries/sabdeen.jpg"
+                            alt="..."
+                          />
+                        </div>
+                        <div className="media-body">
+                          <h4 className="media-heading">Build a Website</h4>
+                          <p>
+                            &quot;Best project management experience/journey I
+                            had. Great team spirit, very flexible and
+                            understanding while maintaining time and budget
+                            target.Top tear professional communication and
+                            support.&quot;{" "}
+                          </p>
+                          <div className="author_name">
+                            Sherif A. <span>Dubai</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="media">
+                        <div className="media-left">
+                          <Image
+                            width={100}
+                            height={100}
+                            className="media-object"
+                            src="/img/globalbusinesscountries/beatbuehlmann.jpg"
+                            alt="..."
+                          />
+                        </div>
+                        <div className="media-body">
+                          <h4 className="media-heading">
+                            Financial Web Application For Pensioners
+                          </h4>
+                          <p>
+                            &quot;Excellent work again from logicspice! They
+                            definitely put their best effort into the project
+                            along with very valuable inputs regarding possible
+                            enhancements of the web project. With logicspice{" "}
+                            <a
+                              style={{ cursor: "pointer", color: "#31aae1" }}
+                              className="show_data"
+                            >
+                              More...
+                            </a>
+                            <span
+                              className="hidendata"
+                              style={{ display: "none" }}
+                            >
+                              {" "}
+                              you don&apos;t just hire someone to execute your
+                              project specification but much more someone who
+                              helps you really make good and sophisticated web
+                              project. The communication is greate and feedback
+                              time very short. I really can&apos;t find anything
+                              to criticise and will definitely rehire soon as
+                              I&apos;m very happy with their work. Thanks a lot
+                              to Manish and his team!&quot;
+                            </span>
+                          </p>
+                          <div className="author_name">
+                            Beat B. <span>Switzerland</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="media">
+                        <div className="media-left">
+                          <Image
+                            width={100}
+                            height={100}
+                            className="media-object"
+                            src="/img/globalbusinesscountries/tjulia1.jpg"
+                            alt="..."
+                          />
+                        </div>
+                        <div className="media-body">
+                          <h4 className="media-heading">
+                            Build a Social Networking Website With Payment
+                            System
+                          </h4>
+                          <p>
+                            &quot;I hired this team for a very complex project
+                            that involved handling many different types of
+                            users, payment options, and social network
+                            integration. Extremely timely and professional. Will
+                            use again!&quot;{" "}
+                          </p>
+                          <div className="author_name">
+                            Tom J. <span>USA</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </section>
             </div>
           </div>
         </div>

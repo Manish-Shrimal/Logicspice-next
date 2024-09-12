@@ -23,7 +23,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -34,11 +34,10 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,  // Changed from 8 to 1
+    slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -210,8 +209,9 @@ const Page = () => {
                   </div>
                   <div className="portfolio_button_center">
                     <div id="inquirenow" className="enquire-btn">
-                    <a className="btn btn-primary" onClick={toggleModal}>Enquire Now</a>
-
+                      <a className="btn btn-primary" onClick={toggleModal}>
+                        Enquire Now
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ const Page = () => {
             </div>
             <div className="col-md-4">
               <div className="hotel_description_image">
-              <Image
+                <Image
                   width={400}
                   height={100 / 100 / 10}
                   alt="Accountants and Financial Industry Apps"
@@ -267,7 +267,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Company"
                       src="/img/globalpages/icn_an.png"
@@ -281,7 +282,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Company"
                       src="/img/globalpages/navigate_icon.png"
@@ -295,7 +297,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Services"
                       src="/img/globalpages/security_icon.png"
@@ -311,9 +314,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="mobile-screen-splash">
                 <div className="mobile-screen-sizee">
-                 
                   <Slider {...date}>
-                  <div className="SiteFriendyBx">
+                    <div className="SiteFriendyBx">
                       <Image
                         width={600}
                         height={100}
@@ -393,10 +395,7 @@ const Page = () => {
                         src="/img/globalpages/uuuga.png"
                       />
                     </div>
-
-                    </Slider>
-                  
-                  
+                  </Slider>
                 </div>
               </div>
             </div>
@@ -406,7 +405,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="app development"
                       src="/img/globalpages/icon_ac.png"
@@ -420,7 +420,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="mobile app development"
                       src="/img/globalpages/customiziable_app_icon.png"
@@ -434,7 +435,8 @@ const Page = () => {
                 <div className="app_shown_describe_bxt aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="mobile app development services"
                       src="/img/globalpages/userinterface_icon.png"
@@ -451,8 +453,7 @@ const Page = () => {
         </div>
       </section>
 
-   
-       <section className="section3 app_bottom_shwn_bs">
+      <section className="section3 app_bottom_shwn_bs">
         <div className="container">
           <ul className="nav nav-tabs" role="tablist">
             <li
@@ -811,40 +812,43 @@ const Page = () => {
                         <li>
                           <i className="fa fa-tag" aria-hidden="true"></i>
                           <span>
-                            <a
+                            <Link
                               href="/blog/tag/food-delivery-app-for-ios-and-android"
                               title="food delivery app for ios and android"
+                              style={{ marginRight: '10px' }}
                             >
                               food delivery app for ios and android
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="hire mobile app developers.">
+                            
+                            <Link href="" title="hire mobile app developers." >
                               hire mobile app developers.
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="similar to foodpanda app">
+                            
+                            <Link href="" title="similar to foodpanda app">
                               similar to foodpanda app
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="similar to zomato">
+                            <Link href="" title="similar to zomato">
                               similar to zomato
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="foodordering app">
+                            <Link href="" title="foodordering app">
                               foodordering app
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="food ordering app for android">
+                            <Link href="" title="food ordering app for android">
                               food ordering app for android
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="food ordering app for ios">
+                            <Link href="" title="food ordering app for ios">
                               food ordering app for ios
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title="app cost">
+                            <Link href="" title="app cost">
                               app cost
-                            </a>
+                            </Link>
                           </span>
                         </li>
                       </ul>
@@ -866,8 +870,7 @@ const Page = () => {
         </div>
       </section>
 
-
-           <section className="section3">
+      <section className="section3">
         <div className="container">
           <ul className="nav nav-tabs" role="tablist">
             <li
@@ -896,134 +899,135 @@ const Page = () => {
           <div className="tab-content">
             {selectedTab === "about_app" && (
               <div role="tabpanel" className="tab-pane active" id="about_app">
-               <div className="row">
-                <div className="col-sm-7 contentarea">
-                  <div className="tabrightitle">
-                    <h3>Be Straightforward And Loyal About Your App</h3>
-                  </div>
-                  <p>
-                    An mobile app just not an app, It is an another way that
-                    connect users to your business worldwide. We provide such
-                    dynamic app designs and user-friendly interface that helps
-                    you to increase your operational efficiency, productivity
-                    and customer engagement through Mobile Applications.An
-                    innovative mobile idea involves more than a mobile friendly
-                    website and is an essential part of marketing strategy now a
-                    days. Any business should be straight forward and honest
-                    about their business app. Every business app has a different
-                    approach according to the business industry.
-                  </p>
-                  <p>
-                    At Logicspice we has expert android app developers and
-                    Iphone app developers to provide best mobile solution for
-                    both android and Iphones.
-                  </p>
-                  <p>
-                    We provide such dynamic app designs and user-friendly
-                    interface that helps you to increase your operational
-                    efficiency, productivity and customer engagement through
-                    Mobile Applications.
-                  </p>
-                </div>
-                <div className="col-sm-5 contentarea">
-                  <div className="about__text">
-                    <div className="img__about">
-                      <Image
-                        width={100}
-                        height={100}
-                        alt="img"
-                        src="/img/globalpages/setting_icon.png"
-                      />
+                <div className="row">
+                  <div className="col-sm-7 contentarea">
+                    <div className="tabrightitle">
+                      <h3>Be Straightforward And Loyal About Your App</h3>
                     </div>
-                    <div className="media-body">
-                      <div className="tabrightitle">
-                        <div className="rightssdsd">
-                          <h3>Minimum Sustainable Functionality</h3>
-                          <p>
-                            Any app should include key features, relevant
-                            content and an attractive UI that elevate it beyond
-                            a repackaged website. The navigation of a website
-                            should be easy to understand
-                          </p>
+                    <p>
+                      An mobile app just not an app, It is an another way that
+                      connect users to your business worldwide. We provide such
+                      dynamic app designs and user-friendly interface that helps
+                      you to increase your operational efficiency, productivity
+                      and customer engagement through Mobile Applications.An
+                      innovative mobile idea involves more than a mobile
+                      friendly website and is an essential part of marketing
+                      strategy now a days. Any business should be straight
+                      forward and honest about their business app. Every
+                      business app has a different approach according to the
+                      business industry.
+                    </p>
+                    <p>
+                      At Logicspice we has expert android app developers and
+                      Iphone app developers to provide best mobile solution for
+                      both android and Iphones.
+                    </p>
+                    <p>
+                      We provide such dynamic app designs and user-friendly
+                      interface that helps you to increase your operational
+                      efficiency, productivity and customer engagement through
+                      Mobile Applications.
+                    </p>
+                  </div>
+                  <div className="col-sm-5 contentarea">
+                    <div className="about__text">
+                      <div className="img__about">
+                        <Image
+                          width={100}
+                          height={100}
+                          alt="img"
+                          src="/img/globalpages/setting_icon.png"
+                        />
+                      </div>
+                      <div className="media-body">
+                        <div className="tabrightitle">
+                          <div className="rightssdsd">
+                            <h3>Minimum Sustainable Functionality</h3>
+                            <p>
+                              Any app should include key features, relevant
+                              content and an attractive UI that elevate it
+                              beyond a repackaged website. The navigation of a
+                              website should be easy to understand
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="about__text">
+                      <div className="img__code">
+                        <Image
+                          width={100}
+                          height={100}
+                          alt="img"
+                          src="/img/globalpages/code_icn.png"
+                        />
+                      </div>
+                      <div className="media-body">
+                        <div className="tabrightitle">
+                          <div className="rightssdsd">
+                            <h3>Why Logicspice App Development Services</h3>
+                            <p>
+                              Stuck that how to choose an affordable and best
+                              app development company ? We have a lot to show
+                              you about our stability. Visit our portfolios and
+                              case studies, testimonials and they will shows
+                              trust for us. We have dedicated bunch of android
+                              and iphone app developers that are able to offer
+                              best solution for niche industry.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="about__text">
-                    <div className="img__code">
-                      <Image
-                        width={100}
-                        height={100}
-                        alt="img"
-                        src="/img/globalpages/code_icn.png"
-                      />
-                    </div>
-                    <div className="media-body">
-                      <div className="tabrightitle">
-                        <div className="rightssdsd">
-                          <h3>Why Logicspice App Development Services</h3>
-                          <p>
-                            Stuck that how to choose an affordable and best app
-                            development company ? We have a lot to show you
-                            about our stability. Visit our portfolios and case
-                            studies, testimonials and they will shows trust for
-                            us. We have dedicated bunch of android and iphone
-                            app developers that are able to offer best solution
-                            for niche industry.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
               </div>
             )}
             {selectedTab === "why_we_need" && (
               <div role="tabpanel" className="tab-pane active" id="why_we_need">
-                 <div className="tab_para">
-                <p>
-                  There are many benefits of having an mobile application for
-                  your business. Here are the some key points that why a
-                  business should have an mobile app –
-                </p>
-                <p>&nbsp;</p>
-                <ul className="listtupe">
-                  <li>
-                    <b>Increase Customer Engagement – </b>A mobile application
-                    is the best way to increase customer engagement towards your
-                    business.
-                  </li>
-                  <li>
-                    <b>Improve Client Retention – </b> A mobile app make your
-                    business user friendly and attract users to get connect your
-                    business from anywhere.
-                  </li>
-                  <li>
-                    <b>Be visible to customers anytime, anywhere – </b>Now move
-                    your business beyond it’s limit through an mobile app. Make
-                    your business easy to accessible in an small device across
-                    the world.
-                  </li>
-                  <li>
-                    <b>Add value to your customers –</b> A mobile application
-                    arouse the interest in users about your business and enhance
-                    your brand value.
-                  </li>
-                  <li>
-                    <b>Increase brand awareness and recognition – </b>In this
-                    online market trend, every business need an digital presence
-                    and a brand recognition. A mobile application is the best
-                    way to reach major audience.
-                  </li>
-                  <li>
-                    <b>Stand out from the competition – </b>Now spread your
-                    business globally and stand out from crowd. Let make your
-                    brand its own identity by approaching through mobile app to
-                    its right audience.
-                  </li>
-                </ul>
-              </div>
+                <div className="tab_para">
+                  <p>
+                    There are many benefits of having an mobile application for
+                    your business. Here are the some key points that why a
+                    business should have an mobile app –
+                  </p>
+                  <p>&nbsp;</p>
+                  <ul className="listtupe">
+                    <li>
+                      <b>Increase Customer Engagement – </b>A mobile application
+                      is the best way to increase customer engagement towards
+                      your business.
+                    </li>
+                    <li>
+                      <b>Improve Client Retention – </b> A mobile app make your
+                      business user friendly and attract users to get connect
+                      your business from anywhere.
+                    </li>
+                    <li>
+                      <b>Be visible to customers anytime, anywhere – </b>Now
+                      move your business beyond it’s limit through an mobile
+                      app. Make your business easy to accessible in an small
+                      device across the world.
+                    </li>
+                    <li>
+                      <b>Add value to your customers –</b> A mobile application
+                      arouse the interest in users about your business and
+                      enhance your brand value.
+                    </li>
+                    <li>
+                      <b>Increase brand awareness and recognition – </b>In this
+                      online market trend, every business need an digital
+                      presence and a brand recognition. A mobile application is
+                      the best way to reach major audience.
+                    </li>
+                    <li>
+                      <b>Stand out from the competition – </b>Now spread your
+                      business globally and stand out from crowd. Let make your
+                      brand its own identity by approaching through mobile app
+                      to its right audience.
+                    </li>
+                  </ul>
+                </div>
               </div>
             )}
           </div>
@@ -1047,6 +1051,7 @@ const Page = () => {
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

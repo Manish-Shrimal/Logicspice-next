@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import Image from "next/image";
@@ -11,12 +11,20 @@ import "../../resposive.css";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
 
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -27,10 +35,72 @@ const Page = () => {
   const openModal = () => {
     setShowModal(!showModal);
   };
+  const Accordion = styled((props) => (
+    <MuiAccordion disableGutters elevation={0} square {...props} />
+  ))(({ theme }) => ({
+    border: `1px solid ${theme.palette.divider}`,
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&::before": {
+      display: "none",
+    },
+  }));
+
+  const AccordionSummary = styled((props) => (
+    <MuiAccordionSummary
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+      {...props}
+    />
+  ))(({ theme }) => ({
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    flexDirection: "row-reverse",
+    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+      transform: "rotate(90deg)",
+    },
+    "& .MuiAccordionSummary-content": {
+      marginLeft: theme.spacing(1),
+    },
+    // Change the background color when expanded
+    "&.Mui-expanded": {
+      backgroundColor: "#dbdbdb", // You can adjust this color
+    },
+  }));
+
+  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+    padding: theme.spacing(2),
+    borderTop: "1px solid rgba(0, 0, 0, .125)",
+  }));
+
+  const [expanded, setExpanded] = React.useState("panel1");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+ 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 100) {
+        // Adjust this value based on when you want the navbar to appear
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
+      {!isScrolled && <NavBar />}
+
       <section className="product_top_sectins">
         <Image unoptimized={true}
           width={100}
@@ -206,7 +276,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="product_middle_menu_box">
+      {/* <section className="product_middle_menu_box">
         <section className="product_middle_menu">
           <div className="container">
             <nav className="navbar navbar-expand-lg navbar-default">
@@ -274,6 +344,187 @@ const Page = () => {
                 </div>
               </div>
             </nav>
+          </div>
+        </section>
+      </section> */}
+       <section className="product_middle_menu_box">
+        {isScrolled && (
+          <section className="product_middle_menu top-fixed">
+            <div className="container">
+              <nav className="navbar navbar-expand-lg navbar-default">
+                <div className="container-fluid">
+                  {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+                  <div className="navbar-header">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul className="navbar-nav me-auto">
+                      <li>
+                        <Link href="#features">Features</Link>
+                      </li>
+                      <li>
+                        <Link href="#technologies">Technologies</Link>
+                      </li>
+                      <li>
+                        <Link href="#support">Support</Link>
+                      </li>
+                      <li>
+                        <Link href="#reviews">Reviews</Link>
+                      </li>
+                    </ul>
+                    <ul className="navbar-nav ms-auto navbar-right">
+                      <li>
+                        <Link
+                          className="page-scroll btn btn-default"
+                          href="javascript:void(0);"
+                          id="buy_now_1"
+                          onClick={openModal}
+                        >
+                          <span>
+                            <Image
+                              unoptimized={true}
+                              width={30}
+                              height={100}
+                              src="/img/leadgeneration/enquiry_btn_bg.png"
+                              alt="enquiry"
+                            />
+                          </span>{" "}
+                          Enquire Now
+                          {
+                            <Enquirymodal
+                              modalStatus={showModal}
+                              toggle={openModal}
+                              title="Cake php CMS Script"
+                            />
+                          }
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </section>
+        )}
+
+        <section className="Frequently_Asked_Questions" id="features">
+          <div className="container">
+            <h3>
+              Contact form php <span>Script</span>
+            </h3>
+            <p>
+              Logicspice <strong>lead generation form builder</strong> can be
+              embedded easily onto your website which is fully customizable to
+              match your company’s brand. Customize it in your own way and
+              Download the free lead generation PHP form script.{" "}
+            </p>
+            <p>
+              Custom contact forms are essentially a handshake between you and
+              your business prospects. The forms are essential for initiating
+              the engagement between a business and customer. Customize your
+              form to automatically send email notifications after a lead
+              submits the form.{" "}
+            </p>
+            <p>
+              This is very simple but powerful contact form generator. Forms are
+              fully compatible with WordPress, Drupal, Joomla, or any other web
+              site where you have option to add HTML code.{" "}
+            </p>
+            <p>
+              These lead management <strong>PHP script</strong> also includes a
+              captcha so, that users can be differentiated from bots. Captcha is
+              an important tool that prevents fake lead generation from
+              automated computers. Whenever a user would fill a form, he has to
+              input the answer to the mathematical question asked in the
+              captcha. If you don’t use a captcha in a lead generation, it could
+              result in degradation of the quality of leads generated so, keep
+              the security measures in mind it is necessary to have captcha in
+              forms.
+            </p>
+          </div>
+        </section>
+        <section className="used_technology_section" id="technologies">
+          <div className="container">
+            <h4 className="title_main">
+              <span>Used Technologies</span> and Server Requirements
+            </h4>
+            <div className="used_technology_section_dataa">
+              <ul>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/bootstrap.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">Bootstrap</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/css.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">CSS3</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/html-5.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">HTML5</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/tech_php_icon.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">PHP</div>
+                </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={45}
+                      height={100}
+                      src="/img/jobboard/javascript.png"
+                      alt="manager_icn"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">Javascript</div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </section>
@@ -560,7 +811,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               <div className="MainFaqBx">
-                <MDBAccordion v-model="activeItem" borderless>
+                {/* <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="Are your given source code modifiable?"
                     collapseId="flush-collapse1"
@@ -624,7 +875,131 @@ const Page = () => {
                       copyrights for our products.{" "}
                     </p>
                   </MDBAccordionItem>
-                </MDBAccordion>
+                </MDBAccordion> */}
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
+                    <Typography>
+                      Are your given source code modifiable?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, our scripts are flexible. Clients can customize
+                      according to their requirement.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>
+                      Do Logicspice give technical support?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we believe in long-term relationships and provide
+                      technical support to the client at an affordable cost.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      Are you willing to advise us with ideas?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Sure, we fulfill the requirement of the client. Your
+                      suggestions or ideas are always welcomed which can make
+                      your business more interactive.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      Will you deliver the exact product as shown in the demo?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we deliver the exact product. We don’t compromise
+                      with quality at all.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can I use your script without any programming skills?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you can directly install our given script and manage
+                      everything in the admin panel, which is very
+                      user-friendly.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Can I remove your company proprietary notices?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      With an extra charge, you are allowed to modify the
+                      branding. You can remove our company information and put
+                      yours. However, you cannot put &quot;copyright by&qout;
+                      because only Logicspice owns the copyrights for our
+                      software.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>

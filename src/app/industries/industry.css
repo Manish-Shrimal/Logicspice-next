@@ -1,7 +1,12 @@
+body{
+  color: #3F3F3F !important;
+  font-family: "Roboto", sans-serif !important;
+}
 .bg-banner {
   background-image: url("/img/bannerpage/industry_header_bg.png");
   background-repeat: no-repeat;
   background-position: center top;
+  margin-top: 100px;
 }
 .country_header_secton.Commercial {
   background: url(/img/images/realestate_bg_imgd.png) top center no-repeat;
@@ -93,14 +98,14 @@
   background-image: url("/img/bannerpage/hotels_bg_imgd.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
 .hotel-background-section {
   background: rgba(68, 68, 68, 0.74) none repeat scroll 0 0;
   float: left;
-  padding: 84px 0 0;
+  padding: 190px 0 0;
   width: 100%;
 }
 .hotel-info {
@@ -176,15 +181,16 @@
 
 .section3 .nav.nav-tabs a {
   font-size: 20px !important;
-  font-weight: bold !important;
+  /* font-weight: bold !important; */
   margin-bottom: 10px !important;
   padding: 15px 30px !important;
 }
-.section3 .nav.nav-tabs a:active {
+.section3 .nav.nav-tabs:active a {
   font-size: 20px !important;
-  font-weight: bold !important;
+  /* font-weight: bold !important; */
   margin-bottom: 10px !important;
   padding: 15px 30px !important;
+  /* font-weight: 600; */
 }
 
 #owl-demo .item {
@@ -254,6 +260,9 @@
   margin-top: 0;
   margin-right: 15px;
 }
+.method_blog a {
+  color: #337ab7!important;
+}
 
 .blog_details {
   display: block;
@@ -264,7 +273,7 @@
 }
 
 .contentarea h3 {
-  font-weight: 600;
+  font-weight: 600!important;
   color: #000;
   display: inline-block;
 
@@ -323,13 +332,14 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
+  font-weight: 600;
 }
 
 .school-banner {
   background: url("/img/school_bg_imgd.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -366,6 +376,13 @@
 
   width: 47px;
 }
+.casestudy-title a{
+  color: #337ab7 !important;
+}
+
+.casestudy-title a :hover{
+  color: #23527c !important;
+}
 
 .casestudy-details-para {
   display: block;
@@ -382,18 +399,27 @@
   font-family: "interregular";
 }
 
+.casestudy-details-para a{
+  color: #337ab7 !important;
+
+}
+
+.casestudy-details-para a :hover{
+  color: #23527c !important;
+}
+
 .health-banner {
   background-image: url("/img/bannerpage/health_bg_imgd.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 .real-banner {
   background-image: url("/img/realestate_bg_imgd.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -401,7 +427,7 @@
   background-image: url("/img/cleaning_bg_imgd.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -411,7 +437,7 @@
   background-position: center top; */
   background: rgba(0, 0, 0, 0) url(/img/financial_bg_imgd.png) no-repeat scroll
     center top / cover;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -419,14 +445,14 @@
   background-image: url("/img/Government_bg_imgd.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 .caa-banner {
   background-image: url("/img/ca_bg_img.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -434,21 +460,21 @@
   background-image: url("/img/energy-utilities.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 .finance-banner {
   background-image: url("/img/finance-insurance.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 .marketing-banner {
   background-image: url("/img/marketing-adverting.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -475,7 +501,7 @@
   background-image: url("/img/ecommerce-retail.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -515,7 +541,7 @@
 }
 .app_bottom_shwn_bs .nav.nav-tabs a {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: none!important;
   margin-bottom: 0px;
   padding: 15px 30px;
   display: inline-block;
@@ -532,6 +558,8 @@
   color: #555;
   border: 1px #ddd solid;
   border-bottom: none;
+  font-weight: 600!important;
+  
 }
 
 .app_bottom_shwn_bs .nav.nav-tabs {
@@ -734,4 +762,12 @@
 .app_shown_describe_left .app_shown_describe_bx_label {
   margin-left: 0;
   margin-right: 10px;
+}
+
+.country_header_secton.Transportation {
+  background: url("/img/images/trasportation_bg_imgd.png") top center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }

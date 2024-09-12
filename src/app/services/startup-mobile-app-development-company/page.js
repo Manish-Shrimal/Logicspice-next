@@ -47,7 +47,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-4 col-md-3">
-              <Image
+              <Image unoptimized={true}
                 width={300}
                 height={500 / (100 / 100)}
                 alt="Startup Solution"
@@ -96,8 +96,8 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-4 col-md-6" data-aos="fade-left">
                 <div className="image_working right_img">
-                  <Image
-                    width={300}
+                  <Image unoptimized={true}
+                    width={100}
                     height={500 / (100 / 100)}
                     alt="Innovation as a Core Value -Logicspice"
                     src="/img/startupmobileappdevelopmentcompany/CoreValue.png"
@@ -120,7 +120,7 @@ const Page = () => {
           <div className="work_section">
             <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-left">
               <div className="image_working right_img">
-                <Image
+                <Image unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="Stand Ahead From Competition"
@@ -144,7 +144,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-4 col-md-6" data-aos="fade-left">
                 <div className="image_working right_img">
-                  <Image
+                  <Image unoptimized={true}
                     width={300}
                     height={500 / (100 / 100)}
                     alt="Skilled Developers"
@@ -173,7 +173,7 @@ const Page = () => {
           <div className="work_section">
             <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-right">
               <div className="image_working">
-                <Image
+                <Image unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="Interactive UI"
@@ -197,7 +197,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-4 col-md-6" data-aos="fade-right">
                 <div className="image_working">
-                  <Image
+                  <Image unoptimized={true}
                     width={300}
                     height={500 / (100 / 100)}
                     alt="Flexibility in Execution"
@@ -220,7 +220,7 @@ const Page = () => {
           <div className="work_section">
             <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-right">
               <div className="image_working">
-                <Image
+                <Image unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="User-End Priority"
@@ -254,7 +254,7 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="enterprises-object"
@@ -277,7 +277,7 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="enterprises-object"
@@ -299,7 +299,7 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="enterprises-object"
@@ -321,7 +321,7 @@ const Page = () => {
               <div className="box_enterprises">
                 <div className="enterprises-left">
                   <a href="#">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       className="enterprises-object"
@@ -363,9 +363,9 @@ const Page = () => {
                 <li>
                   <Link href="/services/hire-android-app-developers">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                        width={90}
+                        height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-web-developer.png"
                         alt="hire web and app developers"
                       />
@@ -378,9 +378,9 @@ const Page = () => {
                 <li>
                   <Link href="/services/hire-ios-app-developers">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                        width={90}
+                        height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-ios-developer.png"
                         alt="hire web and app developers"
                       />
@@ -389,11 +389,11 @@ const Page = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hire-web-developers">
+                  <Link href="/services/hire-web-developers">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                         width={90}
+                         height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-developer.png"
                         alt="hire web and app developers"
                       />
@@ -402,11 +402,11 @@ const Page = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hire-cakephp-developers">
+                  <Link href="/services/hire-cakephp-developers">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                         width={90}
+                         height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-cakephp.png"
                         alt="hire web and app developers"
                       />
@@ -415,11 +415,11 @@ const Page = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hire-wordpress-experts">
+                  <Link href="/services/hire-wordpress-experts">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                         width={90}
+                         height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-wordpress.png"
                         alt="hire web and app developers"
                       />
@@ -428,11 +428,11 @@ const Page = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hire-laravel-developers">
+                  <Link href="/services/hire-laravel-developers">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                         width={90}
+                         height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-laraval.png"
                         alt="hire web and app developers"
                       />
@@ -441,11 +441,11 @@ const Page = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hire-codeigniter-developers">
+                  <Link href="/services/hire-codeigniter-developers">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                         width={90}
+                         height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-codeigniter.png"
                         alt="hire web and app developers"
                       />
@@ -456,11 +456,11 @@ const Page = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hire-magento-experts">
+                  <Link href="/services/hire-magento-experts">
                     <div className="hire_ex_img">
-                      <Image
-                        width={100}
-                        height={100}
+                      <Image unoptimized={true}
+                        width={90}
+                        height={100 / (100 / 100)}
                         src="/img/startupmobileappdevelopmentcompany/hire-magento.png"
                         alt="hire web and app developers"
                       />
@@ -499,7 +499,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

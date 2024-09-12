@@ -2094,7 +2094,7 @@ See how it work yourself!"
                       collapseId="flush-collapse9"
                     >
                       <p>
-                        No, you can't resell the software. All rights will
+                        No, you can&apos;t resell the software. All rights will
                         remain with Logicspice only.
                       </p>
                     </MDBAccordionItem>

@@ -1105,71 +1105,7 @@ See how it work yourself!"
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Are your given source code modifiable?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      Yes, our scripts are flexible. Clients can customize
-                      according to their requirement.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Do logicspice give technical support?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      Yes, we believe in long-term relationships and provide
-                      technical support to the client at affordable cost.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Are you willing to advise us with ideas?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Sure, we fulfill the requirement of client. Your
-                      suggestion or ideas are always welcomed which can make
-                      your business more interactive.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Will you deliver the exact product as shown in the demo?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      Yes, We deliver the exact product. We don&apos;t
-                      compromise with quality at all.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I use your script without any programming skills?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      Yes, You can directly install our given script and can
-                      manage everything in admin panel which is very user
-                      friendly.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I remove your company proprietary notices?"
-                    collapseId="flush-collapse6"
-                  >
-                    <p>
-                      With an extra charge for that, you are allowed to modify
-                      the branding there. You can remove our company information
-                      and put yours. But you cannot put “copyright by“ because
-                      only Logicspice own the copyrights for our softwares.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
+              
 
                 <Accordion
                   expanded={expanded === "panel1"}
@@ -1347,7 +1283,7 @@ See how it work yourself!"
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Whatsapp Clone"
+                    title="Blog Script"
                   />
                 }
               </div>

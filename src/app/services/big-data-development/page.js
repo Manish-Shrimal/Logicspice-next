@@ -70,7 +70,7 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="page_img">
-                <Image
+                <Image unoptimized={true}
                   width={350}
                   height={500 / (100 / 100)}
                   src="/img/bigdatadevelopment/bigdata-img.png"
@@ -85,17 +85,17 @@ const Page = () => {
       <section className="laravel-descriptions cackphp-descriptions BigDataDescription">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+            <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
               <div className="laravel_img">
-                <Image
-                 width={350}
+                <Image unoptimized={true}
+                 width={290}
                  height={500 / (100 / 100)}
                   src="/img/bigdatadevelopment/big-data-icon.png"
                   alt="Big Data Development Services"
                 />
               </div>
             </div>
-            <div className="col-sm-6 col-md-6 pull-left">
+            <div className="col-sm-6 col-md-7 pull-left">
               <div className="laravel-descriptions-bx">
                 <h2>
                   <strong>Big Data</strong>
@@ -148,14 +148,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/bigdatadevelopment/data-analytics.png"
                         alt="Big Data Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -178,14 +178,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box6">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/bigdatadevelopment/data-visualization.png"
                         alt="Big Data Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -207,14 +207,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/bigdatadevelopment/customer-behavior.png"
                         alt="Big Data Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -236,14 +236,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/bigdatadevelopment/predictive-analysis.png"
                         alt="Big Data Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -264,14 +264,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/bigdatadevelopment/data-integration.png"
                         alt="Big Data Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -292,14 +292,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/bigdatadevelopment/real-time-data.png"
                         alt="Big Data Development Services"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -331,7 +331,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/bigdatadevelopment/data-security.png"
@@ -348,7 +348,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/bigdatadevelopment/tailored-solutions.png"
@@ -368,7 +368,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/bigdatadevelopment/cost-efficiency.png"
@@ -387,7 +387,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/bigdatadevelopment/adaptable-design.png"
@@ -403,7 +403,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/bigdatadevelopment/comprehensive-reporting.png"
@@ -424,7 +424,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/bigdatadevelopment/expertise-diversity.png"
@@ -454,7 +454,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/bigdatadevelopment/enhanced-decision.png"
@@ -474,7 +474,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/bigdatadevelopment/predictive-analysis-icon.png"
@@ -494,7 +494,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/bigdatadevelopment/improved-customer.png"
@@ -514,7 +514,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/bigdatadevelopment/cost-efficiency-icon.png"
@@ -534,7 +534,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/bigdatadevelopment/risk-management.png"
@@ -554,7 +554,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/bigdatadevelopment/product-innovation.png"
@@ -649,14 +649,14 @@ const Page = () => {
       <section className="ecommerce_faq_section NewFaqDesignSection">
         <div className="container">
           <div className="row">
-            <div className=" row ecommerce__Quick_FAQ">
+            <div className=" row ecommerce__Quick_FAQ CustomQuickFAQScript">
               <div className="col-md-5">
                 <h4 className="title_main">
                   Frequently <br />
                   Asked Questions
                 </h4>
                 <div className="FaqImgBx">
-                  <Image
+                  <Image unoptimized={true}
                   width={650}
                   height={500 / (100 / 100)}
                     src="/img/laraveldevelopment/FaqLaravelImg.png"
@@ -667,8 +667,12 @@ const Page = () => {
               <div className="col-md-7">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
-                    headerTitle="How does big data analytics differ from traditional data analysis methods, and why is it becoming a preferred choice for businesses today?"
+                    // headerTitle="How does big data analytics differ from traditional data analysis methods, and why is it becoming a preferred choice for businesses today?"
+                    headerTitle={
+                      <span dangerouslySetInnerHTML={{ __html: "How does <strong>big data</strong> analytics differ from traditional data analysis methods, and why is it becoming a preferred choice for businesses today?" }} />
+                    }
                     collapseId="flush-collapse1"
+                     data-aos="fade-up"
                   >
                     <p>
                       Big data analytics deals with vast&sbquo; frequently
@@ -684,6 +688,8 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="Why is LogicSpice recognized as a leading big data consulting company?"
                     collapseId="flush-collapse2"
+                     data-aos="fade-up"
+                  
                   >
                     <p>
                       LogicSpice is renowned for offering top-tier big data
@@ -701,6 +707,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="With increasing concerns about data privacy and security, how do big data analytics services maintain the confidentiality and integrity of their data?"
                     collapseId="flush-collapse3"
+                     data-aos="fade-up"
                   >
                     <p>
                       Big data analytics services prioritize data security by
@@ -714,6 +721,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What kind of big data services can businesses avail of from a specialized consulting company?"
                     collapseId="flush-collapse4"
+                     data-aos="fade-up"
                   >
                     <p>
                       Businesses seeking specialized big data services can
@@ -731,6 +739,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What benefits can businesses expect when partnering with a big data consulting company?"
                     collapseId="flush-collapse5"
+                     data-aos="fade-up"
                   >
                     <p>
                       Partnering with a big data consulting company ensures
@@ -753,7 +762,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

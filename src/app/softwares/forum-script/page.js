@@ -1726,24 +1726,7 @@ See how it work yourself!"
           </div>
         </div>
       </section>
-      <section className="enq-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 text-center">
-              <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
-                {
-                  <Enquirymodal
-                    modalStatus={showModal}
-                    toggle={openModal}
-                    title="Forum Script"
-                  />
-                }
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">

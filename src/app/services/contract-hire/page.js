@@ -15,7 +15,7 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
+    // console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -72,8 +72,9 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
                 <Image
-                 width={300}
-                 height={500 / (100 / 100)}
+                  unoptimized={true}
+                  width={300}
+                  height={500 / (100 / 100)}
                   src="/img/contracthire/contract-hire-img.png"
                   alt="Codeigniter Development"
                 />
@@ -122,6 +123,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon1.png"
@@ -144,6 +146,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon2.png"
@@ -167,6 +170,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon3.png"
@@ -189,6 +193,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon4.png"
@@ -211,6 +216,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon5.png"
@@ -233,6 +239,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon6.png"
@@ -255,6 +262,7 @@ const Page = () => {
                 <div className="ContractFeatureBox">
                   <div className="ContractFeatures_img">
                     <Image
+                      unoptimized={true}
                       width={70}
                       height={100}
                       src="/img/contracthire/contract-features-icon7.png"
@@ -336,6 +344,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"

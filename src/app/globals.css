@@ -1688,7 +1688,7 @@ bread-top {
 
 .header.home-header {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   border-bottom: 2px solid #eee;
   z-index: 999;
 }
@@ -1743,11 +1743,13 @@ bread-top {
 }
 
 .header.home-header {
-  /* left:0;position:absolute;top:0; */
+  left:0;
+  
+  top:0;
   width: 100%;
- 
+  
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   border-bottom: 2px solid #eee;
   z-index: 999;
 }
@@ -5836,8 +5838,11 @@ body.modal-open .quote_pop_plus {
 
   .home-slider {
     height: 540px;
+    overflow: hidden;
   }
-
+  .home-slider .slick-dots {
+    bottom: -80px !important;
+  }
   .panel-title .more-mins {
     display: inline-block;
   }
@@ -5883,7 +5888,23 @@ body.modal-open .quote_pop_plus {
   #blog-home .owl-dots {
     display: none;
   }
-
+  .customize-top .react-tabs__tab-list > li {
+    width: 100%;
+  }
+  .footer-top button {
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 5px 5px 0 0;
+  }
+  .menu-item {
+    padding-left: 10px;
+  }
+  .foot-arrowIng img {
+    width: 200px !important;
+  }
   /*---our-company-----*/
   .CompanyResourcesHeader {
     padding: 80px 0 30px;
@@ -7188,4 +7209,56 @@ button.close {
 
 .testinomials_review .slick-dots{
   bottom: -40px!important;
+}
+
+.IndustriesIcon1 {
+	position: absolute;
+	left: 50px;
+}
+
+.IndustriesIcon2 {
+	position: absolute;
+	left: 140px;
+	top: 200px;
+}
+
+.IndustriesIcon3 {
+	position: absolute;
+	left: 50px;
+	top: 330px;
+}
+
+.IndustriesIcon4 {
+	position: absolute;
+	left: 10px;
+	top: 490px
+}
+
+.IndustriesIcon5 {
+	position: absolute;
+	right: 50px;
+	top: 70px
+}
+
+.IndustriesIcon6 {
+	position: absolute;
+	right: 50px;
+	top: 210px;
+}
+
+.IndustriesIcon7 {
+	position: absolute;
+	right: 50px;
+	top: 350px
+}
+
+.IndustriesIcon8 {
+	position: absolute;
+	right: 50px;
+	top: 500px;
+}
+
+.header.scrolled {
+  background-color: hsla(0, 0%, 100%, .9);
+   
 }

@@ -67,7 +67,7 @@ const Page = () => {
                   spread the business globally and without social media&sbquo;
                   it is not possible. Thus&sbquo; in order to take a lucrative
                   approach on it many enterprises are investing heavily on{" "}
-                  <strong>social media optimization agency </strong>to manage
+                  <strong>social media optimization agency {" "} </strong>to manage
                   their online reputation.{" "}
                 </p>
                 <p>
@@ -117,8 +117,9 @@ const Page = () => {
             </div>
             <div className="col-md-5">
               <div className="images-section">
-                <Image
-                 width={450}
+                <Image unoptimized={true}
+                
+                 width={700}
                  height={500 / (100 / 100)}
                   src="/img/socialmediaoptimizationservices/smo-img.png"
                   alt="Social_Media_Optimization_Services"
@@ -138,10 +139,11 @@ const Page = () => {
                 id="tab1_li"
                 className={`ddlj ${saascmsTab ? "active" : ""}`}
                 onClick={() => handleSaascmsTab()}
+                style={{cursor: "pointer"}}
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/socialmediaoptimizationservices/project-img.png"
@@ -155,10 +157,11 @@ const Page = () => {
                 id="tab2_li"
                 className={`ddlj ${saascrmTab ? "active" : ""}`}
                 onClick={() => handleSaascrmTab()}
+                style={{cursor: "pointer"}}
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/socialmediaoptimizationservices/client-need-img.png"
@@ -172,10 +175,11 @@ const Page = () => {
                 id="tab3_li"
                 className={`ddlj ${customecommerceTab ? "active" : ""}`}
                 onClick={() => handleCustomecommerceTab()}
+                style={{cursor: "pointer"}}
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/socialmediaoptimizationservices/client-approval-img.png"
@@ -269,7 +273,7 @@ const Page = () => {
             <div className="col-md-6"></div>
           </div>
           <div className="img_saaa">
-            <Image
+            <Image unoptimized={true}
               width={1075}
               height={500 / (100 / 100)}
               src="/img/socialmediaoptimizationservices/smo-bg.png"
@@ -291,7 +295,7 @@ const Page = () => {
             >
               <div className="new_libraries">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/socialmediaoptimizationservices/new_development_icon1.png"
@@ -310,7 +314,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/socialmediaoptimizationservices/new_development_icon2.png"
@@ -333,7 +337,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/socialmediaoptimizationservices/new_development_icon4.png"
@@ -355,7 +359,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/socialmediaoptimizationservices/new_development_icon3.png"
@@ -377,7 +381,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/socialmediaoptimizationservices/new_development_icon6.png"
@@ -400,7 +404,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/socialmediaoptimizationservices/new_development_icon5.png"
@@ -446,7 +450,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

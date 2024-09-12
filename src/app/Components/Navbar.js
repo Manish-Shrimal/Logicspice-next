@@ -30,6 +30,24 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   
 
 
@@ -38,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="header home-header fixed  ">
+      <header className={`header home-header fixed ${scroll ? "scrolled" : ""}`}>
         <nav className="navbar navbar-light  navbar-expand-lg navbar-default mega-menu  ">
           <div className="container">
             <div className="navbar-brand">

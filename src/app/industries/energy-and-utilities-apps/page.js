@@ -266,7 +266,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                    unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Company"
                       src="/img/globalpages/icn_an.png"
@@ -280,7 +281,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Company"
                       src="/img/globalpages/navigate_icon.png"
@@ -294,8 +296,9 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                     unoptimized={true}
+                     width={35}
+                     height={100}
                       alt="App Development Services"
                       src="/img/globalpages/security_icon.png"
                     />
@@ -401,7 +404,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="app development"
                       src="/img/globalpages/icon_ac.png"
@@ -415,7 +419,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="mobile app development"
                       src="/img/globalpages/customiziable_app_icon.png"
@@ -429,7 +434,8 @@ const Page = () => {
                 <div className="app_shown_describe_bxt aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="mobile app development services"
                       src="/img/globalpages/userinterface_icon.png"
@@ -814,12 +820,12 @@ const Page = () => {
                   </div>
                   <div className="blog_head_detail">
                     <h3 className="entry-title heading_subsiti">
-                      <a href="">
+                      <Link href="">
                         <span>
                           Factors To Consider While Choosing Web Builder For
                           E-Commerce Website
                         </span>
-                      </a>
+                      </Link>
                     </h3>
                     <div className="method_blog">
                       <ul>
@@ -836,26 +842,26 @@ const Page = () => {
                         <li>
                           <i className="fa fa-tag" aria-hidden="true"></i>
                           <span>
-                            <a href="" title="E-commerce Website development">
+                            <Link href="" title="E-commerce Website development">
                               E-commerce Website development
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                               href=""
                               title=" Web Builder For E-Commerce Website"
                             >
                               {" "}
                               Web Builder For E-Commerce Website
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title=" Web Builder For Free">
+                            <Link href="" title=" Web Builder For Free">
                               {" "}
                               Web Builder For Free
-                            </a>
+                            </Link>
                             ,
-                            <a href="" title=" Website Builder">
+                            <Link href="" title=" Website Builder">
                               {" "}
                               Website Builder
-                            </a>
+                            </Link>
                             ,
                           </span>
                         </li>

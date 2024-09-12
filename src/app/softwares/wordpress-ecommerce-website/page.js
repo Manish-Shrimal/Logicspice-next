@@ -2150,7 +2150,7 @@ See how it work yourself!"
                           toggleAccordion(7);
                         }}
                       >
-                        Am I permitted to eliminate your company's proprietary
+                        Am I permitted to eliminate your company&apos;s proprietary
                         notices?
                       </a>
                     </div>
@@ -2160,7 +2160,7 @@ See how it work yourself!"
                           You have the flexibility to modify the script by
                           removing your company information and substituting it
                           with yours. However, it is not permissible to include
-                          "copyright by" since exclusive copyright ownership for
+                          &quot;copyright by&quot; since exclusive copyright ownership for
                           the software rests with us.
                         </p>
                       </div>
@@ -2231,7 +2231,7 @@ See how it work yourself!"
                     <div style={activeIndex === 10 ? showStyle : collapseStyle}>
                       <div style={bodyStyle}>
                         <p>
-                          Yes, we deliver the exact product. We don't compromise
+                          Yes, we deliver the exact product. We don&apos;t compromise
                           with quality at all.
                         </p>
                       </div>

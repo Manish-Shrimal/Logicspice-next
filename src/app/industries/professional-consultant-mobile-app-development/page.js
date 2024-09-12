@@ -200,7 +200,7 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 text-center">
+              <div className="col-md-6 ">
                 <div className="text-center hotel-info">
                   <div className="outstanding">Outstanding</div>
                   <div className="Business">Business Apps</div>
@@ -274,8 +274,9 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                     unoptimized={true}
+                     width={35}
+                     height={100}
                       alt="App Development Company"
                       src="/img/globalpages/icn_an.png"
                     />
@@ -288,7 +289,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Company"
                       src="/img/globalpages/navigate_icon.png"
@@ -302,7 +304,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="App Development Services"
                       src="/img/globalpages/security_icon.png"
@@ -413,7 +416,8 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
+                      unoptimized={true}
+                      width={35}
                       height={100}
                       alt="app development"
                       src="/img/globalpages/icon_ac.png"
@@ -427,8 +431,9 @@ const Page = () => {
                 <div className="app_shown_describe_bx aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                     unoptimized={true}
+                     width={35}
+                     height={100}
                       alt="mobile app development"
                       src="/img/globalpages/customiziable_app_icon.png"
                     />
@@ -441,8 +446,9 @@ const Page = () => {
                 <div className="app_shown_describe_bxt aos-init aos-animate ">
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                      width={30}
-                      height={100}
+                     unoptimized={true}
+                     width={35}
+                     height={100}
                       alt="mobile app development services"
                       src="/img/globalpages/userinterface_icon.png"
                     />

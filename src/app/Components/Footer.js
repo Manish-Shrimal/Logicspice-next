@@ -14,7 +14,7 @@ const Footer = () => {
     <section className="footer_bg">
       <div className="container">
         <div className="">
-          <div className="mobileShow footer-top">
+          <div className="mobileShow footer-top ef">
             <Accordion>
               <AccordionItem headerTitle="Company">
                 <div className="panel-body">
@@ -488,7 +488,7 @@ const Footer = () => {
         <div class="footer_center">
           <div class="social_footer">
             <ul>
-              <li>
+              <li className="foot-arrowIng">
                 <Image
                   width={100}
                   height={100}

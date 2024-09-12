@@ -52,9 +52,9 @@ const Page = () => {
           </p>
           <p>
             We have all what you need at single place. Have a look on our{" "}
-            <Link href="/portfolio">portfolio</Link> and
+            <Link href="/portfolio">portfolio</Link> and{" "}
             <Link href="/company/testimonials-and-reviews">
-              client testimonials
+              Cient testimonials
             </Link>
             . Discuss with us what you want. We see the partnership as a long
             term relationship.
