@@ -36,6 +36,7 @@ const Page = ({ params }) => {
     try {
       const response = await axios.get(BaseAPI + `/case-studies/${slug}`);
       setPageData(response.data.allblogs);
+      console.log(response.data.allblogs)
       setBlogData(response.data.latestBlog);
       caseStudyImagePath.current = response.data.caseStudyImage;
       blogImagePath.current = response.data.blogImage;
@@ -60,7 +61,8 @@ const Page = ({ params }) => {
         <div className="container">
           <div className="casestudies_sec">
             <div className="breadcrumb-casestudies">
-              <h1>Case Study for {pageData.title}</h1>
+              <h1>Case Study for {caseStudyList.title}</h1>
+
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
@@ -68,7 +70,7 @@ const Page = ({ params }) => {
                 <li className="breadcrumb-item">
                   <Link href="/case-study">Case Studies</Link>
                 </li>
-                <li className="breadcrumb-item active">{pageData.title}</li>
+                <li className="breadcrumb-item active">{caseStudyList.title}</li>
               </ol>
             </div>
             <div className="row">
@@ -77,7 +79,7 @@ const Page = ({ params }) => {
                   <Image
                     width={150000}
                     height={100}
-                    src={caseStudyImagePath.current + pageData.image}
+                    src={caseStudyImagePath.current + caseStudyList.image}
                     alt=" We do it Cheaper-logicspice"
                     className="attachment-full size-full wp-post-image"
                   />{" "}
@@ -86,9 +88,9 @@ const Page = ({ params }) => {
               <div className="col-xs-12 col-sm-6 col-md-5">
                 <div className="case-studies-pagedtl">
                   <p>
-                    {pageData.short_description &&
+                    {caseStudyList.short_description &&
                       // && typeof pageData.shortDescription === "string"
-                      parse(pageData.short_description)}
+                      parse(caseStudyList.short_description)}
                   </p>
                 </div>
               </div>
@@ -110,9 +112,9 @@ const Page = ({ params }) => {
                     <div className="blog_row_detail">
                       <div className="blog_detail_sectc_bl caseStr">
                         <p>
-                          {pageData.description &&
-                            typeof pageData.description === "string" &&
-                            parse(pageData.description)}
+                          {caseStudyList.description &&
+                            typeof caseStudyList.description === "string" &&
+                            parse(caseStudyList.description)}
                         </p>
                       </div>
                     </div>
@@ -198,7 +200,7 @@ const Page = ({ params }) => {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title={pageData.title}
+                    title={caseStudyList.title}
                   />
                 }
               </div>

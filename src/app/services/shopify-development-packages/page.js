@@ -10,9 +10,31 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
+
+  const toggleActiveItem = (collapseId) => {
+    setActiveItem((prevActiveItem) =>
+      prevActiveItem === collapseId ? null : collapseId
+    );
+  };
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   const openModal = () => {
     console.log(showModal);
@@ -26,11 +48,13 @@ const Page = () => {
 
   return (
     <>
+      
+      <div className="shopify_packages">
       <NavBar />
       <section className="yellow_slider ShopofDevelopmentBanners ShopifyDevelopmentPackages">
         <div className="container">
           <div className="row">
-            <div className="col-md-7">
+            <div className="col-md-6">
               <div className="slidere-tittle">
                 <h1>Shopify Website Development Company</h1>
                 <p>
@@ -77,7 +101,7 @@ const Page = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-md-5">
+            <div className="col-md-6">
               <div className="images-section">
                 <Image
                   width={650}
@@ -239,7 +263,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className=" row ecommerce__Quick_FAQ">
-              <div className="col-md-12 ecommerce__Quick_FAQ">
+              {/* <div className="col-md-12 ecommerce__Quick_FAQ">
                 <h4 className="title_main">
                   FAQs on Shopify Website Development
                 </h4>
@@ -308,6 +332,174 @@ const Page = () => {
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
+              </div> */}
+              <div className="col-md-12 ecommerce__Quick_FAQ">
+                <Typography variant="h4" className="title_main">
+                  FAQs on Shopify Website Development
+                </Typography>
+
+                <MDBAccordion borderless>
+                  {/* Accordion Item 1 */}
+                  <MDBAccordionItem
+                    collapseId="flush-collapse1"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse1")}
+                      >
+                        <span>
+                          01. Should I hire a developer to create my Shopify
+                          website?
+                        </span>
+                        {activeItem === "flush-collapse1" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          <KeyboardArrowRightIcon />
+                        )}
+                      </div>
+                    }
+                  >
+                    <Typography>
+                      With Shopify&apos;s simple drag-and-drop interface for
+                      creating online businesses&sbquo; professional Shopify
+                      developers are highly advised for more complex changes.
+                      They can easily integrate plugins and recommend the finest
+                      design solutions for your e-commerce website. LogicSpice
+                      offers packages starting from $595.
+                    </Typography>
+                  </MDBAccordionItem>
+
+                  {/* Accordion Item 2 */}
+                  <MDBAccordionItem
+                    collapseId="flush-collapse2"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse2")}
+                      >
+                        <span>02. What does the Shopify Website cost?</span>
+                        {activeItem === "flush-collapse2" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          <KeyboardArrowRightIcon />
+                        )}
+                      </div>
+                    }
+                  >
+                    <Typography>
+                      The complexity of the store determines the amount of
+                      Shopify development. However&sbquo; while the Shopify plan
+                      starts at $29 per month&sbquo; customizing a business can
+                      cost significantly more. Our team provides a suitable
+                      estimate for the Shopify store after completing an
+                      in-depth analysis of your needs.
+                    </Typography>
+                  </MDBAccordionItem>
+
+                  {/* Accordion Item 3 */}
+                  <MDBAccordionItem
+                    collapseId="flush-collapse3"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse3")}
+                      >
+                        <span>
+                          03. Is there any additional cost associated with using
+                          Shopify?
+                        </span>
+                        {activeItem === "flush-collapse3" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          <KeyboardArrowRightIcon />
+                        )}
+                      </div>
+                    }
+                  >
+                    <Typography>
+                      There aren&apos;t any additional costs associated with
+                      using Shopify. With LogicSpice&sbquo; you&apos;ll pay a
+                      one-time cost for your chosen plan. Even though you can
+                      purchase extra apps and domain names&sbquo; you should not
+                      be surprised by anything on your invoice.
+                    </Typography>
+                  </MDBAccordionItem>
+
+                  {/* Accordion Item 4 */}
+                  <MDBAccordionItem
+                    collapseId="flush-collapse4"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse4")}
+                      >
+                        <span>
+                          04. Are there any discounts on Shopify's price plans?
+                        </span>
+                        {activeItem === "flush-collapse4" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          <KeyboardArrowRightIcon />
+                        )}
+                      </div>
+                    }
+                  >
+                    <Typography>
+                      Shopify gives a 10 percent discount for a one-year
+                      subscription and 20 percent for a two-year subscription.
+                      Both subscriptions must be paid in full upfront.
+                    </Typography>
+                  </MDBAccordionItem>
+
+                  {/* Accordion Item 5 */}
+                  <MDBAccordionItem
+                    collapseId="flush-collapse5"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse5")}
+                      >
+                        <span>
+                          05. What are the different Shopify Website Development
+                          Packages?
+                        </span>
+                        {activeItem === "flush-collapse5" ? (
+                      <KeyboardArrowDownIcon />
+                    ) : (
+                      <KeyboardArrowRightIcon />
+                    )}
+                      </div>
+                    }
+                  >
+                    
+                    <Typography>
+                      Shopify has three different Shopify Website Development
+                      Packages to choose from: Basic Shopify&sbquo;,
+                      Shopify&sbquo; Advanced Shopify and Shopify Plus. We offer
+                      a Shopify Website Development package starting from $595.
+                    </Typography>
+                  </MDBAccordionItem>
+                </MDBAccordion>
               </div>
             </div>
           </div>
@@ -334,6 +526,8 @@ const Page = () => {
       </section>
 
       <Footer />
+      </div>
+
     </>
   );
 };

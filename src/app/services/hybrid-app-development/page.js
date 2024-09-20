@@ -101,13 +101,10 @@ const Page = () => {
                 compiled and well distributed base of codes across different
                 platforms like Titanium, Sencha, HTML5 and PhoneGap. Our team
                 assures to deliver 100% customized hybrid{" "}
-                <Link
-                  href="/services/mobile-app-development"
-                  target="_blank"
-                >
+                <Link href="/services/mobile-app-development" target="_blank">
                   Mobile applications
-                </Link>
-                {" "}that work efficiently across multiple devices.
+                </Link>{" "}
+                that work efficiently across multiple devices.
               </p>
               <h2>Hybrid Mobile Application Development</h2>
 
@@ -439,7 +436,7 @@ const Page = () => {
             </div>
           </div>
           <div className="col-sm-12 main_btn_hire">
-            <a className="btn btn-primary">Hire App Developer</a>
+            <Link href="/services/hire-developers" className="btn btn-primary">Hire App Developer</Link>
           </div>
         </div>
       </section>

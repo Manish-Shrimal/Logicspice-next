@@ -20,7 +20,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
   };
@@ -87,7 +87,7 @@ const Page = () => {
               <span>Our Clients</span>
             </li>
             <li>
-              <Image
+              <Image unoptimized={true}
                  width={100}
                  height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img1.png"
@@ -95,7 +95,7 @@ const Page = () => {
               />
             </li>
             <li>
-              <Image
+              <Image unoptimized={true}
                 width={120}
                 height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img2.png"
@@ -103,7 +103,7 @@ const Page = () => {
               />
             </li>
             <li>
-              <Image
+              <Image unoptimized={true}
                  width={120}
                  height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img3.png"
@@ -111,7 +111,7 @@ const Page = () => {
               />
             </li>
             <li>
-              <Image
+              <Image unoptimized={true}
                  width={220}
                  height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img4.png"
@@ -141,6 +141,8 @@ const Page = () => {
                   <Link
                     href="/services/website-development/"
                     target="_blank"
+                    // style="color: #31aae1; font-weight: 500; text-decoration: underline; text-transform: capitalize;">
+                    style={{color: "#31aae1" , fontWeight : "500", textDecoration : "underline!important", textTransform : "capitalize"}}
                   >
                     websites development
                   </Link>
@@ -170,7 +172,7 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="WebDevelopmentApplicationImg">
-                <Image
+                <Image unoptimized={true}
                    width={600}
                    height={500 / (100 / 100)}
                   src="/img/webdevelopment/redesign-img.png"
@@ -193,7 +195,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon1.png"
@@ -213,7 +215,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon2.png"
@@ -233,7 +235,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon5.png"
@@ -254,7 +256,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon7.png"
@@ -275,7 +277,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon3.png"
@@ -296,7 +298,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon4.png"
@@ -317,7 +319,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon6.png"
@@ -338,7 +340,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="WebDesignDevelopmentBx">
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon8.png"
@@ -363,8 +365,8 @@ const Page = () => {
         <div className="row m-0">
           <div className="col-sm-12 col-md-6 p-0">
             <div className="WebsiteRedesignServiceImg">
-              <Image
-                width={900}
+              <Image unoptimized={true}
+                width={1500}
                 height={500 / (100 / 100)}
                 src="/img/webdevelopment/website-redesign-img.jpg"
                 alt="Website Redesign Services"
@@ -411,7 +413,7 @@ const Page = () => {
               <Slider {...settings}>
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={500 / (100 / 100)}
                       src="/img/webdevelopment/goodluck-logo.png"
@@ -442,7 +444,7 @@ const Page = () => {
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <Image
+                      <Image unoptimized={true}
                         width={400}
                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/goodluck-img.png"
@@ -451,7 +453,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="RingImg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -461,7 +463,7 @@ const Page = () => {
                 </div>
                 <div className="WebLatestProjectsSlide WebLatestRed">
                   <div className="WebProjectLogo">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/salesagy-logo.png"
@@ -497,7 +499,7 @@ const Page = () => {
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <Image
+                      <Image unoptimized={true}
                        width={400}
                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/salesagy-img.png"
@@ -506,7 +508,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="RingImg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -517,7 +519,7 @@ const Page = () => {
 
                 <div className="WebLatestProjectsSlide WebLatestJobatHome">
                   <div className="WebProjectLogo">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/jobathome-logo.png"
@@ -548,7 +550,7 @@ const Page = () => {
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <Image
+                      <Image unoptimized={true}
                         width={400}
                         height={500 / (100 / 100)}
                         src="/img/webdevelopment/jobathome-img.png"
@@ -557,7 +559,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="RingImg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -567,7 +569,7 @@ const Page = () => {
                 </div>
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/fundcareusa-logo.png"
@@ -598,7 +600,7 @@ const Page = () => {
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <Image
+                      <Image unoptimized={true}
                        width={400}
                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/fundcareusa-img.png"
@@ -607,7 +609,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="RingImg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -618,7 +620,7 @@ const Page = () => {
 
                 <div className="WebLatestProjectsSlide WebLatestTacksm">
                   <div className="WebProjectLogo">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/tacksm-logo.png"
@@ -649,7 +651,7 @@ const Page = () => {
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <Image
+                      <Image unoptimized={true}
                        width={400}
                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/tacksm-img.png"
@@ -658,7 +660,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="RingImg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -669,7 +671,7 @@ const Page = () => {
 
                 <div className="WebLatestProjectsSlide WebLatestVanessajo">
                   <div className="WebProjectLogo">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/vanessajo-logo.png"
@@ -700,7 +702,7 @@ const Page = () => {
                   </div>
                   <div className="WebProjectImg">
                     <div className="WebProjectImgBx">
-                      <Image
+                      <Image unoptimized={true}
                        width={400}
                        height={500 / (100 / 100)}
                         src="/img/webdevelopment/vanessajo-img.png"
@@ -709,7 +711,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="RingImg">
-                    <Image
+                    <Image unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
@@ -738,7 +740,7 @@ const Page = () => {
               >
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon1.png"
@@ -760,7 +762,7 @@ const Page = () => {
               >
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon2.png"
@@ -779,7 +781,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon3.png"
@@ -798,7 +800,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon4.png"
@@ -817,7 +819,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon5.png"
@@ -837,7 +839,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 aos-init" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/webdevelopment/webdevelopment-why-icon6.png"
@@ -864,7 +866,7 @@ const Page = () => {
               For the most comprehensive consultation on optimizing your current
               website&sbquo; please reach out to us for a free assessment.
             </p>
-            <a href="#" className="btn btn-primary">
+            <a className="btn btn-primary" onClick={openModal}>
               Contact US
             </a>
           </div>
@@ -876,7 +878,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"

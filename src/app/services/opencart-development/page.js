@@ -70,7 +70,7 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
-                <Image
+                <Image unoptimized={true}
                   src="/img/opencartdevelopment/opencart-banner-img.png"
                   alt="OpenCart Framework Development"
                   width={401}
@@ -86,10 +86,10 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
-                <Image
+                <Image unoptimized={true}
                   src="/img/opencartdevelopment/opencart-logo-img.png"
                   alt="OpenCart Framework Development"
-                  width={550}
+                  width={500}
                   height={106}
                 />
               </div>
@@ -111,8 +111,8 @@ const Page = () => {
                 </p>
                 <p>
                   OpenCart website development & OpenCart
-                  <Link href="/services/mobile-app-development" target="_blank">
-                    mobile app development
+                  <Link href="/services/mobile-app-development" target="_blank" style={{textDecoration : "underline"}}> {""}
+                    Mobile app development
                   </Link>{" "}
                   offers you with highly advanced&#44; customized and innovative
                   ecommerce solutions. These solutions perfectly blend with the
@@ -151,14 +151,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/opencart-new-icon1.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/opencart-white-icon1.png"
                         alt="OpenCart Framework Development"
@@ -183,14 +183,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/codeigniter-new-icon1.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/codeigniter-white-icon1.png"
                         alt="OpenCart Framework Development"
@@ -215,14 +215,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/opencart-new-icon5.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/opencart-white-icon5.png"
                         alt="OpenCart Framework Development"
@@ -246,14 +246,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/opencart-new-icon3.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/opencart-white-icon3.png"
                         alt="OpenCart Framework Development"
@@ -278,14 +278,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/opencart-new-icon4.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/opencart-white-icon4.png"
                         alt="OpenCart Framework Development"
@@ -310,14 +310,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/codeigniter-new-icon5.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/codeigniter-white-icon5.png"
                         alt="OpenCart Framework Development"
@@ -343,14 +343,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/opencart-new-icon2.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/opencart-white-icon2.png"
                         alt="OpenCart Framework Development"
@@ -375,14 +375,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         className="widout-hover"
                         src="/img/opencartdevelopment/laravel-new-icon1.png"
                         alt="OpenCart Framework Development"
                         width={80}
                         height={80}
                       />
-                      <Image
+                      <Image unoptimized={true}
                         className="on-hover"
                         src="/img/opencartdevelopment/laravel-white-icon1.png"
                         alt="OpenCart Framework Development"
@@ -419,7 +419,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart_features_icon1.png"
                       alt="img1"
                       width={55}
@@ -440,7 +440,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart_features_icon2.png"
                       alt="img4"
                       width={40}
@@ -460,7 +460,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/core_features_icon6.png"
                       alt="img2"
                       width={55}
@@ -479,7 +479,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart_features_icon3.png"
                       alt="img5"
                       width={55}
@@ -498,7 +498,7 @@ const Page = () => {
               <div className="col-sm-12 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart_features_icon5.png"
                       alt="img3"
                       width={55}
@@ -517,7 +517,7 @@ const Page = () => {
               <div className="col-sm-12 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart_features_icon4.png"
                       alt="img3"
                       width={55}
@@ -551,7 +551,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart-why-icon1.png"
                       alt="img1"
                       width={66}
@@ -571,7 +571,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart-why-icon2.png"
                       alt="img1"
                       width={66}
@@ -592,7 +592,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart-why-icon3.png"
                       alt="img1"
                       width={66}
@@ -612,7 +612,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart-why-icon4.png"
                       alt="img1"
                       width={41}
@@ -633,7 +633,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart-why-icon5.png"
                       alt="img1"
                       width={66}
@@ -653,7 +653,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <Image
+                    <Image unoptimized={true}
                       src="/img/opencartdevelopment/opencart-why-icon6.png"
                       alt="img1"
                       width={66}
@@ -691,7 +691,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&#44; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={500}

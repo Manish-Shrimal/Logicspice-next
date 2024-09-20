@@ -121,10 +121,14 @@ const Page = () => {
                   can help your business grow in the best manner.
                 </p>
                 <p>
-                  With many a new
-                  <a href="/services/open-source-cms">
+                  With many a new {""}
+                  <Link
+                    href="/services/open-source-cms"
+                    style={{ color: "white" }}
+                  >
                     open source platforms
-                  </a>
+                  </Link>{" "}
+                  {""}
                   available for the developers&sbquo; you can chose highly
                   powerful and flexible framework for your website. These
                   frameworks are very effective for blogs&sbquo; websites&sbquo;

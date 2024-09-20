@@ -33,7 +33,9 @@ const Page = () => {
       <section className="slider_img shopifyslider_img">
         <div className="container">
           <div className="slider_inner_img">
-            <Image width={800}
+            <Image
+              unoptimized={true}
+              width={1200}
               height={500 / (100 / 100)}
               alt="PSD to Shopify Conversion Services"
               src="/img/psdtowordpress/psd_to_shopify_head.png"
@@ -49,7 +51,10 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={100} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={100}
+                    height={100}
                     alt="convert PSD to Wordpress"
                     src="/img/psdtowordpress/pstowp.png"
                   />
@@ -60,18 +65,26 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={50} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/migration-maintence.png"
                   />
                 </div>
-                <div className="adeptness_box_content">24*7 Technical Support</div>
+                <div className="adeptness_box_content">
+                  24*7 Technical Support
+                </div>
               </div>
             </div>
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={50} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/wordpressthemeicon.png"
                   />
@@ -85,7 +98,10 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image width={50} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={50}
+                    height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/customwordpressicon.png"
                   />
@@ -113,15 +129,15 @@ const Page = () => {
               </a>{" "}
               provide simple but powerful solution to your Shopify website.We
               make sure that all your requirements will be fulfilled with your
-              website.Moreover&sbquo; we provide reliable&sbquo; fast support and 100%
-              satisfaction. Just send us your design files and our experienced
-              developers will convert them into a fully functional Shopify
-              theme.
+              website.Moreover&sbquo; we provide reliable&sbquo; fast support
+              and 100% satisfaction. Just send us your design files and our
+              experienced developers will convert them into a fully functional
+              Shopify theme.
             </p>
           </div>
         </div>
       </section>
-      
+
       <section className="slider_section slider_sectionsetbgs">
         <div className="container">
           <h2 className="title_setof_nav">
@@ -132,8 +148,7 @@ const Page = () => {
               <div className="slider_wrapper_inner_content_in">
                 <div className="slider_wrapper_inner_content">
                   <div id="processslide" className="owl-carousel hidedot">
-                    
-                  <Processconvert />
+                    <Processconvert />
                   </div>
                 </div>
               </div>
@@ -148,20 +163,25 @@ const Page = () => {
               Why Our <span>PSD to Shopify</span> Conversion is Best?
             </h2>
             <p>
-              In the terms of quality &amp; performance&sbquo; you can expect high
-              from us. What we give to our clients-
+              In the terms of quality &amp; performance&sbquo; you can expect
+              high from us. What we give to our clients-
             </p>
           </div>
           <div className="row">
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/pixcel_perfect_icon.png"
                   />
                 </div>
-                <h3 className="adeptness_psd_title_box">Pixel perfect design</h3>
+                <h3 className="adeptness_psd_title_box">
+                  Pixel perfect design
+                </h3>
                 <div className="adeptness_psd_content_box">
                   We offer pixel perfect wordpress conversion that ensure 100%
                   similar website to the original PSD.
@@ -171,7 +191,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/compability_all_browsers_icon.png"
                   />
@@ -180,15 +203,18 @@ const Page = () => {
                   Highly compatible all browsers
                 </h3>
                 <div className="adeptness_psd_content_box">
-                  Highly compatible with all the browsers i.e. Google Chrome&sbquo;
-                  Firefox&sbquo; Internet Browser etc.
+                  Highly compatible with all the browsers i.e. Google
+                  Chrome&sbquo; Firefox&sbquo; Internet Browser etc.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/w3c_validator_icon.png"
                   />
@@ -205,37 +231,47 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_responsive_icon.png"
                   />
                 </div>
                 <h3 className="adeptness_psd_title_box">Fully responsive</h3>
                 <div className="adeptness_psd_content_box">
-                  Keeping in mind the rising number of mobile users&sbquo; we convert
-                  PSD to Shopify&sbquo; which can run smoothly on all the gadgets.
+                  Keeping in mind the rising number of mobile users&sbquo; we
+                  convert PSD to Shopify&sbquo; which can run smoothly on all
+                  the gadgets.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_optimised_icon.png"
                   />
                 </div>
                 <h3 className="adeptness_psd_title_box">Optimized Images</h3>
                 <div className="adeptness_psd_content_box">
-                  After optimization&sbquo;it will load faster - Faster the page load
-                  time&sbquo; better is the user experience.
+                  After optimization&sbquo;it will load faster - Faster the page
+                  load time&sbquo; better is the user experience.
                 </div>
               </div>
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_efficient_icon.png"
                   />
@@ -250,7 +286,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_theme_customization_icon.png"
                   />
@@ -265,7 +304,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/admin_interface_icon.png"
                   />
@@ -280,7 +322,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_fast_loading_icon.png"
                   />
@@ -295,7 +340,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/privacy_support_icon.png"
                   />
@@ -310,7 +358,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_searchengine_icon.png"
                   />
@@ -325,7 +376,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_widget_icon.png"
                   />
@@ -340,7 +394,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_best_price_icon.png"
                   />
@@ -354,7 +411,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/list_outstanding_icon.png"
                   />
@@ -368,7 +428,10 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image width={60} height={100}
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
                     alt="PSD to Shopify Conversion Services"
                     src="/img/psdtowordpress/security_icon_psd.png"
                   />
@@ -392,9 +455,12 @@ const Page = () => {
             Logicspice helps you bring your creativity to fruition. If you have
             any idea in your mind which you want to present before the world as
             your business&sbquo; you are not late.{" "}
-            <a href="https://www.logicspice.com/hire-developers/">
+            <Link
+              href="https://www.logicspice.com/hire-developers/"
+              style={{ textDecoration: "underline" }}
+            >
               Hire developer
-            </a>{" "}
+            </Link>{" "}
             from our experienced team and give a start to your business.
           </p>
           <div className="requirment_btn">
@@ -428,92 +494,92 @@ const Page = () => {
               <ul className="different_experts_member">
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-android-app-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Android App Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Android App Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-ios-app-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    iOS App Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire iOS App Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-cakephp-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Cake PHP Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Cake PHP Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-wordpress-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Wordpress Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Wordpress Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-drupal-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Drupal Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Drupal Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-magento-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Magento Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Magento Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-zencart-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Zencart Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Zencart Developer
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-shopify-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Shopify Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Shopify Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-laravel-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Laravel Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Laravel Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-codeigniter-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Codeigniter Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Codeigniter Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-node-js-experts/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Node.Js Experts
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Node.Js Experts
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-angular-js-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Angular jS Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Angular jS Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-yii-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Yii Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Yii Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-opencart-developers/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Opencart Developers
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Opencart Developers
                   </a>
                 </li>
                 <li className="different_experts_name">
                   <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer/">
-                    <i aria-hidden="true" className="fa fa-angle-right"></i> Hire
-                    Hybrid mobile app Developer
+                    <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
+                    Hire Hybrid mobile app Developer
                   </a>
                 </li>
               </ul>
@@ -553,7 +619,13 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image width={100} height={100} src="/img/images/whatsapp.png" alt="whatsapp-icon" />
+            <Image
+              unoptimized={true}
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
           </a>
         </div>
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>

@@ -3,10 +3,26 @@ import React, { useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/services/services.css";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <>
       <NavBar />
@@ -482,6 +498,24 @@ const Page = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image unoptimized={true}
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </Link>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </section>
 

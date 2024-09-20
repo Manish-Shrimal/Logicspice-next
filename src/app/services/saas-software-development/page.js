@@ -59,13 +59,14 @@ const Page = () => {
 
   return (
     <>
-      <NavBar />
+    <div className="saas_development">
+    <NavBar />
       <section className="yellow_slider">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className="slidere-tittle">
-                <h1>SaaS Software Development</h1>
+                <h1 style={{fontWeight : "100"}}>SaaS Software Development</h1>
                 <p>
                   Saas (Software as a service) is a way of distribution of web
                   application and easily access as a service over the Internet.
@@ -467,6 +468,8 @@ const Page = () => {
       </section>
 
       <Footer />
+    </div>
+     
     </>
   );
 };

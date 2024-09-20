@@ -2593,17 +2593,17 @@ positivitymain {
 }
 
 .btn {
-  border-radius: 3px;
-  font-size: 16px;
-  padding: 13px 20px;
-  text-transform: uppercase;
-  position: relative;
-  transform: perspective(1px) translateZ(0px);
-  transition-duration: 0.3s;
-  transition-property: color;
-  vertical-align: middle;
-  overflow: hidden;
-  font-family: "lato", sans-serif;
+  border-radius: 3px!important;
+  font-size: 16px!important;
+  padding: 13px 20px!important;
+  text-transform: uppercase!important;
+  position: relative!important;
+  transform: perspective(1px) translateZ(0px)!important;
+  transition-duration: 0.3s!important;
+  transition-property: color!important;
+  vertical-align: middle!important;
+  overflow: hidden!important;
+  font-family: "lato", sans-serif!important;
 }
 
 .btn.btn-primary:hover {
@@ -2891,7 +2891,7 @@ positivitymain {
 .HomeSlider .btn.btn-default:hover {
   background-color: #451095 !important;
   border: 1px solid #451095 !important;
-  color: #fff;
+  color: #fff!important;
 }
 
 .HomeSlider .btn.btn-primary:hover {
@@ -5905,6 +5905,13 @@ body.modal-open .quote_pop_plus {
   .foot-arrowIng img {
     width: 200px !important;
   }
+  .client_logos, .ind-we-serv ul {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   /*---our-company-----*/
   .CompanyResourcesHeader {
     padding: 80px 0 30px;
@@ -7261,4 +7268,9 @@ button.close {
 .header.scrolled {
   background-color: hsla(0, 0%, 100%, .9);
    
+}
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+      margin-left: 8.33333333%;
+  }
 }

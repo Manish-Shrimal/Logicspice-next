@@ -49,7 +49,8 @@ const Page = () => {
 
   return (
     <>
-      <NavBar />
+    <div className="portifilo">
+    <NavBar />
       <section className="breadcrems_header">
         <div className="container">
           <div className="row">
@@ -207,6 +208,7 @@ const Page = () => {
                           data-lightbox="image-1"
                         >
                           <Image
+                          
                             width={500}
                             height={100 / (100 / 100)}
                             src={portfolioImagePath + i.image}
@@ -281,6 +283,8 @@ const Page = () => {
         </div>
       </div>
       <Footer />
+    </div>
+      
     </>
   );
 };

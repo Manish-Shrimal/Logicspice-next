@@ -788,7 +788,7 @@ const Page = () => {
                   <MDBAccordionItem
                     headerTitle="What should I look for when I want to hire Django developer?"
                     collapseId="flush-collapse3"
-                    data-aos="fade-up"
+                   data-aos="fade-up"
                   >
                     <p>
                       When hiring a Django developer, consider their experience,

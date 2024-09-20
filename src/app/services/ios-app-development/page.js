@@ -19,7 +19,7 @@ const Page = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 8,
-    slidesToScroll: 8,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
   };
@@ -51,7 +51,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6">
               <div className="iphone_template_header_left">
-                <Image
+                <Image unoptimized={true}
                   width={500}
                   height={500 / (100 / 100)}
                   className="normal_logo"
@@ -157,7 +157,7 @@ const Page = () => {
                           data-reveal-bg="1"
                           className="responsive__bg__wrap"
                         >
-                          <Image
+                          <Image unoptimized={true}
                             width={300}
                             height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
@@ -170,7 +170,7 @@ const Page = () => {
                             data-reveal-wrap="1"
                             className="phone__reveal__wrap"
                           >
-                            <Image
+                            <Image unoptimized={true}
                               width={100}
                               height={100}
                               alt="UUUga"
@@ -186,7 +186,7 @@ const Page = () => {
                           <div className="apps_portfolioshowe_top">
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="iPhone App Development Company"
@@ -201,7 +201,7 @@ const Page = () => {
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -211,7 +211,7 @@ const Page = () => {
                                 </li>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -286,7 +286,7 @@ const Page = () => {
                           data-reveal-bg="1"
                           className="responsive__bg__wrap"
                         >
-                          <Image
+                          <Image unoptimized={true}
                             width={300}
                             height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
@@ -299,7 +299,7 @@ const Page = () => {
                             data-reveal-wrap="1"
                             className="phone__reveal__wrap"
                           >
-                            <Image
+                            <Image unoptimized={true}
                               width={100}
                               height={100}
                               alt="Localgenii"
@@ -315,7 +315,7 @@ const Page = () => {
                           <div className="apps_portfolioshowe_top">
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="iPhone App Development Company"
@@ -330,7 +330,7 @@ const Page = () => {
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -340,7 +340,7 @@ const Page = () => {
                                 </li>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -413,7 +413,7 @@ const Page = () => {
                           data-reveal-bg="1"
                           className="responsive__bg__wrap"
                         >
-                          <Image
+                          <Image unoptimized={true}
                             width={300}
                             height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
@@ -426,7 +426,7 @@ const Page = () => {
                             data-reveal-wrap="1"
                             className="phone__reveal__wrap"
                           >
-                            <Image
+                            <Image unoptimized={true}
                               width={100}
                               height={100}
                               alt="Martgram"
@@ -442,7 +442,7 @@ const Page = () => {
                           <div className="apps_portfolioshowe_top">
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="iPhone App Development Company"
@@ -457,7 +457,7 @@ const Page = () => {
                               <ul>
                                 <li>
                                   <a href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -467,7 +467,7 @@ const Page = () => {
                                 </li>
                                 <li>
                                   <a href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -549,7 +549,7 @@ const Page = () => {
                           data-reveal-bg="1"
                           className="responsive__bg__wrap"
                         >
-                          <Image
+                          <Image unoptimized={true}
                             width={300}
                             height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
@@ -562,7 +562,7 @@ const Page = () => {
                             data-reveal-wrap="1"
                             className="phone__reveal__wrap"
                           >
-                            <Image
+                            <Image unoptimized={true}
                               width={100}
                               height={100}
                               alt="Favor It"
@@ -578,7 +578,7 @@ const Page = () => {
                           <div className="apps_portfolioshowe_top">
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="iPhone App Development Company"
@@ -593,7 +593,7 @@ const Page = () => {
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -603,7 +603,7 @@ const Page = () => {
                                 </li>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -679,7 +679,7 @@ const Page = () => {
                           data-reveal-bg="1"
                           className="responsive__bg__wrap"
                         >
-                          <Image
+                          <Image unoptimized={true}
                             width={300}
                             height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
@@ -692,7 +692,7 @@ const Page = () => {
                             data-reveal-wrap="1"
                             className="phone__reveal__wrap"
                           >
-                            <Image
+                            <Image unoptimized={true}
                               width={100}
                               height={100}
                               alt="Klick"
@@ -708,7 +708,7 @@ const Page = () => {
                           <div className="apps_portfolioshowe_top">
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="iPhone App Development Company"
@@ -723,7 +723,7 @@ const Page = () => {
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -733,7 +733,7 @@ const Page = () => {
                                 </li>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -816,7 +816,7 @@ const Page = () => {
                           data-reveal-bg="1"
                           className="responsive__bg__wrap"
                         >
-                          <Image
+                          <Image unoptimized={true}
                             width={300}
                             height={500 / (100 / 100)}
                             src="/img/iosappdevelopment/mobileon_portfolio.png"
@@ -829,7 +829,7 @@ const Page = () => {
                             data-reveal-wrap="1"
                             className="phone__reveal__wrap"
                           >
-                            <Image
+                            <Image unoptimized={true}
                               width={100}
                               height={100}
                               alt="Raydaar"
@@ -845,7 +845,7 @@ const Page = () => {
                           <div className="apps_portfolioshowe_top">
                             <div className="apps_portfolioshowe_topleft">
                               <div className="apps_portfolioshowe_top_icon">
-                                <Image
+                                <Image unoptimized={true}
                                   width={100}
                                   height={100}
                                   alt="iPhone App Development Company"
@@ -860,7 +860,7 @@ const Page = () => {
                               <ul>
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -873,7 +873,7 @@ const Page = () => {
                                     target="_blank"
                                     href="https://play.google.com/store/apps/details?id=com.logicspice.raydaar&amp;hl=en"
                                   >
-                                    <Image
+                                    <Image unoptimized={true}
                                       width={30}
                                       height={100}
                                       alt="iPhone App Development Company"
@@ -976,7 +976,7 @@ const Page = () => {
                   <ul>
                     <li>
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           alt="icons"
@@ -986,7 +986,7 @@ const Page = () => {
                     </li>
                     <li>
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={200}
                           height={100}
                           alt="icons"
@@ -996,7 +996,7 @@ const Page = () => {
                     </li>
                     <li>
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={200}
                           height={100}
                           alt="icons"
@@ -1006,7 +1006,7 @@ const Page = () => {
                     </li>
                     <li>
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           alt="icons"
@@ -1016,7 +1016,7 @@ const Page = () => {
                     </li>
                     <li>
                       <span>
-                        <Image
+                        <Image unoptimized={true}
                           width={100}
                           height={100}
                           alt="icons"
@@ -1033,7 +1033,7 @@ const Page = () => {
                     <Slider {...casestudy}>
                       <div>
                         <div className="casestudy_mobimg">
-                          <Image
+                          <Image unoptimized={true}
                             width={800}
                             height={500 / (100 / 100)}
                             alt="app image"
@@ -1058,7 +1058,7 @@ const Page = () => {
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
-                          <Image
+                          <Image unoptimized={true}
                             width={800}
                             height={500 / (100 / 100)}
                             alt="app image"
@@ -1082,7 +1082,7 @@ const Page = () => {
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
-                          <Image
+                          <Image unoptimized={true}
                             width={800}
                             height={500 / (100 / 100)}
                             alt="app image"
@@ -1107,7 +1107,7 @@ const Page = () => {
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
-                          <Image
+                          <Image unoptimized={true}
                             width={800}
                             height={500 / (100 / 100)}
                             alt="app image"
@@ -1132,7 +1132,7 @@ const Page = () => {
                       </div>
                       <div>
                         <div className="casestudy_mobimg">
-                          <Image
+                          <Image unoptimized={true}
                             width={800}
                             height={500 / (100 / 100)}
                             alt="app image"
@@ -1181,7 +1181,7 @@ const Page = () => {
           <div className="" id="satisfying_clients">
             <Slider {...settings}>
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1191,7 +1191,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1201,7 +1201,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1211,7 +1211,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1221,7 +1221,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1231,7 +1231,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1241,7 +1241,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1251,7 +1251,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1261,7 +1261,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1271,7 +1271,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1281,7 +1281,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1291,7 +1291,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1301,7 +1301,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1311,7 +1311,7 @@ const Page = () => {
               </div>
 
               <div className="satisfied_clients_logo ">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   alt="client"
@@ -1328,7 +1328,7 @@ const Page = () => {
           <div className="block-industry-new">
             <div className="row">
               <div className="industryblock_left col-md-5">
-                <Image
+                <Image unoptimized={true}
                   width={450}
                   height={500 / (100 / 100)}
                   alt="iPhone/ iOS app development services for industries - logicspice"
@@ -1377,7 +1377,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"

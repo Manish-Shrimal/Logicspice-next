@@ -21,7 +21,7 @@ const Page = () => {
     centerMode: true,
     vertical: false,
     autoplay: true,
-    arrows: false,
+    arrows: true,
   };
   var clientfeadback = {
     dots: false,
@@ -109,7 +109,7 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
                 <Image
-                  width={350}
+                  width={200}
                   height={500 / (100 / 100)}
                   src="/img/magentodevelopment/magento-logo-img.png"
                   alt="Magento Web Development"
@@ -126,12 +126,9 @@ const Page = () => {
                   Magento is an astounding open source ecommerce development
                   platform. The developers of Magento provide a significant
                   addition to their users with an assortment of choices and
-                  development options catered by the Magento and we as a
-                  <Link
-                    href="/services/web-development"
-                    target="_blank"
-                  >
-                    web development company
+                  development options catered by the Magento and we as a {""}
+                  <Link href="/services/web-development" target="_blank">
+                    Web development company
                   </Link>
                   can customize them to meet any specific requirements of
                   customization. Magento web development is rendered via a MVC
@@ -144,10 +141,7 @@ const Page = () => {
                 </p>
                 <p>
                   Magento{" "}
-                  <Link
-                    href="/services/website-design"
-                    target="_blank"
-                  >
+                  <Link href="/services/website-design" target="_blank">
                     website designing
                   </Link>
                   and custom development services have been utilized by many

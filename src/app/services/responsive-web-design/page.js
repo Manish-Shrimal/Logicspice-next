@@ -10,10 +10,26 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Domain from "@/app/BaseAPI/Domain";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const recaptchaRef = useRef(null);
   const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    console.log(showModal);
+
+    setShowModal(!showModal);
+  };
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -114,7 +130,7 @@ const Page = () => {
 
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
-          <Image
+          <Image unoptimized={true}
             width={1500}
             height={100 / (100 / 100)}
             src="/img/responsivewebdesign/responsive-design.jpg"
@@ -125,7 +141,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-md-8">
-              <h1 className="main--title">Responsive Web Design Company</h1>
+              <h1 className="main--title" style={{fontSize : "36px"}}>Responsive Web Design Company</h1>
               <p>
                 Responsive Web Design Services tunes the layout in a way that
                 all the relevant information and graphics are in direct view. It
@@ -161,7 +177,7 @@ const Page = () => {
                 the service is ended. You can always troubleshoot the
                 performance via our customer care and support maintenance staff.
                 Our web developers have made it easier to migrate through
-                different devices with the help of
+                different devices with the help of{" "}
                 <b>Mobile Responsive Design and Mobile Responsive Websites</b>.
                 These websites improvise and revamp themselves according to the
                 device whether it be an iPhone&sbquo; iPad or an Android running
@@ -337,7 +353,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/responsivewebdesign/lara_icon5.png"
@@ -349,7 +365,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/responsivewebdesign/lara_icon1.png"
@@ -362,7 +378,7 @@ const Page = () => {
 
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/responsivewebdesign/lara_icon2.png"
@@ -377,7 +393,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/responsivewebdesign/lara_icon4.png"
@@ -389,7 +405,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/responsivewebdesign/lara_icon3.png"
@@ -403,7 +419,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/responsivewebdesign/lara_icon6.png"
@@ -477,6 +493,24 @@ const Page = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image unoptimized={true}
+              width={100}
+              height={100}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </Link>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </section>
 

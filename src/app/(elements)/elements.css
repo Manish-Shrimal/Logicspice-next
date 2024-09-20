@@ -354,6 +354,7 @@ sites_maps,
 .page-contact-new {
 	padding: 50px 0;
 	background: url("/img/images/contact-bg.png") no-repeat scroll center top / cover;
+	margin-top: 100px;
 }
 
 .page-contact-new h1 {
@@ -395,6 +396,9 @@ sites_maps,
 .contact-top-bg .form-group span.textarea-field {
 	height: 138px;
 	line-height: 138px
+}
+.contact-top-bg .form-group span.textarea-field {
+    line-height: 34px;
 }
 
 .gest-contact-bx {
@@ -1514,4 +1518,12 @@ label.error {
     vertical-align: top;
     width: 47px;
 	content: "";
+}
+
+.contact-top-bg {
+    width: 92%;
+    padding: 30px;
+    background: #fff;
+    margin: 30px 4% 0;
+    float: left;
 }

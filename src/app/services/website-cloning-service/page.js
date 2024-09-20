@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
+import  "bootstrap/dist/css/bootstrap.min.css"
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -49,7 +50,8 @@ const Page = () => {
 
   return (
     <>
-      <NavBar />
+   
+    <NavBar />
       <section className="yellow_slider web-cloning_slider">
         <div className="container">
           <div className="row">
@@ -101,7 +103,7 @@ const Page = () => {
             </div>
             <div className="col-md-6">
               <div className="images-section">
-                <Image
+                <Image unoptimized={true}
                   width={500}
                   height={100 / (100 / 100)}
                   src="/img/websitecloningservice/website-cloning-service.png"
@@ -125,7 +127,7 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={80}
                       height={100}
                       src="/img/websitecloningservice/customized-imgs.png"
@@ -142,7 +144,7 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={80}
                       height={100}
                       src="/img/websitecloningservice/engaging-imgs.png"
@@ -159,7 +161,7 @@ const Page = () => {
               >
                 <a>
                   <i>
-                    <Image
+                    <Image unoptimized={true}
                       width={80}
                       height={100}
                       src="/img/websitecloningservice/adaptive-imgs.png"
@@ -262,7 +264,7 @@ const Page = () => {
             <div className="col-md-6"></div>
           </div>
           <div className="img_saaa">
-            <Image
+            <Image unoptimized={true}
               width={1075}
               height={100 / (100 / 100)}
               src="/img/saassoftwaredevelopment/saaa_img.png"
@@ -293,7 +295,7 @@ const Page = () => {
             >
               <div className="new_libraries">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/websitecloningservice/responsiveness-imgs.png"
@@ -317,7 +319,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/websitecloningservice/seo-friendly-imgs.png"
@@ -341,7 +343,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/websitecloningservice/documentation-imgs.png"
@@ -364,7 +366,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/websitecloningservice/support-imgs.png"
@@ -409,7 +411,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"
@@ -423,6 +425,8 @@ const Page = () => {
       </section>
 
       <Footer />
+   
+      
     </>
   );
 };

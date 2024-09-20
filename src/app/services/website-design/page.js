@@ -131,7 +131,7 @@ const Page = () => {
 
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
-          <Image
+          <Image unoptimized={true}
             width={1000}
             height={100 / (500 / 500)}
             src="/img/websitedesign/web-designing-service.jpg"
@@ -142,7 +142,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-md-8">
-              <h1 className="main--title">Website Design Services</h1>
+              <h1 className="main--title" style={{fontSize: "36px"}}>Website Design Services</h1>
               <p>
                 Web Design Company caters to enterprises and managements with
                 cost effective and professional personalized web designing
@@ -356,7 +356,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon1.png"
@@ -371,7 +371,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon6.png"
@@ -386,7 +386,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon5.png"
@@ -402,7 +402,7 @@ const Page = () => {
 
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon4.png"
@@ -417,7 +417,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon3.png"
@@ -432,7 +432,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/websitedesign/lara_icon2.png"
@@ -541,7 +541,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"

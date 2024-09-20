@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import "../../resposive.css";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -60,8 +61,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-
-      <section className="country_head">
+<div className="supportMaintainence"><section className="country_head">
         <div className="container">
           <h1>Support &amp; Maintenance</h1>
           <p>
@@ -115,7 +115,7 @@ const Page = () => {
                     texttransform: "capitalize",
                   }}
                 >
-                  mobile app developers
+                  {" "}Mobile App Developers{" "}
                 </Link>
                 and web programmers, we at Logicspice offer comprehensive
                 software support services to meet company requirements. We
@@ -127,7 +127,7 @@ const Page = () => {
             <div className="col-sm-5 text-right hidden-xs">
               <Image unoptimized={true}
                 width={400}
-                height={100}
+                height={500 / (100 / 100)}
                 src="/img/softwaremaintenancesupport/support.png"
                 alt="Support &amp; Maintainence"
               />
@@ -402,7 +402,7 @@ const Page = () => {
             </div>
             <div className="col-md-4 col-sm-6">
               <div className="part-set">
-                <i className="fa fa-money"></i>
+                <i className="fa fa-money-bill"></i>
                 <p>Reduction in TCO (Total cost of ownership )</p>
               </div>
             </div>
@@ -479,7 +479,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </section>
+      </section></div>
+      
       <Footer />
     </>
   );

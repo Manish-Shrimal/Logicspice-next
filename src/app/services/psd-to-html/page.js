@@ -33,8 +33,8 @@ const Page = () => {
       <section className="slider_img shopifyslider_img">
         <div className="container">
           <div className="slider_inner_img">
-            <Image
-              width={800}
+            <Image unoptimized={true}
+              width={1000}
               height={500 / (100 / 100)}
               alt="PSD to HTML Conversion Services"
               src="/img/psdtowordpress/psd-to-html.png"
@@ -52,7 +52,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     alt="convert PSD to Wordpress"
@@ -65,7 +65,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -80,7 +80,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -96,7 +96,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -168,7 +168,7 @@ const Page = () => {
       <section className="wordpress_to_psd">
         <div className="container">
           <div className="title-sec">
-            <h2>
+            <h2 style={{fontWeight : "normal"}}>
               Why we are best when it comes to <span>PSD to HTML</span>{" "}
               conversions?
             </h2>
@@ -182,7 +182,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -201,7 +201,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -218,7 +218,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -237,7 +237,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -256,7 +256,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -273,7 +273,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -292,7 +292,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -311,7 +311,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -329,7 +329,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -346,7 +346,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -363,7 +363,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -380,7 +380,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -397,7 +397,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -417,7 +417,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -434,7 +434,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Shopify Conversion Services"
@@ -621,7 +621,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

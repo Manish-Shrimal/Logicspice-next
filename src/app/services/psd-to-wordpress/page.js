@@ -29,12 +29,13 @@ const Page = () => {
 
   return (
     <>
+    
       <NavBar />
       <section className="slider_img">
         <div className="container">
           <div className="slider_inner_img">
-            <Image
-              width={800}
+            <Image unoptimized={true}
+              width={1000}
               height={500 / (100 / 100)}
               alt="PSD to Wordpress Conversion Services"
               src="/img/psdtowordpress/img_psdto_wordpress.png"
@@ -49,7 +50,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={100}
                     height={100}
                     alt="convert PSD to Wordpress"
@@ -62,7 +63,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -77,7 +78,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -93,7 +94,7 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="adeptness_mid_block_inner">
                 <div className="adeptness_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -173,7 +174,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -192,7 +193,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -211,7 +212,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -230,7 +231,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -248,7 +249,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -265,7 +266,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -282,7 +283,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -299,7 +300,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -316,7 +317,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -333,7 +334,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -350,7 +351,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -367,7 +368,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -384,7 +385,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -400,7 +401,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -416,7 +417,7 @@ const Page = () => {
             <div className="col-md-4 col-sm-6">
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
-                  <Image
+                  <Image unoptimized={true}
                     width={60}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
@@ -574,6 +575,7 @@ const Page = () => {
 
       <section className="testimonial-hire">
         <div className="container">
+        <h2 class="title_setof_nav">Why our <span>clients love</span> us?</h2>
           <div>
             <Ourclient />
           </div>
@@ -603,7 +605,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

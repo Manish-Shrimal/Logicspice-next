@@ -1092,6 +1092,34 @@
     .blog-home {
        overflow: hidden;
     }
+    #laravel-slader .slick-slide {
+        transform: scale(1);
+        transition: all 0.4s ease-in-out;
+        padding: 0 30px;
+    }
+    #laravel-slader .slick-slide.slick-current img {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+    #laravel-slader .slick-prev {
+        left: 40%;
+        top: auto;
+        bottom: -40px;
+    }
+    #laravel-slader .slick-next {
+        right: 40%;
+        top: auto;
+        bottom: -40px;
+    }
+    .php-development .laravel_core_features_detail {
+        float: right;
+        width: 100%;
+        padding: 66px 20px 20px;
+    }
+    .mega-menu .navbar-toggler {
+        box-shadow: none;
+    }
     }
     @media(max-width: 480px){
     .certificates .nav-tabs > li { margin-bottom: 0px; width: auto;}

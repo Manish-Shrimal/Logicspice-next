@@ -13,6 +13,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+
+
 const Page = () => {
   var settings = {
     dots: false,
@@ -30,6 +43,18 @@ const Page = () => {
 
     setShowModal(!showModal);
   };
+  const [expanded, setExpanded] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
+
+  const toggleActiveItem = (collapseId) => {
+    setActiveItem((prevActiveItem) =>
+      prevActiveItem === collapseId ? null : collapseId
+    );
+  };
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -37,7 +62,8 @@ const Page = () => {
 
   return (
     <>
-      <NavBar />
+    <div className="web_hosting">
+    <NavBar />
       <section className="laravel-banner cackphp-banner web-hosting-banner">
         <div className="container">
           <div className="row">
@@ -606,16 +632,42 @@ const Page = () => {
       <section className="ecommerce_faq_section JobBoardFaqSection">
         <div className="container">
           <div className="row">
-            <div className=" row ">
+            <div className=" row ecommerce__Quick_FAQ ">
               <div className="col-md-12 ecommerce__Quick_FAQ">
                 <h4 className="title_main">Quick FAQ</h4>
                 <div className="panel-group faq_quick_sec" id="accordion">
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
-                    headerTitle="01. What is web hosting ?"
+                  
+                    // headerTitle="01. What is web hosting ?"
+                  
+                    // collapseId="flush-collapse1"
+                    //  data-aos="fade-up"
+                    //  onClick={() => toggleActiveItem("flush-collapse1")}
                     collapseId="flush-collapse1"
-                     data-aos="fade-up"
+                    data-aos="fade-up"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse1")}
+                      >
+                        <span>
+                        01. What is web hosting ?
+                        </span>
+                        {activeItem === "flush-collapse1" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          < KeyboardArrowRightIcon/>
+                        )}
+                        </div>
+                    }
+                     
                   >
+                    
                     <p>
                       Hosting refers to providing a location on a web server for
                       storing a website&apos;s files. Hosting a website makes
@@ -626,9 +678,30 @@ const Page = () => {
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="02. What are the different types of Web Hosting Services?"
+                    // headerTitle="02. What are the different types of Web Hosting Services?"
+                    // collapseId="flush-collapse2"
+                    //  data-aos="fade-up"
                     collapseId="flush-collapse2"
-                     data-aos="fade-up"
+                    data-aos="fade-up"
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse2")}
+                      >
+                        <span>
+                        02. What are the different types of Web Hosting Services?
+                        </span>
+                        {activeItem === "flush-collapse2" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          < KeyboardArrowRightIcon/>
+                        )}
+                        </div>
+                    }
                   >
                     <p>
                       Logicspice offers different types of hosting and provides
@@ -646,9 +719,29 @@ const Page = () => {
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="03. What is the difference between web hosting services and domains?"
+                    // headerTitle="03. What is the difference between web hosting services and domains?"
                     collapseId="flush-collapse3"
                      data-aos="fade-up"
+                  
+                    headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse3")}
+                      >
+                        <span>
+                        03. What is the difference between web hosting services and domains?
+                        </span>
+                        {activeItem === "flush-collapse3" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          < KeyboardArrowRightIcon/>
+                        )}
+                        </div>
+                    }
                   >
                     <p>
                       When you type a website address into your browser&sbquo;
@@ -671,9 +764,28 @@ const Page = () => {
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="04. How does a web hosting service work?"
+                    // headerTitle="04. How does a web hosting service work?"
                     collapseId="flush-collapse4"
                      data-aos="fade-up"
+                     headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse4")}
+                      >
+                        <span>
+                        04. How does a web hosting service work?
+                        </span>
+                        {activeItem === "flush-collapse4" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          < KeyboardArrowRightIcon/>
+                        )}
+                        </div>
+                    }
                   >
                     <p>
                       Users&apos; impressions of your website are the result of
@@ -692,9 +804,28 @@ const Page = () => {
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="05. Why do I need a website host?"
+                    // headerTitle="05. Why do I need a website host?"
                     collapseId="flush-collapse5"
                      data-aos="fade-up"
+                     headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse5")}
+                      >
+                        <span>
+                        05. Why do I need a website host?
+                        </span>
+                        {activeItem === "flush-collapse5" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          < KeyboardArrowRightIcon/>
+                        )}
+                        </div>
+                    }
                   >
                     <p>
                       Your website cannot go live and become accessible to the
@@ -709,9 +840,28 @@ const Page = () => {
                   </MDBAccordionItem>
 
                   <MDBAccordionItem
-                    headerTitle="06. Can I purchase hosting without a domain name?"
+                    // headerTitle="06. Can I purchase hosting without a domain name?"
                     collapseId="flush-collapse6"
                      data-aos="fade-up"
+                     headerTitle={
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => toggleActiveItem("flush-collapse6")}
+                      >
+                        <span>
+                        06. Can I purchase hosting without a domain name?
+                        </span>
+                        {activeItem === "flush-collapse6" ? (
+                          <KeyboardArrowDownIcon />
+                        ) : (
+                          < KeyboardArrowRightIcon/>
+                        )}
+                        </div>
+                    }
                   >
                     <p>
                       The answer is yes. You can purchase domain names from a
@@ -726,9 +876,14 @@ const Page = () => {
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
-                </div>
-                
+                <div>
+      
               </div>
+               
+              
+              </div>
+                
+             </div>
             </div>
           </div>
         </div>
@@ -766,6 +921,8 @@ const Page = () => {
       </div>
 
       <Footer />
+    </div>
+     
     </>
   );
 };

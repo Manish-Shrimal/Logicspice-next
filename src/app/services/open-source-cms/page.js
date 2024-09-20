@@ -155,7 +155,7 @@ const Page = () => {
       <NavBar />
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
-          <Image
+          <Image unoptimized={true}
             width={1500}
             height={500 / (100 / 100)}
             src="/img/opensourcecms/opnecart-development-service.jpg"
@@ -166,7 +166,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-md-8">
-              <h1 className="main--title">
+              <h1 className="main--title" style={{fontSize: "36px"}}>
                 Open Source CMS Development Services
               </h1>
               <p>
@@ -535,7 +535,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/opensourcecms/lara_icon4.png"
@@ -551,7 +551,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/opensourcecms/lara_icon6.png"
@@ -566,7 +566,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/opensourcecms/lara_icon5.png"
@@ -581,7 +581,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/opensourcecms/lara_icon3.png"
@@ -597,7 +597,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/opensourcecms/lara_icon1.png"
@@ -613,7 +613,7 @@ const Page = () => {
             </div>
             <div className="col-sm-6 col-md-4">
               <div className="featureBox">
-                <Image
+                <Image unoptimized={true}
                   width={100}
                   height={100}
                   src="/img/opensourcecms/lara_icon2.png"

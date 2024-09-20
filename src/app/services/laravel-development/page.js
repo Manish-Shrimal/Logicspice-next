@@ -17,10 +17,28 @@ const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 2.25,
+    slidesToShow: 2.35,
     centerMode: true,
     vertical: false,
     autoplay: true,
+    arrows: true,
+    centerPadding: "0",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   var clientfeadback = {
     dots: false,
@@ -198,7 +216,22 @@ const Page = () => {
                 <h3>
                   Advantages of Laravel for Your Custom Web Development Needs
                 </h3>
-
+                <p>
+                  Our Laravel web development services focus on customization,
+                  allowing us to create unique products with a wide range of
+                  features tailored to your specific needs. As a modern and {""}
+                  <strong>robust PHP framework</strong>, Using Laravel reduces
+                  the need to rewrite code, making the process of {""}{" "}
+                  <Link href="/services/web-development">
+                    {" "}
+                    web development{" "}
+                  </Link>{" "}
+                  {""}
+                  much faster and more efficient. Our expert Laravel developers,
+                  equipped with comprehensive knowledge of the framework, are
+                  ready to transform your bespoke software requirements into
+                  reality.
+                </p>
                 <p>
                   At the heart of our Laravel custom web development agency lies
                   the mastery of the{" "}
@@ -212,25 +245,8 @@ const Page = () => {
                   in a remarkably clean manner, enhancing readability and
                   comprehensibility.
                 </p>
-
-                <p>
-                  Customization takes center stage in our Laravel web
-                  development services, enabling the creation of distinctive
-                  products brimming with diverse functionalities. As a
-                  contemporary and <strong>robust PHP framework</strong>,
-                  Laravel minimizes the need for code rewriting, streamlining
-                  the
-                  <a href="#" target="_blank">
-                    web development
-                  </a>{" "}
-                  process significantly. Our expert Laravel developers, equipped
-                  with comprehensive knowledge of the framework, are ready to
-                  transform your bespoke software requirements into reality.
-                </p>
-
-                <h3>Why Entrust Your Web Development to Logicspice?</h3>
-
-                <p>
+                <h3>Why Choose LogicSpice for Your Web Development Needs?</h3>
+                {/* <p>
                   While in pursuit of top-tier Laravel developers, look no
                   further than Logicspice, your ultimate Laravel development
                   company. Our team comprises highly skilled professionals
@@ -241,34 +257,35 @@ const Page = () => {
                   their frameworks at expert level. We orchestrate{" "}
                   <strong>tailor-made solutions</strong> to address your unique
                   software development needs, assuring excellence at every step.
-                </p>
-
+                </p> */}
+                If you're looking for the best Laravel developers, look no
+                further than LogicSpice. We are a leading Laravel development
+                company with a team of highly skilled professionals who have
+                deep expertise in the Laravel framework. Also, our company
+                follows the latest practices and approaches of software
+                development and also uses lots of related technologies like
+                javascript and their frameworks at the expert level. We
+                specialize in providing Laravel development services, creating
+                custom solutions tailored to your unique software development
+                needs. Our team works closely with you to understand your
+                requirements and deliver excellence at every step of the
+                project.
                 <h3>
-                  Unveiling the Benefits of Our Laravel Web Development Agency
+                  Advantages of Working with Our Laravel Web Development Company
                 </h3>
-
                 <p>
-                  Are you on the hunt for a premier Laravel web application
-                  development company? Welcome to our esteemed{" "}
+                  Are you looking for a top-notch {""}
                   <a
                     className="LaravelBlog"
                     href="https://blog.logicspice.com/how-laravel-development-helps-startups-build-scalable-web-applications"
                   >
-                    Laravel development company
-                  </a>
-                  , where we excel in crafting unparalleled websites and
-                  applications to propel your business towards success.
+                    Laravel web development
+                  </a>{" "}
+                  {""}
+                  company? Welcome to LogicSpice, where we specialize in
+                  creating exceptional websites and applications that can take
+                  your business to new heights.
                 </p>
-
-                <p>
-                  Within the confines of our Laravel web design agency, we take
-                  immense pride in claiming our position among the top Laravel
-                  development companies across the USA, UK, and beyond. With a
-                  dynamic team of adept developers and designers, we deliver
-                  bespoke Laravel website development services designed
-                  exclusively for you.
-                </p>
-
                 <p>
                   Within our Laravel app development company, we boast
                   developers armed with extensive experience in crafting
@@ -277,7 +294,11 @@ const Page = () => {
                   construct <i>robust and scalable web applications</i> that
                   stand the test of time.
                 </p>
-
+                At LogicSpice, we're proud to be recognized as one of the
+                leading Laravel development companies in the USA, UK, and
+                beyond. Our dynamic team of skilled developers and designers is
+                dedicated to delivering custom Laravel website development
+                services tailored to your unique needs.
                 <p>
                   As a prominent London-based Laravel development agency, we
                   remain committed to staying at the forefront of innovation.
@@ -308,17 +329,17 @@ const Page = () => {
               <div className="ReadyMadeScriptBx">
                 <div className="ReadyMadeScriptImg">
                   <Image
-                    width={300}
+                    width={350}
                     height={500 / (100 / 100)}
                     className=""
                     src="/img/laraveldevelopment/job-board-product-img.png"
                     alt="Job Board Software"
-                    style={{display: 'inline-block'}}
+                    style={{ display: "inline-block" }}
                   />
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <a href="#">Job Board Software</a>
+                    <Link href="/softwares/job-board-software">Job Board Software</Link>
                   </h3>
                   <p>
                     Streamline your Business Hiring with our Job Board Software
@@ -331,17 +352,17 @@ const Page = () => {
               <div className="ReadyMadeScriptBx">
                 <div className="ReadyMadeScriptImg">
                   <Image
-                    width={300}
+                    width={350}
                     height={500 / (100 / 100)}
                     className=""
                     src="/img/laraveldevelopment/logisticsoftware-product-img.png"
                     alt="Logistic Software"
-                    style={{display: 'inline-block'}}
+                    style={{ display: "inline-block" }}
                   />
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <a href="#">Logistic Software</a>
+                    <Link href="/softwares/logistic-marketplace-software">Logistic Software</Link>
                   </h3>
                   <p>
                     Efficiently enhance your logistics operations smoothly using
@@ -354,17 +375,17 @@ const Page = () => {
               <div className="ReadyMadeScriptBx">
                 <div className="ReadyMadeScriptImg">
                   <Image
-                    width={300}
+                    width={350}
                     height={500 / (100 / 100)}
                     className=""
                     src="/img/laraveldevelopment/rms-product-img.png"
                     alt="Recruitment Management Software"
-                    style={{display: 'inline-block'}}
+                    style={{ display: "inline-block" }}
                   />
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <a href="#">Recruitment Management Software</a>
+                    <Link href="/softwares/recruitment-management-software">Recruitment Management Software</Link>
                   </h3>
                   <p>
                     Simplify your hiring process with our Recruitment Management
@@ -874,7 +895,10 @@ const Page = () => {
                 </Link>
               </div>
               <div className="php-item">
-                <Link href="https://iepwritingcollaborative.com/" target="_blank">
+                <Link
+                  href="https://iepwritingcollaborative.com/"
+                  target="_blank"
+                >
                   <Image
                     width={900}
                     height={500 / (100 / 100)}
@@ -1070,7 +1094,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-md-7">
-                <div className="ecommerce__Quick_FAQ">
+                <div className="ecommerce__Quick_FAQ CustomQuickFAQScript">
                   <MDBAccordion v-model="activeItem" borderless>
                     <MDBAccordionItem
                       headerTitle="What is Laravel, and why is it popular for web development?"
