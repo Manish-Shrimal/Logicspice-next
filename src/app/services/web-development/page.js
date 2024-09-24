@@ -15,8 +15,7 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 // import "../../@public/css/font-awesome.css";
 // import "@/public/css/font-awesome.css"
 // import "../public/css/font-awesome.min.css";
-import "../../../../public/css/font-awesome.min.css";
-import "../../../../public/css/font-awesome.css";
+
 
 import "../../resposive.css";
 
