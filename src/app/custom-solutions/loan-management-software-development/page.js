@@ -11,6 +11,8 @@ import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import { Accordion, Card, Button } from "react-bootstrap";
+import { Collapse } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Support from "@/app/Components/Support";
 import {
@@ -23,6 +25,52 @@ import {
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "Why does the borrower needs to create a loan application?",
+      content:
+        "The borrower needs to create the loan application so that the application can be checked by admin to make sure the borrower is eligible for loan he is asking for.",
+    },
+    {
+      key: "collapseTwo",
+      title: "How many days will it take to implement the customization?",
+      content:
+        "Time taken to implement your Loan System depends on the level of customization and data migration. The time frame generally ranges 5-6 weeks.",
+    },
+    {
+      key: "collapseThree",
+      title: "How can I earn if I custom this system for my business?",
+      content:
+        "You can take a fixed fees from borrower to list their application on site or you can take a percentage fees based on the amount the borrower wants to borrow.",
+    },
+    {
+      key: "collapseFour",
+      title: "Why should I being a borrower share my bank's credentials?",
+      content:
+        "As some people may feel that using this service may be in violation of the Terms and Conditions of some banks against revealing their username like information but we don't share or keep your bank information.",
+    },
+    {
+      key: "collapseFive",
+      title: "Can I be both Borrower and Lender?",
+      content:
+        "No. At this time, you can be either Lender or Borrower.",
+    },
+    {
+      key: "collapseSix",
+      title:
+        "What are the minimum and maximum amounts I can lend?",
+      content:
+        "You can lend from $100 up to $100,000 on the website.",
+    },
+   
+  ];
 
   const openModal = () => {
     console.log(showModal);
@@ -720,7 +768,7 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
             <div className="row">
                 <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -835,7 +883,62 @@ const Page = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
+     <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
  
       <section className="enq-section">
         <div className="container">

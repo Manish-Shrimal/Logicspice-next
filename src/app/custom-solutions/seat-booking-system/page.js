@@ -11,6 +11,8 @@ import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import { Accordion, Card, Button } from "react-bootstrap";
+import { Collapse } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Support from "@/app/Components/Support";
 import {
@@ -23,9 +25,59 @@ import {
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How can customers search for Buses?",
+      content:
+        "Customers can search for the buses by entering the source and destination along with the date of journey. Customer can also choose the type of bus that they wish to travel in.",
+    },
+    {
+      key: "collapseTwo",
+      title: "How will the customer receive the booked ticket?",
+      content:
+        "Once a customer books tickets, they can receive the tickets by email from where they can print them.",
+    },
+    {
+      key: "collapseThree",
+      title: "Can a customer cancel a ticket that is already booked?",
+      content:
+        "Yes. The customer can cancel the tickets of the bus but he should cancel before an hour of the time of departure of bus.",
+    },
+    {
+      key: "collapseFour",
+      title: "Will a Customer get a refund if he has missed the Bus?",
+      content:
+        "No if the Customer misses his bus he would not be eligible for any refund.",
+    },
+    {
+      key: "collapseFive",
+      title: "How can a Customer get refund of the cancelled tickets?",
+      content:
+        "Once the customer has cancelled a ticket, they can get refunds in 3-4 working days. Customers can check the refund status on the app.",
+    },
+    {
+      key: "collapseSix",
+      title:
+        "Can a Customer view a list of tickets that he has booked in the past?",
+      content:
+        "Customers can view their past booked tickets in the booking history section.",
+    },
+    {
+      key: "collapseSeven",
+      title: "Does a Customer needs to get registered to book the tickets?",
+      content: "No the Customer needs to get registered to book the tickets.",
+    },
+  ];
 
   const openModal = () => {
-    console.log(showModal);
+   
 
     setShowModal(!showModal);
   };
@@ -535,7 +587,11 @@ const Page = () => {
               </ul>
 
               <div className="tab-content">
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   {/* <div className="row">
                     <div className="col-sm-3">
                       <div className="ftr-detail">
@@ -759,124 +815,63 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+
+      <section className="faq_logic faq_logic_marketplace">
         <div className="container">
-            <div className="row">
-                <div className="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 className="title_main">Quick FAQ</h4>
-                    
-                    <MDBAccordion v-model="activeItem" borderless>
-              <MDBAccordionItem
-                headerTitle="How can a customer search for businesses around his location?"
-                collapseId="flush-collapse1"
-              >
-                <p>
-                  A Customer can enter his zip/postal code on the website and
-                  all the businesses that are around will be listed to the
-                  customer.
-                </p>
-              </MDBAccordionItem>
+          <div className="row">
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
 
-              <MDBAccordionItem
-                headerTitle="Can the customer give rating to a business even if he hasn't visited the store?"
-                collapseId="flush-collapse2"
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
               >
-                <p>
-                  Yes, customer can give rating out of 5 even if they
-                  haven&apos;t visited the store. Customer can also write a
-                  review along with the rating.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can a business owner upload multiple services to the website?"
-                collapseId="flush-collapse3"
-              >
-                <p>
-                  Yes, the business owner can upload multiple services/products
-                  that he deals in.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="How can a customer ensure the authenticity of the information of different businesses?"
-                collapseId="flush-collapse4"
-              >
-                <p>
-                  Whenever a business owner creates a page for his business, it
-                  has to be approved by the admin.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can a user view the contact information of the seller?"
-                collapseId="flush-collapse5"
-              >
-                <p>
-                  Yes. If a seller chooses to share his contact information on
-                  the website, the customer can see it.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can I update some design and functionality in the application code myself?"
-                collapseId="flush-collapse6"
-              >
-                <p>Yes, You will have access to all the code.</p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Will I be able to use it on multiple domains, after I purchase this software?"
-                collapseId="flush-collapse7"
-              >
-                <p>
-                  You will be licensed to use it only for the domain, you
-                  purchased for.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can I resell the software? Will I have rights over the software code?"
-                collapseId="flush-collapse8"
-              >
-                <p>
-                  No, You can&apos;t resell the software. All rights will remain
-                  with Logicspice only.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Do you offer Money Back Guarantee?"
-                collapseId="flush-collapse9"
-              >
-                <p>
-                  Yes, we offer 30 days money-back guarantee to ensure customer
-                  satisfaction with our software. If for any reason, you wish to
-                  discontinue using the product, you can ask us for a refund. We
-                  will refund your total money except the installation and
-                  configuration charges, which is USD 65 or 20% of the
-                  application cost, whichever is greater.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Along with hosting server details, what other recommendations?"
-                collapseId="flush-collapse10"
-              >
-                <p>
-                  We recommend you purchase an SSL certificate along with a
-                  hosting server, considering that an SSL certificate is
-                  necessary for all websites these days and it provides a secure
-                  layer to the website as well.
-                </p>
-              </MDBAccordionItem>
-            </MDBAccordion>
-                    
-                </div>
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-  
+      </section>
+
       <section className="enq-section">
         <div className="container">
           <div className="row">

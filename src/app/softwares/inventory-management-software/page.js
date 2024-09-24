@@ -323,7 +323,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="JobBoardNewtab">
+              <ul className="">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${

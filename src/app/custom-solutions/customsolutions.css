@@ -31,7 +31,7 @@ body {
 
 .head-enquiry h1 {
   color: #fff;
-  font-weight: 900!important;
+  font-weight: 700!important;
   font-size: 39px;
   padding-bottom: 10px;
 }
@@ -1013,7 +1013,8 @@ h3.titlesettop {
 	background: url(/img/customsolutionspage/Vehicle-tracking.jpg) top right no-repeat
 }
 .Restaurant-Table-Booking.top-head-custom {
-	background: url(/img/customsolutionspage/restaurant-table-booking-banner.jpg) top right no-repeat
+	background: url(/img/customsolutionspage/restaurant-table-booking-banner.jpg) top right no-repeat;
+	
 }
 
 .UserManagementSystemSection {
@@ -2128,7 +2129,7 @@ h3.titlesettop {
 .E-commerceDevelopmentBanner .JewelleryBtbBx .btn.btn-primary {
 	background: #6a3faa !important;
 	border-color: #6a3faa !important;
-	border-radius: 10px;
+	border-radius: 10px!important;
 	color: #fff;
 }
 .sr-our-expertise {
@@ -2470,7 +2471,7 @@ h3.titlesettop {
 	color: #232323;
 	margin-top: 25px;
 	margin-bottom: 10px;
-	font-weight: 700;
+	font-weight: 700!important;
 	font-family: 'roboto', sans-serif;
 }
 .BuildYourJewellery p {
@@ -3045,3 +3046,98 @@ h3.titlesettop {
 	text-align: center!important;
 	margin-bottom: 20px!important;
 }
+
+.faq_logic_marketplace {
+	padding: 20px;
+	background-color: #f9f9f9;
+  }
+  
+  .panel-title a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-decoration: none;
+	
+	font-size: 19px!important;
+	color: #000!important;
+  }
+  
+  .panel-title a.collapsed {
+	color: #666;
+  }
+  
+  .panel-title i {
+	margin-right: 10px;
+	font-size: 18px;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .panel-title a[aria-expanded="true"] i {
+	transform: rotate(180deg); /* For toggling the + to - */
+  }
+  
+  .panel-body {
+	padding: 15px;
+	background-color: #fff;
+	border-top: 1px solid #ddd;
+  }
+  
+  .panel-heading {
+	padding: 10px 15px;
+	/* background-color: #e8e8e8; */
+	background-color: #fafafa;
+	/* border: 1px solid #ddd; */
+	border-radius: 4px;
+  }
+  
+  .panel-default {
+	margin-bottom: 10px;
+	border-color: #EEE;
+  }
+  
+  .panel-default > .panel-heading {
+	cursor: pointer;
+  }
+  
+  .glyphicon-plus:before {
+	content: "\002b";
+  }
+  
+  .glyphicon-minus:before {
+	content: "\2212";
+  }
+
+
+  .faq_logic .more-less.glyphicon.glyphicon-plus {
+    color: #000;
+    font-size: xx-large!important;
+	font-weight: 900!important;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.faq_logic .more-less.glyphicon.glyphicon-minus{
+	color: #ff7f00!important;
+    font-size: xx-large!important;
+	font-weight: 900!important;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+  
+  

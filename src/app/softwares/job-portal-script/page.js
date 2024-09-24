@@ -3547,7 +3547,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={250}
+                            width={244}
                             height={100}
                             src="/img/jobboard/udemy_new.png"
                             alt="Udemy Clone"
@@ -3610,7 +3610,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={250}
+                            width={180}
                             height={100}
                             src="/img/jobboard/gigger_logo_new.png"
                             alt="fiverr-clone"

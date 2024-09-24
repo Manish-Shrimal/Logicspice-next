@@ -86,7 +86,7 @@ const Page = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-7">
+            <div className="col-xs-12 col-sm-6 col-md-8">
               <div className="laravel-banner-txt">
                 <h1>
                   <strong className="LaravelBannerHadding">Laravel</strong>{" "}
@@ -139,7 +139,7 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="page_img LaravelBannerImg">
                 <Image
-                  width={300}
+                  width={240}
                   height={500 / (100 / 100)}
                   src="/img/laraveldevelopment/laravel-new-icon.png"
                   alt="laravel web development"
@@ -197,17 +197,17 @@ const Page = () => {
       <section className="laravel-descriptions ">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
+            <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
               <div className="laravel_img">
                 <Image
-                  width={350}
+                  width={310}
                   height={500 / (100 / 100)}
                   src="/img/laraveldevelopment/laravel-logo-img.png"
                   alt="laravel web development"
                 />
               </div>
             </div>
-            <div className="col-sm-6 col-md-6 pull-left">
+            <div className="col-sm-6 col-md-7 pull-left">
               <div className="laravel-descriptions-bx">
                 <h2>
                   Laravel Custom
@@ -805,9 +805,9 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>Pre-Installed Libraries</h3>
                     <p>
-                      Laravel has a lot of object oriented libraries already
-                      installed. Some libraries like authentication are quite
-                      useful in maintaining the web application secure.
+                      Laravel has a lot of object oriented libraries<br/> already
+                      installed. Some libraries like<br/> authentication are quite
+                      useful in maintaining the<br/> web application secure.
                     </p>
                   </div>
                 </div>
@@ -848,9 +848,9 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>MVC Architecture Support</h3>
                     <p>
-                      Alike other PHP frameworks, Laravel follows{" "}
-                      <b>MVC structure</b> as well. This architecture provides
-                      quick functioning and is suitable for large codes.
+                      Alike other PHP frameworks, Laravel follows<br/>
+                      <b>MVC structure</b> as well. This architecture <br/>provides
+                      quick functioning and is suitable<br/> for large codes.
                     </p>
                   </div>
                 </div>

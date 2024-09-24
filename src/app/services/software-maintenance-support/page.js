@@ -126,7 +126,7 @@ const Page = () => {
             </div>
             <div className="col-sm-5 text-right hidden-xs">
               <Image unoptimized={true}
-                width={400}
+                width={395}
                 height={500 / (100 / 100)}
                 src="/img/softwaremaintenancesupport/support.png"
                 alt="Support &amp; Maintainence"

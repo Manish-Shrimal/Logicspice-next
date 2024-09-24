@@ -18,10 +18,16 @@ import { Accordion, Card, Button } from "react-bootstrap";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 
 const Page = () => {
+  const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
+  };
+  const openModal = () => {
+   
+
+    setShowModal(!showModal);
   };
   return (
     <>
@@ -459,7 +465,7 @@ const Page = () => {
       <section className="eCommerceCustomSolutionSection" id="features">
         <div className="container">
           <h2 className="CustomSolutionHadding">
-            E-Commerce Custom Development Features
+          Custom Ecommerce Development Features
           </h2>
           <div className="eCommerceCustomFeatures">
             <div className="row">
@@ -593,7 +599,7 @@ const Page = () => {
       <div className="app_solution eCommerceAppSolution">
         <div className="container">
           <h2 className="CustomSolutionHadding">
-            E-Commerce Portal Custom Development Solution
+          Custom Ecommerce Portal Development Solution
           </h2>
           <div className="EcommerceJewellerySolutionBx">
             <div className="row">
@@ -943,13 +949,16 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-              <a
-                id=""
-                className="btn btn-primary"
-                onClick={() => openEnquiryModal()}
-              >
-                Enquire Now
-              </a>
+            <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Custom E-Commerce Development"
+                  />
+                }
+              </div>
             </div>
           </div>
         </div>

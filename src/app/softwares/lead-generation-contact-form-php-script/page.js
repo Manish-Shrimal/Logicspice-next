@@ -30,6 +30,10 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {
+  const [textColor, setTextColor] = useState("#222222");
+  const [bgColor, setBgColor] = useState("#ffffff");
+  const [formTitleBgColor, setFormTitleBgColor] = useState("#dedede");
+  const [buttonColor, setButtonColor] = useState("#074376");
   const [modalOpen, setModalOpen] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,6 +41,13 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedField, setSelectedField] = useState("");
   const [choices, setChoices] = useState([""]);
+  const [formDescription, setFormDescription] = useState('');
+  const [formTitle, setFormTitle] = useState('Untitled Form'); // Initial value
+
+  const handleInputChange = (e) => {
+    setFormDescription(e.target.value);
+    setFormTitle(e.target.value);
+  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -81,28 +92,28 @@ const Page = () => {
   };
   const addnewchoice = () => {
     setChoices([...choices, ""]);
-  }
+  };
   const FullName = () => {
     setSelectedField("FullName");
-  }
+  };
 
   const removeChoice = (index) => {
     setChoices(choices.filter((_, i) => i !== index));
     // setChoices("false");
   };
-  const emailAddress = () =>{
+  const emailAddress = () => {
     setSelectedField("EmailAddress");
-  }
+  };
   const contact = () => {
     setSelectedField("Contact");
-  }
+  };
   const comment = () => {
     setSelectedField("Comment");
-  }
-
-  const handleInputChange = (event) => {
-    setChoices(event.target.value); // Update state with the current input value
   };
+
+  // const handleInputChange = (event) => {
+  //   setChoices(event.target.value); // Update state with the current input value
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -854,8 +865,9 @@ const Page = () => {
                                         type="text"
                                         name="formtitle"
                                         id="formtitle"
-                                        value="Untitled Form"
-                                        maxlength="50"
+                                        value={formTitle} // Controlled value
+                                        onChange={handleInputChange} // Handle input change
+                                        maxLength="50"
                                       />
                                     </div>
                                   </div>
@@ -866,8 +878,10 @@ const Page = () => {
                                         type="text"
                                         name="formdescription"
                                         id="formdescription"
-                                        value="This is my form, please fill it."
-                                        maxlength="100"
+                                        value={formDescription} // Controlled input
+                                        onChange={handleInputChange} // Update state on change
+                                        placeholder="This is my Form, Please Fill"
+                                        maxLength="100"
                                       />
                                     </div>
                                   </div>
@@ -878,7 +892,10 @@ const Page = () => {
                                         type="color"
                                         name="formtextcolor"
                                         id="formtextcolor"
-                                        value="#222222"
+                                        value={textColor}
+                                        onChange={(e) =>
+                                          setTextColor(e.target.value)
+                                        }
                                       />
                                     </div>
                                   </div>
@@ -887,9 +904,12 @@ const Page = () => {
                                     <div class="af_ra">
                                       <input
                                         type="color"
-                                        name="formgbcolor"
+                                        name="formbgcolor"
                                         id="formbgcolor"
-                                        value="#ffffff"
+                                        value={bgColor}
+                                        onChange={(e) =>
+                                          setBgColor(e.target.value)
+                                        }
                                       />
                                     </div>
                                   </div>
@@ -902,7 +922,10 @@ const Page = () => {
                                         type="color"
                                         name="formgbtitlecolor"
                                         id="formbgtitlecolor"
-                                        value="#dedede"
+                                        value={formTitleBgColor}
+                                        onChange={(e) =>
+                                          setFormTitleBgColor(e.target.value)
+                                        }
                                       />
                                     </div>
                                   </div>
@@ -913,10 +936,14 @@ const Page = () => {
                                         type="color"
                                         name="formbtncolor"
                                         id="formbtncolor"
-                                        value="#074376"
+                                        value={buttonColor}
+                                        onChange={(e) =>
+                                          setButtonColor(e.target.value)
+                                        }
                                       />
                                     </div>
                                   </div>
+
                                   <div class="af_r">
                                     <div class="af_la">&nbsp;</div>
                                     <div class="af_ra">
@@ -961,98 +988,98 @@ const Page = () => {
                             )}
                             {selectedField === "FullName" && (
                               <div>
-                              <div class="add_field">
-                                <div class="af_r">
-                                  <div class="af_la">Field Label</div>
-                                  <div class="af_ra">
-                                    <input
-                                      type="text"
-                                      name="textname"
-                                      id="textbox"
-                                    />
-                                  </div>
-                                </div>
-                                <div class="af_r">
-                                  <div class="af_la">Validation</div>
-                                  <div class="af_ra">
-                                    <div class="lf_va">
-                                      <input
-                                        type="checkbox"
-                                        name="validation[]"
-                                        value="required"
-                                        id="textrequired"
-                                      />{" "}
-                                      <span>Required</span>
-                                    </div>
-                                    <div class="lf_va">
-                                      <input
-                                        type="checkbox"
-                                        name="validation[]"
-                                        value="email"
-                                        id="textemail"
-                                        onclick="textemail()"
-                                      />{" "}
-                                      <span>Email</span>
-                                    </div>
-                                    <div class="lf_va">
-                                      <input
-                                        type="checkbox"
-                                        name="validation[]"
-                                        value="number"
-                                        id="textnumber"
-                                        onclick="textnumber()"
-                                      />{" "}
-                                      <span>Number</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="af_r">
-                                  <div class="af_la">Range</div>
-                                  <div class="af_ra">
-                                    <div class="lf_va_rng">
+                                <div class="add_field">
+                                  <div class="af_r">
+                                    <div class="af_la">Field Label</div>
+                                    <div class="af_ra">
                                       <input
                                         type="text"
-                                        name="minlength"
-                                        value="0"
-                                        id="minlength"
-                                      />{" "}
-                                      <span>Minimum Character</span>
+                                        name="textname"
+                                        id="textbox"
+                                      />
                                     </div>
-                                    <div class="lf_va_rng">
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Validation</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="required"
+                                          id="textrequired"
+                                        />{" "}
+                                        <span>Required</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="email"
+                                          id="textemail"
+                                          onclick="textemail()"
+                                        />{" "}
+                                        <span>Email</span>
+                                      </div>
+                                      <div class="lf_va">
+                                        <input
+                                          type="checkbox"
+                                          name="validation[]"
+                                          value="number"
+                                          id="textnumber"
+                                          onclick="textnumber()"
+                                        />{" "}
+                                        <span>Number</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Range</div>
+                                    <div class="af_ra">
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="minlength"
+                                          value="0"
+                                          id="minlength"
+                                        />{" "}
+                                        <span>Minimum Character</span>
+                                      </div>
+                                      <div class="lf_va_rng">
+                                        <input
+                                          type="text"
+                                          name="maxlength"
+                                          value=""
+                                          id="maxlength"
+                                        />{" "}
+                                        <span>Maximum Character</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="af_r">
+                                    <div class="af_la">Placeholder</div>
+                                    <div class="af_ra">
                                       <input
                                         type="text"
-                                        name="maxlength"
-                                        value=""
-                                        id="maxlength"
-                                      />{" "}
-                                      <span>Maximum Character</span>
+                                        name="placeholder"
+                                        id="placeholder"
+                                      />
                                     </div>
                                   </div>
-                                </div>
-                                <div class="af_r">
-                                  <div class="af_la">Placeholder</div>
-                                  <div class="af_ra">
-                                    <input
-                                      type="text"
-                                      name="placeholder"
-                                      id="placeholder"
-                                    />
-                                  </div>
-                                </div>
-                                <div class="af_r">
-                                  <div class="af_la">&nbsp;</div>
-                                  <div class="af_ra">
-                                    <input
-                                      type="button"
-                                      value="Add to Form"
-                                      onclick="addTextBox(0);"
-                                    />
+                                  <div class="af_r">
+                                    <div class="af_la">&nbsp;</div>
+                                    <div class="af_ra">
+                                      <input
+                                        type="button"
+                                        value="Add to Form"
+                                        onclick="addTextBox(0);"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
                             )}
-                           {selectedField === "EmailAddress" && (
+                            {selectedField === "EmailAddress" && (
                               <div>
                                 <div class="add_field">
                                   <div class="af_r">
@@ -1239,7 +1266,7 @@ const Page = () => {
                                 </div>
                               </div>
                             )}
-                             {selectedField === "Comment" && (
+                            {selectedField === "Comment" && (
                               <div>
                                 <div class="add_field">
                                   <div class="af_r">
@@ -1264,7 +1291,6 @@ const Page = () => {
                                         />{" "}
                                         <span>Required</span>
                                       </div>
-                                      
                                     </div>
                                   </div>
                                   <div class="af_r">
@@ -1314,7 +1340,6 @@ const Page = () => {
                                 </div>
                               </div>
                             )}
-
                           </div>
                         </div>
                         <div className="ld_main_r">
@@ -1342,9 +1367,7 @@ const Page = () => {
                               <div
                                 className="formtitel_de displayne"
                                 id="cformtextcolor"
-                              >
-                                222222
-                              </div>
+                              ></div>
                               <div
                                 className="formtitel_de displayne"
                                 id="cformbgcolor"

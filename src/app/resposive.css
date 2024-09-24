@@ -942,7 +942,7 @@
     .service-market-banner,
     .blogscript-banner,
     .event-new-banner,
-    .rms-banner{ padding-top: 70px}
+    .rms-banner{ padding-top: 70px; margin-top: 0}
     .ContractHireFeaturesSection h2 {
         font-size: 25px;
     }
@@ -987,6 +987,7 @@
     }
     .laravel-banner {
         padding-top: 80px;
+        margin-top: 0;
     }
     .LaravelLeftImg,
     .LaravelRightImg {

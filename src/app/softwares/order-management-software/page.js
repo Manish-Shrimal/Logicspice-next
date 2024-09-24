@@ -1696,7 +1696,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={200}
+                            width={114}
                             height={100}
                             src="/img/jobboard/inventory-management-logo.png"
                             alt="Inventory Management Software"
@@ -1724,7 +1724,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={200}
+                            width={250}
                             height={100}
                             src="/img/jobboard/job-board-logo.png"
                             alt="Job Board Software"
@@ -1752,7 +1752,7 @@ const Page = () => {
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={200}
+                            width={220}
                             height={100}
                             src="/img/jobboard/ecommerce_logo_new.png"
                             alt="ecommerce website"

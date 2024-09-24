@@ -57,21 +57,34 @@ const Page = () => {
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
+  // var settings = {
+  //   dots: true,
+  //   arrows: false,
+  //   infinite: true,
+  //   loop: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  // };
   var settings = {
     dots: true,
     arrows: true,
-    infinite: true,
+    infinite: false, // Set to false for single slide
+    loop: false, // Remove looping
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
   };
+  
   const [activeTab, setActiveTab] = useState("tab2");
-  const [sellerTab, setSellerTab] = useState(true);
-  const [buyerTab, setBuyerTab] = useState(false);
+  const [sellerTab, setSellerTab] = useState(false);
+  const [buyerTab, setBuyerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
-  const [studentTab, setStudentTab] = useState(true);
+  const [studentTab, setStudentTab] = useState(false);
   const [instructorTab, setInstructorTab] = useState(false);
   const [adminpanelTab, setAdminpanelTab] = useState(false);
 
@@ -185,7 +198,7 @@ const Page = () => {
                 </h2>
               </div>
               <div className="job-valu">
-                <div className="portal-price NewPriceDesign">
+                <div className="portal-price NewPriceDesign UdemyPortalPrice">
                   <h4>
                     $45 USD<small>/mo</small>{" "}
                   </h4>
@@ -206,7 +219,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="job-valu-btn">
-                  <span>Fill your basic details and</span>
+                 
                   <div
                     className=" btn-get"
                     onClick={openModal}
@@ -221,7 +234,7 @@ const Page = () => {
                       />
                     }
                   </div>
-                  <Link className="btn fiverr-buys" href="/buy-now/udemy-clone">
+                  <Link className="btn fiverr-buys NewGreenBtnJob" href="/buy-now/udemy-clone">
                     Buy Now
                   </Link>
                 </div>
@@ -1351,6 +1364,7 @@ const Page = () => {
                     />
                   </Link>
                 </div>
+                
               </Slider>
             </div>
           </Modal.Body>

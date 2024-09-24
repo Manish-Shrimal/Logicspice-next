@@ -139,7 +139,8 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
   }, [modalStatus]);
 
   return (
-    <div onClick={closeModal}>
+    <div className="enquire__now">
+<div onClick={closeModal}>
       <Modal
         id="popup_sc_product_enquiry"
         tabIndex="-1"
@@ -300,7 +301,54 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                               </div>
                             </>
                           ) : (
-                            <></>
+                            <>
+                             <div className="thk_sdd" id="thnaks_section">
+                      <section className="thanks_you thnks_se">
+                        <div className="">
+                          <div className="sid_oivd smwood smwoodde">
+                            <div className="panel">
+                              <div className="panel-thanks">
+                                <span
+                                  className="thnk_ss"
+                                  id="thnak_message_sec"
+                                >
+                                  Thank you, we have received your message
+                                </span>
+                                <p className="hh_cls" id="sub_message">
+                                  We will get back to you within the next 24
+                                  hours.
+                                </p>
+
+                                <span
+                                  id="pnglnk"
+                                  dangerouslySetInnerHTML={{ __html: html }}
+                                ></span> <br/>
+                                <a
+                                  onClick={closeModal}
+                                  className="btn btn_kcls"
+                                  id="pop_clos"
+                                  href="javascript:void(0);"
+                                  style={{margin : "10px 0"}}
+                                >
+                                  OK
+                                </a>
+                                <div className="ftt_lon d-flex justify-content-center">
+                                  <a href="/" className="">
+                                    <Image
+                                      width={250}
+                                      height={100 / (100 / 100)}
+                                      src="/img/logo.png"
+                                      alt=""
+                                    />
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                            </>
                           )}
                         </div>
                         {!resultSuccess && (
@@ -377,6 +425,9 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
         </div>
       </Modal>
     </div>
+    </div>
+    
+   
   );
 };
 

@@ -334,7 +334,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={64}
                     height={100}
                     alt="Qualified, Experienced resources"
                     src="/img/hiredevelopers/experience_icon.png"
@@ -352,7 +352,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={48}
                     height={100}
                     alt="Flexible Hiring Models - Logicspice"
                     src="/img/hiredevelopers/search_icon.png"
@@ -370,7 +370,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={69}
                     height={100}
                     alt="Rapid and Effective development - logicspice"
                     src="/img/hiredevelopers/rapid_icon.png"
@@ -406,7 +406,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={65}
                     height={100}
                     alt="Track Progress with Project Management"
                     src="/img/hiredevelopers/progress_icon.png"
@@ -424,7 +424,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={58}
                     height={100}
                     alt="Fast and easy communication"
                     src="/img/hiredevelopers/comunication_icon.png"
@@ -442,7 +442,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={56}
                     height={100}
                     alt="Flexible Timing - Logicspice"
                     src="/img/hiredevelopers/timing_icon.png"
@@ -458,7 +458,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={56}
                     height={100}
                     alt="Cost-efficient development - logicspice"
                     src="/img/hiredevelopers/cost_icon.png"
@@ -474,7 +474,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={57}
                     height={100}
                     alt="Consistent Technical and Administrative support"
                     src="/img/hiredevelopers/technical_icon.png"
@@ -492,7 +492,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={48}
                     height={100}
                     alt="Highly Secured Development - Logicspice"
                     src="/img/hiredevelopers/highly_icon.png"
@@ -510,7 +510,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={72}
                     height={100}
                     alt="Dependable supervision and execution"
                     src="/img/hiredevelopers/dependabe_icon.png"
@@ -528,7 +528,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={62}
                     height={100}
                     alt="Optimized Coding - Logicspice"
                     src="/img/hiredevelopers/code_icon.png"
@@ -544,7 +544,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={55}
                     height={100}
                     alt="deadlines developers"
                     src="/img/hiredevelopers/calendar_icon.png"
@@ -562,7 +562,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={59}
                     height={100}
                     alt="Project confidentiality - Logicspice"
                     src="/img/hiredevelopers/nda_icon.png"
@@ -580,7 +580,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={88}
                     height={100}
                     alt="moneyback gurantee - Logicspice"
                     src="/img/hiredevelopers/gaurantee_icon.png"
@@ -598,7 +598,7 @@ const Page = () => {
               >
                 <div className="box_icon_top">
                   <Image
-                    width={70}
+                    width={53}
                     height={100}
                     alt="Availability and scope of expansion - logicspice"
                     src="/img/hiredevelopers/scope_icon.png"
@@ -669,7 +669,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-python-developers">
                           <Image
-                            width={60}
+                            width={48}
                             height={100}
                             alt="Hire Python Developers - Logicspice"
                             src="/img/hiredevelopers/python-hire-logo.png"
@@ -697,7 +697,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-reactjs-developers">
                           <Image
-                            width={60}
+                            width={48}
                             height={100}
                             alt="Hire ReactJS Developers - Logicspice"
                             src="/img/hiredevelopers/reactjs-hire-logo.png"
@@ -725,7 +725,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-react-native-developers">
                           <Image
-                            width={60}
+                            width={48}
                             height={100}
                             alt="Hire React Native Developers - Logicspice"
                             src="/img/hiredevelopers/reactjs-hire-logo.png"
@@ -753,7 +753,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-android-app-developers">
                           <Image
-                            width={60}
+                            width={51}
                             height={100}
                             alt="Hire Android App Developer - Logicspice"
                             src="/img/hiredevelopers/andoird_icon.png"
@@ -781,7 +781,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-ios-app-developers">
                           <Image
-                            width={60}
+                            width={47}
                             height={100}
                             alt="Hire iOS/ iPhone App Developer"
                             src="/img/hiredevelopers/apple_phn_icon.png"
@@ -809,7 +809,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-web-developers">
                           <Image
-                            width={60}
+                            width={40}
                             height={100}
                             alt="Hire Dphp-developers - logicspice"
                             src="/img/hiredevelopers/web_developer_icon.png"
@@ -837,7 +837,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-php-developers">
                           <Image
-                            width={60}
+                            width={64}
                             height={100}
                             alt="Hire Dphp-developers - logicspice"
                             src="/img/hiredevelopers/php_icon.png"
@@ -893,7 +893,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-wordpress-experts">
                           <Image
-                            width={60}
+                            width={58}
                             height={100}
                             alt="Hire Wordpress Developer - logicspice"
                             src="/img/hiredevelopers/wp_icon.png"
@@ -922,7 +922,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-magento-experts">
                           <Image
-                            width={60}
+                            width={50}
                             height={100}
                             alt="hire magento developers - logicspice"
                             src="/img/hiredevelopers/magento_icon.png"
@@ -951,7 +951,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-laravel-developers">
                           <Image
-                            width={60}
+                            width={64}
                             height={100}
                             alt="hire laravel developers - logicspice"
                             src="/img/hiredevelopers/larvel_icon.png"
@@ -979,7 +979,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-codeignitor-developers">
                           <Image
-                            width={60}
+                            width={51}
                             height={100}
                             alt="hire codeigniter developers - logicspice"
                             src="/img/hiredevelopers/codenator_icon.png"
@@ -1007,7 +1007,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-node-js-experts">
                           <Image
-                            width={60}
+                            width={64}
                             height={100}
                             alt="hire node-js-experts developers - logicspice"
                             src="/img/hiredevelopers/node_icon.png"
@@ -1037,7 +1037,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-angular-js-experts">
                           <Image
-                            width={60}
+                            width={55}
                             height={100}
                             alt="hire angular-js-developers developers - logicspice"
                             src="/img/hiredevelopers/angular_icon.png"
@@ -1065,7 +1065,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-yii-developers">
                           <Image
-                            width={60}
+                            width={54}
                             height={100}
                             alt="hire yii developers - logicspice"
                             src="/img/hiredevelopers/yii_icon.png"
@@ -1095,7 +1095,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-opencart-developers">
                           <Image
-                            width={60}
+                            width={64}
                             height={100}
                             alt="hire opencart developers - logicspice"
                             src="/img/hiredevelopers/operat_icon.png"
@@ -1123,7 +1123,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-hybrid-mobile-app-developer">
                           <Image
-                            width={60}
+                            width={59}
                             height={100}
                             alt="hire hybrid mobile app developers at logicspice"
                             src="/img/hiredevelopers/hydribd_icon.png"
@@ -1151,7 +1151,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-quality-analyst">
                           <Image
-                            width={60}
+                            width={58}
                             height={100}
                             alt="hire quality analyst at logicspice"
                             src="/img/hiredevelopers/quality_icon.png"
@@ -1179,7 +1179,7 @@ const Page = () => {
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-shopify-developers">
                           <Image
-                            width={60}
+                            width={58}
                             height={100}
                             alt="hire shopify developers at logicspice"
                             src="/img/hiredevelopers/shopify_icon.png"

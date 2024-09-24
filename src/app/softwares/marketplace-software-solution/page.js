@@ -208,7 +208,7 @@ See how it work yourself!"
               <div className="por-mobile-new">
                 <Image
                   unoptimized={true}
-                  width={420}
+                  width={450}
                   height={100 / (100 / 100)}
                   className=""
                   src="/img/marketplacesoftware/marketplace-banner-img.png"
@@ -2198,7 +2198,7 @@ See how it work yourself!"
                         <div className="other-project-logo">
                           <Image
                             unoptimized={true}
-                            width={180}
+                            width={243}
                             height={100}
                             src="/img/jobboard/logictic_logo_new.png"
                             alt="logistic-marketplacesoftware"

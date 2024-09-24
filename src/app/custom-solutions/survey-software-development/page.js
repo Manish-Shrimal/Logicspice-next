@@ -11,6 +11,8 @@ import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import { Accordion, Card, Button } from "react-bootstrap";
+import { Collapse } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Support from "@/app/Components/Support";
 import {
@@ -23,6 +25,56 @@ import {
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "Can people rate the survey if they have not taken it?",
+      content:
+        "No people can only rate the survey if they have taken it.",
+    },
+    {
+      key: "collapseTwo",
+      title: "How can people rate a survey?",
+      content:
+        "Once people have taken the surveys, they will receive the link through which they can give a rating to the survey. They can also write a review along with the given rating.",
+    },
+    {
+      key: "collapseThree",
+      title: "In what format can surveyors add questions to the surveys created by them?",
+      content:
+        "Surveyors can add the questions in the survey in form of multiple choice and Essay format.",
+    },
+    {
+      key: "collapseFour",
+      title: "How can a surveyor take the membership plan on the app?",
+      content:
+        "Surveyor can opt for taking the membership plan by paying through an integrated payment gateway. By taking the membership plan they can access more detailed statistics.",
+    },
+    {
+      key: "collapseFive",
+      title: "How can people search for surveys that they might want to take?",
+      content:
+        "People can search for the surveys by selecting the categories in which they want to take them or by entering the keywords related to their search.",
+    },
+    {
+      key: "collapseSix",
+      title:
+        "How can the surveyors share the survey that they have created?",
+      content:
+        "Once the surveyors have created a survey, they can share the same to their social media network by clicking on the respective icons.",
+    },
+    {
+      key: "collapseSeven",
+      title: "What kind of statistics can a surveyor see once he has created the survey?",
+      content: "Once the surveyor has created the survey, they can see the statistics related to the people who have attended the survey.",
+    },
+  ];
 
   const openModal = () => {
     console.log(showModal);
@@ -480,7 +532,7 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
             <div className="row">
                 <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -596,7 +648,62 @@ const Page = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
+          <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="enq-section">
         <div className="container">

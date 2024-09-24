@@ -18,10 +18,64 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Support from "@/app/Components/Support";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
+import { Collapse } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How can customers search for restaurants?",
+      content:
+        "Customers can search for the restaurants by selecting the cuisines and the location of the restaurant or by entering the keywords related to their search.",
+    },
+    {
+      key: "collapseTwo",
+      title:
+        "How can the Restaurants manage their menu on the app?",
+      content:
+        "The Restaurants can add their menu items along with the pictures and other details to their profile that they have created on the app. They can also edit and delete the menu items that are already been added.",
+    },
+    {
+      key: "collapseThree",
+      title: "Can the Customer give rating to a restaurant even if they havent booked table in that?",
+      content:
+        "No. Customer can only give rating out of 5 when they have booked a table in that restaurant. Customer can also write a review along with the rating.",
+    },
+    {
+      key: "collapseFour",
+      title: "Can a Customer cancel the booking of the table?",
+      content:
+        "Yes. The customer can cancel the booked table but he should cancel at least an hour before the time of booking.",
+    },
+    {
+      key: "collapseFive",
+      title:
+        "How can a Customer get refund of the cancelled booking?",
+      content:
+      "Once the customer has canceled a table booking, they can get refunds in 3-4 working days. Customers can check the refund status on the app.",
+    },
+    {
+      key: "collapseSix",
+      title: "Can a Customer view a list of tables that he has booked in the past?",
+      content:
+        "Yes. Customers can view their past booked tables in the booking history section.",
+    },
+    {
+      key: "collapseSeven",
+      title: "Does a Customer needs to get registered to book the tables?",
+      content:
+        "Yes, the Customer needs to get registered to book the tables.",
+    },
+  ];
 
   const openModal = () => {
     console.log(showModal);
@@ -544,7 +598,7 @@ const Page = () => {
           <Support />
         </div>
       </div>
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -620,6 +674,61 @@ const Page = () => {
                   </p>
                 </MDBAccordionItem>
               </MDBAccordion>
+            </div>
+          </div>
+        </div>
+      </section> */}
+        <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

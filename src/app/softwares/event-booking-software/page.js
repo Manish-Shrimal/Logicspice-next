@@ -277,7 +277,7 @@ const Page = () => {
                   src="/img/softwares-banner-img/lsevent-mobile.png"
                   alt="Event_Booking_Software"
                   className="lazy"
-                  width={335}
+                  width={316}
                   height={500 / (100 / 100)}
                 />
               </div>
@@ -2454,7 +2454,7 @@ const Page = () => {
                             src="/img/jobboard/ecart_new.png"
                             alt="eBay Clone Script Logo"
                             className=""
-                            width={250}
+                            width={197}
                             height={100}
                           />
                         </div>
@@ -2493,7 +2493,7 @@ const Page = () => {
                             src="/img/jobboard/abs_logo_new.png"
                             alt="Fiverr Clone Script Logo"
                             className=""
-                            width={250}
+                            width={197}
                             height={100}
                           />
                         </div>
@@ -2529,7 +2529,7 @@ const Page = () => {
                             src="/img/jobboard/news_logo_new.png"
                             alt="news-management-system"
                             className=""
-                            width={250}
+                            width={210}
                             height={100}
                           />
                         </div>

@@ -265,7 +265,7 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image unoptimized={true}
-                  width={330}
+                  width={320}
                   height={500 / (100 / 100)}
                   alt="Food Ordering Script"
                   src="/img/softwares-banner-img/food-banner-img.png"

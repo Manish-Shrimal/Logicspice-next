@@ -37,8 +37,8 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
   // const [activeTab, setActiveTab] = useState("tab2");
-  const [MerchantTab, setMerchantTab] = useState(true);
-  const [CustomerTab, setCustomerTab] = useState(false);
+  const [MerchantTab, setMerchantTab] = useState(false);
+  const [CustomerTab, setCustomerTab] = useState(true);
   const [AdminTab, setAdminTab] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -1632,7 +1632,7 @@ See how it work yourself!"
                 </div>
                 <div className="col-md-7">
                   <a className="btn btn-primary" onClick={openReviewModel}>
-                    Rate and Review product
+                  Rate and Review product 
                   </a>
 
                   <Reviewmodals
@@ -1948,7 +1948,7 @@ See how it work yourself!"
                   <a
                     title="View Detail"
                     target="_black"
-                    href="job-board-software"
+                    href="/softwares/job-board-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -1976,7 +1976,7 @@ See how it work yourself!"
                   <a
                     title="View Detail"
                     target="_black"
-                    href="/recruitment-management-software"
+                    href="/softwares/recruitment-management-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -2007,7 +2007,7 @@ See how it work yourself!"
                   <a
                     title="View Detail"
                     target="_black"
-                    href="/equipment-rental-software"
+                    href="/softwares/equipment-rental-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

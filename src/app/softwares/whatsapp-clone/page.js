@@ -1617,7 +1617,7 @@ See how it work yourself!"
                       <span>
                         <Image
                           unoptimized={true}
-                          width={25}
+                          width={20}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
@@ -1645,7 +1645,7 @@ See how it work yourself!"
                       <span>
                         <Image
                           unoptimized={true}
-                          width={25}
+                          width={20}
                           height={100}
                           src="/img/jobboard/german.png"
                           alt="mobile app development in USA"
@@ -1673,7 +1673,7 @@ See how it work yourself!"
                       <span>
                         <Image
                           unoptimized={true}
-                          width={25}
+                          width={20}
                           height={100}
                           src="/img/jobboard/australia_flag_img.png"
                           alt="mobile app development in USA"

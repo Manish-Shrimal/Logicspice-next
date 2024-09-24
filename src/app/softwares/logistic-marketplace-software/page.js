@@ -1645,7 +1645,16 @@ See how it work yourself!"
           id="jobportal"
           className="modal-service"
         >
-          <Modal.Header closeButton></Modal.Header>
+           <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <Image
               unoptimized={true}
@@ -1665,33 +1674,65 @@ See how it work yourself!"
           id="buyjobportal"
           className="modal-service"
         >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
+           <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleBuyJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...settings}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://loadmoversgh.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      loadmoversgh.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://loadmoversgh.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      width={900}
+                      height={100 / (100 /100)}
+                      src="/img/logisticmarketplace/loadmoversgh.jpg"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://fletes24.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      fletes24.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://fletes24.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100 / (100 /100)}
+                      src="/img/logisticmarketplace/fletes24.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1715,9 +1756,9 @@ See how it work yourself!"
                   >
                     <Image
                       unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      width={900}
+                      height={100 / (100 /100)}
+                      src="/img/logisticmarketplace/salorapido.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1741,35 +1782,9 @@ See how it work yourself!"
                   >
                     <Image
                       unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://salorapido.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://salorapido.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={100}
-                      height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      width={900}
+                      height={100 / (100 /100)}
+                      src="/img/logisticmarketplace/salorapido.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1780,8 +1795,8 @@ See how it work yourself!"
                   <div className="feat-slide-img">
                     <Image
                       unoptimized={true}
-                      width={100}
-                      height={100}
+                      width={900}
+                      height={100 / (100 /100)}
                       src="/img/jobboard/Manage_jobs_job_portal_script.png"
                       alt="Job Management"
                     />
@@ -1799,8 +1814,8 @@ See how it work yourself!"
                   <div className="feat-slide-img">
                     <Image
                       unoptimized={true}
-                      width={100}
-                      height={100}
+                      width={900}
+                      height={100 / (100 /100)}
                       src="/img/jobboard/membership_plan_job_portal_script.png"
                       alt="Membership Plan"
                     />
@@ -1817,14 +1832,7 @@ See how it work yourself!"
               </Slider>
             </div>
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
+         
         </Modal>
       </div>
 
@@ -2182,7 +2190,7 @@ See how it work yourself!"
                       <span>
                         <Image
                           unoptimized={true}
-                          width={25}
+                          width={20}
                           height={100}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"

@@ -244,7 +244,7 @@ const Page = () => {
                     }
                   </div>
                   <Link
-                    className="btn fiverr-buys"
+                    className="btn fiverr-buys NewGreenBtnJob"
                     href="/buy-now/crowdfunding-script"
                   >
                     Buy Now
@@ -1550,7 +1550,16 @@ const Page = () => {
           id="jobportal"
           className="modal-service"
         >
-          <Modal.Header closeButton></Modal.Header>
+                   <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <Image unoptimized={true}
               width={900}
@@ -1561,14 +1570,7 @@ const Page = () => {
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
+         
         </Modal>
 
         <Modal
@@ -1577,10 +1579,16 @@ const Page = () => {
           id="buyjobportal"
           className="modal-service"
         >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
+          <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleBuyJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...settings}>
@@ -2004,95 +2012,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Can we change the fees we charge as website owner?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      Yes, From the website admin panel, you can manage the
-                      charges, fees or commission.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Why should I buy this script ?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      You get following benefits of using LS Crowd Funding
-                      Script -<br />
-                      1. Easy to use, User friendly Script with all the major
-                      features to the latest market trend.
-                      <br />
-                      2. Cost Effective
-                      <br />
-                      3. Support Unlimited Users
-                      <br />
-                      4. Easily scalable and Customizable solution
-                      <br />
-                      5. Target Social network to spread awareness to your
-                      created project.
-                      <br />
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I update some design and functionality in application code myself?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      Yes, You will have access of the all the code, except some
-                      of the core encrypted files.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle=" Will I be able to use it on multiple domains, after I purchase this script?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      You will be licensed to use it only for the domain, you
-                      purchased for.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle=" Can I resell the script? Will I have rights over the script code?"
-                    collapseId="flush-collapse6"
-                  >
-                    <p>
-                      No, You can’t resell the script. All rights will remain
-                      with Logicspice only.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Do you offer Money Back Guarantee?"
-                    collapseId="flush-collapse7"
-                  >
-                    <p>
-                      Yes, we offer 30 days money back guarantee to ensure
-                      customer satisfaction of our softwares. If for any reason,
-                      you wish to discontinue using the product, you can ask us
-                      for refund. We will refund your total money except the
-                      installation and configuration charges, which is USD 65 or
-                      20% of application cost, whichever is greater.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      We recommend you purchase SSL certificate along with a
-                      hosting server, considering that an SSL certificate is
-                      necessary for all the websites these days and it provides
-                      a secure layer to the website as well.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
+              
                 <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
   <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
     <Typography>Can we change the fees we charge as website owner?</Typography>

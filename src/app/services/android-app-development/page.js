@@ -46,7 +46,7 @@ const Page = () => {
             <div className="col-sm-6">
               <div className="iphone_template_header_left">
                 <Image unoptimized={true}
-                  width={500}
+                  width={580}
                   height={500 / (100 / 100)}
                   className="normal_logo"
                   alt="Android Applications Developmenr Company"
@@ -180,7 +180,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={25}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
@@ -190,7 +190,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={28}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -309,7 +309,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={25}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
@@ -319,7 +319,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={28}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -436,7 +436,7 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={25}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
@@ -446,7 +446,7 @@ const Page = () => {
                                 <li>
                                   <a href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={28}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       target="_blank"
@@ -572,7 +572,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={25}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
@@ -582,7 +582,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={28}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -702,7 +702,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={25}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
@@ -712,7 +712,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={28}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"
@@ -839,7 +839,7 @@ const Page = () => {
                                 <li>
                                   <a target="_blank" href="javascript:void(0)">
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={25}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/apple_icon.png"
@@ -852,7 +852,7 @@ const Page = () => {
                                     href="https://play.google.com/store/apps/details?id=com.logicspice.raydaar&amp;hl=en"
                                   >
                                     <Image unoptimized={true}
-                                      width={30}
+                                      width={28}
                                       height={100}
                                       alt="iPhone App Development Company"
                                       src="/img/iosappdevelopment/android_skicon.png"

@@ -175,7 +175,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section className="paid-pro job-portal-banner NewJobSiteDesign JobBoardNewDesign classNameified-banner fiverr-new-banner">
+      <section className="paid-pro job-portal-banner NewJobSiteDesign JobBoardNewDesign classNameified-banner classified-banner fiverr-new-banner">
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">

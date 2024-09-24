@@ -132,7 +132,7 @@ const Page = () => {
                 <Image
                   unoptimized={true}
                   src="/img/faqscript/faqbannerimg.png"
-                  width={300}
+                  width={400}
                   height={500 / (100 / 100)}
                   alt="banner"
                 />
@@ -622,7 +622,7 @@ const Page = () => {
                       className=""
                       src="/img/faqscript/FaqUserIcon.png"
                       alt="FAQ Script"
-                      width={200}
+                      width={290}
                       height={100}
                     />
                   </i>
@@ -642,7 +642,7 @@ const Page = () => {
                       className="FeaturesIcon"
                       src="/img/faqscript/FaqAdminIcon.png"
                       alt="FAQ Script"
-                      width={200}
+                      width={290}
                       height={100}
                     />
                   </i>

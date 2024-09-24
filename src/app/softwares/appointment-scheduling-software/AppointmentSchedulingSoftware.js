@@ -146,7 +146,7 @@ const AppointmentSchedulingSoftware = () => {
       display: "none",
     },
   }));
-  
+
   const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
       expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
@@ -166,14 +166,14 @@ const AppointmentSchedulingSoftware = () => {
       backgroundColor: "#dbdbdb", // You can adjust this color
     },
   }));
-  
+
   const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     padding: theme.spacing(2),
     borderTop: "1px solid rgba(0, 0, 0, .125)",
   }));
-  
+
   const [expanded, setExpanded] = React.useState("panel1");
-  
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -204,7 +204,8 @@ const AppointmentSchedulingSoftware = () => {
                     <strike className="srik_cls">$175 USD</strike>
                     <span className="MoreInfo">
                       <i>
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/softwares-banner-img/more-info.png"
                           alt=""
                           width={100}
@@ -250,7 +251,8 @@ const AppointmentSchedulingSoftware = () => {
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       alt="Appointment Schedule Script"
                       src="/img/jobboard/stars.png"
                       width={100}
@@ -273,7 +275,8 @@ const AppointmentSchedulingSoftware = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   alt="Appointment Booking System"
                   src="/img/softwares-banner-img/abs_banner_img.png"
                   height={400}
@@ -385,7 +388,8 @@ const AppointmentSchedulingSoftware = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/abs/abs_user.png"
                             alt="User Panel"
                             height={400}
@@ -398,7 +402,8 @@ const AppointmentSchedulingSoftware = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/admin_dash.png"
                                   height={100}
@@ -414,7 +419,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_restaurants.png"
                                   height={100}
@@ -434,7 +440,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_banner.png"
                                   height={100}
@@ -453,7 +460,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_customers.png"
                                   height={100}
@@ -472,7 +480,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_cuisines.png"
                                   height={100}
@@ -493,7 +502,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_meal.png"
                                   height={100}
@@ -513,7 +523,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_city.png"
                                   height={100}
@@ -535,7 +546,8 @@ const AppointmentSchedulingSoftware = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_pages.png"
                                   height={100}
@@ -566,7 +578,8 @@ const AppointmentSchedulingSoftware = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/abs/abs_staff.png"
                             alt="Staff"
                             height={400}
@@ -579,7 +592,8 @@ const AppointmentSchedulingSoftware = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   height={100}
@@ -595,7 +609,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/received-orders.png"
                                   height={100}
@@ -616,7 +631,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-Charges.png"
                                   height={100}
@@ -637,7 +653,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/kitchen-staff.png"
                                   height={100}
@@ -658,7 +675,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/delivery-person.png"
                                   height={100}
@@ -680,7 +698,8 @@ const AppointmentSchedulingSoftware = () => {
 
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/order-status.png"
                                   height={100}
@@ -702,7 +721,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_opening.png"
                                   height={100}
@@ -734,7 +754,8 @@ const AppointmentSchedulingSoftware = () => {
                     <div className="row">
                       <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image unoptimized={true}
+                          <Image
+                            unoptimized={true}
                             src="/img/abs/abs_admin.png"
                             alt="Admin Panel"
                             height={400}
@@ -747,7 +768,8 @@ const AppointmentSchedulingSoftware = () => {
                           <ul>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_order.png"
                                   height={100}
@@ -763,7 +785,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/search_restaurant.png"
                                   height={100}
@@ -785,7 +808,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/filter_restaurant.png"
                                   height={100}
@@ -807,7 +831,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/view_restaurant_dtl.png"
                                   height={100}
@@ -827,7 +852,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/reviews_ratings.png"
                                   height={100}
@@ -847,7 +873,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/manage_account.png"
                                   height={100}
@@ -869,7 +896,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/payServices.png"
                                   height={100}
@@ -890,7 +918,8 @@ const AppointmentSchedulingSoftware = () => {
                             </li>
                             <li>
                               <i>
-                                <Image unoptimized={true}
+                                <Image
+                                  unoptimized={true}
                                   alt="img"
                                   src="/img/jobboard/favorite-orders.png"
                                   height={100}
@@ -1086,7 +1115,8 @@ const AppointmentSchedulingSoftware = () => {
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
-                    <Image unoptimized={true}
+                    <Image
+                      unoptimized={true}
                       src="/img/jobboard/stars.png"
                       alt=""
                       className="lazy"
@@ -1161,7 +1191,8 @@ const AppointmentSchedulingSoftware = () => {
             <div className="logic-parter">
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/why-logic-icon.png"
                     alt=""
                     className=""
@@ -1180,7 +1211,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx1">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/coding.png"
                         height={100}
                         width={100}
@@ -1201,7 +1233,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx2">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/data-complexity.png"
                         alt="img"
                         height={100}
@@ -1223,7 +1256,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx3">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/coordinate.png"
                         alt="img"
                         height={100}
@@ -1248,7 +1282,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx4">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/customize.png"
                         alt="img"
                         height={100}
@@ -1268,7 +1303,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx5">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/smartphone-icon.png"
                         alt="img"
                         height={100}
@@ -1288,7 +1324,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-bx6">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/data.png"
                         alt="img"
                         height={100}
@@ -1310,7 +1347,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx7">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/web-icon.png"
                         alt="img"
                         height={100}
@@ -1334,7 +1372,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx8">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/encrypted.png"
                         alt="img"
                         height={100}
@@ -1355,7 +1394,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new thumbnail-box thumbnail-bx9">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/history-icon.png"
                         alt="img"
                         height={100}
@@ -1378,7 +1418,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx10">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/seouser-friendly.png"
                         alt="img"
                         height={100}
@@ -1398,7 +1439,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx11">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/one-stop-solution.png"
                         alt="img"
                         height={100}
@@ -1418,7 +1460,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx12">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/third-party-api.png"
                         alt="img"
                         height={100}
@@ -1438,7 +1481,8 @@ const AppointmentSchedulingSoftware = () => {
                 <div className="thumbnail-new productthumbnail-box thumbnail-bx13">
                   <div className="caption">
                     <div className="best-partner-img-bx">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/cost-effective.png"
                         alt="img"
                         height={100}
@@ -1469,7 +1513,8 @@ const AppointmentSchedulingSoftware = () => {
                 <ul>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                         height={40}
@@ -1480,7 +1525,8 @@ const AppointmentSchedulingSoftware = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/html-5.png"
                         alt="HTML5"
                         height={40}
@@ -1491,7 +1537,8 @@ const AppointmentSchedulingSoftware = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_mysql_icon.png"
                         alt="MySQL"
                         height={40}
@@ -1502,7 +1549,8 @@ const AppointmentSchedulingSoftware = () => {
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         src="/img/jobboard/tech_apache_icon.png"
                         alt="Apache"
                         height={40}
@@ -1549,7 +1597,8 @@ const AppointmentSchedulingSoftware = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/month_half_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1560,7 +1609,8 @@ const AppointmentSchedulingSoftware = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1571,7 +1621,8 @@ const AppointmentSchedulingSoftware = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_instal.png"
                     alt="manager_icn"
                     height={50}
@@ -1582,7 +1633,8 @@ const AppointmentSchedulingSoftware = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -1713,7 +1765,7 @@ const AppointmentSchedulingSoftware = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="Product Title"
+                    title="Appointment Scheduling Software"
                   />
                 </div>
                 <div className="col-md-12">
@@ -1736,7 +1788,8 @@ const AppointmentSchedulingSoftware = () => {
                       </span>
                       <span id="client-name">Henry, USA</span>{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           height={20}
@@ -1762,7 +1815,8 @@ const AppointmentSchedulingSoftware = () => {
                       </span>
                       Shafan Saabdeen, Dubai [UAE]{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/uae_flag_iimg.png"
                           alt="mobile app development in UAE"
                           height={20}
@@ -1788,7 +1842,8 @@ const AppointmentSchedulingSoftware = () => {
                       </span>
                       Robert, New York{" "}
                       <span className="ConuntryFlagIcon">
-                        <Image unoptimized={true}
+                        <Image
+                          unoptimized={true}
                           src="/img/jobboard/usa_flag_img.png"
                           alt="mobile app development in USA"
                           height={20}
@@ -1803,261 +1858,198 @@ const AppointmentSchedulingSoftware = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="How can Customer book an appointment on the website?"
-                    collapseId="flush-collapse1"
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1-content"
+                    id="panel1-header"
                   >
-                    <p>
-                      Customer can view the availability of the professional
-                      that they may want to book an appointment with and can
-                      send booking request selecting the date and make payment
-                      for the same.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      How can Customer book an appointment on the website?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Customers can view the availability of the professional
+                      they want to book an appointment with, send a booking
+                      request by selecting the date, and make payment for the
+                      same.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I get help for customization?"
-                    collapseId="flush-collapse2"
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2-content"
+                    id="panel2-header"
                   >
-                    <p>
+                    <Typography>Can I get help for customization?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
                       Yes, we have an experienced team of developers to help you
                       with customization as per your requirements.
-                    </p>
-                  </MDBAccordionItem>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I resell the script? Will I have rights over the script code?"
-                    collapseId="flush-collapse4"
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3-content"
+                    id="panel3-header"
                   >
-                    <p>
-                      No, You can&apos;t resell the script. All rights will
+                    <Typography>
+                      Can I resell the script? Will I have rights over the
+                      script code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can&apos;t resell the script. All rights will
                       remain with Logicspice only.
-                    </p>
-                  </MDBAccordionItem>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I update some design and functionality in application code myself?"
-                    collapseId="flush-collapse5"
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4-content"
+                    id="panel4-header"
                   >
-                    <p>
-                      Yes, You will have access of the all the code, except some
-                      of the core encrypted files.{" "}
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Can I update some design and functionality in the
+                      application code myself?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, you will have access to all the code, except some of
+                      the core encrypted files.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Will I be able to use it on multiple domains, after I purchase this script?"
-                    collapseId="flush-collapse6"
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5-content"
+                    id="panel5-header"
                   >
-                    <p>
-                      Yes the customers can see if their order has been
-                      confirmed, canceled or delivered. Also, restaurants can
-                      add custom order status that they would like so that
-                      customers can be updated about each step of the order
-                      delivery.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Will I be able to use it on multiple domains after I
+                      purchase this script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, customers can see if their order has been confirmed,
+                      canceled, or delivered. Also, restaurants can add custom
+                      order statuses to keep customers updated about each step
+                      of the order delivery.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="You will be licensed to use it only for the domain, you purchased for."
-                    collapseId="flush-collapse7"
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6-content"
+                    id="panel6-header"
                   >
-                    <p>
-                      Customer will receive an email whenever the restaurant
-                      owner will change the order status on his end.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      You will be licensed to use it only for the domain you
+                      purchased for.
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Customers will receive an email whenever the restaurant
+                      owner changes the order status on their end.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Can I resell the script? Will I have rights over the script code?"
-                    collapseId="flush-collapse8"
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel7-content"
+                    id="panel7-header"
                   >
-                    <p>
-                      No, You can&apos;t resell the script. All rights will
-                      remain with Logicspice only.{" "}
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>
+                      Can I resell the script? Will I have rights over the
+                      script code?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No, you can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Do you offer Money Back Guarantee?"
-                    collapseId="flush-collapse12"
+                <Accordion
+                  expanded={expanded === "panel8"}
+                  onChange={handleChange("panel8")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel8-content"
+                    id="panel8-header"
                   >
-                    <p>
-                      Yes, we offer 30 days money back guarantee to ensure
-                      customer satisfaction of our softwares. If for any reason,
-                      you wish to discontinue using the product, you can ask us
-                      for refund. We will refund your total money except the
-                      installation and configuration charges, which is USD 65 or
-                      20% of application cost, whichever is greater.
-                    </p>
-                  </MDBAccordionItem>
+                    <Typography>Do you offer Money Back Guarantee?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, we offer a 30-day money-back guarantee to ensure
+                      customer satisfaction with our software. If for any
+                      reason, you wish to discontinue using the product, you can
+                      ask us for a refund. We will refund your total money
+                      except the installation and configuration charges, which
+                      is USD 65 or 20% of the application cost, whichever is
+                      greater.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                  <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
-                    collapseId="flush-collapse13"
+                <Accordion
+                  expanded={expanded === "panel9"}
+                  onChange={handleChange("panel9")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel9-content"
+                    id="panel9-header"
                   >
-                    <p>
-                      We recommend you purchase SSL certificate along with a
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We recommend you purchase an SSL certificate along with a
                       hosting server, considering that an SSL certificate is
-                      necessary for all the websites these days and it provides
-                      a secure layer to the website as well.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
-                
-      <Accordion
-        expanded={expanded === 'panel1'}
-        onChange={handleChange('panel1')}
-      >
-        <AccordionSummary
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          <Typography>How can Customer book an appointment on the website?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Customers can view the availability of the professional they want to book an appointment with, send a booking request by selecting the date, and make payment for the same.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel2'}
-        onChange={handleChange('panel2')}
-      >
-        <AccordionSummary
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Can I get help for customization?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Yes, we have an experienced team of developers to help you with customization as per your requirements.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel3'}
-        onChange={handleChange('panel3')}
-      >
-        <AccordionSummary
-          aria-controls="panel3-content"
-          id="panel3-header"
-        >
-          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            No, you can&apos;t resell the script. All rights will remain with Logicspice only.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel4'}
-        onChange={handleChange('panel4')}
-      >
-        <AccordionSummary
-          aria-controls="panel4-content"
-          id="panel4-header"
-        >
-          <Typography>Can I update some design and functionality in the application code myself?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Yes, you will have access to all the code, except some of the core encrypted files.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel5'}
-        onChange={handleChange('panel5')}
-      >
-        <AccordionSummary
-          aria-controls="panel5-content"
-          id="panel5-header"
-        >
-          <Typography>Will I be able to use it on multiple domains after I purchase this script?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Yes, customers can see if their order has been confirmed, canceled, or delivered. Also, restaurants can add custom order statuses to keep customers updated about each step of the order delivery.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel6'}
-        onChange={handleChange('panel6')}
-      >
-        <AccordionSummary
-          aria-controls="panel6-content"
-          id="panel6-header"
-        >
-          <Typography>You will be licensed to use it only for the domain you purchased for.</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Customers will receive an email whenever the restaurant owner changes the order status on their end.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel7'}
-        onChange={handleChange('panel7')}
-      >
-        <AccordionSummary
-          aria-controls="panel7-content"
-          id="panel7-header"
-        >
-          <Typography>Can I resell the script? Will I have rights over the script code?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            No, you can&apos;t resell the script. All rights will remain with Logicspice only.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel8'}
-        onChange={handleChange('panel8')}
-      >
-        <AccordionSummary
-          aria-controls="panel8-content"
-          id="panel8-header"
-        >
-          <Typography>Do you offer Money Back Guarantee?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Yes, we offer a 30-day money-back guarantee to ensure customer satisfaction with our software. If for any reason, you wish to discontinue using the product, you can ask us for a refund. We will refund your total money except the installation and configuration charges, which is USD 65 or 20% of the application cost, whichever is greater.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        expanded={expanded === 'panel9'}
-        onChange={handleChange('panel9')}
-      >
-        <AccordionSummary
-          aria-controls="panel9-content"
-          id="panel9-header"
-        >
-          <Typography>Along with hosting server details, what other recommendations?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and provides a secure layer to the website as well.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                      necessary for all websites these days and provides a
+                      secure layer to the website as well.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -2070,7 +2062,8 @@ const AppointmentSchedulingSoftware = () => {
             <Slider {...settings} className="hidedot">
               <div>
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/abs/SS1.jpg"
                     alt="Add Menu For Restaurants"
                     width={1075}
@@ -2080,7 +2073,8 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/abs/SS2.jpg"
                     alt="List/Filter/Sort Restaurants"
                     width={1075}
@@ -2090,7 +2084,8 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/abs/SS3.jpg"
                     alt="Menu Management For Restaurant"
                     width={1075}
@@ -2100,7 +2095,8 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/abs/SS4.jpg"
                     alt="View Received Orders"
                     width={1075}
@@ -2110,7 +2106,8 @@ const AppointmentSchedulingSoftware = () => {
               </div>
               <div>
                 <div className="feat-slide-img">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/abs/SS5.jpg"
                     alt="View Restaurant Detail"
                     width={1075}
@@ -2126,7 +2123,6 @@ const AppointmentSchedulingSoftware = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-             
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
@@ -2147,7 +2143,8 @@ const AppointmentSchedulingSoftware = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

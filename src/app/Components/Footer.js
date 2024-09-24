@@ -490,7 +490,7 @@ const Footer = () => {
             <ul>
               <li className="foot-arrowIng">
                 <Image
-                  width={100}
+                  width={200}
                   height={100}
                   src="/img/footer/foot-arrow.png"
                   alt="Logicspice"

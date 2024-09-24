@@ -259,7 +259,7 @@ See how it work yourself!"
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image unoptimized={true}
-                  width={400}
+                  width={418}
                   height={500 / (100 / 100)}
                   alt="Grocery_Store_Script"
                   src="/img/softwares-banner-img/grocery-banner-img.png"

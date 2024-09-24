@@ -1549,7 +1549,7 @@ const Page = () => {
                     rel="noopener noreferrer"
                   >
                     <Image unoptimized={true}
-                      src="/img/images/waku.jpg"
+                      src="/img/images/waku.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"

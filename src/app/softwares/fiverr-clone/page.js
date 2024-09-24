@@ -1962,7 +1962,17 @@ const Page = () => {
           id="jobportal"
           className="modal-service"
         >
-          <Modal.Header closeButton></Modal.Header>
+          {/* <Modal.Header closeButton></Modal.Header> */}
+          <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <Image
               unoptimized={true}
@@ -1974,14 +1984,6 @@ const Page = () => {
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
         </Modal>
 
         <Modal
@@ -1990,12 +1992,18 @@ const Page = () => {
           id="buyjobportal"
           className="modal-service"
         >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
+          <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleBuyJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
-            <div id="jobboardclients" closeButton>
+            <div id="jobboardclients">
               <Slider {...settings}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
@@ -2113,14 +2121,6 @@ const Page = () => {
               </Slider>
             </div>
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
         </Modal>
       </div>
 
@@ -2405,6 +2405,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
+                    title=" Fiverr Clone"
                   />
                 </div>
                 <div className="col-md-12">
@@ -2519,8 +2520,6 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-               
-
                 <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
@@ -2632,8 +2631,8 @@ const Page = () => {
                   >
                     <Typography>
                       {" "}
-                      Can the User give rating to a gig even if they haven&apos;t
-                      purchased it?
+                      Can the User give rating to a gig even if they
+                      haven&apos;t purchased it?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>

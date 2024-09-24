@@ -12,9 +12,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+// import "../../@public/css/font-awesome.css";
+// import "@/public/css/font-awesome.css"
+// import "../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
+
 import "../../resposive.css";
 
 const Page = () => {
+  // var settings = {
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  // };
   var settings = {
     dots: false,
     arrows: true,
@@ -24,7 +40,17 @@ const Page = () => {
     slidesToScroll: 2,
     autoplay: false,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768, // For screens smaller than 768px (tablets and mobile)
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
+  
 
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -59,7 +85,7 @@ const Page = () => {
                     <Enquirymodal
                       modalStatus={showModal}
                       toggle={openModal}
-                      title="Web Development Services"
+                      title="Web Development"
                     />
                   }
                 </div>
@@ -91,8 +117,9 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="WebDevelopmentClients">
-        <div className="container">
+
+      <section class="WebDevelopmentClients">
+        <div class="container">
           <ul>
             <li>
               <span>Our Clients</span>
@@ -100,8 +127,8 @@ const Page = () => {
             <li>
               <Image
                 unoptimized={true}
-                width={100}
-                height={100}
+                width={80}
+                height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img1.png"
                 alt="Web Development Services"
               />
@@ -109,8 +136,8 @@ const Page = () => {
             <li>
               <Image
                 unoptimized={true}
-                width={100}
-                height={100}
+                width={140}
+                height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img2.png"
                 alt="Web Development Services"
               />
@@ -119,7 +146,7 @@ const Page = () => {
               <Image
                 unoptimized={true}
                 width={100}
-                height={100}
+                height={500 / (100 / 100)}
                 src="/img/webdevelopment/client-logo-img3.png"
                 alt="Web Development Services"
               />
@@ -170,9 +197,10 @@ const Page = () => {
                   applications. Our commitment lies in developing authentic,
                   simplified applications, distinguishing us in web development
                   and design services. Our client-focused approach to{" "}
-                  <b>custom web application development</b> demonstrates our
-                  expertise and dedication to delivering high-quality, bespoke
-                  solutions that surpass clients&apos; expectations.
+                  <strong>custom web application development</strong>{" "}
+                  demonstrates our expertise and dedication to delivering
+                  high-quality, bespoke solutions that surpass clients&apos;
+                  expectations.
                 </p>
               </div>
             </div>
@@ -204,7 +232,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon1.png"
                       alt="Web Development Services"
@@ -225,7 +253,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon2.png"
                       alt="Web Development Services"
@@ -246,7 +274,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon3.png"
                       alt="Web Development Services"
@@ -264,7 +292,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={85}
                       height={100}
                       src="/img/webdevelopment/web-design-icon4.png"
                       alt="Web Development Services"
@@ -282,7 +310,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon5.png"
                       alt="Web Development Services"
@@ -302,7 +330,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon6.png"
                       alt="Web Development Services"
@@ -320,7 +348,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={100}
                       height={100}
                       src="/img/webdevelopment/web-design-icon7.png"
                       alt="Web Development Services"
@@ -341,7 +369,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={80}
+                      width={85}
                       height={100}
                       src="/img/webdevelopment/web-design-icon8.png"
                       alt="Web Development Services"
@@ -535,10 +563,7 @@ const Page = () => {
                           aria-hidden="true"
                         ></i>
                       </Link>
-                      <i
-                        className="fa-brands fa-android"
-                        aria-hidden="true"
-                      ></i>
+                      <i class="fa fa-android" aria-hidden="true"></i>
                       <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
                     <div className="WebProjectInfoView">
@@ -694,7 +719,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/portfolio" className="">
+                      <Link href="/company/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -745,7 +770,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/portfolio" className="">
+                      <Link href="/company/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -888,7 +913,11 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <p>
                       Our{" "}
-                      <Link href="/services/website-design" target="_blank">
+                      <Link
+                        href="/services/website-design"
+                        target="_blank"
+                        className="anchor_link"
+                      >
                         web design
                       </Link>{" "}
                       and development team always focuses on client
@@ -953,7 +982,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="What is web development?"
                       collapseId="flush-collapse1"
-                       data-aos="fade-up"
+                      data-aos="fade-up"
                     >
                       <p>
                         Web development involves creating, building, and
@@ -966,7 +995,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="What services does Logicspice web development company offer?"
                       collapseId="flush-collapse2"
-                       data-aos="fade-up"
+                      data-aos="fade-up"
                     >
                       <p>
                         Logicspice, a web development company, offers various
@@ -978,7 +1007,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="What sets Logicspice web application development company apart?"
                       collapseId="flush-collapse3"
-                       data-aos="fade-up"
+                      data-aos="fade-up"
                     >
                       <p>
                         Logicspice creates tailored websites based on specific
@@ -992,7 +1021,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="How does a web development agency enhance my business?"
                       collapseId="flush-collapse4"
-                       data-aos="fade-up"
+                      data-aos="fade-up"
                     >
                       <p>
                         Logicspice web development agency can boost your online
@@ -1005,7 +1034,7 @@ const Page = () => {
                     <MDBAccordionItem
                       headerTitle="Why should I opt for custom website development services?"
                       collapseId="flush-collapse5"
-                       data-aos="fade-up"
+                      data-aos="fade-up"
                     >
                       <p>
                         Custom website development services offer personalized

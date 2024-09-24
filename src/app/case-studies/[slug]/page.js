@@ -61,7 +61,7 @@ const Page = ({ params }) => {
         <div className="container">
           <div className="casestudies_sec">
             <div className="breadcrumb-casestudies">
-              <h1>Case Study for {caseStudyList.title}</h1>
+              <h1>Case Study for {pageData.title}</h1>
 
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
@@ -70,7 +70,7 @@ const Page = ({ params }) => {
                 <li className="breadcrumb-item">
                   <Link href="/case-study">Case Studies</Link>
                 </li>
-                <li className="breadcrumb-item active">{caseStudyList.title}</li>
+                <li className="breadcrumb-item active">{pageData.title}</li>
               </ol>
             </div>
             <div className="row">
@@ -88,9 +88,9 @@ const Page = ({ params }) => {
               <div className="col-xs-12 col-sm-6 col-md-5">
                 <div className="case-studies-pagedtl">
                   <p>
-                    {caseStudyList.short_description &&
+                    {pageData.short_description &&
                       // && typeof pageData.shortDescription === "string"
-                      parse(caseStudyList.short_description)}
+                      parse(pageData.short_description)}
                   </p>
                 </div>
               </div>
@@ -112,9 +112,9 @@ const Page = ({ params }) => {
                     <div className="blog_row_detail">
                       <div className="blog_detail_sectc_bl caseStr">
                         <p>
-                          {caseStudyList.description &&
-                            typeof caseStudyList.description === "string" &&
-                            parse(caseStudyList.description)}
+                          {pageData.description &&
+                            typeof pageData.description === "string" &&
+                            parse(pageData.description)}
                         </p>
                       </div>
                     </div>

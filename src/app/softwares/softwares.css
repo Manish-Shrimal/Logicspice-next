@@ -68,7 +68,7 @@ body {
 
 .job-portal-banner h1 {
   font-size: 53px;
-  font-weight: 600;
+  font-weight: 600 !important;
   color: #fff;
 }
 
@@ -91,14 +91,19 @@ body {
   width: 100%;
 }
 
-.fiverr-new-banner h2 {
-  font-size: 22px;
-  padding-top: 15px;
-  color: #626262;
-  font-family: "roboto", sans-serif;
-  font-weight: normal;
-}
 
+.fiverr-new-banner h2 {
+	font-size: 22px;
+	padding-top: 15px;
+	color: #626262;
+	font-family: 'roboto',sans-serif;
+	font-weight: normal !important;
+}
+.FiverrCloneMainBanner h2 {
+	font-size: 30px;
+	color: #363737;
+  font-weight: normal !important;
+}
 .job-valu {
   display: inline-block;
   width: 100%;
@@ -134,13 +139,13 @@ body {
 
 .NewJobSiteDesign .job-valu .NewPriceDesign h4 {
   vertical-align: top;
-  padding-top: 7px;
+  padding-top: 1px;
   margin-left: 0px;
   color: #258635;
   font-size: 30px;
   margin-bottom: 4px;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 600 !important;
   margin-top: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -154,7 +159,7 @@ body {
 .OfferPriceProduct {
   display: inline-block;
   padding-left: 5px;
-  padding-top: 11px;
+  padding-top: 5px;
 }
 
 .NewPriceDesign .srik_cls {
@@ -270,14 +275,10 @@ body {
   text-transform: uppercase;
 }
 
-.crowdfunding-banner-new .job-valu-btn .btn-get {
-  background: #28c960 !important;
-  color: #fff;
-  border: 2px #28c960 solid;
-}
+
 
 .fiverr-new-banner .job-valu-btn .fiverr-buys {
-  padding: 8px 9px;
+  padding:9px 9px !important;
   margin-top: 0px;
   margin-right: 0;
   width: 150px;
@@ -285,7 +286,7 @@ body {
   margin-bottom: 0;
   color: #363737;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 5px !important;
   border: 2px #363737 solid;
   line-height: 23px;
   font-weight: 600;
@@ -348,7 +349,7 @@ body {
 .job-pr-icon {
   width: 44% !important;
   float: left;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 0px;
   padding-left: 0px;
 }
@@ -369,7 +370,7 @@ body {
   float: left;
   margin-bottom: 0px;
   position: relative;
-  font-size: 30px;
+  font-size: 28px;
   margin-right: 0;
   min-height: 0;
   width: auto;
@@ -411,8 +412,12 @@ body {
 }
 
 .fiverr-new-banner .job-portal-banner-link {
-  bottom: 10px;
+  bottom: 20px;
   z-index: 9;
+}
+#popup_sc_review .modal-header .btn-close {
+	color: #fff !important;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 
 .my-breadcrumb {
@@ -759,27 +764,22 @@ section {
   background: linear-gradient(to right, #100727 0%, #9e9aa7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#100727', endColorstr='#9e9aa7', GradientType=1);
 }
-
 .job_product_page_header_in h2 {
   color: #fff;
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 600 !important;
   padding-bottom: 30px;
 }
-
 .job_product_page_header_in .whateissuprt p {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .SubscriptionModel {
   padding: 40px 0;
 }
-
 .job_or_title {
   text-align: center;
 }
-
 .taxt_tt_job {
   font-size: 33px;
   color: #000;
@@ -787,7 +787,6 @@ section {
   position: relative;
   padding-bottom: 15px;
 }
-
 .taxt_tt_job::before {
   position: absolute;
   left: 50%;
@@ -798,19 +797,16 @@ section {
   height: 3px;
   transform: translate(-50%, 0);
 }
-
 .tab_bbx_job ul li.active::before,
 .taxt_tt_job::before {
   content: "";
   height: 3px;
 }
-
 .SubscriptionModelBx {
   max-width: 810px;
   margin: 0 auto;
   text-align: left;
 }
-
 .SubscriptionModelBx p {
   padding-top: 21px;
   font-size: 18px;
@@ -901,12 +897,12 @@ section {
 }
 
 .SubscriptionModelPriceBx .btn-get {
-  background: #fff;
-  color: #a51077;
-  padding: 9px 20px;
-  font-weight: 600;
-  border-radius: 9px;
-  border: 1px #a51077 solid;
+  background: #fff!important;
+  color: #a51077!important;
+  padding: 9px 20px!important;
+  font-weight: 600!important;
+  border-radius: 9px!important;
+  border: 1px #a51077 solid!important;
 }
 
 .SubscriptionModelPriceBx .btn {
@@ -914,12 +910,12 @@ section {
 }
 
 .SubscriptionModelPriceBx .fiverr-buys {
-  background: #a51077;
-  color: #fff;
-  padding: 9px 20px;
-  font-weight: 600;
-  border-radius: 9px;
-  border: 1px #a51077 solid;
+  background: #a51077!important;
+  color: #fff!important;
+  padding: 9px 20px!important;
+  font-weight: 600!important;
+  border-radius: 9px!important;
+  border: 1px #a51077 solid!important;
 }
 
 .SubscriptionModelPriceBx .jocpp {
@@ -975,14 +971,14 @@ section {
 }
 
 .SubscriptionModelPriceBx .btn-get:hover {
-  background: #a51077;
-  color: #fff;
+  background: #a51077!important;
+  color: #fff!important;
 }
 
 .SubscriptionModelPriceBx .fiverr-buys:hover {
-  background: #fff;
-  color: #a51077;
-  box-shadow: 0 0 15px 0 rgba(165, 16, 119, 0.5);
+  background: #fff!important;
+  color: #a51077!important;
+  box-shadow: 0 0 15px 0 rgba(165, 16, 119, 0.5)!important;
 }
 
 .NewLineBoader img {
@@ -1108,7 +1104,12 @@ section {
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
 }
-
+.small_bbx_job_new .thumbnail-box {
+	min-height: 340px;
+}
+.small_bbx_job_new .productthumbnail-box {
+	min-height: 220px;
+}
 .thumbnail-bx1 {
   background: #e6f0f6;
 }
@@ -1247,7 +1248,7 @@ section {
 .small_bbx_job_new .thumbnail-new h3 {
   font-size: 17px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 700 !important;
   padding-bottom: 8px;
   display: inline-block;
   position: relative;
@@ -1303,6 +1304,9 @@ section {
   display: inline-block;
   margin-bottom: 20px;
   padding: 0 20px;
+  color: #3F3F3F;
+  font-family: 'roboto', sans-serif;
+  font-size: 15px;
 }
 
 .icntechimg {
@@ -1484,6 +1488,7 @@ section {
 
 .who_ratset span {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .enq-section {
@@ -1955,7 +1960,17 @@ section {
 }
 
 /* Job board css end  */
-
+.crowdfunding-banner-new .job-valu-btn .btn-get {
+  background: #28c960 !important;
+  color: #fff;
+  border: 2px #28c960 solid;
+}
+.job-valu-btn .crowdfunding-buys.NewGreenBtnJob, .NewJobSiteDesign .job-valu-btn .NewGreenBtnJob, .NewGreenBtnJob {
+	background: #fff !important;
+	border-color: #258635 !important;
+	color: #258635 !important;
+	font-weight: 500 !important;
+}
 /* Fiverr-clone start*/
 .job-portal-banner {
   color: #fff;
@@ -2051,7 +2066,7 @@ section {
 }
 
 .NewJobSiteDesign  {
-padding-top: 140px;
+  margin-top: 104px;
 }
 
 /* .fiverr-new-banner .job-valu .portal-price h4 {
@@ -2351,9 +2366,12 @@ padding-top: 140px;
 
 /* Market Place Solution start */
 .MarketplaceSoftwareBanner .job-valu-btn .btn-get {
-  background: #ff5757 !important;
-  color: #fff;
-  border: 2px #ff5757 solid;
+	background: #ff5757 !important;
+	color: #fff;
+	border: 2px #ff5757 solid;
+	width: 167px;
+	padding: 8px 9px !important;
+	border-radius: 5px !important;
 }
 
 .MarketplaceSoftwareBanner .job-valu-btn .fiverr-buys {
@@ -2434,11 +2452,16 @@ padding-top: 140px;
 }
 
 .InventoryManagementBanner .job-valu-btn .btn-get {
-  background: #347ae3 !important;
-  color: #fff;
-  border: 2px #347ae3 solid;
+	background: #347ae3 !important;
+	color: #fff;
+	border: 2px #347ae3 solid;
+	width: 167px;
+	padding: 8px 9px !important;
+	border-radius: 5px !important;
 }
-
+.InventoryManagementBanner .job-portal-banner-link {
+	bottom: 0;
+}
 .InventoryManagementBanner .job-valu-btn .fiverr-buys {
   color: #363737;
   border: 2px #363737 solid;
@@ -2804,9 +2827,11 @@ padding-top: 140px;
   color: #000;
   font-size: 50px;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
-
+.FaqUsedTechnologiesSection .used_technology_section_dataa {
+	margin-top: 60px;
+}
 .FaqBannerSection h1 span {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -3413,13 +3438,16 @@ a.StartFreeTrialBtn {
 }
 
 .ecommerce--review--btn .btn-primary {
-  background-color: #451095;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 6px;
-  width: 100%;
-  text-transform: uppercase;
-  font-size: 14px;
+  background-color: #451095!important;
+  border: none!important;
+  padding: 10px 10px!important;
+  border-radius: 6px!important;
+  width: 100%!important;
+  text-transform: uppercase!important;
+  font-size: 14px!important;
+}
+.ecommerce--review--btn .btn-primary:hover {
+  color: #fff!important;
 }
 
 .ecommerce__Quick_FAQ .accordion-item {
@@ -3678,7 +3706,7 @@ a.StartFreeTrialBtn {
 }
 
 .JobBoardNewDesign .job-valu .NewPriceDesign {
-  margin-top: 14px;
+  margin-top: 21px;
 }
 
 /*-------Food-Ordering---*/
@@ -4853,7 +4881,7 @@ before {
   color: #fff;
   cursor: pointer;
   font-size: 16px;
-  height: 38px;
+  height: 32px;
   line-height: 29px;
 }
 
@@ -5176,6 +5204,9 @@ before {
 
 .modal-service .modal-dialog-service .close i {
   position: relative;
+}
+.modal-dialog-service{
+  border-bottom: unset!important;
 }
 
 /* How it works Modal css end  */
@@ -5817,7 +5848,7 @@ before {
     position: relative;
     font-size: 16px;
     padding-left: 30px;
-    background-size: 16px;
+    background-size: 22px;
     background-image: url(/img/jobboard/tick-box.png);
     min-height: 0px;
     background-repeat: no-repeat;
@@ -5825,7 +5856,7 @@ before {
     padding-right: 30px;
     /* width: 49%; */
     font-weight: 500;
-    background-position: left 4px;
+    background-position: left 0;
 }
 
 /* .service-market-say .service-market-ttd li{
@@ -5926,3 +5957,130 @@ before {
 }
 
 /* Lead generation Css end  */
+
+
+.custom-close-button {
+  /* background-color: blue; 
+  color: white; 
+  border: none;
+  font-size: 24px;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%; 
+  position: fixed; */
+  cursor: pointer;
+    border: 0;
+    position: sticky;
+    right: 0;
+    top: 3px;
+    width: 25px;
+    height: 25px;
+    background: #451095;
+    opacity: 1;
+    text-shadow: none;
+    border-radius: 50%;
+    z-index: 99999;
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-close-button:hover {
+  background-color: darkblue; /* Darker blue on hover */
+}
+.tab_bbx_job ul.JobBoardNewtab li {
+	width: calc(100%/3) !important;
+}
+
+
+.JobBoardNewDesign .job-valu .UdemyPortalPrice {
+	margin-top: 2px;
+}
+.classified-banner::after {
+	border-bottom-color: #ed6217;
+}
+.classified-banner .job-valu-btn .btn-get {
+	background: #ed6217 !important;
+	color: #fff;
+	border: 2px #ed6217 solid;
+}
+.classified-banner .job-valu-btn .btn-get:hover {
+	background: #fff !important;
+	color: #ed6217;
+	border: 2px #ed6217 solid;
+}
+.classified-banner .job-pr-icon {
+	margin-top: 20px;
+}
+.fiverr-new-banner .job-pr-icon li i.fa-earth-americas {
+	font-size: 24px;
+}
+.BusinessDirectoryBanner h1 {
+	font-size: 32px;
+}
+.free-img {
+	display: inline-block;
+	width: 130px;
+	overflow: hidden;
+}
+.free-img img {
+  text-align:center;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-animation: zoomin 10s ease-in infinite;
+  animation: zoomin 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+.free-img img {
+  text-align:center;
+  background: none;
+  -webkit-animation: zoomout 10s ease-in infinite;
+  animation: zoomout 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+
+@-webkit-keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+} 
+
+
+@-webkit-keyframes zoomout {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomout {
+    0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}
+.af_ra textarea {
+	height: 80px;
+}

@@ -12,9 +12,72 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import Support from "@/app/Components/Support";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import { Collapse } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How can customers search to make bookings on the app?",
+      content:
+        "Customers can search to make bookings by selecting location or by entering the keywords related to their search.",
+    },
+    {
+      key: "collapseTwo",
+      title:
+        "Can the Customer give rating even if they haven't made a booking?",
+      content:
+        "No. Customer can only give rating out of 5 when they have made a booking. Customer can also write a review along with the rating.",
+    },
+    {
+      key: "collapseThree",
+      title: "Can a Customer cancel the booking?",
+      content:
+        "Yes. The customer can cancel the booking but he should cancel at least an hour before the time of booking.",
+    },
+    {
+      key: "collapseFour",
+      title: "How can a Customer get refund of the cancelled booking?",
+      content:
+        "Once the customer has canceled the booking, they can get refunds in 3-4 working days. Customers can check the refund status on the app.",
+    },
+    {
+      key: "collapseFive",
+      title:
+        "Can a Customer view a list of bookings that he may have made in the past?",
+      content:
+        "Yes. Customers can view their past bookings in the booking history section.",
+    },
+    {
+      key: "collapseSix",
+      title: "Does a Customer need to get registered to make a booking?",
+      content:
+        "Yes, the Customer needs to get registered to make bookings on the app.",
+    },
+    {
+      key: "collapseSeven",
+      title: "How can a candidate rate the booking that he has made?",
+      content:
+        "Once the candidates have made the booking, they will receive a link through which they can give a rating. They can also write a review.",
+    },
+  ];
 
   const openModal = () => {
     console.log(showModal);
@@ -77,9 +140,7 @@ const Page = () => {
                   <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <Link href="/custom-solutions">
-                    Custom Solutions
-                  </Link>
+                  <Link href="/custom-solutions">Custom Solutions</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Booking App Development
@@ -359,7 +420,11 @@ const Page = () => {
               </ul>
 
               <div className="tab-content">
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   <div className="row">
                     <div className="col-sm-3">
                       <div className="ftr-detail">
@@ -468,76 +533,78 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      <section className="faq_logic faq_logic_marketplace">
         <div className="container">
-            <div className="row">
-                <div className="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 className="title_main">Quick FAQ</h4>
-                    
-                    
-                    <MDBAccordion v-model="activeItem" borderless>
-                        <MDBAccordionItem
-                          headerTitle="How can customers search to make bookings on the app?"
-                          collapseId="flush-collapse1">
-                          <p>Customers can search to make bookings by selecting location or by entering the keywords related to their search.</p>
-                        </MDBAccordionItem>
-                         <MDBAccordionItem
-                          headerTitle="Can the Customer give rating even if they havent made a booking?"
-                          collapseId="flush-collapse2">
-                          <p>No. Customer can only give rating out of 5 when they have made a booking. Customer can also write a review along with the rating.</p>
-                        </MDBAccordionItem>
-                       <MDBAccordionItem
-                          headerTitle="Can a Customer cancel the booking?"
-                          collapseId="flush-collapse3">
-                          <p>Yes. The customer can cancel the booking but he should cancel at least an hour before the time of booking.</p>
-                        </MDBAccordionItem>
-                       <MDBAccordionItem
-                          headerTitle="How can a Customer get refund of the cancelled booking?"
-                          collapseId="flush-collapse4">
-                          <p>Once the customer has canceled the booking, they can get refunds in 3-4 working days. Customers can check the refund status on the app.</p>
-                        </MDBAccordionItem>
-                       <MDBAccordionItem
-                          headerTitle="Can a Customer view a list of bookings that he may have made in the past?"
-                          collapseId="flush-collapse5">
-                          <p>Yes. Customers can view their past bookings in the booking history section.</p>
-                        </MDBAccordionItem>
-                       <MDBAccordionItem
-                          headerTitle="Does a Customer needs to get registered to make a booking?"
-                          collapseId="flush-collapse6">
-                          <p> Yes, the Customer needs to get registered to make bookings on the app.</p>
-                        </MDBAccordionItem>
-                        <MDBAccordionItem
-                          headerTitle="How can a candidate rate the booking that he has made?"
-                          collapseId="flush-collapse7">
-                          <p>Once the candidates have made the booking, they will receive the link through which they can give a rating. They can also write a review for it.</p>
-                        </MDBAccordionItem>
-                        
-                        
-                    </MDBAccordion>
-                    
-                </div>
+          <div className="row">
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
             </div>
-        </div>
-    </section>
-      <section className="enq-section">
-        <div className="container">
-      
-            
-      <div className="row">
-        <div className="col-sm-12 col-md-12 text-center">
-          <div className="btn btn-primary" onClick={openModal}>
-            <button>Enquire Now</button>
-            {
-              <Enquirymodal
-                modalStatus={showModal}
-                toggle={openModal}
-                title="Custom Online Booking App Development"
-              />
-            }
           </div>
         </div>
-      </div>
-      </div>
+      </section>
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Custom Online Booking App Development"
+                  />
+                }
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">

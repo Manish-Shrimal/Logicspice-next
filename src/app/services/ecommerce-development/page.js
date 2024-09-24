@@ -1666,7 +1666,7 @@ See how it work yourself!"
                           <h3>Groupon clone</h3>
                           <div className="other-project-logo">
                             <Image
-                              width={100}
+                              width={150}
                               height={100}
                               src="/img/ecommercewebsite/groupon-clone-logo.png"
                               alt="Groupon clone"
@@ -1693,7 +1693,7 @@ See how it work yourself!"
                           <h3>Equipment Rental Script</h3>
                           <div className="other-project-logo">
                             <Image
-                              width={100}
+                              width={230}
                               height={100}
                               src="/img/ecommercewebsite/equipment_logo_new.png"
                               alt="Equipment Rental Script"
@@ -1723,7 +1723,7 @@ See how it work yourself!"
                           <h3>Job Board Software</h3>
                           <div className="other-project-logo">
                             <Image
-                              width={100}
+                              width={250}
                               height={100}
                               src="/img/ecommercewebsite/job-board-logo.png"
                               alt="Job board software"

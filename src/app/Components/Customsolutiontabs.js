@@ -18,21 +18,34 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Certifications" ? "active" : ""}
           onClick={() => handleTabClick("Certifications")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer",  }}
         >
-          <a>
-            <Image width={100} height={100} src="/img/customsolutions/idea.png" alt="#" /> Idea
+          <a style={{display: "flex"}}>
+            <Image
+              width={100}
+              height={100}
+              src="/img/customsolutions/idea.png"
+              alt="#"
+              
+            />{" "}
+            Idea
           </a>
         </li>
         <li
           role="presentation"
           className={activeTab === "Achievements" ? "active" : ""}
           onClick={() => handleTabClick("Achievements")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
-          <a>
+          <a style={{display: "flex"}}>
             <span>
-              <Image width={100} height={100} src="/img/customsolutions/position.png" alt="#" />
+              <Image
+                width={100}
+                height={100}
+                src="/img/customsolutions/position.png"
+                alt="#"
+               
+              />
             </span>{" "}
             Concept
           </a>
@@ -41,14 +54,17 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Affiliates" ? "active" : ""}
           onClick={() => handleTabClick("Affiliates")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
-          <a>
+          <a style={{display: "flex"}}>
             <span>
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 className="lazy"
                 src="/img/customsolutions/implement.png"
                 alt="affiliates_icon"
+               
               />
             </span>{" "}
             Implement
@@ -58,14 +74,17 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Testing" ? "active" : ""}
           onClick={() => handleTabClick("Testing")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
-          <a>
+          <a style={{display: "flex"}}>
             <span>
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 className="lazy"
                 src="/img/customsolutions/implement.png"
                 alt="affiliates_icon"
+                
               />
             </span>{" "}
             Testing
@@ -75,14 +94,17 @@ const Certificationtabs = () => {
           role="presentation"
           className={activeTab === "Support" ? "active" : ""}
           onClick={() => handleTabClick("Support")}
-          style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
         >
-          <a>
+          <a style={{display: "flex"}}>
             <span>
-              <Image width={100} height={100}
+              <Image
+                width={100}
+                height={100}
                 className="lazy"
                 src="/img/customsolutions/implement.png"
                 alt="affiliates_icon"
+                
               />
             </span>{" "}
             Support

@@ -11,11 +11,62 @@ import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import { Collapse } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Support from "@/app/Components/Support";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How much time will be taken to implement the CRM?",
+      content:
+        "Time taken to implement your CRM depends on the level of customization and data migration. CRM implementation time frame generally ranges 5-6 weeks.",
+    },
+    {
+      key: "collapseTwo",
+      title: "Once implemented will we receive some support from your side?",
+      content:
+        "Yes, We will provide one month free support after final delivery of the CRM.",
+    },
+    {
+      key: "collapseThree",
+      title: "What are CRM technical requirements?",
+    content:
+      "There are no such specific technical requirements. All you need to use the CRM system is the internet browser that you are using now. There’s no software to install, so you can use the CRM system on PCs, Macs, iPads and smartphones.",
+  },
+    {
+      key: "collapseFour",
+      title: "Will you share our information with third parties?",
+      content:
+        "We will never sell your information to third parties. The only third parties who will receive any of your data are those who you choose to grant data, or who need data in order to implement your services, such as a payment processor.",
+    },
+    {
+      key: "collapseFive",
+      title: "How much Server Memory is required for the CRM?",
+      content:
+        "Database server memory size is critical to performance and should be no less than the anticipated database size after one year plus 1 gigabyte.",
+    },
+    {
+      key: "collapseSix",
+      title: "How much disk space will be required?",
+      content:
+        "The amount of disk space required varies widely based on the number of customer records, archiving plans, and backup policies. The disk space can also vary widely based on the amount of information held for each customer. Therefore, it is important to try to estimate this prior to installation and purchase sufficient disk storage to allow for significant growth in the volume of data.",
+    },
+    {
+      key: "collapseSeven",
+      title: "Does it matter which kind of user uses the CRM?",
+      content:
+        "It is important to keep in mind what type of user will be working with the system. For example, 200 call center users use the system more intensively than 200 sales and marketing users.",
+    },
+  ];
 
   const openModal = () => {
     console.log(showModal);
@@ -75,9 +126,7 @@ const Page = () => {
                   <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <Link href="/custom-solutions">
-                    Custom Solutions
-                  </Link>
+                  <Link href="/custom-solutions">Custom Solutions</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   CRM Software
@@ -196,7 +245,7 @@ const Page = () => {
       </div>
       <div className="demand_app">
         <div className="container">
-          <h2>Key Benefits of Our Auction Software On Demand Development</h2>
+          <h2>Key Benefits of Our On Demand CRM Software Development</h2>
 
           <div className="row">
             <div className="col-sm-4">
@@ -367,7 +416,11 @@ const Page = () => {
               </ul>
 
               <div className="tab-content">
-                <div role="tabpanel" className="tab-pane active" id="features-car1">
+                <div
+                  role="tabpanel"
+                  className="tab-pane active"
+                  id="features-car1"
+                >
                   {/* <div className="row">
                     <div className="col-sm-3">
                       <div className="ftr-detail">
@@ -622,81 +675,168 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 className="title_main">Quick FAQ</h4>
-                    
-                    <MDBAccordion v-model="activeItem" borderless>
-                        <MDBAccordionItem
-                          headerTitle="How much time will be taken to implement the CRM?"
-                          collapseId="flush-collapse1">
-                          <p>Time taken to implement your CRM depends on the level of customization and data migration. CRM implementation time frame generally ranges 5-6 weeks.</p>
-                        </MDBAccordionItem>
-        <MDBAccordionItem
-                          headerTitle="Once implemented will we receive some support from your side?"
-                          collapseId="flush-collapse2">
-                          <p>Yes, We will provide one month free support after final delivery of the CRM.</p>
-                        </MDBAccordionItem>
-        <MDBAccordionItem
-                          headerTitle="What are CRM technical requirements?"
-                          collapseId="flush-collapse3">
-                          <p>There are no such specific technical requirements. All you need to use the CRM system is the internet browser that you are using now. Thereâ€™s no 
-software to install, so you can use the CRM system on PCs, Macs, iPads and smartphones.</p>
-                        </MDBAccordionItem>
-        <MDBAccordionItem
-                          headerTitle="Will you share our information with third parties?"
-                          collapseId="flush-collapse4">
-                          <p>We will never sell your information to third parties. The only third parties who will receive any of your data are those who you choose to grant data, 
-or who need data in order to implement your services, such as a payment processor.</p>
-                        </MDBAccordionItem>
-        <MDBAccordionItem
-                          headerTitle="How much Server Memory is required for the CRM?"
-                          collapseId="flush-collapse5">
-                          <p>Database server memory size is critical to performance and should be no less than the anticipated database size after one year plus 1 gigabyte.</p>
-                        </MDBAccordionItem>
-        <MDBAccordionItem
-                          headerTitle="How much disk space will be required?"
-                          collapseId="flush-collapse6">
-                          <p>The amount of disk space required varies widely based on the number of customer records, archiving plans, and backup policies. The disk space can also 
-vary widely based on the amount of information held for each customer. Therefore, it is important to try to estimate this prior to installation and purchase sufficient disk storage 
-to allow for significant growth in the volume of data.</p>
-                        </MDBAccordionItem>
-        <MDBAccordionItem
-                          headerTitle="Does it matter which kind of user uses the CRM?"
-                          collapseId="flush-collapse7">
-                          <p>It is important to keep in mind what type of user will be working with the system. For example, 200 call center users use the system more intensively 
-than 200 sales and marketing users.</p>
-                        </MDBAccordionItem>
-                         
-                        
-                        
-                    </MDBAccordion>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    <section className="enq-section">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 col-md-12 text-center">
-            <div className="btn btn-primary" onClick={openModal}>
-            <button>Enquire Now</button>
-            {
-              <Enquirymodal
-                modalStatus={showModal}
-                toggle={openModal}
-                title="Custom CRM App Development Solution"
-              />
-            }
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">Quick FAQ</h4>
+
+              <MDBAccordion v-model="activeItem" borderless>
+                <MDBAccordionItem
+                  headerTitle="How much time will be taken to implement the CRM?"
+                  collapseId="flush-collapse1"
+                >
+                  <p>
+                    Time taken to implement your CRM depends on the level of
+                    customization and data migration. CRM implementation time
+                    frame generally ranges 5-6 weeks.
+                  </p>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  headerTitle="Once implemented will we receive some support from your side?"
+                  collapseId="flush-collapse2"
+                >
+                  <p>
+                    Yes, We will provide one month free support after final
+                    delivery of the CRM.
+                  </p>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  headerTitle="What are CRM technical requirements?"
+                  collapseId="flush-collapse3"
+                >
+                  <p>
+                    There are no such specific technical requirements. All you
+                    need to use the CRM system is the internet browser that you
+                    are using now. Thereâ€™s no software to install, so you can
+                    use the CRM system on PCs, Macs, iPads and smartphones.
+                  </p>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  headerTitle="Will you share our information with third parties?"
+                  collapseId="flush-collapse4"
+                >
+                  <p>
+                    We will never sell your information to third parties. The
+                    only third parties who will receive any of your data are
+                    those who you choose to grant data, or who need data in
+                    order to implement your services, such as a payment
+                    processor.
+                  </p>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  headerTitle="How much Server Memory is required for the CRM?"
+                  collapseId="flush-collapse5"
+                >
+                  <p>
+                    Database server memory size is critical to performance and
+                    should be no less than the anticipated database size after
+                    one year plus 1 gigabyte.
+                  </p>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  headerTitle="How much disk space will be required?"
+                  collapseId="flush-collapse6"
+                >
+                  <p>
+                    The amount of disk space required varies widely based on the
+                    number of customer records, archiving plans, and backup
+                    policies. The disk space can also vary widely based on the
+                    amount of information held for each customer. Therefore, it
+                    is important to try to estimate this prior to installation
+                    and purchase sufficient disk storage to allow for
+                    significant growth in the volume of data.
+                  </p>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  headerTitle="Does it matter which kind of user uses the CRM?"
+                  collapseId="flush-collapse7"
+                >
+                  <p>
+                    It is important to keep in mind what type of user will be
+                    working with the system. For example, 200 call center users
+                    use the system more intensively than 200 sales and marketing
+                    users.
+                  </p>
+                </MDBAccordionItem>
+              </MDBAccordion>
+            </div>
           </div>
+        </div>
+      </section> */}
+      <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ecommerce__Quick_FAQ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
-      
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
+                <button>Enquire Now</button>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Custom CRM App Development Solution"
+                  />
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="quoue_box_full_sec">
         <div className="whatsapp-call">

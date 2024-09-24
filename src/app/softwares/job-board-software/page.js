@@ -190,11 +190,11 @@ const Page = () => {
                   </div>
 
                   <a
-                    className="btn fiverr-buys NewGreenBtnJob"
+                    className=" fiverr-buys NewGreenBtnJob text-center"
                     href="/buy-now/job-board-software"
                     id="buy_now_1"
                   >
-                    Buy Now
+                   BUY NOW
                   </a>
                 </div>
                 <div
@@ -436,7 +436,7 @@ const Page = () => {
 
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
-              <ul className="fiverrClone">
+              <ul className="JobBoardNewtab">
                 <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
@@ -481,217 +481,7 @@ const Page = () => {
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright">
-                          {/* <ul>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/secure_login.png"
-                                />
-                              </i>
-                              <span>
-                                Secure Login
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can log in securely using Facebook,
-                                    Gmail or Email
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/add_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Create New Gig & Post Gig
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can post the gigs by creating new gig
-                                    and adding Gig Title, Category, SubCategory
-                                    & Tags.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Gigs
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view list of Gigs & can
-                                    manage(view/add/edit/delete) Gigs. Seller
-                                    can create gig by adding Gig Title,
-                                    Category, SubCategory & Tags.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/admin_dash.png"
-                                />
-                              </i>
-                              <span>
-                                Seller Dashboard
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the dashboard with the total
-                                    number of counts & Statistics.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/gig_gallery.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Buyer Request
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the list of Active Request &
-                                    Offers sent by Buyers & can manage Active
-                                    Request & Offers.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/view_public.png"
-                                />
-                              </i>
-                              <span>
-                                Preview Public Mode
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the public view of their
-                                    profile after making updates in profile with
-                                    ratings & reviews.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/reviews_ratings.png"
-                                />
-                              </i>
-                              <span>
-                                View Reviews & Ratings
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the reviews & rating Buyer
-                                    has received on the portal.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage-notifi.png"
-                                />
-                              </i>
-                              <span>
-                                View Notifications
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can get updates through the
-                                    notifications.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_profile.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Profile
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view their profile & can change
-                                    password & PayPal email address.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/contact.png"
-                                />
-                              </i>
-                              <span>
-                                Buyers Contact
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can find the contact of Buyer using
-                                    this portal.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_selling_order.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Gig Order
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can receive the order for posted gig
-                                    & Seller can manage(add/edit/delete) gigs.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image unoptimized={true} width ={100} height ={100}
-                                  alt="img"
-                                  src="/img/jobboard/view_order.png"
-                                />
-                              </i>
-                              <span>
-                                Get Payment
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can receive the payment for the gig &
-                                    can keep track of the transaction history.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                          </ul> */}
+                        
                           <ul>
                             <li>
                               <i className="JobBoardImg">
@@ -2355,7 +2145,7 @@ const Page = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      sellfomote.ch
                     </Link>
                   </div>
                   <Link
@@ -2367,7 +2157,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/sellfomote.jpg"
+                      src="/img/jobboard/sellfomote.webp"
                       alt="icon"
                       title=""
                       className="img-fluid"

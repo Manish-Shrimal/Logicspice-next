@@ -1886,7 +1886,16 @@ See how it work yourself!"
           id="jobportal"
           className="modal-service"
         >
-          <Modal.Header closeButton></Modal.Header>
+          <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <Image
               unoptimized={true}
@@ -1898,14 +1907,7 @@ See how it work yourself!"
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
+         
         </Modal>
 
         <Modal
@@ -1914,10 +1916,16 @@ See how it work yourself!"
           id="buyjobportal"
           className="modal-service"
         >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
+         <Modal.Header className="modal-dialog-service">
+            <button
+              type="button"
+              className="custom-close-button"
+              aria-label="Close"
+              onClick={toggleBuyJobPortalModal}
+            >
+              &times;
+            </button>
+          </Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...settings}>
@@ -2080,14 +2088,7 @@ See how it work yourself!"
               </Slider>
             </div>
           </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
+          
         </Modal>
       </div>
       <section className="used_technology_section" id="technologies">
