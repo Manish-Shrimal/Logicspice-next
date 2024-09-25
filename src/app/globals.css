@@ -5280,40 +5280,40 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel-banner-txt h1 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .laravel-descriptions-bx h2 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
   .nodejs-development .laravel-descriptions-bx h2{
-    font-size: 20px;
+    font-size: 20px!important;
   }
   .nodejs-development .laravel_core_features_section{
-    padding: 50px 0 0;
-    background-color: #f00;
-    background-image: none;
+    padding: 50px 0 0!important;
+    background-color: #f00!important;
+    background-image: none!important;
   }
 
   .laravel-descriptions {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
   }
   .laravel-descriptions-bx p {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   .laravel-descriptions-bx {
-    padding: 20px;
+    padding: 20px!important;
   }
 
   .laravel_img {
-    text-align: center;
-    padding: 15px 0;
+    text-align: center!important;
+    padding: 15px 0!important;
   }
 
   .laravel_img img {
-    width: 80px;
+    width: 80px!important;
   }
 
   .laravel-devlopments-services h2 {
@@ -5321,19 +5321,19 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel_core_features_section h2 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
   .laravel_core_features_detail h3{
-    font-size: 18px;
+    font-size: 18px!important;
   }
   .laravel_core_features_detail p {
-    font-size: 14px;
+    font-size: 14px!important;
 }
   .laravel_core_sub2 {
-    font-size: 14px;
+    font-size: 14px!important;
   }
   .laravel_core_sub {
-    font-size: 14px;
+    font-size: 14px!important;
   }
   .laravel_service_box h3 {
     font-size: 18px!important;
@@ -5343,13 +5343,13 @@ body.modal-open .quote_pop_plus {
     font-size: 14px!important;
   }
   .laravel_core_features_section {
-    padding: 50px 0 0;
-    background-color: #f00;
-    background-image: none;
+    padding: 50px 0 0!important;
+    background-color: #f00!important;
+    background-image: none!important;
   }
 
   .laravel_core_features_bx {
-    margin-top: 60px;
+    margin-top: 60px!important;
   }
 
   .laravel_core_features_img {
@@ -5374,23 +5374,23 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel_choose_features_section h2 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
   .laravel_choose_details h3 {
-    font-size: 18px;
+    font-size: 18px!important;
 }
 .laravel-portfolio-php-dev {
-  display: none;
+  display: none!important;
 }
 
   .libraries_laravel_choose {
-    padding: 20px 20px;
-    text-align: center;
+    padding: 20px 20px!important;
+    text-align: center!important;
   }
 
   .laravel_choose_features_img {
-    float: none;
-    display: inline-block;
+    float: none!important;
+    display: inline-block!important;
   }
 
   .laravel_choose_details {
@@ -5409,7 +5409,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel-banner-txt {
-    padding-top: 50px;
+    padding-top: 50px!important;
   }
 
   .phpweb_features_bx .laravel_core_features_img {
@@ -5418,7 +5418,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .phpweb-banner .laravel-banner-txt {
-    padding-top: 50px;
+    padding-top: 50px!important;
   }
 
   .devops-descriptions .laravel_img {
@@ -5500,7 +5500,7 @@ body.modal-open .quote_pop_plus {
 }
 
   .PythonBanner .laravel-banner-txt {
-    padding-top: 40px;
+    padding-top: 40px!important;
   }
 
   .ContractHireBanner .page_img {
@@ -5617,9 +5617,9 @@ body.modal-open .quote_pop_plus {
     padding-bottom: 10px;
   }
   .codeigniter-development .laravel_core_features_section{
-    padding: 50px 0 0;
-    background-color: #f00;
-    background-image: none;
+    padding: 50px 0 0!important;
+    background-color: #f00!important;
+    background-image: none!important;
   }
 
   .HomeSliderJobSlide h2 {
@@ -6260,7 +6260,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .BigdataBanner .laravel-banner-txt {
-    padding-top: 0px;
+    padding-top: 0px!important;
   }
 
   .CertificationsLaravel {
