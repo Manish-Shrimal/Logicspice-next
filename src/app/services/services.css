@@ -102,6 +102,10 @@ section {
     color: #bdb2f0;
     text-decoration: underline!important;
 }
+.laravel-descriptions-bx  .PhpProgramingLink{
+	color: #fff!important;
+    text-decoration: underline!important;
+}
 .laravel-banner-txt {
 	padding-top: 50px;
 }
@@ -654,9 +658,9 @@ section {
         padding-top: 10px;
     }
     
-    /* .laravel_choose_features_section {
+    .laravel_choose_features_section {
         padding: 60px 0;
-    } */
+    }
     
     .laravel_choose_features_bx {
         display: inline-block;
@@ -1672,9 +1676,9 @@ section {
     .ecommerce-portal-banner {
         background: #fff7f8;
         padding-bottom: 0;
-        padding: 140px 0 0;
+        padding: 70px 0 ;
         position: relative;
-		margin-top: 60px;
+		margin-top: 100px;
     }
     .ecommerce-portal-banner {
         position: relative;
@@ -3660,6 +3664,9 @@ section.new-why-choose-section.sass_title h2 span {
 }
 .laravel-anquire .btn {
 	margin-right: 5px;
+}
+.node-js-banner .laravel-banner-txt {
+    padding-top: 20px;
 }
 .AngularDescriptions .laravel_img {
 	text-align: center;

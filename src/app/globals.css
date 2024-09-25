@@ -5286,6 +5286,14 @@ body.modal-open .quote_pop_plus {
   .laravel-descriptions-bx h2 {
     font-size: 20px;
   }
+  .nodejs-development .laravel-descriptions-bx h2{
+    font-size: 20px;
+  }
+  .nodejs-development .laravel_core_features_section{
+    padding: 50px 0 0;
+    background-color: #f00;
+    background-image: none;
+  }
 
   .laravel-descriptions {
     padding-top: 16px;
@@ -5328,11 +5336,11 @@ body.modal-open .quote_pop_plus {
     font-size: 14px;
   }
   .laravel_service_box h3 {
-    font-size: 18px;
+    font-size: 18px!important;
   }
   .laravel_service_box p {
-    padding-top: 10px;
-    font-size: 14px;
+    padding-top: 10px!important;
+    font-size: 14px!important;
   }
   .laravel_core_features_section {
     padding: 50px 0 0;
@@ -5486,6 +5494,11 @@ body.modal-open .quote_pop_plus {
     padding: 10px 14px;
   }
 
+  .ReadyMadeScriptSection .TopHadding p {
+    font-size: 14px;
+    padding: 10px 0;
+}
+
   .PythonBanner .laravel-banner-txt {
     padding-top: 40px;
   }
@@ -5602,6 +5615,11 @@ body.modal-open .quote_pop_plus {
     font-size: 15px;
     min-height: 66px;
     padding-bottom: 10px;
+  }
+  .codeigniter-development .laravel_core_features_section{
+    padding: 50px 0 0;
+    background-color: #f00;
+    background-image: none;
   }
 
   .HomeSliderJobSlide h2 {
@@ -6610,6 +6628,7 @@ body.modal-open .quote_pop_plus {
 
   .ecommerce-portal-banner {
     padding-top: 90px;
+    margin-top: 0;
   }
 
   .step-customized .col-sm-offset-6 {
