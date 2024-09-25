@@ -34,16 +34,55 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
+  // var portfolio = {
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  // };
   var portfolio = {
     dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 21,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024, // screen width less than or equal to 1024px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768, // screen width less than or equal to 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 480, // screen width less than or equal to 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false, // hide arrows on smaller screens
+          dots: true,
+        },
+      },
+    ],
   };
+  
   const [activeTab, setActiveTab] = useState("tab2");
   const [customerTab, setCustomerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
@@ -101,7 +140,10 @@ const Page = () => {
                   <h2>Best eCommerce Web Design Packages</h2>
                 </div>
                 <div className="job-valu">
-                  <div className="portal-price"></div>
+                <div class="portal-price">
+                        <strike class="srik_cls">₹17,248<span class="sml_labl"> INR</span><small>/Month</small></strike>
+                        <h4>₹4,435<span class="sml_labl"> INR</span><small>/Month</small></h4>
+                    </div>
                   <div className="ecommerce-valu-btn">
                     <div className="job-valu-btn">
                       <div

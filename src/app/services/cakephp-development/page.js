@@ -645,7 +645,7 @@ const Page = () => {
               </div>
               <div className="col-sm-12 main_btn_hire">
                 <div className="btn btn-primary" onClick={openModal}>
-                  <button>Enquire Now</button>
+                  <a>Enquire Now</a>
                   {
                     <Enquirymodal
                       modalStatus={showModal}

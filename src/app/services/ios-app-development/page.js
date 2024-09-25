@@ -22,6 +22,25 @@ const Page = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024, // Screen width less than 1024px
+        settings: {
+          slidesToShow: 2, // Show 2 slides on medium screens
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true, // Optional, to hide arrows on smaller screens
+        },
+      },
+      {
+        breakpoint: 600, // Screen width less than 600px (small screens)
+        settings: {
+          slidesToShow: 2, // Show 1 slide on small screens
+          slidesToScroll: 1,
+          arrows: true, // Optional
+        },
+      },
+    ],
   };
   var casestudy = {
     dots: false,

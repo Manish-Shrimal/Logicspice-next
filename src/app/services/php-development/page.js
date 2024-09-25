@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../resposive.css";
 
 const Page = () => {
@@ -683,7 +684,7 @@ const Page = () => {
               </div>
               <div className="col-sm-12 main_btn_hire">
                 <div className="btn btn-primary" onClick={openModal}>
-                  <button>Enquire Now</button>
+                  <a>Enquire Now</a>
                   {
                     <Enquirymodal
                       modalStatus={showModal}

@@ -5317,8 +5317,14 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel-devlopments-services h2 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
+
+  .phpweb_features_bx .laravel_core_featureBox .laravel_core_features_img {
+    top: -43px !important;
+    transform: translate(-50%, 0%) !important;
+    left: 50%;
+}
 
   .laravel_core_features_section h2 {
     font-size: 20px!important;
@@ -5353,11 +5359,27 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel_core_features_img {
-    top: -43px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    top: -43px!important;
+    left: 50%!important;
+    transform: translate(-50%, 0)!important;
   }
-
+  .LaravelTestimonialSection h2 {
+    font-size: 22px!important;
+}
+.LaravelTestimonialMain {
+  margin-top: 10px!important;
+}
+.QuotesLaravel {
+  position: initial!important;
+  width: 28px!important;
+}
+.LaravelTestimonial {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+.LaravelTestimonial h6 {
+  font-size: 13px!important;
+}
   .laravel_core_features_detail {
     width: 100%;
     padding: 66px 20px 20px;
@@ -5365,8 +5387,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel_core_featureBox {
-    width: 100%;
-    margin: 10px 0 60px;
+    width: 100%!important;
+    margin: 10px 0 60px!important;
   }
 
   .laravel_core_features_section {
@@ -5491,12 +5513,12 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel-anquire .btn {
-    padding: 10px 14px;
+    padding: 10px 14px!important;
   }
 
   .ReadyMadeScriptSection .TopHadding p {
-    font-size: 14px;
-    padding: 10px 0;
+    font-size: 14px!important;
+    padding: 10px 0!important;
 }
 
   .PythonBanner .laravel-banner-txt {
@@ -5546,8 +5568,12 @@ body.modal-open .quote_pop_plus {
   }
 
   .TopHadding h2 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
+  .laravel_choose_features_bx {
+    margin-top: 30px!important;
+}
+
 
   .WebFeaturesSection::before {
     display: none;
@@ -5802,6 +5828,20 @@ body.modal-open .quote_pop_plus {
     width: 153px;
   }
 
+  .SatisfyDemandModernBusiness1 h2 {
+    margin-top: 0px !important;
+}
+.SatisfyDemandModernBusiness1 .mobil-bg_h {
+  display: none;
+}
+
+.devide_secs_icn {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
   .job-portal-banner ul {
     text-align: center;
   }
@@ -5832,11 +5872,11 @@ body.modal-open .quote_pop_plus {
   }
 
   .service-market-ttd h2 {
-    font-size: 30px;
+    font-size: 30px!important;
   }
 
   .service-market-ttd li {
-    width: 100%;
+    width: 100%!important;
   }
 
   .ecommerce-admin-bax2,
@@ -5873,14 +5913,18 @@ body.modal-open .quote_pop_plus {
   .ecommerce__Quick_FAQ .title_main::before {
     display: none;
   }
+.ecommerce__Quick_FAQ_Script .title_main {
+    padding-bottom: 28px;
+    font-size: 22px;
+}
 
   .client-say.ecommerce-say {
     padding: 20px 0;
   }
 
   .ecommerce-web-proje {
-    position: relative;
-    padding-top: 0;
+    position: relative!important;
+    padding-top: 0!important;
   }
 
   .ecommerce-squre-bg,
@@ -6536,8 +6580,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .ecommerce-web-proje {
-    position: relative;
-    padding-top: 0;
+    position: relative!important;
+    padding-top: 0!important;
   }
 
   .window-desktop {
@@ -7447,4 +7491,13 @@ button.close {
     -webkit-box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+
+
+.ModalContentEnqury .form-group iframe {
+  transform: scale(0.88);
+  -webkit-transform: scale(0.88);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
 }

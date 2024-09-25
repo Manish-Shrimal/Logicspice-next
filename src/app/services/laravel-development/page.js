@@ -316,7 +316,12 @@ const Page = () => {
           <div className="TopHadding">
             <h2>Our Ready-Made Softwares Developed Using Laravel</h2>
             <p>
-            Discover how our range of ready-made solutions can boost your Laravel development experience, taking your business to the next level. Whether you're in need of a robust Job Board, efficient Logistic Management System, or optimized Recruitment Management System, these software offer powerful solutions that can be further customized to your requirements as well.
+              Discover how our range of ready-made solutions can boost your
+              Laravel development experience, taking your business to the next
+              level. Whether you're in need of a robust Job Board, efficient
+              Logistic Management System, or optimized Recruitment Management
+              System, these software offer powerful solutions that can be
+              further customized to your requirements as well.
             </p>
           </div>
           <div className="row">
@@ -334,7 +339,9 @@ const Page = () => {
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <Link href="/softwares/job-board-software">Job Board Software</Link>
+                    <Link href="/softwares/job-board-software">
+                      Job Board Software
+                    </Link>
                   </h3>
                   <p>
                     Streamline your Business Hiring with our Job Board Software
@@ -357,7 +364,9 @@ const Page = () => {
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <Link href="/softwares/logistic-marketplace-software">Logistic Software</Link>
+                    <Link href="/softwares/logistic-marketplace-software">
+                      Logistic Software
+                    </Link>
                   </h3>
                   <p>
                     Efficiently enhance your logistics operations smoothly using
@@ -380,7 +389,9 @@ const Page = () => {
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <Link href="/softwares/recruitment-management-software">Recruitment Management Software</Link>
+                    <Link href="/softwares/recruitment-management-software">
+                      Recruitment Management Software
+                    </Link>
                   </h3>
                   <p>
                     Simplify your hiring process with our Recruitment Management
@@ -800,9 +811,10 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>Pre-Installed Libraries</h3>
                     <p>
-                      Laravel has a lot of object oriented libraries<br/> already
-                      installed. Some libraries like<br/> authentication are quite
-                      useful in maintaining the<br/> web application secure.
+                      Laravel has a lot of object oriented libraries
+                      <br /> already installed. Some libraries like
+                      <br /> authentication are quite useful in maintaining the
+                      <br /> web application secure.
                     </p>
                   </div>
                 </div>
@@ -843,9 +855,11 @@ const Page = () => {
                   <div className="laravel_choose_details">
                     <h3>MVC Architecture Support</h3>
                     <p>
-                      Alike other PHP frameworks, Laravel follows<br/>
-                      <b>MVC structure</b> as well. This architecture <br/>provides
-                      quick functioning and is suitable<br/> for large codes.
+                      Alike other PHP frameworks, Laravel follows
+                      <br />
+                      <b>MVC structure</b> as well. This architecture <br />
+                      provides quick functioning and is suitable
+                      <br /> for large codes.
                     </p>
                   </div>
                 </div>

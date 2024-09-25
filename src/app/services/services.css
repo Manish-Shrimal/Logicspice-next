@@ -59,7 +59,7 @@ body {
 	overflow: hidden!important;
 	font-family: 'lato', sans-serif!important;
 }
-.btn button{ text-transform: uppercase;}
+/* .btn button{ text-transform: uppercase;} */
 section {
     float: left;
     width: 100%;
@@ -191,7 +191,7 @@ section {
 	color: #303030;
 	font-size: 40px;
 	font-family: 'roboto', sans-serif;
-	font-weight: 500;
+	font-weight: 500!important;
 }
 .CertificationsLaravel {
 	display: inline-block;
@@ -709,7 +709,7 @@ section {
         color: #303030;
         font-size: 24px;
         font-family: 'roboto', sans-serif;
-        font-weight: 500;
+        font-weight: 500!important;
     }
     
     .laravel_choose_details p {
@@ -776,7 +776,7 @@ section {
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin-top: 40px;
+        /* margin-top: 40px; */
     }
     #laravel-slader .slick-slide {
         opacity: 0.3;
@@ -870,7 +870,7 @@ section {
         background-size: cover;
     }
     .cackphp-descriptions .laravel_img {
-        padding: 200px 0 0;
+        padding: 320px 0 0;
     }
     .PhpProgramingLink{ color: #fff; font-weight: 600; text-decoration: underline; text-transform: capitalize; }
 /**-codeIgniter--*/
@@ -1272,7 +1272,7 @@ section {
     }
     .iphone_template_header_right {
         padding-right: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         text-align: center;
         position: relative;
     }
@@ -1403,10 +1403,10 @@ section {
         width: 226px;
     }
     .home-project__clip + .wrap {
-        display: table;
-        margin-left: 40%;
-        padding-top: 150px;
-        position: relative;
+        display: table!important;
+        margin-left: 40%!important;
+        padding-top: 150px!important;
+        position: relative!important;
     }
     .apps_portfolioshowe_right_wrap {
         width: 70%;
@@ -2325,7 +2325,7 @@ section {
     .ecommerce-web-proje h2 {
         color: #fff;
         font-size: 32px;
-        font-weight: 600;
+        font-weight: 600!important;
     }
     .ecommerce-web-proje p {
         color: #fff;
@@ -2417,7 +2417,7 @@ section {
     }
     .ecommerce_review_section h2 {
         font-size: 34px;
-        font-weight: 600;
+        font-weight: 600!important;
         color: #303030;
         text-align: center;
         padding-bottom: 30px;
@@ -2555,9 +2555,9 @@ section {
         }
         .JobBoardFaqSection .ecommerce__Quick_FAQ .title_main {
             text-align: center;
-            font-size: 38px;
+            font-size: 38px!important;
             margin-bottom: 45px;
-            font-weight: 600;
+            font-weight: 600!important;
             color: #303030;
             border-bottom: 1px #ddd solid;
             padding-bottom: 50px;
@@ -3441,7 +3441,7 @@ section.new-why-choose-section.sass_title h2 span {
 	width: 100%;
 }
 .industry_block h4 {
-	/* font-family: lato; */
+	font-family: lato;
 	color: #fff;
 	text-align: center;
 	padding: 20px;
@@ -3666,7 +3666,7 @@ section.new-why-choose-section.sass_title h2 span {
 	margin-right: 5px;
 }
 .node-js-banner .laravel-banner-txt {
-    padding-top: 20px;
+    padding-top: 20px!important;
 }
 .AngularDescriptions .laravel_img {
 	text-align: center;
