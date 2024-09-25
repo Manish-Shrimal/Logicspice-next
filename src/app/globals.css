@@ -5413,8 +5413,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .phpweb_features_bx .laravel_core_features_img {
-    top: -43px;
-    transform: translate(-50%, 0%);
+    top: -43px!important;
+    transform: translate(-50%, 0%)!important;
   }
 
   .phpweb-banner .laravel-banner-txt {

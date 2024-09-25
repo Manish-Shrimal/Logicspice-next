@@ -185,7 +185,7 @@ section {
 }
 .laravel-banner .page_img img{ display: inline-block;}
 .phpweb-banner .laravel-banner-txt {
-	padding-top: 20px;
+	padding-top: 20px!important;
 }
 .laravel-banner-txt h1 {
 	color: #303030;
@@ -3207,8 +3207,8 @@ section.new-why-choose-section.sass_title h2 span {
     padding: 13px 10px 10px 59px;
 }
 .phpweb_features_bx .laravel_core_features_img {
-    top: 50%;
-    transform: translate(0,-50%);
+    top: 50%!important;
+    transform: translate(0,-50%)!important;
 }
 .php-development .laravel_choose_details p {
     font-family: 'roboto', sans-serif;
