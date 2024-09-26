@@ -14,6 +14,7 @@ import Ourclient from "@/app/Components/Ourclient";
 import Blogslider from "@/app/Components/Blogslider";
 import BlogSliderDynamic from "@/app/Components/BlogSliderDynamic";
 import Enquirymodal from "@/app/Components/Enquirymodal";
+import HTMLReactParser from "html-react-parser";
 
 const Page = ({ params }) => {
   const [pageData, setPageData] = useState([]);
@@ -50,6 +51,7 @@ const Page = ({ params }) => {
     getData();
   }, []);
 
+
   const toggleCaseStudies = () => {
     setShowAllCaseStudies(!showAllCaseStudies);
   };
@@ -77,11 +79,13 @@ const Page = ({ params }) => {
               <div className="col-xs-12 col-sm-6 col-md-6">
                 <div className="blog_detail_bgs_img">
                   <Image
-                    width={150000}
-                    height={100}
-                    src={caseStudyImagePath.current + caseStudyList.image}
-                    alt=" We do it Cheaper-logicspice"
-                    className="attachment-full size-full wp-post-image"
+                    unoptimized={false}
+                    src={caseStudyImagePath.current + pageData.image}
+                    alt={pageData.title}
+                    width={2000}
+                    height={500/(100/100)}
+                    
+                    // className="attachment-full size-full wp-post-image"
                   />{" "}
                 </div>
               </div>
@@ -90,7 +94,7 @@ const Page = ({ params }) => {
                   <p>
                     {pageData.short_description &&
                       // && typeof pageData.shortDescription === "string"
-                      parse(pageData.short_description)}
+                      HTMLReactParser(pageData.short_description)}
                   </p>
                 </div>
               </div>

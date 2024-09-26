@@ -181,13 +181,13 @@ const Page = () => {
                     working skills. CodeIgniter web development service creates
                     elite web designs suiting to the latest trends in the mobile
                     applications&sbquo;{" "}
-                    <a
+                    <Link
                       className="PhpProgramingLink"
-                      href="https://www.logicspice.com/php-programing"
+                      href="/services/php-development"
                       target="_blank"
                     >
                       PHP programming services.
-                    </a>
+                    </Link>
                     Our services have been proven to enhance innovative and
                     inventive outcomes. Our softwares are assorted over a
                     diverse range with result oriented goals. It serves as a

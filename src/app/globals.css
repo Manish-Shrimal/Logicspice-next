@@ -5378,9 +5378,9 @@ body.modal-open .quote_pop_plus {
   font-size: 13px!important;
 }
   .laravel_core_features_detail {
-    width: 100%;
-    padding: 66px 20px 20px;
-    text-align: center;
+    width: 100%!important;
+    padding: 66px 20px 20px!important;
+    text-align: center!important;
   }
 
   .laravel_core_featureBox {
@@ -7496,3 +7496,16 @@ button.close {
   transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
 }
+
+
+/* .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+} */

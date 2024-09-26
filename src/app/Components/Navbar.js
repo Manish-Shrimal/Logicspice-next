@@ -841,7 +841,7 @@ const Navbar = () => {
                           onMouseEnter={() => setDropdown5(true)}
                           onMouseLeave={() => setDropdown5(false)}
                         >
-                          <i className="fa fa-phone"></i>{" "}
+                          <i class="fa fa-phone" aria-hidden="true"></i>
                           <b className="caret"></b>
                         </a>
                         <div

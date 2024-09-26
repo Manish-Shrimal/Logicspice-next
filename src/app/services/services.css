@@ -300,6 +300,7 @@ section {
 .ReadyMadeScriptTxt h3 a {
 	padding-bottom: 4px;
 }
+.ReadyMadeScriptTxt h3 a:hover{color: #451095!important ; border-bottom: 1px #451095 solid!important}
 .ReadyMadeScriptTxt p {
 	padding: 15px 15px;
 	color: #303030;
@@ -7253,6 +7254,65 @@ section.web-cloning_slider .slidere-tittle h1 {
 	.php-development .laravel_core_features_detail {
 		width: 100%;
 		padding: 66px 20px 20px;
+	}
+	.content_area.feature_inner, .costomer_tab_right {
+		display: none;
+	}
+	.ecommerce--review--point {
+		padding: 40px 15px 27px;
+		height: auto;
+		margin-top: 7px;
+	}
+	.modal-service .modal-dialog, .modal-service .modal-dialog-service {
+		max-width: 97%;
+		width: 100%;
+		margin: 10px auto 0;
+	}
+	.laravel_core_features_detail {
+		width: 100%!important;
+		padding: 66px 20px 20px!important;
+		text-align: center!important;
+	}
+	.laravel_choose_details {
+		padding: 15px 0;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+	}
+	.laravel-services-bx-top {
+		margin-top: 30px;
+	}
+	.CertificationsLaravel a {
+		margin-right: 2px;
+	}
+	.ecommerce__Quick_FAQ_Script .title_main {
+		padding-bottom: 28px;
+		font-size: 22px;
+	}
+	.ecommerce-portal-banner {
+		padding: 60px 0;
+		margin-top: 58px;
+	}
+	.ecommerce-portal-banner h1 {
+		font-size: 30px;
+	}
+	.both-left-p-sec {
+		padding: 0 0;
+		width: 100%;
+	}
+	.ecommerce-portal-banner .job-valu {
+		padding-top: 10px;
+	}
+	.tab_bbx_job ul {
+		width: 100%;
+	}
+	.tab_bbx_job ul li a {
+		font-size: 12px;
+		padding: 65px 3px 15px;
+		background-size: 50px;
+	}
+	.content_area.feature_inner, .costomer_tab_right {
+		display: none;
 	}
 }
   @media (max-width: 576px) {

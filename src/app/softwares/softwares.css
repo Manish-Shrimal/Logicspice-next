@@ -3268,7 +3268,7 @@ section {
 
 .portel-btnbx {
   float: left;
-  padding-top: 27px;
+  padding-top: 14px;
   padding-left: 0px;
 }
 
@@ -6138,6 +6138,9 @@ before {
   .JobBoardNewtab .admin_app_job a, .JobBoardNewtab .admin_app_job.active a, .JobBoardNewtab .admin_app_job:hover a {
     background-size: 60px;
   }
+  .JobBoardNewtab .jobseeker_app_job a {
+    background-size: 65px;
+  }
   .content_area.feature_inner, .costomer_tab_right {
     display: none;
   }
@@ -6209,5 +6212,16 @@ before {
     padding: 40px 15px 27px;
     height: auto;
     margin-top: 7px;
+  }
+  .fiverr-new-banner .job-pr-icon li {
+    float: none;
+  }
+  .tab_bbx_job ul {
+    width: 100%;
+  }
+  .modal-service .modal-dialog, .modal-service .modal-dialog-service {
+    max-width: 97%;
+    width: 100%;
+    margin: 10px auto 0;
   }
 }
