@@ -5685,16 +5685,7 @@ before {
   content: var(--bs-breadcrumb-divider, "/");
 }
 
-@media (max-width: 767px) {
-  .job-valu .portal-price {
-    margin-bottom: 10px !important;
-    text-align: center !important;
-  }
 
-  .SubscriptionpriceSection {
-    display: none;
-  }
-}
 
 
 
@@ -6083,4 +6074,140 @@ before {
 }
 .af_ra textarea {
 	height: 80px;
+}
+
+
+@media (max-width: 767px) {
+  .job-valu .portal-price {
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  .SubscriptionpriceSection {
+    display: none;
+  }
+  .NewJobSiteDesign {
+    margin-top: 58px;
+  }
+  .job-portal-bg h1 {
+    margin-top: 10px;
+  }
+  .NewJobSiteDesign .job-valu {
+    padding-top: 0;
+  }
+  .NewJobSiteDesign .job-valu .portal-price {
+    width: 100%;
+  }
+  .job-pr-icon.jobwidthauto {
+    width: 100% !important;
+    margin-top: 30px;
+  }
+  .service-market-ttd li {
+    width: 100%;
+  }
+  .JobBoardServiceMarketFeatures li {
+    padding-right: 0;
+    width: 100%;
+  }
+  .JobBoardServiceMarketFeatures {
+    padding-top: 20px;
+  }
+  .client-say {
+    padding-bottom: 10px;
+  }
+  .job_portal_area {
+    padding: 10px 0;
+  }
+  .tab_bbx_job ul li a {
+    font-size: 12px;
+    padding: 65px 3px 15px;
+    background-size: 50px;
+  }
+  .JobBoardNewtab .jobseeker_app_job a {
+    background-size: 65px;
+  }
+  .tab_bbx_job .JobBoardNewtab li a {
+    padding-top: 55px;
+  }
+  .food_restaurant_job.ebay_cutting a, .tab_bbx_job ul li a:hover, .tab_bbx_job ul li.active a {
+    background-size: 50px;
+  }
+  .JobBoardNewtab .emplyer_app_job a, .JobBoardNewtab .emplyer_app_job.active a, .JobBoardNewtab .emplyer_app_job:hover a {
+    background-size: 65px;
+  }
+  .JobBoardNewtab .admin_app_job a, .JobBoardNewtab .admin_app_job.active a, .JobBoardNewtab .admin_app_job:hover a {
+    background-size: 60px;
+  }
+  .content_area.feature_inner, .costomer_tab_right {
+    display: none;
+  }
+  .costomer_tab_left ul li {
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px;
+  }
+  .job_product_page_header_in h2 {
+    font-size: 20px;
+  }
+  .job_product_page_header_in h3 {
+    font-size: 20px;
+  }
+  .taxt_tt_job {
+    font-size: 23px;
+    margin: 15px 0px;
+  }
+  .SubscriptionModelBx .JobBoardPlans ul li {
+    width: 100%;
+  }
+  .taxt_tt_job {
+    font-size: 23px;
+    margin: 15px 0;
+  }
+  .SubscriptionpriceSection {
+    display: inline-block;
+  }
+  .SubscriptionModelPrice {
+    padding: 20px 20px;
+    margin-top: 20px;
+  }
+  .SubscriptionModelPriceBx {
+    padding: 20px 10px;
+  }
+  .SubscriptionModelPrice h4 {
+    font-size: 55px;
+  }
+  .SubscriptionModelPrice .srik_cls {
+    font-size: 28px;
+  }
+  .SubscriptionModelPriceBx .btn-get {
+    padding: 9px 10px !important;
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+  }
+  .SubscriptionModelPriceBx .fiverr-buys {
+    padding: 9px 10px !important;
+    font-size: 14px !important;
+  }
+  .logic-parter a {
+    margin: 4px 20px;
+  }
+  .taxt_tt_job {
+    font-size: 23px;
+    margin: 15px 0;
+  }
+  .used_technology_section, .whatsupport_section {
+    padding: 30px 0 10px;
+  }
+  .title_main {
+    margin-bottom: 35px;
+    margin-top: 0px;
+  }
+  .used_technology_section, .whatsupport_section {
+    padding: 30px 0 10px;
+  }
+  .ecommerce--review--point {
+    padding: 40px 15px 27px;
+    height: auto;
+    margin-top: 7px;
+  }
 }

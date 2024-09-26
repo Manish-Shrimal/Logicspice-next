@@ -7213,17 +7213,7 @@ section.web-cloning_slider .slidere-tittle h1 {
 
 
 
-@media only screen and (max-width: 767px) {
-    .ecommerce_faq_section {
-        padding: 40px 0 20px;
-    }
 
-	.CustomQuickFAQScript .accordion-header .accordion-button{
-		font-size: 16px !important;
-		padding: 12px 5px 12px 35px!important;
-	}
-
-}
 
 
 .WebDevelopmentApplicationBx p strong{
@@ -7246,7 +7236,25 @@ section.web-cloning_slider .slidere-tittle h1 {
 	  font-size: 13px;
 	}
   }
-  
+  @media only screen and (max-width: 767px) {
+    .ecommerce_faq_section {
+        padding: 40px 0 20px;
+    }
+
+	.CustomQuickFAQScript .accordion-header .accordion-button{
+		font-size: 16px !important;
+		padding: 12px 5px 12px 35px!important;
+	}
+	.laravel_core_features_section {
+		padding: 50px 0 0 !important;
+		background-color: #303747 !important;
+		background-image: none !important;
+	}
+	.php-development .laravel_core_features_detail {
+		width: 100%;
+		padding: 66px 20px 20px;
+	}
+}
   @media (max-width: 576px) {
 	.faq_quick_sec {
 	  padding: 5px;

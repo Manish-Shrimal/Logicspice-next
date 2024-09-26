@@ -1779,6 +1779,7 @@
     position: relative !important;
     margin-left: 15px;
     padding-top: 10px;
+    padding-left: 0;
   }
 
   .contact_detail_top ul li ul {
@@ -1872,7 +1873,7 @@
   }
 
   .mobile_none {
-    display: none;
+    display: none !important;
   }
 
   .top-heading.services-top-banner {

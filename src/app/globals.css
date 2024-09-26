@@ -5291,8 +5291,7 @@ body.modal-open .quote_pop_plus {
   }
   .nodejs-development .laravel_core_features_section{
     padding: 50px 0 0!important;
-    background-color: #f00!important;
-    background-image: none!important;
+ 
   }
 
   .laravel-descriptions {
@@ -5350,8 +5349,6 @@ body.modal-open .quote_pop_plus {
   }
   .laravel_core_features_section {
     padding: 50px 0 0!important;
-    background-color: #f00!important;
-    background-image: none!important;
   }
 
   .laravel_core_features_bx {
@@ -5611,9 +5608,9 @@ body.modal-open .quote_pop_plus {
     padding: 20px 20px 20px;
   }
 
-  .laravel_choose_features_section {
+  /* .laravel_choose_features_section {
     padding: 10px 0;
-  }
+  } */
 
   .WebDevelopmentClients ul li span {
     font-size: 28px;
@@ -5644,8 +5641,6 @@ body.modal-open .quote_pop_plus {
   }
   .codeigniter-development .laravel_core_features_section{
     padding: 50px 0 0!important;
-    background-color: #f00!important;
-    background-image: none!important;
   }
 
   .HomeSliderJobSlide h2 {
