@@ -3711,11 +3711,11 @@
   }
 
   .product-details h2 {
-    font-size: 18px;
+    font-size: 18px!important;
   }
 
   .product-details p {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   .ls-awards-swction {
@@ -3723,10 +3723,10 @@
   }
 
   .logo-enqury {
-    margin: 0;
-    padding: 16px 50px 0;
-    width: 100%;
-    text-align: center;
+    margin: 0!important;
+    padding: 16px 50px 0!important;
+    width: 100%!important;
+    text-align: center!important;
   }
 
   .newpop_enqury button.close {
@@ -3745,7 +3745,7 @@
   }
 
   .product-details {
-    margin: 3px 0 17px;
+    margin: 3px 0 17px!important;
   }
 
   .costomer_tab_right {
@@ -4150,8 +4150,8 @@
   .blogscript-banner,
   .event-new-banner,
   .rms-banner {
-    padding-top: 70px;
-    margin-top: 0;
+    padding-top: 70px!important;
+    margin-top: 0!important;
   }
 
   .ContractHireFeaturesSection h2 {
@@ -4399,6 +4399,7 @@
     margin-bottom: 0px;
     width: auto;
   }
+
 
   .certificates .tab-content li {
     padding: 13px 4px;

@@ -5531,7 +5531,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .WebDevelopmentBannerBx h1 {
-    font-size: 28px;
+    font-size: 28px!important;
   }
 
   .WebDevelopmentBannerBx p {
@@ -5547,12 +5547,12 @@ body.modal-open .quote_pop_plus {
     width: 100%;
     text-align: center;
     padding-bottom: 12px;
-    display: flex;
-    justify-content: center;
+    display: flex!important;
+    justify-content: center!important;
   }
 
   .WebDevelopmentApplicationBx h2 {
-    font-size: 28px;
+    font-size: 28px!important;
   }
 
   .WebDevelopmentApplication {
@@ -5613,7 +5613,7 @@ body.modal-open .quote_pop_plus {
   } */
 
   .WebDevelopmentClients ul li span {
-    font-size: 28px;
+    font-size: 28px!important;
   }
 
   .HomeSliderTxt {

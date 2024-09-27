@@ -138,296 +138,357 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     setPopupScProductEnquiry(modalStatus);
   }, [modalStatus]);
 
+  useEffect(() => {
+    setPopupScProductEnquiry(modalStatus);
+    if (modalStatus) {
+      // Reset form data and success state when opening the modal
+      setFormData({
+        name: "",
+        email: "",
+        phone_no: "",
+        budget: "",
+        message: "",
+        product_name: "",
+        post_slug: "",
+        post_url: "",
+      });
+      setResultSuccess(false);
+      setIsRecaptchaVerified(false);
+      setFormErrors({
+        name: "",
+        email: "",
+        message: "",
+        product_name: "",
+        post_slug: "",
+        post_url: "",
+        budget: "",
+        recaptchaerror: "",
+      });
+    }
+  }, [modalStatus]);
+  
+
   return (
     <div className="enquire__now">
-<div onClick={closeModal}>
-      <Modal
-        id="popup_sc_product_enquiry"
-        tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
-        show={popupScProductEnquiry}
-        className="newpop_enqury"
-        onHide={closeModal}
-        backdrop="static" // Disable closing on backdrop click
-        keyboard={false} // Disable closing on ESC key press
-      >
-        <div
-          className="modal-dialog "
-          role="document"
-          onClick={stopPropagation}
+      <div onClick={closeModal}>
+        <Modal
+          id="popup_sc_product_enquiry"
+          tabIndex="-1"
+          aria-labelledby="exampleModalLabel"
+          show={popupScProductEnquiry}
+          className="newpop_enqury"
+          onHide={closeModal}
+          backdrop="static" // Disable closing on backdrop click
+          keyboard={false} // Disable closing on ESC key press
         >
           <button
-            type="button"
-            className="close"
-            data-dismiss="modal"
-            aria-label="Close"
-            onClick={closeModal}
-          >
-            {/* <span aria-hidden="true">&times;</span> */}
-            <Image
-              width={30}
-              height={100}
-              src="/img/contactus/close-img.png"
-              alt="logo"
-            />
-          </button>
-          <div className="logo-enqury">
-            <Link href="/">
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={closeModal}
+            >
+              {/* <span aria-hidden="true">&times;</span> */}
               <Image
-                width={250}
-                height={100 / (100 / 100)}
-                src="/img/logo-white.png"
-                alt="Mobile App & Web Development Company - Logicspice"
+                width={30}
+                height={100}
+                src="/img/contactus/close-img.png"
+                alt="logo"
               />
-            </Link>
-          </div>
-
-          <div className="">
-            <div className="product-details">
-              <h2>
-                <span id="update_frm1">{title}</span>
-              </h2>
+            </button>
+           <div className="logo-enqury">
+              <Link href="/">
+                <Image
+                  width={250}
+                  height={100 / (100 / 100)}
+                  src="/img/logo-white.png"
+                  alt="Mobile App & Web Development Company - Logicspice"
+                />
+              </Link>
             </div>
-            <div className="ModalDialogEnqury">
-              <div className="row">
-                <div className="col-md-7">
-                  <div className="modal-content ModalContentEnqury">
-                    <div id="show_demo" className="show_fixxx">
-                      <form>
-                        <div className="modal-body">
-                          {!resultSuccess ? (
-                            <>
-                              <div className="form-group">
-                                <div className="input-group">
-                                  <span className="input-group-text">
-                                    <i className="fa fa-user"></i>
-                                  </span>
-                                  <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    className={`form-control ${
-                                      formErrors.name ? "fieldRequired" : ""
-                                    }`}
-                                    style={{ height: "40px" }}
-                                    placeholder="Your Name *"
-                                    onChange={handleChange}
-                                  />
-                                </div>
-                              </div>
-                              <div className="form-group">
-                                <div className="input-group">
-                                  <span className="input-group-text">
-                                    <i className="fa fa-envelope"></i>
-                                  </span>
-                                  <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    className={`form-control ${
-                                      formErrors.email ? "fieldRequired" : ""
-                                    }`}
-                                    placeholder="Your Email *"
-                                    style={{ height: "40px" }}
-                                    id="UserEmail"
-                                    aria-describedby="inputGroupPrepend"
-                                    onChange={handleChange}
-                                  />
-                                </div>
-                              </div>
-                              <div className="form-group">
-                                <div className="input-group">
-                                  <span className="input-group-text">
-                                    <i className="fa fa-phone"></i>
-                                  </span>
-                                  <input
-                                    type="text"
-                                    name="phone_no"
-                                    value={formData.phone_no}
-                                    className="form-control"
-                                    placeholder="Your Mobile Number"
-                                    style={{ height: "40px" }}
-                                    id="UserPhoneNo"
-                                    aria-describedby="inputGroupPrepend"
-                                    onChange={handleChange}
-                                  />
-                                </div>
-                              </div>
-                              <div className="form-group">
-                                <div className="input-group">
-                                  <span className="input-group-text">
-                                    <i className="fa fa-dollar"></i>
-                                  </span>
-                                  <input
-                                    type="text"
-                                    name="budget"
-                                    value={formData.budget}
-                                    className="form-control"
-                                    placeholder="Budget (optional)"
-                                    style={{ height: "40px" }}
-                                    id="UserBudget"
-                                    aria-describedby="inputGroupPrepend"
-                                    onChange={handleChange}
-                                  />
-                                </div>
-                              </div>
-                              <div className="form-group">
-                                <textarea
-                                  value={formData.message}
-                                  name="message"
-                                  placeholder="Your Message *"
-                                  className={`form-control ${
-                                    formErrors.message ? "fieldRequired" : ""
-                                  }`}
-                                  size="50"
-                                  rows="4"
-                                  noResize="1"
-                                  id="UserMessage"
-                                  onChange={handleChange}
-                                ></textarea>
-                              </div>
-                              <div className="form-group">
-                                <ReCAPTCHA
-                                  key={recaptchaKey}
-                                  sitekey={recaptchaKey}
-                                  onChange={onRecaptchaChange}
-                                />
-                                <div
-                                  className="gcpc FormError"
-                                  id="captcha_msg"
-                                >
-                                  {formErrors.recaptchaerror}
-                                </div>
-                              </div>
-                            </>
-                          ) : (
-                            <>
-                             <div className="thk_sdd" id="thnaks_section">
-                      <section className="thanks_you thnks_se">
-                        <div className="">
-                          <div className="sid_oivd smwood smwoodde">
-                            <div className="panel">
-                              <div className="panel-thanks">
-                                <span
-                                  className="thnk_ss"
-                                  id="thnak_message_sec"
-                                >
-                                  Thank you, we have received your message
-                                </span>
-                                <p className="hh_cls" id="sub_message">
-                                  We will get back to you within the next 24
-                                  hours.
-                                </p>
+          <div
+            className="modal-dialog "
+            role="document"
+            onClick={stopPropagation}
+          >
+            {/* <button
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={closeModal}
+            >
+              <span aria-hidden="true">&times;</span>
+              <Image
+                width={30}
+                height={100}
+                src="/img/contactus/close-img.png"
+                alt="logo"
+              />
+            </button> */}
+            {/* <div className="logo-enqury">
+              <Link href="/">
+                <Image
+                  width={250}
+                  height={100 / (100 / 100)}
+                  src="/img/logo-white.png"
+                  alt="Mobile App & Web Development Company - Logicspice"
+                />
+              </Link>
+            </div> */}
 
-                                <span
-                                  id="pnglnk"
-                                  dangerouslySetInnerHTML={{ __html: html }}
-                                ></span> <br/>
-                                <a
-                                  onClick={closeModal}
-                                  className="btn btn_kcls"
-                                  id="pop_clos"
-                                  href="javascript:void(0);"
-                                  style={{margin : "10px 0"}}
-                                >
-                                  OK
-                                </a>
-                                <div className="ftt_lon d-flex justify-content-center">
-                                  <a href="/" className="">
-                                    <Image
-                                      width={250}
-                                      height={100 / (100 / 100)}
-                                      src="/img/logo.png"
-                                      alt=""
+            <div className="">
+              <div className="product-details">
+                <h2>
+                  <span id="update_frm1">{title}</span>
+                </h2>
+              </div>
+              <div className="ModalDialogEnqury">
+                <div className="row">
+                  <div className="col-md-7">
+                    <div className="modal-content ModalContentEnqury">
+                      <div id="show_demo" className="show_fixxx">
+                        <form>
+                          <div className="modal-body">
+                            {!resultSuccess ? (
+                              <>
+                                <div className="form-group">
+                                  <div className="input-group">
+                                    <span className="input-group-text">
+                                      <i className="fa fa-user"></i>
+                                    </span>
+                                    <input
+                                      type="text"
+                                      name="name"
+                                      value={formData.name}
+                                      className={`form-control ${
+                                        formErrors.name ? "fieldRequired" : ""
+                                      }`}
+                                      style={{ height: "40px" }}
+                                      placeholder="Your Name *"
+                                      onChange={handleChange}
                                     />
-                                  </a>
+                                  </div>
                                 </div>
+                                <div className="form-group">
+                                  <div className="input-group">
+                                    <span className="input-group-text">
+                                      <i className="fa fa-envelope"></i>
+                                    </span>
+                                    <input
+                                      type="email"
+                                      name="email"
+                                      value={formData.email}
+                                      className={`form-control ${
+                                        formErrors.email ? "fieldRequired" : ""
+                                      }`}
+                                      placeholder="Your Email *"
+                                      style={{ height: "40px" }}
+                                      id="UserEmail"
+                                      aria-describedby="inputGroupPrepend"
+                                      onChange={handleChange}
+                                    />
+                                  </div>
+                                </div>
+                                <div className="form-group">
+                                  <div className="input-group">
+                                    <span className="input-group-text">
+                                      <i className="fa fa-phone"></i>
+                                    </span>
+                                    <input
+                                      type="text"
+                                      name="phone_no"
+                                      value={formData.phone_no}
+                                      className="form-control"
+                                      placeholder="Your Mobile Number"
+                                      style={{ height: "40px" }}
+                                      id="UserPhoneNo"
+                                      aria-describedby="inputGroupPrepend"
+                                      onChange={handleChange}
+                                    />
+                                  </div>
+                                </div>
+                                <div className="form-group">
+                                  <div className="input-group">
+                                    <span className="input-group-text">
+                                      <i className="fa fa-dollar"></i>
+                                    </span>
+                                    <input
+                                      type="text"
+                                      name="budget"
+                                      value={formData.budget}
+                                      className="form-control"
+                                      placeholder="Budget (optional)"
+                                      style={{ height: "40px" }}
+                                      id="UserBudget"
+                                      aria-describedby="inputGroupPrepend"
+                                      onChange={handleChange}
+                                    />
+                                  </div>
+                                </div>
+                                <div className="form-group">
+                                  <textarea
+                                    value={formData.message}
+                                    name="message"
+                                    placeholder="Your Message *"
+                                    className={`form-control ${
+                                      formErrors.message ? "fieldRequired" : ""
+                                    }`}
+                                    size="50"
+                                    rows="4"
+                                    noResize="1"
+                                    id="UserMessage"
+                                    onChange={handleChange}
+                                  ></textarea>
+                                </div>
+                                <div className="form-group">
+                                  <ReCAPTCHA
+                                    key={recaptchaKey}
+                                    sitekey={recaptchaKey}
+                                    onChange={onRecaptchaChange}
+                                  />
+                                  <div
+                                    className="gcpc FormError"
+                                    id="captcha_msg"
+                                  >
+                                    {formErrors.recaptchaerror}
+                                  </div>
+                                </div>
+                              </>
+                            ) : (
+                              <>
+                                <div className="thk_sdd" id="thnaks_section">
+                                  <section className="thanks_you thnks_se">
+                                    <div className="">
+                                      <div className="sid_oivd smwood smwoodde">
+                                        <div className="panel">
+                                          <div className="panel-thanks">
+                                            <span
+                                              className="thnk_ss"
+                                              id="thnak_message_sec"
+                                            >
+                                              Thank you, we have received your
+                                              message
+                                            </span>
+                                            <p
+                                              className="hh_cls"
+                                              id="sub_message"
+                                            >
+                                              We will get back to you within the
+                                              next 24 hours.
+                                            </p>
+                                            <span
+                                              id="pnglnk"
+                                              dangerouslySetInnerHTML={{
+                                                __html: html,
+                                              }}
+                                            ></span>{" "}
+                                            <br />
+                                            <a
+                                              onClick={closeModal}
+                                              className="btn btn_kcls"
+                                              id="pop_clos"
+                                              href="javascript:void(0);"
+                                              style={{ margin: "10px 0" }}
+                                            >
+                                              OK
+                                            </a>
+                                            <div className="ftt_lon d-flex justify-content-center">
+                                              <a href="/" className="">
+                                                <Image
+                                                  width={250}
+                                                  height={100 / (100 / 100)}
+                                                  src="/img/logo.png"
+                                                  alt=""
+                                                />
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </section>
+                                </div>
+                              </>
+                            )}
+                          </div>
+                          {!resultSuccess && (
+                            <div className="modal-footer">
+                              <button
+                                className="btn btn-primary"
+                                size="30"
+                                label=""
+                                type="submit"
+                                onClick={submitEnquiryForm}
+                              >
+                                SEND
+                              </button>
+
+                              <div
+                                style={{ display: loader ? "block" : "none" }}
+                                className="popup_loader"
+                                id="loadloader2"
+                              >
+                                <Image
+                                  width={200}
+                                  height={100}
+                                  src="/img/loading-old.gif"
+                                  alt=""
+                                />
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                            </>
                           )}
-                        </div>
-                        {!resultSuccess && (
-                          <div className="modal-footer">
-                            <button
-                              className="btn btn-primary"
-                              size="30"
-                              label=""
-                              type="submit"
-                              onClick={submitEnquiryForm}
-                            >
-                              SEND
-                            </button>
-
-                            <div
-                              style={{ display: loader ? "block" : "none" }}
-                              className="popup_loader"
-                              id="loadloader2"
-                            >
-                              <Image
-                                width={200}
-                                height={100}
-                                src="/img/loading-old.gif"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        )}
-                      </form>
+                        </form>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-5">
-                  <div className="ls-awards-swction">
-                    <h3>Awards and Recognition</h3>
-                    <div className="ls-awards-img">
-                      <Image
-                        width={400}
-                        height={100}
-                        src="/img/contactus/ls_award_img.png"
-                        alt="logo"
-                      />
+                  <div className="col-md-5">
+                    <div className="ls-awards-swction">
+                      <h3>Awards and Recognition</h3>
+                      <div className="ls-awards-img">
+                        <Image
+                          width={400}
+                          height={100}
+                          src="/img/contactus/ls_award_img.png"
+                          alt="logo"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="ls-google-swction">
-                    <div className="ls-google-img">
-                      <Image
-                        width={100}
-                        height={100}
-                        src="/img/contactus/google-reting.png"
-                        alt="logo"
-                      />
+                    <div className="ls-google-swction">
+                      <div className="ls-google-img">
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/img/contactus/google-reting.png"
+                          alt="logo"
+                        />
+                      </div>
+                      <p id="review_msg">
+                        “Considering all the adjustments we asked for, the
+                        patience they showed, extremely swift turnaround times,
+                        good value for money and quality of work, they have
+                        shown to be a great partner.
+                      </p>
+                      <div className="client-star">
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div className="client-name">
+                        D. Smith, Germany in USA
+                      </div>
                     </div>
-                    <p id="review_msg">
-                      “Considering all the adjustments we asked for, the
-                      patience they showed, extremely swift turnaround times,
-                      good value for money and quality of work, they have shown
-                      to be a great partner.
-                    </p>
-                    <div className="client-star">
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div className="client-name">D. Smith, Germany in USA</div>
                   </div>
                 </div>
               </div>
             </div>
+            {/* </div> */}
           </div>
-          {/* </div> */}
-        </div>
-      </Modal>
+        </Modal>
+      </div>
     </div>
-    </div>
-    
-   
   );
 };
 

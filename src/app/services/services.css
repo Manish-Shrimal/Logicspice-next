@@ -1451,6 +1451,7 @@ section {
     .apps_portfolioshowe_topright ul li {
         float: left;
         margin-left: 10px;
+		display: inline-block;
     }
     .apps_portfolioshowe_topright ul li a {
         background: #e2e2e2;
@@ -7313,6 +7314,59 @@ section.web-cloning_slider .slidere-tittle h1 {
 	}
 	.content_area.feature_inner, .costomer_tab_right {
 		display: none;
+	}
+	.tab_bbx_ecommerce ul li {
+		min-height: 80px;
+		padding: 20px 10px;
+		font-size: 16px;
+	}
+	.costomer_tab_left ul li i {
+		width: 38px;
+	}
+	.b-bottom {
+		border-bottom: 1px #ddd solid !important;
+	}
+	.home-project__clip + .wrap {
+		margin-left: 0% !important;
+		padding-top: 50px !important;
+	}
+	.satisfied_clients .slick-next {
+		right: -5px;
+	}
+	.satisfied_clients .slick-prev {
+		left: -9px;
+	}
+	.d-framework.d-framework1 {
+		padding: 59px 0 0;
+	}
+	.form_quote.form_top {
+		float: left;
+		margin-left: 0;
+		margin-top: 45px;
+		padding: 20px 14px;
+		width: 100%;
+	}
+	.d-services1.d-services h2 {
+		font-size: 24px;
+	}
+	.country_head {
+		margin-top: 57px;
+	}
+	.round-list strong {
+		display: inline-block;
+		float: none;
+		font-size: 20px;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		width: 45px;
+		vertical-align: middle;
+	}
+	.round-list span {
+		float: none;
+		padding: 1px 0 0;
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
   @media (max-width: 576px) {
