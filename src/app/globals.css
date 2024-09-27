@@ -3675,12 +3675,12 @@ positivitymain {
 }
 
 .title_heading {
-  color: #000;
+  color: #000!important;
   /* float: left; */
-  font-size: 26px;
+  font-size: 26px!important;
   font-weight: bold;
-  margin-bottom: 5px;
-  width: 100%;
+  margin-bottom: 5px!important;
+  width: 100%!important;
 }
 
 .slick-list .client_logos img {
@@ -4615,7 +4615,7 @@ body.modal-open .quote_pop_plus {
 }
 
 .ls-google-swction {
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
   padding: 20px;
   text-align: left;
@@ -4717,7 +4717,7 @@ body.modal-open .quote_pop_plus {
 
 .contact-top-bg .form-group span.textarea-field {
   height: 138px;
-  line-height: 138px;
+  line-height: 29px;
 }
 
 .input-group .input-group-text {
@@ -4918,7 +4918,8 @@ body.modal-open .quote_pop_plus {
 
 .react-tabs__tab-panel p {
   text-align: justify;
-  margin-right: 20px;
+  /* margin-right: 20px; */
+  padding: 0 10px;
 }
 
 .why-choose-us .media-left > span,
@@ -5349,6 +5350,8 @@ body.modal-open .quote_pop_plus {
   }
   .laravel_core_features_section {
     padding: 50px 0 0!important;
+    background-color: #f00!important;
+    background-image: none!important;
   }
 
   .laravel_core_features_bx {
@@ -5389,7 +5392,9 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel_core_features_section {
-    padding: 50px 0 0;
+    padding: 50px 0 0!important;
+    background-color: #f00!important;
+    background-image: none!important;
   }
 
   .laravel_choose_features_section h2 {
@@ -5413,15 +5418,18 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel_choose_details {
-    padding: 15px 0;
-    width: 100%;
-    display: inline-block;
-    text-align: center;
+    padding: 15px 0!important;
+    width: 100%!important;
+    display: inline-block!important;
+    text-align: center!important;
   }
 
   .laravel_choose_details p br {
     display: none;
   }
+  .laravel_choose_details p {
+    font-size: 14px!important;
+}
 
   .laravel-portfolio-php-dev h2 {
     font-size: 25px;
@@ -5445,7 +5453,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .devops-descriptions .laravel_img img {
-    width: 80%;
+    width: 80%!important;
   }
 
   .newcontact-btn .btn.btn-primary {
@@ -5641,6 +5649,8 @@ body.modal-open .quote_pop_plus {
   }
   .codeigniter-development .laravel_core_features_section{
     padding: 50px 0 0!important;
+    background-color: #f00!important;
+    background-image: none!important;
   }
 
   .HomeSliderJobSlide h2 {
@@ -5899,7 +5909,10 @@ body.modal-open .quote_pop_plus {
   .ecommerce_review__img {
     display: none;
   }
-
+  .NewFaqDesignSection .ecommerce__Quick_FAQ .title_main{
+    padding-bottom: 28px !important;
+    font-size: 42px !important;
+  }
   .ecommerce__Quick_FAQ .title_main {
     padding-bottom: 28px !important;
     font-size: 28px !important;
@@ -6295,7 +6308,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .BigDataDescription .laravel_img {
-    padding: 10px;
+    padding: 10px!important;
   }
 
   .BigdataBanner .laravel-banner-txt {
@@ -7179,6 +7192,15 @@ body.modal-open .quote_pop_plus {
   float: left;
   width: 100%;
 }
+#workingowl .take-a-look .swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 20px !important;
+  color: #3c3c3c !important;
+}
+#workingowl .take-a-look .swiper-button-prev:after, .swiper-button-prev:after {
+  font-size: 20px !important;
+  color: #3c3c3c !important;
+}
+
 
 .FormError {
   color: red;
@@ -7222,6 +7244,13 @@ button.close {
     max-width: 1280px !important;
   }
 } */
+
+.container{
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
 
 .btn.btn-default {
   background-color: rgba(255, 255, 255, 0.5);
@@ -7337,7 +7366,7 @@ button.close {
 
 .take-a-look .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-size: 30px !important;
+  font-size: 20px !important;
   color: #3c3c3c !important;
 }
 

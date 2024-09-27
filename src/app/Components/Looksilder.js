@@ -31,6 +31,7 @@ const Looksilder = () => {
       
       text: "iWorks supports Multilingual and Social Media Sign in and Sign Up Features.",
       link: "/case-studies/iworks",
+      logoSize: 200,
     },
     {
       notMobileImage: "/img/home/look/Job-to-home.webp",
@@ -39,6 +40,7 @@ const Looksilder = () => {
       alt: "JOB AT HOME",
       text: "Job At Home supports Multiple social channels to sharing the jobs including Whatsapp, Facebook, LinkedIn, Twitter etc",
       link: "/case-studies/job-at-home",
+      logoSize: 150,
     },
     {
       notMobileImage: "/img/home/look/GB-Lancer.webp",
@@ -47,6 +49,7 @@ const Looksilder = () => {
       alt: "GB Lancers",
       text: "GB Lancers supports Seller and Buyer management.",
       link: "/case-studies/gb-lancers",
+      logoSize: 150,
     },
     {
       notMobileImage: "/img/home/look/We-do.webp",
@@ -56,6 +59,7 @@ const Looksilder = () => {
       alt: "We do it Cheaper",
       text: "We Do it Cheaper supports Buyer and Freelancer management.",
       link: "/case-studies/we-do-it-cheaper",
+      logoSize: 250,
     },
     {
       notMobileImage: "/img/home/look/your-pension.webp",
@@ -64,6 +68,7 @@ const Looksilder = () => {
       alt: "YourPension",
       text: "Responsive Custom Build website for Pension Plan Management",
       link: "/case-studies/pension-plan-management",
+      logoSize: 250,
     },
     {
       notMobileImage: "/img/home/look/Iamcleaning.webp",
@@ -72,6 +77,7 @@ const Looksilder = () => {
       alt: "utrack",
       text: "It's provides domestic and commercial cleaning services.",
       link: "/case-studies/Iamcleaning",
+      logoSize: 250,
     },
     {
       notMobileImage: "/img/home/look/Zibzob.webp",
@@ -80,6 +86,7 @@ const Looksilder = () => {
       alt: "Zibzob",
       text: "We Write Resumes that Get You Hired",
       link: "/case-studies/zipjob",
+      logoSize: 150,
     },
   ];
 
@@ -105,14 +112,16 @@ const Looksilder = () => {
                   alt={lookData.alt}
                   width={700} // Adjust width and height according to your design
                   height={300 / (300 / 300)}
+                  unoptimized={true}
                 />
               </div>
               <div className="col-md-5">
                 <Image
                   src={lookData.originalImage}
                   alt={lookData.alt}
-                  width={150}
+                  width={lookData.logoSize}
                   height={100 / (100 / 100)}
+                  unoptimized={true}
                 />
                 <p className="to_matf">{lookData.text}</p>
                 <Link href={lookData.link} className="case-study">

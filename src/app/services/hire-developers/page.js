@@ -13,6 +13,8 @@ import Certificationtabs from "@/app/Components/Certificationtabs";
 import Workingwith from "@/app/Components/Workingwith";
 import "../../globals.css";
 import ReCAPTCHA from "react-google-recaptcha";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -136,7 +138,7 @@ const Page = () => {
                 data-aos="fade-left"
                 className="right_slide_section aos-init aos-animate"
               >
-                <Image
+                <Image unoptimized={true}
                   width={500}
                   height={500 / (100 / 100)}
                   alt="Hire App Developers - Logicspice"
@@ -206,7 +208,7 @@ const Page = () => {
             <div className="col-md-8">
               <h3>Senior Developers</h3>
               <div className="mobile_view">
-                <Image
+                <Image unoptimized={true}
                   width={500}
                   height={500 / (100 / 100)}
                   alt="Senior Developers"
@@ -230,7 +232,7 @@ const Page = () => {
               <p></p>
             </div>
             <div className="col-md-4">
-              <Image
+              <Image unoptimized={true}
                 width={400}
                 height={500 / (100 / 100)}
                 alt="Senior Developers"
@@ -240,7 +242,7 @@ const Page = () => {
           </div>
           <div className="hire_type hire_type2 row">
             <div className="col-md-4">
-              <Image
+              <Image unoptimized={true}
                 width={400}
                 height={500 / (100 / 100)}
                 alt="TEAM LEAD"
@@ -250,9 +252,9 @@ const Page = () => {
             <div className="col-md-8">
               <h3>TEAM LEAD</h3>
               <div className="mobile_view">
-                <Image
-                  width={100}
-                  height={100}
+                <Image unoptimized={true}
+                 width={400}
+                 height={500 / (100 / 100)}
                   alt="TEAM LEAD"
                   src="/img/hiredevelopers/Web-Developer.png"
                 />
@@ -296,7 +298,7 @@ const Page = () => {
           </p>
           <div className="row">
             <div className="col-md-6">
-              <Image
+              <Image unoptimized={true}
                 width={800}
                 height={500 / (100 / 100)}
                 alt="app development"
@@ -333,7 +335,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={64}
                     height={100}
                     alt="Qualified, Experienced resources"
@@ -351,7 +353,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={48}
                     height={100}
                     alt="Flexible Hiring Models - Logicspice"
@@ -369,7 +371,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={69}
                     height={100}
                     alt="Rapid and Effective development - logicspice"
@@ -387,7 +389,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={70}
                     height={100}
                     alt="Monitor team’s performance"
@@ -405,7 +407,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={65}
                     height={100}
                     alt="Track Progress with Project Management"
@@ -423,7 +425,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={58}
                     height={100}
                     alt="Fast and easy communication"
@@ -441,7 +443,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={56}
                     height={100}
                     alt="Flexible Timing - Logicspice"
@@ -457,7 +459,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={56}
                     height={100}
                     alt="Cost-efficient development - logicspice"
@@ -473,7 +475,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={57}
                     height={100}
                     alt="Consistent Technical and Administrative support"
@@ -491,7 +493,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={48}
                     height={100}
                     alt="Highly Secured Development - Logicspice"
@@ -509,7 +511,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={72}
                     height={100}
                     alt="Dependable supervision and execution"
@@ -527,7 +529,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={62}
                     height={100}
                     alt="Optimized Coding - Logicspice"
@@ -543,7 +545,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={55}
                     height={100}
                     alt="deadlines developers"
@@ -561,7 +563,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={59}
                     height={100}
                     alt="Project confidentiality - Logicspice"
@@ -579,7 +581,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={88}
                     height={100}
                     alt="moneyback gurantee - Logicspice"
@@ -597,7 +599,7 @@ const Page = () => {
                 data-aos="fade-up"
               >
                 <div className="box_icon_top">
-                  <Image
+                  <Image unoptimized={true}
                     width={53}
                     height={100}
                     alt="Availability and scope of expansion - logicspice"
@@ -668,7 +670,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-python-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={48}
                             height={100}
                             alt="Hire Python Developers - Logicspice"
@@ -696,7 +698,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-reactjs-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={48}
                             height={100}
                             alt="Hire ReactJS Developers - Logicspice"
@@ -724,7 +726,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-react-native-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={48}
                             height={100}
                             alt="Hire React Native Developers - Logicspice"
@@ -752,7 +754,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-android-app-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={51}
                             height={100}
                             alt="Hire Android App Developer - Logicspice"
@@ -780,7 +782,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-ios-app-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={47}
                             height={100}
                             alt="Hire iOS/ iPhone App Developer"
@@ -808,7 +810,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-web-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={40}
                             height={100}
                             alt="Hire Dphp-developers - logicspice"
@@ -836,7 +838,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-php-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={64}
                             height={100}
                             alt="Hire Dphp-developers - logicspice"
@@ -864,7 +866,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-cakephp-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={60}
                             height={100}
                             alt="Hire Cake PHP Developer Logicspice"
@@ -892,7 +894,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-wordpress-experts">
-                          <Image
+                          <Image unoptimized={true}
                             width={58}
                             height={100}
                             alt="Hire Wordpress Developer - logicspice"
@@ -921,7 +923,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-magento-experts">
-                          <Image
+                          <Image unoptimized={true}
                             width={50}
                             height={100}
                             alt="hire magento developers - logicspice"
@@ -950,7 +952,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-laravel-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={64}
                             height={100}
                             alt="hire laravel developers - logicspice"
@@ -978,7 +980,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-codeignitor-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={51}
                             height={100}
                             alt="hire codeigniter developers - logicspice"
@@ -1006,7 +1008,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-node-js-experts">
-                          <Image
+                          <Image unoptimized={true}
                             width={64}
                             height={100}
                             alt="hire node-js-experts developers - logicspice"
@@ -1036,7 +1038,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-angular-js-experts">
-                          <Image
+                          <Image unoptimized={true}
                             width={55}
                             height={100}
                             alt="hire angular-js-developers developers - logicspice"
@@ -1064,7 +1066,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-yii-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={54}
                             height={100}
                             alt="hire yii developers - logicspice"
@@ -1094,7 +1096,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-opencart-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={64}
                             height={100}
                             alt="hire opencart developers - logicspice"
@@ -1122,7 +1124,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-hybrid-mobile-app-developer">
-                          <Image
+                          <Image unoptimized={true}
                             width={59}
                             height={100}
                             alt="hire hybrid mobile app developers at logicspice"
@@ -1150,7 +1152,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-quality-analyst">
-                          <Image
+                          <Image unoptimized={true}
                             width={58}
                             height={100}
                             alt="hire quality analyst at logicspice"
@@ -1178,7 +1180,7 @@ const Page = () => {
                     <div className="dedicated_develop_col_inner">
                       <div className="dedicated_develop_icon_box">
                         <Link href="/hire-shopify-developers">
-                          <Image
+                          <Image unoptimized={true}
                             width={58}
                             height={100}
                             alt="hire shopify developers at logicspice"
@@ -1229,8 +1231,8 @@ const Page = () => {
               <ul>
                 <li>
                   <span>
-                    <Image
-                      width={100}
+                    <Image unoptimized={true}
+                      width={70}
                       height={100}
                       src="/img/hiredevelopers/HI1.png"
                       alt="HI1"
@@ -1240,8 +1242,8 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    <Image
-                      width={100}
+                    <Image unoptimized={true}
+                      width={70}
                       height={100}
                       src="/img/hiredevelopers/HI2.png"
                       alt="HI2"
@@ -1251,8 +1253,8 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    <Image
-                      width={100}
+                    <Image unoptimized={true}
+                      width={70}
                       height={100}
                       src="/img/hiredevelopers/HI3.png"
                       alt="HI3"
@@ -1262,8 +1264,8 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    <Image
-                      width={100}
+                    <Image unoptimized={true}
+                      width={70}
                       height={100}
                       src="/img/hiredevelopers/HI4.png"
                       alt="HI4"
@@ -1273,8 +1275,8 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    <Image
-                      width={100}
+                    <Image unoptimized={true}
+                      width={70}
                       height={100}
                       src="/img/hiredevelopers/HI5.png"
                       alt="HI5"
@@ -1383,7 +1385,7 @@ const Page = () => {
                     ></div>
                   </div>
                   <div className="form-group buttonSubmit">
-                    <div className="form-group-google">
+                    <div className="form-group-recaptcha">
                       <ReCAPTCHA
                         key={recaptchaKey}
                         sitekey={recaptchaKey}
@@ -1406,7 +1408,7 @@ const Page = () => {
                     />
 
                     {/* <div className="loadloader side_page" id="loadloaderH">
-                      <Image
+                      <Image unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/loading-old.gif"
@@ -1442,7 +1444,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

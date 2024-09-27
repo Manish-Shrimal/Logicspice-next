@@ -84,7 +84,7 @@ const Page = () => {
                 </ul>
                 <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
-                    <button>Enquire Now</button>
+                    <a>Enquire Now</a>
                     {
                       <Enquirymodal
                         modalStatus={showModal}
@@ -890,7 +890,7 @@ const Page = () => {
       </section>
       <div className="col-sm-12 main_btn_hire WebHireBtn">
         <div className="btn btn-primary" onClick={openModal}>
-          <button>Enquire Now</button>
+          <a>Enquire Now</a>
           {
             <Enquirymodal
               modalStatus={showModal}

@@ -3,7 +3,7 @@
 body {
 	font-family: "Roboto", sans-serif !important;
 	font-weight: 400;
-	color: #3f3f3f;
+	color: #3f3f3f !important;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: normal;
@@ -364,6 +364,12 @@ sites_maps,
 	font-weight: 600
 }
 
+.page-contact-new .row_of_cont_d {
+	width: 100%;
+}
+.page-contact-new .row_of_cont_d .contact_image{
+	float: right;
+}
 .contact-top-bg .form-control {
 	width: 100%;
 	height: 50px;
@@ -408,6 +414,12 @@ sites_maps,
 	margin: 30px 4% 0;
 	float: left;
 	text-align: center;
+}
+.google-reting-review {
+	width: 92%;
+    margin: 30px 4% 50px;
+    float: left;
+    text-align: center;
 }
 
 .gest-contact-bx i {

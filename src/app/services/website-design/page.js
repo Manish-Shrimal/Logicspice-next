@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/services/services.css";
 import Image from "next/image";
 import Link from "next/link";

@@ -57,7 +57,7 @@ const Page = () => {
                 </div>
                 <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
-                    <button>Enquire Now</button>
+                    <a>Enquire Now</a>
                     {
                       <Enquirymodal
                         modalStatus={showModal}

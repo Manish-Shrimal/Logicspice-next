@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/services/services.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import Link from "next/link";
 import Enquirymodal from "@/app/Components/Enquirymodal";
@@ -443,7 +444,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

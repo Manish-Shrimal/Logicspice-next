@@ -68,7 +68,7 @@ const Page = () => {
                   <div className="our-services-bx">
                     <div className="our-services-img">
                       <Image
-                        width={51}
+                        width={70}
                         height={100}
                         src="/img/services/serv_4.png"
                         alt="serv_4"

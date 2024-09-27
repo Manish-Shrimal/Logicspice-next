@@ -16,22 +16,27 @@ const Workingwith = () => {
     {
       link: "https://iworks.sn/",
       img: "/img/home/look/iwork-logo.webp",
+      logoSize: 130
     },
     {
       link: "https://jobathome.fr/",
       img: "/img/home/look/logo-job-at-home.webp",
+      logoSize: 110
     },
     {
       link: "https://www.wedoitcheaper.com/",
       img: "/img/home/look/logo-we-do.webp",
+      logoSize: 200
     },
     {
       link: "https://www.gblancers.com/",
       img: "/img/home/look/logo-gb-lancers.webp",
+      logoSize: 120
     },
     {
       link: "https://www.yourpension.ch/",
       img: "/img/home/look/yp-logo.webp",
+      logoSize: 200
     },
   ];
 
@@ -50,14 +55,12 @@ const Workingwith = () => {
             <div className="client_logos">
               <a rel="nofollow" href={client.link} target="_blank">
                 <Image
-                  width={110}
+                  width={client.logoSize}
                   height={100 / (100 / 100)}
                   src={client.img}
                   alt={`client project logo - ${index}`}
                   className="lazy"
-                  // style={{
-                  //   backgroundImage: `url(${client.img})`,
-                  // }}
+                  unoptimized={true}
                 />
               </a>
             </div>

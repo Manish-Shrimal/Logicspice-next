@@ -48,7 +48,7 @@ const Page = () => {
                 </div>
                 <div className="laravel-anquire">
                   <div className="btn btn-primary" onClick={openModal}>
-                    <button>Hire Now</button>
+                    <a>Hire Now</a>
                     {
                       <Enquirymodal
                         modalStatus={showModal}
@@ -58,7 +58,7 @@ const Page = () => {
                     }
                   </div>
                   <div className="btn btn-primary" onClick={openModal}>
-                    <button>Quick Enquiry</button>
+                    <a>Quick Enquiry</a>
                     {
                       <Enquirymodal
                         modalStatus={showModal}
@@ -726,7 +726,7 @@ const Page = () => {
             </div>
             <div className="col-sm-12 main_btn_hire">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Hire Django Developer</button>
+                <a>Hire Django Developer</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

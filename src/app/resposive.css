@@ -15,6 +15,8 @@
     max-width: 282px;
   }
 
+
+
   .small_bbx_job_new .thumbnail-new {
     min-height: 320px;
   }
@@ -683,15 +685,18 @@
   }
 
   .readyToStart h2 {
-    font-size: 23px;
+    font-size: 23px!important;
+  }
+  .readyToStart_new h2{
+    font-size: 23px!important;
   }
 
   .clients_slide h2 {
-    color: #f1484a;
+    color: #f1484a!important;
   }
 
   .serv_professional h2 {
-    font-size: 23px;
+    font-size: 23px!important;
   }
 
   .social_footer li:first-child {
@@ -833,8 +838,8 @@
   }
 
   .dev_Packages h3 {
-    margin: 30px 0 25px;
-    text-align: center;
+    margin: 30px 0 25px!important;
+    text-align: center!important;
   }
 
   .hire_type2 img {
@@ -1548,6 +1553,18 @@
 }
 
 @media (max-width: 767px) {
+  .DjangoBanner .laravel-banner-txt{
+    padding-top: 0!important;
+  }
+  .LaravelText{
+    font-size: 15px!important;
+  }
+  .our-services-new{
+    padding-top:80px!important;
+  }
+  .hidden-xs {
+    display: none !important;
+}
     .title_of_casesetif h2 {
         font-size: 25px!important;
     }
@@ -1735,12 +1752,13 @@
 
   .certificates .nav-tabs > li > a {
     font-size: 13px;
-    padding: 5px 4px;
+    padding: 6px 4px;
     border-radius: 5px 5px 0 0;
     margin-bottom: 0;
     border-bottom: none !important;
     background: #eee;
     text-transform: capitalize;
+    display: inline-block;
   }
 
   .certificates .nav.nav-tabs {
@@ -1752,11 +1770,13 @@
   }
 
   .cer-icon img {
-    height: 20px;
+    height:17px;
+    width: 14px;
   }
 
   .certificates .tab-content li img {
-    height: 36px;
+    height: 30px;
+    width: auto;
   }
 
   .social_footer img {
@@ -2081,7 +2101,7 @@
   }
 
   .servin-content {
-    margin-bottom: 30px;
+    margin-bottom: 30px!important;
   }
 
   .step1 .step-content > p {
@@ -2133,7 +2153,7 @@
   }
 
   .title_heading {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .country_header_secton_mobile_screen {
@@ -2395,7 +2415,7 @@
   .dev_future_solution .title_heading,
   .dev_flexibility .title_heading,
   .dev_flexibility .title_heading_Main {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .product_page_banner_box_left p {
@@ -2482,7 +2502,7 @@
   }
 
   .clients_slide h2 {
-    font-size: 22px;
+    font-size: 22px!important;
   }
 
   .mobileapp-deve_header_in {
@@ -4639,7 +4659,7 @@
   .developer_mid .title_heading,
   .requir_title-new,
   .dev_step_solution .title_heading {
-    font-size: 25px;
+    font-size: 20px!important;
   }
 
   .step-row .col-md-2 {

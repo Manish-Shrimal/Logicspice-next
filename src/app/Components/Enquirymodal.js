@@ -65,6 +65,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -97,6 +98,21 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
       newErrors.message = "Please enter your message";
     }
 
+    if (formData.budget !== "") {
+      const budgetRegex = /^[0-9$.,]*$/;
+      if (!budgetRegex.test(formData.budget)) {
+        newErrors.budget =
+          "Please enter a valid budget (only numbers and special characters are allowed)";
+      }
+    }
+    if (formData.phone_no !== "") {
+      const phoneRegex = /^[0-9$.,]*$/;
+      if (!phoneRegex.test(formData.phone_no)) {
+        newErrors.phone_no =
+          "Please enter a valid phone number (only numbers and special characters are allowed)";
+      }
+    }
+
     if (Object.keys(newErrors).length > 0) {
       setFormErrors(newErrors);
       return;
@@ -108,13 +124,13 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
       if (response.data.status === 200) {
         setResultSuccess(true);
         setHtml(response.data.message);
-        setFormData({
-          name: "",
-          email: "",
-          company: "",
-          phone_no: "",
-          message: "",
-        });
+        // setFormData({
+        //   name: "",
+        //   email: "",
+        //   company: "",
+        //   phone_no: "",
+        //   message: "",
+        // });
 
         if (recaptchaRef.current) {
           recaptchaRef.current.reset();
@@ -128,6 +144,22 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
   const closeModal = () => {
     setPopupScProductEnquiry(false);
     toggle();
+
+    // Reset form data and success state when closing the modal
+
+    setResultSuccess(false);
+    setIsRecaptchaVerified(false);
+    setFormData({
+      name: "",
+      email: "",
+      phone_no: "",
+      budget: "",
+      message: "",
+      product_name: "",
+      post_slug: "",
+      post_url: "",
+    });
+
     // Additional logic to reset form data or perform other actions upon closing
   };
   const stopPropagation = (e) => {
@@ -139,34 +171,17 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
   }, [modalStatus]);
 
   useEffect(() => {
-    setPopupScProductEnquiry(modalStatus);
-    if (modalStatus) {
-      // Reset form data and success state when opening the modal
-      setFormData({
-        name: "",
-        email: "",
-        phone_no: "",
-        budget: "",
-        message: "",
-        product_name: "",
-        post_slug: "",
-        post_url: "",
-      });
-      setResultSuccess(false);
-      setIsRecaptchaVerified(false);
-      setFormErrors({
-        name: "",
-        email: "",
-        message: "",
-        product_name: "",
-        post_slug: "",
-        post_url: "",
-        budget: "",
-        recaptchaerror: "",
-      });
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+
+      // Add the expired callback to reset verification status
+      recaptchaRef.current.execute(); // Trigger the reCAPTCHA
+
+      recaptchaRef.current.props.onExpired = () => {
+        setIsRecaptchaVerified(false); // Reset verification status when reCAPTCHA expires
+      };
     }
-  }, [modalStatus]);
-  
+  }, []);
 
   return (
     <div className="enquire__now">
@@ -182,30 +197,30 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
           keyboard={false} // Disable closing on ESC key press
         >
           <button
-              type="button"
-              className="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              onClick={closeModal}
-            >
-              {/* <span aria-hidden="true">&times;</span> */}
+            type="button"
+            className="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            onClick={closeModal}
+          >
+            {/* <span aria-hidden="true">&times;</span> */}
+            <Image
+              width={30}
+              height={100}
+              src="/img/contactus/close-img.png"
+              alt="logo"
+            />
+          </button>
+          <div className="logo-enqury">
+            <Link href="/">
               <Image
-                width={30}
-                height={100}
-                src="/img/contactus/close-img.png"
-                alt="logo"
+                width={250}
+                height={100 / (100 / 100)}
+                src="/img/logo-white.png"
+                alt="Mobile App & Web Development Company - Logicspice"
               />
-            </button>
-           <div className="logo-enqury">
-              <Link href="/">
-                <Image
-                  width={250}
-                  height={100 / (100 / 100)}
-                  src="/img/logo-white.png"
-                  alt="Mobile App & Web Development Company - Logicspice"
-                />
-              </Link>
-            </div>
+            </Link>
+          </div>
           <div
             className="modal-dialog "
             role="document"
@@ -299,7 +314,11 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                       type="text"
                                       name="phone_no"
                                       value={formData.phone_no}
-                                      className="form-control"
+                                      className={`form-control ${
+                                        formErrors.phone_no
+                                          ? "fieldRequired"
+                                          : ""
+                                      }`}
                                       placeholder="Your Mobile Number"
                                       style={{ height: "40px" }}
                                       id="UserPhoneNo"
@@ -317,7 +336,9 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                       type="text"
                                       name="budget"
                                       value={formData.budget}
-                                      className="form-control"
+                                      className={`form-control ${
+                                        formErrors.budget ? "fieldRequired" : ""
+                                      }`}
                                       placeholder="Budget (optional)"
                                       style={{ height: "40px" }}
                                       id="UserBudget"
@@ -335,8 +356,9 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                       formErrors.message ? "fieldRequired" : ""
                                     }`}
                                     size="50"
-                                    rows="4"
-                                    noResize="1"
+                                    rows="40"
+                                    style={{ height: "100px" }} // Explicitly set the height
+                                    // noResize="1"
                                     id="UserMessage"
                                     onChange={handleChange}
                                   ></textarea>

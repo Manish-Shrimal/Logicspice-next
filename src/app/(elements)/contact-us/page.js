@@ -21,6 +21,105 @@ import "@/app/globals.css";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone_no: "",
+    
+    message: "",
+    product_name: "",
+    post_slug: "",
+    post_url: "",
+    
+  });
+  const [formErrors, setFormErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+    product_name: "",
+    post_slug: "",
+    post_url: "",
+    
+    recaptchaerror: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setFormErrors((prevError) => ({
+      ...prevError,
+      [name]: "",
+    }));
+  };
+
+  const submitEnquiryForm = async (e) => {
+    e.preventDefault();
+    const newErrors = {};
+
+    if (!isRecaptchaVerified) {
+      newErrors.recaptchaerror = "Please verify that you are not a robot";
+    }
+
+    if (formData.name === "") {
+      newErrors.name = "Please enter your name";
+    }
+
+    if (formData.email === "") {
+      newErrors.email = "Please enter your email";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (formData.message === "") {
+      newErrors.message = "Please enter your message";
+    }
+
+    if (formData.budget !== "") {
+      const budgetRegex = /^[0-9$.,]*$/;
+      if (!budgetRegex.test(formData.budget)) {
+        newErrors.budget =
+          "Please enter a valid budget (only numbers and special characters are allowed)";
+      }
+    }
+    if (formData.phone_no !== "") {
+      const phoneRegex = /^[0-9$.,]*$/;
+      if (!phoneRegex.test(formData.phone_no)) {
+        newErrors.phone_no =
+          "Please enter a valid phone number (only numbers and special characters are allowed)";
+      }
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setFormErrors(newErrors);
+      return;
+    }
+
+    try {
+      const response = await axios.post(BaseAPI + "/pages/enquire", formData);
+
+      if (response.data.status === 200) {
+        setResultSuccess(true);
+        setHtml(response.data.message);
+        // setFormData({
+        //   name: "",
+        //   email: "",
+        //   company: "",
+        //   phone_no: "",
+        //   message: "",
+        // });
+
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -58,14 +157,16 @@ const Page = () => {
                             <PersonIcon />
                           </span>
                           <input
-                            name="data[User][name]"
-                            placeholder="Your Name*"
-                            value=""
-                            size="40"
-                            className="form-control required"
-                            type="text"
-                            id="UserName"
-                          />
+                                      type="text"
+                                      name="name"
+                                      value={formData.name}
+                                      className={`form-control ${
+                                        formErrors.name ? "fieldRequired" : ""
+                                      }`}
+                                      style={{ height: "40px" }}
+                                      placeholder="Your Name *"
+                                      onChange={handleChange}
+                                    />
                         </div>
                       </div>
                       <div className="col-sm-6">
@@ -78,14 +179,18 @@ const Page = () => {
                             <EmailOutlinedIcon />
                           </span>
                           <input
-                            name="data[User][email]"
-                            placeholder="Email*"
-                            value=""
-                            size="40"
-                            className="required form-control email"
-                            type="text"
-                            id="UserEmail"
-                          />
+                                      type="email"
+                                      name="email"
+                                      value={formData.email}
+                                      className={`form-control ${
+                                        formErrors.email ? "fieldRequired" : ""
+                                      }`}
+                                      placeholder="Your Email *"
+                                      style={{ height: "40px" }}
+                                      id="UserEmail"
+                                      aria-describedby="inputGroupPrepend"
+                                      onChange={handleChange}
+                                    />
                         </div>
                       </div>
                     </div>
@@ -114,11 +219,18 @@ const Page = () => {
                         <DescriptionOutlinedIcon />
                       </span>
                       <textarea
-                        name="data[User][message]"
-                        placeholder="Message*"
-                        className="required form-control"
-                        noResize="1"
+                        value={formData.message}
+                        name="message"
+                        placeholder="Your Message *"
+                        className={`required form-control ${
+                          formErrors.message ? "fieldRequired" : ""
+                        }`}
+                        size="50"
+                        rows="40"
+                        style={{ height: "100px" }} // Explicitly set the height
+                        // noResize="1"
                         id="UserMessage"
+                        onChange={handleChange}
                       ></textarea>
                     </div>
                     <div className="row">
@@ -258,10 +370,10 @@ const Page = () => {
                     />
                   </div>
                   <p>
-                    &quot;Considering all the adjustments we asked for, the patience
-                    they showed, extremely swift turnaround times, good value
-                    for money and quality of work, they have shown to be a great
-                    partner.?
+                    &quot;Considering all the adjustments we asked for, the
+                    patience they showed, extremely swift turnaround times, good
+                    value for money and quality of work, they have shown to be a
+                    great partner.?
                   </p>
                   <div className="client-star">
                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -330,8 +442,8 @@ const Page = () => {
                 <div className="col-sm-3">
                   <div className="awards_recognition_img">
                     <Image
-                     width={300}
-                     height={100 / (100 / 100)}
+                      width={300}
+                      height={100 / (100 / 100)}
                       src="/img/contactus/award_3.png"
                       alt=""
                       title="award"
@@ -346,6 +458,7 @@ const Page = () => {
                       src="/img/contactus/award_4.png"
                       alt=""
                       title="award"
+                      unoptimized={true}
                     />
                   </div>
                 </div>
@@ -368,6 +481,7 @@ const Page = () => {
                           height={100}
                           src="/img/contactus/ingland_flag.png"
                           alt="USA Contact No. - Logicspice"
+                          unoptimized={true}
                         />
                       </div>
                     </div>
@@ -379,12 +493,15 @@ const Page = () => {
                         </div>
                         <div className="row_of_cont_d">
                           <label>Email:</label>
-                          <Image
-                            width={100}
-                            height={100}
-                            src="/img/contactus/log_com.png"
-                            alt="UK Contact No. - Logicspice"
-                          />
+                          <div className="contact_image">
+                            <Image
+                              width={100}
+                              height={50}
+                              src="/img/contactus/log_com.png"
+                              alt="UK Contact No. - Logicspice"
+                              unoptimized={true}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -399,6 +516,7 @@ const Page = () => {
                           height={100}
                           src="/img/contactus/falg_2.png"
                           alt="India Contact No. - Logicspice"
+                          unoptimized={true}
                         />
                       </div>
                     </div>
@@ -419,6 +537,7 @@ const Page = () => {
                             height={100}
                             src="/img/contactus/log_co_uk.png"
                             alt="UK Contact No. - Logicspice"
+                            unoptimized={true}
                           />
                         </div>
                       </div>
@@ -434,6 +553,7 @@ const Page = () => {
                           height={100}
                           src="/img/contactus/india_flag.png"
                           alt="India Contact No. - Logicspice"
+                          unoptimized={true}
                         />
                       </div>
                     </div>
@@ -467,6 +587,7 @@ const Page = () => {
                             height={100}
                             src="/img/contactus/log_com.png"
                             alt="Contact - Logicspice"
+                            unoptimized={true}
                           />
                         </div>
                         <div className="row_of_cont_d">
@@ -476,6 +597,7 @@ const Page = () => {
                             height={100}
                             src="/img/contactus/hr_logicspice_14.png"
                             alt="Contact - Logicspice"
+                            unoptimized={true}
                           />
                         </div>
                       </div>
@@ -487,10 +609,11 @@ const Page = () => {
             <div className="col-sm-6">
               <div className="awd_img">
                 <Image
-                  width={450}
+                  width={550}
                   height={100 / (100 / 100)}
                   src="/img/contactus/expri_img.png"
                   alt="Logicspice"
+                  unoptimized={true}
                 />
               </div>
               <div className="awards_link">
