@@ -1,11 +1,11 @@
 "use client";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, useEffect } from "react";
 import "../globals.css";
 import "../resposive.css";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
@@ -21,11 +21,7 @@ const Navbar = () => {
   const [dropdown5, setDropdown5] = useState(false);
   const router = useRouter();
 
- 
   const pathname = usePathname();
-
-    
-  
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -48,15 +44,12 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
-
-
-
-
 
   return (
     <>
-      <header className={`header home-header fixed ${scroll ? "scrolled" : ""}`}>
+      <header
+        className={`header home-header fixed ${scroll ? "scrolled" : ""}`}
+      >
         <nav className="navbar navbar-light  navbar-expand-lg navbar-default mega-menu  ">
           <div className="container">
             <div className="navbar-brand">
@@ -115,9 +108,7 @@ const Navbar = () => {
                           <ul>
                             <li
                               className={
-                                pathname === "/company/our-team"
-                                  ? "active"
-                                  : ""
+                                pathname === "/company/our-team" ? "active" : ""
                               }
                             >
                               <Link href="/company/our-team">
@@ -144,12 +135,12 @@ const Navbar = () => {
                             </li>
                             <li
                               className={
-                                router.pathname === "/company/technologies"
+                                router.pathname === "/technologies"
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href="/company/technologies">
+                              <Link href="/technologies">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_technologies"></i>
                                 </span>
@@ -172,12 +163,12 @@ const Navbar = () => {
                             </li>
                             <li
                               className={
-                                router.pathname === "/company/portfolio"
+                                router.pathname === "/portfolio"
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href="/company/portfolio">
+                              <Link href="/portfolio">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_portfolio"></i>
                                 </span>
@@ -271,7 +262,7 @@ const Navbar = () => {
                         <div className="col-sm-4">
                           <ul>
                             <li>
-                              <Link href="/softwares/fiverr-clone">
+                              <Link href="/fiverr-clone">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all fiver"></i>
                                 </span>
@@ -279,7 +270,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/crowdfunding-script">
+                              <Link href="/crowdfunding-script">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_crowd_funding"></i>
                                 </span>
@@ -287,7 +278,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/job-board-software">
+                              <Link href="/job-board-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_reqruitment_application"></i>
                                 </span>
@@ -295,7 +286,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/whatsapp-clone">
+                              <Link href="/whatsapp-clone">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all whatsapp_clone_icon"></i>
                                 </span>
@@ -303,7 +294,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/groupon-clone">
+                              <Link href="/groupon-clone">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_groupon"></i>
                                 </span>
@@ -311,7 +302,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/udemy-clone">
+                              <Link href="/udemy-clone">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all udemy-clone-icon"></i>
                                 </span>
@@ -319,7 +310,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/freelancer-clone">
+                              <Link href="/freelancer-clone">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_freelancer"></i>
                                 </span>
@@ -331,7 +322,7 @@ const Navbar = () => {
                         <div className="col-sm-4">
                           <ul>
                             <li>
-                              <Link href="/softwares/equipment-rental-software">
+                              <Link href="/equipment-rental-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_machinerental"></i>
                                 </span>
@@ -339,7 +330,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/classified-ads-script">
+                              <Link href="/classified-ads-script">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_classfied"></i>
                                 </span>
@@ -347,7 +338,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/logistic-marketplace-software">
+                              <Link href="/logistic-marketplace-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_logistic"></i>
                                 </span>
@@ -355,7 +346,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/marketplace-software-solution">
+                              <Link href="/marketplace-software-solution">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_service_provider_system"></i>
                                 </span>
@@ -363,7 +354,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/inventory-management-software">
+                              <Link href="/inventory-management-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_online_test_app"></i>
                                 </span>
@@ -371,7 +362,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/recruitment-management-software">
+                              <Link href="/recruitment-management-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all rms_clone"></i>
                                 </span>
@@ -379,7 +370,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/business-directory-system">
+                              <Link href="/business-directory-system">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_business_directorysystem"></i>
                                 </span>
@@ -391,7 +382,7 @@ const Navbar = () => {
                         <div className="col-sm-4">
                           <ul>
                             <li>
-                              <Link href="/softwares/event-booking-software">
+                              <Link href="/event-booking-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_event_booking"></i>
                                 </span>
@@ -399,30 +390,45 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/faq-script">
+                              <Link href="/faq-script">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_faq"></i>
                                 </span>
                                 <span>FAQ Script</span>
-                                <span class="free_sc1" style={{marginLeft: "8px"}}>Free</span>
+                                <span
+                                  class="free_sc1"
+                                  style={{ marginLeft: "8px" }}
+                                >
+                                  Free
+                                </span>
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/blog-script">
+                              <Link href="/blog-script">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_angularjsblog"></i>
                                 </span>
                                 <span>Blog Script</span>
-                                <span class="free_sc1" style={{marginLeft: "8px"}}>Free</span>
+                                <span
+                                  class="free_sc1"
+                                  style={{ marginLeft: "8px" }}
+                                >
+                                  Free
+                                </span>
                               </Link>
                             </li>
                             <li>
-                              <Link href="/softwares/lead-generation-contact-form-php-script">
+                              <Link href="/lead-generation-contact-form-php-script">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_lead_gene"></i>
                                 </span>
                                 <span>Lead Generation Form</span>
-                                <span class="free_sc1" style={{marginLeft: "8px"}}>Free</span>
+                                <span
+                                  class="free_sc1"
+                                  style={{ marginLeft: "8px" }}
+                                >
+                                  Free
+                                </span>
                               </Link>
                             </li>
                             <li>
@@ -431,7 +437,12 @@ const Navbar = () => {
                                   <i className="menu_icon_all icon_temp"></i>
                                 </span>
                                 <span>Free Templates</span>
-                                <span class="nws_sc1" style={{marginLeft: "8px"}}>New</span>
+                                <span
+                                  class="nws_sc1"
+                                  style={{ marginLeft: "8px" }}
+                                >
+                                  New
+                                </span>
                               </Link>
                             </li>
 
@@ -475,13 +486,13 @@ const Navbar = () => {
                         <div className="col-sm-4">
                           <ul className="">
                             <span className="ahab">
-                              <Link href="/services/web-development">
+                              <Link href="/web-development">
                                 <i className="fa fa-desktop"></i> Web
                                 Development{" "}
                               </Link>
                             </span>
                             <li>
-                              <Link href="/services/php-development">
+                              <Link href="/php-development">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_php_programing"></i>{" "}
                                 </span>
@@ -490,7 +501,7 @@ const Navbar = () => {
                             </li>
                             <li>
                               <Link
-                                href="/services/cakephp-development"
+                                href="/cakephp-development"
                                 className=""
                               >
                                 <span className="hover_btn_menu ">
@@ -501,7 +512,7 @@ const Navbar = () => {
                             </li>
                             <li>
                               <Link
-                                href="/services/codeigniter-development"
+                                href="/codeigniter-development"
                                 className=""
                               >
                                 <span className="hover_btn_menu ">
@@ -511,7 +522,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/services/laravel-development">
+                              <Link href="/laravel-development">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_laraval"></i>{" "}
                                 </span>
@@ -519,7 +530,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/services/nodejs-development">
+                              <Link href="/nodejs-development">
                                 <span className="hover_btn_menu icon_nodejs">
                                   <i className="menu_icon_all icon_nodejs"></i>{" "}
                                 </span>
@@ -527,7 +538,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/services/ecommerce-development">
+                              <Link href="/ecommerce-website">
                                 <span className="hover_btn_menu icon_nodejs">
                                   <i className="menu_icon_all icon_ecommerce"></i>{" "}
                                 </span>
@@ -535,26 +546,19 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-                            {/* <li className="ad-footer-view-all desktop-show">
-                          <a
-                            href="/softwares/services"
-                            className="btn btn-primary"
-                          >
-                            View All Services
-                          </a>
-                        </li> */}
+                            
                           </ul>
                         </div>
                         <div className="col-sm-4">
                           <ul style={{ paddingBottom: "15px" }}>
                             <span className="ahab ahab1">
-                              <Link href="/services/mobile-app-development">
+                              <Link href="/mobile-app-development">
                                 <i className="fa fa-mobile"></i> Mobile App
                                 Development
                               </Link>
                             </span>
                             <li>
-                              <Link href="/services/ios-app-development">
+                              <Link href="/ios-app-development">
                                 <span className="hover_btn_menu icon_iphone_application">
                                   <i className="menu_icon_all icon_iphone_application"></i>{" "}
                                 </span>
@@ -562,7 +566,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/services/android-app-development">
+                              <Link href="/android-app-development">
                                 <span className="hover_btn_menu icon_android_application">
                                   <i className="menu_icon_all icon_android_application"></i>
                                 </span>
@@ -579,7 +583,7 @@ const Navbar = () => {
                             </span>
                             <li>
                               <Link
-                                href="/services/website-design"
+                                href="/website-design"
                                 className=""
                               >
                                 <span className="hover_btn_menu ">
@@ -620,7 +624,7 @@ const Navbar = () => {
                             </span>
                             <li>
                               <Link
-                                href="/services/software-development"
+                                href="/software-development"
                                 className=""
                               >
                                 <span className="hover_btn_menu icon_software-development">
@@ -631,7 +635,7 @@ const Navbar = () => {
                             </li>
                             <li>
                               <Link
-                                href="/services/digital-marketing"
+                                href="/digital-marketing"
                                 className=""
                               >
                                 <span className="hover_btn_menu icon_digital_marketing">
@@ -642,7 +646,7 @@ const Navbar = () => {
                             </li>
                             <li>
                               <Link
-                                href="/services/software-maintenance-support"
+                                href="/software-maintenance-support"
                                 className=""
                               >
                                 <span className="hover_btn_menu icon_support_maintence">
@@ -652,7 +656,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/services/saas-software-development">
+                              <Link href="/saas-software-development">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_salesforce"></i>{" "}
                                 </span>
@@ -660,7 +664,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/services/hire-developers">
+                              <Link href="/hire-developers">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_hire_remote"></i>{" "}
                                 </span>
@@ -708,7 +712,7 @@ const Navbar = () => {
                           <ul>
                             <li>
                               <Link
-                                href="/custom-solutions/booking-app-development"
+                                href="/booking-app-development"
                                 className=""
                               >
                                 <span className="hover_btn_menu ">
@@ -718,7 +722,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/seat-booking-system">
+                              <Link href="/seat-booking-system">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_seat_booking"></i>{" "}
                                 </span>
@@ -726,7 +730,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/crm-software-development">
+                              <Link href="/crm-software-development">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all rcrm_icon"></i>{" "}
                                 </span>
@@ -734,7 +738,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/ecommerce-development">
+                              <Link href="/ecommerce-development">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_ecommerce_solution"></i>{" "}
                                 </span>
@@ -746,7 +750,7 @@ const Navbar = () => {
                         <div className="col-sm-4">
                           <ul>
                             <li>
-                              <Link href="/custom-solutions/dating-system-solution">
+                              <Link href="/dating-system-solution">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all datingsys_icon"></i>{" "}
                                 </span>
@@ -754,7 +758,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/event-booking-system-development">
+                              <Link href="/event-booking-system-development">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_event_system"></i>{" "}
                                 </span>
@@ -762,7 +766,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/auction-software-solution">
+                              <Link href="/auction-software-solution">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_auctionsystem"></i>{" "}
                                 </span>
@@ -770,7 +774,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/car-rental-software">
+                              <Link href="/car-rental-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_carrental"></i>{" "}
                                 </span>
@@ -782,7 +786,7 @@ const Navbar = () => {
                         <div className="col-sm-4">
                           <ul>
                             <li>
-                              <Link href="/custom-solutions/user-management-system">
+                              <Link href="/user-management-system">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_user_mng"></i>{" "}
                                 </span>
@@ -790,7 +794,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/website-calculator-builder">
+                              <Link href="/website-calculator-builder">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_calc"></i>{" "}
                                 </span>
@@ -798,7 +802,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/custom-solutions/erp-system-software-development">
+                              <Link href="/erp-system-software-development">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_erp"></i>{" "}
                                 </span>
@@ -914,7 +918,10 @@ const Navbar = () => {
                                   </span>
                                 </li>
                               </ul>
-                              <Link href="/contact-us" className="btn btn-primary">
+                              <Link
+                                href="/contact-us"
+                                className="btn btn-primary"
+                              >
                                 Contact Us
                               </Link>
                             </div>
@@ -942,7 +949,10 @@ const Navbar = () => {
                                   <span> hr@logicspice.com </span>
                                 </li>
                               </ul>
-                              <Link href="/apply-now" className="btn btn-primary">
+                              <Link
+                                href="/apply-now"
+                                className="btn btn-primary"
+                              >
                                 Apply Now
                               </Link>
                             </div>

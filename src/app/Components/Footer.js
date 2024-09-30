@@ -67,52 +67,52 @@ const Footer = () => {
                 <div className="panel-body">
                   <ul className="menu-item">
                     <li>
-                      <Link href="/softwares/job-board-software">
+                      <Link href="/job-board-software">
                         Job Board Software
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/fiverr-clone">
+                      <Link href="/fiverr-clone">
                         Fiverr Clone Script
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/crowdfunding-script">
+                      <Link href="/crowdfunding-script">
                         Crowdfunding Script
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/groupon-clone">
+                      <Link href="/groupon-clone">
                         Groupon Clone Script
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/classified-ads-script">
+                      <Link href="/classified-ads-script">
                         Classified Ads Software
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/logistic-marketplace-software">
+                      <Link href="/logistic-marketplace-software">
                         Logistic Software
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/service-marketplace-script">
+                      <Link href="/service-marketplace-script">
                         Service Marketplace Script
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/freelancer-clone">
+                      <Link href="/freelancer-clone">
                         Freelancer Clone
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/equipment-rental-software">
+                      <Link href="/equipment-rental-software">
                         Equipment Rental Script
                       </Link>
                     </li>
                     <li>
-                      <Link href="/softwares/recruitment-management-software">
+                      <Link href="/recruitment-management-software">
                         Recruitment Management
                       </Link>
                     </li>
@@ -129,12 +129,12 @@ const Footer = () => {
                 <div className="panel-body">
                   <ul className="menu-item">
                     <li>
-                      <Link href="/services/laravel-development">
+                      <Link href="/laravel-development">
                         Laravel Development
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/web-development">
+                      <Link href="/web-development">
                         Web Development
                       </Link>
                     </li>
@@ -142,37 +142,37 @@ const Footer = () => {
                       <Link href="/custom-solutions">Custom Solutions</Link>
                     </li>
                     <li>
-                      <Link href="/services/hybrid-app-development">
+                      <Link href="/hybrid-app-development">
                         Hybrid Mobile App Development
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/angular-development">
+                      <Link href="/angular-development">
                         Angular Development
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/reactjs-development">
+                      <Link href="/reactjs-development">
                         React Js Development
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/dating-system-solution">
+                      <Link href="/dating-system-solution">
                         Dating System Solution
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/event-booking-system-development">
+                      <Link href="/event-booking-system-development">
                         Event Booking System
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/ecommerce-development">
+                      <Link href="/ecommerce-development">
                         Ecommerce Development
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/web-hosting">Web Hosting</Link>
+                      <Link href="/web-hosting">Web Hosting</Link>
                     </li>
                     <li className="MoreSer">
                       <Link href="/services">
@@ -280,7 +280,7 @@ const Footer = () => {
                 <Link href="/sitemap">Sitemap</Link>
               </li>
               <li>
-                <Link href="/services/hire-developers">Hire Developers</Link>
+                <Link href="/hire-developers">Hire Developers</Link>
               </li>
               <li>
                 <Link href="https://design.logicspice.com/website-design-packages">
@@ -305,48 +305,48 @@ const Footer = () => {
             </div>
             <ul className="menu-item">
               <li>
-                <Link href="/softwares/job-board-software">
+                <Link href="/job-board-software">
                   Job Board Software
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/fiverr-clone">Fiverr Clone Script</Link>
+                <Link href="/fiverr-clone">Fiverr Clone Script</Link>
               </li>
               <li>
-                <Link href="/softwares/crowdfunding-script">
+                <Link href="/crowdfunding-script">
                   Crowdfunding Script
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/groupon-clone">
+                <Link href="/groupon-clone">
                   Groupon Clone Script
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/classified-ads-script">
+                <Link href="/classified-ads-script">
                   Classified Ads Software
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/logistic-marketplace-software">
+                <Link href="/logistic-marketplace-software">
                   Logistic Software
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/service-marketplace-script">
+                <Link href="/service-marketplace-script">
                   Service Marketplace Script
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/freelancer-clone">Freelancer Clone</Link>
+                <Link href="/freelancer-clone">Freelancer Clone</Link>
               </li>
               <li>
-                <Link href="/softwares/equipment-rental-software">
+                <Link href="/equipment-rental-software">
                   Equipment Rental Script
                 </Link>
               </li>
               <li>
-                <Link href="/softwares/recruitment-management-software">
+                <Link href="/recruitment-management-software">
                   Recruitment Management
                 </Link>
               </li>
@@ -364,48 +364,48 @@ const Footer = () => {
             </div>
             <ul className="menu-item">
               <li>
-                <Link href="/services/laravel-development">
+                <Link href="/laravel-development">
                   Laravel Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/web-development">Web Development</Link>
+                <Link href="/web-development">Web Development</Link>
               </li>
               <li>
                 <Link href="/custom-solutions">Custom Solutions</Link>
               </li>
               <li>
-                <Link href="/services/hybrid-app-development">
+                <Link href="/hybrid-app-development">
                   Hybrid Mobile App Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/angular-development">
+                <Link href="/angular-development">
                   Angular Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/reactjs-development">
+                <Link href="/reactjs-development">
                   React Js Development
                 </Link>
               </li>
               <li>
-                <Link href="/custom-solutions/dating-system-solution">
+                <Link href="/dating-system-solution">
                   Dating System Solution
                 </Link>
               </li>
               <li>
-                <Link href="/custom-solutions/event-booking-system-development">
+                <Link href="/event-booking-system-development">
                   Event Booking System
                 </Link>
               </li>
               <li>
-                <Link href="/services/ecommerce-development">
+                <Link href="/ecommerce-development">
                   Ecommerce Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/web-hosting">Web Hosting</Link>
+                <Link href="/web-hosting">Web Hosting</Link>
               </li>
               <li className="MoreSer">
                 <Link href="/services">

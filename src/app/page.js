@@ -312,7 +312,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/service-marketplace-script/"
+                  href="/service-marketplace-script/"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -364,7 +364,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/freelancer-clone/"
+                  href="/freelancer-clone"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -416,7 +416,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/whatsapp-clone/"
+                  href="/whatsapp-clone"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -468,7 +468,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/logistic-marketplace-software/"
+                  href="/logistic-marketplace-software"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -520,7 +520,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/food-ordering-script/"
+                  href="/food-ordering-script"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -572,7 +572,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/appointment-scheduling-software/"
+                  href="/appointment-scheduling-software"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -625,7 +625,7 @@ const Page = () => {
 
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/crowdfunding-script/"
+                  href="/crowdfunding-script"
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
@@ -662,7 +662,7 @@ const Page = () => {
 
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/equipment-rental-software/"
+                  href="/equipment-rental-software"
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
@@ -702,7 +702,7 @@ const Page = () => {
 
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/groupon-clone/"
+                  href="/groupon-clone"
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
@@ -755,7 +755,7 @@ const Page = () => {
 
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/recruitment-management-software/"
+                  href="/recruitment-management-software"
                   className="ready-product aos-init"
                   data-aos="fade-up"
                 >
