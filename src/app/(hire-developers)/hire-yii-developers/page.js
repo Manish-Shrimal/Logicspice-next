@@ -5,7 +5,7 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/(hire-developers)/hire-developer.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@/app/softwares/softwares.css";
+import "@/app/(softwares)/softwares.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
