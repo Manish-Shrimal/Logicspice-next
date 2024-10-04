@@ -6,7 +6,7 @@ import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
-import "../../resources.css";
+import "@/app/resources/resources.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
 
