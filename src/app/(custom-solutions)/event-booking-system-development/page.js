@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { Accordion, Card, Button } from "react-bootstrap";
+import { Collapse } from "react-bootstrap";
+
 
 import {
   MDBAccordion,
@@ -29,6 +31,51 @@ const Page = () => {
 
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How can a customer search for products/services of vendors around his location?",
+      content: "User can enter his zip/postal code in the website and all the products/services that are around will be listed to the customer.",
+    },
+    {
+      key: "collapseTwo",
+      title: "Can the Customer give rating to a vendor even if he hasn't purchased any services from them?",
+      content:
+        "Yes. Customer can give rating out of 5 even if they have not purchased the product from a particular Vendor. Customer can also write a review along with the rating.",
+    },
+    {
+      key: "collapseThree",
+      title:
+        "How many days it will take to implement the customization?",
+      content:
+        "Time taken to implement your Event Booking System depends on the level of customization and data migration. The time frame generally ranges 5-6 weeks",
+    },
+    {
+      key: "collapseFour",
+      title: "Can a Vendor upload multiple products/services to the website?",
+      content:
+        "Yes, Vendors can add products/services in their \"Store\" along with multiple pictures to show their previous work.",
+    },
+    {
+      key: "collapseFive",
+      title: "Can a vendor set up multiple \"Store\" on the website?",
+      content:
+        "No. A Vendor can only setup one \"Store\" in which he can upload multiple products/services.",
+    },
+    {
+      key: "collapseSix",
+      title: "How can a customer create/manage an event?",
+      content:
+        "Customer can create events on website by providing the respective details of the event like Date, Time, Description, Event Location etc. They can also edit/update/delete the events and its details over the site.",
+    },
+    
+  ];
 
   const openModal = () => {
 
@@ -75,7 +122,7 @@ const Page = () => {
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -618,7 +665,7 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -693,6 +740,61 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+       <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="enq-section">
@@ -700,7 +802,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

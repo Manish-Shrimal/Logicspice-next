@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { Accordion, Card, Button } from "react-bootstrap";
+import { Collapse } from "react-bootstrap";
+
 
 import {
   MDBAccordion,
@@ -32,6 +34,41 @@ const Page = () => {
 
   const [showMore, setShowMore] = useState(false);
   const [showInitialText, setShowInitialText] = useState(true); // Track if initial text and button should be displayed
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "What’s Delivery management software?",
+      content: "Delivery Management software plays a broader role than you think. It organizes, administers, and supervises the people, technologies and processes to successfully deliver what a customer’s expects to receive.",
+    },
+    {
+      key: "collapseTwo",
+      title: "Do I need it in my business?",
+      content:
+        "Delivery Management software is a perfect tool for all type of business where a large quantity of workers are working outside the office building. It fits Logistics, Retails, Wholesale, Retail, Utility, manufacturing, food delivery and the courier service industry & we are certain our software will prove to be helpful for your business, as well.",
+    },
+    {
+      key: "collapseThree",
+      title:
+        "What are the benefits of using LogicSpice instead of my own built subscription system?",
+      content:
+        "Delivery management system does a lot more than just getting the couriers delivered. For absolute customer satisfaction, it is vital to have smooth delivery system. With LogicSpice, you can get that easily. We aim at minimizing your work. We will regularly update you to ensure that our client’s are on the top of everything. So, you can relax and focus more on expansion of your business and leave the task of managing it in the hands of our experts.",
+    },
+    {
+      key: "collapseFour",
+      title: "What if I’m stuck while using the software?",
+      content:
+        "You can check the guide or you can contact our representative for help.",
+    },
+    
+    
+    
+  ];
 
   const handleReadMoreClick = () => {
     setShowMore(true); // Show more content
@@ -82,7 +119,7 @@ const Page = () => {
                 over similar solutions.
               </p>
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -795,7 +832,7 @@ const Page = () => {
           <Support />
         </div>
       </div>
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -854,6 +891,61 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+       <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="enq-section">
@@ -861,7 +953,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

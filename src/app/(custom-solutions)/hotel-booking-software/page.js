@@ -120,7 +120,7 @@ const Page = () => {
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
                   <div className="btn btn-get" onClick={openModal}>
-                    <button>Enquiry Now</button>
+                    <a>Enquiry Now</a>
                     {
                       <Enquirymodal
                         modalStatus={showModal}
@@ -1036,7 +1036,7 @@ const Page = () => {
               </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
-                  <button>Enquire Now</button>
+                  <a>Enquire Now</a>
                   {
                     <Enquirymodal
                       modalStatus={showModal}
@@ -1231,7 +1231,8 @@ const Page = () => {
       <section className="whatsupport_section" id="support">
         <div className="container">
           <h4 className="title_main">
-            What <span>support</span> you will get?
+            {/* What <span>support</span> you will get? */}
+            What kind of assistance will you receive?
           </h4>
           <div className="supportsetting">
             <ul>
@@ -1702,7 +1703,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

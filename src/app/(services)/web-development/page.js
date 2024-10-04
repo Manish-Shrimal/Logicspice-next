@@ -56,7 +56,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -107,7 +106,7 @@ const Page = () => {
               <div className="WebDevelopmentBannerImg">
                 <Image
                   unoptimized={true}
-                  width={430}
+                  width={380}
                   height={400 / (100 / 100)}
                   src="/img/webdevelopment/web-development-img.png"
                   alt="Web Development Services"

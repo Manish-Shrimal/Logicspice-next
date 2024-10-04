@@ -286,16 +286,12 @@ const Page = () => {
 
       <div className="SBC_logic">
         <div className="container">
-          <h2>E-Commerce Custom Solution Development</h2>
+          <h2>Custom Ecommerce Development Solution</h2>
         </div>
         <div className="inner_content_SBG">
           <div className="container">
             <p>
-              Our E-Commerce custom solution will facilitate the shoppers to buy
-              various products online from the website. Customers will have the
-              option to search for different products by selecting the relevant
-              categories and subcategories. They can also search by entering the
-              appropriate keyword.
+            Our custom ecommerce development solutions will facilitate the shoppers to buy various products online from the website. Customers will have the option to search for different products by selecting the relevant categories and subcategories. They can also search by entering the appropriate keyword.
             </p>
             <p>
               With the help of on-demand ecommerce development, customers can
@@ -317,7 +313,7 @@ const Page = () => {
 
       <div className="demand_app">
         <div className="container">
-          <h2>Key Benefits of Our E-Commerce on demand Development</h2>
+          <h2>Key Benefits of Our On-Demand Ecommerce Development Services</h2>
           <div className="EcommerceKeyBenefitsMain">
             <div className="EcommerceKeyBenefitsBx">
               <div className="EcommerceKeyBenefitsCard">
@@ -992,7 +988,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

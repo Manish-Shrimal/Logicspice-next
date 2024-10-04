@@ -466,7 +466,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="section3">
+      <section className="app_bottom_shwn_bs AppBottomShwnBx">
         <div className="container">
           <ul className="nav nav-tabs" role="tablist">
             <li
@@ -903,7 +903,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="section3">
+      <section className="app_bottom_shwn_bs AppBottomShwnBx">
         <div className="container">
           <ul className="nav nav-tabs" role="tablist">
             <li

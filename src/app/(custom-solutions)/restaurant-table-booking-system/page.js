@@ -26,6 +26,9 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeKey, setActiveKey] = useState(null);
 
+
+
+
   const toggleAccordion = (key) => {
     setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
   };
@@ -101,13 +104,16 @@ const Page = () => {
                 Rapid customization, because of our team&apos;s past experience
                 over similar solutions.
               </p>
-              <a
-                id=""
-                className="btn btn-primary"
-                onClick={() => openEnquiryModal()}
-              >
-                Enquire Now
-              </a>
+              <div className="btn btn-primary" onClick={openModal}>
+                <a>Enquire Now</a>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Restaurant Table Booking System Development"
+                  />
+                }
+              </div>
               <a
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
                 target="_blank"
@@ -755,12 +761,12 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Custom GPS Vehicle Tracking System"
+                    title="Restaurant Table Booking System Development"
                   />
                 }
               </div>

@@ -75,7 +75,7 @@ const Page = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <p> / </p>
+              <p> / </p> {""}
             </li>
             <li class="current">Case Studies</li>
           </ol>

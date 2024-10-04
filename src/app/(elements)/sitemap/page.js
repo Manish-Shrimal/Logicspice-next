@@ -86,10 +86,10 @@ const Page = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link href="/company/technologies">Technologies</Link>
+                            <Link href="/technologies">Technologies</Link>
                           </li>
                           <li>
-                            <Link href="/">Blogs</Link>
+                            <Link href="https://www.logicspice.com/blog">Blogs</Link>
                           </li>
                           <li>
                             <Link href="/gallery">Gallery</Link>
@@ -100,7 +100,7 @@ const Page = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link href="/company/top-freelancer-company">
+                            <Link href="/top-freelancer-company">
                               Top Freelancer Company
                             </Link>
                           </li>
@@ -217,7 +217,7 @@ const Page = () => {
                         </ul>
                       </li>
                       <li className="sub_mp">
-                        <Link href="/resources/our-work-process">
+                        <Link href="/our-work-process">
                           Our Process
                         </Link>
                         <ul>
@@ -225,7 +225,7 @@ const Page = () => {
                             <Link href="/case-studies">Case Study</Link>
                           </li>
                           <li>
-                            <Link href="/resources/our-work-process">Development Methodology</Link>
+                            <Link href="/our-work-process">Development Methodology</Link>
                           </li>
                           <li>
                             <Link href="/resources/project-communication">
@@ -246,187 +246,187 @@ const Page = () => {
                     <Link href="/softwares">Softwares</Link>
                     <ul>
                       <li>
-                        <Link href="/softwares/crowdfunding-script">
+                        <Link href="/crowdfunding-script">
                           Crowd Funding PHP Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/job-portal-script">
+                        <Link href="/job-portal-script">
                           Job Portal PHP Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/food-ordering-script">
+                        <Link href="/food-ordering-script">
                           Food Ordering &amp; Delivery Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/classified-ads-script">
+                        <Link href="/classified-ads-script">
                           Classified Ads Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/online-exam-software-solution">
+                        <Link href="/online-exam-software-solution">
                           Online Exam Test
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/taxi-booking-script">
+                        <Link href="/taxi-booking-script">
                           Taxi Booking PHP Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/faq-script">FAQ Script</Link>
+                        <Link href="/faq-script">FAQ Script</Link>
                       </li>
                       <li>
-                        <Link href="/softwares/equipment-rental-software">
+                        <Link href="/equipment-rental-software">
                           Equipment Rental Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/rental-property-management-software">
+                        <Link href="/rental-property-management-software">
                           Property Rental Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/groupon-clone">
+                        <Link href="/groupon-clone">
                           Groupon Clone Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/freelancer-clone">
+                        <Link href="/freelancer-clone">
                           Freelancer Clone
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/fiverr-clone">Fiverr Clone</Link>
+                        <Link href="/fiverr-clone">Fiverr Clone</Link>
                       </li>
                       <li>
-                        <Link href="/softwares/appointment-scheduling-software">
+                        <Link href="/appointment-scheduling-software">
                           Appointment Scheduling Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/cakephp-facebook-login-plugin-script">
+                        <Link href="/cakephp-facebook-login-plugin-script">
                           Cake PHP Facebook Login Plugin Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/angularjs-blog-script">
+                        <Link href="/angularjs-blog-script">
                           Angular Js Blog Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/wordpress-twitter-login-plugin">
+                        <Link href="/wordpress-twitter-login-plugin">
                           Wordpress Twitter Login Plugin
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/cakephp-cms-script">
+                        <Link href="/cakephp-cms-script">
                           CakePHP CMS Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/lead-generation-contact-form-php-script">
+                        <Link href="/lead-generation-contact-form-php-script">
                           Contact Form PHP Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/service-marketplace-script">
+                        <Link href="/service-marketplace-script">
                           Service Marketplace Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/business-directory-system">
+                        <Link href="/business-directory-system">
                           PHP Business Directory Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/food-ordering-script">
+                        <Link href="/food-ordering-script">
                           Restaurant Food Delivery Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/online-course-management-script">
+                        <Link href="/online-course-management-script">
                           Online Course Management Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/chat-room-script">
+                        <Link href="/chat-room-script">
                           Chat Room Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/grocery-app-development">
+                        <Link href="/grocery-app-development">
                           Grocery Store Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/online-food-ordering-system">
+                        <Link href="/online-food-ordering-system">
                           Food Ordering Hosted Solution
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/logistic-marketplace-software">
+                        <Link href="/logistic-marketplace-software">
                           Logistic Marketplace Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/linkedin-clone">
+                        <Link href="/linkedin-clone">
                           LinkedIn Clone
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/blog-script">Blog Script</Link>
+                        <Link href="/blog-script">Blog Script</Link>
                       </li>
                       <li>
-                        <Link href="/softwares/ebay-clone">
+                        <Link href="/ebay-clone">
                           eBay Clone Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/recruitment-management-software">
+                        <Link href="/recruitment-management-software">
                           Recruitment Management Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/job-board-software">
+                        <Link href="/job-board-software">
                           Job Board Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/teacher-marketplace">
+                        <Link href="/teacher-marketplace">
                           Teacher Marketplace
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/whatsapp-clone">
+                        <Link href="/whatsapp-clone">
                           WhatsApp Clone
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/real-estate-script">
+                        <Link href="/real-estate-script">
                           Real Estate Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/forum-script">Forum Script</Link>
+                        <Link href="/forum-script">Forum Script</Link>
                       </li>
                       <li>
-                        <Link href="/softwares/news-management-system">
+                        <Link href="/news-management-system">
                           News Management System
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/event-booking-software">
+                        <Link href="/event-booking-software">
                           Event Booking Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/softwares/udemy-clone">Udemy Clone</Link>
+                        <Link href="/udemy-clone">Udemy Clone</Link>
                       </li>
                       <li>
-                        <Link href="/softwares/product-review-rating-php-script">
+                        <Link href="/product-review-rating-php-script">
                           Product Review Script
                         </Link>
                       </li>
@@ -436,67 +436,67 @@ const Page = () => {
                     <Link href="/custom-solutions">Custom Solutions</Link>
                     <ul>
                       <li>
-                        <Link href="/custom-solutions/booking-app-development">
+                        <Link href="/booking-app-development">
                           Online Booking App
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/restaurant-table-booking-system">
+                        <Link href="/restaurant-table-booking-system">
                           Restaurant Table Booking App
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/seat-booking-system">
+                        <Link href="/seat-booking-system">
                           Seat Booking Application
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/crm-software-development">
+                        <Link href="/crm-software-development">
                           CRM Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/ecommerce-development">
+                        <Link href="/ecommerce-development">
                           E-Commerce Portal
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/crowdfunding-script">
+                        <Link href="/crowdfunding-script">
                           Ready-Made Fundraising PHP Scripts
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/loan-management-software-development">
+                        <Link href="/loan-management-software-development">
                           Loan System
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/marketplace-software-solution">
+                        <Link href="/marketplace-software-solution">
                           Marketplace Solutions
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/survey-software-development">
+                        <Link href="/survey-software-development">
                           Survey App
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/dating-system-solution">
+                        <Link href="/dating-system-solution">
                           Dating System
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/jewellery-ecommerce-system-solution">
+                        <Link href="/jewellery-ecommerce-system-solution">
                           Jewellery E-Commerce System
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/e-learning-solution">
+                        <Link href="/e-learning-solution">
                           E-Learning System
                         </Link>
                       </li>
                       <li>
-                        <Link href="/custom-solutions/event-booking-system-development">
+                        <Link href="/event-booking-system-development">
                           Event booking System Script
                         </Link>
                       </li>
@@ -506,7 +506,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/gps-vehicle-tracking-system">
+                        <Link href="/gps-vehicle-tracking-system">
                           Vehical Tracking System
                         </Link>
                       </li>
@@ -514,7 +514,7 @@ const Page = () => {
                         <Link href="/car-rental-software">Car Rental</Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/delivery-management-software">
+                        <Link href="/delivery-management-software">
                           Delivery Management System
                         </Link>
                       </li>
@@ -534,12 +534,12 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/social-network-integration-in-android-app">
+                        <Link href="/social-network-integration-in-android-app">
                           Social Network Integration In Android App
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/erp-system-software-developement">
+                        <Link href="/erp-system-software-developement">
                           ERP System Software Development
                         </Link>
                       </li>
@@ -547,12 +547,12 @@ const Page = () => {
                         <Link href="/ecommerce-website">eCommerce Website</Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/inventory-management-software">
+                        <Link href="/inventory-management-software">
                           Inventory Management System Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/logistics-software-development">
+                        <Link href="/logistics-software-development">
                           Custom Logistics Software Development
                         </Link>
                       </li>
@@ -562,7 +562,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/wordpress-ecommerce-website">
+                        <Link href="/wordpress-ecommerce-website">
                           WordPress Ecommerce Website Development Company -
                           Logicspice
                         </Link>
@@ -587,7 +587,7 @@ const Page = () => {
                         <Link href="/contract-hire">Contract Hire</Link>
                       </li>
                       <li>
-                        <Link href="/Linkngular-development">
+                        <Link href="/angular-development">
                           Angular Web Development
                         </Link>
                       </li>
@@ -607,7 +607,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Linkrtificial-intelligence">
+                        <Link href="/artificial-intelligence">
                           Artificial Intelligence
                         </Link>
                       </li>
@@ -620,173 +620,173 @@ const Page = () => {
                         <Link href="/ios-app-development">iPhone</Link>
                       </li>
                       <li>
-                        <Link href="/Linkndroid-app-development">Android</Link>
+                        <Link href="/android-app-development">Android</Link>
                       </li>
                       <li>
-                        <Link href="/website-development">
+                        <Link href="/web-development">
                           Website Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/psd-to-html">
+                        <Link href="/psd-to-html">
                           XHTML Conversion
                         </Link>
                       </li>
                       <li>
-                        <Link href="/cakephp-development/">
+                        <Link href="/cakephp-development">
                           CakePHP Development Company
                         </Link>
                       </li>
                       <li>
-                        <Link href="/codeigniter-development/">
+                        <Link href="/codeigniter-development">
                           {" "}
                           Codeigniter Framework
                         </Link>
                       </li>
                       <li>
-                        <Link href="/laravel-development/">
+                        <Link href="/laravel-development">
                           LARAVEL DEVELOPMENT COMPANY
                         </Link>
                       </li>
                       <li>
-                        <Link href="/opencart-development/">
+                        <Link href="/opencart-development">
                           Opencart Development Company
                         </Link>
                       </li>
                       <li>
-                        <Link href="/drupal/">
+                        <Link href="/web-development">
                           {" "}
                           Drupal Development Services
                         </Link>
                       </li>
                       <li>
-                        <Link href="/magento-development/">
+                        <Link href="/magento-development">
                           {" "}
                           Magento Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/php-development/">
+                        <Link href="/php-development">
                           PHP Web Development Services
                         </Link>
                       </li>
                       <li>
-                        <Link href="/job-portal-script/">
+                        <Link href="/job-portal-script">
                           Jobsite Script Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/shopify-framework/">
+                        <Link href="/shopify-development">
                           Shopify Framework
                         </Link>
                       </li>
                       <li>
-                        <Link href="/salesforce_development_company/">
+                        <Link href="/salesforce-development-company">
                           Salesforce Development Company
                         </Link>
                       </li>
                       <li>
-                        <Link href="/business-support-services/">
+                        <Link href="/business-support-services">
                           Business Support Services
                         </Link>
                       </li>
                       <li>
-                        <Link href="/saas-software-development/">
+                        <Link href="/saas-software-development">
                           SaaS Software Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/social-media-optimization-services/">
+                        <Link href="/social-media-optimization-services">
                           Social Media Optimization Services
                         </Link>
                       </li>
                       <li>
-                        <Link href="/nodejs-development-company/">
+                        <Link href="/nodejs-development">
                           Node.js Development Company
                         </Link>
                       </li>
                       <li>
-                        <Link href="/website-cloning-service/">
+                        <Link href="/website-cloning-service">
                           Website Cloning Service | Website Clone Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/mobile-app-development/">
+                        <Link href="/mobile-app-development">
                           Mobile App Developement
                         </Link>
                       </li>
                       <li>
-                        <Link href="/shopify-development/">
+                        <Link href="/shopify-development">
                           Shopify App Development Company | Shopify Web
                           Development Services
                         </Link>
                       </li>
                       <li>
-                        <Link href="/devops-services/">
+                        <Link href="/devops-development">
                           DevOps Services | DevOps Consulting Services &amp;
                           Solutions
                         </Link>
                       </li>
                       <li>
-                        <Link href="/submit-guest-post/">
+                        <Link href="/submit-guest-post">
                           Submit Guest Post for Software, Technology, WordPress
                           Niche
                         </Link>
                       </li>
                       <li>
-                        <Link href="/django-development/">
+                        <Link href="/django-development">
                           Django Development Company | Django Development
                           Services - Logicspice
                         </Link>
                       </li>
                       <li>
-                        <Link href="/shopify-development-packages/">
+                        <Link href="/shopify-development-packages">
                           Shopify Development Packages
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Linkngular-development/">
+                        <Link href="/angular-development">
                           Angular Development Company | Hire Angular Developers
                           | Logicspice
                         </Link>
                       </li>
                       <li>
-                        <Link href="/python-development/">
+                        <Link href="/python-development">
                           Python Development Company | Python Development
                           Services | Logicspice
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Linkrtificial-intelligence/">
+                        <Link href="/artificial-intelligence">
                           Best Artificial Intelligence Development Company |
                           Logicspice
                         </Link>
                       </li>
                       <li>
-                        <Link href="/reactjs-development/">
+                        <Link href="/reactjs-development">
                           Reactjs Development Company | Hire Reactjs Developers
                           -Logicspice
                         </Link>
                       </li>
                       <li>
-                        <Link href="/react-native-app-development/">
+                        <Link href="/react-native-app-development">
                           React Native App Development Company | Hire React
                           Native Developers
                         </Link>
                       </li>
                       <li>
-                        <Link href="/contract-hire/">
+                        <Link href="/contract-hire">
                           The New IT Recruitment Model | Contract IT Staffing
                           Services - Logicspice
                         </Link>
                       </li>
                       <li>
-                        <Link href="/big-data-development/">
+                        <Link href="/big-data-development">
                           Big Data Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/devops-development/">
+                        <Link href="/devops-development">
                           DevOps Development Services
                         </Link>
                       </li>
@@ -794,77 +794,77 @@ const Page = () => {
                         <Link href="/website-design">Web Design</Link>
                       </li>
                       <li>
-                        <Link href="/services/website-design/website-redesign">
+                        <Link href="/website-redesign">
                           Website Redesign Services
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/website-design/responsive-web-design">
+                        <Link href="/responsive-web-design">
                           Responsive Web Design
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/website-design/best-landing-page-designing-service">
+                        <Link href="/landing-page-design">
                           Landing Page Design
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/website-design/ui_ux_design_company">
+                        <Link href="/website-design">
                           UI UX Design Company
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development">
+                        <Link href="/software-development">
                           Software Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/Linkction-script">
+                        <Link href="/auction-software-solution">
                           Auction Script Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/forum-script">
+                        <Link href="/lead-generation-contact-form-php-script">
                           Forum Script
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/open-source-cms">
+                        <Link href="/open-source-cms">
                           Open Source CMS Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/software-development/enterprises-solutions">
+                        <Link href="/enterprises-solutions">
                           Enterprises Solution
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/dating-website">
+                        <Link href="/dating-system-solution">
                           Dating Website Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/crm">
+                        <Link href="/crm-software-development">
                           CRM Software Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/live-support-script">
+                        <Link href="/software-mainenance-support">
                           Live Support Script Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/software-development/erp-openbravo">
+                        <Link href="/erp-system-software-development">
                           ERP (OpenBravo)
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/software-development/online-booking-software-solution">
+                        <Link href="/booking-app-development">
                           Online Booking Software
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/software-development/hotel-management-software">
+                        <Link href="/hotel-booking-software">
                           Hotel Management Software
                         </Link>
                       </li>
@@ -874,12 +874,12 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/open-source-customization/wordpress-web-development">
+                        <Link href="/wordpress-web-development">
                           WordPress Development
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/open-source-customization/oscommerce">
+                        <Link href="/oscommerce">
                           Oscommerce
                         </Link>
                       </li>
@@ -887,7 +887,7 @@ const Page = () => {
                         <Link href="/digital-marketing">Digital Marketing</Link>
                       </li>
                       <li>
-                        <Link href="/services/digital-marketing/brand-development">
+                        <Link href="/brand-development">
                           Brand Development
                         </Link>
                       </li>
@@ -897,22 +897,22 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/digital-marketing/search-engine-optimization">
+                        <Link href="/services/digital-marketing/search-engine-optimization">
                           Search Engine Optimization
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Vuejs/services/digital-marketing/internet-marketing-solutions">
+                        <Link href="/services/digital-marketing/internet-marketing-solutions">
                           Internet Marketing Solutions
                         </Link>
                       </li>
                       <li>
-                        <Link href="/Linkdvanced-web-programming">
+                        <Link href="/advanced-web-programming">
                           Advanced Web Programming
                         </Link>
                       </li>
                       <li>
-                        <Link href="/support">Support &amp; Maintenance</Link>
+                        <Link href="/software-maintainance-support">Support &amp; Maintenance</Link>
                       </li>
                       <li>
                         <Link href="/psd-to-shopify">PSD to Shopify</Link>
@@ -982,7 +982,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/hire-angular-js-developers">
+                        <Link href="/hire-angular-js-experts">
                           Hire AngularJS Developer Experts
                         </Link>
                       </li>
@@ -1017,7 +1017,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/hire-react-developers">
+                        <Link href="/hire-reactjs-developers">
                           hire-react-developers Experts
                         </Link>
                       </li>

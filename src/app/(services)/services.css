@@ -264,8 +264,8 @@ section {
 .TopHadding h2 {
 	color: #303030;
 	font-size: 40px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 }
 .ReadyMadeScriptSection .TopHadding p {
 	color: #303030;
@@ -957,7 +957,7 @@ section {
         text-align: left;
         font-size: 42px;
         margin-bottom: 10px;
-        font-weight: 600;
+        font-weight: 600!important;
         color: #303030;
         padding-bottom: 50px;
         position: relative;
@@ -2686,7 +2686,7 @@ section {
 	background: rgba(0, 0, 0, 0) url("/img/product-img/web-development-bg.jpg") no-repeat scroll center top;
 	padding: 70px 0;
 	background-size: cover;
-	margin-top: 100px;
+	margin-top: 60px;
 }
 .WebDevelopmentBannerBx {
 	padding-top: 40px;
@@ -2694,8 +2694,8 @@ section {
 .WebDevelopmentBannerBx h1 {
 	color: #50a7ea;
 	font-size: 54px;
-	font-family: 'roboto', sans-serif;
-	font-weight: 500;
+	font-family: 'roboto', sans-serif!important;
+	font-weight: 500!important;
 }
 .WebDevelopmentBannerBx p {
 	color: #fff;
@@ -2703,11 +2703,14 @@ section {
 	padding: 15px 0 27px;
 }
 .WebDevelopmentBannerBx .btn.btn-primary {
-	font-size: 18px;
+	font-size: 18px!important;
 	color: #451095;
 	background: #fff !important;
 	border-color: #fff !important;
-	padding: 9px 30px;
+	padding: 9px 30px!important;
+}
+.WebDevelopmentApplicationBx h2 span {
+    font-weight: 600!important;
 }
 .WebDevelopmentBannerBx .btn.btn-primary:hover {
 	color: #451095;
@@ -2731,7 +2734,7 @@ section {
 .WebDevelopmentClients ul li span {
 	color: #fff;
 	font-size: 36px;
-	font-weight: 500;
+	font-weight: 500!important;
 	padding-top: 9px;
 	display: inline-block;
 }
@@ -2741,12 +2744,12 @@ section {
 .WebDevelopmentApplicationBx h2 {
 	color: #303030;
 	font-size: 40px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 }
 .WebDevelopmentApplicationBx p {
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 300!important;
 	color: rgba(48, 48, 48, 0.8);
 	padding-top: 20px;
 }
@@ -2759,7 +2762,7 @@ section {
 	padding: 40px 0 70px;
 }
 .TopHadding h2 span {
-	font-weight: 600;
+	font-weight: 600!important;
 }
 .WebDesignDevelopment {
 	margin-top: 60px;
@@ -2778,12 +2781,12 @@ section {
 	font-size: 20px;
 	color: #303030;
 	margin-top: 30px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 }
 .WebDesignDevelopmentBx p {
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 300!important;
 	color: rgba(48, 48, 48, 0.8);
 	padding-top: 20px;
 }
@@ -2823,7 +2826,7 @@ section {
 	margin-bottom: 15px;
 }
 .WebFeaturesSection .TopHadding ul li strong {
-	font-weight: 500;
+	font-weight: 500!important;
 }
 .WebFeaturesRight {
 	padding-left: 20px;
@@ -2978,7 +2981,7 @@ font-size: 27px;
 }
 .laravel_choose_features_section .btn.btn-hire {
 	border-radius: 3px;
-	font-weight: 400;
+	font-weight: 400!important;
 }
 .NewFaqDesignSection .ecommerce__Quick_FAQ .title_main {
 	text-align: left;
@@ -3020,7 +3023,7 @@ section.yellow_slider .slidere-tittle p {
 	line-height: 27px;
 }
 section.yellow_slider .slidere-tittle p strong {
-	font-weight: 900;
+	font-weight: 900!important;
 	font-size: 18px;
 }
 .resources-banner {
@@ -3161,7 +3164,7 @@ section.new-why-choose-section.sass_title h2 span {
 	color: #000000;
 	font-size: 16px;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 500!important;
 	position: relative;
 }
 .resources-tabs li.active a::before {
@@ -3197,7 +3200,7 @@ section.new-why-choose-section.sass_title h2 span {
 	font-family: 'lato', sans-serif;
 	color: #757575;
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 500!important;
 	padding: 20px 0;
 }
 .resources-bx-top .resources-contan p {
@@ -3227,7 +3230,7 @@ section.new-why-choose-section.sass_title h2 span {
     color: #303030;
     padding-top: 10px;
     opacity: 0.8;
-    font-weight: 300;
+    font-weight: 300!important;
 }
 .php-development #laravel-slader .slick-prev {
     left: 47%;
@@ -3580,8 +3583,8 @@ section.new-why-choose-section.sass_title h2 span {
 	color: #fff;
 	text-align: center;
 	font-size: 40px;
-	font-family: 'roboto', sans-serif;
-	font-weight: 500;
+	font-family: 'roboto', sans-serif!important;
+	font-weight: 500!important;
 }
 .laravel_core_features_bx {
 	display: inline-block;
@@ -3670,7 +3673,7 @@ section.new-why-choose-section.sass_title h2 span {
     font-weight: 400!important;
 }
 .AngularBanner .laravel_service_box p, .laravel_core_sub2 {
-    font-weight: 300;
+    font-weight: 300!important;
 }
 .angular_development .laravel_core_features_section {
     background: url(/img/product-img/core_features_bg.jpg) center center no-repeat !important;
@@ -3855,7 +3858,7 @@ section.new-why-choose-section.sass_title h2 span {
 	font-size: 19px;
 	padding-top: 30px;
 	margin-bottom: 0;
-	font-weight: normal;
+	font-weight: normal!important;
 }
 .testing-qa-section {
 	background: url("/img/softwaretestingservices/qa-bg1.png") no-repeat center top;
@@ -3940,7 +3943,7 @@ section.new-why-choose-section.sass_title h2 span {
 .testin-sercvies-bx .list-group .list-group-item {
 	border: none;
 	color: #333;
-	font-weight: 600;
+	font-weight: 600!important;
 	font-size: 19px;
 	background: url("/img/softwaretestingservices/arrow-qa.png") no-repeat left center;
 	padding: 17px 45px;
@@ -3961,7 +3964,7 @@ section.new-why-choose-section.sass_title h2 span {
 .qatesting-services-section p {
 	color: #000;
 	font-size: 17px;
-	font-weight: 400;
+	font-weight: 400!important;
 	padding: 20px 0;
 }
 .qatesting-services-section .list-group {
@@ -3970,7 +3973,7 @@ section.new-why-choose-section.sass_title h2 span {
 .qatesting-services-section .list-group .list-group-item {
 	border: none;
 	color: #565656;
-	font-weight: 600;
+	font-weight: 600!important;
 	font-size: 19px;
 	padding: 12px 0px;
 }
@@ -7130,6 +7133,10 @@ color: #505458;
   .CustomQuickFAQScript .accordion-header .accordion-button::after {
 	display: none;
   }
+
+  .WebDevelopmentClients ul li:last-child {
+    padding-right: 0;
+}
   
   .CustomQuickFAQScript .accordion-header .accordion-button.collapsed {
 	background: url(/img/ordermanagement/faq_select-plus.png) 4% center no-repeat rgba(0, 0, 0, 0);
@@ -7303,7 +7310,7 @@ font-size: 15px;
 	}
 	.laravel_core_features_section {
 		padding: 50px 0 0 !important;
-		background-color: #303747 !important;
+		background-color: #f00 !important;
 		background-image: none !important;
 	}
 	.php-development .laravel_core_features_detail {
@@ -7341,8 +7348,12 @@ font-size: 15px;
 		margin-right: 2px;
 	}
 	.ecommerce__Quick_FAQ_Script .title_main {
-		padding-bottom: 28px;
-		font-size: 22px;
+		padding-bottom: 28px!important;
+		font-size: 22px!important;
+		text-align: center!important;
+	}
+	.CustomQuickFAQScript .accordion-body{
+		font-size: 16px!important;
 	}
 	.ecommerce-portal-banner {
 		padding: 60px 0;
@@ -7525,7 +7536,7 @@ font-size: 15px;
 		padding: 40px 0;
 	}
 	.laravel_choose_features_section {
-		padding: 10px 0;
+		padding: 5px 0!important;
 	}
 	.laravel-anquire .btn {
 		padding: 10px 14px !important;

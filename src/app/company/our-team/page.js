@@ -150,7 +150,7 @@ const Page = () => {
                   who is having more than 7+ years experience in their field.
                   Our android app developers approach is to ensure that client
                   receive user friendly product that expands customers
-                  experience. Our developers are always willing to work on the
+                  experience. Our developers are always willing to work on the{" "}
                   <strong>latest technologies in android.</strong> We always
                   believe in keeping our clients to get in touch with our
                   android team directly to give better exposure to your project.
@@ -312,7 +312,7 @@ const Page = () => {
       </section>
 
       <section class="grow-to-bloom">
-        <div className="container">
+      
           <div class="row">
             <div class="col-md-7">
               <Image
@@ -369,7 +369,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-        </div>
+      
       </section>
 
       <section class="counsult-expert">
@@ -402,96 +402,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* <section class="events">
-        <div class="container">
-          <ul id="event-home" class="owl-carousel GlobalpagesSlider slide">
-            <li>
-              <div class="event_gallery_colsshom_col_box_in">
-                <div class="img-event">
-                  <Image width={100} height={100}
-                    src="/img/ourteam/trip_photo.jpg"
-                    alt="Office Trip 2019"
-                    class="lazy"
-                  />
-                </div>
-                <div class="even_img_name">Office Trip</div>
-                <div class="even_img_date">November 23, 2019</div>
-              </div>
-              <div class="event_gallery_colsshom_col_box_in_shadow"></div>
-            </li>
-            <li>
-              <div class="event_gallery_colsshom_col_box_in">
-                <div class="img-event">
-                  <Image width={100} height={100}
-                    src="/img/ourteam/sunrise2019.jpg"
-                    alt="Sunrise_Resort_2019img"
-                    class="lazy"
-                  />
-                </div>
-                <div class="even_img_name">Sunrise Resort</div>
-                <div class="even_img_date">July 27, 2019</div>
-              </div>
-              <div class="event_gallery_colsshom_col_box_in_shadow"></div>
-            </li>
-            <li>
-              <div class="event_gallery_colsshom_col_box_in">
-                <div class="img-event">
-                  <Image width={100} height={100}
-                    src="/img/ourteam/appu_ghar_2018img.jpg"
-                    alt="appu_ghar_2018img"
-                    class="lazy"
-                  />
-                </div>
-                <div class="even_img_name">Appu Ghar</div>
-                <div class="even_img_date">August 04, 2018</div>
-              </div>
-              <div class="event_gallery_colsshom_col_box_in_shadow"></div>
-            </li>
-            <li>
-              <div class="event_gallery_colsshom_col_box_in">
-                <div class="img-event">
-                  <Image width={100} height={100}
-                    src="/img/ourteam/plantation_2016img.png"
-                    alt="plantation_2016img"
-                    class="lazy"
-                  />
-                </div>
-                <div class="even_img_name">Plantation</div>
-                <div class="even_img_date">July 16, 2016</div>
-              </div>
-              <div class="event_gallery_colsshom_col_box_in_shadow"></div>
-            </li>
-            <li>
-              <div class="event_gallery_colsshom_col_box_in">
-                <div class="img-event">
-                  <Image width={100} height={100}
-                    src="/img/ourteam/newyear_2017img.png"
-                    alt="newyear_2017img"
-                    class="lazy"
-                  />
-                </div>
-                <div class="even_img_name">New Year Celebration</div>
-                <div class="even_img_date">December 31, 2016</div>
-              </div>
-              <div class="event_gallery_colsshom_col_box_in_shadow"></div>
-            </li>
-            <li>
-              <div class="event_gallery_colsshom_col_box_in">
-                <div class="img-event">
-                  <Image width={100} height={100}
-                    src="/img/ourteam/diwali_2016_img.png"
-                    alt="diwali_2016_img"
-                    class="lazy"
-                  />
-                </div>
-                <div class="even_img_name">Diwali Celebration</div>
-                <div class="even_img_date">October 10, 2016</div>
-              </div>
-              <div class="event_gallery_colsshom_col_box_in_shadow"></div>
-            </li>
-          </ul>
-        </div>
-      </section> */}
+
 
       <section className="events">
         <div className="container">
@@ -681,6 +592,7 @@ const Page = () => {
           
         </div>
       </section>
+      
 
       <section class="fun-team">
         <h2>We believe people learn more, when they are having fun!</h2>

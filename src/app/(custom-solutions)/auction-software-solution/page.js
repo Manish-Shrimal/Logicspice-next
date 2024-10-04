@@ -15,12 +15,54 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import { Collapse } from "react-bootstrap";
+
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How can a Buyer search for products around his location?",
+      content: "User can enter his zip/postal code in the website and all the products will be listed to the seller.",
+    },
+    {
+      key: "collapseTwo",
+      title: "How many days will it take to implement the development?",
+      content:
+        "Time taken to implement your Auction Software depends on the level of customization and data migration. The time frame generally ranges from 5-6 weeks.",
+    },
+    {
+      key: "collapseThree",
+      title:
+        "Can a Seller upload multiple products to the website?",
+      content:
+        "Yes, Sellers can add products in their â€œStoreâ€� along with multiple pictures and other details.",
+    },
+    {
+      key: "collapseFour",
+      title: "Can a Seller set up multiple stores on the website?",
+      content:
+        "No. A Seller can only setup one store in which he can upload multiple products.",
+    },
+    {
+      key: "collapseFive",
+      title: "How can a buyer win an auction?",
+      content:
+        "Buyer can win the auction that he has bid for if they have the highest offer price at the end of auction.",
+    },
+    
+    
+  ];
 
   const openModal = () => {
     setShowModal(!showModal);
@@ -65,7 +107,7 @@ const Page = () => {
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -364,7 +406,7 @@ const Page = () => {
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="titlesettop titlesettop_mar">
-            Custom Online Booking App/Web Development Features
+          Auction System Custom Development Features
           </h2>
 
           <div className="features-tab">
@@ -675,7 +717,7 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -735,13 +777,68 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+        <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section className="enq-section">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

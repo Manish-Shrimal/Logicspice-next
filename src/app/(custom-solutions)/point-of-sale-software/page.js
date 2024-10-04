@@ -19,12 +19,48 @@ import {
   MDBModal,
   MDBModalBody,
 } from "mdb-react-ui-kit";
+import { Collapse } from "react-bootstrap";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const [showInitialText, setShowInitialText] = useState(true); // Track if initial text and button should be displayed
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "What’s the meaning of POS?",
+      content: "POS means Point of Sale; it’s a place where the sales take place. On macro level, it can be referred to a Mall, market, etc. and on micro level, a retailer store’s checkout counter.",
+    },
+    {
+      key: "collapseTwo",
+      title: "What is a POS Device?",
+      content:
+        "A POS Device is an electronic component which is used to accept card payments at various locations. It reads the information on the cards – debit or credit, checks the bank server for sufficient funds and transfers it from customer's account to the seller’s account.",
+    },
+    {
+      key: "collapseThree",
+      title:
+        "What does a POS system includes?",
+      content:
+        "The POS system comprises of a point of sale software, computer, cash register, monitor, cash drawer, printer for receipts, client display, card reader and a barcode scanner.",
+    },
+    {
+      key: "collapseFour",
+      title: "Is your System well-secured?",
+      content:
+        "Yes, absolutely. To ensure your data is completely secured, we apply a multi-layer approach for data protection.",
+    },
+    
+    
+    
+  ];
 
   const handleReadMoreClick = () => {
     setShowMore(true); // Show more content
@@ -57,7 +93,7 @@ const Page = () => {
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -376,7 +412,7 @@ const Page = () => {
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="titlesettop titlesettop_mar">
-            Custom Online Booking App/Web Development Features
+          Point Of Sale Software Features
           </h2>
 
           <div className="features-tab">
@@ -589,7 +625,7 @@ const Page = () => {
       </section>
       <div className="app_solution">
         <div className="container">
-          <h2>Custom CRM App Development Solution</h2>
+          <h2>Point Of Sale Software Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
@@ -601,7 +637,7 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -715,6 +751,61 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+        <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="enq-section">
@@ -722,7 +813,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

@@ -89,7 +89,7 @@ const Page = () => {
               </div>
               <div className="HireDevelopersBannerBtn">
                 <div className="btn btn-primary" onClick={openModal}>
-                  <button>Enquire Now</button>
+                  <a>Enquire Now</a>
                   {
                     <Enquirymodal
                       modalStatus={showModal}
@@ -1230,7 +1230,7 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="ecommerce__Quick_FAQ_Script FreeScript__Quick_FAQ">
+            <div className="CustomQuickFAQScript">
               <div className="row">
                 <div className="col-md-5" data-aos="fade-up">
                   <h4 className="title_main">
@@ -1286,7 +1286,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

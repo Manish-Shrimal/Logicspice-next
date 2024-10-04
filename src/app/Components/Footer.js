@@ -620,7 +620,7 @@ const Footer = () => {
                     <div class="country_row_set">
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a>
+                          <Link href="/australia">
                             <Image
                               width={100}
                               height={100}
@@ -628,16 +628,16 @@ const Footer = () => {
                               alt="mobile app development in australia"
                             />{" "}
                             Australia
-                          </a>
+                          </Link>
                         </span>
                         <div class="counlistshow">
                           <span>
-                            <a href="/australia/mobile-app-development-in-melbourne">
+                          <Link href={`/australia/mobile-app-development-in/melbourne`}>
                               Melbourne
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/australia/mobile-app-development-in-sydney">
+                            <a href={`/australia/mobile-app-development-in-${"sydney"}`}>
                               Sydney
                             </a>
                           </span>

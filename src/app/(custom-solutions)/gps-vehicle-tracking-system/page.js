@@ -16,10 +16,52 @@ import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { Accordion, Card, Button } from "react-bootstrap";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import { Collapse } from "react-bootstrap";
+
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "Do we get alerts when route deviation or overspeeding?",
+      content: "Yes, vehicle tracking software will get instantly alert when drives deviated from root & speed up their vehicle over limit.",
+    },
+    {
+      key: "collapseTwo",
+      title: "How it is different from GPS tracking system?",
+      content:
+        "The technology behind this system is same but GPS fleet management system is mainly a business tool which track your commercial vehicle or private as well.",
+    },
+    {
+      key: "collapseThree",
+      title:
+        "Are there restrictions to the number of assets that can be monitored?",
+      content:
+        "No. there is no restriction in numbers of assets. You can track as much as vehicle you want.",
+    },
+    {
+      key: "collapseFour",
+      title: "Can I have more than one user access my fleet?",
+      content:
+        "Yes, additional user account can be added into the system as per your requirement.",
+    },
+    {
+      key: "collapseFive",
+      title: "Can I access current and past data?",
+      content:
+        "Yes, you can access past 1 year data on the fleet system.",
+    },
+    
+    
+  ];
 
   const openModal = () => {
 
@@ -46,7 +88,7 @@ const Page = () => {
                 over similar solutions.
               </p>
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -541,7 +583,7 @@ const Page = () => {
         </div>
       </div>
 
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -598,6 +640,61 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+      <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="enq-section">
@@ -605,7 +702,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

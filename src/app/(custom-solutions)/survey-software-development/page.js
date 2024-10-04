@@ -102,7 +102,7 @@ const Page = () => {
                 over similar solutions.
               </p>
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -388,7 +388,7 @@ const Page = () => {
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="titlesettop titlesettop_mar">
-            Custom Online Booking App/Web Development Features
+          Custom Survey App/Web Development Features
           </h2>
 
           <div className="features-tab">
@@ -542,7 +542,7 @@ const Page = () => {
       </section>
       <div className="app_solution">
         <div className="container">
-          <h2>Custom CRM App Development Solution</h2>
+          <h2>Survey Custom App Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
@@ -732,7 +732,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

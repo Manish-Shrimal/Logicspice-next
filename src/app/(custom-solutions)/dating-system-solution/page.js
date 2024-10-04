@@ -124,7 +124,7 @@ const Page = () => {
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -825,7 +825,7 @@ const Page = () => {
       </section>
       <div className="app_solution">
         <div className="container">
-          <h2>Custom CRM App Development Solution</h2>
+          <h2>Custom Dating System Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
@@ -898,7 +898,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

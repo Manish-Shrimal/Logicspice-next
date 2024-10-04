@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { Accordion, Card, Button } from "react-bootstrap";
+import { Collapse } from "react-bootstrap";
+
 
 import {
   MDBAccordion,
@@ -43,6 +45,57 @@ const Page = () => {
     setSellerTab(false);
     setBuyerTab(true);
   };
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "How can students search for teachers that they want to book class with?",
+      content: "Students can search for the Teachers by following criterias : Keyword, Category(will have an option to search classes through selecting subjects defined by the admin over the website) and Location(Zip code).",
+    },
+    {
+      key: "collapseTwo",
+      title: "How many days will it take to implement the customization?",
+      content:
+        "Time taken to implement your E-Learning System depends on the level of customization and data migration. The time frame generally ranges 5-6 weeks.",
+    },
+    {
+      key: "collapseThree",
+      title:
+        "How can a student contact a teacher?",
+      content:
+        "Students can send messages to the teacher if they have any problems regarding the information provided by them.",
+    },
+    {
+      key: "collapseFour",
+      title: "Can a student rate a teacher even if they havent taken a class from them?",
+      content:
+        "Yes. Students once logged in can give a rating to the teachers on the website.",
+    },
+    {
+      key: "collapseFive",
+      title: "How can people search for surveys that they might want to take?",
+      content:
+        "People can search for the surveys by selecting the categories in which they want to take them or by entering the keywords related to their search.",
+    },
+    {
+      key: "collapseSix",
+      title: "Does teacher need to add courses to the website?",
+      content:
+        "The teacher need not add courses to the website. They can just enter the subjects they teach and experience they have in teaching them.",
+    },
+    {
+      key: "collapseSeven",
+      title:
+        "How can teachers manage the booking they have received?",
+      content:
+        "Teachers will be able to see the list of the booking they have received. Teachers will be able to select the respective booking and then can see the respective details.",
+    },
+  ];
 
   var settings = {
     dots: true,
@@ -74,7 +127,7 @@ const Page = () => {
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -627,7 +680,7 @@ const Page = () => {
       </div>
 
       {/*  */}
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -741,6 +794,61 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+       <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="enq-section">
@@ -748,7 +856,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

@@ -13,6 +13,7 @@ body {
 	background-position: center top;
 	text-align: center;
 	padding: 170px 0 110px;
+	margin-top: 100px;
 }
 
 .team_head h1 {
@@ -72,7 +73,7 @@ body {
 .team-director h2 {
 	color: #333333;
 	font-size: 25px;
-	font-weight: bold;
+	font-weight: bold!important;
 	position: relative;
 	margin: 30px 0;
 	padding: 0 0 15px;
@@ -108,7 +109,7 @@ body {
 	color: #ff7f00;
 	float: right;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: bold!important;
 	margin-right: 40px;
 }
 
@@ -151,6 +152,10 @@ body {
 
 .aboutLogicTeam .team-content {
 	text-align: left;
+}
+.aboutLogicTeam .team-content p a{
+	color: #337ab7!important;
+	text-decoration: none!important;
 }
 
 .aboutLogicTeam .team-content h3 {
@@ -210,7 +215,7 @@ body {
 .counsult-expert h2 {
 	color: #fff;
 	font-size: 35px;
-	font-weight: bold;
+	font-weight: bold!important;
 	margin: 60px 0 30px;
 }
 
@@ -236,7 +241,7 @@ body {
 .fun-team h2 {
 	color: #333333;
 	font-size: 25px;
-	font-weight: bold;
+	font-weight: bold!important;
 	margin: 0 auto 30px;
 	max-width: 410px;
 	position: relative;
@@ -521,7 +526,7 @@ body {
 
 .app_bottom_shwn_bs .nav.nav-tabs a {
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: bold!important;
 	margin-bottom: 0px;
 	padding: 15px 30px;
 	display: inline-block;
@@ -651,7 +656,8 @@ body {
 	background: url("/img/ourteam/technology-banner-new.png") no-repeat center top;
 	padding: 50px 0;
 	background-size: cover;
-	text-align: center
+	text-align: center;
+	margin-top: 100px;
 }
 
 .inner-online-section h1,
@@ -659,7 +665,7 @@ body {
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 50px;
-	font-weight: 600;
+	font-weight: 600!important;
 	text-shadow: 2px 2px 0 #0B3651;
 }
 
@@ -691,7 +697,7 @@ body {
 	font-size: 18px;
 	padding-top: 30px;
 	margin: 0 auto;
-	font-weight: normal;
+	font-weight: normal!important;
 	text-align: center;
 	max-width: 98%;
 }
@@ -852,7 +858,7 @@ body {
 .WebFrameworksHadding h2 {
 	color: #fff;
 	font-size: 38px;
-	font-weight: 500;
+	font-weight: 500!important;
 	padding-bottom: 15px;
 }
 
@@ -917,7 +923,7 @@ body {
 }
 
 .TechnologiesMobileUse h5 span {
-	font-weight: 500;
+	font-weight: 500!important;
 	font-style: italic
 }
 
@@ -932,7 +938,7 @@ body {
 .TechnologiesStatred h2 {
 	color: #fff;
 	font-size: 42px;
-	font-weight: 600
+	font-weight: 600!important;
 }
 
 .TechnologiesStatredSection {
@@ -947,7 +953,7 @@ body {
 	background: transparent;
 	border: 1px #fff solid;
 	border-radius: 5px;
-	font-weight: 600;
+	font-weight: 600!important;
 	box-shadow: none;
 	color: white;
 }
@@ -1006,7 +1012,7 @@ body {
 .breadcrems_header_new h1 {
 	color: #282828;
 	font-size: 40px;
-	font-weight: 600;
+	font-weight: 600!important;
 }
 
 .breadcrems_header_new .breadcrumb {
@@ -1562,7 +1568,7 @@ body {
 	margin-top: 15px;
 	position: relative;
 	width: 100%;
-	font-weight: 600;
+	font-weight: 600!important;
 }
 
 .content_area_resources .case-study-listing h4 {
@@ -1594,7 +1600,7 @@ body {
 .content_area_resources .case-study-listing h4 a {
 	color: #fff;
 	font-size: 30px;
-	font-weight: 600;
+	font-weight: 600!important;
 	display: inline-block;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -1657,7 +1663,7 @@ body {
 	text-align: center;
 	padding-bottom: 40px;
 	font-size: 30px;
-	font-weight: 600;
+	font-weight: 600!important;
 }
 
 .testimonial-hire .media-left {
@@ -1680,8 +1686,8 @@ body {
 	font-size: 25px;
 	margin-bottom: 15px;
 	color: #505458;
-	font-weight: 500;
-	font-family: "Roboto", sans-serif;
+	font-weight: 500!important;
+	font-family: "Roboto", sans-serif!important;
 }
 
 .testimonial-hire .media-body p {
@@ -2091,18 +2097,19 @@ body {
 .resources-header-riview {
 	padding: 30px 0 50px;
 	text-align: center;
+	margin-top: 100px;
 }
 
 .resources-header-riview h1 {
 	color: #757575;
 	font-size: 32px;
-	font-weight: 400;
+	font-weight: 400!important;
 }
 
 .resources-header-riview p {
 	color: #757575;
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 500!important;
 	padding: 10px 0;
 }
 
@@ -2311,7 +2318,7 @@ section.nav-portfolio-top ul.nav {
 	color: #4d4d4d;
 	display: inline-block;
 	font-size: 18px;
-	font-weight: 700;
+	font-weight: 700!important;
 }
 
 .more_btn {
@@ -2327,7 +2334,7 @@ section.nav-portfolio-top ul.nav {
 	background: transparent !important;
 	border: none !important;
 	color: #451095;
-	font-weight: 600;
+	font-weight: 600!important;
 	padding: 0!important;
 	border-bottom: 1px #451095 solid !important;
 	border-radius: 0;
@@ -2369,15 +2376,15 @@ section.nav-portfolio-top ul.nav {
 .CompanyResourcesHeader h1 {
 	color: #3a3a3a;
 	font-size: 50px;
-	font-weight: 500;
+	font-weight: 500!important;
 	text-transform: uppercase;
-	font-family: 'roboto', sans-serif;
+	font-family: 'roboto', sans-serif!important;
 }
 
 .CompanyResourcesHeader p {
 	color: #5a5a5a;
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 300!important;
 	padding: 10px 0;
 }
 
@@ -2390,13 +2397,13 @@ section.nav-portfolio-top ul.nav {
 .WhoWeAreBx h2 {
 	color: #505458;
 	font-size: 26px;
-	font-weight: 500;
+	font-weight: 500!important;
 	font-family: 'roboto', sans-serif;
 }
 
 .WhoWeAreBx p {
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 300!important;
 	padding: 10px 0;
 	color: #5a5a5a;
 }
@@ -2434,8 +2441,8 @@ section.nav-portfolio-top ul.nav {
 .OurGallerySection h2 {
 	color: #505458;
 	font-size: 26px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 	margin-bottom: 30px;
 }
 
@@ -2459,13 +2466,13 @@ section.nav-portfolio-top ul.nav {
 .OurOfficeBx h2 {
 	color: #505458;
 	font-size: 56px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 }
 
 .OurOfficeBx p {
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 300!important;
 	padding: 20px 0;
 	color: #5a5a5a;
 }
@@ -2558,7 +2565,7 @@ section.nav-portfolio-top ul.nav {
 	font-size: 20px;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	font-weight: 600;
+	font-weight: 600!important;
 }
 
 .pricing-plan p {
@@ -2749,7 +2756,7 @@ section.nav-portfolio-top ul.nav {
 	background-size: cover;
 	color: #fff;
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: bold!important;
 	padding: 100px 0;
 	border-bottom: 1px solid #fff;
 }
@@ -2759,7 +2766,7 @@ section.nav-portfolio-top ul.nav {
 	font-family: "roboto", sans-serif;
 	color: #fff;
 	font-size: 30px;
-	font-weight: bold
+	font-weight: bold!important;
 }
 
 .office_event_img_social .ofimg_sm {
@@ -2860,7 +2867,7 @@ section.nav-portfolio-top ul.nav {
 .breadcrumb-casestudies h1 {
 	color: #fff;
 	font-size: 29px;
-	font-weight: 600;
+	font-weight: 600!important;
 	padding: 4px 0 0 60px;
 	display: inline-block;
 	text-transform: uppercase;
@@ -2898,7 +2905,7 @@ section.nav-portfolio-top ul.nav {
 	width: 100%;
 	color: #fff;
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 300!important;
 	position: relative;
 	margin-bottom: 20px;
 	padding-left: 23px;
@@ -2933,7 +2940,7 @@ section.nav-portfolio-top ul.nav {
 	font-size: 19px;
 	padding: 12px 15px;
 	margin: 0;
-	font-weight: 600;
+	font-weight: 600!important;
 }
 
 .content_area_casestudies h2::after,
@@ -2979,7 +2986,7 @@ section.nav-portfolio-top ul.nav {
 }
 
 .content_area_resources .casestudies-right ul li a strong {
-	font-weight: normal;
+	font-weight: normal!important;
 	display: block;
 	font-size: 15px;
 	color: #444;
@@ -3249,8 +3256,8 @@ section.nav-portfolio-top {
     color: #fff;
     font-size: 19px;
     margin-bottom: 25px;
-    font-family: 'intersemi_bold';
-    font-weight: normal;
+    font-family: 'intersemi_bold'!important;
+    font-weight: normal!important;
 }
 
 

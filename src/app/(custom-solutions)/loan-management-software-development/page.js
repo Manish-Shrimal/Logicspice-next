@@ -94,7 +94,7 @@ const Page = () => {
               </p>
 
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -543,7 +543,7 @@ const Page = () => {
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="titlesettop titlesettop_mar">
-            Custom Online Booking App/Web Development Features
+          Loan System Custom Development Features
           </h2>
 
           <div className="features-tab">
@@ -772,7 +772,7 @@ const Page = () => {
       </section>
       <div className="app_solution">
         <div className="container">
-          <h2>Custom CRM App Development Solution</h2>
+          <h2>Loan System Custom Development Solution</h2>
           <Customsolutiontabs />
         </div>
       </div>
@@ -783,123 +783,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/*  */}
-      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12 ecommerce__Quick_FAQ">
-                    <h4 className="title_main">Quick FAQ</h4>
-                    <MDBAccordion v-model="activeItem" borderless>
-              <MDBAccordionItem
-                headerTitle="How can a customer search for businesses around his location?"
-                collapseId="flush-collapse1"
-              >
-                <p>
-                  A Customer can enter his zip/postal code on the website and
-                  all the businesses that are around will be listed to the
-                  customer.
-                </p>
-              </MDBAccordionItem>
 
-              <MDBAccordionItem
-                headerTitle="Can the customer give rating to a business even if he hasn't visited the store?"
-                collapseId="flush-collapse2"
-              >
-                <p>
-                  Yes, customer can give rating out of 5 even if they
-                  haven&apos;t visited the store. Customer can also write a
-                  review along with the rating.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can a business owner upload multiple services to the website?"
-                collapseId="flush-collapse3"
-              >
-                <p>
-                  Yes, the business owner can upload multiple services/products
-                  that he deals in.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="How can a customer ensure the authenticity of the information of different businesses?"
-                collapseId="flush-collapse4"
-              >
-                <p>
-                  Whenever a business owner creates a page for his business, it
-                  has to be approved by the admin.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can a user view the contact information of the seller?"
-                collapseId="flush-collapse5"
-              >
-                <p>
-                  Yes. If a seller chooses to share his contact information on
-                  the website, the customer can see it.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can I update some design and functionality in the application code myself?"
-                collapseId="flush-collapse6"
-              >
-                <p>Yes, You will have access to all the code.</p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Will I be able to use it on multiple domains, after I purchase this software?"
-                collapseId="flush-collapse7"
-              >
-                <p>
-                  You will be licensed to use it only for the domain, you
-                  purchased for.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Can I resell the software? Will I have rights over the software code?"
-                collapseId="flush-collapse8"
-              >
-                <p>
-                  No, You can&apos;t resell the software. All rights will remain
-                  with Logicspice only.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Do you offer Money Back Guarantee?"
-                collapseId="flush-collapse9"
-              >
-                <p>
-                  Yes, we offer 30 days money-back guarantee to ensure customer
-                  satisfaction with our software. If for any reason, you wish to
-                  discontinue using the product, you can ask us for a refund. We
-                  will refund your total money except the installation and
-                  configuration charges, which is USD 65 or 20% of the
-                  application cost, whichever is greater.
-                </p>
-              </MDBAccordionItem>
-
-              <MDBAccordionItem
-                headerTitle="Along with hosting server details, what other recommendations?"
-                collapseId="flush-collapse10"
-              >
-                <p>
-                  We recommend you purchase an SSL certificate along with a
-                  hosting server, considering that an SSL certificate is
-                  necessary for all websites these days and it provides a secure
-                  layer to the website as well.
-                </p>
-              </MDBAccordionItem>
-            </MDBAccordion>
-                    
-                </div>
-            </div>
-        </div>
-    </section> */}
       <section className="faq_logic faq_logic_marketplace">
         <div className="container">
           <div className="row">
@@ -961,7 +845,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

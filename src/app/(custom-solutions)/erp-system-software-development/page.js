@@ -16,9 +16,74 @@ import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { Accordion, Card, Button } from "react-bootstrap";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import { Collapse } from "react-bootstrap";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const toggleAccordion = (key) => {
+    setActiveKey(activeKey === key ? null : key); // Toggle the accordion item
+  };
+
+  const accordionItems = [
+    {
+      key: "collapseOne",
+      title: "Why ERP system is necessary?",
+      content: "ERP system helps to manage all company’s resource in organised way. It integrates all business management areas, like planning, human resources, engineering, inventory and materials management, manufacturing, order processing, sales and purchasing, accounting, finance etc. The benefits of using ERP software is to support to streamlined the processes and workflows.",
+    },
+    {
+      key: "collapseTwo",
+      title: "Do I need a new ERP system?",
+      content:
+        "If you think that your current ERP is not working properly and your goals are not fulfill, you should most probably implement a new, more efficient ERP system.",
+    },
+    // {
+    //   key: "collapseThree",
+    //   title:
+    //     "How to choose the best ERP system solution?",
+    //   content:
+    //     ""
+    // },
+    {
+      key: "collapseThree",
+      title: "How to choose the best ERP system solution?",
+      content: `To take the best choice of an ERP system, consider the following factors:
+      - The ERP system consists of multiple modules. Choose those that you really need.
+      - Correlate the cost for ERP development versus the ROI derived from its usage.
+      - Ensure proper functioning of the ERP system.
+      - Calculate the long-term benefits.
+      - Ensure post-implementation support.`
+    },
+    
+    {
+      key: "collapseFour",
+      title: "Is your system scalable? Is it possible to add new module at a later date?",
+      content:
+        "Yes, you can add new functionality in future.",
+    },
+    {
+      key: "collapseFive",
+      title: "Can we buy separate modules of the ERP system?",
+      content:
+        "Yes, you can buy separate modules of ERP. Some modules have integrated functionality and should be purchased together.",
+    },
+    {
+      key: "collapseSix",
+      title: "Do you support the ERP system after its implementation?",
+      content:
+        "Yes, we will support you after its implementation. Our support desk specialists and IT engineers will assist you for resolving all kinds of issues.",
+    },
+    {
+      key: "collapseSeven",
+      title: "Do you implement quality assurance (QA) procedures for ERP projects?",
+      content:
+        "Yes, we can implement the quality assurance procedure. We have an experienced team of QA.",
+    },
+    
+    
+    
+  ];
 
   const openModal = () => {
     setShowModal(!showModal);
@@ -42,7 +107,7 @@ const Page = () => {
                 business.
               </p>
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}
@@ -503,7 +568,7 @@ const Page = () => {
       </div>
       <div className="clearfix"></div>
 
-      <section className="ecommerce_faq_section CustomSolutionFaqSection">
+      {/* <section className="ecommerce_faq_section CustomSolutionFaqSection">
         <div className="container">
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
@@ -592,6 +657,61 @@ const Page = () => {
             </div>
           </div>
         </div>
+      </section> */}
+      <section className="faq_logic faq_logic_marketplace">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 ">
+              <h4 className="title_main">FAQ&apos;s</h4>
+
+              <div
+                className="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                {accordionItems.map((item) => (
+                  <div className="panel panel-default" key={item.key}>
+                    <div
+                      className="panel-heading"
+                      role="tab"
+                      id={`heading${item.key}`}
+                    >
+                      <h4 className="panel-title">
+                        <a
+                          role="button"
+                          onClick={() => toggleAccordion(item.key)}
+                          aria-expanded={
+                            activeKey === item.key ? "true" : "false"
+                          }
+                          aria-controls={item.key}
+                          className={activeKey === item.key ? "" : "collapsed"}
+                        >
+                          <span>{item.title} </span>
+                          <i
+                            className={`more-less glyphicon glyphicon-${
+                              activeKey === item.key ? "minus" : "plus"
+                            }`}
+                          ></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <Collapse in={activeKey === item.key}>
+                      <div
+                        id={item.key}
+                        className="panel-collapse collapse"
+                        role="tabpanel"
+                        aria-labelledby={`heading${item.key}`}
+                      >
+                        <div className="panel-body">{item.content}</div>
+                      </div>
+                    </Collapse>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="enq-section">
@@ -599,7 +719,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

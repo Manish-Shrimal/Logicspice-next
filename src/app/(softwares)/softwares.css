@@ -75,7 +75,7 @@ body {
 .fiverr-new-banner h1 {
   font-size: 40px;
   color: #363737;
-  font-family: "roboto", sans-serif;
+  font-family: "roboto", sans-serif!important;
 }
 
 .NewJobSiteDesign h1 {
@@ -96,7 +96,7 @@ body {
 	font-size: 22px;
 	padding-top: 15px;
 	color: #626262;
-	font-family: 'roboto',sans-serif;
+	font-family: 'roboto',sans-serif!important;
 	font-weight: normal !important;
 }
 .FiverrCloneMainBanner h2 {
@@ -254,7 +254,7 @@ body {
 }
 
 .fiverr-new-banner .job-valu-btn .btn-get {
-  padding: 8px 9px;
+  padding: 8px 9px!important;
   margin-top: 0px;
   margin-right: 12px;
   width: 180px;
@@ -264,7 +264,7 @@ body {
   background: #10a12a !important;
   color: #fff;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 5px!important;
   border: 2px #10a12a solid;
   cursor: pointer;
   font-family: "Lato", sans-serif !important;
@@ -3353,8 +3353,8 @@ a.StartFreeTrialBtn {
   color: #292929;
   font-size: 36px;
   text-align: center;
-  font-family: "roboto", sans-serif;
-  font-weight: 600;
+  font-family: "roboto", sans-serif!important;
+  font-weight: 600!important;
 }
 
 .CustomerReviewsMainBx {
@@ -3568,7 +3568,7 @@ a.StartFreeTrialBtn {
   text-align: left;
   font-size: 42px;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 600!important;
   color: #303030;
   padding-bottom: 50px;
   position: relative;
@@ -3591,7 +3591,7 @@ a.StartFreeTrialBtn {
 .CustomQuickFAQScript .accordion-header .accordion-button {
   background: url(/img/ordermanagement/faq_select-min.png) 4% center no-repeat #fff;
   padding: 18px 10px 18px 70px;
-  font-size: 20px;
+  font-size: 20px!important;
   color: #303030;
   box-shadow: none;
   border-radius: 0 !important;
