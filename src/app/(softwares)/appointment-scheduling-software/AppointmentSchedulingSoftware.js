@@ -232,7 +232,7 @@ const AppointmentSchedulingSoftware = () => {
                     onClick={openModal}
                     style={{ textAlign: "center" }}
                   >
-                    <button>Get Demo Access!</button>
+                    <a>Get Demo Access!</a>
                     {
                       <Enquirymodal
                         modalStatus={showModal}
@@ -2124,7 +2124,7 @@ const AppointmentSchedulingSoftware = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <Enquirymodal
                     modalStatus={showModal}

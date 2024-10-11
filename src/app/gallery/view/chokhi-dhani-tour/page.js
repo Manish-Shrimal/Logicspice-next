@@ -35,12 +35,12 @@ const Page = () => {
               <ol class="breadcrumb">
                 <li>
                   <Link href="/">Home</Link>
-                </li>
-                /
+                </li>{""}
+              
                 <li>
                   <Link href="/gallery/">Gallery</Link>
-                </li>
-                /
+                </li>{""}
+              
                 <li class="current">
                   <span id="title_here">
                     Chokhi Dhani Tour ( <span>March 12,2013</span> )

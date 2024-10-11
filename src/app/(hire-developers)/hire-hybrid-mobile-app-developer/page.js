@@ -13,6 +13,17 @@ import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import Support from "@/app/Components/Support";
 import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";
 const Page = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const item = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
   const testimonialData = [
     {
       id: 1,
@@ -40,8 +51,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "/img/globalbusinesscountries/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -67,7 +77,7 @@ const Page = () => {
         <div class="hire_developer_back_iin_mask new-developers-mask">
           <div class="container">
             <div class="row">
-              <div class="col-md-7 text-start">
+              <div class="col-md-8 text-start">
                 <h1 class="slide_title">Hire Hybrid App Developer</h1>
                 <div class="subinstet">
                   Flexible hybrid app development service from the hub of
@@ -115,7 +125,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <div class="cack_logo_img">
                   <Image
                     width={270}
@@ -132,41 +142,68 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><Image   width={300}
-                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
           <div class="hiring-sr">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <div class="jumbotron">
                   <h2>Hire hybrid mobile app developers</h2>
                   <p>
@@ -196,7 +233,7 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h2>Technical expertise</h2>
                 <ul class="list-group">
                   <li class="list-group-item">
@@ -438,22 +475,22 @@ const Page = () => {
         </div>
       </section>
       <WhyHireFromLogicspice testimonialData={testimonialData} />
-        <div class="clearfix"></div>
-        <section class="enq-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 text-center">
-                <a
-                  href="javascript:void(0);"
-                  click={() => openmodelcontactus()}
-                  class="btn btn-primary"
-                >
-                  Hire Now!
-                </a>
-              </div>
+      <div class="clearfix"></div>
+      <section class="enq-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 text-center">
+              <a
+                href="javascript:void(0);"
+                click={() => openmodelcontactus()}
+                class="btn btn-primary"
+              >
+                Hire Now!
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       <section class="latest_feature_product latest_feature_services">
         <div class="container">
           <h2 class="title_main">Other Popular Hire Developer</h2>
@@ -550,6 +587,24 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );

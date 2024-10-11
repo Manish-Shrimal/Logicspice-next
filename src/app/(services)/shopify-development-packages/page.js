@@ -450,7 +450,7 @@ const Page = () => {
                         onClick={() => toggleActiveItem("flush-collapse4")}
                       >
                         <span>
-                          04. Are there any discounts on Shopify's price plans?
+                          04. Are there any discounts on Shopify&apos;s price plans?
                         </span>
                         {activeItem === "flush-collapse4" ? (
                           <KeyboardArrowDownIcon />

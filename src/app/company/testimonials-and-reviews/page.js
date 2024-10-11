@@ -9,7 +9,7 @@ import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import parse from "html-react-parser";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
-
+import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {
   const [pageData, setPageData] = useState([]);
@@ -17,6 +17,11 @@ const Page = () => {
   let imagePath = useRef();
 
   const [blogData, setBlogData] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   const getData = async () => {
     try {
@@ -59,6 +64,7 @@ const Page = () => {
                           {/* <hr class="dotted" /> */}
                           {item.image !== "" && (
                             <Image
+                              unoptimized={true}
                               width={1500}
                               height={100 / (100 / 100)}
                               src={imagePath.current + item.image}
@@ -124,30 +130,48 @@ const Page = () => {
                       })}
                   </ul>
                 </aside>
-                <div id="blog_search" class="widget widget_recent_entries" style={{marginTop : "265px"}}>
-        <div class="cost_wrap">
-          <div class="blog_cost_calculator">
-            <div class="cost_content">
-              Try this tool for free to calculate the cost of App/Web
-            </div>
-            <div class="cost_btn">
-              <a
-                class="btn btn-primary"
-                href="https://app-cost-calculator.logicspice.com"
-              >
-                App Cost Calculator
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+                <div id="blog_search" class="widget widget_recent_entries">
+                  <div class="cost_wrap">
+                    <div class="blog_cost_calculator">
+                      <div class="cost_content">
+                        Try this tool for free to calculate the cost of App/Web
+                      </div>
+                      <div class="cost_btn">
+                        <a
+                          class="btn btn-primary"
+                          href="https://app-cost-calculator.logicspice.com"
+                        >
+                          App Cost Calculator
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            
             </div>
           </div>
         </div>
       </section>
-   
+      <div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              unoptimized={true}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+              height={50}
+              width={50}
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
+
       <Footer />
     </>
   );

@@ -165,7 +165,7 @@ left: 190px;
   border-bottom: 1px solid #ddd;
   color: #3c4147;
   font-size: 19px;
-  font-weight: bold;
+  font-weight: bold !important;
   letter-spacing: 0.2px;
   padding: 11px 20px;
   border-radius: 6px 6px 0 0;
@@ -183,15 +183,15 @@ left: 190px;
 }
 
 .title_of_footer_menu a {
-  color: #fff;
+  color: #fff !important;
   display: inline-block;
   font-size: 20px;
   margin-bottom: 20px;
-  font-family: "roboto", sans-serif;
+  font-family: "roboto", sans-serif !important;
 }
 
 .title_of_footer_menu a {
-  color: #fff;
+  color: #fff !important;
 }
 
 .footer-top {
@@ -305,7 +305,7 @@ left: 190px;
 .top-heading h1 {
   color: #fff;
   font-size: 45px;
-  font-weight: 900;
+  font-weight: 900 !important;
   text-shadow: 0 0 3px #000;
 }
 
@@ -317,7 +317,7 @@ bread-top {
 .bread-top h2 {
   color: #fff;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .bread-top ol.breadcrumb {
@@ -378,7 +378,7 @@ bread-top {
 
 .serv-count p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 300 !important;
   margin-bottom: 15px;
 }
 
@@ -430,7 +430,7 @@ bread-top {
 
 .serv_professional p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 300 !important;
   margin: 10px 0;
 }
 
@@ -438,13 +438,13 @@ bread-top {
   display: block;
   font-size: 18px;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-top: 20px;
 }
 
 .serv_professional li {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 400 !important;
   list-style: none;
   margin: 10px 0;
 }
@@ -736,7 +736,7 @@ bread-top {
   display: block;
   overflow: hidden;
   padding: 7px 0 7px 36px;
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 14px;
   transition: 0.4s;
   font-family: "Lato", sans-serif !important;
@@ -746,7 +746,7 @@ bread-top {
   border-bottom: 2px solid;
   display: block;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 600 !important;
   margin-bottom: 5px;
   padding: 0 0 2px;
   width: 100%;
@@ -924,7 +924,7 @@ bread-top {
   padding: 16px 8px;
   text-transform: uppercase;
   color: #535353;
-  font-weight: 600;
+  font-weight: 600 !important;
   background: transparent;
 }
 
@@ -1727,9 +1727,12 @@ bread-top {
 }
 
 .header .navbar-nav .btn.btn-primary {
-  color: #fff;
+  color: #fff!important;
   margin-top: 8px;
-  padding: 6px 8px;
+  padding: 6px 12px!important;
+  font-size: 14px!important;
+  text-transform: capitalize!important;
+  margin: 5px 0!important;
 }
 
 .header .navbar-brand img {
@@ -1869,7 +1872,7 @@ bread-top {
 .sales_enquiry .btn.btn-primary {
   font-size: 14px;
   margin: 5px 0;
-  padding: 6px 12px;
+  padding: 6px 12px!important;
   text-transform: capitalize;
 }
 
@@ -1898,7 +1901,7 @@ bread-top {
   text-align: left;
   color: #fff;
   font-size: 45px;
-  font-weight: 400;
+  font-weight: 400 !important;
   position: relative;
   padding-bottom: 80px;
 }
@@ -1908,12 +1911,12 @@ bread-top {
   vertical-align: top;
   margin: 0;
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .ServiceTextAnimation p.AnmationTxt {
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .AnmationTxt {
@@ -1955,8 +1958,8 @@ bread-top {
 .ServiceTextAnimationWeb h2 {
   font-size: 30px;
   color: #fff;
-  font-family: "roboto", sans-serif;
-  font-weight: 600;
+  font-family: "roboto", sans-serif !important;
+  font-weight: 600 !important;
   padding-left: 70px;
 }
 
@@ -1968,8 +1971,8 @@ bread-top {
 .word {
   font-size: 25px;
   color: #9940c0;
-  font-family: "roboto", sans-serif;
-  font-weight: 600;
+  font-family: "roboto", sans-serif !important;
+  font-weight: 600 !important;
   transition: all 0.8s ease-in-out 0s;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -2002,7 +2005,7 @@ bread-top {
   font-size: 43px;
   display: inline-block;
   vertical-align: middle;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .ServiceTextAnimationWeb .dynamic-txts {
@@ -2044,7 +2047,7 @@ bread-top {
 .dynamic-txts li span {
   position: relative;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 @keyframes typing {
@@ -2092,7 +2095,7 @@ bread-top {
 
 .ServicesAppBx span {
   color: #9940c0;
-  font-weight: 600;
+  font-weight: 600 !important;
   text-transform: uppercase;
   font-size: 50px;
   margin-right: 18px;
@@ -2249,7 +2252,7 @@ bread-top {
 .positivity .positivity__alone {
   display: inline-block;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 600 !important;
   color: #fff;
   width: 100%;
   text-align: left;
@@ -2266,7 +2269,7 @@ bread-top {
   right: 0%;
   opacity: 0;
   font-size: 55px;
-  font-weight: 700;
+  font-weight: 700 !important;
   width: 100%;
   text-align: left;
   letter-spacing: -2.5px;
@@ -2506,7 +2509,7 @@ positivitymain {
 
 .headings h2 {
   font-size: 31px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-bottom: 15px;
 }
 
@@ -2520,7 +2523,7 @@ positivitymain {
 .headings.headings_white h2 {
   color: #fff;
   font-size: 31px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-bottom: 15px;
 }
 
@@ -2556,7 +2559,7 @@ positivitymain {
 .abs-product > h3 {
   color: #4a11a0;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-bottom: 10px;
   padding-bottom: 0px;
 }
@@ -2635,10 +2638,11 @@ positivitymain {
 .btn.btn-primary:hover {
   background: rgba(69, 16, 149, 0.8) !important;
   border-color: rgba(69, 16, 149, 0.8) !important;
+  color: white!important;
 }
 
 .btn.btn-primary {
-  background-color: #451095 ;
+  background-color: #451095;
   border: 1px solid #451095 !important;
   box-shadow: none;
 }
@@ -2687,9 +2691,9 @@ positivitymain {
 
 .hiring-list strong {
   color: #626262;
-  font-family: "lato", Arial, Helvetica, sans-serif;
+  font-family: "lato", Arial, Helvetica, sans-serif !important;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 500 !important;
   text-decoration: none;
 }
 
@@ -2886,14 +2890,14 @@ positivitymain {
 .HomeSlider h2 {
   color: #292929;
   font-size: 35px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-bottom: 15px;
   position: relative;
   text-transform: capitalize;
 }
 
 .HomeSlider h2 span {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .HomeSlider p {
@@ -2902,7 +2906,7 @@ positivitymain {
   max-width: 100%;
   color: #292929;
   letter-spacing: 1px;
-  font-weight: normal;
+  font-weight: normal !important;
   padding: 0px 0 20px;
 }
 
@@ -3511,9 +3515,9 @@ positivitymain {
 .case-study {
   color: #451095;
   display: inline-block;
-  font-family: "lato", Arial, Helvetica, sans-serif;
+  font-family: "lato", Arial, Helvetica, sans-serif !important;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 600 !important;
   margin-bottom: 70px;
   text-decoration: underline !important;
 }
@@ -3548,7 +3552,7 @@ positivitymain {
   position: absolute;
   text-align: center;
   top: 0;
-  width: 87%;
+  width: 100%;
   opacity: 0;
   transition: all 0.3s ease-in 0s;
 }
@@ -3675,12 +3679,12 @@ positivitymain {
 }
 
 .title_heading {
-  color: #000!important;
+  color: #000 !important;
   /* float: left; */
-  font-size: 26px!important;
-  font-weight: bold;
-  margin-bottom: 5px!important;
-  width: 100%!important;
+  font-size: 26px !important;
+  font-weight: bold !important;
+  margin-bottom: 5px !important;
+  width: 100% !important;
 }
 
 .slick-list .client_logos img {
@@ -3704,8 +3708,8 @@ positivitymain {
   position: relative;
   text-align: center;
   vertical-align: middle;
-  margin-bottom: 30px;
-  width: 90%;
+  /* margin-bottom: 30px; */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3746,8 +3750,8 @@ positivitymain {
   color: #3f3f3f;
   display: block;
   font-size: 20px;
-  font-weight: 400;
-  font-family: "roboto", sans-serif;
+  font-weight: 400 !important;
+  font-family: "roboto", sans-serif !important;
   margin-top: 20px;
 }
 
@@ -3959,7 +3963,7 @@ positivitymain {
 
 .client-say p {
   font-size: 19px;
-  font-weight: 500;
+  font-weight: 500 !important;
   line-height: 35px;
   margin-bottom: 25px;
   color: #999;
@@ -4312,8 +4316,8 @@ body.modal-open .quote_pop_plus {
   color: #a4a4a4;
   font-size: 40px;
   text-transform: uppercase;
-  font-weight: 300;
-  font-family: "lato", sans-serif;
+  font-weight: 300 !important;
+  font-family: "lato", sans-serif !important;
 }
 
 .contact-modal .modal-title span {
@@ -4332,8 +4336,8 @@ body.modal-open .quote_pop_plus {
   border-bottom: 1px #ccc solid;
   font-size: 18px;
   color: #767676;
-  font-weight: 500;
-  font-family: "lato", sans-serif;
+  font-weight: 500 !important;
+  font-family: "lato", sans-serif !important;
   padding: 14px 12px;
   outline: none !important;
 }
@@ -4357,8 +4361,8 @@ body.modal-open .quote_pop_plus {
   border-color: #451095 !important;
   width: 100%;
   font-size: 18px;
-  font-weight: 600;
-  font-family: "lato", sans-serif;
+  font-weight: 600 !important;
+  font-family: "lato", sans-serif !important;
   height: 56px;
 }
 
@@ -4387,9 +4391,9 @@ body.modal-open .quote_pop_plus {
 
 .logicspice-contact-bx label {
   color: #fff;
-  font-family: "lato", sans-serif;
+  font-family: "lato", sans-serif !important;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .logicspice-mail {
@@ -4405,9 +4409,9 @@ body.modal-open .quote_pop_plus {
   border: 1px #fff solid;
   color: #fff;
   padding: 6px 14px;
-  font-family: "lato", sans-serif;
+  font-family: "lato", sans-serif !important;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .logicspice-mail a img {
@@ -4433,9 +4437,9 @@ body.modal-open .quote_pop_plus {
 
 .logicspice-call-dtl span {
   color: #fff;
-  font-family: "lato", sans-serif;
+  font-family: "lato", sans-serif !important;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 500 !important;
   display: inline-block;
   vertical-align: middle;
   padding-left: 5px;
@@ -4611,11 +4615,11 @@ body.modal-open .quote_pop_plus {
 .ls-awards-swction h3 {
   color: #000;
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .ls-google-swction {
-  /* display: inline-block; */
+  display: inline-block;
   width: 100%;
   padding: 20px;
   text-align: left;
@@ -5211,6 +5215,9 @@ body.modal-open .quote_pop_plus {
 }
 
 @media (max-width: 479px) {
+  .about-us{
+    margin-top: 50px!important
+  }
   .about-us .col-md-3 {
     margin-bottom: 20px;
   }
@@ -5281,171 +5288,170 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel-banner-txt h1 {
-    font-size: 22px!important;
+    font-size: 22px !important;
   }
 
   .laravel-descriptions-bx h2 {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
-  .nodejs-development .laravel-descriptions-bx h2{
-    font-size: 20px!important;
+  .nodejs-development .laravel-descriptions-bx h2 {
+    font-size: 20px !important;
   }
-  .nodejs-development .laravel_core_features_section{
-    padding: 50px 0 0!important;
- 
+  .nodejs-development .laravel_core_features_section {
+    padding: 50px 0 0 !important;
   }
 
   .laravel-descriptions {
-    padding-top: 16px!important;
-    padding-bottom: 16px!important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
   }
   .laravel-descriptions-bx p {
-    font-size: 14px!important;
+    font-size: 14px !important;
   }
 
   .laravel-descriptions-bx {
-    padding: 20px!important;
+    padding: 20px !important;
   }
 
   .laravel_img {
-    text-align: center!important;
-    padding: 15px 0!important;
+    text-align: center !important;
+    padding: 15px 0 !important;
   }
 
   .laravel_img img {
-    width: 80px!important;
+    width: 80px !important;
   }
 
   .laravel-devlopments-services h2 {
-    font-size: 24px!important;
+    font-size: 24px !important;
   }
 
   .phpweb_features_bx .laravel_core_featureBox .laravel_core_features_img {
     top: -43px !important;
     transform: translate(-50%, 0%) !important;
     left: 50%;
-}
+  }
 
   .laravel_core_features_section h2 {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
-  .laravel_core_features_detail h3{
-    font-size: 18px!important;
+  .laravel_core_features_detail h3 {
+    font-size: 18px !important;
   }
   .laravel_core_features_detail p {
-    font-size: 14px!important;
-}
+    font-size: 14px !important;
+  }
   .laravel_core_sub2 {
-    font-size: 14px!important;
+    font-size: 14px !important;
   }
   .laravel_core_sub {
-    font-size: 14px!important;
+    font-size: 14px !important;
   }
   .laravel_service_box h3 {
-    font-size: 18px!important;
+    font-size: 18px !important;
   }
   .laravel_service_box p {
-    padding-top: 10px!important;
-    font-size: 14px!important;
+    padding-top: 10px !important;
+    font-size: 14px !important;
   }
   .laravel_core_features_section {
-    padding: 50px 0 0!important;
-    background-color: #f00!important;
-    background-image: none!important;
+    padding: 50px 0 0 !important;
+    background-color: #f00 !important;
+    background-image: none !important;
   }
 
   .laravel_core_features_bx {
-    margin-top: 60px!important;
+    margin-top: 60px !important;
   }
 
   .laravel_core_features_img {
-    top: -43px!important;
-    left: 50%!important;
-    transform: translate(-50%, 0)!important;
+    top: -43px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
   }
   .LaravelTestimonialSection h2 {
-    font-size: 22px!important;
-}
-.LaravelTestimonialMain {
-  margin-top: 10px!important;
-}
-.QuotesLaravel {
-  position: initial!important;
-  width: 28px!important;
-}
-.LaravelTestimonial {
-  padding-left: 0!important;
-  padding-right: 0!important;
-}
-.LaravelTestimonial h6 {
-  font-size: 13px!important;
-}
+    font-size: 22px !important;
+  }
+  .LaravelTestimonialMain {
+    margin-top: 10px !important;
+  }
+  .QuotesLaravel {
+    position: initial !important;
+    width: 28px !important;
+  }
+  .LaravelTestimonial {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .LaravelTestimonial h6 {
+    font-size: 13px !important;
+  }
   .laravel_core_features_detail {
-    width: 100%!important;
-    padding: 66px 20px 20px!important;
-    text-align: center!important;
+    width: 100% !important;
+    padding: 66px 20px 20px !important;
+    text-align: center !important;
   }
 
   .laravel_core_featureBox {
-    width: 100%!important;
-    margin: 10px 0 60px!important;
+    width: 100% !important;
+    margin: 10px 0 60px !important;
   }
 
   .laravel_core_features_section {
-    padding: 50px 0 0!important;
-    background-color: #f00!important;
-    background-image: none!important;
+    padding: 50px 0 0 !important;
+    background-color: #f00 !important;
+    background-image: none !important;
   }
 
   .laravel_choose_features_section h2 {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
   .laravel_choose_details h3 {
-    font-size: 18px!important;
-}
-.laravel-portfolio-php-dev {
-  display: none!important;
-}
+    font-size: 18px !important;
+  }
+  .laravel-portfolio-php-dev {
+    display: none !important;
+  }
 
   .libraries_laravel_choose {
-    padding: 20px 20px!important;
-    text-align: center!important;
+    padding: 20px 20px !important;
+    text-align: center !important;
   }
 
   .laravel_choose_features_img {
-    float: none!important;
-    display: inline-block!important;
+    float: none !important;
+    display: inline-block !important;
   }
 
   .laravel_choose_details {
-    padding: 15px 0!important;
-    width: 100%!important;
-    display: inline-block!important;
-    text-align: center!important;
+    padding: 15px 0 !important;
+    width: 100% !important;
+    display: inline-block !important;
+    text-align: center !important;
   }
 
   .laravel_choose_details p br {
     display: none;
   }
   .laravel_choose_details p {
-    font-size: 14px!important;
-}
+    font-size: 14px !important;
+  }
 
   .laravel-portfolio-php-dev h2 {
     font-size: 25px;
   }
 
   .laravel-banner-txt {
-    padding-top: 50px!important;
+    padding-top: 50px !important;
   }
 
   .phpweb_features_bx .laravel_core_features_img {
-    top: -43px!important;
-    transform: translate(-50%, 0%)!important;
+    top: -43px !important;
+    transform: translate(-50%, 0%) !important;
   }
 
   .phpweb-banner .laravel-banner-txt {
-    padding-top: 50px!important;
+    padding-top: 50px !important;
   }
 
   .devops-descriptions .laravel_img {
@@ -5453,7 +5459,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .devops-descriptions .laravel_img img {
-    width: 80%!important;
+    width: 80% !important;
   }
 
   .newcontact-btn .btn.btn-primary {
@@ -5518,16 +5524,16 @@ body.modal-open .quote_pop_plus {
   }
 
   .laravel-anquire .btn {
-    padding: 10px 14px!important;
+    padding: 10px 14px !important;
   }
 
   .ReadyMadeScriptSection .TopHadding p {
-    font-size: 14px!important;
-    padding: 10px 0!important;
-}
+    font-size: 14px !important;
+    padding: 10px 0 !important;
+  }
 
   .PythonBanner .laravel-banner-txt {
-    padding-top: 40px!important;
+    padding-top: 40px !important;
   }
 
   .ContractHireBanner .page_img {
@@ -5539,7 +5545,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .WebDevelopmentBannerBx h1 {
-    font-size: 28px!important;
+    font-size: 28px !important;
   }
 
   .WebDevelopmentBannerBx p {
@@ -5555,12 +5561,12 @@ body.modal-open .quote_pop_plus {
     width: 100%;
     text-align: center;
     padding-bottom: 12px;
-    display: flex!important;
-    justify-content: center!important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .WebDevelopmentApplicationBx h2 {
-    font-size: 28px!important;
+    font-size: 28px !important;
   }
 
   .WebDevelopmentApplication {
@@ -5573,12 +5579,11 @@ body.modal-open .quote_pop_plus {
   }
 
   .TopHadding h2 {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
   .laravel_choose_features_bx {
-    margin-top: 30px!important;
-}
-
+    margin-top: 30px !important;
+  }
 
   .WebFeaturesSection::before {
     display: none;
@@ -5621,7 +5626,7 @@ body.modal-open .quote_pop_plus {
   } */
 
   .WebDevelopmentClients ul li span {
-    font-size: 28px!important;
+    font-size: 28px !important;
   }
 
   .HomeSliderTxt {
@@ -5647,10 +5652,10 @@ body.modal-open .quote_pop_plus {
     min-height: 66px;
     padding-bottom: 10px;
   }
-  .codeigniter-development .laravel_core_features_section{
-    padding: 50px 0 0!important;
-    background-color: #f00!important;
-    background-image: none!important;
+  .codeigniter-development .laravel_core_features_section {
+    padding: 50px 0 0 !important;
+    background-color: #f00 !important;
+    background-image: none !important;
   }
 
   .HomeSliderJobSlide h2 {
@@ -5835,17 +5840,17 @@ body.modal-open .quote_pop_plus {
 
   .SatisfyDemandModernBusiness1 h2 {
     margin-top: 0px !important;
-}
-.SatisfyDemandModernBusiness1 .mobil-bg_h {
-  display: none;
-}
+  }
+  .SatisfyDemandModernBusiness1 .mobil-bg_h {
+    display: none;
+  }
 
-.devide_secs_icn {
-  float: left;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 15px;
-}
+  .devide_secs_icn {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
   .job-portal-banner ul {
     text-align: center;
@@ -5877,11 +5882,11 @@ body.modal-open .quote_pop_plus {
   }
 
   .service-market-ttd h2 {
-    font-size: 30px!important;
+    font-size: 30px !important;
   }
 
   .service-market-ttd li {
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .ecommerce-admin-bax2,
@@ -5909,7 +5914,7 @@ body.modal-open .quote_pop_plus {
   .ecommerce_review__img {
     display: none;
   }
-  .NewFaqDesignSection .ecommerce__Quick_FAQ .title_main{
+  .NewFaqDesignSection .ecommerce__Quick_FAQ .title_main {
     padding-bottom: 28px !important;
     font-size: 42px !important;
   }
@@ -5921,19 +5926,18 @@ body.modal-open .quote_pop_plus {
   .ecommerce__Quick_FAQ .title_main::before {
     display: none;
   }
-.ecommerce__Quick_FAQ_Script .title_main {
+  .ecommerce__Quick_FAQ_Script .title_main {
     padding-bottom: 28px;
     font-size: 22px;
-
-}
+  }
 
   .client-say.ecommerce-say {
     padding: 20px 0;
   }
 
   .ecommerce-web-proje {
-    position: relative!important;
-    padding-top: 0!important;
+    position: relative !important;
+    padding-top: 0 !important;
   }
 
   .ecommerce-squre-bg,
@@ -5980,7 +5984,7 @@ body.modal-open .quote_pop_plus {
 
   .home-slider {
     height: 540px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .home-slider .slick-dots {
     bottom: -80px !important;
@@ -6049,32 +6053,33 @@ body.modal-open .quote_pop_plus {
   }
   .client_logos,
   .ind-we-serv ul {
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    text-align: center !important;
+    display: inline-block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   /*---our-company-----*/
   .CompanyResourcesHeader {
-    padding: 80px 0 30px;
+    /* padding: 80px 0 30px; */
+    margin-top: 50px!important;
   }
 
   .WhoWeAreTxt {
-    padding: 17px 0;
+    padding: 17px 0!important;
   }
 
   .WhoWeAreTxt span {
-    font-size: 18px;
-    width: 90%;
+    font-size: 18px!important;
+    width: 90%!important;
   }
 
   .CompanyResourcesHeader h1 {
-    font-size: 30px;
+    font-size: 30px!important;
   }
 
   .WhoWeAreBx p {
-    font-size: 18px;
+    font-size: 18px!important;
   }
 
   .OurOfficeBx h2 {
@@ -6095,13 +6100,13 @@ body.modal-open .quote_pop_plus {
   }
 
   .OurCompanyBanner {
-    margin-top: 10px;
-    height: 150px;
+    margin-top: 10px!important;
+    height: 150px!important;
   }
 
   .OurCompanyBanner img {
-    height: 100%;
-    object-fit: cover;
+    height: 100%!important;
+    object-fit: cover!important;
   }
 
   .MinHeights {
@@ -6309,11 +6314,11 @@ body.modal-open .quote_pop_plus {
   }
 
   .BigDataDescription .laravel_img {
-    padding: 10px!important;
+    padding: 10px !important;
   }
 
   .BigdataBanner .laravel-banner-txt {
-    padding-top: 0px!important;
+    padding-top: 0px !important;
   }
 
   .CertificationsLaravel {
@@ -6589,8 +6594,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .ecommerce-web-proje {
-    position: relative!important;
-    padding-top: 0!important;
+    position: relative !important;
+    padding-top: 0 !important;
   }
 
   .window-desktop {
@@ -6743,7 +6748,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .MainDiscriptionFreescript {
-    padding: 30px 0;
+    padding: 30px 0!important;
+    margin-top: 50px!important;
   }
 
   .MainDiscriptionFreescript h1 {
@@ -6760,11 +6766,11 @@ body.modal-open .quote_pop_plus {
   }
 
   .HireDevelopersBannerText h1 {
-    font-size: 32px;
+    font-size: 32px!important;
   }
 
   .HireTopHaddind h2 {
-    font-size: 30px!important;
+    font-size: 30px !important;
   }
 
   .OurNewHirigModelMain {
@@ -6785,8 +6791,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .HireEasyStepsBx {
-    display: inline-block;
-    width: 48%;
+    display: inline-block!important;
+    width: 48%!important;
   }
 
   .HireEasyStepsBorder2,
@@ -6795,11 +6801,11 @@ body.modal-open .quote_pop_plus {
   }
 
   .HireEasyStepsBxBg h5 {
-    font-size: 16px;
+    font-size: 16px!important;
   }
 
   .BetterUnderstandSection h2 {
-    font-size: 30px;
+    font-size: 30px!important;
   }
 
   .CustomerReviewsBx {
@@ -6815,8 +6821,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .CustomerReviewsBxImg {
-    float: none;
-    display: inline-block;
+    float: none!important;
+    display: inline-block!important;
   }
 
   /*-------User-Managements-------*/
@@ -6839,18 +6845,18 @@ body.modal-open .quote_pop_plus {
   }
 
   .UserManagementFeaturesUp {
-    float: left!important;
-    width: 100%!important;
-    padding: 0!important;
-    margin-bottom: 18px!important;
-    margin-right: 0!important;
-    margin-left: 0!important;
+    float: left !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 18px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 
   .UserManagementFeaturesBx {
-    padding: 20px 20px!important;
-    min-height: 200px!important;
-    transition: 0.5s!important;
+    padding: 20px 20px !important;
+    min-height: 200px !important;
+    transition: 0.5s !important;
   }
 
   .UserManagementFeaturesBx2 {
@@ -6892,8 +6898,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .UserManagementSystemSection {
-    padding: 80px 0 40px!important;
-    margin: 0!important;
+    padding: 80px 0 40px !important;
+    margin: 0 !important;
   }
 
   .BestDevelopmentBx {
@@ -6902,8 +6908,8 @@ body.modal-open .quote_pop_plus {
   }
 
   .E-commerceDevelopmentBanner.top-head-custom {
-    padding-top: 40px!important;
-    padding-bottom: 20px!important;
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
   }
 
   .JewelleryEcommerceFAQ .accordion-item,
@@ -7053,7 +7059,7 @@ body.modal-open .quote_pop_plus {
 .panel-thanks h2 {
   color: #656565;
   font-size: 33px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin: 0 auto 40px;
   max-width: 540px;
 }
@@ -7061,7 +7067,7 @@ body.modal-open .quote_pop_plus {
 .panel-thanks h3 {
   color: #451095;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-bottom: 25px;
 }
 
@@ -7070,7 +7076,7 @@ body.modal-open .quote_pop_plus {
   box-shadow: 0 1px 1px #999;
   color: #fff;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: bold !important;
   padding: 15px 50px;
   text-transform: none;
 }
@@ -7140,7 +7146,7 @@ body.modal-open .quote_pop_plus {
 .panel-thanks .thnk_ss {
   color: #2e8e21;
   font-size: 48px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-top: 25px;
 }
 
@@ -7194,15 +7200,16 @@ body.modal-open .quote_pop_plus {
   float: left;
   width: 100%;
 }
-#workingowl .take-a-look .swiper-button-prev:after, .swiper-button-next:after {
+#workingowl .take-a-look .swiper-button-prev:after,
+.swiper-button-next:after {
   font-size: 20px !important;
   color: #3c3c3c !important;
 }
-#workingowl .take-a-look .swiper-button-prev:after, .swiper-button-prev:after {
+#workingowl .take-a-look .swiper-button-prev:after,
+.swiper-button-prev:after {
   font-size: 20px !important;
   color: #3c3c3c !important;
 }
-
 
 .FormError {
   color: red;
@@ -7247,11 +7254,11 @@ button.close {
   }
 } */
 
-.container{
-  padding-right:15px;
-  padding-left:15px;
-  margin-right:auto;
-  margin-left:auto
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn.btn-default {
@@ -7318,7 +7325,7 @@ button.close {
   margin-bottom: 25px;
   color: #2e8e21;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin-top: 25px;
 }
 
@@ -7449,7 +7456,7 @@ button.close {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: none!important;
+  border-top: none !important;
 }
 
 .awardsSection {
@@ -7464,6 +7471,11 @@ button.close {
 .googleSection {
   margin-top: 20px;
 }
+section {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
 
 .googleImg img {
   max-width: 100%;
@@ -7474,7 +7486,7 @@ button.close {
 }
 
 .clientName {
-  font-weight: bold;
+  font-weight: bold !important;
   margin-top: 10px;
 }
 
@@ -7500,6 +7512,11 @@ button.close {
   border-radius: 4px !important;
 }
 
+.slick-slide img {
+  display: block !important;
+  width: 100% !important;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -7520,15 +7537,12 @@ button.close {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-
-
 .ModalContentEnqury .form-group iframe {
   transform: scale(0.88);
   -webkit-transform: scale(0.88);
   transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
 }
-
 
 /* .caret {
   display: inline-block;
@@ -7541,3 +7555,21 @@ button.close {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 } */
+
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -5px)!important;
+  left: auto;
+}
+
+.swiper-button-prev{
+  left: var(--swiper-navigation-sides-offset, -6px)!important ;
+  right: auto;
+}

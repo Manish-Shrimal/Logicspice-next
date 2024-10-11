@@ -17,6 +17,7 @@ section {
 
 .MainDiscriptionFreescript {
 	padding: 30px 0;
+	margin-top: 100px;
 }
 
 .MainDiscriptionFreescript {
@@ -38,8 +39,8 @@ section {
 	position: relative;
 	color: #333333;
 	font-size: 40px;
-	font-family: 'roboto', sans-serif;
-	font-weight: 600;
+	font-family: 'roboto', sans-serif!important;
+	font-weight: 600!important;
 	margin-top: 20px;
 }
 
@@ -49,7 +50,7 @@ section {
 	-webkit-text-stroke: 1px #1f1f1f;
 	font-family: 'roboto', sans-serif;
 	font-size: 80px;
-	font-weight: 600;
+	font-weight: 600!important;
 	transform: translate(-50%, 0);
 	left: 50%;
 	top: -10px;
@@ -76,6 +77,7 @@ section {
 	padding: 15px;
 	border-radius: 15px;
 	margin-bottom: 30px;
+	min-height: 325px;
 }
 
 .FreeScriptProductsBlue {
@@ -86,7 +88,15 @@ section {
 	border-radius: 10px;
 	overflow: hidden;
 }
-
+.CustomQuickFAQScript .title_main {
+    text-align: left;
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #303030;
+    padding-bottom: 50px;
+    position: relative;
+}
 .FreeScriptProductsImg img {
 	width: 100%;
 }
@@ -98,8 +108,8 @@ section {
 .FreeScriptProductsTxt h2 {
 	color: #333333;
 	font-size: 26px;
-	font-weight: 600;
-	font-family: 'roboto', sans-serif;
+	font-weight: 600!important;
+	font-family: 'roboto', sans-serif!important;
 }
 
 .FreeScriptProductsTxt p {
@@ -148,20 +158,20 @@ section {
 
 .title_main {
 	margin-bottom: 45px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 	color: #505458;
 }
 
 .title_main span {
-	font-weight: 700;
+	font-weight: 700!important;
 }
 
 .UsedTechnologySection h4.title_main {
 	color: #292929;
 	font-size: 34px;
-	font-weight: 500;
-	font-family: 'roboto', sans-serif;
+	font-weight: 500!important;
+	font-family: 'roboto', sans-serif!important;
 }
 
 .UsedTechnologySectionDataa {
@@ -317,8 +327,8 @@ section {
 	color: #292929;
 	font-size: 36px;
 	text-align: center;
-	font-family: 'roboto', sans-serif;
-	font-weight: 600;
+	font-family: 'roboto', sans-serif!important;
+	font-weight: 600!important;
 }
 
 .CustomerReviewsMainBx {
@@ -338,7 +348,7 @@ section {
 	padding: 20px;
 	font-size: 17px;
 	color: #4f4f4f;
-	font-weight: 300;
+	font-weight: 300!important;
 	position: relative;
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
 }
@@ -358,7 +368,7 @@ section {
 	padding: 8px 60px 0 0;
 	color: #303030;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: 500!important;
 }
 
 .CustomerReviewsClient i {
@@ -391,9 +401,138 @@ section {
 	background-size: cover;
 	color: #fff;
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: bold!important;
 	padding: 100px 0;
+	margin-top: 100px;
 	border-bottom: 1px solid #fff;
+}
+
+.content_area_resources p {
+    margin-bottom: 15px!important;
+}
+
+.ecommerce--review--point .progress-bar-danger {
+    background-color: #451095;
+}
+
+.ecommerce--review--point {
+    display: inline-block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 100px 15px 27px 15px;
+    border-radius: 17px;
+    border: 3px #fff solid;
+    height: 100%;
+    height: 626px;
+}
+
+.ecommerce--review--point .outof_rating {padding: 0 10px;}
+.review_rating_fjs {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ecommerce--review--point .progress {
+    background: #fff;
+}
+
+.review_rating_fjs .people_star_num {
+    float: left;
+    width: 15%;
+    text-align: right;
+}
+
+.CustomQuickFAQScript .title_main {
+	text-align: left;
+	font-size: 42px;
+	margin-bottom: 10px;
+	font-weight: 600!important;
+	color: #303030;
+	padding-bottom: 50px;
+	position: relative;
+  }
+  
+  .CustomQuickFAQScript .accordion-item {
+	border: none;
+	border-bottom: 1px #ddd solid;
+	border-radius: 0;
+  }
+  
+  .CustomQuickFAQScript .accordion-item>.accordion-header {
+	color: #333;
+	background-color: #fff;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+  }
+  
+  .CustomQuickFAQScript .accordion-header .accordion-button {
+	background: url(/img/ordermanagement/faq_select-min.png) 4% center no-repeat #fff;
+	padding: 18px 10px 18px 70px;
+	font-size: 20px!important;
+	color: #303030;
+	box-shadow: none;
+	border-radius: 0 !important;
+  }
+  
+  .CustomQuickFAQScript .accordion-header .accordion-button::after {
+	display: none;
+  }
+  
+  .CustomQuickFAQScript .accordion-header .accordion-button.collapsed {
+	background: url(/img/ordermanagement/faq_select-plus.png) 4% center no-repeat rgba(0, 0, 0, 0);
+	clear: both;
+	display: block;
+  }
+  
+  .CustomQuickFAQScript .accordion-body {
+	padding: 0px 15px 15px 70px;
+	border: none !important;
+	font-size: 18px;
+  }
+
+.review_rating_fjs .progress {
+    float: left;
+    width: 70%;
+    margin: 0;
+    height: 20px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.ecommerce--review--btn .btn-primary {
+    background-color: #451095;
+    border: none;
+    padding: 10px 10px!important;
+    border-radius: 6px!important;
+    width: 100%;
+    text-transform: uppercase!important;
+    font-size: 14px!important;
+}
+
+.review_rating_fjs .star_num {
+    float: left;
+    width: 15%;
+}
+
+.ecommerce--review--point .main-rait {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-rait .fa {
+    color: #451095;
+    font-size: 21px;
+}
+
+
+.entry-content-page p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
 }
 
 .resources-header span {
@@ -401,7 +540,7 @@ section {
 	font-family: "roboto", sans-serif;
 	color: #fff;
 	font-size: 30px;
-	font-weight: bold
+	font-weight: bold!important;
 }
 
 .breadcrems_header {
@@ -416,7 +555,7 @@ section {
 .breadcrems_header h1 {
 	color: #fff;
 	font-size: 22px;
-	font-weight: bold;
+	font-weight: bold!important;
 	text-transform: uppercase
 }
 
@@ -463,7 +602,7 @@ section {
 	margin-top: 15px;
 	position: relative;
 	width: 100%;
-	font-weight: 600
+	font-weight: 600!important;
 }
 
 .content_area_resources li {
@@ -548,12 +687,13 @@ section {
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 80px 0;
+	margin-top: 100px;
 }
 
 .wop-header h1 {
 	color: #fff;
 	font-size: 48px;
-	font-weight: bold;
+	font-weight: bold!important;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -638,6 +778,9 @@ section {
 
 .wop-inverse ul {
 	text-align: right;
+}
+.wop-inverse{
+	direction: rtl;
 }
 
 .wop-inverse ul li {

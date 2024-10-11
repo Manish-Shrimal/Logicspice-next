@@ -37,11 +37,11 @@ const Page = () => {
                 <li>
                   <Link href="/">Home</Link>
                 </li>
-                /
+                
                 <li>
                   <Link href="/gallery">Gallery</Link>
                 </li>
-                /
+                
                 <li class="current">
                   <span id="title_here">
                     Group Competition ( <span>August 10,2012</span> )

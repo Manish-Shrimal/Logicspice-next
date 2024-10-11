@@ -258,199 +258,200 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="mobile">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-4">
-              <div className="app_shown_describe_left">
-                <div className="app_shown_describe_bx aos-init aos-animate ">
-                  <div className="app_shown_describe_bx_icn">
-                    <Image
-                    unoptimized={true}
-                      width={35}
-                      height={100}
-                      alt="App Development Company"
-                      src="/img/globalpages/icn_an.png"
-                    />
-                  </div>
-                  <div className="app_shown_describe_bx_label">
-                    User Friendly
-                    <br /> Layouts
-                  </div>
-                </div>
-                <div className="app_shown_describe_bx aos-init aos-animate ">
-                  <div className="app_shown_describe_bx_icn">
-                    <Image
-                      unoptimized={true}
-                      width={35}
-                      height={100}
-                      alt="App Development Company"
-                      src="/img/globalpages/navigate_icon.png"
-                    />
-                  </div>
-                  <div className="app_shown_describe_bx_label">
-                    Easy To
-                    <br /> Navigate
-                  </div>
-                </div>
-                <div className="app_shown_describe_bx aos-init aos-animate ">
-                  <div className="app_shown_describe_bx_icn">
-                    <Image
-                     unoptimized={true}
-                     width={35}
-                     height={100}
-                      alt="App Development Services"
-                      src="/img/globalpages/security_icon.png"
-                    />
-                  </div>
-                  <div className="app_shown_describe_bx_label">
-                    Highly Secured
-                    <br /> App
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-4">
-              <div className="mobile-screen-splash">
-                <div className="mobile-screen-sizee">
-                  <Slider {...date}>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="Mobile app development company"
-                        src="/img/globalpages/raydaar_img.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="Mobile app development Services"
-                        src="/img/globalpages/martgram.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="app development company"
-                        src="/img/globalpages/localgenii.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="app development services"
-                        src="/img/globalpages/klick.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="app development company Services"
-                        src="/img/globalpages/tc.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="android/ iphone app development"
-                        src="/img/globalpages/fubmle.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="expert app developers"
-                        src="/img/globalpages/social_securitas.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="Mobile app development company"
-                        src="/img/globalpages/sweepstakes.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="Mobile app development services"
-                        src="/img/globalpages/bestcit.png"
-                      />
-                    </div>
-                    <div className="SiteFriendyBx">
-                      <Image
-                        width={600}
-                        height={100}
-                        alt="app development agency"
-                        src="/img/globalpages/uuuga.png"
-                      />
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-            </div>
+      <section className="app_shown_describe">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-4">
+                <div className="app_shown_describe_left">
 
-            <div className="col-sm-4">
-              <div className="app_shown_describe_right">
-                <div className="app_shown_describe_bx aos-init aos-animate ">
-                  <div className="app_shown_describe_bx_icn">
-                    <Image
-                      unoptimized={true}
-                      width={35}
-                      height={100}
-                      alt="app development"
-                      src="/img/globalpages/icon_ac.png"
-                    />
+                  <div className="app_shown_describe_bx aos-init aos-animate" data-aos="fade-left">
+                    <div className="app_shown_describe_bx_icn">
+                      <Image
+                        unoptimized={true}
+                        width={35}
+                        height={100}
+                        alt="App Development Company"
+                        src="/img/globalpages/icn_an.png"
+                      />
+                    </div>
+                    <div className="app_shown_describe_bx_label">
+                      User Friendly
+                      <br /> Layouts
+                    </div>
                   </div>
-                  <div className="app_shown_describe_bx_label">
-                    Unique
-                    <br /> Designs
+                  <div className="app_shown_describe_bx aos-init aos-animate " data-aos="fade-left">
+                    <div className="app_shown_describe_bx_icn">
+                      <Image
+                        unoptimized={true}
+                        width={35}
+                        height={100}
+                        alt="App Development Company"
+                        src="/img/globalpages/navigate_icon.png"
+                      />
+                    </div>
+                    <div className="app_shown_describe_bx_label">
+                      Easy To
+                      <br /> Navigate
+                    </div>
+                  </div>
+                  <div className="app_shown_describe_bx aos-init aos-animate " data-aos="fade-left">
+                    <div className="app_shown_describe_bx_icn">
+                      <Image
+                        unoptimized={true}
+                        width={35}
+                        height={100}
+                        alt="App Development Services"
+                        src="/img/globalpages/security_icon.png"
+                      />
+                    </div>
+                    <div className="app_shown_describe_bx_label">
+                      Highly Secured
+                      <br /> App
+                    </div>
                   </div>
                 </div>
-                <div className="app_shown_describe_bx aos-init aos-animate ">
-                  <div className="app_shown_describe_bx_icn">
-                    <Image
-                      unoptimized={true}
-                      width={35}
-                      height={100}
-                      alt="mobile app development"
-                      src="/img/globalpages/customiziable_app_icon.png"
-                    />
-                  </div>
-                  <div className="app_shown_describe_bx_label">
-                    Customizable
-                    <br /> App
+              </div>
+              <div className="col-sm-4">
+                <div className="mobile-screen-splash">
+                  <div className="mobile-screen-sizee">
+                    <Slider {...date}>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="Mobile app development company"
+                          src="/img/globalpages/raydaar_img.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="Mobile app development Services"
+                          src="/img/globalpages/martgram.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="app development company"
+                          src="/img/globalpages/localgenii.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="app development services"
+                          src="/img/globalpages/klick.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="app development company Services"
+                          src="/img/globalpages/tc.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="android/ iphone app development"
+                          src="/img/globalpages/fubmle.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="expert app developers"
+                          src="/img/globalpages/social_securitas.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="Mobile app development company"
+                          src="/img/globalpages/sweepstakes.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="Mobile app development services"
+                          src="/img/globalpages/bestcit.png"
+                        />
+                      </div>
+                      <div className="SiteFriendyBx">
+                        <Image
+                          width={600}
+                          height={100}
+                          alt="app development agency"
+                          src="/img/globalpages/uuuga.png"
+                        />
+                      </div>
+                    </Slider>
                   </div>
                 </div>
-                <div className="app_shown_describe_bxt aos-init aos-animate ">
-                  <div className="app_shown_describe_bx_icn">
-                    <Image
-                      unoptimized={true}
-                      width={35}
-                      height={100}
-                      alt="mobile app development services"
-                      src="/img/globalpages/userinterface_icon.png"
-                    />
+              </div>
+
+              <div className="col-sm-4">
+                <div className="app_shown_describe_right">
+                  <div className="app_shown_describe_bx aos-init aos-animate " data-aos="fade-right">
+                    <div className="app_shown_describe_bx_icn">
+                      <Image
+                        unoptimized={true}
+                        width={35}
+                        height={100}
+                        alt="app development"
+                        src="/img/globalpages/icon_ac.png"
+                      />
+                    </div>
+                    <div className="app_shown_describe_bx_label">
+                      Unique
+                      <br /> Designs
+                    </div>
                   </div>
-                  <div className="app_shown_describe_bx_label">
-                    Simple Attractive UI
-                    <br /> Interface
+                  <div className="app_shown_describe_bx aos-init aos-animate " data-aos="fade-right">
+                    <div className="app_shown_describe_bx_icn">
+                      <Image
+                        unoptimized={true}
+                        width={35}
+                        height={100}
+                        alt="mobile app development"
+                        src="/img/globalpages/customiziable_app_icon.png"
+                      />
+                    </div>
+                    <div className="app_shown_describe_bx_label">
+                      Customizable
+                      <br /> App
+                    </div>
+                  </div>
+                  <div className="app_shown_describe_bxt aos-init aos-animate " data-aos="fade-right">
+                    <div className="app_shown_describe_bx_icn">
+                      <Image
+                        unoptimized={true}
+                        width={35}
+                        height={100}
+                        alt="mobile app development services"
+                        src="/img/globalpages/userinterface_icon.png"
+                      />
+                    </div>
+                    <div className="app_shown_describe_bx_label">
+                      Simple Attractive UI
+                      <br /> Interface
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="app_bottom_shwn_bs AppBottomShwnBx">
         <div className="container">

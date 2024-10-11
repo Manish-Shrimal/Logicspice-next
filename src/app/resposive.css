@@ -15,10 +15,8 @@
     max-width: 282px;
   }
 
-
-
   .small_bbx_job_new .thumbnail-new {
-    min-height: 320px!important;
+    min-height: 320px !important;
   }
 
   .small_bbx_job_new .thumbnail-box {
@@ -32,16 +30,16 @@
 
 @media (max-width: 1300px) {
   .bloom-dev h2 {
-    font-size: 25px!important;
+    font-size: 25px !important;
   }
 
   .bloom-dev p {
-    font-size: 13px!important;
-    margin-bottom: 4px!important;
+    font-size: 13px !important;
+    margin-bottom: 4px !important;
   }
 
   .bloom-dev ul li span {
-    font-size: 13px!important;
+    font-size: 13px !important;
   }
 
   .affix .navbar-brand {
@@ -115,7 +113,7 @@
   }
 
   .LogicspiceTechnologies ul li {
-    width: 31%!important;
+    width: 31% !important;
   }
 
   .NewJobSiteDesign {
@@ -124,12 +122,12 @@
 }
 
 @media (max-width: 1199px) {
-    .indsubcnt {
-        margin-top: 15px;
-    }
-    .industryblock_right_title h3 {
-        font-size: 20px!important;
-    }
+  .indsubcnt {
+    margin-top: 15px;
+  }
+  .industryblock_right_title h3 {
+    font-size: 20px !important;
+  }
   .navbar-default .top-main-menu.navbar-nav > li > a {
     padding: 15px 3px;
   }
@@ -165,13 +163,13 @@
   }
 
   .look-slider img {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .head-enquiry h1 {
     color: #fff;
     font-size: 29px;
-    font-weight: 900!important;
+    font-weight: 900 !important;
     padding-bottom: 10px;
   }
 
@@ -264,10 +262,10 @@
   }
 
   .adeptness_psd_title_box {
-    font-size: 17px!important;
-    font-weight: bold!important;
-    min-height: 70px!important;
-    width: 100%!important;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    min-height: 70px !important;
+    width: 100% !important;
   }
 
   .adeptness_psd_col_inner {
@@ -279,7 +277,7 @@
   }
 
   .office_event_img_social {
-    display: none;
+    display: none !important;
   }
 
   .produvtivity span {
@@ -492,7 +490,7 @@
   }
 
   .port_feat b {
-    width: 100%;
+    width: 100% !important;
   }
 
   .carousel-control.right {
@@ -504,7 +502,7 @@
   }
 
   .port_feat li {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
   }
 
   section.how_to_grow {
@@ -576,7 +574,7 @@
   }
 
   .port_feat {
-    padding: 0 20px;
+    padding: 0 20px !important;
   }
 
   .content_area h3 {
@@ -586,6 +584,19 @@
 }
 
 @media (max-width: 991px) {
+  .wl-cont {
+    float: left !important;
+    width: 100% !important;
+  }
+  .wop-list .col-md-9,
+  .wop-list .col-md-3 {
+    float: left !important;
+    width: 100% !important;
+  }
+
+  .wl-img {
+    display: none !important;
+  }
   .design-service > li {
     width: 50%;
   }
@@ -614,12 +625,12 @@
   }
 
   .look-slider {
-    text-align: center;
+    text-align: center !important;
   }
 
   .to_matf {
-    margin: 0 0 20px;
-    max-width: 400px;
+    margin: 0 0 20px !important;
+    max-width: 400px !important;
   }
 
   .case-study {
@@ -628,8 +639,8 @@
 
   .have_look,
   .to_matf {
-    margin: 0 auto 20px;
-    max-width: 400px;
+    margin: 0 auto 20px !important;
+    max-width: 400px !important;
   }
 
   .home-slide3 .sl-count:first-child {
@@ -657,7 +668,7 @@
   }
 
   .look-slider .col-md-7 img {
-    display: none;
+    display: none !important;
   }
 
   .take-a-look .carousel-control.left {
@@ -685,18 +696,18 @@
   }
 
   .readyToStart h2 {
-    font-size: 23px!important;
+    font-size: 23px !important;
   }
-  .readyToStart_new h2{
-    font-size: 23px!important;
+  .readyToStart_new h2 {
+    font-size: 23px !important;
   }
 
   .clients_slide h2 {
-    color: #f1484a!important;
+    color: #f1484a !important;
   }
 
   .serv_professional h2 {
-    font-size: 23px!important;
+    font-size: 23px !important;
   }
 
   .social_footer li:first-child {
@@ -705,7 +716,8 @@
   }
 
   .multibutton {
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
+    overflow: auto !important;
   }
 
   .demand_app .col-sm-4 {
@@ -717,8 +729,8 @@
   }
 
   .demand-content p {
-    line-height: 19px!important;
-    min-height: 50px!important;
+    line-height: 19px !important;
+    min-height: 50px !important;
   }
 
   .demand-img {
@@ -838,8 +850,8 @@
   }
 
   .dev_Packages h3 {
-    margin: 30px 0 25px!important;
-    text-align: center!important;
+    margin: 30px 0 25px !important;
+    text-align: center !important;
   }
 
   .hire_type2 img {
@@ -944,8 +956,8 @@
   }
 
   .country_header_secton_mobile_screen {
-    float: none!important;
-    margin: 0 auto!important;
+    float: none !important;
+    margin: 0 auto !important;
   }
 
   .country_header_secton_in {
@@ -953,20 +965,20 @@
   }
 
   .app_shown_describe_bx_label {
-    font-size: 16px!important;
+    font-size: 16px !important;
   }
 
   .mobileapp_devcountry_bx {
-    padding: 30px 0!important;
-    text-align: center!important;
+    padding: 30px 0 !important;
+    text-align: center !important;
   }
-  .hotel_description{
-    padding: 30px 0!important;
-    text-align: center!important;
+  .hotel_description {
+    padding: 30px 0 !important;
+    text-align: center !important;
   }
 
   .mobileapp_devcountry_bx .mobileapp_devcountry_bx_right {
-    margin-top: 35px!important;
+    margin-top: 35px !important;
   }
 
   .app_shown_describe_center_mob {
@@ -985,20 +997,20 @@
 
   .app_shown_describe_right,
   .app_shown_describe_left {
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
 
   .app_shown_describe_bx {
-    margin-bottom: 90px!important;
+    margin-bottom: 90px !important;
   }
 
   .app_shown_describe_bx_icn {
-    height: 45px!important;
-    width: 45px!important;
+    height: 45px !important;
+    width: 45px !important;
   }
 
   .app_shown_describe_bx_icn img {
-    width: 25px!important;
+    width: 25px !important;
   }
 
   .casestudyshoen_bx_row .blog_detail_sectc_bl {
@@ -1014,39 +1026,43 @@
   }
 
   .team-director img {
-    margin-bottom: 0!important;
-    margin-left: 0!important;
-    margin-top: 0!important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
   }
 
   .team-director {
-    border: 2px solid #000!important;
-    float: left!important;
-    padding: 40px 20px!important;
-    text-align: center!important;
-    width: 100%!important;
+    border: 2px solid #000 !important;
+    float: left !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 
   .team-director p {
-    max-width: 100%!important;
-    padding-right: 0px!important;
-    text-align: center!important;
+    max-width: 100% !important;
+    padding-right: 0px !important;
+    text-align: center !important;
   }
 
   .team-director h2::after {
-    display: none!important;
+    display: none !important;
   }
 
   .team-director h2 {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
 
   .team-content {
     margin-bottom: 100px;
   }
 
-  .aboutLogicTeam .team-content.text-right {
+  /* .aboutLogicTeam .team-content.text-right {
     text-align: left;
+  } */
+  .aboutLogicTeam .team-content h3 {
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .bloom-dev {
@@ -1057,13 +1073,13 @@
   }
 
   .counsult-expert h2 {
-    font-size: 25px!important;
-    margin: 32px 0 30px!important;
+    font-size: 25px !important;
+    margin: 32px 0 30px !important;
   }
 
   .counsult-expert a {
-    font-size: 20px!important;
-    padding: 6px 20px!important;
+    font-size: 20px !important;
+    padding: 6px 20px !important;
   }
 
   .counsult-expert a img {
@@ -1099,8 +1115,8 @@
   }
 
   .indus_left {
-    float: left!important;
-    width: 100%!important;
+    float: left !important;
+    width: 100% !important;
   }
 
   .our_office_row .office_event_img_cols.left_col_event {
@@ -1162,7 +1178,7 @@
 
   .aboutLogicTeam .team-content.text-right,
   .aboutLogicTeam .team-content {
-    text-align: center;
+    text-align: center !important;
   }
 
   .team-content {
@@ -1247,9 +1263,9 @@
   }
 
   .technologies-use ul li {
-    margin-bottom: 6px!important;
-    margin-right: 0!important;
-    width: 30%!important;
+    margin-bottom: 6px !important;
+    margin-right: 0 !important;
+    width: 30% !important;
   }
 
   /* technologies-use ul li {
@@ -1269,12 +1285,12 @@
 } */
 
   .mobile-use ul li {
-    width: 42%!important;
+    width: 42% !important;
   }
 
   .detabesh-use ul li {
-    margin: 0 1%!important;
-    width: 40%!important;
+    margin: 0 1% !important;
+    width: 40% !important;
   }
 
   .web_build_questions_bx {
@@ -1526,7 +1542,7 @@
   }
 
   .LogicspiceTechnologies ul li {
-    width: 48%!important;
+    width: 48% !important;
   }
 
   .WebFrameworksHadding h2 {
@@ -1543,7 +1559,7 @@
   }
   .industryblock_right {
     padding: 40px;
-}
+  }
   .TechnologiesStatred h2 {
     font-size: 32px;
   }
@@ -1573,27 +1589,65 @@
 }
 
 @media (max-width: 767px) {
-  .team_head{
-    margin-top: 50px!important;
+  .HireYiiDeveloperBanner {
+    margin-top: 50px !important;
   }
-  .top-head-custom{
-    margin-top: 50px!important;
+  .HireFlexNewTxt {
+    margin-bottom: 30px !important;
+    /* padding-left: 61px!important;
+    text-align: left!important; */
   }
-  .DjangoBanner .laravel-banner-txt{
-    padding-top: 0!important;
+  .HireFlexNewTxt i {
+    width: 20px !important;
   }
-  .LaravelText{
-    font-size: 15px!important;
+  .HireFlexNewHeading {
+    font-size: 16px !important;
   }
-  .our-services-new{
-    padding-top:80px!important;
+  .HireFlexNewImg {
+    float: left !important;
+    width: 100% !important;
+    display: none !important;
+  }
+  .HireFlexNewSection .new-hiring-div .title_heading {
+    font-size: 26px !important;
+  }
+  .otherhire_developer_back_iin .new-developers-mask {
+    padding-bottom: 130px !important;
+  }
+  .HireFlexNewSection .new-hiring-div .title_heading {
+    display: inline-block !important;
+    text-align: left !important;
+    padding-left: 75px !important;
+  }
+  .cack_logo_img {
+    display: none !important;
+    padding-top: 20px !important;
+    position: absolute !important;
+    right: 60px !important;
+    top: -230px !important;
+    width: 100px !important;
+  }
+  .team_head {
+    margin-top: 50px !important;
+  }
+  .top-head-custom {
+    margin-top: 50px !important;
+  }
+  .DjangoBanner .laravel-banner-txt {
+    padding-top: 0 !important;
+  }
+  .LaravelText {
+    font-size: 15px !important;
+  }
+  .our-services-new {
+    padding-top: 80px !important;
   }
   .hidden-xs {
     display: none !important;
-}
-    .title_of_casesetif h2 {
-        font-size: 25px!important;
-    }
+  }
+  .title_of_casesetif h2 {
+    font-size: 25px !important;
+  }
   .apps_portfolioshowe_top_name {
     font-size: 20px !important;
     margin: 14px 0 !important;
@@ -1646,12 +1700,12 @@
 
   .headings.headings_white h2,
   .headings h2 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .headings.headings p,
   .headings p {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .mid-span {
@@ -1687,8 +1741,8 @@
   }
 
   .look-slider img {
-    height: 40px;
-    margin-bottom: 15px;
+    height: 40px !important;
+    margin-bottom: 15px !important;
   }
 
   .owl-carousel .owl-item img {
@@ -1696,7 +1750,7 @@
   }
 
   .look-slider .col-md-7 img {
-    display: none;
+    display: none !important;
   }
 
   .take-a-look .carousel-control.right {
@@ -1796,7 +1850,7 @@
   }
 
   .cer-icon img {
-    height:17px;
+    height: 17px;
     width: 14px;
   }
 
@@ -1973,7 +2027,7 @@
   }
 
   .top-box-BFC > p {
-    min-height: auto!important;
+    min-height: auto !important;
   }
 
   .navbar-header {
@@ -2048,7 +2102,7 @@
   }
 
   .otherhire_developer_back_iin .slide_title {
-    font-size: 26px;
+    font-size: 20px !important;
   }
 
   .inner-flex {
@@ -2127,7 +2181,7 @@
   }
 
   .servin-content {
-    margin-bottom: 30px!important;
+    margin-bottom: 30px !important;
   }
 
   .step1 .step-content > p {
@@ -2179,47 +2233,47 @@
   }
 
   .title_heading {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
-  .blog_heading{
-    font-size:20px!important;
+  .blog_heading {
+    font-size: 20px !important;
   }
 
   .country_header_secton_mobile_screen {
-    height: 603px!important;
-    width: 290px!important;
+    height: 603px !important;
+    width: 290px !important;
   }
 
   .country_header_secton_mobile_screen_data {
-    margin: 67px 0 0 10px!important;
+    margin: 67px 0 0 10px !important;
   }
 
   .app_shown_describe_left .app_shown_describe_bx {
-    text-align: center!important;
+    text-align: center !important;
   }
 
   .app_shown_describe_left .app_shown_describe_bx_icn {
-    float: none!important;
+    float: none !important;
   }
 
   .app_shown_describe_left .app_shown_describe_bx_label {
-    margin-left: 10px!important;
-    margin-right: 0!important;
+    margin-left: 10px !important;
+    margin-right: 0 !important;
   }
 
   .app_shown_describe_bx {
-    margin-bottom: 20px!important;
-    text-align: center!important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
   }
 
   .app_shown_describe_bx_icn {
-    display: block!important;
-    margin: 0 auto 12px!important;
+    display: block !important;
+    margin: 0 auto 12px !important;
   }
 
   .app_shown_describe_bx_label {
-    display: block!important;
-    text-align: center!important;
+    display: block !important;
+    text-align: center !important;
   }
 
   .casestudyshoen_bx_row .col-md-3.col-sm-4 {
@@ -2267,15 +2321,15 @@
   }
 
   .content.left_arrow {
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .content.left_arrow::before {
-    display: none!important;
+    display: none !important;
   }
 
   .right_image {
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .why-partner h4 {
@@ -2299,11 +2353,11 @@
   }
 
   .sec_dv h2 {
-    font-size: 19px!important;
-    padding: 10px 6px 0!important;
+    font-size: 19px !important;
+    padding: 10px 6px 0 !important;
   }
-  .bg-banner{
-    margin-top: 50px!important;
+  .bg-banner {
+    margin-top: 50px !important;
   }
 
   .myprofile_dtl_left {
@@ -2447,7 +2501,7 @@
   .dev_future_solution .title_heading,
   .dev_flexibility .title_heading,
   .dev_flexibility .title_heading_Main {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 
   .product_page_banner_box_left p {
@@ -2534,7 +2588,7 @@
   }
 
   .clients_slide h2 {
-    font-size: 22px!important;
+    font-size: 22px !important;
   }
 
   .mobileapp-deve_header_in {
@@ -2676,8 +2730,8 @@
   }
 
   .hiring-sr .jumbotron {
-    padding: 0;
-    width: 100%;
+    padding: 0 !important;
+    width: 100% !important;
   }
 
   .inner-qa-section h1 {
@@ -2695,10 +2749,10 @@
   }
 
   .WebReDesignDevelopment .WebDesignDevelopmentBx {
-    text-align: center!important;
-    min-height: 200px!important;
-}
-  
+    text-align: center !important;
+    min-height: 200px !important;
+  }
+
   .tesitng-fild i {
     width: 40px;
   }
@@ -2763,16 +2817,16 @@
     font-size: 15px;
     text-align: left;
   }
-  .inner-technology-section{
-    margin-top: 50px!important;
+  .inner-technology-section {
+    margin-top: 50px !important;
   }
   .technologies-use ul li {
-    margin-bottom: 15px!important;
-    margin-right: 0!important;
-    width: 200px!important;
+    margin-bottom: 15px !important;
+    margin-right: 0 !important;
+    width: 200px !important;
   }
-  .portifilo .breadcrems_header{
-    margin-top: 50px!important;
+  .portifilo .breadcrems_header {
+    margin-top: 50px !important;
   }
 
   .mobile-use ul li {
@@ -2781,8 +2835,8 @@
   }
 
   .detabesh-use ul li {
-    margin-right: 0!important;
-    width: 47%!important;
+    margin-right: 0 !important;
+    width: 47% !important;
   }
 
   .quality-icon {
@@ -2835,11 +2889,11 @@
   }
 
   .cobc-title {
-    font-size: 27px!important;
+    font-size: 27px !important;
   }
 
   .content-area.product_all_show {
-    padding:  0!important;
+    padding: 0 !important;
     /* margin-top: 0!important; */
   }
 
@@ -2883,15 +2937,15 @@
 
   .inner-online-section h1,
   .inner-technology-section h1 {
-    font-size: 27px!important;
+    font-size: 27px !important;
   }
 
   .inner-online-section p,
   .inner-technology-section p {
     font-size: 17px;
   }
-  .inner-online-section{
-    margin-top : 0!important;
+  .inner-online-section {
+    margin-top: 0 !important;
   }
 
   .dedicated_develop_mid_wrap .col-md-3 {
@@ -2964,9 +3018,9 @@
   }
 
   .costomer_tab_left ul li {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 15px;
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
   }
 
   .costomer_tab_left {
@@ -2978,7 +3032,7 @@
   }
 
   .costomer_tab_left ul li span br {
-    display: none;
+    display: none !important;
   }
 
   .link2,
@@ -3081,7 +3135,7 @@
   }
 
   .job-valu .portal-price {
-    margin-bottom: 10px;
+    margin-bottom: 10px!important;
     text-align: center;
   }
 
@@ -3192,7 +3246,7 @@
   }
 
   .newbfc-section .BFC_logic h2 {
-    font-size: 23px!important;
+    font-size: 23px !important;
   }
 
   .new-custom-section .content_area h3 {
@@ -3276,7 +3330,7 @@
   }
 
   .director-desk {
-    padding: 0px 0 10px!important;
+    padding: 0px 0 10px !important;
   }
 
   .intro-team {
@@ -3284,8 +3338,8 @@
   }
 
   .name-of-director {
-    float: none!important;
-    margin-right: 0!important;
+    float: none !important;
+    margin-right: 0 !important;
   }
 
   .header.affix {
@@ -3301,8 +3355,8 @@
   }
 
   .resources-header {
-    padding: 75px 0!important;
-    margin-top: 50px!important;
+    padding: 40px 0 !important;
+    margin-top: 50px !important;
   }
 
   .pgng_new_ span.current {
@@ -3320,8 +3374,8 @@
   }
 
   .database-use-icon img {
-    max-width: 80%!important;
-    display: inline-block!important;
+    max-width: 80% !important;
+    display: inline-block !important;
   }
 
   .detabesh-use {
@@ -3344,9 +3398,59 @@
   .blog-main-page {
     padding: 40px 0 10px;
   }
+  .nav.abouts-nav-tab > li {
+    width: 100% !important;
+  }
+  .s-parallax,
+  .cover-image,
+  .cover-background,
+  .texture-background {
+    background-size: inherit !important;
+    z-index: 0 !important;
+  }
+
+  .testimonial-hire .media-left,
+  .testimonial-hire .media-body,
+  .testimonial-hire .media {
+    display: block !important;
+    float: left !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .testimonial-hire .media-object {
+    display: inline !important;
+    margin-right: 0 !important;
+    max-width: initial !important;
+    width: 120px !important;
+  }
+  /* .testimonial-hire .slick-prev, .slick-next{
+  display: none!important;
+} */
+
+  .slick-prev {
+    left: -12px !important;
+  }
+  .slick-next {
+    right: -10px !important;
+  }
+  .stat_data_tex_hos {
+    background: rgba(0, 0, 0, 1) none repeat scroll 0 0 !important;
+    position: relative !important;
+  }
+  .stat_data_tex_hos_text {
+    bottom: 0 !important;
+    color: #fff !important;
+    left: 0 !important;
+    letter-spacing: 0 !important;
+    line-height: 22px !important;
+    padding: 20px 12px !important;
+    position: relative !important;
+    right: 0 !important;
+    top: auto !important;
+  }
 
   .resources-header {
-    background-position: -100% top;
+    background-position: -160% top !important;
   }
 
   .crowdfunding-say .service-market-ttd li {
@@ -3416,7 +3520,13 @@
 
   .wop-inverse ul li,
   .wop-list li {
-    padding-left: 26px;
+    padding-left: 26px !important;
+  }
+  .wop-inverse ul {
+    text-align: left !important;
+  }
+  .wop-inverse {
+    direction: unset !important;
   }
 
   .wop-header h1 {
@@ -3424,7 +3534,11 @@
   }
 
   .wop-header {
-    padding: 60px 0;
+    padding: 60px 0 !important;
+    margin-top: 50px !important;
+  }
+  .wl-cont h2 {
+    font-size: 23px !important;
   }
 
   .cobc-configure-logo {
@@ -3715,20 +3829,23 @@
   }
 
   .new-developers-mask .btn.btn-primary {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   .breadcrems_header h1 {
-    font-size: 15px!important;
+    font-size: 15px !important;
+  }
+  .otherhire_developer_back_iin .hire_developer_back_iin_mask {
+    margin-top: 50px !important;
   }
 
   .breadcrems_header ol.breadcrumb {
-    margin: 3px 0 0!important;
-    text-align: center!important;
+    margin: 3px 0 0 !important;
+    text-align: center !important;
   }
 
   .breadcrems_header {
-    padding: 16px 0 5px;
+    padding: 16px 0 5px !important;
   }
 
   .portfolio-php-dev {
@@ -3783,11 +3900,11 @@
   }
 
   .product-details h2 {
-    font-size: 18px!important;
+    font-size: 18px !important;
   }
 
   .product-details p {
-    font-size: 14px!important;
+    font-size: 14px !important;
   }
 
   .ls-awards-swction {
@@ -3795,10 +3912,10 @@
   }
 
   .logo-enqury {
-    margin: 0!important;
-    padding: 16px 50px 0!important;
-    width: 100%!important;
-    text-align: center!important;
+    margin: 0 !important;
+    padding: 16px 50px 0 !important;
+    width: 100% !important;
+    text-align: center !important;
   }
 
   .newpop_enqury button.close {
@@ -3817,7 +3934,7 @@
   }
 
   .product-details {
-    margin: 3px 0 17px!important;
+    margin: 3px 0 17px !important;
   }
 
   .costomer_tab_right {
@@ -3916,7 +4033,7 @@
   }
 
   .small_bbx_job_new {
-    padding-top: 10px!important;
+    padding-top: 10px !important;
   }
 
   .content_area.feature_inner {
@@ -4036,8 +4153,8 @@
   }
 
   .LogicspiceTechnologies ul li {
-    margin: 10px 0!important;
-    width: 100%!important;
+    margin: 10px 0 !important;
+    width: 100% !important;
   }
 
   .WebFrameworksHadding h2 {
@@ -4083,11 +4200,11 @@
   }
 
   .have_look {
-    height: 60px;
+    height: 60px !important;
   }
 
   .to_matf {
-    height: 80px;
+    height: 80px !important;
   }
 
   .readymateSolution {
@@ -4095,10 +4212,10 @@
   }
 
   .ClientLogoHome {
-    display: inline-block;
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
+    display: inline-block !important;
+    width: 100% !important;
+    height: 100px !important;
+    /* overflow: hidden!important; */
   }
 
   .JobBoardNewtab .jobseeker_app_job a {
@@ -4138,17 +4255,17 @@
   }
 
   .AppBottomShwnBx .nav.nav-tabs a {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
   .section3 .nav.nav-tabs a {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
 
   .AppBottomShwnBx .nav.nav-tabs li {
-    width: auto!important;
+    width: auto !important;
   }
   .section3 .nav.nav-tabs li {
-    width: auto!important;
+    width: auto !important;
   }
 
   .header .navbar.navbar-default.mega-menu {
@@ -4228,37 +4345,36 @@
   .blogscript-banner,
   .event-new-banner,
   .rms-banner {
-    padding-top: 70px!important;
-    margin-top: 0!important;
+    padding-top: 70px !important;
+    margin-top: 0 !important;
   }
 
   .ContractHireFeaturesSection h2 {
     font-size: 25px;
   }
 
-  .AngularBanner{
-    padding-top: 35px!important;
+  .AngularBanner {
+    padding-top: 35px !important;
   }
 
   .ReactNavtiveAppBanner,
   .ReactJsWebBanner {
-    padding-top: 30px!important;
+    padding-top: 30px !important;
   }
-  .reactJs-development .laravel_core_features_section{
-    padding: 50px 0 0!important;
-        background-color: #f00!important;
-        background-image: none!important;
+  .reactJs-development .laravel_core_features_section {
+    padding: 50px 0 0 !important;
+    background-color: #f00 !important;
+    background-image: none !important;
   }
 
-  .angular_development .laravel_core_features_section{
-    padding: 50px 0 0!important;
-        background-color: #f00!important;
-        background-image: none!important;
-    
+  .angular_development .laravel_core_features_section {
+    padding: 50px 0 0 !important;
+    background-color: #f00 !important;
+    background-image: none !important;
   }
 
   .AritificialBanner {
-    padding-top: 40px!important;
+    padding-top: 40px !important;
   }
 
   .ReactNavtive-descriptions .laravel_img,
@@ -4267,10 +4383,10 @@
     text-align: center;
     padding: 30px 0 30px;
   }
-  .python_development .laravel_core_features_section{
-    padding: 50px 0 0!important;
-        background-color: #f00!important;
-        background-image: none!important;
+  .python_development .laravel_core_features_section {
+    padding: 50px 0 0 !important;
+    background-color: #f00 !important;
+    background-image: none !important;
   }
 
   .ContractHireBanner .laravel-banner-txt {
@@ -4322,16 +4438,16 @@
     display: none;
   }
   .LaravelBanners {
-    padding-top: 40px!important;
+    padding-top: 40px !important;
   }
 
-  .main_btn_hire{
-    margin: 0!important;
+  .main_btn_hire {
+    margin: 0 !important;
   }
 
   .ecommerce__Quick_FAQ_Script .title_main br {
-    display: none!important;
-}
+    display: none !important;
+  }
 
   .LaravelOffers h3 {
     font-size: 15px !important;
@@ -4457,12 +4573,16 @@
   }
 
   .OurGalleryImg {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
   }
 
   .sidebar_right iframe {
-    max-width: 100%;
+    max-width: 100% !important;
     width: 100% !important;
+  }
+
+  .JobBoardNewDesign h2 {
+    font-size: 17px !important;
   }
 
   .blog-home {
@@ -4493,6 +4613,10 @@
     bottom: -40px;
   }
 
+  .widget_recent_entries {
+    margin-top: 330px !important;
+  }
+
   .php-development .laravel_core_features_detail {
     float: right;
     width: 100%;
@@ -4509,7 +4633,6 @@
     margin-bottom: 0px;
     width: auto;
   }
-
 
   .certificates .tab-content li {
     padding: 13px 4px;
@@ -4537,8 +4660,8 @@
   }
 
   .port_feat_img {
-    height: 190px;
-    padding: 10px;
+    height: 190px !important;
+    padding: 10px !important;
   }
 
   .how_to_hire li {
@@ -4555,16 +4678,16 @@
   }
 
   .app_bottom_shwn_bs .nav.nav-tabs a {
-    font-size: 16px!important;
-    font-weight: bold!important;
-    margin-bottom: 0px!important;
-    padding: 11px 8px!important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin-bottom: 0px !important;
+    padding: 11px 8px !important;
   }
   .section3 .nav.nav-tabs a {
-    font-size: 16px!important;
-    font-weight: bold!important;
-    margin-bottom: 0px!important;
-    padding: 11px 8px!important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin-bottom: 0px !important;
+    padding: 11px 8px !important;
   }
 
   .all_products_show .col-md-3.col-sm-4.col-xs-6 {
@@ -4734,20 +4857,20 @@
   }
 
   .custom-ser-txt {
-    padding: 14px 10px 15px;
+    padding: 14px 10px 15px !important;
   }
 
   .custom-solution-bx .list-group-item h3 {
-    font-size: 19px;
+    font-size: 19px !important;
   }
 
   .custom-solution-bx .list-group-item i {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
   .custom-solution-bx .list-group-item p {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .hiring-sr h2,
@@ -4755,11 +4878,11 @@
   .developer_mid .title_heading,
   .requir_title-new,
   .dev_step_solution .title_heading {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 
   .step-row .col-md-2 {
-    width: 100%;
+    width: 100% !important;
   }
 
   .dev-steps::before {
@@ -4767,18 +4890,18 @@
   }
 
   .hiring-sr .list-group-item {
-    font-size: 16px;
-    margin-bottom: 13px;
+    font-size: 16px !important;
+    margin-bottom: 13px !important;
   }
 
   .hiring-sr .list-group-item i {
-    font-size: 23px;
-    margin-right: 7px;
+    font-size: 23px !important;
+    margin-right: 7px !important;
   }
 
   .hiring-sr .list-group-item span {
-    vertical-align: top;
-    width: 89%;
+    vertical-align: top !important;
+    width: 89% !important;
   }
 
   .inner-flex-new i {
@@ -4786,17 +4909,17 @@
   }
 
   .requirement_section-new .btn.btn-primary {
-    width: 100%;
+    width: 100% !important;
   }
 
   .custom-solution-bx .list-group-item i {
-    padding: 15px 0;
-    width: 100%;
-    min-height: 0;
+    padding: 15px 0 !important;
+    width: 100% !important;
+    min-height: 0 !important;
   }
 
   .custom-ser-txt {
-    width: 100%;
+    width: 100% !important;
   }
 
   .custom-solution-bx .list-group-item {
@@ -4804,8 +4927,8 @@
   }
 
   .technologies-use ul li {
-    margin-right: 0!important;
-    width: 200px!important;
+    margin-right: 0 !important;
+    width: 200px !important;
   }
 
   .mobile-use ul li {
@@ -4815,9 +4938,9 @@
   }
 
   .detabesh-use ul li {
-    margin-right: 0!important;
-    width: 96%!important;
-    margin-left: 0!important;
+    margin-right: 0 !important;
+    width: 96% !important;
+    margin-left: 0 !important;
   }
 
   .quality-icon {
@@ -4988,10 +5111,10 @@
   }
 
   .AppBottomShwnBx .nav.nav-tabs a {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
   .section3 .nav.nav-tabs a {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -5005,8 +5128,8 @@
   }
 
   .new-developers-mask .btn.btn-primary {
-    width: 100%;
-    margin-bottom: 5px;
+    width: 100% !important;
+    margin-bottom: 5px !important;
   }
 
   .inner-flex-new {

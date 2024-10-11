@@ -246,11 +246,9 @@ const Page = () => {
             </h4>
             <div class="UsedTechnologySectionDataa">
               <ul>
-                <li
-                  data-aos="fade-up"
-                  class="iOSUsedTechnology aos-init aos-animate"
-                >
-                  <div class="UsedTechnologyImg">
+                
+                <li data-aos="fade-up" class="iOSUsedTechnology aos-init aos-animate">
+                <div class="UsedTechnologyImg">
                     <Image
                      width={40}
                      height={500 / (100 / 100)}
@@ -258,8 +256,8 @@ const Page = () => {
                       src="/img/resources/tech_ios_icon.png"
                     />
                   </div>
-                  <div class="UsedTechnologyTxt">iOS</div>
-                </li>
+                        <div class="UsedTechnologyTxt">iOS</div>
+                    </li>
                 <li
                   data-aos="fade-up"
                   class="JavaUsedTechnology aos-init aos-animate"
@@ -372,7 +370,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={40}
+                      width={50}
                       height={100}
                       alt="Free Updates - Logicspice"
                       src="/img/jobboard/monthyear_icon.png"
@@ -383,7 +381,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={40}
+                      width={50}
                       height={100}
                       alt="Free Support - Logicspice"
                       src="/img/jobboard/month_half_icon.png"
@@ -394,7 +392,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={40}
+                      width={50}
                       height={100}
                       alt="Free Brand Removal - Logicspice"
                       src="/img/jobboard/free_remove_icon.png"
@@ -405,7 +403,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={40}
+                      width={50}
                       height={100}
                       alt="Free Installation - Logicspice"
                       src="/img/jobboard/free_instal.png"
@@ -416,7 +414,7 @@ const Page = () => {
                 <li data-aos="fade" class="aos-init aos-animate">
                   <div class="supportsetting_icn">
                     <Image
-                      width={40}
+                      width={50}
                       height={100}
                       alt="Access to Source code - Logicspice"
                       src="/img/jobboard/access_secure_code_icon.png"

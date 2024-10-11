@@ -36,13 +36,13 @@ const Page = () => {
               <ol class="breadcrumb">
                 <li>
                   <Link href="/">Home</Link>
-                </li>
-                /
+                </li>{""}
+               
                 <li>
                   {" "}
                   <Link href="/gallery/">Gallery</Link>
-                </li>
-                /
+                </li>{""}
+               
                 <li class="current">
                   <span id="title_here">
                     Diwali celebration 2015 ( <span>November 09,2015</span> )

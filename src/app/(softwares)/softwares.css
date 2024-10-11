@@ -13,7 +13,10 @@ body {
 .container {
   max-width: 1280px;
 }
-
+.software_products{
+  padding: 70px 0;
+  margin-top: 100px;
+}
 .job-portal-banner {
   color: #fff;
   background-repeat: repeat;
@@ -5631,7 +5634,7 @@ before {
 }
 
 .content_area h3 {
-  font-weight: 600;
+  font-weight: 600!important;
   color: #000;
   float: left;
   font-size: 18px;
@@ -6078,6 +6081,10 @@ before {
 
 
 @media (max-width: 767px) {
+  .software_products{
+    padding: 0;
+    margin-top: 50px;
+  }
   .job-valu .portal-price {
     margin-bottom: 10px !important;
     text-align: center !important;
@@ -6177,7 +6184,7 @@ before {
     padding: 20px 10px;
   }
   .SubscriptionModelPrice h4 {
-    font-size: 55px;
+    font-size: 45px!important;
   }
   .SubscriptionModelPrice .srik_cls {
     font-size: 28px;

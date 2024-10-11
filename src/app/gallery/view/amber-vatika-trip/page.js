@@ -36,12 +36,12 @@ const Page = () => {
               <ol class="breadcrumb">
                 <li>
                   <Link href="/">Home</Link>
-                </li>
-                /
+                </li>{""}
+              
                 <li>
                   <Link href="/gallery">Gallery</Link>
-                </li>
-                /
+                </li>{""}
+               
                 <li class="current">
                   <span id="title_here">
                     Amber Vatika Trip ( <span>August 12,2014</span> )

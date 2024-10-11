@@ -109,6 +109,54 @@ const Page = () => {
                 </Link>
               </div>
               <div className="col-md-4 col-sm-4 padding-no">
+                <Link href="/generative-ai-development">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_4.png"
+                        alt="serv_4"
+                      />
+                    </div>
+                    <h2>Generative AI development</h2>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-md-4 col-sm-4 padding-no">
+                <Link href="/blockchain-development">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/serv_1.png"
+                        alt="serv_1"
+                      />
+                    </div>
+                    <h2>Blockchain Development</h2>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-md-4 col-sm-4 padding-no">
+                <Link href="/video-creation">
+                  <div className="our-services-bx right-none">
+                    <div className="our-services-img">
+                      <Image
+                        width={70}
+                        height={100}
+                        src="/img/services/big-data-development.png"
+                        alt="Big Data Development"
+                      />
+                    </div>
+                    <h2>Video Creation</h2>
+                  </div>
+                </Link>
+              </div>
+
+
+
+              <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/devops-development">
                   <div className="our-services-bx">
                     <div className="our-services-img">

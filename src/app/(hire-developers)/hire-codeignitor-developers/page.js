@@ -79,7 +79,7 @@ const Page = () => {
         <div class="hire_developer_back_iin_mask new-developers-mask">
           <div class="container">
             <div class="row">
-              <div class="col-md-7 text-start">
+              <div class="col-md-8 text-start">
                 <h1 class="slide_title">Hire CodeIgniter Developer</h1>
                 <div class="subinstet">
                   Hire codeigniter programmer from the hub of talented
@@ -121,7 +121,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <div class="cack_logo_img">
                   <Image
                     width={233}
@@ -199,7 +199,7 @@ const Page = () => {
           </div>
           <div class="hiring-sr">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <div class="jumbotron">
                   <h2>Codeigniter developer for hire</h2>
                   <p>
@@ -228,7 +228,7 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h2>Technical expertise</h2>
                 <ul class="list-group">
                   <li class="list-group-item">

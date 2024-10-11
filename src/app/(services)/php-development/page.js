@@ -394,7 +394,7 @@ const Page = () => {
                         <div className="mask"></div>
                       </i>
                     </div>
-                    <h3>PHP Migration Services</h3>
+                    <h3>PHP Migration <br /> Services</h3>
                     <p>
                       With us, migration is always an easier process from one
                       platform to another.

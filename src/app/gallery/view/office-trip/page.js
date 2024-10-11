@@ -57,12 +57,12 @@ const Page = () => {
               <ol class="breadcrumb">
                 <li>
                   <Link href="/">Home</Link>
-                </li>
-                /
+                </li>{""}
+             
                 <li>
                   <Link href="/gallery">Gallery</Link>
-                </li>
-                /
+                </li>{""}
+                
                 <li class="current">
                   <span id="title_here">
                     Office Trip ( <span>November 23,2019</span> )

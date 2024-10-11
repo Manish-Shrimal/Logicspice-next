@@ -299,10 +299,11 @@ const Blogslider = () => {
       ) : (
         <Slider {...settings}>
           {blogs.map((blog, index) => (
-            <div key={index}>
-              <li style={{ listStyle: "none" }}>
+            <div key={index} style={{gap: "10px"}}>
+              <li style={{ listStyle: "none", marginRight : "50px" }}>
                 <figure>
                   <Image
+                     
                     width={500}
                     height={100}
                     src={blog.img}

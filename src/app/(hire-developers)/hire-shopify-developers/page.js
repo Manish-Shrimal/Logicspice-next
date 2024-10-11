@@ -78,7 +78,7 @@ const Page = () => {
         <div class="hire_developer_back_iin_mask new-developers-mask">
           <div class="container">
             <div class="row">
-              <div class="col-md-7 text-start">
+              <div class="col-md-8 text-start">
                 <h1 class="slide_title">Hire Shopify Developers</h1>
                 <div class="subinstet">
                   Are you looking to hire a Shopify Developer for a new online
@@ -123,7 +123,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <div class="cack_logo_img">
                   <Image
                     width={256}
@@ -175,7 +175,7 @@ const Page = () => {
 
           <div class="hiring-sr">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <div class="jumbotron">
                   <h2>Hire Shopify Developers</h2>
                   <p>
@@ -212,7 +212,7 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h2>Technical expertise</h2>
                 <ul class="list-group">
                   <li class="list-group-item">

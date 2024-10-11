@@ -55,7 +55,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -258,7 +257,7 @@ const Page = () => {
                   <strong>tailor-made solutions</strong> to address your unique
                   software development needs, assuring excellence at every step.
                 </p> */}
-                If you're looking for the best Laravel developers, look no
+                If you&apos;re looking for the best Laravel developers, look no
                 further than LogicSpice. We are a leading Laravel development
                 company with a team of highly skilled professionals who have
                 deep expertise in the Laravel framework. Also, our company
@@ -294,7 +293,7 @@ const Page = () => {
                   construct <i>robust and scalable web applications</i> that
                   stand the test of time.
                 </p>
-                At LogicSpice, we're proud to be recognized as one of the
+                At LogicSpice, we&apos;re proud to be recognized as one of the
                 leading Laravel development companies in the USA, UK, and
                 beyond. Our dynamic team of skilled developers and designers is
                 dedicated to delivering custom Laravel website development
@@ -318,7 +317,7 @@ const Page = () => {
             <p>
               Discover how our range of ready-made solutions can boost your
               Laravel development experience, taking your business to the next
-              level. Whether you're in need of a robust Job Board, efficient
+              level. Whether you&apos;re in need of a robust Job Board, efficient
               Logistic Management System, or optimized Recruitment Management
               System, these software offer powerful solutions that can be
               further customized to your requirements as well.

@@ -16,6 +16,14 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+
+  const openModal = () => {
+   
+
+    setShowModal(!showModal);
+  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -78,7 +86,7 @@ const Page = () => {
         <div class="hire_developer_back_iin_mask new-developers-mask">
           <div class="container">
             <div class="row">
-              <div class="col-md-7 text-start">
+              <div class="col-md-8 text-start">
               <h1 class="slide_title">Hire ReactJS Developers</h1>
           <div class="subinstet">
             Start your web development journey with the expertise of ReactJS
@@ -121,7 +129,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <div class="cack_logo_img">
                   <Image
                     width={300}
@@ -174,7 +182,7 @@ const Page = () => {
 
           <div class="hiring-sr">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="jumbotron">
             <h2>Hire ReactJS Expert</h2>
             <p>
@@ -198,7 +206,7 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <h2>Technical expertise</h2>
           <ul class="list-group">
             <li class="list-group-item">
@@ -456,10 +464,10 @@ const Page = () => {
           </div>
         </div>
       </section>{" "}
-      <section class="ecommerce_faq_section NewFaqDesignSection">
+      {/* <section class="ecommerce_faq_section NewFaqDesignSection">
         <div class="container">
-          <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
+          <div class="row CustomQuickFAQScript">
+            <div class=" row ">
               <div class="col-md-5">
                 <h4 class="title_main">
                   Frequently <br />
@@ -480,6 +488,10 @@ const Page = () => {
             <MDBAccordionItem
               headerTitle="Why is ReactJS used in web development?"
               collapseId="flush-collapse1"
+              // className="aos-init aos-animate"
+              data-aos="fade-up"
+            
+              
             >
               <p>
                 ReactJS allows developers to craft dynamic user interfaces for
@@ -490,6 +502,8 @@ const Page = () => {
             <MDBAccordionItem
               headerTitle="Why should I hire ReactJS developers from Logicspice?"
               collapseId="flush-collapse2"
+              // className="aos-init aos-animate"
+              data-aos="fade-up"
             >
               <p>
                 Logicspice&apos;s ReactJS developers are experienced professionals
@@ -501,6 +515,7 @@ const Page = () => {
             <MDBAccordionItem
               headerTitle="How does ReactJS differ from other frontend libraries/frameworks?"
               collapseId="flush-collapse3"
+              data-aos="fade-up"
             >
               <p>
                 ReactJS emphasizes component-based architecture, facilitating
@@ -512,6 +527,7 @@ const Page = () => {
             <MDBAccordionItem
               headerTitle="How do you ensure my project's confidentiality?"
               collapseId="flush-collapse4"
+              data-aos="fade-up"
             >
               <p>
                 At Logicspice, client confidentiality is our priority. We&apos;re
@@ -523,6 +539,7 @@ const Page = () => {
             <MDBAccordionItem
               headerTitle="Can I hire developers for varied project durations?"
               collapseId="flush-collapse5"
+              data-aos="fade-up"
             >
               <p>
                 Indeed! Be it a short-term task or a long-drawn project,
@@ -531,6 +548,113 @@ const Page = () => {
             </MDBAccordionItem>
           </MDBAccordion>
         </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+       <section className="ecommerce_faq_section" id="faq">
+        <div className="container">
+          <div className="CustomQuickFAQScript">
+            <div className="row">
+            <div class="col-md-5">
+                <h4 class="title_main">
+                  Frequently <br />
+                  Asked Questions
+                </h4>
+                <div class="FaqImgBx">
+                  <Image
+                    width={500}
+                    height={100}
+                    src="/img/laraveldevelopment/FaqLaravelImg.png"
+                    alt="laravel web development"
+                  />
+                </div>
+              </div>
+              <div className="col-md-7">
+                <div className="panel-group faq_quick_sec" id="accordion">
+                <MDBAccordion v-model="activeItem" borderless>
+            <MDBAccordionItem
+              headerTitle="Why is ReactJS used in web development?"
+              collapseId="flush-collapse1"
+              // className="aos-init aos-animate"
+              data-aos="fade-up"
+            
+              
+            >
+              <p>
+                ReactJS allows developers to craft dynamic user interfaces for
+                web applications with reusable components.
+              </p>
+            </MDBAccordionItem>
+
+            <MDBAccordionItem
+              headerTitle="Why should I hire ReactJS developers from Logicspice?"
+              collapseId="flush-collapse2"
+              // className="aos-init aos-animate"
+              data-aos="fade-up"
+            >
+              <p>
+                Logicspice&apos;s ReactJS developers are experienced professionals
+                known for creating efficient, responsive web apps tailored for
+                your enterprise.
+              </p>
+            </MDBAccordionItem>
+
+            <MDBAccordionItem
+              headerTitle="How does ReactJS differ from other frontend libraries/frameworks?"
+              collapseId="flush-collapse3"
+              data-aos="fade-up"
+            >
+              <p>
+                ReactJS emphasizes component-based architecture, facilitating
+                faster development and easier maintenance compared to
+                traditional frameworks.
+              </p>
+            </MDBAccordionItem>
+
+            <MDBAccordionItem
+              headerTitle="How do you ensure my project's confidentiality?"
+              collapseId="flush-collapse4"
+              data-aos="fade-up"
+            >
+              <p>
+                At Logicspice, client confidentiality is our priority. We&apos;re
+                committed to ensuring your project&apos;s confidentiality via NDAs
+                etc.
+              </p>
+            </MDBAccordionItem>
+
+            <MDBAccordionItem
+              headerTitle="Can I hire developers for varied project durations?"
+              collapseId="flush-collapse5"
+              data-aos="fade-up"
+            >
+              <p>
+                Indeed! Be it a short-term task or a long-drawn project,
+                Logicspice has flexible hiring models to suit all needs.
+              </p>
+            </MDBAccordionItem>
+          </MDBAccordion>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
+                <a>Hire Now!</a>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Request to hire-react-developers"
+                  />
+                }
+              </div>
             </div>
           </div>
         </div>

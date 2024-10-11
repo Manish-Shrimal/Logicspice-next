@@ -73,7 +73,7 @@ const Page = () => {
         <div className="hire_developer_back_iin_mask new-developers-mask">
           <div className="container">
             <div className="row">
-              <div className="col-md-7 text-start">
+              <div className="col-md-8 text-start">
               <h1 class="slide_title">Hire Web Developer</h1>
           <div class="subinstet">
             Hire website developer from the hub of talented web developers to
@@ -113,7 +113,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-md-5">
+              <div className="col-md-4">
                 <div className="cack_logo_img">
                   <Image
                     alt="Hire Android App Developers"
@@ -164,7 +164,7 @@ const Page = () => {
             </div>
           <div class="hiring-sr">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="jumbotron">
             <h2>Hire professional web developers</h2>
             <p>
@@ -197,7 +197,7 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <h2>Technical expertise</h2>
           <ul class="list-group">
             <li class="list-group-item"><span>Widget development</span></li>

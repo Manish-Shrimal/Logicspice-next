@@ -23,15 +23,55 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  // const settings = {
+  //   dots: true,
+  //   arrow: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 5000,
+  // };
+
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024, // at screen width <= 1024px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768, // at screen width <= 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 480, // at screen width <= 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
+  
 
   return (
     <>
@@ -312,8 +352,8 @@ const Page = () => {
       </section>
 
       <section class="grow-to-bloom">
-      
-          <div class="row">
+       <div className="container">
+       <div class="row">
             <div class="col-md-7">
               <Image
                 width={900}
@@ -369,6 +409,8 @@ const Page = () => {
               </div>
             </div>
           </div>
+       </div>
+         
       
       </section>
 
@@ -406,7 +448,7 @@ const Page = () => {
 
       <section className="events">
         <div className="container">
-          <div>
+          {/* <div>
           <Swiper
             slidesPerView={3}
             spaceBetween={50}
@@ -508,8 +550,8 @@ const Page = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          </div>
-          {/* <Slider {...settings}>
+          </div> */}
+          <Slider {...settings}>
            
             <div>
               <Image
@@ -587,7 +629,7 @@ const Page = () => {
               <div className="even_img_name">Diwali Celebration</div>
               <div className="even_img_date">October 10, 2016</div>
             </div>
-          </Slider> */}
+          </Slider>
 
           
         </div>

@@ -1002,7 +1002,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/hire-codeigniter-developers">
+                        <Link href="/hire-codeignitor-developers">
                           Hire CodeIgniter Developer Experts
                         </Link>
                       </li>

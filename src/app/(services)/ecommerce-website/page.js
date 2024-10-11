@@ -82,7 +82,7 @@ const Page = () => {
       },
     ],
   };
-  
+
   const [activeTab, setActiveTab] = useState("tab2");
   const [customerTab, setCustomerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
@@ -93,7 +93,6 @@ const Page = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
-
 
   const [showReviewModal, setShowReviewModal] = useState(false);
 
@@ -140,55 +139,53 @@ const Page = () => {
                   <h2>Best eCommerce Web Design Packages</h2>
                 </div>
                 <div className="job-valu">
-                <div class="portal-price">
-                        <strike class="srik_cls">₹17,248<span class="sml_labl"> INR</span><small>/Month</small></strike>
-                        <h4>₹4,435<span class="sml_labl"> INR</span><small>/Month</small></h4>
-                    </div>
-                  <div className="ecommerce-valu-btn">
-                    <div className="job-valu-btn">
-                      <div
-                        className=" btn-get"
-                        onClick={openModal}
-                        style={{ textAlign: "center" }}
-                      >
-                        <a>Get Demo Access!</a>
-                        {
-                          <Enquirymodal
-                            modalStatus={showModal}
-                            toggle={openModal}
-                            title="Please fill the form below and get access to the live demo of eCommerce Monthly Package.
-See how it work yourself!"
-                          />
-                        }
-                      </div>
-
-                      {/* <Link
-                      href="#"
-                      id=""
-                      className="btn btn-primary"
-                      onClick={() => openEnquiryModal()}
+                  <div class="portal-price">
+                    <strike class="srik_cls">
+                      ₹17,248<span class="sml_labl"> INR</span>
+                      <small>/Month</small>
+                    </strike>
+                    <h4>
+                      ₹4,435<span class="sml_labl"> INR</span>
+                      <small>/Month</small>
+                    </h4>
+                  </div>
+                </div>
+                <div className="ecommerce-valu-btn">
+                  <div className="job-valu-btn">
+                    <div
+                      className=" btn-get"
+                      onClick={openModal}
+                      style={{ textAlign: "center" }}
                     >
-                      Enquire Now
-                    </Link> */}
-                      <div className="btn btn-primary" onClick={openModal}>
-                        <a>Enquire Now</a>
-                        {
-                          <Enquirymodal
-                            modalStatus={showModal}
-                            toggle={openModal}
-                            title="eCommerece Monthly Package"
-                          />
-                        }
-                      </div>
-                      <ul className="job-ecommerce-icon">
-                        <li>
-                          <i
-                            className="fa-solid fa-earth-americas"
-                            aria-hidden="true"
-                          ></i>
-                        </li>
-                      </ul>
+                      <a>Get Demo Access!</a>
+                      {
+                        <Enquirymodal
+                          modalStatus={showModal}
+                          toggle={openModal}
+                          title="Please fill the form below and get access to the live demo of eCommerce Monthly Package.
+                              See how it work yourself!"
+                        />
+                      }
                     </div>
+
+                    <div className="btn btn-primary" onClick={openModal}>
+                      <a>Enquire Now</a>
+                      {
+                        <Enquirymodal
+                          modalStatus={showModal}
+                          toggle={openModal}
+                          title="eCommerece Monthly Package"
+                        />
+                      }
+                    </div>
+                    <ul className="job-ecommerce-icon">
+                      <li>
+                        <i
+                          className="fa-solid fa-earth-americas"
+                          aria-hidden="true"
+                        ></i>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div className="jocpp">
@@ -209,7 +206,7 @@ See how it work yourself!"
               <div className="col-sm-5 col-md-5">
                 <div className="por-mobile-new">
                   <Image
-                    width={400}
+                    width={650}
                     height={500 / (100 / 100)}
                     src="/img/ecommercewebsite/ecommerce-banner-img.png"
                     alt="eCommerce Ultimate Package"
@@ -1516,7 +1513,7 @@ See how it work yourself!"
                     <MDBAccordionItem
                       // headerTitle="Can the owner of the business upload more than one product on the website?"
                       collapseId="flush-collapse1"
-                       data-aos="fade-up"
+                      data-aos="fade-up"
                       headerTitle={
                         <div
                           style={{
@@ -1527,14 +1524,15 @@ See how it work yourself!"
                           onClick={() => toggleActiveItem("flush-collapse1")}
                         >
                           <span>
-                          Can the owner of the business upload more than one product on the website?
+                            Can the owner of the business upload more than one
+                            product on the website?
                           </span>
                           {activeItem === "flush-collapse1" ? (
                             <KeyboardArrowDownIcon />
                           ) : (
-                            < KeyboardArrowRightIcon/>
+                            <KeyboardArrowRightIcon />
                           )}
-                          </div>
+                        </div>
                       }
                     >
                       <p>
@@ -1557,14 +1555,15 @@ See how it work yourself!"
                           onClick={() => toggleActiveItem("flush-collapse2")}
                         >
                           <span>
-                          Can the owner of the business upload more than one product on the website?
+                            Can the owner of the business upload more than one
+                            product on the website?
                           </span>
                           {activeItem === "flush-collapse2" ? (
                             <KeyboardArrowDownIcon />
                           ) : (
-                            < KeyboardArrowRightIcon/>
+                            <KeyboardArrowRightIcon />
                           )}
-                          </div>
+                        </div>
                       }
                     >
                       <p>
@@ -1667,9 +1666,8 @@ See how it work yourself!"
                       </p>
                     </MDBAccordionItem>
                   </MDBAccordion>
-                    </div>
-                    </div>
-              
+                </div>
+              </div>
             </div>
           </div>
         </section>

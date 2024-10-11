@@ -92,8 +92,8 @@ const Looksilder = () => {
 
   return (
     <>
-     
-      <div id="">
+     <div className="look-slider">
+     <div id="">
         <Swiper
           slidesPerView={1}
           spaceBetween={50}
@@ -116,6 +116,7 @@ const Looksilder = () => {
                 />
               </div>
               <div className="col-md-5">
+                <div className="ClientLogoHome">
                 <Image
                   src={lookData.originalImage}
                   alt={lookData.alt}
@@ -136,11 +137,15 @@ const Looksilder = () => {
                     Request a quote
                   </Link>
                 </div>
+                </div>
+              
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
+     </div>
+    
     </>
   );
 };

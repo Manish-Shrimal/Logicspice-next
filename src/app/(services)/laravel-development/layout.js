@@ -7,6 +7,7 @@ import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
   const product = await fetch(`${MetadataApi}/laravel-development`,{

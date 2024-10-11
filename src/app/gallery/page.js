@@ -8,7 +8,6 @@ import "./gallery.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -55,8 +54,9 @@ const Page = () => {
               <ol class="breadcrumb">
                 <li>
                   <Link href="/">Home</Link>
-                </li>
-                /<li class="current">Gallery</li>
+                </li> {""}
+               
+                <li class="current">Gallery</li>
               </ol>
             </div>
           </div>

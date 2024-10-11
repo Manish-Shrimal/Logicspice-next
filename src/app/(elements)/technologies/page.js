@@ -13,8 +13,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
-
     setShowModal(!showModal);
   };
 
@@ -40,18 +38,19 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/laravel-icon.png"
                     alt="Laravel"
                   />
-                  {/* <Image /> */}
                 </i>
                 <span>Laravel</span>
               </li>
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/react-icon.png"
@@ -63,6 +62,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/nodejs-icon.png"
@@ -74,6 +74,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/react-native-icon.png"
@@ -85,6 +86,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/angular-icon.png"
@@ -96,6 +98,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/swift-icon.png"
@@ -107,6 +110,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/bootstrap-icon.png"
@@ -118,6 +122,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/bigdata-icon.png"
@@ -129,6 +134,7 @@ const Page = () => {
               <li class="DevOpsTechnologies">
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/devops-icon.png"
@@ -144,6 +150,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/ai-icon.png"
@@ -155,6 +162,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/java-icon.png"
@@ -166,6 +174,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/xcode-icon.png"
@@ -177,6 +186,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/mysql-icon.png"
@@ -188,7 +198,8 @@ const Page = () => {
               <li>
                 <i>
                   <Image
-                    width={60}
+                    unoptimized={true}
+                    width={80}
                     height={100}
                     src="/img/technology/mongodb-icon.png"
                     alt="Mongo DB"
@@ -199,6 +210,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/php-icon.png"
@@ -210,6 +222,7 @@ const Page = () => {
               <li>
                 <i>
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/codeigniter-icon.png"
@@ -217,6 +230,54 @@ const Page = () => {
                   />
                 </i>
                 <span>Codeigniter</span>
+              </li>
+              <li>
+                <i>
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
+                    src="/img/technology/django-icon.png"
+                    alt="Codeigniter"
+                  />
+                </i>
+                <span>DJango</span>
+              </li>
+              <li>
+                <i>
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
+                    src="/img/technology/next-js-logo.png"
+                    alt="Codeigniter"
+                  />
+                </i>
+                <span>Next JS</span>
+              </li>
+              <li>
+                <i>
+                  <Image
+                    unoptimized={true}
+                    width={80}
+                    height={100}
+                    src="/img/technology/vue-js-logo.jpg"
+                    alt="Codeigniter"
+                  />
+                </i>
+                <span>Vue JS</span>
+              </li>
+              <li>
+                <i>
+                  <Image
+                    unoptimized={true}
+                    width={60}
+                    height={100}
+                    src="/img/technology/blockchain-icon.png"
+                    alt="Codeigniter"
+                  />
+                </i>
+                <span>Blockchain</span>
               </li>
             </ul>
           </div>
@@ -244,6 +305,7 @@ const Page = () => {
               <li>
                 <div class="use-icon">
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/php-web-icon.png"
@@ -255,6 +317,7 @@ const Page = () => {
               <li>
                 <div class="use-icon">
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/xml-development-icon.png"
@@ -266,6 +329,7 @@ const Page = () => {
               <li>
                 <div class="use-icon">
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/html-css-icon.png"
@@ -277,6 +341,7 @@ const Page = () => {
               <li>
                 <div class="use-icon">
                   <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     src="/img/technology/js-web-icon.png"
@@ -305,6 +370,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/laravel-icon.png"
@@ -316,6 +382,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/nodejs-icon.png"
@@ -327,6 +394,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/cake-icon.png"
@@ -338,6 +406,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/react-icon.png"
@@ -349,6 +418,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/angular-icon.png"
@@ -360,6 +430,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/bootstrap-icon.png"
@@ -371,6 +442,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/django-icon.png"
@@ -382,6 +454,7 @@ const Page = () => {
                 <li>
                   <i>
                     <Image
+                      unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/technology/codeigniter-icon.png"
@@ -410,6 +483,7 @@ const Page = () => {
               <li data-aos="fade-right">
                 <div class="TechnologiesMobileUseIcon">
                   <Image
+                    unoptimized={true}
                     width={150}
                     height={100 / (100 / 100)}
                     src="/img/technology/android-icon.png"
@@ -424,6 +498,7 @@ const Page = () => {
               <li data-aos="fade-left">
                 <div class="TechnologiesMobileUseIcon">
                   <Image
+                    unoptimized={true}
                     width={150}
                     height={100 / (100 / 100)}
                     src="/img/technology/apple-icon.png"
@@ -438,6 +513,7 @@ const Page = () => {
               <li data-aos="fade-left">
                 <div class="TechnologiesMobileUseIcon">
                   <Image
+                    unoptimized={true}
                     width={150}
                     height={100 / (100 / 100)}
                     src="/img/technology/hybrid.png"
@@ -467,6 +543,7 @@ const Page = () => {
               <li data-aos="fade-right">
                 <div class="database-use-icon">
                   <Image
+                    unoptimized={true}
                     width={200}
                     height={100 / (100 / 100)}
                     src="/img/technology/mysol-icon.png"
@@ -477,6 +554,7 @@ const Page = () => {
               <li data-aos="fade-left">
                 <div class="database-use-icon database-mango-icon">
                   <Image
+                    unoptimized={true}
                     width={200}
                     height={100 / (100 / 100)}
                     src="/img/technology/mangodb-icon.png"
@@ -497,6 +575,7 @@ const Page = () => {
                 Get a Free Quote
                 <i>
                   <Image
+                    unoptimized={true}
                     width={20}
                     height={100}
                     src="/img/technology/technologies-icon-arrow.png"
@@ -515,6 +594,7 @@ const Page = () => {
             target="_blank"
           >
             <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               width={50}

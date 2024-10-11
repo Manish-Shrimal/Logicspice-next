@@ -8,7 +8,6 @@ import "../../gallery.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -18,7 +17,10 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section class="resources-header" style={{ background: "url(/img/gallery.png)" }}>
+      <section
+        class="resources-header"
+        style={{ background: "url(/img/gallery.png)" }}
+      >
         <div class="container">
           <span>
             <span>Sunrise Tour</span>
@@ -37,11 +39,11 @@ const Page = () => {
                 <li>
                   <a href="/">Home</a>
                 </li>
-                /
+
                 <li>
                   <a href="/gallery/">Gallery</a>
                 </li>
-                /
+
                 <li class="current">
                   <span id="title_here">
                     Sunrise Tour ( <span>July 11,2010</span> )

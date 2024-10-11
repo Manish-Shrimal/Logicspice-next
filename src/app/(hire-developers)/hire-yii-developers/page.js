@@ -159,7 +159,7 @@ const Page = () => {
               </div>
               <div class="HireDevelopersBannerBtn">
                 <div className="btn btn-primary" onClick={openModal}>
-                  <button>HIre Now</button>
+                  <button>HIre Now!</button>
                   {
                     <Enquirymodal
                       modalStatus={showModal}
@@ -347,7 +347,7 @@ const Page = () => {
                   <div class="OurNewHirigModelBx">
                     <i>
                       <Image
-                        width={41}
+                        width={70}
                         height={100}
                         alt="app development"
                         src="/img/yiiframework/periodic-icon.png"
@@ -360,7 +360,7 @@ const Page = () => {
                   <div class="OurNewHirigModelBx">
                     <i>
                       <Image
-                        width={41}
+                        width={70}
                         height={100}
                         alt="app development"
                         src="/img/yiiframework/hourly-basis-icon.png"
@@ -373,7 +373,7 @@ const Page = () => {
                   <div class="OurNewHirigModelBx">
                     <i>
                       <Image
-                        width={41}
+                        width={70}
                         height={100}
                         alt="app development"
                         src="/img/yiiframework/project-basis-icon.png"
@@ -837,7 +837,7 @@ const Page = () => {
           <div class="HireEasyStepsBtn">
             {/* <a href="javascript:void(0);" class="btn btn-primary">Hire Now!</a> */}
             <div className="btn btn-primary" onClick={openModal}>
-              <button>HIre Now</button>
+              <a>Hire Now</a>
               {
                 <Enquirymodal
                   modalStatus={showModal}
@@ -854,7 +854,7 @@ const Page = () => {
           <h3 class="title_heading">
             Why hire from
             <Image
-                width={64}
+                width={272}
                 height={100}
               alt="Logicspice Mobile and Web development company"
               src="/img/logo.png"

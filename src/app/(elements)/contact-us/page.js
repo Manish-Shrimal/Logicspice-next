@@ -7,6 +7,9 @@ import DescriptionIcon from "@mui/icons-material/Description";
 // import "@/app/globals.css"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-free/css/all.css";
+import "/public/css/font-awesome.css"
+import "/public/css/font-awesome.min.css"
+
 
 import PersonIcon from "@mui/icons-material/Person";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
@@ -154,7 +157,8 @@ const Page = () => {
                             {/* <i className="fa fa-user-o" aria-hidden="true"></i> */}
                             {/* <i className="fa-regular fa-user" aria-hidden="true"></i> */}
                             {/* <i className="fa fa-user"></i> */}
-                            <PersonIcon />
+                            {/* <PersonIcon /> */}
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
                           </span>
                           <input
                                       type="text"
@@ -176,7 +180,8 @@ const Page = () => {
                               className="fa fa-envelope-o"
                               aria-hidden="true"
                             ></i> */}
-                            <EmailOutlinedIcon />
+                            {/* <EmailOutlinedIcon /> */}
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
                           </span>
                           <input
                                       type="email"
@@ -199,7 +204,8 @@ const Page = () => {
                         <div className="form-group">
                           <span>
                             {/* <i className="fa fa-phone" aria-hidden="true"></i> */}
-                            <LocalPhoneIcon />
+                            {/* <LocalPhoneIcon /> */}
+                            <i class="fa fa-phone" aria-hidden="true"></i>
                           </span>
                           <input
                             name="data[User][phone_no]"
@@ -216,7 +222,8 @@ const Page = () => {
                     <div className="form-group">
                       <span className="textarea-field">
                         {/* <i className="fa fa-file-text-o" aria-hidden="true"></i> */}
-                        <DescriptionOutlinedIcon />
+                        {/* <DescriptionOutlinedIcon /> */}
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
                       </span>
                       <textarea
                         value={formData.message}

@@ -632,20 +632,20 @@ const Footer = () => {
                         </span>
                         <div class="counlistshow">
                           <span>
-                          <Link href={`/australia/mobile-app-development-in/melbourne`}>
+                          <Link href="/australia/mobile-app-development-in-melbourne">
                               Melbourne
                             </Link>
                           </span>
                           <span>
-                            <a href={`/australia/mobile-app-development-in-${"sydney"}`}>
+                            <Link href="/australia/mobile-app-development-in-sydney">
                               Sydney
-                            </a>
+                            </Link>
                           </span>
                         </div>
                       </div>
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a href="/uk">
+                          <Link href="/uk">
                             <Image
                               width={100}
                               height={100}
@@ -653,24 +653,24 @@ const Footer = () => {
                               alt="mobile app development in UK"
                             />{" "}
                             UK
-                          </a>
+                          </Link>
                         </span>
                         <div class="counlistshow">
                           <span>
-                            <a href="/uk/mobile-app-development-in-london">
+                            <Link href="/uk/mobile-app-development-in-london">
                               London
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/uk/mobile-app-development-in-manchester">
+                            <Link href="/uk/mobile-app-development-in-manchester">
                               Manchester
-                            </a>
+                            </Link>
                           </span>
                         </div>
                       </div>
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a href="/usa'/">
+                          <Link href="/usa">
                             <Image
                               width={100}
                               height={100}
@@ -678,44 +678,44 @@ const Footer = () => {
                               alt="mobile app development in USA"
                             />{" "}
                             USA
-                          </a>
+                          </Link>
                         </span>
                         <div class="counlistshow">
                           <span>
-                            <a href="/usa/mobile-app-development-in-california">
+                            <Link href="/usa/mobile-app-development-in-california">
                               California
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/usa/mobile-app-development-in-miami">
+                            <Link href="/usa/mobile-app-development-in-miami">
                               Miami
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/usa/mobile-app-development-in-florida">
+                            <Link href="/usa/mobile-app-development-in-florida">
                               Florida
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/usa/mobile-app-development-in-losangeles">
+                            <Link href="/usa/mobile-app-development-in-losangeles">
                               Los angeles
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/usa/mobile-app-development-in-newyork">
+                            <Link href="/usa/mobile-app-development-in-newyork">
                               New york
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/usa/mobile-app-development-in-chicago">
+                            <Link href="/usa/mobile-app-development-in-chicago">
                               Chicago
-                            </a>
+                            </Link>
                           </span>
                         </div>
                       </div>
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a href="/uae">
+                          <Link href="/uae">
                             <Image
                               width={100}
                               height={100}
@@ -723,34 +723,34 @@ const Footer = () => {
                               alt="mobile app development in UAE"
                             />{" "}
                             UAE
-                          </a>
+                          </Link>
                         </span>
                         <div class="counlistshow">
                           <span>
-                            <a href="/uae/mobile-app-development-in-dubai">
+                            <Link href="/uae/mobile-app-development-in-dubai">
                               Dubai
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/uae/mobile-app-development-in-abu-dhabi">
+                            <Link href="/uae/mobile-app-development-in-abu-dhabi">
                               Abu Dhabi
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/uae/mobile-app-development-in-ajman">
+                            <Link href="/uae/mobile-app-development-in-ajman">
                               Ajman
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/uae/mobile-app-development-in-al-ain">
+                            <Link href="/uae/mobile-app-development-in-al-ain">
                               Al Ain
-                            </a>
+                            </Link>
                           </span>
                         </div>
                       </div>
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a href="/switzerland">
+                          <Link href="/switzerland">
                             <Image
                               width={100}
                               height={100}
@@ -758,29 +758,29 @@ const Footer = () => {
                               alt="mobile app development in Switzerland"
                             />{" "}
                             Switzerland
-                          </a>
+                          </Link>
                         </span>
                         <div class="counlistshow">
                           <span>
-                            <a href="/switzerland/mobile-app-development-in-geneva">
+                            <Link href="/switzerland/mobile-app-development-in-geneva">
                               Geneva
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/switzerland/mobile-app-development-in-zurich">
+                            <Link href="/switzerland/mobile-app-development-in-zurich">
                               Zürich
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/switzerland/mobile-app-development-in-basel">
+                            <Link href="/switzerland/mobile-app-development-in-basel">
                               Basel
-                            </a>
+                            </Link>
                           </span>
                         </div>
                       </div>
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a href="/belgium">
+                          <Link href="/belgium">
                             <Image
                               width={100}
                               height={100}
@@ -788,35 +788,35 @@ const Footer = () => {
                               alt="mobile app development in Belgium"
                             />{" "}
                             Belgium
-                          </a>
+                          </Link>
                         </span>
 
                         <div class="counlistshow">
                           <span>
-                            <a href="/belgium/mobile-app-development-in-brussels">
+                            <Link href="/belgium/mobile-app-development-in-brussels">
                               Brussels
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/belgium/mobile-app-development-in-flanders">
+                            <Link href="/belgium/mobile-app-development-in-flanders">
                               Flanders
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/belgium/mobile-app-development-in-ghent">
+                            <Link href="/belgium/mobile-app-development-in-ghent">
                               Ghent
-                            </a>
+                            </Link>
                           </span>
                           <span>
-                            <a href="/belgium/mobile-app-development-in-antwerp">
+                            <Link href="/belgium/mobile-app-development-in-antwerp">
                               Antwerp
-                            </a>
+                            </Link>
                           </span>
                         </div>
                       </div>
                       <div class="country_col_set">
                         <span class="country_nm">
-                          <a href="/india">
+                          <Link href="/india">
                             <Image
                               width={100}
                               height={100}
@@ -824,7 +824,7 @@ const Footer = () => {
                               alt="mobile app development in India"
                             />{" "}
                             India
-                          </a>
+                          </Link>
                         </span>
                       </div>
                     </div>

@@ -172,7 +172,7 @@ const Page = () => {
 
           <div class="hiring-sr">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <div class="jumbotron">
                   <h2>Hire a React Native Expert</h2>
                   <p>
@@ -198,7 +198,7 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h2>Technical expertise</h2>
                 <ul class="list-group">
                   <li class="list-group-item">
@@ -458,8 +458,8 @@ const Page = () => {
       </section>{" "}
       <section class="ecommerce_faq_section NewFaqDesignSection">
         <div class="container">
-          <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
+          <div class="row CustomQuickFAQScript">
+            <div class=" row">
               <div class="col-md-5">
                 <h4 class="title_main">
                   Frequently <br />
@@ -476,6 +476,7 @@ const Page = () => {
               </div>
 
               <div class="col-md-7">
+                
                 <MDBAccordion v-model="activeItem" borderless>
                   <MDBAccordionItem
                     headerTitle="What is React Native used for in mobile app development?"

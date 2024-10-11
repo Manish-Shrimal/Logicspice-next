@@ -37,11 +37,11 @@ const Page = () => {
                 <li>
                   <Link href="/">Home</Link>
                 </li>
-                /
+                
                 <li>
                   <Link href="/gallery">Gallery</Link>
                 </li>
-                /
+                
                 <li class="current">
                   <span id="title_here">
                     New Year Celebration 2017 ( <span>July 22,2017</span> )
@@ -65,13 +65,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/2eef1_New-Year-Party---Logicspice.jpg"
+                        href="/img/sunresort/2eef1_New-Year-Party---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/2eef1_New-Year-Party---Logicspice.jpg"
+                          src="/img/sunresort/2eef1_New-Year-Party---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -83,13 +83,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/d6d68_Fun---Events---Logicspice.jpg"
+                        href="/img/sunresort/d6d68_Fun---Events---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/d6d68_Fun---Events---Logicspice.jpg"
+                          src="/img/sunresort/d6d68_Fun---Events---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -101,13 +101,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/cdacc_New-Year-Party--Logicspice.jpg"
+                        href="/img/sunresort/cdacc_New-Year-Party--Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/cdacc_New-Year-Party--Logicspice.jpg"
+                          src="/img/sunresort/cdacc_New-Year-Party--Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -119,13 +119,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/76c93_New-Year-Party-2017---Logicspice.jpg"
+                        href="/img/sunresort/76c93_New-Year-Party-2017---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/76c93_New-Year-Party-2017---Logicspice.jpg"
+                          src="/img/sunresort/76c93_New-Year-Party-2017---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -137,13 +137,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/83595_New-Year-Party-2017--Logicspice.jpg"
+                        href="/img/sunresort/83595_New-Year-Party-2017--Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/83595_New-Year-Party-2017--Logicspice.jpg"
+                          src="/img/sunresort/83595_New-Year-Party-2017--Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -155,13 +155,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/42c84_New-Year-Party-2017-.jpg"
+                        href="/img/sunresort/42c84_New-Year-Party-2017-.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/42c84_New-Year-Party-2017-.jpg"
+                          src="/img/sunresort/42c84_New-Year-Party-2017-.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -173,13 +173,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/c749b_New-Year-Fun---Logicspice.jpg"
+                        href="/img/sunresort/c749b_New-Year-Fun---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/c749b_New-Year-Fun---Logicspice.jpg"
+                          src="/img/sunresort/c749b_New-Year-Fun---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -191,13 +191,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/8cc90_New-Year-Fun--Logicspice.jpg"
+                        href="/img/sunresort/8cc90_New-Year-Fun--Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/8cc90_New-Year-Fun--Logicspice.jpg"
+                          src="/img/sunresort/8cc90_New-Year-Fun--Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -209,13 +209,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/00899_New-Year-2017.jpg"
+                        href="/img/sunresort/00899_New-Year-2017.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/00899_New-Year-2017.jpg"
+                          src="/img/sunresort/00899_New-Year-2017.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -227,13 +227,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/c399e_New-Year-2017---Logicspice.jpg"
+                        href="/img/sunresort/c399e_New-Year-2017---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/c399e_New-Year-2017---Logicspice.jpg"
+                          src="/img/sunresort/c399e_New-Year-2017---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -245,13 +245,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/a0207_New-Year-Event.jpg"
+                        href="/img/sunresort/a0207_New-Year-Event.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/a0207_New-Year-Event.jpg"
+                          src="/img/sunresort/a0207_New-Year-Event.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -263,13 +263,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/13d67_New-Year-Fun-2017-.jpg"
+                        href="/img/sunresort/13d67_New-Year-Fun-2017-.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/13d67_New-Year-Fun-2017-.jpg"
+                          src="/img/sunresort/13d67_New-Year-Fun-2017-.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -281,13 +281,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/6a217_New-Year-Fun-2017--.jpg"
+                        href="/img/sunresort/6a217_New-Year-Fun-2017--.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/6a217_New-Year-Fun-2017--.jpg"
+                          src="/img/sunresort/6a217_New-Year-Fun-2017--.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -299,13 +299,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/5d657_New-Year-Fun-2017---Logicspice.jpg"
+                        href="/img/sunresort/5d657_New-Year-Fun-2017---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/5d657_New-Year-Fun-2017---Logicspice.jpg"
+                          src="/img/sunresort/5d657_New-Year-Fun-2017---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />
@@ -317,13 +317,13 @@ const Page = () => {
                   <figure class="gallery-item">
                     <div class="gallery-icon landscape">
                       <Link
-                        href="https://www.logicspice.com/app/webroot/files/media/full/3fae7_NewYear-Fun-2017---Logicspice.jpg"
+                        href="/img/sunresort/3fae7_NewYear-Fun-2017---Logicspice.jpg"
                         data-lightbox="images"
                       >
                         <Image
                           width={500}
                           height={100 / (100 / 100)}
-                          src="https://www.logicspice.com/app/webroot/files/media/full/3fae7_NewYear-Fun-2017---Logicspice.jpg"
+                          src="/img/sunresort/3fae7_NewYear-Fun-2017---Logicspice.jpg"
                           alt="Logicspice functions &amp; events"
                           class="attachment-thumbnail size-thumbnail"
                         />

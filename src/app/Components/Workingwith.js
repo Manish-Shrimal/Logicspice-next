@@ -123,11 +123,11 @@ const Workingwith = () => {
   return (
     <div id="workingowl">
       <Swiper
-        spaceBetween={30}
+        spaceBetween={20}
         loop={true}
         navigation={true}
         pagination={{ clickable: false }}
-        modules={[Pagination, Navigation]}
+        modules={[ Navigation]}
         breakpoints={{
           // when window width is >= 320px
           320: {
@@ -147,7 +147,7 @@ const Workingwith = () => {
           // when window width is >= 1024px
           1024: {
             slidesPerView: 4,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
         }}
         className="mySwiper"

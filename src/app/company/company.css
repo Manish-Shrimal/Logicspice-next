@@ -150,9 +150,9 @@ body {
 	padding: 15px;
 }
 
-.aboutLogicTeam .team-content {
+/* .aboutLogicTeam .team-content {
 	text-align: left;
-}
+} */
 .aboutLogicTeam .team-content p a{
 	color: #337ab7!important;
 	text-decoration: none!important;
@@ -165,9 +165,9 @@ body {
 	align-items: center;
 }
 
-.aboutLogicTeam .team-content.text-right {
+/* .aboutLogicTeam .team-content.text-right {
 	text-align: right;
-}
+} */
 
 .grow-to-bloom {
 	background-color: #d3eefd;
@@ -1005,7 +1005,7 @@ body {
 }
 
 .breadcrems_header_new {
-	padding: 30px 0 0px;
+	padding: 130px 0 0px;
 	text-align: center;
 }
 
@@ -2095,7 +2095,7 @@ body {
 
 /*----------Testimonials & Reviews------------*/
 .resources-header-riview {
-	padding: 30px 0 50px;
+	padding: 100px 0 50px;
 	text-align: center;
 	margin-top: 100px;
 }
@@ -2111,6 +2111,10 @@ body {
 	font-size: 20px;
 	font-weight: 500!important;
 	padding: 10px 0;
+}
+
+.widget_recent_entries{
+	margin-top: 330px;
 }
 
 .m_content {
@@ -2227,7 +2231,7 @@ section.nav-portfolio-top ul.nav {
 .sec_dv h2 {
 	font-size: 22px;
 	margin: 0;
-	padding: 20px 0 0;
+	padding: 10px 0 0;
 	text-align: center;
 	color: #505458;
 }
@@ -2371,6 +2375,7 @@ section.nav-portfolio-top ul.nav {
 .CompanyResourcesHeader {
 	padding: 40px 0;
 	text-align: center;
+	margin-top: 100px;
 }
 
 .CompanyResourcesHeader h1 {
@@ -2448,7 +2453,7 @@ section.nav-portfolio-top ul.nav {
 
 .OurGalleryImg {
 	display: inline-block;
-	/*width: 100%;*/
+	width: 100%;
 }
 
 .OurOfficeSection {
@@ -2512,7 +2517,16 @@ section.nav-portfolio-top ul.nav {
 }
 
 .about-us {
-	margin: 70px 0px;
+	padding: 70px 0px;
+	margin-top: 100px;
+}
+
+.our-mission .nav-tabs>li.active>a, .our-mission .nav-tabs>li.active>a:focus, .our-mission .nav-tabs>li.active>a:hover{
+	background: none!important;
+    border: none!important;
+    border-bottom: 2px solid #451095!important;
+    color: #e6d5ff!important;
+    font-size: 24px!important;
 }
 
 .about-us p {
@@ -2752,13 +2766,19 @@ section.nav-portfolio-top ul.nav {
 }
 
 .resources-header {
-	background-position: left top;
-	background-size: cover;
+	background-position: left top!important;
+	background-size: cover!important;
 	color: #fff;
 	font-size: 30px;
 	font-weight: bold!important;
 	padding: 100px 0;
+	margin-top: 100px;
 	border-bottom: 1px solid #fff;
+}
+
+.pro_bold {
+    font-weight: bold!important;
+    margin-right: 5px;
 }
 
 .resources-header span {
@@ -3291,3 +3311,40 @@ section.nav-portfolio-top {
 	text-decoration: none;
 	color: #fff!important;
 }
+
+.WhoWeAreSection .sidebar_right h3 {
+    color: #29166f;
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    font-weight: 600!important;
+}
+
+.WhoWeAreSection .sidebar_right h3::after {
+    background: #451095;
+    clear: both;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 5px 0 0;
+    vertical-align: top;
+    width: 47px;
+}
+
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative;
+}
+
+.fb_iframe_widget span {
+    display: inline-block;
+    position: relative;
+    text-align: justify;
+}
+
+
+

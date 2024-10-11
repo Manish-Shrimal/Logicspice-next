@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "@/app/company/company.css";
 import NavBar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "@fortawesome/fontawesome-free/css/all.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,6 +16,31 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  var settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    margin: 10,
+  };
+  useEffect(() => {
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    } else {
+      const script = document.createElement("script");
+      script.src =
+        "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=1945351702357034";
+      script.async = true;
+      script.onload = () => {
+        window.FB.XFBML.parse();
+      };
+      document.body.appendChild(script);
+    }
+  }, []);
   return (
     <>
       <NavBar />
@@ -101,32 +129,38 @@ const Page = () => {
                 </p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-              <div class="sidebar_right">
+            <div className="col-xs-12 col-sm-4 col-md-3">
+              <div className="sidebar_right">
                 <div
                   id="tertiary"
-                  class="sidebar-container"
+                  className="sidebar-container"
                   role="complementary"
                 >
-                  <div class="sidebar-inner">
-                    <div class="widget-area">
-                      {/* <aside id="text-3" class="widget widget_text">
-                                    <h3 class="widget-title">Like us on Facebook</h3>
-                        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/LogicSpice.company" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1945351702357034&amp;container_width=243&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FLogicSpice.company&amp;locale=en_GB&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline"><span style="vertical-align: bottom; width: 243px; height: 500px;"><iframe name="f140c73270ce5ca" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" style="border: medium none; visibility: visible; width: 243px; height: 500px;" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=1945351702357034&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FXBwzv5Yrm_1.js%3Fversion%3D42%23cb%3Df215369a84a8838%26domain%3D192.168.0.251%26origin%3Dhttp%253A%252F%252F192.168.0.251%252Ff400207f85196e%26relation%3Dparent.parent&amp;container_width=243&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FLogicSpice.company&amp;locale=en_GB&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></div>
-                        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f400207f85196e&amp;origin=http%3A%2F%2F192.168.0.251" frameborder="0"></iframe><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="https://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f400207f85196e&amp;origin=http%3A%2F%2F192.168.0.251" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
-                        <script>(function(d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.6&amp;appId=1945351702357034";
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-                        </aside>	 */}
-                    </div>{" "}
-                    {/*<!-- .widget-area --> */}
-                  </div>{" "}
-                  {/*<!-- .sidebar-inner --> */}
-                  {/*  #tertiary */}{" "}
+                  <div className="sidebar-inner">
+                    <div className="widget-area">
+                      <aside id="text-3" className="widget widget_text">
+                        <h3 className="widget-title">Like us on Facebook</h3>
+                        <div
+                          className="fb-page"
+                          data-href="https://www.facebook.com/LogicSpice.company"
+                          data-tabs="timeline"
+                          data-small-header="false"
+                          data-adapt-container-width="true"
+                          data-hide-cover="false"
+                          data-show-facepile="true"
+                        >
+                          <blockquote
+                            cite="https://www.facebook.com/LogicSpice.company"
+                            className="fb-xfbml-parse-ignore"
+                          >
+                            <a href="https://www.facebook.com/LogicSpice.company">
+                              LogicSpice
+                            </a>
+                          </blockquote>
+                        </div>
+                      </aside>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,7 +272,7 @@ const Page = () => {
       </section>
       <section class="OurGallerySection">
         <h2>Gallery</h2>
-        <div id="galleryslider1" class="owl-carousel OurGallery slide">
+        {/* <div id="galleryslider1" class="owl-carousel OurGallery slide">
           <div class="OurGalleryImg">
             <Image
               width={100}
@@ -287,8 +321,71 @@ const Page = () => {
               alt="icon"
             />
           </div>
-        </div>
-        <div id="galleryslider2" class="owl-carousel OurGallery slide">
+        </div> */}
+        <Slider {...settings} className="hidedot OurGallery">
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img1.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img2.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img3.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img4.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img5.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img6.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+        </Slider>
+        {/* <div id="galleryslider2" class="owl-carousel OurGallery slide">
           <div class="OurGalleryImg">
             <Image
               width={100}
@@ -337,7 +434,70 @@ const Page = () => {
               alt="icon"
             />
           </div>
-        </div>
+        </div> */}
+        <Slider {...settings} className="hidedot OurGallery">
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img7.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img8.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img9.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img10.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img11.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={100}
+                height={100}
+                src="/img/ourteam/gallery-img12.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+        </Slider>
       </section>
       <section class="OurOfficeSection">
         <div class="container">

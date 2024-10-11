@@ -260,17 +260,20 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="mobile">
+      <section className="app_shown_describe">
         <div className="container">
           <div className="row">
             <div className="col-sm-4">
               <div className="app_shown_describe_left">
-                <div className="app_shown_describe_bx aos-init aos-animate ">
+                <div
+                  className="app_shown_describe_bx aos-init aos-animate"
+                  data-aos="fade-left"
+                >
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                   unoptimized={true}
-                   width={35}
-                   height={100}
+                      unoptimized={true}
+                      width={35}
+                      height={100}
                       alt="App Development Company"
                       src="/img/globalpages/icn_an.png"
                     />
@@ -280,7 +283,10 @@ const Page = () => {
                     <br /> Layouts
                   </div>
                 </div>
-                <div className="app_shown_describe_bx aos-init aos-animate ">
+                <div
+                  className="app_shown_describe_bx aos-init aos-animate "
+                  data-aos="fade-left"
+                >
                   <div className="app_shown_describe_bx_icn">
                     <Image
                       unoptimized={true}
@@ -295,7 +301,10 @@ const Page = () => {
                     <br /> Navigate
                   </div>
                 </div>
-                <div className="app_shown_describe_bx aos-init aos-animate ">
+                <div
+                  className="app_shown_describe_bx aos-init aos-animate "
+                  data-aos="fade-left"
+                >
                   <div className="app_shown_describe_bx_icn">
                     <Image
                       unoptimized={true}
@@ -403,7 +412,10 @@ const Page = () => {
 
             <div className="col-sm-4">
               <div className="app_shown_describe_right">
-                <div className="app_shown_describe_bx aos-init aos-animate ">
+                <div
+                  className="app_shown_describe_bx aos-init aos-animate "
+                  data-aos="fade-right"
+                >
                   <div className="app_shown_describe_bx_icn">
                     <Image
                       unoptimized={true}
@@ -418,12 +430,15 @@ const Page = () => {
                     <br /> Designs
                   </div>
                 </div>
-                <div className="app_shown_describe_bx aos-init aos-animate ">
+                <div
+                  className="app_shown_describe_bx aos-init aos-animate "
+                  data-aos="fade-right"
+                >
                   <div className="app_shown_describe_bx_icn">
                     <Image
-                     unoptimized={true}
-                     width={35}
-                     height={100}
+                      unoptimized={true}
+                      width={35}
+                      height={100}
                       alt="mobile app development"
                       src="/img/globalpages/customiziable_app_icon.png"
                     />
@@ -433,7 +448,10 @@ const Page = () => {
                     <br /> App
                   </div>
                 </div>
-                <div className="app_shown_describe_bxt aos-init aos-animate ">
+                <div
+                  className="app_shown_describe_bxt aos-init aos-animate "
+                  data-aos="fade-right"
+                >
                   <div className="app_shown_describe_bx_icn">
                     <Image
                       unoptimized={true}

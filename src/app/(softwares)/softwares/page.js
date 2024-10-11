@@ -38,7 +38,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div style={{ paddingTop: "140px" }}>
+      <div className="software_products">
         <section className="breadcrems_header">
           <div className="container">
             <div className="row">
@@ -5649,7 +5649,7 @@ const Page = () => {
                                 className="btn btn-primary"
                                 onClick={openModal}
                               >
-                                <button>Enquire Now</button>
+                                <a>Enquire Now</a>
                                 {
                                   <Enquirymodal
                                     modalStatus={showModal}

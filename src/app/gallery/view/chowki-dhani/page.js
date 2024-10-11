@@ -35,12 +35,12 @@ const Page = () => {
               <ol class="breadcrumb">
                 <li>
                   <Link href="/">Home</Link>
-                </li>
-                /
+                </li>{""}
+               
                 <li>
                   <Link href="/gallery/">Gallery</Link>
-                </li>
-                /
+                </li>{""}
+                
                 <li class="current">
                   <span id="title_here">
                     Chowki Dhani ( <span>July 08,2008</span> )

@@ -74,7 +74,7 @@ const Page = () => {
           <div className="hire_developer_back_iin_mask new-developers-mask">
             <div className="container">
               <div className="row">
-                <div className="col-md-7 text-start">
+                <div className="col-md-8 text-start">
                   <h1 className="slide_title">Hire AngularJS Developer</h1>
                   <div className="subinstet">
                     Hire angular developer from the hub of talented developers
@@ -116,7 +116,7 @@ const Page = () => {
                     </a>
                   </div>
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-4">
                   <div className="cack_logo_img">
                     <Image
                       width={209}
@@ -194,7 +194,7 @@ const Page = () => {
             </div>
             <div className="hiring-sr">
               <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-6">
                   <div className="jumbotron">
                     <h2>Codeigniter developer for hire</h2>
                     <p style={{ textAlign: "justify" }}>
@@ -226,7 +226,7 @@ const Page = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-6">
                   <h2>Technical expertise</h2>
                   <ul className="list-group">
                     <li className="list-group-item">

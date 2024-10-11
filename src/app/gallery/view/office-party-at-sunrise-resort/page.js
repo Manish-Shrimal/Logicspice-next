@@ -37,12 +37,12 @@ const Page = () => {
                 <li>
                   <Link href="/">Home</Link>
                 </li>
-                /
+                
                 <li>
                   {" "}
                   <Link href="/gallery">Gallery</Link>
                 </li>
-                /
+                
                 <li class="current">
                   <span id="title_here">
                     Office Party - Sunrise Resort ( <span>July 22,2017</span> )
