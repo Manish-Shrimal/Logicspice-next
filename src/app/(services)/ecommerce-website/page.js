@@ -1306,7 +1306,7 @@ const Page = () => {
                 </div>
                 <div className="vill-all-projects">
                   <Link
-                    href="https://www.logicspice.com/portfolio"
+                    href="/portfolio"
                     className="btn btn-primary"
                   >
                     View all Portfolio
@@ -1699,7 +1699,7 @@ const Page = () => {
                     <Link
                       title="View Detail"
                       target="_black"
-                      href="/softwares/groupon-clone/"
+                      href="/groupon-clone"
                     >
                       <div className="caption">
                         <div className="other-caption-bx">
@@ -1726,7 +1726,7 @@ const Page = () => {
                     <Link
                       title="View Detail"
                       target="_black"
-                      href="/softwares/equipment-rental-software/"
+                      href="/equipment-rental-software"
                     >
                       <div className="caption">
                         <div className="other-caption-bx">
@@ -1756,7 +1756,7 @@ const Page = () => {
                     <Link
                       title="View Detail"
                       target="_black"
-                      href="/softwares/job-board-software/"
+                      href="/job-board-software"
                     >
                       <div className="caption">
                         <div className="other-caption-bx">

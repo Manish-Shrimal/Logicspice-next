@@ -208,7 +208,7 @@ const Page = () => {
                     rich set of libraries for commonly needed tasks with a
                     simple interface and logical structure to access these
                     libraries. Logicspice offers the most proficient and expert{" "}
-                    <Link href="/services/codeigniter-development">
+                    <Link href="/codeigniter-development">
                       codeigniter web developers
                     </Link>{" "}
                     offering affordable, cost-effective solutions that best suit

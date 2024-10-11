@@ -124,7 +124,7 @@ const Page = () => {
                   data-aos="fade-right"
                   className="more_btn deve_btn aos-init aos-animate"
                 >
-                  <Link href="/company/portfolio" className="btn btn-primary">
+                  <Link href="/portfolio" className="btn btn-primary">
                     <span>Portfolio</span>
                   </Link>
                   <a className="btn btn-primary" onClick={toggleModal}>

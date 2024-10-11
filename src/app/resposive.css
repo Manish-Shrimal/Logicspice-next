@@ -3824,8 +3824,8 @@
   }
 
   .detail-advant .left-detail-advant {
-    padding: 7px 0px;
-    width: 100%;
+    padding: 7px 0px!important;
+    width: 100%!important;
   }
 
   .new-developers-mask .btn.btn-primary {
@@ -4541,13 +4541,125 @@
   .detail-advant {
     padding: 10px 0 0;
   }
+  .country_header_secton.aust{
+    margin-top: 50px!important;
+  }
+  .country_header_secton.california {
+    margin-top: 50px!important;
+  }
+  .country_header_secton.abudhabi {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.ajman {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.alain {
+    margin-top: 50px!important;
+  }
+  .country_header_secton.dubai {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.brussels {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.flanders {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.ghent {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.antwerp {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.india-img {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.miami {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.florida {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.losangeles {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.newyork {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.chicago {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.geneva {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.zurich {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.basel {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.melbourne {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.sydney {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.uk {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.london {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.manchester {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.switzerland {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.Belgium {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.usa {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.uae {
+    margin-top: 50px!important;
+  }
+  
+  .country_header_secton.california {
+    margin-top: 50px!important;
+  }
 
-  .right-detail-advant strong::after,
+  /* .right-detail-advant strong::after,
   .detail-advant .right-detail-advant::before,
   .left-detail-advant strong::after,
   .detail-advant .left-detail-advant::before {
     display: none;
-  }
+  } */
 
   .detail-advant .right-detail-advant {
     border-left: none;

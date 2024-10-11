@@ -208,7 +208,7 @@ const Page = () => {
                   <h2>Hire hybrid mobile app developers</h2>
                   <p>
                     Being a leading{" "}
-                    <Link href="/services/hybrid-app-development">
+                    <Link href="/hybrid-app-development">
                       hybrid app development company
                     </Link>
                     , Logicspice offers feature-rich and innovative hybrid apps

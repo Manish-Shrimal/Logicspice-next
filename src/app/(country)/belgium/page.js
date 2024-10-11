@@ -18,6 +18,35 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");
   const [selectedTab, setSelectedTab] = useState("about_app");
+  const CustomPrevArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-prev-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/left-arrow.png" alt="Previous" /> */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+    );
+  };
+  
+  const CustomNextArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-next-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/right-arrow.png" alt="Next" /> */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+      </button>
+    );
+  };
+
   var settings = {
     dots: false,
     arrows: true,
@@ -27,6 +56,8 @@ const Page = () => {
     slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   var date = {
     dots: false,
@@ -696,7 +727,7 @@ const Page = () => {
                       video and then the buyers CV would be matched as per the
                       requirement and the review of video resume would be done .
                       If the buyer shortlists the resource
-                      <Link href="/case-study/uuuga" target="_blank">
+                      <Link href="/case-studies/uuuga" target="_blank">
                         Read More..
                       </Link>
                     </p>
@@ -765,7 +796,7 @@ const Page = () => {
                       can list themselves with their pictures, videos (YouTube),
                       and review rating etc. with free
                       <Link
-                        href="https://www.logicspice.com/case-study/gigminute"
+                        href="/case-studies/gigminute"
                         target="_blank"
                       >
                         Read More..
@@ -860,7 +891,7 @@ const Page = () => {
                       </div>
                       <div class="more_btn">
                         <Link
-                          href="https://www.logicspice.com/hire-ios-app-developers/"
+                          href="/hire-ios-app-developers"
                           class="btn btn-primary"
                         >
                           <span>Hire iOS Developer</span>
@@ -905,7 +936,7 @@ const Page = () => {
                       <div class="more_btn">
                         <Link
                           class="btn btn-primary"
-                          href="https://www.logicspice.com/hire-android-app-developers/"
+                          href="/hire-android-app-developers"
                         >
                           <span>Hire Android Developer</span>
                         </Link>

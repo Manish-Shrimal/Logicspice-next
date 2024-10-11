@@ -18,6 +18,34 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");
   const [selectedTab, setSelectedTab] = useState("about_app");
+  const CustomPrevArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-prev-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/left-arrow.png" alt="Previous" /> */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+    );
+  };
+  
+  const CustomNextArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-next-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/right-arrow.png" alt="Next" /> */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+      </button>
+    );
+  };
   var settings = {
     dots: false,
     arrows: true,
@@ -27,6 +55,8 @@ const Page = () => {
     slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   var date = {
     dots: false,
@@ -690,152 +720,7 @@ const Page = () => {
               our client project portfolio ..{" "}
             </p>
 
-            {/* <div
-              id="carousel-example-generic"
-              className="owl-carousel GlobalpagesSlider slide"
-            >
-             
-
-              <div className="ClientSlideBx">
-                <div className="row">
-                  <div className="col-md-4">
-                    <Image
-                      width={100}
-                      height={100}
-                      unoptimized={true}
-                      src="/img/globalpages/b99da_Physical-EDGE.png"
-                      alt="..."
-                      className="img-thumbnail"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <h4>Physical EDGE</h4>
-                    <p>
-                      The application serves as "Physical Edge" iPhone App. Here
-                      teachers can view lessons or activities posted over the
-                      app by admin or other teachers and can export the lessons
-                      via email. The app can facilitate teachers to register
-                      over app and can browse through the activities listed
-                      either by everyone or by friends also. They can post their
-                      likes{" "}
-                      <Link
-                        href="/casestudies/view/physical-edge"
-                        target="_blank"
-                      >
-                        Read More..
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="testimonial-country">
-                  <div className="slide">
-               
-                    <div className="right_side_testi">
-                      <div className="quotes_img">
-                        <Link href="/">
-                          <Image
-                            width={100}
-                            height={100}
-                            unoptimized={true}
-                            src="/img/globalpages/quotes.png"
-                            alt="quotes"
-                          />
-                        </Link>
-                      </div>
-                      <div className="cilent_text">
-                        Cannot express my gratitude enough. Manish and the team
-                        went above and beyond to meet my needs, that at times
-                        were changing constantly. They were patient and diligent
-                        to make my app perfect. Thank you VERY MUCH!! I AM VERY
-                        HAPPY.
-                      </div>
-                      <div className="cilent_name">
-                        <span>
-                          <strong className="flag">
-                            <Image
-                              width={100}
-                              height={100}
-                              unoptimized={true}
-                              src="/img/globalpages/usa.png"
-                              alt="usa"
-                            />
-                          </strong>{" "}
-                          Michael Hodges
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="ClientSlideBx">
-                <div className="row">
-                  <div className="col-md-4">
-                    <Image
-                      width={100}
-                      height={100}
-                      unoptimized={true}
-                      src="/img/globalpages/Askoureinstein.png"
-                      alt="..."
-                      className="img-thumbnail"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <h4>Ask Our Einstein</h4>
-                    <p>
-                      "AskOurEinstein" is a tutoring website, which will provide
-                      tutoring service. Tutors from all areas of academic
-                      including math, science, engineering, chemistry,
-                      accounting, finance, biology, economics, computer science,
-                      web development, foreign language, history, English, etc.
-                      will serve Student/Clients with their guidance. "ASK OUR
-                      EINSTEIN" will not only{" "}
-                      <Link href="/case-study/askoureinstein" target="_blank">
-                        Read More..
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="testimonial-country">
-                  <div className="slide">
-                
-                    <div className="right_side_testi">
-                      <div className="quotes_img">
-                        <Link href="/">
-                          <Image
-                            width={100}
-                            height={100}
-                            unoptimized={true}
-                            src="/img/globalpages/quotes.png"
-                            alt="quotes"
-                          />
-                        </Link>
-                      </div>
-                      <div className="cilent_text">
-                        "Manish and team were very helpful and professional.
-                        This was a very aggressive project with a tight timeline
-                        and it was ultimately completed to my satisfaction."
-                      </div>
-                      <div className="cilent_name">
-                        <span>
-                          <strong className="flag">
-                            <Image
-                              width={100}
-                              height={100}
-                              unoptimized={true}
-                              src="/img/globalpages/usa.png"
-                              alt="usa"
-                            />
-                          </strong>{" "}
-                          Dclark24{" "}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+            
             <Slider {...settings}>
               <div className="slide">
                 <div className="ClientSlideBx">
@@ -861,7 +746,7 @@ const Page = () => {
                         listed either by everyone or by friends also. They can
                         post their likes{" "}
                         <Link
-                          href="/casestudies/view/physical-edge"
+                          href="/case-studies/physical-edge"
                           target="_blank"
                         >
                           Read More..
@@ -933,7 +818,7 @@ const Page = () => {
                         computer science, web development, foreign language,
                         history, English, etc. will serve Student/Clients with
                         their guidance. &quot;ASK OUR EINSTEIN&quot; will not only{" "}
-                        <Link href="/case-study/askoureinstein" target="_blank">
+                        <Link href="/case-studies/askoureinstein" target="_blank">
                           Read More..
                         </Link>
                       </p>

@@ -15,7 +15,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -484,7 +483,7 @@ const Page = () => {
             </div>
             <div className="col-sm-4">
               <Link
-                href="/contact-us/"
+                href="/contact-us"
                 className="btn btn-primary"
               >
                 Contact Us

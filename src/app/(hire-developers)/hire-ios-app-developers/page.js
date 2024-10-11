@@ -212,7 +212,7 @@ const Page = () => {
                   <p>
                     Do you have an app idea? Our developers are skilled enough
                     to develop your concept into a reality. Logicspice is an{" "}
-                    <Link href="/services/ios-app-development">
+                    <Link href="/ios-app-development">
                       iPhone application development company
                     </Link>{" "}
                     with a team of iOS experts which enables us to deliver

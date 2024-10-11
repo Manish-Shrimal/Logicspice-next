@@ -16,7 +16,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -49,7 +48,7 @@ const Page = () => {
                       <Enquirymodal
                         modalStatus={showModal}
                         toggle={openModal}
-                        title="PHP Web Development Services"
+                        title="OpenCart Framework Development"
                       />
                     }
                   </div>
@@ -95,7 +94,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-6 pull-left">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>
                   OpenCart <br />
                   Framework Development
@@ -676,7 +675,7 @@ const Page = () => {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="PHP Web Development Services"
+                    title="OpenCart Framework Development"
                   />
                 }
               </div>

@@ -38,7 +38,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/landing-page-design`,
+      canonical: `${Domain}/landing-page-design`,
     },
     robots: {
       index: true,

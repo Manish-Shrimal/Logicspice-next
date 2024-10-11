@@ -162,7 +162,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-7 pull-left" dir="ltr">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>Generative AI Development</h2>
                 <h3>The Future of Generative AI Development</h3>
                 <p>
@@ -731,7 +731,7 @@ const Page = () => {
                   <Enquirymodal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Laravel Development"
+                    title="Generative AI Development"
                   />
                 }
               </div>

@@ -165,7 +165,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-7 pull-left" dir="ltr">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>Why Choose Blockchain?</h2>
                 <p>
                   Blockchain uproots various industries all over the world due

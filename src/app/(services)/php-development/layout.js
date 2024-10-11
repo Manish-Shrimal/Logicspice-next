@@ -23,7 +23,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/php-development`,
+      canonical: `${Domain}/php-development`,
     },
     robots: {
       index: true,

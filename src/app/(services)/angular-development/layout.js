@@ -101,7 +101,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/angular-development`,
+      canonical: `${Domain}/angular-development`,
     },
     robots: {
       index: true,

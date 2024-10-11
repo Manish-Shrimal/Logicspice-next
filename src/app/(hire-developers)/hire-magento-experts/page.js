@@ -207,7 +207,7 @@ const Page = () => {
                     working on a range of projects, our developers have garnered
                     skills that best suits any requirement with the most
                     advanced methodology for{" "}
-                    <Link href="/services/magento-development">
+                    <Link href="/magento-development">
                       magento development
                     </Link>
                     .<br />

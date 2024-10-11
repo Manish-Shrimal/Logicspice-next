@@ -1376,3 +1376,25 @@ body {
   color: #bebebe !important;
   /* font-size: 24px; */
 }
+
+.custom-prev-arrow, .custom-next-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.custom-prev-arrow, .custom-next-arrow .fa {
+font-size: 30px !important;
+color: #fff!important;
+}
+
+.custom-prev-arrow {
+  left: -60px; /* Adjust this value as per your design */
+}
+
+.custom-next-arrow {
+  right: -60px; /* Adjust this value as per your design */
+}
+

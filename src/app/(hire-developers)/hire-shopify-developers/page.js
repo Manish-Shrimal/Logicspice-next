@@ -195,7 +195,7 @@ const Page = () => {
                     seamless one for your customers. Hire dedicated Shopify
                     Developers from Logicspice to get the
                     <Link
-                      href="/services/shopify-development"
+                      href="/shopify-development"
                       target="_blank"
                     >
                       Shopify development services. and Speed Optimization.

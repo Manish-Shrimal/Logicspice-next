@@ -18,6 +18,25 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");
   const [selectedTab, setSelectedTab] = useState("about_app");
+  const CustomPrevArrow = ({ onClick }) => {
+    return (
+      <button type="button" className="custom-prev-arrow" onClick={onClick}>
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/left-arrow.png" alt="Previous" /> */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+    );
+  };
+
+  const CustomNextArrow = ({ onClick }) => {
+    return (
+      <button type="button" className="custom-next-arrow" onClick={onClick}>
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/right-arrow.png" alt="Next" /> */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </button>
+    );
+  };
   var settings = {
     dots: false,
     arrows: true,
@@ -27,6 +46,8 @@ const Page = () => {
     slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   var date = {
     dots: false,
@@ -715,7 +736,7 @@ const Page = () => {
                         listed either by everyone or by friends also. They can
                         post their likes{" "}
                         <Link
-                          href="/casestudies/view/physical-edge"
+                          href="/case-studies/physical-edge"
                           target="_blank"
                         >
                           Read More..
@@ -789,14 +810,14 @@ const Page = () => {
                     <div class="col-md-8">
                       <h4>Ask Our Einstein</h4>
                       <p>
-                        &quot;AskOurEinstein&quot; is a tutoring website, which will
-                        provide tutoring service. Tutors from all areas of
+                        &quot;AskOurEinstein&quot; is a tutoring website, which
+                        will provide tutoring service. Tutors from all areas of
                         academic including math, science, engineering,
                         chemistry, accounting, finance, biology, economics,
                         computer science, web development, foreign language,
                         history, English, etc. will serve Student/Clients with
                         their guidance. “ASK OUR EINSTEIN�? will not only{" "}
-                        <Link href="/case-study/askoureinstein" target="_blank">
+                        <Link href="/case-studies/askoureinstein" target="_blank">
                           Read More..
                         </Link>
                       </p>
@@ -827,9 +848,9 @@ const Page = () => {
                           </Link>
                         </div>
                         <div class="cilent_text">
-                          &quot;Manish and team were very helpful and professional.
-                          This was a very aggressive project with a tight
-                          timeline and it was ultimately completed to my
+                          &quot;Manish and team were very helpful and
+                          professional. This was a very aggressive project with
+                          a tight timeline and it was ultimately completed to my
                           satisfaction.&quot;
                         </div>
                         <div class="cilent_name">

@@ -34,7 +34,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/laravel-development`,
+      canonical: `${Domain}/laravel-development`,
     },
     robots: {
       index: true,

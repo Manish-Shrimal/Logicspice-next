@@ -88,7 +88,7 @@ const Page = () => {
                     <Enquirymodal
                       modalStatus={showModal}
                       toggle={openModal}
-                      title="Cakephp Web Development"
+                      title="Progressive Web Apps Development"
                     />
                   }
                 </div>

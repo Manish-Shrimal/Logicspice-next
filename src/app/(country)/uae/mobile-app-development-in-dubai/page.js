@@ -18,6 +18,34 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");
   const [selectedTab, setSelectedTab] = useState("about_app");
+  const CustomPrevArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-prev-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/left-arrow.png" alt="Previous" /> */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+    );
+  };
+  
+  const CustomNextArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-next-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/right-arrow.png" alt="Next" /> */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+      </button>
+    );
+  };
 
   var settings = {
     dots: false,
@@ -28,6 +56,8 @@ const Page = () => {
     slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   var date = {
     dots: false,
@@ -716,7 +746,7 @@ const Page = () => {
                         will be able to view invites and can view details of
                         auction over the site. Users as a buyer will be able to
                         view details of a particular item{" "}
-                        <Link href="/case-study/itenderyou" target="_blank">
+                        <Link href="/case-studies/itenderyou" target="_blank">
                           Read More..
                         </Link>
                       </p>
@@ -785,7 +815,7 @@ const Page = () => {
                         payment online or selecting Cash on delivery option.
                         After attending the booked course, course taker will
                         receive an email notification to rate that{" "}
-                        <Link href="/case-study/coursetakers" target="_blank">
+                        <Link href="/case-studies" target="_blank">
                           Read More..
                         </Link>
                       </p>

@@ -204,7 +204,7 @@ const Page = () => {
                   <p>
                     <b>Are you looking for a solution in cakePHP?</b> Then, you
                     are at right place. Logicspice is a leading{" "}
-                    <Link href="/softwares/cakephp-development">
+                    <Link href="/cakephp-development">
                       cakePHP development company
                     </Link>{" "}
                     with talented developers serving the industry over years. We

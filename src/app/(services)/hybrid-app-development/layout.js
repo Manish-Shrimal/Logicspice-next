@@ -38,7 +38,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/hybrid-app-development`,
+      canonical: `${Domain}/hybrid-app-development`,
     },
     robots: {
       index: true,

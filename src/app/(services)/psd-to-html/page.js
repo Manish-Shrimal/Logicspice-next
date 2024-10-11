@@ -18,7 +18,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -470,7 +469,7 @@ const Page = () => {
               className="btn btn-primary"
               data-aos="fade-right"
               id="inquirenow"
-              href="/portfolio/"
+              href="/portfolio"
             >
               Portfolio
             </Link>
@@ -495,91 +494,91 @@ const Page = () => {
             <div className="different_experts">
               <ul className="different_experts_member">
                 <li className="different_experts_name">
-                  <Link href="/hire-android-app-developers/">
+                  <Link href="/hire-android-app-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Android App Developer
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-ios-app-developers/">
+                  <Link href="/hire-ios-app-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire iOS App Developer
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-cakephp-developers/">
+                  <Link href="/hire-cakephp-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Cake PHP Developer
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-wordpress-experts/">
+                  <Link href="/hire-wordpress-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Wordpress Developer
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-drupal-experts/">
+                  <Link href="/hire-drupal-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Drupal Developer
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-magento-experts/">
+                  <Link href="/hire-magento-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Magento Developer
                   </Link>
                 </li>
-                <li className="different_experts_name">
-                  <Link href="/hire-zencart-experts/">
+                {/* <li className="different_experts_name">
+                  <Link href="/hire-zencart-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Zencart Developer
                   </Link>
-                </li>
+                </li> */}
                 <li className="different_experts_name">
-                  <Link href="/hire-shopify-developers/">
+                  <Link href="/hire-shopify-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Shopify Developers
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-laravel-developers/">
+                  <Link href="/hire-laravel-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Laravel Developers
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-codeigniter-developers/">
+                  <Link href="/hire-codeigniter-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Codeigniter Developers
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-node-js-experts/">
+                  <Link href="/hire-node-js-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Node.Js Experts
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-angular-js-developers/">
+                  <Link href="/hire-angular-js-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Angular jS Developers
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-yii-developers/">
+                  <Link href="/hire-yii-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Yii Developers
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-opencart-developers/">
+                  <Link href="/hire-opencart-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Opencart Developers
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-hybrid-mobile-app-developer/">
+                  <Link href="/hire-hybrid-mobile-app-developer">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Hybrid mobile app Developer
                   </Link>

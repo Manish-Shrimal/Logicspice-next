@@ -110,7 +110,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-7 col-md-7 pull-left">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>
                   <strong>DevOps</strong>
                   <br /> Development

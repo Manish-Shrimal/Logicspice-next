@@ -717,7 +717,7 @@ const Page = () => {
                         with them. This site also have other social features
                         such as tagging(Javascript),POP up pictures, profile
                         setting,background video ,Comment, like and share.{" "}
-                        <Link href="/case-study/mymentions" target="_blank">
+                        <Link href="/case-studies/mymentions" target="_blank">
                           Read More..
                         </Link>
                       </p>

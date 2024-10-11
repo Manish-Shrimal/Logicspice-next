@@ -39,7 +39,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/progressive-web-app-development`,
+      canonical: `${Domain}/progressive-web-app-development`,
     },
     robots: {
       index: true,

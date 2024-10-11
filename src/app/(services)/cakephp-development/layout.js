@@ -34,7 +34,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       description: product.data.meta_description,
       keywords: product.data.meta_keyword,
       alternates: {
-        canonical: `${Domain}/services/cakephp-development`,
+        canonical: `${Domain}/cakephp-development`,
       },
       robots: {
         index: true,

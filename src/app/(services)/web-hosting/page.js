@@ -138,7 +138,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-6 pull-left">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>Web Hosting</h2>
                 <p>
                   Our top-rated web hosts will provide you access to the

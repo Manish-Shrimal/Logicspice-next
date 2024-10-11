@@ -205,7 +205,7 @@ const Page = () => {
             </div>
             <div className="devide_secs_right">
               <h2 className="devide_secs_title">
-                <Link href="/ios-app-development/">
+                <Link href="/ios-app-development">
                   iPhone &amp; iPad App Development
                 </Link>
               </h2>
@@ -218,7 +218,7 @@ const Page = () => {
                 development, testing and deployment. We are serving to all the
                 major streams including business, entertainment, education,
                 arts, education, e-commerce and others.{" "}
-                <Link href="/ios-app-development/">Read More</Link>
+                <Link href="/ios-app-development">Read More</Link>
               </p>
             </div>
           </div>
@@ -1292,7 +1292,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/martgram-app/"
+                              href="/case-studies/martgram-app"
                               target="_blank"
                             >
                               Martgram
@@ -1318,7 +1318,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/beano-app/"
+                              href="/case-studies/beano-app"
                               target="_blank"
                             >
                               Beano
@@ -1343,7 +1343,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/social-securites/"
+                              href="/case-studies/social-securitas"
                               target="_blank"
                             >
                               Social Securites
@@ -1369,7 +1369,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/utrack-app/"
+                              href="/case-studies/utrack-app"
                               target="_blank"
                             >
                               Utrack
@@ -1395,7 +1395,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/bestcit-app/"
+                              href="/case-study/bestcit-app"
                               target="_blank"
                             >
                               Bestcit
@@ -1412,7 +1412,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="more_btn more_btnrevercebn">
-                  <Link className="btn btn-primary" href="/case-studies/">
+                  <Link className="btn btn-primary" href="/case-studies">
                     <span>Featured Case Studies</span>
                   </Link>
                 </div>
@@ -1441,7 +1441,7 @@ const Page = () => {
               </p>
               <h6>Some Industries We Serve and able to Serve</h6>
               <div className="industru_btn">
-                <Link className="btn btn-primary" href="/industries/">
+                <Link className="btn btn-primary" href="/industries">
                   VIEW ALL
                 </Link>
               </div>

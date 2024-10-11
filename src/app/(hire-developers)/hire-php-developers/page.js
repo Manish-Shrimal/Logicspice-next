@@ -240,7 +240,7 @@ const Page = () => {
                       Are you looking to hire PHP expert hand for your custom
                       web application development? Or looking for a highly
                       professional offshore
-                      <Link href="/services/php-development">
+                      <Link href="/php-development">
                         {" "}
                         PHP development company
                       </Link>{" "}

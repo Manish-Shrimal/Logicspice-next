@@ -514,7 +514,7 @@ const Page = () => {
                       </Link>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/company/portfolio" className="">
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -566,7 +566,7 @@ const Page = () => {
                       <i className="fa-brands fa-apple" aria-hidden="true"></i>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/company/portfolio" className="">
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -617,7 +617,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/company/portfolio" className="">
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -667,7 +667,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/company/portfolio" className="">
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -718,7 +718,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/company/portfolio" className="">
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>
@@ -769,7 +769,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className="WebProjectInfoView">
-                      <Link href="/company/portfolio" className="">
+                      <Link href="/portfolio" className="">
                         View Portfolio
                       </Link>
                     </div>

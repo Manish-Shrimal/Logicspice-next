@@ -18,6 +18,26 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");
   const [selectedTab, setSelectedTab] = useState("about_app");
+  const CustomPrevArrow = ({ onClick }) => {
+    return (
+      <button type="button" className="custom-prev-arrow" onClick={onClick}>
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/left-arrow.png" alt="Previous" /> */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+    );
+  };
+
+  const CustomNextArrow = ({ onClick }) => {
+    return (
+      <button type="button" className="custom-next-arrow" onClick={onClick}>
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/right-arrow.png" alt="Next" /> */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </button>
+    );
+  };
+
   var settings = {
     dots: false,
     arrows: true,
@@ -27,6 +47,8 @@ const Page = () => {
     slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   var date = {
     dots: false,
@@ -707,15 +729,15 @@ const Page = () => {
                     <div className="col-md-8">
                       <h4>Physical EDGE</h4>
                       <p>
-                        The application serves as &quot;Physical Edge&quot; iPhone App.
-                        Here teachers can view lessons or activities posted over
-                        the app by admin or other teachers and can export the
-                        lessons via email. The app can facilitate teachers to
-                        register over app and can browse through the activities
-                        listed either by everyone or by friends also. They can
-                        post their likes{" "}
+                        The application serves as &quot;Physical Edge&quot;
+                        iPhone App. Here teachers can view lessons or activities
+                        posted over the app by admin or other teachers and can
+                        export the lessons via email. The app can facilitate
+                        teachers to register over app and can browse through the
+                        activities listed either by everyone or by friends also.
+                        They can post their likes{" "}
                         <Link
-                          href="/casestudies/view/physical-edge"
+                          href="/case-studies/physical-edge"
                           target="_blank"
                         >
                           Read More..
@@ -789,14 +811,15 @@ const Page = () => {
                     <div className="col-md-8">
                       <h4>Ask Our Einstein</h4>
                       <p>
-                        &quot;AskOurEinstein&quot; is a tutoring website, which will
-                        provide tutoring service. Tutors from all areas of
+                        &quot;AskOurEinstein&quot; is a tutoring website, which
+                        will provide tutoring service. Tutors from all areas of
                         academic including math, science, engineering,
                         chemistry, accounting, finance, biology, economics,
                         computer science, web development, foreign language,
                         history, English, etc. will serve Student/Clients with
-                        their guidance. &quot;ASK OUR EINSTEIN&quot; will not only{" "}
-                        <Link href="/case-study/askoureinstein" target="_blank">
+                        their guidance. &quot;ASK OUR EINSTEIN&quot; will not
+                        only{" "}
+                        <Link href="/case-studies/askoureinstein" target="_blank">
                           Read More..
                         </Link>
                       </p>
@@ -827,9 +850,9 @@ const Page = () => {
                           </Link>
                         </div>
                         <div className="cilent_text">
-                        &quot;Manish and team were very helpful and professional.
-                          This was a very aggressive project with a tight
-                          timeline and it was ultimately completed to my
+                          &quot;Manish and team were very helpful and
+                          professional. This was a very aggressive project with
+                          a tight timeline and it was ultimately completed to my
                           satisfaction.&quot;
                         </div>
                         <div className="cilent_name">
@@ -877,20 +900,21 @@ const Page = () => {
                       </div>
                       <div className="descectionset_iosands">
                         Hiring a mobile app development company is not a final
-                        step towards getting a user-friendly business app. Let&apos;s
-                        get started with booming iPhone app development company,
-                        Logicspice and hire iPhone app developers that can offer
-                        end-to-end solutions with exceptional coding quality to
-                        get fresh &amp; innovative business apps. Our dedicated
-                        iPhone app developers will just not develop your
-                        business app but also show keen interest in
-                        understanding your business requirement. Access our
-                        company portfolio, client&apos;s reference and case studies
-                        to know that how logicspice is continuously serving in
-                        iphone app development industry. Developing an app is
-                        just not about only coding, It&apos;s about making the app
-                        more functional, attractive and user friendly to get
-                        more user attentions.
+                        step towards getting a user-friendly business app.
+                        Let&apos;s get started with booming iPhone app
+                        development company, Logicspice and hire iPhone app
+                        developers that can offer end-to-end solutions with
+                        exceptional coding quality to get fresh &amp; innovative
+                        business apps. Our dedicated iPhone app developers will
+                        just not develop your business app but also show keen
+                        interest in understanding your business requirement.
+                        Access our company portfolio, client&apos;s reference
+                        and case studies to know that how logicspice is
+                        continuously serving in iphone app development industry.
+                        Developing an app is just not about only coding,
+                        It&apos;s about making the app more functional,
+                        attractive and user friendly to get more user
+                        attentions.
                       </div>
                       <div className="more_btn">
                         <Link

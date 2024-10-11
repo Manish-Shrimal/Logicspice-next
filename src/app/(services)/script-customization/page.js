@@ -17,7 +17,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -199,7 +198,7 @@ const Page = () => {
             solution for your business.
           </p>
           <div className="custo_btn text-center">
-            <Link href="/custom-solutions/" className="btn btn-primary">
+            <Link href="/custom-solutions" className="btn btn-primary">
               Custom Solutions
             </Link>
           </div>

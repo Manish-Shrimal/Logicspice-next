@@ -207,7 +207,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-7 pull-left">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>
                   Laravel Custom
                   <br /> Web Development Agency
@@ -338,7 +338,7 @@ const Page = () => {
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <Link href="/softwares/job-board-software">
+                    <Link href="/job-board-software">
                       Job Board Software
                     </Link>
                   </h3>
@@ -363,7 +363,7 @@ const Page = () => {
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <Link href="/softwares/logistic-marketplace-software">
+                    <Link href="/logistic-marketplace-software">
                       Logistic Software
                     </Link>
                   </h3>
@@ -388,7 +388,7 @@ const Page = () => {
                 </div>
                 <div className="ReadyMadeScriptTxt">
                   <h3>
-                    <Link href="/softwares/recruitment-management-software">
+                    <Link href="/recruitment-management-software">
                       Recruitment Management Software
                     </Link>
                   </h3>

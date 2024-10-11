@@ -84,7 +84,7 @@ const Page = () => {
                 <div className="clearfix"></div>
                 <div className="portfolio_button">
                   <Link
-                    href="/company/portfolio"
+                    href="/portfolio"
                     id=""
                     className="btn btn-primary"
                     
@@ -1065,7 +1065,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/beano-app/"
+                              href="/case-studies/beano-app"
                               target="_blank"
                             >
                               Beano
@@ -1090,7 +1090,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/social-securites/"
+                              href="/case-studies/social-securitas"
                               target="_blank"
                             >
                               Social Securites
@@ -1115,7 +1115,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/utrack-app/"
+                              href="/case-studies/utrack-app"
                               target="_blank"
                             >
                               Utrack
@@ -1140,7 +1140,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="https://www.logicspice.com/case-study/bestcit-app/"
+                              href="/case-studies/bestcit-app"
                               target="_blank"
                             >
                               Bestcit
@@ -1361,7 +1361,7 @@ const Page = () => {
                     <div className="seall_btn">
                       <Link
                         className="btn btn-primary"
-                        href="/industries/"
+                        href="/industries"
                       >
                         View
                       </Link>

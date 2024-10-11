@@ -42,7 +42,6 @@ const Page = () => {
   });
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };

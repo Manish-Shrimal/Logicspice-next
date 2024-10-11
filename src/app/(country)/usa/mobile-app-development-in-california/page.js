@@ -18,6 +18,34 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");
   const [selectedTab, setSelectedTab] = useState("about_app");
+  const CustomPrevArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-prev-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/left-arrow.png" alt="Previous" /> */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </button>
+    );
+  };
+  
+  const CustomNextArrow = ({ onClick }) => {
+    return (
+      <button
+        type="button"
+        className="custom-next-arrow"
+        onClick={onClick}
+      >
+        {/* You can use an icon, image, or any other content for your custom arrow */}
+        {/* <img src="/img/right-arrow.png" alt="Next" /> */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+      </button>
+    );
+  };
 
   var settings = {
     dots: false,
@@ -28,6 +56,8 @@ const Page = () => {
     slidesToScroll: 1, // Changed from 8 to 1
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   var date = {
     dots: false,
@@ -526,174 +556,7 @@ const Page = () => {
             </div>
           </div>
         </section>
-        {/* <section className="app_bottom_shwn_bs">
-          <div className="container">
-            <div>
-              <ul className="nav nav-tabs" role="tablist">
-                <li
-                  id="tab1_li"
-                  className=" MobileappTab == 'active' ?'active':'' "
-                  onClick="opendiv('tab1')"
-                >
-                  <Link href="javascript:void(0)">About Mobile App</Link>
-                </li>
-                <li
-                  id="tab2_li"
-                  className=" WhyweneedTab == 'active' ?'active':'' "
-                  onClick="opendiv('tab2')"
-                >
-                  <Link href="javascript:void(0)">Why We Need</Link>
-                </li>
-              </ul>
-
-              <div className="tab-content">
-                <div
-                  className="costomer_tab tab-pane rj"
-                  id="tab1"
-                >
-                  <div className="row">
-                    <div className="col-sm-7 content_area">
-                      <div className="tab_contents_databx_left">
-                        <div className="tabrightitle">
-                          <h3>Be Straightforward And Loyal About Your App</h3>
-                        </div>
-                        <p>
-                          An mobile app just not an app, It is an another way
-                          that connect users to your business worldwide. We
-                          provide such dynamic app designs and user-friendly
-                          interface that helps you to increase your operational
-                          efficiency, productivity and customer engagement
-                          through Mobile Applications.An innovative mobile idea
-                          involves more than a mobile friendly website and is an
-                          essential part of marketing strategy now a days. Any
-                          business should be straight forward and honest about
-                          their business app. Every business app has a different
-                          approach according to the business industry.
-                        </p>
-                        <p>
-                          At Logicspice we has expert android app developers and
-                          Iphone app developers to provide best mobile solution
-                          for both android and Iphones.
-                        </p>
-                        <p>
-                          We provide such dynamic app designs and user-friendly
-                          interface that helps you to increase your operational
-                          efficiency, productivity and customer engagement
-                          through Mobile Applications.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-sm-5 content_area">
-                      <div className="media">
-                        <div className="media-left">
-                          <Image
-                            width={100}
-                            height={100}
-                            unoptimized={true}
-                            alt="img"
-                            src="/img/globalpages/setting_icon.png"
-                          />
-                        </div>
-                        <div className="media-body">
-                          <div className="tabrightitle">
-                            <div className="rightssdsd">
-                              <h3>Minimum Sustainable Functionality</h3>
-                              <p>
-                                Any app should include key features, relevant
-                                content and an attractive UI that elevate it
-                                beyond a repackaged website. The navigation of a
-                                website should be easy to understand
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="media">
-                        <div className="media-left">
-                          <Link href="#">
-                            <Image
-                              width={100}
-                              height={100}
-                              unoptimized={true}
-                              alt="img"
-                              src="/img/globalpages/code_icn.png"
-                            />
-                          </Link>
-                        </div>
-                        <div className="media-body">
-                          <div className="tabrightitle">
-                            <div className="rightssdsd">
-                              <h3>Why Logicspice App Development Services</h3>
-                              <p>
-                                Stuck that how to choose an affordable and best
-                                app development company ? We have a lot to show
-                                you about our stability. Visit our portfolios
-                                and case studies, testimonials and they will
-                                shows trust for us. We have dedicated bunch of
-                                android and iphone app developers that are able
-                                to offer best solution for niche industry.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="costomer_tab tab-pane rj"
-                  id="tab1"
-                >
-                  <div className="tab_contents_databx_left content_left_bar">
-                    <p>
-                      There are many benefits of having an mobile application
-                      for your business. Here are the some key points that why a
-                      business should have an mobile app &ndash;
-                    </p>
-                    <p>&nbsp;</p>
-                    <ul className="webvevtwo">
-                      <li>
-                        <b>Increase Customer Engagement &ndash; </b>A mobile
-                        application is the best way to increase customer
-                        engagement towards your business.
-                      </li>
-                      <li>
-                        <b>Improve Client Retention &ndash; </b> A mobile app
-                        make your business user friendly and attract users to
-                        get connect your business from anywhere.
-                      </li>
-                      <li>
-                        <b>
-                          Be visible to customers anytime, anywhere &ndash;{" "}
-                        </b>
-                        Now move your business beyond it’s limit through an
-                        mobile app. Make your business easy to accessible in an
-                        small device across the world.
-                      </li>
-                      <li>
-                        <b>Add value to your customers &ndash;</b> A mobile
-                        application arouse the interest in users about your
-                        business and enhance your brand value.
-                      </li>
-                      <li>
-                        <b>Increase brand awareness and recognition &ndash; </b>
-                        In this online market trend, every business need an
-                        digital presence and a brand recognition. A mobile
-                        application is the best way to reach major audience.
-                      </li>
-                      <li>
-                        <b>Stand out from the competition &ndash; </b>Now spread
-                        your business globally and stand out from crowd. Let
-                        make your brand its own identity by approaching through
-                        mobile app to its right audience.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
+     
         <section className="app_bottom_shwn_bs AppBottomShwnBx">
           <div className="container">
             <ul className="nav nav-tabs" role="tablist">
@@ -875,152 +738,7 @@ const Page = () => {
               our client project portfolio ..{" "}
             </p>
 
-            {/* <div
-              id="carousel-example-generic"
-              className="owl-carousel GlobalpagesSlider slide"
-            >
-              
-
-              <div className="ClientSlideBx">
-                <div className="row">
-                  <div className="col-md-4">
-                    <Image
-                      width={100}
-                      height={100}
-                      unoptimized={true}
-                      src="/img/globalpages/b99da_Physical-EDGE.png"
-                      alt="..."
-                      className="img-thumbnail"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <h4>Physical EDGE</h4>
-                    <p>
-                      The application serves as â€œPhysical Edgeâ€� iPhone App.
-                      Here teachers can view lessons or activities posted over
-                      the app by admin or other teachers and can export the
-                      lessons via email. The app can facilitate teachers to
-                      register over app and can browse through the activities
-                      listed either by everyone or by friends also. They can
-                      post their likes{" "}
-                      <Link
-                        href="/casestudies/view/physical-edge"
-                        target="_blank"
-                      >
-                        Read More..
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="testimonial-country">
-                  <div className="slide">
-                    
-                    <div className="right_side_testi">
-                      <div className="quotes_img">
-                        <Link href="/">
-                          <Image
-                            width={100}
-                            height={100}
-                            unoptimized={true}
-                            src="/img/globalpages/quotes.png"
-                            alt="quotes"
-                          />
-                        </Link>
-                      </div>
-                      <div className="cilent_text">
-                        Cannot express my gratitude enough. Manish and the team
-                        went above and beyond to meet my needs, that at times
-                        were changing constantly. They were patient and diligent
-                        to make my app perfect. Thank you VERY MUCH!! I AM VERY
-                        HAPPY.
-                      </div>
-                      <div className="cilent_name">
-                        <span>
-                          <strong className="flag">
-                            <Image
-                              width={100}
-                              height={100}
-                              unoptimized={true}
-                              src="/img/globalpages/usa.png"
-                              alt="usa"
-                            />
-                          </strong>{" "}
-                          Michael Hodges
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="ClientSlideBx">
-                <div className="row">
-                  <div className="col-md-4">
-                    <Image
-                      width={100}
-                      height={100}
-                      unoptimized={true}
-                      src="/img/globalpages/Askoureinstein.png"
-                      alt="..."
-                      className="img-thumbnail"
-                    />
-                  </div>
-                  <div className="col-md-8">
-                    <h4>Ask Our Einstein</h4>
-                    <p>
-                      "AskOurEinstein" is a tutoring website, which will provide
-                      tutoring service. Tutors from all areas of academic
-                      including math, science, engineering, chemistry,
-                      accounting, finance, biology, economics, computer science,
-                      web development, foreign language, history, English, etc.
-                      will serve Student/Clients with their guidance. "ASK OUR
-                      EINSTEIN" will not only{" "}
-                      <Link href="/case-study/askoureinstein" target="_blank">
-                        Read More..
-                      </Link>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="testimonial-country">
-                  <div className="slide">
-                   
-                    <div className="right_side_testi">
-                      <div className="quotes_img">
-                        <Link href="/">
-                          <Image
-                            width={100}
-                            height={100}
-                            unoptimized={true}
-                            src="/img/globalpages/quotes.png"
-                            alt="quotes"
-                          />
-                        </Link>
-                      </div>
-                      <div className="cilent_text">
-                        "Manish and team were very helpful and professional.
-                        This was a very aggressive project with a tight timeline
-                        and it was ultimately completed to my satisfaction."
-                      </div>
-                      <div className="cilent_name">
-                        <span>
-                          <strong className="flag">
-                            <Image
-                              width={100}
-                              height={100}
-                              unoptimized={true}
-                              src="/img/globalpages/usa.png"
-                              alt="usa"
-                            />
-                          </strong>{" "}
-                          Dclark24{" "}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+            
             <Slider {...settings}>
               <div className="slide">
                 <div className="ClientSlideBx">
@@ -1046,7 +764,7 @@ const Page = () => {
                         activities listed either by everyone or by friends also.
                         They can post their likes{" "}
                         <Link
-                          href="/casestudies/view/physical-edge"
+                          href="/case-studies/physical-edge"
                           target="_blank"
                         >
                           Read More..
@@ -1118,7 +836,7 @@ const Page = () => {
                         computer science, web development, foreign language,
                         history, English, etc. will serve Student/Clients with
                         their guidance. &quot;ASK OUR EINSTEIN&quot; will not only{" "}
-                        <Link href="/case-study/askoureinstein" target="_blank">
+                        <Link href="/case-studies/askoureinstein" target="_blank">
                           Read More..
                         </Link>
                       </p>

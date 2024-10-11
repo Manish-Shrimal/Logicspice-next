@@ -199,7 +199,7 @@ const Page = () => {
                     programmers have expertise in developing top android apps
                     for small, medium and large business globally. We are
                     continuously progressing in
-                    <Link href="/softwares/android-app-development">
+                    <Link href="/android-app-development">
                       {" "}
                       android apps development
                     </Link>{" "}

@@ -116,7 +116,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-6 pull-left">
-              <div className="laravel-descriptions-bx">
+              <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>
                   Custom
                   <br /> Wordpress Development
@@ -146,7 +146,7 @@ const Page = () => {
                   WordPress website development services include a wide range of
                   services such as plug-ins development&sbquo;
                   <Link
-                    href="/software-development/open-source-cms"
+                    href="/open-source-cms"
                     target="_blank"
                   >
                     CMS development

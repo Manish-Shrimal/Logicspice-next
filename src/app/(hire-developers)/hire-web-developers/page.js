@@ -173,7 +173,7 @@ const Page = () => {
               have a strong web presence and for that, you need a web
               programmer. Logicspice is a team of web developers, experienced in
               every web development technique, delivering best end-to-end
-              <Link href="/services/web-development"
+              <Link href="/web-development"
                 >web development solutions</Link
               >. At our company, we offer you the opportunity to hire web
               developers from India who possess the expertise and experience to

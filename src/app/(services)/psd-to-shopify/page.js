@@ -18,8 +18,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
-
     setShowModal(!showModal);
   };
 
@@ -124,9 +122,9 @@ const Page = () => {
             </p>
             <br />
             <p>
-              <a className="linkcontensjs" href="http://logicspice.com/">
+              <Link className="linkcontensjs" href="/">
                 Logicspice
-              </a>{" "}
+              </Link>{" "}
               provide simple but powerful solution to your Shopify website.We
               make sure that all your requirements will be fulfilled with your
               website.Moreover&sbquo; we provide reliable&sbquo; fast support
@@ -456,7 +454,7 @@ const Page = () => {
             any idea in your mind which you want to present before the world as
             your business&sbquo; you are not late.{" "}
             <Link
-              href="https://www.logicspice.com/hire-developers/"
+              href="/hire-developers"
               style={{ textDecoration: "underline" }}
             >
               Hire developer
@@ -464,14 +462,14 @@ const Page = () => {
             from our experienced team and give a start to your business.
           </p>
           <div className="requirment_btn">
-            <a
+            <Link
               className="btn btn-primary"
               data-aos="fade-right"
               id="inquirenow"
-              href="https://www.logicspice.com/portfolio/"
+              href="/portfolio"
             >
               Portfolio
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -493,94 +491,94 @@ const Page = () => {
             <div className="different_experts">
               <ul className="different_experts_member">
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-android-app-developers/">
+                  <Link href="/hire-android-app-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Android App Developer
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-ios-app-developers/">
+                  <Link href="/hire-ios-app-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire iOS App Developer
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-cakephp-developers/">
+                  <Link href="/hire-cakephp-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Cake PHP Developer
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-wordpress-experts/">
+                  <Link href="/hire-wordpress-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Wordpress Developer
-                  </a>
+                  </Link>
                 </li>
-                <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-drupal-experts/">
+                {/* <li className="different_experts_name">
+                  <Link href="/hire-drupal-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Drupal Developer
-                  </a>
-                </li>
+                  </Link>
+                </li> */}
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-magento-experts/">
+                  <Link href="/hire-magento-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Magento Developer
-                  </a>
+                  </Link>
                 </li>
-                <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-zencart-experts/">
+                {/* <li className="different_experts_name">
+                  <Link href="/hire-zencart-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Zencart Developer
-                  </a>
-                </li>
+                  </Link>
+                </li> */}
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-shopify-developers/">
+                  <Link href="/hire-shopify-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Shopify Developers
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-laravel-developers/">
+                  <Link href="/hire-laravel-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Laravel Developers
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-codeigniter-developers/">
+                  <Link href="/hire-codeigniter-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Codeigniter Developers
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-node-js-experts/">
+                  <Link href="/hire-node-js-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Node.Js Experts
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-angular-js-developers/">
+                  <Link href="/hire-angular-js-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Angular jS Developers
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-yii-developers/">
+                  <Link href="/hire-yii-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Yii Developers
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-opencart-developers/">
+                  <Link href="/hire-opencart-developers">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Opencart Developers
-                  </a>
+                  </Link>
                 </li>
                 <li className="different_experts_name">
-                  <a href="https://www.logicspice.com/hire-hybrid-mobile-app-developer/">
+                  <Link href="/hire-hybrid-mobile-app-developer">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Hybrid mobile app Developer
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

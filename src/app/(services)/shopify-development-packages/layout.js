@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/services/shopify-development-packages`,
+      canonical: `${Domain}/shopify-development-packages`,
     },
     robots: {
       index: true,

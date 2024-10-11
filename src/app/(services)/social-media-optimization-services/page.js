@@ -22,8 +22,6 @@ const Page = () => {
   const [customecommerceTab, setCustomecommerceTab] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
-
     setShowModal(!showModal);
   };
 

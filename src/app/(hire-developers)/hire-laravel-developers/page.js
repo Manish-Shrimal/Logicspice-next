@@ -224,7 +224,7 @@ const Page = () => {
                     Our freelance Laravel developers have years of experience
                     and there is no doubt in saying that we are one of the
                     finest{" "}
-                    <Link href="/services/laravel-development">
+                    <Link href="/laravel-development">
                       Laravel service providers
                     </Link>{" "}
                     available in the market. We have in-depth knowledge of
