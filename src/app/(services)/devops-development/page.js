@@ -28,7 +28,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -40,7 +39,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="laravel-banner DevOpsBanner">
+      <div className="devopsDevelopment"><section className="laravel-banner DevOpsBanner">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6">
@@ -782,7 +781,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </div>
+      </div></div>
+      
 
       <Footer />
     </>

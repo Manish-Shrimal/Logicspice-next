@@ -68,7 +68,7 @@ const Page = () => {
                   <div className="our-services-bx">
                     <div className="our-services-img">
                       <Image
-                        width={70}
+                        width={66}
                         height={100}
                         src="/img/services/serv_4.png"
                         alt="serv_4"
@@ -83,7 +83,7 @@ const Page = () => {
                   <div className="our-services-bx">
                     <div className="our-services-img">
                       <Image
-                        width={70}
+                        width={90}
                         height={100}
                         src="/img/services/serv_1.png"
                         alt="serv_1"
@@ -98,7 +98,7 @@ const Page = () => {
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
                       <Image
-                        width={70}
+                        width={90}
                         height={100}
                         src="/img/services/big-data-development.png"
                         alt="Big Data Development"
@@ -115,8 +115,8 @@ const Page = () => {
                       <Image
                         width={70}
                         height={100}
-                        src="/img/services/serv_4.png"
-                        alt="serv_4"
+                        src="/img/services/generative-ai-icon.png"
+                        alt="Generative AI development"
                       />
                     </div>
                     <h2>Generative AI development</h2>
@@ -130,8 +130,8 @@ const Page = () => {
                       <Image
                         width={70}
                         height={100}
-                        src="/img/services/serv_1.png"
-                        alt="serv_1"
+                        src="/img/services/blockchain-development-icon.png"
+                        alt="Blockchain Development"
                       />
                     </div>
                     <h2>Blockchain Development</h2>
@@ -145,8 +145,8 @@ const Page = () => {
                       <Image
                         width={70}
                         height={100}
-                        src="/img/services/big-data-development.png"
-                        alt="Big Data Development"
+                        src="/img/services/video-content-icon.png"
+                        alt="Video Creation"
                       />
                     </div>
                     <h2>Video Creation</h2>

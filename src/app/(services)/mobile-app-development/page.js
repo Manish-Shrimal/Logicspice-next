@@ -496,6 +496,12 @@ const Page = () => {
                 data-home-project="2"
                 className="apps_portfolioshowe_sections home-project home-project--android"
               >
+                <div
+                  style={{
+                    backgroundImage: "url('/img/iosappdevelopment/localgenii.png')",
+                  }}
+                  className="apps_portfolioshowe_sections_image"
+                ></div>
                 <div className="apps_portfolioshowe_sections_container">
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
@@ -628,6 +634,12 @@ const Page = () => {
                 data-home-project="3"
                 className="apps_portfolioshowe_sections home-project home-project--android"
               >
+                <div
+                  style={{
+                    backgroundImage: "url('/img/iosappdevelopment/martgram.png')",
+                  }}
+                  className="apps_portfolioshowe_sections_image"
+                ></div>
                 <div className="apps_portfolioshowe_sections_container">
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
@@ -904,6 +916,12 @@ const Page = () => {
                 data-home-project="5"
                 className="apps_portfolioshowe_sections home-project home-project--android"
               >
+                 <div
+                  style={{
+                    backgroundImage: "url('/img/iosappdevelopment/klick.png')",
+                  }}
+                  className="apps_portfolioshowe_sections_image"
+                ></div>
                 <div className="apps_portfolioshowe_sections_container">
                   <div className="home-project__inner home-project__inner--quizup">
                     <div className="home-project__clip">
@@ -1395,7 +1413,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="/case-study/bestcit-app"
+                              href="/case-studies/bestcit-app"
                               target="_blank"
                             >
                               Bestcit

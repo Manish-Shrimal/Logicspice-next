@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(services)/services.css";
@@ -19,7 +19,8 @@ import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
 import "../../resposive.css";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';  // AOS Styles
 const Page = () => {
   // var settings = {
   //   dots: false,
@@ -64,13 +65,18 @@ const Page = () => {
     setModalOpen(!modalOpen);
   };
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <NavBar />
       <section className="WebDevelopmentBanner">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-5">
+            <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="WebDevelopmentBannerBx">
                 <h1>Web Development Services</h1>
                 <p>
@@ -102,7 +108,7 @@ const Page = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-6 col-md-7">
+            <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="WebDevelopmentBannerImg">
                 <Image
                   unoptimized={true}
@@ -207,7 +213,7 @@ const Page = () => {
               <div className="WebDevelopmentApplicationImg">
                 <Image
                   unoptimized={true}
-                  width={500}
+                  width={600}
                   height={500 / (100 / 100)}
                   src="/img/webdevelopment/web-application-development-img.png"
                   alt="Web Development Services"
@@ -273,7 +279,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon3.png"
                       alt="Web Development Services"
@@ -309,7 +315,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon5.png"
                       alt="Web Development Services"
@@ -347,7 +353,7 @@ const Page = () => {
                   <i>
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={80}
                       height={100}
                       src="/img/webdevelopment/web-design-icon7.png"
                       alt="Web Development Services"
@@ -495,7 +501,7 @@ const Page = () => {
                     <Image
                       unoptimized={true}
                       width={70}
-                      height={500 / (100 / 100)}
+                      height={100 / (100 / 100)}
                       src="/img/webdevelopment/goodluck-logo.png"
                       alt="Web Development Services"
                     />
@@ -636,7 +642,7 @@ const Page = () => {
                   <div className="RingImg">
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -686,7 +692,7 @@ const Page = () => {
                   <div className="RingImg">
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -737,7 +743,7 @@ const Page = () => {
                   <div className="RingImg">
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"
@@ -788,7 +794,7 @@ const Page = () => {
                   <div className="RingImg">
                     <Image
                       unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Web Development Services"

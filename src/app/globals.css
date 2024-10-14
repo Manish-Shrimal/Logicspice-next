@@ -1747,6 +1747,10 @@ bread-top {
   box-shadow: none;
 } */
 
+.mobile-show{
+  display: none;
+}
+
 .contact_detail_top ul {
   text-align: right;
 }
@@ -4298,7 +4302,7 @@ body.modal-open .quote_pop_plus {
 }
 
 .padding-no {
-  padding: 0;
+  padding: 0!important;
 }
 
 .contact-modal button.close:hover {
@@ -5503,7 +5507,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .mobile-show {
-    display: block;
+    display: block!important;
   }
 
   .desktop-show {
@@ -5637,6 +5641,7 @@ body.modal-open .quote_pop_plus {
 
   .HomeSlider {
     padding-top: 70px;
+    height: unset!important;
   }
 
   .HomeSlider .pull-left {
@@ -6054,7 +6059,7 @@ body.modal-open .quote_pop_plus {
   .client_logos,
   .ind-we-serv ul {
     text-align: center !important;
-    display: inline-block !important;
+    /* display: inline-block !important; */
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -7512,10 +7517,10 @@ section {
   border-radius: 4px !important;
 }
 
-.slick-slide img {
+/* .slick-slide img {
   display: block !important;
   width: 100% !important;
-}
+} */
 
 .form-control {
   display: block;

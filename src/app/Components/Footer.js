@@ -1,21 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Accordion, AccordionItem } from "./Accordian";
 import Link from "next/link";
-// import "../../responsive.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+
 import Image from "next/image";
+// import { FaPlus, FaMinus } from 'react-icons/fa'; // Import plus and minus icons
+// import "../../responsive.css";
 
 const injectedConstants = {
   HTTPS_PATH: "https://www.logicspice.com/",
 };
 
 const Footer = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
+  const renderIcon = (isExpanded) =>
+    isExpanded ? <RemoveIcon /> : <AddIcon />;
   return (
     <section className="footer_bg">
       <div className="container">
         <div className="">
-          <div className="mobileShow footer-top ef">
-            <Accordion>
+          <div className="mobileShow footer-top ef CustomQuickFAQScript">
+            {/* <Accordion>
               <AccordionItem headerTitle="Company">
                 <div className="panel-body">
                   <ul className="menu-item">
@@ -249,7 +261,247 @@ const Footer = () => {
                   </div>
                 </div>
               </AccordionItem>
-            </Accordion>
+            </Accordion> */}
+            <MDBAccordion borderless>
+              <MDBAccordionItem
+                headerTitle="Company"
+                collapseId="flush-collapse1"
+              >
+                <div className="panel-body">
+                  <ul className="menu-item">
+                    <li>
+                      <Link href="/company">Our Company</Link>
+                    </li>
+                    <li>
+                      <Link href="/company/about-us">About Us</Link>
+                    </li>
+                    <li>
+                      <Link href="/company/our-team">Our Team</Link>
+                    </li>
+                    <li>
+                      <Link href="/case-studies">Case Studies</Link>
+                    </li>
+                    <li>
+                      <Link href="https://www.logicspice.com/users/login">
+                        Customer Login
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/career">Careers</Link>
+                    </li>
+                    <li>
+                      <Link href="/sitemap">Sitemap</Link>
+                    </li>
+                    <li>
+                      <Link href="/hire-developers">Hire Developers</Link>
+                    </li>
+                    <li>
+                      <Link href="https://design.logicspice.com/website-design-packages">
+                        Website Packages
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company/testimonials-and-reviews">
+                        Testimonials & Reviews
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="http://plp.logicspice.com/" target="_blank">
+                        Training & Internships
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </MDBAccordionItem>
+
+              <MDBAccordionItem
+                headerTitle="Softwares"
+                collapseId="flush-collapse2"
+              >
+                <div className="panel-body">
+                  <ul className="menu-item">
+                    <li>
+                      <Link href="/job-board-software">Job Board Software</Link>
+                    </li>
+                    <li>
+                      <Link href="/fiverr-clone">Fiverr Clone Script</Link>
+                    </li>
+                    <li>
+                      <Link href="/crowdfunding-script">
+                        Crowdfunding Script
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/groupon-clone">Groupon Clone Script</Link>
+                    </li>
+                    <li>
+                      <Link href="/classified-ads-script">
+                        Classified Ads Software
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/logistic-marketplace-software">
+                        Logistic Software
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-marketplace-script">
+                        Service Marketplace Script
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/freelancer-clone">Freelancer Clone</Link>
+                    </li>
+                    <li>
+                      <Link href="/equipment-rental-software">
+                        Equipment Rental Script
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/recruitment-management-software">
+                        Recruitment Management
+                      </Link>
+                    </li>
+                    <li className="MoreSer">
+                      <Link href="/softwares">
+                        More Softwares{" "}
+                        <i className="fa fa-angle-right" aria-hidden="true"></i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </MDBAccordionItem>
+
+              <MDBAccordionItem
+                headerTitle="Services & Solutions"
+                collapseId="flush-collapse3"
+              >
+                <div className="panel-body">
+                  <ul className="menu-item">
+                    <li>
+                      <Link href="/laravel-development">
+                        Laravel Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/web-development">Web Development</Link>
+                    </li>
+                    <li>
+                      <Link href="/custom-solutions">Custom Solutions</Link>
+                    </li>
+                    <li>
+                      <Link href="/hybrid-app-development">
+                        Hybrid Mobile App Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/angular-development">
+                        Angular Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/reactjs-development">
+                        React Js Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/dating-system-solution">
+                        Dating System Solution
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/event-booking-system-development">
+                        Event Booking System
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/ecommerce-development">
+                        Ecommerce Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/web-hosting">Web Hosting</Link>
+                    </li>
+                    <li className="MoreSer">
+                      <Link href="/services">
+                        More Services{" "}
+                        <i className="fa fa-angle-right" aria-hidden="true"></i>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </MDBAccordionItem>
+
+              <MDBAccordionItem
+                headerTitle="Contact Us"
+                collapseId="flush-collapse4"
+              >
+                <div className="panel-body">
+                  <div className="company_informetion">
+                    <i>
+                      <Image
+                        width={30}
+                        height={100}
+                        src="/img/footer/fleg_icon2.png"
+                        alt="app development in USA"
+                      />
+                    </i>
+                    <Link href="tel:+1-616-929-4064">+1-616-929-4064</Link>
+                  </div>
+                  <div className="company_informetion">
+                    <i>
+                      <Image
+                        width={30}
+                        height={100}
+                        src="/img/footer/fleg_icon1.png"
+                        alt="app development in UK"
+                      />
+                    </i>
+                    <Link href="tel:+44782-404-8483">+44782-404-8483</Link>
+                  </div>
+                  <div className="company_informetion">
+                    <i>
+                      <Image
+                        width={30}
+                        height={100}
+                        src="/img/footer/fleg_icon3.png"
+                        alt="app development in India"
+                      />
+                    </i>
+                    <Link href="tel:+91-9829559922">+91-9829559922</Link>
+                  </div>
+                  <div className="company_informetion">
+                    <i>
+                      <Image
+                        width={30}
+                        height={100}
+                        src="/img/footer/massege_icon.png"
+                        alt="Mail For Development Query"
+                      />
+                    </i>
+                    <span className="InfoLogicspice">
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/footer/info-logicspice.png"
+                        alt="info@logicspice.com"
+                      />
+                    </span>
+                  </div>
+                  <div className="company_informetion">
+                    <i>
+                      <Image
+                        width={100}
+                        height={100}
+                        src="/img/footer/skya_icon.png"
+                        alt="Skype - Logicspice"
+                      />
+                    </i>
+                    <span>logicspice</span>
+                  </div>
+                </div>
+              </MDBAccordionItem>
+            </MDBAccordion>
           </div>
         </div>
 
@@ -305,22 +557,16 @@ const Footer = () => {
             </div>
             <ul className="menu-item">
               <li>
-                <Link href="/job-board-software">
-                  Job Board Software
-                </Link>
+                <Link href="/job-board-software">Job Board Software</Link>
               </li>
               <li>
                 <Link href="/fiverr-clone">Fiverr Clone Script</Link>
               </li>
               <li>
-                <Link href="/crowdfunding-script">
-                  Crowdfunding Script
-                </Link>
+                <Link href="/crowdfunding-script">Crowdfunding Script</Link>
               </li>
               <li>
-                <Link href="/groupon-clone">
-                  Groupon Clone Script
-                </Link>
+                <Link href="/groupon-clone">Groupon Clone Script</Link>
               </li>
               <li>
                 <Link href="/classified-ads-script">
@@ -364,9 +610,7 @@ const Footer = () => {
             </div>
             <ul className="menu-item">
               <li>
-                <Link href="/laravel-development">
-                  Laravel Development
-                </Link>
+                <Link href="/laravel-development">Laravel Development</Link>
               </li>
               <li>
                 <Link href="/web-development">Web Development</Link>
@@ -380,14 +624,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/angular-development">
-                  Angular Development
-                </Link>
+                <Link href="/angular-development">Angular Development</Link>
               </li>
               <li>
-                <Link href="/reactjs-development">
-                  React Js Development
-                </Link>
+                <Link href="/reactjs-development">React Js Development</Link>
               </li>
               <li>
                 <Link href="/dating-system-solution">
@@ -400,9 +640,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/ecommerce-development">
-                  Ecommerce Development
-                </Link>
+                <Link href="/ecommerce-development">Ecommerce Development</Link>
               </li>
               <li>
                 <Link href="/web-hosting">Web Hosting</Link>
@@ -440,7 +678,7 @@ const Footer = () => {
                     alt="app development in UK"
                   />
                 </i>
-                <Link href="tel:+44782-404-8483">+44782-404-8483</Link>
+                <Link href="tel:+44782-404-8483">+44 7880654811</Link>
               </div>
               <div className="company_informetion">
                 <i>
@@ -606,14 +844,14 @@ const Footer = () => {
               </li>
               <li class="countrys_menu">
                 <div class="countrys_menu_icon">
-                  <a>
+                  <Link href="/global-business-countries">
                     <Image
                       width={100}
                       height={100}
                       src="/img/footer/internet_icon.png"
                       alt="Website &amp; App Development Worldwide"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div class="countrys_menus">
                   <div class="country_tab_set">
@@ -632,7 +870,7 @@ const Footer = () => {
                         </span>
                         <div class="counlistshow">
                           <span>
-                          <Link href="/australia/mobile-app-development-in-melbourne">
+                            <Link href="/australia/mobile-app-development-in-melbourne">
                               Melbourne
                             </Link>
                           </span>

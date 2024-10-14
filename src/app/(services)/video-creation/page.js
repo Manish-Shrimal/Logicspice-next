@@ -65,23 +65,8 @@ const Page = () => {
     <>
       <NavBar />
 
-      <section className="laravel-banner LaravelBanners">
-        <div className="LaravelLeftImg">
-          <Image
-            width={400}
-            height={500 / (100 / 100)}
-            src="/img/laraveldevelopment/laravel-left-img.png"
-            alt="laravel web development"
-          />
-        </div>
-        <div className="LaravelRightImg">
-          <Image
-            width={500}
-            height={500 / (100 / 100)}
-            src="/img/laraveldevelopment/laravel-right-img.png"
-            alt="laravel web development"
-          />
-        </div>
+      <section className="laravel-banner VideoCreationServicesBanners">
+     
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-8">
@@ -141,60 +126,17 @@ const Page = () => {
                 <Image
                   width={240}
                   height={500 / (100 / 100)}
-                  src="/img/laraveldevelopment/laravel-new-icon.png"
-                  alt="laravel web development"
+                  src="/img/videocreation/video-creation-banner-img.png"
+                  alt="Creation Services"
                 />
               </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12">
-              <div className="CertificationsLaravel">
-                <a href="#" className="LaravelGuarantee">
-                  <Image
-                    width={100}
-                    height={100}
-                    src="/img/laraveldevelopment/clutch-logo.jpg"
-                    alt="laravel web development"
-                  />
-                </a>
-                <a href="#" className="LaravelGuarantee">
-                  <Image
-                    width={100}
-                    height={100}
-                    src="/img/laraveldevelopment/goodfirms.jpg"
-                    alt="laravel web development"
-                  />
-                </a>
-                <a href="#" className="LaravelGuarantee">
-                  <Image
-                    width={100}
-                    height={100}
-                    src="/img/laraveldevelopment/appfutura.jpg"
-                    alt="laravel web development"
-                  />
-                </a>
-                <a href="#" className="LaravelGuarantee">
-                  <Image
-                    width={100}
-                    height={100}
-                    src="/img/laraveldevelopment/money_back_guarantee.png"
-                    alt="laravel web development"
-                  />
-                </a>
-                <a href="#" className="LaravelGuarantee">
-                  <Image
-                    width={100}
-                    height={100}
-                    src="/img/laraveldevelopment/satisfaction-guarantee.jpg"
-                    alt="laravel web development"
-                  />
-                </a>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
 
-      <section className="laravel-descriptions ">
+      <section className="laravel-descriptions VideoCreationDescription">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
@@ -740,29 +682,7 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="col-sm-6 col-md-6" data-aos="fade-left">
-                <div className="libraries_laravel_choose libraries_laravel_choose-right">
-                  <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image
-                      width={60}
-                      height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon2.png"
-                      alt="img1"
-                    />
-                  </div>
-                  <div className="laravel_choose_details">
-                    <h3>Customized Solutions</h3>
-                    <p>
-                      We offer customized video creation services tailored to
-                      your brand’s goals and objectives, whether you need a
-                      single video or a full-fledged video campaign.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-6 " data-aos="fade-right">
+              <div className="col-sm-6 col-md-6 " data-aos="fade-left">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
@@ -783,6 +703,28 @@ const Page = () => {
                   </div>
                 </div>
               </div>
+              <div className="col-sm-6 col-md-6" data-aos="fade-right">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                  <div className="laravel_choose_features_img laravel_choose_features_img2">
+                    <Image
+                      width={60}
+                      height={100}
+                      src="/img/laraveldevelopment/laravel-why-icon2.png"
+                      alt="img1"
+                    />
+                  </div>
+                  <div className="laravel_choose_details">
+                    <h3>Customized Solutions</h3>
+                    <p>
+                      We offer customized video creation services tailored to
+                      your brand’s goals and objectives, whether you need a
+                      single video or a full-fledged video campaign.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              
 
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">

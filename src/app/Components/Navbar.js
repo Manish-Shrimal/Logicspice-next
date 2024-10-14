@@ -679,6 +679,7 @@ const Navbar = () => {
                                 <span>Placement Launch Pad</span>
                               </Link>
                             </li>
+                            <li class="ad-footer-view-all mobile-show"><Link href="/services" class="btn btn-primary">View All Services</Link></li>
                           </ul>
                         </div>
                       </div>

@@ -11,18 +11,31 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 const Page = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
-  const openModal = () => {
-    // console.log(showModal);
+  // const openModal = () => {
+  //   // console.log(showModal);
 
-    setShowModal(!showModal);
-  };
+  //   setShowModal(!showModal);
+  // };
 
-  const toggleModal = () => {
-    setModalOpen(!modalOpen);
-  };
+  // const toggleModal = () => {
+  //   setModalOpen(!modalOpen);
+  // };
+
+const [modalTitle, setModalTitle] = useState('');
+const [isModalOpen, setIsModalOpen] = useState(false);
+
+const openModal = (title) => {
+  setModalTitle(title);
+  setIsModalOpen(true);
+};
+
+const closeModal = () => {
+  setIsModalOpen(!isModalOpen);
+  setModalTitle('');
+};
 
   return (
     <>
@@ -44,25 +57,39 @@ const Page = () => {
                   </div>
 
                   <div className="laravel-anquire">
-                    <div className="btn btn-primary" onClick={openModal}>
+                    <div className="btn btn-primary" onClick={() => openModal('Hire Python Developers')}>
                       <a>Hire Python Developers</a>
-                      {
-                        <Enquirymodal
-                          modalStatus={showModal}
-                          toggle={openModal}
-                          title="Hire Python Developers"
-                        />
-                      }
+                      {/* {showModal && (
+    <Enquirymodal
+      modalStatus={showModal}
+      toggle={openModal}
+      title="Hire Python Developers"
+    />
+  )} */}
+  {isModalOpen && (
+      <Enquirymodal
+        modalStatus={isModalOpen}
+        toggle={closeModal}
+        title={modalTitle}
+      />
+    )}
                     </div>
-                    <div className="btn btn-primary" onClick={openModal}>
+                    <div className="btn btn-primary" onClick={() => openModal('Python Development Services')}>
                       <a>Quick Enquiry</a>
-                      {
-                        <Enquirymodal
-                          modalStatus={showModal}
-                          toggle={openModal}
-                          title="Python Development Services"
-                        />
-                      }
+                      {/* {showModal && (
+    <Enquirymodal
+      modalStatus={showModal}
+      toggle={openModal}
+      title="Python Development Services"
+    />
+  )} */}
+    {/* {isModalOpen && (
+      <Enquirymodal
+        modalStatus={isModalOpen}
+        toggle={closeModal}
+        title={modalTitle}
+      />
+    )} */}
                     </div>
                     <Link
                       href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
@@ -98,7 +125,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
                 <div className="laravel_img">
                   <Image unoptimized={true}
-                    width={320}
+                    width={300}
                     height={500 / (100 / 100)}
                     src="/img/pythondevelopment/python-logo-img.png"
                     alt="Python Development Services"
@@ -716,15 +743,15 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-sm-12 main_btn_hire">
-                <div className="btn btn-primary" onClick={openModal}>
+                <div className="btn btn-primary" onClick={() => openModal('Request To Hire Python Developers')}>
                   <a>Hire Python Developers</a>
-                  {
+                  {/* {
                     <Enquirymodal
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Request To Hire Python Developers"
                     />
-                  }
+                  } */}
                 </div>
               </div>
             </div>
@@ -827,9 +854,9 @@ const Page = () => {
               />
             </a>
           </div>
-          <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
-            <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
-          </div>
+          {/* <div className="quote_pop_plus quote_pop_in" onClick={closeModal}>
+            <Contactusmodel modalStatus={isModalOpen} toggle={closeModal} />
+          </div> */}
         </div>
       </div>
 

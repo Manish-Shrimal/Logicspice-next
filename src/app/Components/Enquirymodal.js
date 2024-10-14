@@ -226,31 +226,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
             role="document"
             onClick={stopPropagation}
           >
-            {/* <button
-              type="button"
-              className="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              onClick={closeModal}
-            >
-              <span aria-hidden="true">&times;</span>
-              <Image
-                width={30}
-                height={100}
-                src="/img/contactus/close-img.png"
-                alt="logo"
-              />
-            </button> */}
-            {/* <div className="logo-enqury">
-              <Link href="/">
-                <Image
-                  width={250}
-                  height={100 / (100 / 100)}
-                  src="/img/logo-white.png"
-                  alt="Mobile App & Web Development Company - Logicspice"
-                />
-              </Link>
-            </div> */}
+            
 
             <div className="">
               <div className="product-details">

@@ -102,7 +102,7 @@ const Page = () => {
               <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
                 <div className="laravel_img">
                   <Image unoptimized={true}
-                    width={350}
+                    width={330}
                     height={500 / (100 / 100)}
                     src="/img/reactjsdevelopment/reactjs-logo-img.png"
                     alt="React JS Web Development Services"

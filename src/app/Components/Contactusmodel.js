@@ -54,9 +54,11 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
         newErrors.usarnameerror = "";
       } else if (id === "email") {
         newErrors.emailerror = "";
-      } else if (id === "phone_no") {
-        newErrors.phoneerror = "";
-      } else if (id === "message") {
+      }
+      // } else if (id === "phone_no") {
+      //   newErrors.phoneerror = "";
+      // }
+      else if (id === "message") {
         newErrors.messageerror = "";
       }
       return newErrors;
@@ -78,11 +80,11 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
       newErrors.emailerror = "Email is invalid";
     }
 
-    if (!formData.phone_no) {
-      newErrors.phoneerror = "Phone number is required";
-    } else if (!/^\d{10}$/.test(formData.phone_no)) {
-      newErrors.phoneerror = "Phone number must be 10 digits long";
-    }
+    // if (!formData.phone_no) {
+    //   newErrors.phoneerror = "Phone number is required";
+    // } else if (!/^\d{10}$/.test(formData.phone_no)) {
+    //   newErrors.phoneerror = "Phone number must be 10 digits long";
+    // }
 
     if (!formData.message.trim()) {
       newErrors.messageerror = "Message is required";
@@ -292,7 +294,13 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                               {errors.messageerror}
                             </div>
                           </div>
-                          <div className="form-group buttonSubmit" style={{ display: "flex", justifyContent: "space-between" }}>
+                          <div
+                            className="form-group buttonSubmit"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                            }}
+                          >
                             <div className="form-group-google">
                               <ReCAPTCHA
                                 key={recaptchaKey}
@@ -305,7 +313,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                             </div>
                             <div
                               className="form-group-btn"
-                              style={{margin: "18px 0"}}
+                              style={{ margin: "18px 0" }}
                             >
                               <input
                                 type="hidden"

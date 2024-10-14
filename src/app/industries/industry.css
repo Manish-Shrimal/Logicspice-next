@@ -1398,3 +1398,363 @@ color: #fff!important;
   right: -60px; /* Adjust this value as per your design */
 }
 
+.country_head span{
+  color: #fff;
+  display: block;
+  font-size: 43px;
+  font-weight: bold!important;
+  margin-bottom: 10px;
+}
+
+.produvtivity h4{
+  color: #000;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.produvtivity span{
+  display: block;
+    color: #29166f;
+    font-size: 37px;
+    font-weight: bold!important;
+    line-height: 48px;
+    margin-bottom: 20px;
+}
+
+.produvtivity p {
+  color: #3e3e3e;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.global_country {
+  background-color: #f1f1f1;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.global_country h1 {
+  color: #51428a;
+  font-size: 37px;
+  font-weight: bold!important;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.global_country p {
+  color: #5f5f5f;
+  margin-bottom: 20px;
+}
+
+.global_case_study {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.global_case_study h2 {
+  color: #51428a;
+  font-size: 37px;
+  font-weight: bold!important;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.global_case_study p {
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.case-study-country a {
+  color: #51428a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.industries_country {
+  background-color: #f3f1f1;
+  padding: 60px 0 0;
+  text-align: center;
+}
+.industries_country h2 {
+  color: #51428a;
+  font-size: 37px;
+  font-weight: bold!important;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.testimonial_country {
+  background-image: url(/img/images/country/test-country.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 60px 0 70px;
+  text-align: center;
+}
+
+.testimonial_country h3 {
+  color: #fff;
+  font-size: 37px;
+  font-weight: bold!important;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.hire_exp {
+  background-color: #2064b6;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hire_exp h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.hire-step {
+  border-top: 1px solid #fff;
+  color: #fff;
+  position: relative;
+}
+
+.hire-step::before {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: -15px;
+  width: 30px;
+}
+
+.hire-step > li {
+  float: left;
+  padding-top: 60px;
+  position: relative;
+  width: calc(100% / 5);
+}
+
+.hire-step > li::before {
+  background: #fff none repeat scroll 0 0;
+  content: "";
+  height: 60px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.hire-step .hs1 {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 180px;
+  margin: 0 auto;
+  max-width: 180px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.hire-step .hs1 > p {
+  color: #fff;
+  margin: 0 auto;
+  max-width: 130px;
+}
+
+.place_country {
+  border-top: 4px solid #002277;
+  box-shadow: 0 1px 2px #ccc;
+  margin-bottom: 15px;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.place_country img {
+  height: 37px;
+  width: 70px;
+  display: inline-block;
+}
+
+.place_country h2 {
+  color: #29166f;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.place_country ul {
+  min-height: 100px;
+}
+
+.place_country li {
+  color: #3e3e3e;
+  font-size: 16px;
+  list-style: inside;
+  padding: 5px 0;
+}
+
+.place_country li a {
+  color: #29166f;
+}
+
+.detail_country {
+  padding: 50px 0;
+}
+
+.case-study-country {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  padding: 4px 6px 25px;
+  margin-right: 1px;
+}
+
+.ind_cat.hotel {
+  background-image: url(/img/images/country/hotels.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* display: inline-block; */
+}
+
+.ind_cat a {
+  color: #fff !important;
+}
+
+.ind_cat p {
+  color: #fff;
+  font-weight: bold!important;
+}
+
+.ind_cat img {
+  display: inline-block;
+}
+
+.ind_cat.transport{
+  background-image: url(/img/images/country/transport.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat.health {
+  background-image: url(/img/images/country/health.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat.real {
+  background-image: url(/img/images/country/real.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat.service {
+  background-image: url(/img/images/country/service.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat {
+  background-color: #000;
+  margin-bottom: 25px;
+  padding: 10px 0 25px;
+}
+
+.ind_cat.school {
+  background-image: url(/img/images/country/school.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat.accounts {
+  background-image: url(/img/images/country/accounts.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat.profassional {
+  background-image: url(/img/images/country/profassional.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ind_cat.goverment {
+  background-image: url(/img/images/country/goverment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#country_testimonial .user-image {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline;
+  height: 120px;
+  margin-bottom: 25px;
+  width: 120px;
+}
+
+.testi-text {
+  color: #fff;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 30px;
+  margin: 0 auto 30px;
+  max-width: 950px;
+}
+
+.userName {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.userTitle {
+  color: #fff;
+  font-size: 15px;
+}
+
+.hs1 img{
+  display: inline-block;
+}
+
+
+
+.testimonial_country .slick-dots{
+bottom: -35px !important;
+/* width:10px;
+height:10px;
+margin:1px;
+text-indent:-999px;
+cursor:pointer;
+background-color:#000\9;
+background-color:rgba(0,0,0,0);
+border:1px solid #fff;
+border-radius:10px */
+}
+
+.testimonial_country .slick-dots li button:before{
+  color: white!important;
+  width:10px;
+height:10px;
+margin:1px;
+/* text-indent:-999px; */
+cursor:pointer;
+background-color:rgba(0,0,0,0);
+/* border:1px solid #fff; */
+border-radius:10px
+
+}
+

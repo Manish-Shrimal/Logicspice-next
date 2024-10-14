@@ -282,6 +282,15 @@ const Blogslider = () => {
     getData();
   }, []);
 
+  // const settings = {
+  //   dots: false,
+  //   lazyLoad: true,
+  //   infinite: true,
+  //   autoplay: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  // };
   const settings = {
     dots: false,
     lazyLoad: true,
@@ -290,40 +299,97 @@ const Blogslider = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    margin: 0,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets and larger screens
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768, // For mobile devices in landscape mode
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // For mobile devices in portrait mode
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+  
 
   return (
     <div className="slider-container">
       {error ? (
         <p>{error}</p> // Display error message if API call fails
       ) : (
-        <Slider {...settings}>
-          {blogs.map((blog, index) => (
-            <div key={index} style={{gap: "10px"}}>
-              <li style={{ listStyle: "none", marginRight : "50px" }}>
-                <figure>
-                  <Image
+        // <Slider {...settings}>
+        //   {blogs.map((blog, index) => (
+        //     <div key={index} style={{gap: "10px"}}>
+        //       <li style={{ listStyle: "none", marginRight : "50px" }}>
+        //         <figure>
+        //           <Image
                      
-                    width={500}
-                    height={100}
-                    src={blog.img}
-                    alt={blog.alt}
-                    className="lazy"
-                  />
-                  <figcaption>
-                    <a
-                      href={blog.link}
-                      title="Read more"
-                      className="btn btn-primary"
-                    >
-                      Read more
-                    </a>
-                  </figcaption>
-                </figure>
-              </li>
-            </div>
-          ))}
-        </Slider>
+        //             width={500}
+        //             height={100}
+        //             src={blog.img}
+        //             alt={blog.alt}
+        //             className="lazy"
+        //           />
+        //           <figcaption>
+        //             <a
+        //               href={blog.link}
+        //               title="Read more"
+        //               className="btn btn-primary"
+        //             >
+        //               Read more
+        //             </a>
+        //           </figcaption>
+        //         </figure>
+        //       </li>
+        //     </div>
+        //   ))}
+        // </Slider>
+        <Slider {...settings}>
+  {blogs.map((blog, index) => (
+    <div key={index} style={{ gap: "10px" }}>
+      <li
+        style={{
+          listStyle: "none",
+          marginRight: window.innerWidth <= 768 ? "0px" : "50px", // Adjust for mobile
+        }}
+      >
+        <figure>
+          <Image
+            width={500}
+            height={100}
+            src={blog.img}
+            alt={blog.alt}
+            className="lazy"
+          />
+          <figcaption>
+            <a
+              href={blog.link}
+              title="Read more"
+              className="btn btn-primary"
+            >
+              Read more
+            </a>
+          </figcaption>
+        </figure>
+      </li>
+    </div>
+  ))}
+</Slider>
+
       )}
     </div>
   );
