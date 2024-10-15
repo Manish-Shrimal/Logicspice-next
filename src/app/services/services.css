@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 li{list-style:none;}img{max-width:100%;} html{font-size:100%;height:100%;background-color:#ffffff;}
 body{background-color:#ffffff;color:#3F3F3F;font-family:'roboto', sans-serif;font-size:15px;padding:0px !important;margin:0px !important;font-style:normal;font-weight:normal;min-height:100%;overflow-x:hidden;}
-h1, h2, h3, h4, h5, h6{margin:10px 0;font-family:'lato', Arial, Helvetica, sans-serif;font-weight:500;color:#505458;}
+h1, h2, h3, h4, h5, h6{margin:10px 0;font-weight:500;color:#505458;}
 a:hover, a:focus{outline:none;text-decoration:none;}
 .error::placeholder {  color: red; opacity: 1; }
 .error:-ms-input-placeholder {  color: red;}
 .error::-ms-input-placeholder {  color: red;}
  h1, h2, h3, h4, h5, h6, ol, li, ul, a, img, p, span, strong{padding:0px;margin:0px;}
- h1, h2, h3, h4, h5, h6{font-family:'lato', sans-serif!important;}
+ /* h1, h2, h3, h4, h5, h6{font-family:'lato', sans-serif!important;} */
 
 .LaravelText a {
   color: #337ab7 !important;

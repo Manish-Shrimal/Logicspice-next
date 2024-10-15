@@ -98,20 +98,50 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
       newErrors.message = "Please enter your message";
     }
 
+    // if (formData.budget !== "") {
+    //   const budgetRegex = /^[0-9$.,]*$/;
+    //   if (!budgetRegex.test(formData.budget)) {
+    //     newErrors.budget =
+    //       "Please enter a valid budget (only numbers and special characters are allowed)";
+    //   }
+    // }
+
     if (formData.budget !== "") {
+      // Regex to allow only numbers and special characters ($, ., ,)
       const budgetRegex = /^[0-9$.,]*$/;
+    
+      // Check if the budget contains only valid characters
       if (!budgetRegex.test(formData.budget)) {
         newErrors.budget =
           "Please enter a valid budget (only numbers and special characters are allowed)";
+      } else if (formData.budget.replace(/[$.,]/g, "").length > 6) {
+        // Remove special characters and check if the length exceeds 6 digits
+        newErrors.budget = "Budget should not exceed 6 digits";
       }
     }
+    
+    // if (formData.phone_no !== "") {
+    //   const phoneRegex = /^[0-9$.,]*$/;
+    //   if (!phoneRegex.test(formData.phone_no)) {
+    //     newErrors.phone_no =
+    //       "Please enter a valid phone number (only numbers and special characters are allowed)";
+    //   }
+    // }
+
     if (formData.phone_no !== "") {
+      // Regex to allow only numbers and special characters ($, ., ,)
       const phoneRegex = /^[0-9$.,]*$/;
+    
+      // Check if the phone number contains only valid characters
       if (!phoneRegex.test(formData.phone_no)) {
         newErrors.phone_no =
           "Please enter a valid phone number (only numbers and special characters are allowed)";
+      } else if (formData.phone_no.replace(/[$.,]/g, "").length > 15) {
+        // Remove special characters and check if the length exceeds 15 digits
+        newErrors.phone_no = "Phone number should not exceed 15 digits";
       }
     }
+    
 
     if (Object.keys(newErrors).length > 0) {
       setFormErrors(newErrors);

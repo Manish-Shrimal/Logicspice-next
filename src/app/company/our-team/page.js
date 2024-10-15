@@ -75,12 +75,7 @@ const Page = () => {
 
   return (
     <>
-      <Head>
-        <link
-          rel="canonical"
-          href="https://logicspice-next.vercel.app/company/our-team"
-        />
-      </Head>
+      
       <NavBar />
       <section class="team_head">
         <div class="container">
@@ -182,7 +177,7 @@ const Page = () => {
                     />
                   </span>
                 </h3>
-                <p>
+                <p >
                   We have a team of{" "}
                   <Link href="/hire-android-app-developers" target="_blank">
                     android developers
@@ -230,9 +225,9 @@ const Page = () => {
                   </span>{" "}
                   iPhone Team
                 </h3>
-                <p>
+                <p dir="ltr">
                   We have a team of{" "}
-                  <Link href="hire-ios-app-developers" target="_blank">
+                  <Link href="/hire-ios-app-developers" target="_blank">
                     iOS developers
                   </Link>{" "}
                   who provides best solution to our customers. Our team is
@@ -330,7 +325,7 @@ const Page = () => {
                   </span>{" "}
                   PHP Team
                 </h3>
-                <p>
+                <p dir="ltr">
                   Logicspice have a team of expert PHP developers who is having
                   more than <strong>10 years experience</strong> in their field.
                   Our PHP developers have a great technical expertise in
@@ -340,7 +335,7 @@ const Page = () => {
                   has a technical breadth and experience of developing fully
                   featured and customizable solution to your business. Meet our
                   team of{" "}
-                  <Link href="hire-php-developers" target="_blank">
+                  <Link href="/hire-php-developers" target="_blank">
                     PHP developers
                   </Link>{" "}
                   to discuss your business needs.
@@ -401,7 +396,7 @@ const Page = () => {
                   </li>
                   <li>
                     <span>
-                      Our work doesn’t end here, after delivering the project
+                      Our work doesn&apos;t end here, after delivering the project
                       successfully, we give 1 month free support.
                     </span>
                   </li>
@@ -418,7 +413,7 @@ const Page = () => {
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
-              <h2>Let’s Consult With Our Experts</h2>
+              <h2>Let&apos;s Consult With Our Experts</h2>
               <a data-toggle="modal" onClick={toggleModal}>
                 Get In Touch{" "}
                 <span>

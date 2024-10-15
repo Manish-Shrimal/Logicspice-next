@@ -572,6 +572,7 @@ sites_maps,
 	padding: 50px 0;
 	display: inline-block;
 	width: 100%;
+	margin-top: 50px;
 }
 
 .order_title {
@@ -579,6 +580,12 @@ sites_maps,
 	color: #1a1615;
 	font-weight: 700;
 	padding: 0 0 14px;
+}
+
+.order_summary{
+	background-color: #eee;
+    padding: 50px 0;
+	margin-top: 100px;
 }
 
 .order_title {

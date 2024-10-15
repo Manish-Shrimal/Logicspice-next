@@ -253,8 +253,8 @@ const Page = () => {
                 </ul>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12" data-aos="fade-up">
-                <div className="cobc-request-btn">
-                  <a href="" className="btn btn-primary">Request For An Expert</a>
+                <div className="cobc-request-btn"onClick={toggleModal}>
+                  <a  className="btn btn-primary">Request For An Expert</a>
                 </div>
               </div>
             </div>

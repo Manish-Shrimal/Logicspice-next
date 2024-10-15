@@ -165,12 +165,12 @@ const Page = () => {
           <div aria-label="breadcrumb" className="my-breadcrumb ">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a href="<?php echo MAIN_HTTP_PATH; ?>">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li className="breadcrumb-item">
-                <a href="<?php echo MAIN_HTTP_PATH; ?>/custom-solutions">
+                <Link href="/custom-solutions">
                   Custom Solutions
-                </a>
+                </Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 Social network integration

@@ -14,7 +14,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }).then((res) =>
     res.json()
   );
-  console.log(product)
 
   let text = product.data.schema;
 

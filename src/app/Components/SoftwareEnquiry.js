@@ -106,10 +106,16 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     //   }
     // }
     if (formData.phone_no !== "") {
+      // Regex to allow only numbers and special characters ($, ., ,)
       const phoneRegex = /^[0-9$.,]*$/;
+    
+      // Check if the phone number contains only valid characters
       if (!phoneRegex.test(formData.phone_no)) {
         newErrors.phone_no =
           "Please enter a valid phone number (only numbers and special characters are allowed)";
+      } else if (formData.phone_no.replace(/[$.,]/g, "").length > 15) {
+        // Remove special characters and check if the length exceeds 15 digits
+        newErrors.phone_no = "Phone number should not exceed 15 digits";
       }
     }
 

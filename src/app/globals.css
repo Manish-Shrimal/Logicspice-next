@@ -30,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "lato", sans-serif;
+  /* font-family: "lato", sans-serif; */
   color: #505458;
   font-weight: 500 !important;
 }
@@ -1270,6 +1270,10 @@ bread-top {
 
 .product-main-menu .hover_btn_menu .menu_icon_all.appointment_booking_sys {
   background-position: -48px -81px;
+}
+
+.product-main-menu .hover_btn_menu .menu_icon_all.wordpress_ecommerce_icon {
+  background: url(/img/header/wordpress_ecommerce_icon.png) no-repeat;
 }
 
 .product-main-menu .hover_btn_menu .menu_icon_all.rms_clone {
@@ -4283,7 +4287,7 @@ body.modal-open .quote_pop_plus {
 
 .contact-modal .modal-content {
   border-radius: 0;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   width: 100%;
 }

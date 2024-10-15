@@ -451,426 +451,438 @@ const Page = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <form
-        // onSubmit={submitForm}
-        // id="paymentForm"
-        // encType="multipart/form-data"
-        // method="post"
-        // acceptCharset="utf-8"
-        // noValidate
-        >
-          <div style={{ display: "none" }}>
-            <input type="hidden" name="_method" value="POST" />
-          </div>
-          <div className="order_title mobile-none">
-            <h4 className="titke">Billing Information</h4>
-          </div>
-
-          <div className="order_summarty_left">
-            <div className="oder_inner">
-              <div className="form_wrap">
-                <div className="oder_row">
-                  <div className="oder_form">
-                    <label>Name*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="Name"
-                        type="text"
-                        id="PaymentBillingName"
-                        name="billing_name"
-                        value={formData.billing_name}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">{errors.billing_name}</div>
-                  </div>
-                  <div className="oder_form">
-                    <label>Email Address*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="Email"
-                        type="text"
-                        id="PaymentBillingEmail"
-                        name="billing_email"
-                        value={formData.billing_email}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">
-                      {errors.billing_email}
-                    </div>
-                  </div>
-                </div>
-                <div className="oder_row">
-                  <div className="oder_form">
-                    <label>Address*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="Address"
-                        type="text"
-                        id="PaymentBillingAddress"
-                        name="billing_address"
-                        v-model={formData.billing_address}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">
-                      {errors.billing_address}
-                    </div>
-                  </div>
-                  <div className="oder_form">
-                    <label>City*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="City"
-                        type="text"
-                        id="PaymentBillingCity"
-                        name="billing_city"
-                        value={formData.billing_city}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">{errors.billing_city}</div>
-                  </div>
-                </div>
-                <div className="oder_row">
-                  <div className="oder_form">
-                    <label>State*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="State"
-                        type="text"
-                        id="PaymentBillingState"
-                        name="billing_state"
-                        value={formData.billing_state}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">
-                      {errors.billing_state}
-                    </div>
-                  </div>
-                  <div className="oder_form">
-                    <label>Country*</label>
-                    <div className="oder_dfied">
-                      <span className="drop_icon">
-                        <select
-                          id="PaymentBillingCountry"
-                          name="billing_country"
-                          value={formData.billing_country}
-                          onChange={handleChange}
-                        >
-                          <option selected value="">
-                            Select Country
-                          </option>
-                          {countries?.map((country) => (
-                            <option value={country.id} key={country.id}>
-                              {country.name}
-                            </option>
-                          ))}
-                        </select>
-                      </span>
-                    </div>
-                    <div className="errorValidation">
-                      {errors.billing_state}
-                    </div>
-                  </div>
-                </div>
-                <div className="oder_row">
-                  <div className="oder_form">
-                    <label>Postal Code*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="Postal Code"
-                        type="text"
-                        id="PaymentBillingPostcode"
-                        name="billing_postcode"
-                        value={formData.billing_postcode}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">
-                      {errors.billing_postcode}
-                    </div>
-                  </div>
-                  <div className="oder_form">
-                    <label>Phone*</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="Phone"
-                        type="text"
-                        id="PaymentBillingPhone"
-                        name="billing_phone"
-                        value={formData.billing_phone}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="errorValidation">
-                      {errors.billing_phone}
-                    </div>
-                  </div>
-                </div>
-                <div className="oder_row">
-                  <div className="oder_form">
-                    <label>Domain Name</label>
-                    <div className="oder_dfied">
-                      <input
-                        placeholder="Domain Name"
-                        type="text"
-                        id="PaymentDomainName"
-                        name="domain_name"
-                        value={formData.domain_name}
-                        onChange={handleChange}
-                      />
-                      <span className="help_txt">
-                        The licenced code will be provided for this domain only
-                        and the domain name could be provided later too.
-                      </span>
-                    </div>
-                  </div>
-                  <div className="oder_form">
-                    <div className="oder_dfied">
-                      {/* <div id="recaptchaBuy" className="g-recaptcha"></div> */}
-                      <ReCAPTCHA
-                        key={recaptchaKey}
-                        sitekey={recaptchaKey}
-                        onChange={(value) => recaptchaChange(value)}
-                      />
-                      {errors.captcha && (
-                        <div className="text-danger CaptchaVerify">
-                          {errors.captcha}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className="prm_cdsc">
-                  Have a promo code?{" "}
-                  <button
-                    className="add_hr"
-                    type="button"
-                    onClick={() => setPaymentModal(true)}
-                  >
-                    Add it here
-                  </button>
-                </div>
-              </div>
+      
+    <section className="order_summary">
+    <Navbar />
+     
+        <div className="container">
+          <form
+          // onSubmit={submitForm}
+          // id="paymentForm"
+          // encType="multipart/form-data"
+          // method="post"
+          // acceptCharset="utf-8"
+          // noValidate
+          >
+            <div style={{ display: "none" }}>
+              <input type="hidden" name="_method" value="POST" />
             </div>
-            <div className="contine_payment paymnt_con">
-              <div className="paypal_ig">
-                <Image
-                  width={100}
-                  height={100}
-                  src="https://www.logicspice.com/img/images/paypal_img.png"
-                  alt="PayPal"
-                />
-              </div>
-
-              <button
-                className="btn btn-primary"
-                type="submit"
-                onClick={handleSubmit}
-              >
-                Continue for payment
-              </button>
-              <div className="loadloader popup_loader" id="loadloaderPay">
-                <Image
-                  width={100}
-                  height={100}
-                  src="/logicspice_com_cake/img/loading-old.gif"
-                  alt="Loading..."
-                />
-              </div>
+            <div className="order_title mobile-none">
+              <h4 className="titke">Billing Information</h4>
             </div>
-          </div>
-          <div className="order_summarty_right">
-            <div className="order_summarty_right_inner">
-              <div className="order_title">Order Summary</div>
-              <div className="order_wrap">
-                <div id="offeer_sec">
-                  <div className="order_wrap_row" id="and_sec">
-                    <div className="order_wrap_left">
-                      <span className="basi_title">{productType}</span>
-                      <br />
-                      (Web Version)
-                    </div>
-                    <div className="order_wrap_right">
-                      {currencyDetail.currency_symbol}
-                      <span id="and_price">{currencyDetail.price}</span>{" "}
-                      {currencyDetail.name}
-                    </div>
-                  </div>
-                  <div id="custom_sec"></div>
-                </div>
-                {!discountApplied && (
-                  <div id="ofer_nw">
-                    <div className="order_wrap_row">
-                      <div className="order_wrap_left">
-                        <span className="basi_title">Total</span>
-                      </div>
-                      <div className="order_wrap_right">
-                        {currencyDetail.currency_symbol}
-                        <span id="tot_sec">{currencyDetail.price}</span>{" "}
-                        {currencyDetail.name}
-                      </div>
-                    </div>
-                  </div>
-                )}
 
-                <div id="ofer_finl"></div>
-                <div className="off_sect">
-                  <span id="show" className="drop drop_left">
-                    We Offer Money Back Guarantee{" "}
-                    <i className="question_icon"></i>
-                    <div className="drop_contanet drop_left_content">
-                      <span id="hide"></span>
-                      Yes, we provide a 30 days money back guarantee to ensure
-                      customer satisfaction with our software. If, for any
-                      reason, you decide to stop using the product, you can
-                      request a refund. We will reimburse the entire amount,
-                      excluding the installation and configuration charges,
-                      which are either USD 65 or 20% of the application cost,
-                      whichever is higher. Please note that the money back
-                      guarantee does not apply to customers who have received
-                      updates as per their specific requests, taking into
-                      account the significant efforts and time invested by the
-                      team for their project.
-                    </div>
-                  </span>
-                  <div className="pay_pri_term">
-                    For more detail visit following pages
-                    <a
-                      href="https://demo.imagetowebpage.com/logicspice_com_cake//privacy-policy"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Privacy Policy
-                    </a>{" "}
-                    and
-                    <a
-                      href="https://demo.imagetowebpage.com/logicspice_com_cake//terms-of-use"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Terms Of Use
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-        <div id="ofer_finl"></div>
-
-        <div
-          className={`modal fade ${paymentModal ? "show" : ""}`}
-          id="paymentModal"
-          tabIndex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden={!paymentModal}
-          style={{ display: paymentModal ? "block" : "none", width: "100%" }} // Adding display property
-        >
-          <div class="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button
-                  type="button"
-                  className="close"
-                  aria-label="Close"
-                  onClick={() => setPaymentModal(false)}
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 className="modal-title" id="myModalLabel">
-                  <font id="update_pay">Apply Discount</font>
-                </h4>
-              </div>
-              <form
-              // onSubmit={submitPromo}
-              // id="paymentForm1"
-              // encType="multipart/form-data"
-              // method="post"
-              // acceptCharset="utf-8"
-              >
-                <div className="modal-body">
-                  <div className="payment_wrap">
-                    <div className="submit_pay">
-                      <div className="rigt_tcdr">
+            <div className="order_summarty_left">
+              <div className="oder_inner">
+                <div className="form_wrap">
+                  <div className="oder_row">
+                    <div className="oder_form">
+                      <label>Name*</label>
+                      <div className="oder_dfied">
                         <input
-                          id="coupon_code"
-                          placeholder="Enter coupon"
-                          className="cupon_textinput"
+                          placeholder="Name"
                           type="text"
-                          value={couponDiscount.coupon_code}
-                          onChange={(event) =>
-                            setCouponDiscount({
-                              ...couponDiscount,
-                              coupon_code: event.target.value,
-                            })
-                          }
+                          id="PaymentBillingName"
+                          name="billing_name"
+                          value={formData.billing_name}
+                          onChange={handleChange}
                         />
-                        <button
-                          type="submit"
-                          id="coupon_save"
-                          className="cupon_bt_righ ancorinput btn btn-primary"
-                          onClick={applyDiscount}
-                        >
-                          Apply
-                        </button>
-                        <br />
-                        {message && (
-                          <span
-                            id="errors"
-                            className={`${
-                              discountApplied ? "text-success" : "text-danger"
-                            }`}
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_name}
+                      </div>
+                    </div>
+                    <div className="oder_form">
+                      <label>Email Address*</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="Email"
+                          type="text"
+                          id="PaymentBillingEmail"
+                          name="billing_email"
+                          value={formData.billing_email}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_email}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="oder_row">
+                    <div className="oder_form">
+                      <label>Address*</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="Address"
+                          type="text"
+                          id="PaymentBillingAddress"
+                          name="billing_address"
+                          v-model={formData.billing_address}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_address}
+                      </div>
+                    </div>
+                    <div className="oder_form">
+                      <label>City*</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="City"
+                          type="text"
+                          id="PaymentBillingCity"
+                          name="billing_city"
+                          value={formData.billing_city}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_city}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="oder_row">
+                    <div className="oder_form">
+                      <label>State*</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="State"
+                          type="text"
+                          id="PaymentBillingState"
+                          name="billing_state"
+                          value={formData.billing_state}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_state}
+                      </div>
+                    </div>
+                    <div className="oder_form">
+                      <label>Country*</label>
+                      <div className="oder_dfied">
+                        <span className="drop_icon">
+                          <select
+                            id="PaymentBillingCountry"
+                            name="billing_country"
+                            value={formData.billing_country}
+                            onChange={handleChange}
                           >
-                            {message}
-                          </span>
+                            <option selected value="">
+                              Select Country
+                            </option>
+                            {countries?.map((country) => (
+                              <option value={country.id} key={country.id}>
+                                {country.name}
+                              </option>
+                            ))}
+                          </select>
+                        </span>
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_state}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="oder_row">
+                    <div className="oder_form">
+                      <label>Postal Code*</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="Postal Code"
+                          type="text"
+                          id="PaymentBillingPostcode"
+                          name="billing_postcode"
+                          value={formData.billing_postcode}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_postcode}
+                      </div>
+                    </div>
+                    <div className="oder_form">
+                      <label>Phone*</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="Phone"
+                          type="text"
+                          id="PaymentBillingPhone"
+                          name="billing_phone"
+                          value={formData.billing_phone}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="errorValidation">
+                        {errors.billing_phone}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="oder_row">
+                    <div className="oder_form">
+                      <label>Domain Name</label>
+                      <div className="oder_dfied">
+                        <input
+                          placeholder="Domain Name"
+                          type="text"
+                          id="PaymentDomainName"
+                          name="domain_name"
+                          value={formData.domain_name}
+                          onChange={handleChange}
+                        />
+                        <span className="help_txt">
+                          The licenced code will be provided for this domain
+                          only and the domain name could be provided later too.
+                        </span>
+                      </div>
+                    </div>
+                    <div className="oder_form">
+                      <div className="oder_dfied">
+                        {/* <div id="recaptchaBuy" className="g-recaptcha"></div> */}
+                        <ReCAPTCHA
+                          key={recaptchaKey}
+                          sitekey={recaptchaKey}
+                          onChange={(value) => recaptchaChange(value)}
+                        />
+                        {errors.captcha && (
+                          <div className="text-danger CaptchaVerify">
+                            {errors.captcha}
+                          </div>
                         )}
                       </div>
                     </div>
                   </div>
+                  <div className="prm_cdsc">
+                    Have a promo code?{" "}
+                    <button
+                      className="add_hr"
+                      type="button"
+                      onClick={() => setPaymentModal(true)}
+                    >
+                      Add it here
+                    </button>
+                  </div>
                 </div>
-                <div className="cls_dv">
+              </div>
+              <div className="contine_payment paymnt_con">
+                <div className="paypal_ig">
+                  <Image
+                    width={100}
+                    height={100}
+                    src="https://www.logicspice.com/img/images/paypal_img.png"
+                    alt="PayPal"
+                  />
+                </div>
+
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  Continue for payment
+                </button>
+                <div className="loadloader popup_loader" id="loadloaderPay">
+                  <Image
+                    width={100}
+                    height={100}
+                    src="/logicspice_com_cake/img/loading-old.gif"
+                    alt="Loading..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="order_summarty_right">
+              <div className="order_summarty_right_inner">
+                <div className="order_title">Order Summary</div>
+                <div className="order_wrap">
+                  <div id="offeer_sec">
+                    <div className="order_wrap_row" id="and_sec">
+                      <div className="order_wrap_left">
+                        <span className="basi_title">
+                          {productType?.replace(/"/g, "")}
+                        </span>
+                        <br />
+                        (Web Version)
+                      </div>
+                      <div className="order_wrap_right">
+                        {currencyDetail.currency_symbol}
+                        <span id="and_price">{currencyDetail.price}</span>{" "}
+                        {currencyDetail.name}
+                      </div>
+                    </div>
+                    <div id="custom_sec"></div>
+                  </div>
+                  {!discountApplied && (
+                    <div id="ofer_nw">
+                      <div className="order_wrap_row">
+                        <div className="order_wrap_left">
+                          <span className="basi_title">Total</span>
+                        </div>
+                        <div className="order_wrap_right">
+                          {currencyDetail.currency_symbol}
+                          <span id="tot_sec">{currencyDetail.price}</span>{" "}
+                          {currencyDetail.name}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div id="ofer_finl"></div>
+                  <div className="off_sect">
+                    <span id="show" className="drop drop_left">
+                      We Offer Money Back Guarantee{" "}
+                      <i className="question_icon"></i>
+                      <div className="drop_contanet drop_left_content">
+                        <span id="hide"></span>
+                        Yes, we provide a 30 days money back guarantee to ensure
+                        customer satisfaction with our software. If, for any
+                        reason, you decide to stop using the product, you can
+                        request a refund. We will reimburse the entire amount,
+                        excluding the installation and configuration charges,
+                        which are either USD 65 or 20% of the application cost,
+                        whichever is higher. Please note that the money back
+                        guarantee does not apply to customers who have received
+                        updates as per their specific requests, taking into
+                        account the significant efforts and time invested by the
+                        team for their project.
+                      </div>
+                    </span>
+                    <div className="pay_pri_term">
+                      For more detail visit following pages{" "}
+                      <a
+                        href="https://demo.imagetowebpage.com/logicspice_com_cake//privacy-policy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Privacy Policy
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="https://demo.imagetowebpage.com/logicspice_com_cake//terms-of-use"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Terms Of Use
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="ofer_finl"></div>
+
+          <div
+            className={`modal fade ${paymentModal ? "show" : ""}`}
+            id="paymentModal"
+            tabIndex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden={!paymentModal}
+            style={{ display: paymentModal ? "block" : "none", width: "100%" }} // Adding display property
+          >
+            <div class="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
                   <button
-                    className="btn btn_kcls"
-                    id="pop_clos"
                     type="button"
-                    //   className="close"
-                    // aria-label="Close"
+                    className="close"
+                    aria-label="Close"
                     onClick={() => setPaymentModal(false)}
                   >
-                    Close
+                    <span aria-hidden="true">&times;</span>
                   </button>
+                  <h4 className="modal-title" id="myModalLabel">
+                    <font id="update_pay">Apply Discount</font>
+                  </h4>
                 </div>
-              </form>
+                <form
+                // onSubmit={submitPromo}
+                // id="paymentForm1"
+                // encType="multipart/form-data"
+                // method="post"
+                // acceptCharset="utf-8"
+                >
+                  <div className="modal-body">
+                    <div className="payment_wrap">
+                      <div className="submit_pay">
+                        <div className="rigt_tcdr">
+                          <input
+                            id="coupon_code"
+                            placeholder="Enter coupon"
+                            className="cupon_textinput"
+                            type="text"
+                            value={couponDiscount.coupon_code}
+                            onChange={(event) =>
+                              setCouponDiscount({
+                                ...couponDiscount,
+                                coupon_code: event.target.value,
+                              })
+                            }
+                          />
+                          <button
+                            type="submit"
+                            id="coupon_save"
+                            className="cupon_bt_righ ancorinput btn btn-primary"
+                            onClick={applyDiscount}
+                          >
+                            Apply
+                          </button>
+                          <br />
+                          {message && (
+                            <span
+                              id="errors"
+                              className={`${
+                                discountApplied ? "text-success" : "text-danger"
+                              }`}
+                            >
+                              {message}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="cls_dv">
+                    <button
+                      className="btn btn_kcls"
+                      id="pop_clos"
+                      type="button"
+                      //   className="close"
+                      // aria-label="Close"
+                      onClick={() => setPaymentModal(false)}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      
+     
       <div className="quoue_box_full_sec">
-        <div className="whatsapp-call">
-          <a
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
-            target="_blank"
-          >
-            <Image
-              width={100}
-              height={100}
-              src="/img/images/whatsapp.png"
-              alt="whatsapp-icon"
-            />
-          </a>
+          <div className="whatsapp-call">
+            <a
+              href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+              target="_blank"
+            >
+              <Image
+                width={100}
+                height={100}
+                src="/img/images/whatsapp.png"
+                alt="whatsapp-icon"
+              />
+            </a>
+          </div>
+          <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+            <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+          </div>
         </div>
-        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
-          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
-        </div>
-      </div>
-
       <Footer />
+    </section>
+      
     </>
   );
 };

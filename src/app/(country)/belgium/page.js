@@ -647,7 +647,7 @@ const Page = () => {
                       for your business. Here are the some key points that why a
                       business should have an mobile app –
                     </p>
-                    <p>&nbsp;</p>
+                    {/* <p>&nbsp;</p> */}
                     <ul className="listtupe">
                       <li>
                         <b>Increase Customer Engagement – </b>A mobile
