@@ -18,11 +18,18 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -130,16 +137,21 @@ const Page = () => {
 
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <button>Enquire Now</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Order Management Software"
-                      />
+                      // <SoftwareEnquiry
+                      //   modalStatus={showModal}
+                      //   toggle={openModal}
+                      //   title="Order Management Software"
+                      // />
+                      <GetDemoEnquiry
+                    modalStatus={demoAccessModal}
+                    toggle={openDemoAccessModal}
+                    title="Order Management Software"
+                  />
                     }
                   </div>
                 </div>
@@ -997,14 +1009,19 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Enquire Now</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Order Management Software"
-                    />
+                    // <SoftwareEnquiry
+                    //   modalStatus={showModal}
+                    //   toggle={openModal}
+                    //   title="Order Management Software"
+                    // />
+                    <GetDemoEnquiry
+                    modalStatus={demoAccessModal}
+                    toggle={openDemoAccessModal}
+                    title="Order Management Software"
+                  />
                   }
                 </div>
               </div>

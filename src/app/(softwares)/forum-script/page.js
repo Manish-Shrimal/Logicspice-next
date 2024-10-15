@@ -22,6 +22,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -129,6 +131,13 @@ const Page = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       <NavBar />
@@ -170,14 +179,20 @@ const Page = () => {
                   >
                     Get Demo Access!
                   </Link> */}
-                  <div className=" btn-get" onClick={openModal} style={{textAlign : "center"}}>
+                  <div className=" btn-get" onClick={openDemoAccessModal} style={{textAlign : "center"}}>
                     <button>Get Demo Access!</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Forum Script.
-See how it work yourself!"
+//                       <SoftwareEnquiry
+//                         modalStatus={showModal}
+//                         toggle={openModal}
+//                         title="Please fill the form below and get access to the live demo of Forum Script.
+// See how it work yourself!"
+//                       />
+
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Forum script. See how it works yourself!"
                       />
                     }
                   </div>
@@ -806,15 +821,21 @@ See how it work yourself!"
                 >
                   Get Demo Access!
                 </Link> */}
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Forum Script.
-See how it work yourself!"
-                    />
+//                     <SoftwareEnquiry
+//                       modalStatus={showModal}
+//                       toggle={openModal}
+//                       title="Please fill the form below and get access to the live demo of Forum Script.
+// See how it work yourself!"
+//                     />
+
+<GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Forum script. See how it works yourself!"
+                      />
                   }
                 </div>
                 <Link

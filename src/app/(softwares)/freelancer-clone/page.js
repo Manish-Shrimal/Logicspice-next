@@ -23,6 +23,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -182,6 +184,13 @@ const Page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       <Navbar />
@@ -220,16 +229,22 @@ const Page = () => {
                   <span>Fill your basic details and</span>
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Freelancer Clone.
-See how it work yourself!"
+//                       <SoftwareEnquiry
+//                         modalStatus={showModal}
+//                         toggle={openModal}
+//                         title="Please fill the form below and get access to the live demo of Freelancer Clone.
+// See how it work yourself!"
+//                       />
+
+<GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Freelancer Clone. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1427,15 +1442,21 @@ See how it work yourself!"
                 >
                   Get Demo Access!
                 </a> */}
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Groupon Clone Script.
-See how it work yourself!"
-                    />
+//                     <SoftwareEnquiry
+//                       modalStatus={showModal}
+//                       toggle={openModal}
+//                       title="Please fill the form below and get access to the live demo of Groupon Clone Script.
+// See how it work yourself!"
+//                     />
+
+<GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Freelancer Clone. See how it works yourself!"
+                      />
                   }
                 </div>
                 <Link

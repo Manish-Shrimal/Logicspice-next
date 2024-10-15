@@ -25,6 +25,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 const Page = () => {
   var settings = {
     dots: true,
@@ -43,6 +44,13 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -86,7 +94,6 @@ const Page = () => {
       console.log(error.message);
     }
   };
-
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -171,16 +178,22 @@ const Page = () => {
                   <span>Fill your basic details and</span>
                   <div
                     className="btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
-                    <button>Get Demo Access!</button>
+                    <a>Get Demo Access!</a>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
+                      //                       <SoftwareEnquiry
+                      //                         modalStatus={showModal}
+                      //                         toggle={openModal}
+                      //                         title="Please fill the form below and get access to the live demo of Whatsapp Clone.
+                      // See how it work yourself!"
+                      //                       />
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of Whatsapp Clone.
-See how it work yourself!"
+ See how it works yourself!"
                       />
                     }
                   </div>
@@ -872,14 +885,20 @@ See how it work yourself!"
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
-                  <button>Get Demo Access!</button>
+                <div className="btn btn-get"  onClick={openDemoAccessModal}>
+                  <a>Get Demo Access!</a>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
+                    //                     <SoftwareEnquiry
+                    //                       modalStatus={showModal}
+                    //                       toggle={openModal}
+                    //                       title="Please fill the form below and get access to the live demo of Whatsapp Clone.
+                    // See how it work yourself!"
+                    //                     />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
                       title="Please fill the form below and get access to the live demo of Whatsapp Clone.
-See how it work yourself!"
+ See how it works yourself!"
                     />
                   }
                 </div>
@@ -1687,7 +1706,6 @@ See how it work yourself!"
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&lsquo;s</h4>
               <div className="MainFaqBx">
-                
                 <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
@@ -1697,12 +1715,15 @@ See how it work yourself!"
                     id="panel1d-header"
                     className="aos-init aos-animate"
                   >
-                    <Typography>Once I purchase this script, how many days will it take to go online?</Typography>
+                    <Typography>
+                      Once I purchase this script, how many days will it take to
+                      go online?
+                    </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                    It takes 2 working days generally, provided all the
-                    information to make it live has been given.{" "}
+                      It takes 2 working days generally, provided all the
+                      information to make it live has been given.{" "}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1714,14 +1735,12 @@ See how it work yourself!"
                     aria-controls="panel2d-content"
                     id="panel2d-header"
                   >
-                    <Typography>
-                    Can I get help for customization?
-                    </Typography>
+                    <Typography>Can I get help for customization?</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                    Yes, we have an experienced team of developers to help you
-                    with customization as per your requirements.
+                      Yes, we have an experienced team of developers to help you
+                      with customization as per your requirements.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1734,12 +1753,14 @@ See how it work yourself!"
                     id="panel3d-header"
                   >
                     <Typography>
-                    Can I resell the script? Will I have rights over the script code?
+                      Can I resell the script? Will I have rights over the
+                      script code?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                    No, You can’t resell the script. All rights will remain with Logicspice only.
+                      No, You can’t resell the script. All rights will remain
+                      with Logicspice only.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1752,12 +1773,14 @@ See how it work yourself!"
                     id="panel4d-header"
                   >
                     <Typography>
-                    Will I be able to use it on multiple domains, after I purchase this script?
+                      Will I be able to use it on multiple domains, after I
+                      purchase this script?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                    You will be licensed to use it only for the domain, you purchased for.
+                      You will be licensed to use it only for the domain, you
+                      purchased for.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1771,16 +1794,19 @@ See how it work yourself!"
                   >
                     <Typography>
                       {" "}
-                      Along with hosting server details, what other recommendations?
+                      Along with hosting server details, what other
+                      recommendations?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                    We recommend you purchase SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all the websites these days and it provides a secure layer to the website as well.
+                      We recommend you purchase SSL certificate along with a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all the websites these days and it provides
+                      a secure layer to the website as well.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
-               
               </div>
             </div>
           </div>

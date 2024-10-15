@@ -25,6 +25,7 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -188,6 +189,14 @@ const Page = () => {
   const opendiv = (tab) => {
     setActiveTab(tab);
   };
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
+  
   return (
     <>
       <NavBar />
@@ -232,16 +241,21 @@ const Page = () => {
                   </Link> */}
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <a>Get Demo Access!</a>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
-                  .See how it work yourself!"
+                  //     <SoftwareEnquiry
+                  //       modalStatus={showModal}
+                  //       toggle={openModal}
+                  //       title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
+                  // .See how it work yourself!"
+                  //     />
+                  <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1370,15 +1384,21 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
-                  .See how it work yourself!"
-                    />
+                  //   <SoftwareEnquiry
+                  //     modalStatus={showModal}
+                  //     toggle={openModal}
+                  //     title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
+                  // .See how it work yourself!"
+                  //   />
+
+                  <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script. See how it works yourself!"
+                      />
                   }
                 </div>
                 <Link

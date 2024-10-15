@@ -24,6 +24,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
@@ -199,6 +200,13 @@ const Page = () => {
     setExpanded(newExpanded ? panel : false);
   };
 
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       <Navbar />
@@ -244,16 +252,21 @@ const Page = () => {
 
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of PHP Business Directory Script
-                  .See how it work yourself!"
+                  //     <SoftwareEnquiry
+                  //       modalStatus={showModal}
+                  //       toggle={openModal}
+                  //       title="Please fill the form below and get access to the live demo of PHP Business Directory Script
+                  // .See how it work yourself!"
+                  //     />
+                  <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Business Directory System. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1298,15 +1311,20 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of PHP Business Directory Script
-                  .See how it work yourself!"
-                    />
+                  //   <SoftwareEnquiry
+                  //     modalStatus={showModal}
+                  //     toggle={openModal}
+                  //     title="Please fill the form below and get access to the live demo of PHP Business Directory Script
+                  // .See how it work yourself!"
+                  //   />
+                  <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Business Directory System. See how it works yourself!"
+                      />
                   }
                 </div>
                 <Link

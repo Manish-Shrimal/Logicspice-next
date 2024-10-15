@@ -23,6 +23,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 
 const AppointmentSchedulingSoftware = () => {
@@ -183,6 +184,14 @@ const AppointmentSchedulingSoftware = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
+
   return (
     <>
       <NavBar />
@@ -231,16 +240,22 @@ const AppointmentSchedulingSoftware = () => {
 
                   <div
                     className="btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <a>Get Demo Access!</a>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Appointment Booking PHP Script
-                  .See how it work yourself!"
+                      //     <SoftwareEnquiry
+                      //       modalStatus={showModal}
+                      //       toggle={openModal}
+                      //       title="Please fill the form below and get access to the live demo of Appointment Booking PHP Script
+                      // .See how it work yourself!"
+                      //     />
+
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Appointment Scheduling Software. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1091,14 +1106,19 @@ const AppointmentSchedulingSoftware = () => {
                 >
                   Get Demo Access!
                 </Link> */}
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Appointment Booking PHP Script
-                  .See how it work yourself!"
+                    //   <SoftwareEnquiry
+                    //     modalStatus={showModal}
+                    //     toggle={openModal}
+                    //     title="Please fill the form below and get access to the live demo of Appointment Booking PHP Script
+                    // .See how it work yourself!"
+                    //   />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Appointment Scheduling Software. See how it works yourself!"
                     />
                   }
                 </div>

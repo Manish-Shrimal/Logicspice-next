@@ -12,8 +12,13 @@ import React, { useEffect, useState } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -21,7 +26,7 @@ import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -66,6 +71,7 @@ const Page = () => {
   const [jobportal, setJobportal] = useState(false);
   const [buyjobportal, setBuyJobportal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
   const toggleJobPortalModal = () => setJobportal(!jobportal);
@@ -81,6 +87,11 @@ const Page = () => {
     // console.log(showModal);
 
     setShowModal(!showModal);
+  };
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
   };
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -179,15 +190,20 @@ const Page = () => {
 
                   <div
                     className="btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
+                      // <SoftwareEnquiry
+                      //   modalStatus={showModal}
+                      //   toggle={openModal}
+                      //   title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
+                      // />
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Job Board Software. See how it works yourself!"
                       />
                     }
                   </div>
@@ -197,7 +213,7 @@ const Page = () => {
                     href="/buy-now/job-board-software"
                     id="buy_now_1"
                   >
-                   BUY NOW
+                    BUY NOW
                   </a>
                 </div>
                 <div
@@ -484,7 +500,6 @@ const Page = () => {
                       </div>
                       <div className="col-lg-8 col-md-9">
                         <div className="costomer_tab_left costomer_tab_leftright">
-                        
                           <ul>
                             <li>
                               <i className="JobBoardImg">
@@ -1740,13 +1755,13 @@ const Page = () => {
               </strike>
 
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Job Board Software. See how it works yourself!"
                     />
                   }
                 </div>
@@ -3092,7 +3107,7 @@ const Page = () => {
                   </div>
                 </div>
               </div> */}
-               <div id="accordion">
+              <div id="accordion">
                 <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>
                     <a
@@ -3428,10 +3443,6 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-             
-              
-
-              
             </div>
           </div>
         </div>
@@ -3596,11 +3607,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/udemy-clone"
-                  >
+                  <Link title="View Detail" target="_black" href="/udemy-clone">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>

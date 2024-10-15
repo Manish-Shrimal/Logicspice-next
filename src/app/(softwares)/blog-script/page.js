@@ -21,6 +21,7 @@ import Enquirymodal from "@/app/Components/Enquirymodal";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 
 
@@ -159,6 +160,13 @@ const Page = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       <Navbar />
@@ -194,16 +202,15 @@ const Page = () => {
                     href="#"
                     className=" btn-get"
                     id="buy_now_1"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     Live Demo
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Whatsapp Clone.
-See how it work yourself!"
-                    />
+                    <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Blog script. See how it works yourself!"
+                      />
                   </Link>
 
                   <Link

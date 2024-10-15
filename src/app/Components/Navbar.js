@@ -246,7 +246,7 @@ const Navbar = () => {
                     onMouseEnter={() => setDropdown2(true)}
                     onMouseLeave={() => setDropdown2(false)}
                   >
-                    SOFTWARE
+                    SOFTWARES
                     <b className="caret caret-company"></b>
                   </a>
                   <div

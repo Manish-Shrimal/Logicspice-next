@@ -125,10 +125,11 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     }
 
     try {
-      console.log("From Software enquiry")
-      // return;
-      const response = await axios.post(BaseAPI + "/pages/enquire", formData);
+        console.log("From DemoAcess")
+    //   return;
+      const response = await axios.post(BaseAPI + "/pages/request", formData);
 
+      
       if (response.data.status === 200) {
         setResultSuccess(true);
         setHtml(response.data.message);
@@ -237,7 +238,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
             
 
             <div className="">
-              <div className="product-details">
+              <div className="enquiry__details">
                 <h2>
                   <span id="update_frm1">{title}</span>
                 </h2>

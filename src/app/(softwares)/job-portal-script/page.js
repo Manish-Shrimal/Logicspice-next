@@ -17,6 +17,7 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 
 const Page = () => {
@@ -131,6 +132,13 @@ const Page = () => {
     getData();
   }, []);
 
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
+
   return (
     <>
       <Navbar />
@@ -176,15 +184,21 @@ const Page = () => {
 
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <a>Get Demo Access!</a>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
+                      // <SoftwareEnquiry
+                      //   modalStatus={showModal}
+                      //   toggle={openModal}
+                      //   title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
+                      // />
+
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Job Portal Script. See how it works yourself!"
                       />
                     }
                   </div>
@@ -2023,14 +2037,20 @@ const Page = () => {
               </strike>
 
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
-                    />
+                    // <SoftwareEnquiry
+                    //   modalStatus={showModal}
+                    //   toggle={openModal}
+                    //   title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
+                    // />
+
+                    <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Job Portal Script. See how it works yourself!"
+                      />
                   }
                 </div>
                 <a

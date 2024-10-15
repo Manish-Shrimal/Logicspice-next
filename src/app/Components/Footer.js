@@ -491,8 +491,9 @@ const Footer = () => {
                   <div className="company_informetion">
                     <i>
                       <Image
-                        width={100}
+                       width={21}
                         height={100}
+                        unoptimized={true}
                         src="/img/footer/skya_icon.png"
                         alt="Skype - Logicspice"
                       />
@@ -714,6 +715,7 @@ const Footer = () => {
                   <Image
                     width={21}
                     height={100}
+                    unoptimized={true}
                     src="/img/footer/skya_icon.png"
                     alt="Skype - Logicspice"
                   />

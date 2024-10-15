@@ -7587,3 +7587,18 @@ section {
   color: black !important;
   background: transparent !important;
 } */
+
+.enquiry__details h2{
+  max-width: 900px;
+  margin: 0 auto;
+  /* font-weight: 600!important; */
+  font-size: 27px;
+  color: #fff;
+  text-align: center;
+}
+.enquiry__details{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 30px;
+}

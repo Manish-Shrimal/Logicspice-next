@@ -20,6 +20,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton } from "@mui/material";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 
 const Page = () => {
@@ -75,6 +76,13 @@ const Page = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       {/* <NavBar /> */}
@@ -117,14 +125,19 @@ const Page = () => {
                   <strong>Software Application.</strong>
                 </h2>
 
-                <div className="btn btn-primary" onClick={openModal}>
+                <div className="btn btn-primary" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="FAQ Script"
-                    />
+                    // <SoftwareEnquiry
+                    //   modalStatus={showModal}
+                    //   toggle={openModal}
+                    //   title="FAQ Script"
+                    // />
+                    <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="FAQ Script"
+                      />
                   }
                 </div>
               </div>

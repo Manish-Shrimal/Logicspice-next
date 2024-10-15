@@ -17,6 +17,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+
 
 
 const Page = () => {
@@ -25,7 +27,12 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
 
+    setDemoAccessModal(!demoAccessModal);
+  };
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
@@ -460,7 +467,7 @@ const Page = () => {
                           className="page-scroll btn btn-default"
                           href="javascript:void(0);"
                           id="buy_now_1"
-                          onClick={openModal}
+                          onClick={openDemoAccessModal}
                         >
                           <span>
                             <Image
@@ -473,11 +480,16 @@ const Page = () => {
                           </span>{" "}
                           Enquire Now
                           {
-                            <SoftwareEnquiry
-                              modalStatus={showModal}
-                              toggle={openModal}
-                              title="Cake php CMS Script"
-                            />
+                            // <SoftwareEnquiry
+                            //   modalStatus={showModal}
+                            //   toggle={openModal}
+                            //   title="Cake php CMS Script"
+                            // />
+                            <GetDemoEnquiry
+                    modalStatus={demoAccessModal}
+                    toggle={openDemoAccessModal}
+                    title="WOrdpress Twitter Login Plugin"
+                  />
                           }
                         </Link>
                       </li>

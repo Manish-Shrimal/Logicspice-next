@@ -24,6 +24,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +33,13 @@ const Page = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [jobportal, setJobportal] = useState(false);
   const toggleJobPortalModal = () => setJobportal(!jobportal);
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
 
   const toggleInfo = () => {
     setShowInfo(!showInfo);
@@ -176,17 +185,25 @@ const Page = () => {
                   <span>Fill your basic details and</span>
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
-See how it work yourself!!"
-                      />
+//                       <SoftwareEnquiry
+//                         modalStatus={showModal}
+//                         toggle={openModal}
+//                         title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
+// See how it work yourself!!"
+//                       />
+
+<GetDemoEnquiry
+                    modalStatus={demoAccessModal}
+                    toggle={openDemoAccessModal}
+                    title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
+ See how it works yourself!"
+                  />
+
                     }
                   </div>
                   <Link
@@ -979,15 +996,21 @@ See how it work yourself!!"
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
-See how it work yourself!"
-                    />
+//                     <SoftwareEnquiry
+//                       modalStatus={showModal}
+//                       toggle={openModal}
+//                       title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
+// See how it work yourself!"
+//                     />
+<GetDemoEnquiry
+                    modalStatus={demoAccessModal}
+                    toggle={openDemoAccessModal}
+                    title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
+ See how it works yourself!"
+                  />
                   }
                 </div>
                 <Link

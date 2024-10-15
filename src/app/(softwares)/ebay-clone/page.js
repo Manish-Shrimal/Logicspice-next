@@ -21,6 +21,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 
 const Page = () => {
@@ -173,6 +174,13 @@ const Page = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       <NavBar />
@@ -189,16 +197,22 @@ const Page = () => {
                   <span>Fill your basic details and</span>
                   <div
                     className=" btn-get"
-                    onClick={openModal}
+                    onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="Please fill the form below and get access to the live demo of ebay clone.
-                  .See how it work yourself!"
+                  //     <SoftwareEnquiry
+                  //       modalStatus={showModal}
+                  //       toggle={openModal}
+                  //       title="Please fill the form below and get access to the live demo of ebay clone.
+                  // .See how it work yourself!"
+                  //     />
+
+                  <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of eBay Clone. See how it works yourself!"
                       />
                     }
                   </div>
@@ -2280,7 +2294,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title=" ebay clone."
+                    title=" eBay clone"
                   />
                 }
               </div>

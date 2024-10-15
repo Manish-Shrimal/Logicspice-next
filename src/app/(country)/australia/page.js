@@ -731,7 +731,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={100}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/amcsignpost.jpg"
@@ -778,7 +778,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={100}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 src="/img/globalpages/AU.png"
@@ -798,7 +798,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={100}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/onedbed.png"
@@ -853,7 +853,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={100}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 alt="Global Flags"
@@ -873,7 +873,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={100}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/EmergencyService.png"
@@ -924,7 +924,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={100}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 alt="Global Flags"
@@ -944,7 +944,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={100}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/uloan.jpg"
@@ -992,7 +992,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={100}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 alt = "Globals Flags"

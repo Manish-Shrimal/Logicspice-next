@@ -26,6 +26,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 const Page = () => {
   var settings = {
@@ -147,16 +148,17 @@ const Page = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
   return (
     <>
       <NavBar />
-      <Head>
-        <link
-          rel="canonical"
-          href="https://example.com/blog/original-post"
-          key="canonical"
-        />
-      </Head>
+      
 
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign InventoryManagementBanner">
         <div className="container">
@@ -197,13 +199,18 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openModal}>
+                  <div className="btn btn-get" onClick={openDemoAccessModal}>
                     <button>Enquire Now</button>
                     {
-                      <SoftwareEnquiry
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title={"Inventory Management Software"}
+                      // <SoftwareEnquiry
+                      //   modalStatus={showModal}
+                      //   toggle={openModal}
+                      //   title={"Inventory Management Software"}
+                      // />
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Inventory management software. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1311,14 +1318,20 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Enquiry Now</button>
                   {
-                    <SoftwareEnquiry
-                      modalStatus={showModal}
-                      toggle={openModal}
-                      title="Demo Details For Food Ordering PHP Script"
-                    />
+                    // <SoftwareEnquiry
+                    //   modalStatus={showModal}
+                    //   toggle={openModal}
+                    //   title="Demo Details For Food Ordering PHP Script"
+                    // />
+
+                    <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Inventory management software. See how it works yourself!"
+                      />
                   }
                 </div>
               </div>

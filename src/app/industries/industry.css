@@ -858,7 +858,8 @@ body {
 }
 
 .mobileapp_devcountry_bx {
-  padding: 110px 0 30px;
+  /* padding: 110px 0 30px; */
+  padding: 70px 0;
 }
 
 .mobileapp_devcountry_bx_left_title {
