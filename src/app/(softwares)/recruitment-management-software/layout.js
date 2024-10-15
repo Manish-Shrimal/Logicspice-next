@@ -39,7 +39,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/recruitment-management-software`,
+      canonical: `${Domain}/recruitment-management-software`,
     },
     robots: {
       index: true,

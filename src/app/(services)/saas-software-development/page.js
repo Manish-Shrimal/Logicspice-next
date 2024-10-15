@@ -23,7 +23,6 @@ const Page = () => {
   const [missolutionTab, setMissolutionTab] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };

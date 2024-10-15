@@ -20,7 +20,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -128,6 +127,7 @@ const Page = () => {
     <>
       <NavBar />
 
+      <div className="responsiveWebDesign">
       <section className="d-framework d-framework1 none_space">
         <div className="page_img">
           <Image unoptimized={true}
@@ -513,6 +513,7 @@ const Page = () => {
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </section>
+      </div>
 
       <Footer />
     </>

@@ -179,7 +179,7 @@ const Page = () => {
             <p>
               We at Logicspice provide dedicated QA team & individuals who will
               work exclusively for a client&apos;s project and collaborate with
-              the clientâ€™s staff.
+              the client&apos;s staff.
             </p>
           </div>
         </div>

@@ -40,7 +40,6 @@ const Page = () => {
   });
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -130,7 +129,7 @@ const Page = () => {
     <>
       <NavBar />
 
-      <section className="d-framework d-framework1 none_space">
+<div className="websiteDesign"><section className="d-framework d-framework1 none_space">
         <div className="page_img">
           <Image unoptimized={true}
             width={1000}
@@ -553,7 +552,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </div>
+      </div></div>
+      
 
       <Footer />
     </>

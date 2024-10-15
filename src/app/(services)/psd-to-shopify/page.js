@@ -28,7 +28,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="slider_img shopifyslider_img">
+      <div className="psdToShopify"><section className="slider_img shopifyslider_img">
         <div className="container">
           <div className="slider_inner_img">
             <Image
@@ -629,7 +629,7 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </section>
+      </section></div>
 
       <Footer />
     </>

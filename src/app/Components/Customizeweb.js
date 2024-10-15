@@ -48,7 +48,7 @@ const Customizeweb = () => {
                 development and
                 <a
                   className="inline-link"
-                  href="/services/mobile-app-development/"
+                  href="/mobile-app-development"
                 >
                   {" "}
                   mobile app development{" "}
@@ -58,7 +58,7 @@ const Customizeweb = () => {
                 stand as a leading Laravel development company. Our dedicated
                 <a
                   className="inline-link"
-                  href="/services/laravel-development/"
+                  href="/laravel-development"
                 >
                   {" "}
                   Laravel app development services{" "}

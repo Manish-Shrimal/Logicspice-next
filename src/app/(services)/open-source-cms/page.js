@@ -153,7 +153,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="d-framework d-framework1 none_space">
+      <div className="openSourceCMS"><section className="d-framework d-framework1 none_space">
         <div className="page_img">
           <Image unoptimized={true}
             width={1500}
@@ -177,7 +177,7 @@ const Page = () => {
                 by none and at the same time are highly affordable and effective
                 to make an impact on the audience.
               </p>
-              <h2>Advanced php frameworks for CMS applications:</h2>
+              <h2>Advanced Php Frameworks For CMS Applications:</h2>
               <p>
                 There are various open source platforms like Technology Experts,
                 CakePHP, CodeIgniter, Laravel, Opencart, and Magento to help you
@@ -634,7 +634,8 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section></div>
+      
 
       <Footer />
     </>

@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -181,7 +181,7 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
@@ -982,7 +982,7 @@ See how it work yourself!!"
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Please fill the form below and get access to the live demo of Online Exam Software Solution.
@@ -2013,7 +2013,7 @@ See how it work yourself!"
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title="Online Exam Custom App Development"

@@ -286,11 +286,11 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/whatsapp-clone">
+                              <Link href="/wordpress-ecommerce-website">
                                 <span className="hover_btn_menu ">
-                                  <i className="menu_icon_all whatsapp_clone_icon"></i>
+                                  <i className="menu_icon_all wordpress_ecommerce_icon"></i>
                                 </span>
-                                <span> Whatsapp Clone App</span>
+                                <span>Wordpress eCommerce</span>
                               </Link>
                             </li>
                             <li>
@@ -878,8 +878,8 @@ const Navbar = () => {
                                     src="/img/footer/fleg_icon1.png"
                                     alt="Logicspice Contact No. - UK"
                                   />
-                                  <Link href="tel:+44782-404-8483">
-                                    +44782-404-8483
+                                  <Link href="tel:+44-7880654811">
+                                    +44 7880654811
                                   </Link>
                                 </li>
                                 <li>

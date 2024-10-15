@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
@@ -218,7 +218,7 @@ const Page = () => {
                   <div className=" btn-get" onClick={openModal} style={{ textAlign: "center" }}>
                     <button>Get Demo Access!</button>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Demo Details For Food Ordering PHP Script"
@@ -1347,7 +1347,7 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Demo Details For Food Ordering PHP Script"
@@ -2310,7 +2310,7 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title=" Food Ordering PHP Script"

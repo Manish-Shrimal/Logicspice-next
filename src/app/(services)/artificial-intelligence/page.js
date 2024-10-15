@@ -770,7 +770,7 @@ const Page = () => {
                   <div className="FaqImgBx">
                     <Image
                       unoptimized={true}
-                      width={650}
+                      width={550}
                       height={500 / (100 / 100)}
                       src="/img/laraveldevelopment/FaqLaravelImg.png"
                       alt="laravel web development"

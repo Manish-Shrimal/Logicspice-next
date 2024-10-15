@@ -66,7 +66,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       description: "Default description",
       keywords: "default, keywords",
       alternates: {
-        canonical: `${Domain}/services/advanced-web-programming`,
+        canonical: `${Domain}/advanced-web-programming`,
       },
       robots: {
         index: true,

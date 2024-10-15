@@ -36,7 +36,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/job-portal-script`,
+      canonical: `${Domain}/job-portal-script`,
     },
     robots: {
       index: true,

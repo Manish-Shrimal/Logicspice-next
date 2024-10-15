@@ -61,13 +61,13 @@ const Slidersimple = () => {
                     1800+ projects | 18+ years | 60% repeat clients
                   </p>
                   <Link
-                    href="/company/portfolio"
+                    href="/portfolio"
                     className="btn btn-primary bt34"
                   >
                     PORTFOLIO
                   </Link>{" "}
                   <Link
-                    href="/services/hire-developers"
+                    href="/hire-developers"
                     className="btn btn-default bt234"
                   >
                     HIRE A DEVELOPER
@@ -122,7 +122,7 @@ const Slidersimple = () => {
                   <p>Similar to Daily Deal Software &amp; Coupon Script</p>
                   <Link
                     className="btn btn-primary"
-                    href="/softwares/groupon-clone"
+                    href="/groupon-clone"
                   >
                     KNOW MORE
                   </Link>
@@ -184,7 +184,7 @@ const Slidersimple = () => {
                   <p>Online Micro Job Portal Software and Mobile Apps</p>
                   <Link
                     className="btn btn-primary"
-                    href="/softwares/fiverr-clone"
+                    href="/fiverr-clone"
                   >
                     KNOW MORE
                   </Link>
@@ -258,7 +258,7 @@ const Slidersimple = () => {
                     </p>
                     <Link
                       className="btn btn-primary"
-                      href="/softwares/freelancer-clone"
+                      href="/freelancer-clone"
                     >
                       KNOW MORE
                     </Link>
@@ -310,7 +310,7 @@ const Slidersimple = () => {
                     </p>
                     <Link
                       className="btn btn-primary"
-                      href="/services/laravel-development"
+                      href="/laravel-development"
                     >
                       KNOW MORE
                     </Link>
@@ -358,7 +358,7 @@ const Slidersimple = () => {
                     <p>Empower Your Ads, Expand Your Reach</p>
                     <Link
                       className="btn btn-primary"
-                      href="/softwares/classified-ads-script"
+                      href="/classified-ads-script"
                     >
                       KNOW MORE
                     </Link>

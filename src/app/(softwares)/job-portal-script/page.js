@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useRef, useState } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -181,7 +181,7 @@ const Page = () => {
                   >
                     <a>Get Demo Access!</a>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
@@ -2026,7 +2026,7 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
@@ -3518,7 +3518,7 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <a>Enquire Now</a>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title=" Food Ordering PHP Script"

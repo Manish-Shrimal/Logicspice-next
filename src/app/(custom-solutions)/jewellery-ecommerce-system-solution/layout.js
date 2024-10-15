@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/custom-solutions/jewellery-ecommerce-system-solution`,
+      canonical: `${Domain}/jewellery-ecommerce-system-solution`,
     },
     robots: {
       index: true,

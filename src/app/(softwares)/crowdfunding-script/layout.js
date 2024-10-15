@@ -112,7 +112,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     description: product.data.meta_description,
     keywords: product.data.meta_keyword,
     alternates: {
-      canonical: `${Domain}/softwares/crowdfunding-script`,
+      canonical: `${Domain}/crowdfunding-script`,
     },
     robots: {
       index: true,

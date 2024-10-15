@@ -535,7 +535,7 @@ const Page = () => {
                           1 Lyric Square Hammersmith London W6 0NB
                         </div>
                         <div className="row_of_cont_d">
-                          <label>Phone:</label> +44(0)782-404-8483
+                          <label>Phone:</label> +44 7880654811
                         </div>
                         <div className="row_of_cont_d">
                           <label>Email:</label>

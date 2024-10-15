@@ -232,6 +232,28 @@ section {
     background: #f0104c;
   }
 }
+.laravelDevelopment .laravel_service_box p {
+  padding-top: 15px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 400!important;
+}
+.laravelDevelopment .laravel_core_features_section {
+  background: url(/img/product-img/core_features_bg.jpg) 50% no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  overflow: hidden;
+}
+.laravelDevelopment .laravel_choose_details p {
+  font-weight: 400 !important;
+}
+.laravelDevelopment .LaravelTestimonialSection h2 {
+  text-align: center;
+  color: #303030;
+  font-size: 40px;
+  font-weight: 500 !important;
+  font-family: roboto, sans-serif;
+}
 .LaravelOffers h3 {
   font-size: 20px;
   color: #fff;
@@ -941,6 +963,22 @@ section {
 }
 /*---cakephp-development----*/
 /* .cakephp-development . */
+.cakephp-development .laravel_service_box p {
+  padding-top: 15px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 200!important;
+}
+.cakephp-development .laravel_choose_details p {
+  font-size: 16px;
+  padding-top: 10px;
+  opacity: .8;
+  font-weight: 300!important;
+}
+.cakephp-development .laravel_choose_details b {
+  
+  font-weight: 700!important;
+}
 .cackphp-banner {
   background: #f3f8f9;
   margin-top: 100px;
@@ -958,7 +996,45 @@ section {
   text-decoration: underline;
   text-transform: capitalize;
 }
+
+/* open source CMS */
+.openSourceCMS .d-framework h2 {
+  color: #000;
+  padding: 15px 0 12px;
+  font-size: 20px;
+  font-weight: 700 !important;
+  font-family: "lato", sans-serif !important;
+}
+.openSourceCMS .d-framework a {
+  text-decoration: none !important;
+  color: #3574ac;
+}
+.openSourceCMS .d-framework a:hover {
+  color: #1a5d97;
+}
+
+/* Advanced web programming */
+.advancedWebProgramming .advanced_core_features_section {
+  background: url(/img/product-img/codeigniter_features_bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  overflow: hidden;
+}
+.advancedWebProgramming .laravel_choose_details p {
+  font-family: "roboto", sans-serif !important;
+  font-size: 16px;
+  color: #303030;
+  padding-top: 10px;
+  opacity: 0.8;
+  font-weight: 300 !important;
+}
 /**-codeIgniter--*/
+.codeigniter-development .laravel_choose_details p {
+  font-size: 16px;
+  padding-top: 10px;
+  opacity: .8;
+  font-weight: 300!important;
+}
 .codeIgniter-banner {
   background: url(/img/product-img/codeigniter-development-banner.png) center
     top no-repeat;
@@ -1120,7 +1196,7 @@ section {
   background: url(/img/nodejsdevelopment/node-js-banner.png) center top
     no-repeat;
   background-size: cover;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .nodejs-development .laravel_core_features_section {
   background: url(/img/product-img/advanced-features_bg.jpg) center center
@@ -1184,6 +1260,14 @@ section {
   text-align: center;
   margin-left: 10%;
   position: relative;
+}
+.form_quote input[type="text"]::placeholder {
+  color: #888;
+  opacity: 1; 
+}
+.form_quote textarea::placeholder {
+  color: #888;
+  opacity: 1; 
 }
 .form_top {
   margin-top: -94px;
@@ -1344,6 +1428,47 @@ section {
 .d-choose .text-right {
   border-right: 1px dashed #451095;
 }
+
+/* website Design */
+.websiteDesign .d-framework h2 {
+  color: #000;
+  padding: 15px 0 12px;
+  font-size: 20px;
+  font-weight: 700 !important;
+  font-family: lato,sans-serif;
+}
+.websiteDesign .d-framework a {
+  text-decoration: underline;
+}
+
+/* website redesign */
+.websiteRedesign .d-framework a {
+  text-decoration: underline !important;
+}
+.websiteRedesign .d-framework b {
+  font-weight: 600 !important;
+}
+
+/* responsive web design */
+.responsiveWebDesign  .d-framework h2 {
+  color: #000;
+  padding: 15px 0 12px;
+  font-size: 20px;
+  font-weight: 700 !important;
+  font-family: lato,sans-serif;
+}
+/* hybrid-app-development */
+
+.hybridAppDevelopment .d-framework h2 {
+  color: #000;
+  padding: 15px 0 12px;
+  font-size: 20px;
+  font-weight: 700 !important;
+  font-family: lato,sans-serif;
+}
+.hybridAppDevelopment .d-framework a {
+  text-decoration: underline;
+}
 /*---android-app-development----*/
 .iphone_template_header {
   background: url(/img/iosappdevelopment/iphone_app_header_bg.png) center
@@ -1369,7 +1494,7 @@ section {
 }
 .iphone_template_header_right {
   padding-right: 50px;
-  padding-top: 100px;
+  padding-top: 60px;
   text-align: center;
   position: relative;
 }
@@ -3122,9 +3247,12 @@ section.yellow_slider .slidere-tittle h1 {
   padding-bottom: 26px;
   font-weight: 700 !important;
 }
+.saas_development {
+  font-family: "Lato", sans-serif !important;
+}
 .saas_development section.yellow_slider .slidere-tittle h1 {
   color: #fff;
-  font-size: 35px;
+  font-size: 43px;
   padding-bottom: 26px;
   font-weight: normal !important;
 }
@@ -3188,7 +3316,7 @@ section.new-why-choose-section.sass_title {
 .new-why-choose-section h2 {
   text-align: center;
   color: #451095;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 600 !important;
   padding-bottom: 40px;
 }
@@ -3357,6 +3485,13 @@ section.new-why-choose-section.sass_title h2 span {
   right: 48%;
   top: auto;
   bottom: -60px;
+}
+.php-development .laravel_core_features_section {
+  background: url(/img/product-img/codeigniter_features_bg.jpg) center center
+  no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  overflow: hidden;
 }
 /*---mobile-app-development--*/
 .mobileapp-deve_header {
@@ -3888,7 +4023,7 @@ section.new-why-choose-section.sass_title h2 span {
 
 .ReactNavtive-descriptions .laravel_img,
 .python-descriptions .laravel_img {
-  padding-top: 90px;
+  padding-top: 160px;
 }
 /*-------React------*/
 .ReactNavtiveAppBanner {
@@ -3978,6 +4113,18 @@ section.new-why-choose-section.sass_title h2 span {
   padding: 26px 22px;
   min-height: 134px;
 }
+.artificialIntelligence .laravel_service_box p {
+  padding-top: 15px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 400!important;
+}
+.artificialIntelligence .laravel_core_features_section {
+  background: url(/img/product-img/core_features_bg.jpg) 50% no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  overflow: hidden;
+}
 /*---software-testing-services----*/
 .inner-qa-section {
   background: #355355;
@@ -4012,6 +4159,7 @@ section.new-why-choose-section.sass_title h2 span {
   color: #000000;
   font-size: 32px;
   font-weight: 600 !important;
+  font-family: 'lato', sans-serif !important;
 }
 .about-qa-section .jumbotron p {
   color: #4e4e4e !important;
@@ -4159,6 +4307,12 @@ section.new-why-choose-section.sass_title h2 span {
   padding-right: 20px;
 }
 /*---opencart--*/
+.openCartDevelopment .laravel_core_features_section {
+  background: url(/img/product-img/codeigniter_features_bg.jpg) 50% no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  overflow: hidden;
+}
 .opencart-banner {
   background: url(/img/opencartdevelopment/opencart-banner.jpg) center top
     no-repeat;
@@ -4175,6 +4329,13 @@ section.new-why-choose-section.sass_title h2 span {
   padding: 300px 0 0;
 }
 /*------------*/
+
+.magentoDevelopment .advanced_core_features_section {
+  background: url(/img/product-img/codeigniter_features_bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  overflow: hidden;
+}
 .magento-banner {
   background: url(/img/magentodevelopment/magento-banner.jpg) center top
     no-repeat;
@@ -4189,6 +4350,22 @@ section.new-why-choose-section.sass_title h2 span {
 .megento-descriptions .laravel_img {
   text-align: center;
   padding: 300px 0 0;
+}
+
+/* wordpress web development */
+.wordpressWebdevelopment .advanced_core_features_section {
+    background: url(/img/product-img/codeigniter_features_bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    overflow: hidden;
+}
+.wordpressWebdevelopment .laravel_choose_details p {
+    font-family: 'roboto', sans-serif;
+    font-size: 16px;
+    color: #303030;
+    padding-top: 10px;
+    opacity: 0.8;
+    font-weight: 300 !important;
 }
 
 /**--------*/
@@ -4317,7 +4494,7 @@ section.new-why-choose-section.sass_title h2 span {
 .d-framework p a {
   color: rgb(49, 170, 225);
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: underline !important;
   text-transform: capitalize;
 }
 .benefitsHybrid {
@@ -4440,7 +4617,7 @@ section.new-why-choose-section.sass_title h2 span {
   background: #03143e;
 }
 .WebsiteRedesignServicecontainer {
-  padding: 30px 0 0 30px;
+  padding: 30px 0 0 50px;
 }
 .WebSiteRedesignEnqury {
   text-align: center;
@@ -4846,6 +5023,7 @@ section.pwa_developent_slider {
 section.pwa_developent_slider .slidere-tittle h1 {
   font-size: 35px !important;
   font-weight: 600 !important;
+  font-family: "lato", sans-serif !important;
 }
 .pwa_developent_slider .images-section {
   text-align: center;
@@ -5387,11 +5565,28 @@ section.header-partnership {
 .business-partner img {
   display: inline-block;
 }
+/* PSD-HTML */
+.psdtoHtml .slider_img {
+  background: url("/img/psdtowordpress/psdshopify_bg.png") no-repeat
+    scroll center center;
+  padding: 90px 0 50px;
+  margin-top: 100px;
+  background-size: cover;
+}
+.psdToShopify .adeptness_content a{
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+}
+.psdToShopify .sbucint a{
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+}
 /*------psd-to-wordpress------*/
+.psd-wordpress .slider_inner_img {
+  text-align: left !important;
+}
 .slider_img {
   background: url("/img/psdtowordpress/psd_to_wordpres_header_bg.png") no-repeat
     scroll center center;
-  padding: 70px 0 50px;
+  padding: 90px 0 50px;
   margin-top: 100px;
   background-size: cover;
 }
@@ -6219,6 +6414,12 @@ section.header-partnership {
 
 .supportMaintainence .support-det-ail img {
   float: right;
+}
+.supportMaintainence .support-det-ail a {
+  color: #31aae1;
+  font-weight: bold;
+  text-decoration: underline !important;
+
 }
 .country_head {
   background-image: url(/img/softwaremaintenancesupport/h_bg.png);
@@ -7648,7 +7849,7 @@ background: linear-gradient(to right,  #e9e5ff 0%,#e8cdff 100%); /* W3C, IE10+, 
 }
 
 .VideoCreationDescription {
-	background: url(/img/images/videocreation/video-creation-bg.jpg) center center no-repeat;
+	background: url(/img/videocreation/video-creation-bg.jpg) center center no-repeat;
 	background-size: cover;
 }
 

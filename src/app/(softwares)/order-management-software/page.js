@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -135,7 +135,7 @@ const Page = () => {
                   >
                     <button>Enquire Now</button>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Order Management Software"
@@ -1000,7 +1000,7 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Order Management Software"
@@ -1667,7 +1667,7 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <a>Enquire Now</a>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title="Order Management Software"

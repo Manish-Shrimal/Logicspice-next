@@ -28,7 +28,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="d-framework d-framework1 none_space">
+      <div className="hybridAppDevelopment"><section className="d-framework d-framework1 none_space">
         <div className="hibrid-app-top">
           <div className="container">
             <div className="row">
@@ -65,7 +65,7 @@ const Page = () => {
                   <div className="btn btn-primary" onClick={openModal}>
                     <a>Quick Inquiry</a>
                     {
-                      <Enquirymodal
+                      <Contactusmodel
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Request To Hire Hybrid mobile app Developers"
@@ -505,7 +505,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </section>
+      </section></div>
+      
       <Footer />
     </>
   );

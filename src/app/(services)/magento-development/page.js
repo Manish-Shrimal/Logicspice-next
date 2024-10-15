@@ -38,7 +38,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -49,7 +48,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="laravel-banner magento-banner">
+      <div className="magentoDevelopment"><section className="laravel-banner magento-banner">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6">
@@ -93,7 +92,7 @@ const Page = () => {
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
                 <Image
-                  width={300}
+                  width={380}
                   height={500 / (100 / 100)}
                   src="/img/magentodevelopment/magento-banner-img.png"
                   alt="Magento Web Development"
@@ -787,7 +786,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </div>
+      </div></div>
+      
 
       <Footer />
     </>

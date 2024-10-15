@@ -25,6 +25,8 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const [buyerTab, setBuyerTab] = useState(true);
@@ -235,7 +237,7 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Please fill the form below and get access to the live demo of Classified Ads software
@@ -1118,7 +1120,7 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Please fill the form below and get access to the live demo of Classified Ads software
@@ -1899,7 +1901,7 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title=" Classified Ads software"

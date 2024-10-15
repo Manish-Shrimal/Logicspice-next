@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/event-booking-software`,
+      canonical: `${Domain}/event-booking-software`,
     },
     robots: {
       index: true,

@@ -7,6 +7,8 @@ import Image from "next/image";
 
 const Ourclient = () => {
   var settings = {
+    nav: true,
+    arrows: true,
     dots: false,
     infinite: true,
     speed: 500,
@@ -178,3 +180,9 @@ const Ourclient = () => {
 };
 
 export default Ourclient;
+
+
+
+
+
+

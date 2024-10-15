@@ -92,12 +92,12 @@ a:focus {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
   font-family: "roboto", sans-serif !important;
 }
 
@@ -1714,7 +1714,7 @@ bread-top {
 .header.home-header {
   position: fixed;
   background-color: rgba(255, 255, 255, 1);
-  border-bottom: 2px solid #eee;
+  /* border-bottom: 2px solid #eee; */
   z-index: 999;
 }
 
@@ -1782,7 +1782,7 @@ bread-top {
 
   box-shadow: none;
   background-color: rgba(255, 255, 255, 1);
-  border-bottom: 2px solid #eee;
+  /* border-bottom: 2px solid #eee; */
   z-index: 999;
 }
 
@@ -7578,3 +7578,8 @@ section {
   left: var(--swiper-navigation-sides-offset, -6px)!important ;
   right: auto;
 }
+
+/* .slick-prev:before, .slick-next:before{
+  color: black !important;
+  background: transparent !important;
+} */

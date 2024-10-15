@@ -18,7 +18,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -31,7 +30,7 @@ const Page = () => {
     <>
     
       <NavBar />
-      <section className="slider_img">
+      <div className="psd-wordpress"><section className="slider_img">
         <div className="container">
           <div className="slider_inner_img">
             <Image unoptimized={true}
@@ -175,7 +174,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/pixcel_perfect_icon.png"
@@ -232,7 +231,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_responsive_icon.png"
@@ -250,7 +249,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={50}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_optimised_icon.png"
@@ -267,7 +266,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_efficient_icon.png"
@@ -301,7 +300,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/admin_interface_icon.png"
@@ -318,7 +317,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_fast_loading_icon.png"
@@ -335,7 +334,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/privacy_support_icon.png"
@@ -352,7 +351,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_searchengine_icon.png"
@@ -369,7 +368,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_widget_icon.png"
@@ -386,7 +385,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_best_price_icon.png"
@@ -402,7 +401,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/list_outstanding_icon.png"
@@ -418,7 +417,7 @@ const Page = () => {
               <div className="adeptness_psd_col_inner">
                 <div className="adeptness_psd_icon_box">
                   <Image unoptimized={true}
-                    width={60}
+                    width={40}
                     height={100}
                     alt="PSD to Wordpress Conversion Services"
                     src="/img/psdtowordpress/security_icon_psd.png"
@@ -616,7 +615,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </section>
+      </section></div>
+      
 
       <Footer />
     </>

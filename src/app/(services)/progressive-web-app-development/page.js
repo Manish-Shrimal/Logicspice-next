@@ -23,7 +23,6 @@ const Page = () => {
   const [missolutionTab, setMissolutionTab] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -82,15 +81,15 @@ const Page = () => {
                 </p>
               </div>
               <div className="btn_align">
-                <div className="btn btn-primary" onClick={openModal}>
+                <div className="btn btn-primary" onClick={toggleModal}>
                   <a>Enquire Now</a>
-                  {
+                  {/* {
                     <Enquirymodal
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Progressive Web Apps Development"
                     />
-                  }
+                  } */}
                 </div>
                 <Link
                   href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"

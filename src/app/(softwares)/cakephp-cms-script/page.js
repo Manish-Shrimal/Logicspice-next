@@ -17,6 +17,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
@@ -537,7 +538,7 @@ const Page = () => {
                           </span>{" "}
                           Enquire Now
                           {
-                            <Enquirymodal
+                            <SoftwareEnquiry
                               modalStatus={showModal}
                               toggle={openModal}
                               title="Cake php CMS Script"

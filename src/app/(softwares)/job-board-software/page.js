@@ -20,6 +20,9 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+
+
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -181,7 +184,7 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
@@ -269,7 +272,7 @@ const Page = () => {
                     >
                       <button>Start Free Trial</button>
                       {
-                        <Enquirymodal
+                        <SoftwareEnquiry
                           modalStatus={showModal}
                           toggle={openModal}
                           title="Please fill the form Vedanta"
@@ -1740,7 +1743,7 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
@@ -3575,7 +3578,7 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title="Job Board Software"

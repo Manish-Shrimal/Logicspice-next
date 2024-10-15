@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/linkedin-clone`,
+      canonical: `${Domain}/linkedin-clone`,
     },
     robots: {
       index: true,

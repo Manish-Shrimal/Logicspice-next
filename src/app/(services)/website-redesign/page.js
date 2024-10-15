@@ -26,8 +26,8 @@ const Page = () => {
   //   resposive: true,
   // };
   var settings = {
-    dots: true, // Enable dots for better mobile UX
-    arrows: false, // Disable arrows for smaller screens, dots will suffice
+    dots: false, // Enable dots for better mobile UX
+    arrows: true, // Disable arrows for smaller screens, dots will suffice
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -81,7 +81,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -93,6 +92,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
+      <div className="websiteRedesign">
       <section className="WebDevelopmentBanner WebsiteRedesignBanner">
         <div className="container">
           <div className="row">
@@ -248,7 +248,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon1.png"
                       alt="Website Redesign Services"
@@ -268,7 +268,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon2.png"
                       alt="Website Redesign Services"
@@ -288,7 +288,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon5.png"
                       alt="Website Redesign Services"
@@ -309,7 +309,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon7.png"
                       alt="Website Redesign Services"
@@ -330,7 +330,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon3.png"
                       alt="Website Redesign Services"
@@ -351,7 +351,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon4.png"
                       alt="Website Redesign Services"
@@ -372,7 +372,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={90}
                       height={100}
                       src="/img/webdevelopment/web-design-icon6.png"
                       alt="Website Redesign Services"
@@ -393,7 +393,7 @@ const Page = () => {
                 <div className="WebDesignDevelopmentBx">
                   <i>
                     <Image unoptimized={true}
-                      width={100}
+                      width={70}
                       height={100}
                       src="/img/webdevelopment/web-design-icon8.png"
                       alt="Website Redesign Services"
@@ -506,7 +506,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -516,7 +516,7 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestRed">
                   <div className="WebProjectLogo">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/salesagy-logo.png"
                       alt="Website Redesign Services"
@@ -561,7 +561,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -584,7 +584,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://jobathome.fr/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -612,7 +612,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -622,7 +622,7 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestGreen">
                   <div className="WebProjectLogo">
                     <Image unoptimized={true}
-                      width={100}
+                      width={200}
                       height={100}
                       src="/img/webdevelopment/fundcareusa-logo.png"
                       alt="Website Redesign Services"
@@ -634,7 +634,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://fundcareusa.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -662,7 +662,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -673,7 +673,7 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestTacksm">
                   <div className="WebProjectLogo">
                     <Image unoptimized={true}
-                      width={100}
+                      width={200}
                       height={100}
                       src="/img/webdevelopment/tacksm-logo.png"
                       alt="Website Redesign Services"
@@ -685,7 +685,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://tacksm.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -713,7 +713,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -724,7 +724,7 @@ const Page = () => {
                 <div className="WebLatestProjectsSlide WebLatestVanessajo">
                   <div className="WebProjectLogo">
                     <Image unoptimized={true}
-                      width={100}
+                      width={240}
                       height={100}
                       src="/img/webdevelopment/vanessajo-logo.png"
                       alt="Website Redesign Services"
@@ -736,7 +736,7 @@ const Page = () => {
                   </p>
                   <div className="WebProjectInfo">
                     <div className="WebProjectInfoLeft">
-                      <a href="https://salesagy.com/" target="_blank">
+                      <a href="https://www.vanessajo-ann.com/" target="_blank">
                         <i
                           className="fa-solid fa-earth-americas"
                           aria-hidden="true"
@@ -764,7 +764,7 @@ const Page = () => {
                   </div>
                   <div className="RingImg">
                     <Image unoptimized={true}
-                      width={100}
+                      width={170}
                       height={100}
                       src="/img/webdevelopment/ring-img.png"
                       alt="Website Redesign Services"
@@ -941,6 +941,7 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
+      </div>
       </div>
 
       <Footer />

@@ -40,7 +40,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/groupon-clone`,
+      canonical: `${Domain}/groupon-clone`,
     },
     robots: {
       index: true,

@@ -28,7 +28,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };
@@ -40,7 +39,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <section className="laravel-banner advanced-web-banner">
+      <div className="advancedWebProgramming"><section className="laravel-banner advanced-web-banner">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6">
@@ -83,8 +82,9 @@ const Page = () => {
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6">
               <div className="page_img">
-                <Image
-                  width={300}
+                <Image unoptimized={true}
+                
+                  width={400}
                   height={500 / (100 / 100)}
                   src="/img/advancedwebprogramming/advanced-web-development-img.png"
                   alt="Advanced Web Application Development"
@@ -99,8 +99,8 @@ const Page = () => {
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
-                <Image
-                  width={350}
+                <Image unoptimized={true}
+                  width={310}
                   height={500 / (100 / 100)}
                   src="/img/advancedwebprogramming/advanced-logo-img.png"
                   alt="Advanced Web Application Development"
@@ -160,14 +160,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box1">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon1.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -192,14 +192,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon2.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -224,14 +224,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box3">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon3.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -256,14 +256,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box4">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/codeigniter-new-icon3.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -287,14 +287,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box5">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/codeigniter-new-icon4.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -319,14 +319,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box2">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/codeigniter-new-icon5.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -351,14 +351,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box7">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon4.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -383,14 +383,14 @@ const Page = () => {
                 <div className="laravel_service_box ">
                   <div className="laravel-services-icon laravel_service_box8">
                     <i>
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="widout-hover"
                         src="/img/advancedwebprogramming/advanced-web-new-icon5.png"
                         alt="Advanced Web Application Development"
                       />
-                      <Image
+                      <Image unoptimized={true}
                         width={80}
                         height={100}
                         className="on-hover"
@@ -427,7 +427,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/advancedwebprogramming/cackphp_features_icon3.png"
@@ -447,7 +447,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/advancedwebprogramming/advanced_features_icon1.png"
@@ -467,7 +467,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/advancedwebprogramming/advanced_features_icon2.png"
@@ -486,7 +486,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/advancedwebprogramming/advanced_features_icon3.png"
@@ -505,7 +505,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/advancedwebprogramming/advanced_features_icon4.png"
@@ -525,7 +525,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
-                    <Image
+                    <Image unoptimized={true}
                       width={50}
                       height={100}
                       src="/img/advancedwebprogramming/core_features_icon6.png"
@@ -556,7 +556,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img1">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/advancedwebprogramming/advances-why-icon1.png"
@@ -576,7 +576,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/advancedwebprogramming/advances-why-icon2.png"
@@ -596,7 +596,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6 " data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/advancedwebprogramming/cackphp-why-icon2.png"
@@ -616,7 +616,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img4">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/advancedwebprogramming/codeigniter-why-icon4.png"
@@ -636,7 +636,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
                 <div className="libraries_laravel_choose">
                   <div className="laravel_choose_features_img laravel_choose_features_img5">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/advancedwebprogramming/advances-why-icon3.png"
@@ -656,7 +656,7 @@ const Page = () => {
               <div className="col-sm-6 col-md-6" data-aos="fade-left">
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img6">
-                    <Image
+                    <Image unoptimized={true}
                       width={60}
                       height={100}
                       src="/img/advancedwebprogramming/advances-why-icon4.png"
@@ -695,7 +695,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image
+            <Image unoptimized={true}
               width={50}
               height={100}
               src="/img/images/whatsapp.png"
@@ -706,7 +706,8 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
-      </div>
+      </div></div>
+      
 
       <Footer />
     </>

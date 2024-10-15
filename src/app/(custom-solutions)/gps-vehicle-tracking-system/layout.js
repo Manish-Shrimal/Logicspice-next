@@ -38,7 +38,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/custom-solutions/gps-vehicle-tracking-system`,
+      canonical: `${Domain}/gps-vehicle-tracking-system`,
     },
     robots: {
       index: true,

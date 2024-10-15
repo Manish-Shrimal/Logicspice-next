@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     description: product.data.meta_description,
     keywords: product.data.meta_keyword,
     alternates: {
-      canonical: `${Domain}/softwares/grocery-app-development`,
+      canonical: `${Domain}/grocery-app-development`,
     },
     robots: {
       index: true,

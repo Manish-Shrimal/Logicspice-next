@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/forum-script`,
+      canonical: `${Domain}/forum-script`,
     },
     robots: {
       index: true,

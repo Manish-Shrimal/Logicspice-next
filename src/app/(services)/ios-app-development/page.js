@@ -76,7 +76,7 @@ const Page = () => {
                   height={500 / (100 / 100)}
                   className="normal_logo"
                   alt="Android Applications Developmenr Company"
-                  src="/img/iosappdevelopment/android-phone.png"
+                  src="/img/iosappdevelopment/test2.png"
                 />
               </div>
             </div>
@@ -99,14 +99,8 @@ const Page = () => {
                     <span>Portfolio</span>
                   </Link> */}
                   <div className="btn btn-primary" onClick={openModal}>
-                    <button>Portfolio</button>
-                    {
-                      <Enquirymodal
-                        modalStatus={showModal}
-                        toggle={openModal}
-                        title="IOS Developer"
-                      />
-                    }
+                    <Link href="/portfolio">Portfolio</Link>
+                    
                   </div>
                   <div className="btn btn-primary" onClick={openModal}>
                     <button>Enquiry Now</button>

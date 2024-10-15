@@ -19,6 +19,8 @@ import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton } from "@mui/material";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -118,7 +120,7 @@ const Page = () => {
                 <div className="btn btn-primary" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="FAQ Script"
@@ -508,7 +510,7 @@ const Page = () => {
                           </span>{" "}
                           Enquire Now
                           {
-                            <Enquirymodal
+                            <SoftwareEnquiry
                               modalStatus={showModal}
                               toggle={openModal}
                               title="Contact form php Script"

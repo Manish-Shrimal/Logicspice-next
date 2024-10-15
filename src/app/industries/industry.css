@@ -26,7 +26,11 @@ body {
   width: 100%;
 }
 .banner-text {
-  padding: 135px 0;
+  /* padding: 135px 0; */
+  max-width: 65%;
+  padding: 164px 0;
+  text-align: left;
+  width: 100%;
 }
 .banner-text h1 {
   font-size: 50px !important;
@@ -81,6 +85,9 @@ body {
 .service-row {
   padding: 0 20px;
   text-align: center;
+  margin-bottom: 30px;
+  min-height: 235px;
+ 
 }
 
 .service-text {
@@ -1534,6 +1541,17 @@ color: #fff!important;
   width: 30px;
 }
 
+.hire-step::after {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 30px;
+  right: 0;
+  position: absolute;
+  top: -15px;
+  width: 30px;
+}
+
 .hire-step > li {
   float: left;
   padding-top: 60px;
@@ -1610,7 +1628,8 @@ color: #fff!important;
   background: #fff none repeat scroll 0 0;
   border: 1px solid #ddd;
   padding: 4px 6px 25px;
-  margin-right: 1px;
+  margin-right: 10px!important;
+  width: 96%!important;
 }
 
 .ind_cat.hotel {
@@ -1757,4 +1776,70 @@ background-color:rgba(0,0,0,0);
 border-radius:10px
 
 }
+
+.country-modal .modal-header{
+  background-color: #451095;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.country-modal .modal-header .modal-title{
+  color: #fff;
+}
+
+.country-modal li{
+  float: left!important;
+  list-style: inside!important;
+  padding: 5px 0!important;
+  width: 50%!important;
+  color: #451095!important;
+  text-align: start!important;
+}
+
+.country-modal ul{
+  min-height: 0!important;
+}
+
+.country-modal .close{
+  margin-top: -2px!important;
+  color: #fff!important;
+  opacity: 1!important;
+  font-size: 21px!important;
+  font-weight: 700!important;
+  float: right!important;
+  display: flex !important;
+  justify-content: end!important;
+}
+
+.country-modal .modal-footer{
+  border-top: 1px solid #e5e5e5!important;
+}
+
+
+.global_case_study .custom-prev-arrow, .custom-next-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.global_case_study .custom-prev-arrow, .custom-next-arrow .fa {
+font-size: 30px !important;
+color: #000!important;
+}
+
+.global_case_study  .custom-prev-arrow {
+  left: -10px; /* Adjust this value as per your design */
+}
+
+.global_case_study  .custom-next-arrow {
+  right: -10px; /* Adjust this value as per your design */
+}
+
+.country-modal {
+  margin-top: 90px!important;
+}
+
 

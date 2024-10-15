@@ -66,6 +66,7 @@ const Page = () => {
     <>
       <NavBar />
 
+      <div className="laravelDevelopment">
       <section className="laravel-banner LaravelBanners">
         <div className="LaravelLeftImg">
           <Image
@@ -278,10 +279,10 @@ const Page = () => {
                     className="LaravelBlog"
                     href="https://blog.logicspice.com/how-laravel-development-helps-startups-build-scalable-web-applications"
                   >
-                    Laravel web development
+                    Laravel web development company?
                   </a>{" "}
                   {""}
-                  company? Welcome to LogicSpice, where we specialize in
+                   Welcome to LogicSpice, where we specialize in
                   creating exceptional websites and applications that can take
                   your business to new heights.
                 </p>
@@ -610,7 +611,7 @@ const Page = () => {
                     <p>
                       Laravel take care that right class is called at the right
                       time. It does it automatically reducing a lot of work from
-                      developerâ€™s side.
+                      developer&apos;s side.
                     </p>
                   </div>
                 </div>
@@ -1172,18 +1173,7 @@ const Page = () => {
                       </p>
                     </MDBAccordionItem>
 
-                    <MDBAccordionItem
-                      headerTitle="Can I remove your company proprietary notices?"
-                      collapseId="flush-collapse6"
-                    >
-                      <p>
-                        With an extra charge for that, you are allowed to modify
-                        the branding there. You can remove our company
-                        information and put yours. But you cannot put
-                        &quot;copyright by&quot; because only Logicspice owns
-                        the copyrights for our softwares.
-                      </p>
-                    </MDBAccordionItem>
+                   
                   </MDBAccordion>
                 </div>
               </div>
@@ -1208,6 +1198,7 @@ const Page = () => {
         <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
+      </div>
       </div>
 
       <Footer />

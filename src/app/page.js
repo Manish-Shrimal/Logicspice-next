@@ -1,4 +1,7 @@
+// "use client";
 import Layout from "./layout";
+// import React, { useState, useEffect } from "react";
+
 import NavBar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Link from "next/link";
@@ -13,17 +16,23 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import "./resposive.css";
 import Image from "next/image";
 import Servercomponents from "./Components/Servercomponents";
+import "aos/dist/aos.css"; // Import AOS CSS
+import AOS from "aos"; // Import AOS
 
 // import React, { useState } from "react";
 
 const Page = () => {
+
+  // useEffect(() => {
+  //   AOS.init(); // Initialize AOS
+  // }, []);
   return (
     <>
       <NavBar />
       <div className="home-slider">
-      <div className="container">
-        <Slidersimple />
-      </div>
+        <div className="container">
+          <Slidersimple />
+        </div>
       </div>
 
       <section className="ServicesNewSection">
@@ -207,7 +216,7 @@ const Page = () => {
             <div className="row">
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/fiverr-clone/"
+                  href="/fiverr-clone"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -260,7 +269,7 @@ const Page = () => {
 
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/softwares/job-board-software/"
+                  href="/job-board-software"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -312,7 +321,7 @@ const Page = () => {
               </div>
               <div className="col-md-3 col-sm-3">
                 <Link
-                  href="/service-marketplace-script/"
+                  href="/service-marketplace-script"
                   className="ready-product aos-init aos-animate"
                   data-aos="fade-up"
                 >
@@ -1006,28 +1015,68 @@ const Page = () => {
 
       <section className="ind-we-serv">
         <div class="IndustriesIcon1">
-          <Image width={100} height={100} src="/img/home/industries/icon1.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon1.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon2">
-          <Image width={100} height={100} src="/img/home/industries/icon2.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon2.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon3">
-          <Image width={100} height={100} src="/img/home/industries/icon3.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon3.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon4">
-          <Image width={100} height={100} src="/img/home/industries/icon4.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon4.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon5">
-          <Image width={100} height={100} src="/img/home/industries/icon5.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon5.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon6">
-          <Image width={100} height={100} src="/img/home/industries/icon6.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon6.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon7">
-          <Image width={100} height={100} src="/img/home/industries/icon7.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon7.png"
+            alt=""
+          />
         </div>
         <div class="IndustriesIcon8">
-          <Image width={100} height={100} src="/img/home/industries/icon8.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/home/industries/icon8.png"
+            alt=""
+          />
         </div>
         <div className="container">
           <div className="headings headings_white">

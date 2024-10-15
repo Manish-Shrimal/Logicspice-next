@@ -458,7 +458,7 @@ const Page = () => {
                 </Link>
               </div>
               <div className="col-md-4 col-sm-4 padding-no">
-                <Link href="/ecommerce-development">
+                <Link href="/ecommerce-website">
                   <div className="our-services-bx right-none">
                     <div className="our-services-img">
                       <Image

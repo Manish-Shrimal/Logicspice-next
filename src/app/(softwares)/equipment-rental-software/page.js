@@ -23,6 +23,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+
 const Page = () => {
   var settings = {
     dots: true,
@@ -186,7 +188,7 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                      <Enquirymodal
+                      <SoftwareEnquiry
                         modalStatus={showModal}
                         toggle={openModal}
                         title="Please fill the form below and get access to the live demo of Equipment Rental Script
@@ -1280,7 +1282,7 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Get Demo Access!</button>
                   {
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Please fill the form below and get access to the live demo of Equipment Rental Script
@@ -2317,7 +2319,7 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title=" Classified Ads software"

@@ -10,7 +10,7 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../../resposive.css";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -332,7 +332,7 @@ const Page = () => {
                         </span>{" "}
                         Enquire Now
                         {
-                          <Enquirymodal
+                          <SoftwareEnquiry
                             modalStatus={showModal}
                             toggle={openModal}
                             title="Social Network Integration For Android"
@@ -404,7 +404,7 @@ const Page = () => {
                           </span>{" "}
                           Enquire Now
                           {
-                            <Enquirymodal
+                            <SoftwareEnquiry
                               modalStatus={showModal}
                               toggle={openModal}
                               title="Cake php CMS Script"

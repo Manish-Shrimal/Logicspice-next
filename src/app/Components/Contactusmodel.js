@@ -457,7 +457,7 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                             alt=""
                           />
                         </i>
-                        <span>+44782-404-8483</span>
+                        <span>+44 7880654811</span>
                       </div>
                       <div className="logicspice-call-dtl">
                         <i>

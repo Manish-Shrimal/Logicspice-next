@@ -20,6 +20,8 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+
 
 
 import "slick-carousel/slick/slick-theme.css";
@@ -196,7 +198,7 @@ const Page = () => {
                     style={{ textAlign: "center" }}
                   >
                     Live Demo
-                    <Enquirymodal
+                    <SoftwareEnquiry
                       modalStatus={showModal}
                       toggle={openModal}
                       title="Please fill the form below and get access to the live demo of Whatsapp Clone.
@@ -1280,7 +1282,7 @@ See how it work yourself!"
               <div className="btn btn-primary" onClick={openModal}>
                 <a>Enquire Now</a>
                 {
-                  <Enquirymodal
+                  <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title="Blog Script"

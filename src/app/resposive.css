@@ -3577,21 +3577,20 @@
   }
 
   .contact-modal .modal-content {
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .form-group.buttonSubmit {
-    flex-direction: column; 
+    flex-direction: column;
   }
-  .form-group-google, .form-group-btn {
+  .form-group-google,
+  .form-group-btn {
     width: 100%;
     text-align: center;
   }
   .form-group-btn button {
-    width: 100%; 
+    width: 100%;
   }
-
-
 
   .contact-modal .modal-dialog {
     margin: 0;

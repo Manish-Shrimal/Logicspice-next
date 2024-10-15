@@ -39,7 +39,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/softwares/social-network-integration-in-android-app`,
+      canonical: `${Domain}/social-network-integration-in-android-app`,
     },
     robots: {
       index: true,

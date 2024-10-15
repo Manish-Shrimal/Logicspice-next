@@ -38,7 +38,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/custom-solutions/erp-system-software-development`,
+      canonical: `${Domain}/erp-system-software-development`,
     },
     robots: {
       index: true,

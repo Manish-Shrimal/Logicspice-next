@@ -69,7 +69,7 @@ const Page = () => {
      
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-8">
+            <div className="col-xs-12 col-sm-6 col-md-7"> 
               <div className="laravel-banner-txt">
                 <h1>
                   <strong className="LaravelBannerHadding">Video</strong>{" "}
@@ -121,10 +121,10 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-6 col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-5">
               <div className="page_img LaravelBannerImg">
                 <Image
-                  width={240}
+                  width={450}
                   height={500 / (100 / 100)}
                   src="/img/videocreation/video-creation-banner-img.png"
                   alt="Creation Services"
@@ -144,7 +144,7 @@ const Page = () => {
                 <Image
                   width={310}
                   height={500 / (100 / 100)}
-                  src="/img/laraveldevelopment/laravel-logo-img.png"
+                  src="/img/videocreation/video-creation-img.png"
                   alt="laravel web development"
                 />
               </div>
@@ -297,14 +297,14 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon1.png"
+                        src="/img/videocreation/corporate-video-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon1.png"
+                        src="/img/videocreation/corporate-video-white-icon.png"
                         alt="laravel web development"
                       />
                       <div className="mask"></div>
@@ -327,14 +327,14 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon2.png"
+                        src="/img/videocreation/promotional-videos-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon2.png"
+                        src="/img/videocreation/promotional-videos-white-icon.png"
                         alt="laravel web development"
                       />
                       <div className="mask"></div>
@@ -356,14 +356,14 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon3.png"
+                        src="/img/videocreation/animated-videos-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon3.png"
+                        src="/img/videocreation/animated-videos-white-icon.png"
                         alt="laravel web development"
                       />
                       <div className="mask"></div>
@@ -385,14 +385,14 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon4.png"
+                        src="/img/videocreation/social-media-videos-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon4.png"
+                        src="/img/videocreation/social-media-videos-white-icon.png"
                         alt="laravel web development"
                       />
                       <div className="mask"></div>
@@ -414,14 +414,14 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon5.png"
+                        src="/img/videocreation/explainer-videos-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon5.png"
+                        src="/img/videocreation/explainer-videos-white-icon.png"
                         alt="laravel web development"
                       />
                       <div className="mask"></div>
@@ -443,14 +443,14 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon6.png"
+                        src="/img/videocreation/video-editing-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon6.png"
+                        src="/img/videocreation/video-editing-white-icon.png"
                         alt="laravel web development"
                       />
                       <div className="mask"></div>
@@ -485,7 +485,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon1.png"
+                      src="/img/videocreation/concept-development-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -506,7 +506,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon4.png"
+                      src="/img/videocreation/professional-filming-icon.png"
                       alt="img4"
                     />
                   </div>
@@ -527,7 +527,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon2.png"
+                      src="/img/videocreation/creative-editing-icon.png"
                       alt="img2"
                     />
                   </div>
@@ -547,7 +547,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/videocreation/animation-motion-graphics-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -566,7 +566,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon3.png"
+                      src="/img/videocreation/sound-design-icon.png"
                       alt="img3"
                     />
                   </div>
@@ -587,7 +587,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon6.png"
+                      src="/img/videocreation/customization-icon.png"
                       alt="img6"
                     />
                   </div>
@@ -608,7 +608,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon6.png"
+                      src="/img/videocreation/multiple-formats-icon.png"
                       alt="img6"
                     />
                   </div>
@@ -628,7 +628,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon6.png"
+                      src="/img/videocreation/professional-consultation-icon.png"
                       alt="img6"
                     />
                   </div>
@@ -667,7 +667,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon1.png"
+                      src="/img/videocreation/expert-team-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -683,12 +683,12 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-sm-6 col-md-6 " data-aos="fade-left">
-                <div className="libraries_laravel_choose">
+                <div className="libraries_laravel_choose libraries_laravel_choose-right">
                   <div className="laravel_choose_features_img laravel_choose_features_img3">
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon3.png"
+                      src="/img/videocreation/cutting-edge-technology-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -704,12 +704,12 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-sm-6 col-md-6" data-aos="fade-right">
-                <div className="libraries_laravel_choose libraries_laravel_choose-right">
+                <div className="libraries_laravel_choose ">
                   <div className="laravel_choose_features_img laravel_choose_features_img2">
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon2.png"
+                      src="/img/videocreation/customized-solutions-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -732,7 +732,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon4.png"
+                      src="/img/videocreation/end-to-end-services-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -753,7 +753,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon5.png"
+                      src="/img/videocreation/competitive-pricing-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -774,7 +774,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon6.png"
+                      src="/img/videocreation/fast-turnaround-time-icon.png"
                       alt="img1"
                     />
                   </div>

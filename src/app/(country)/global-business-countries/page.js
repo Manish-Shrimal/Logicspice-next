@@ -18,6 +18,20 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const [isModalOpen, setCountryModel] = useState(false);
+  const [switzerlandModel, setSwitzerlandModel] = useState(false);
+  const [belgiumModel, setBelgiumModel] = useState(false);
+  const [uaeModel, setUaeModel] = useState(false);
+
+  const openUsaModel = () => setCountryModel(true);
+  const closeUsaModal = () => setCountryModel(false);
+  const openSwitzerlandModal = () => setSwitzerlandModel(true);
+  const closeSwitzerlandModal = () => setSwitzerlandModel(false);
+  const openBelgiumModal = () => setBelgiumModel(true);
+  const closeBelgiumModal = () => setBelgiumModel(false);
+  const openUaeModal = () => setUaeModel(true);
+  const closeUaeModal = () => setUaeModel(false);
+
   const CustomPrevArrow = ({ onClick }) => {
     return (
       <button type="button" className="custom-prev-arrow" onClick={onClick}>
@@ -88,7 +102,6 @@ const Page = () => {
       },
     ],
   };
-  
 
   var date = {
     dots: true,
@@ -165,11 +178,86 @@ const Page = () => {
                       Miami
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#" data-toggle="modal" data-target="#USA">
                       More Cities
                     </Link>
+                  </li> */}
+                  <li>
+                    <a onClick={openUsaModel} style={{ cursor: "pointer" }}>
+                      More Cities
+                    </a>
                   </li>
+                  {isModalOpen && (
+                    <div
+                      className="modal country-modal fade show"
+                      style={{ display: "block" }}
+                      tabIndex="-1"
+                      role="dialog"
+                    >
+                      <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h5 className="modal-title">USA</h5>
+                            <button
+                              type="button"
+                              className="close"
+                              onClick={closeUsaModal}
+                            >x</button>
+                          </div>
+                          <div className="modal-body">
+                            <ul>
+                              <li>
+                                <a href="/usa/mobile-app-development-in-california/">
+                                  {" "}
+                                  California{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/usa/mobile-app-development-in-miami">
+                                  {" "}
+                                  Miami{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/usa/mobile-app-development-in-florida">
+                                  {" "}
+                                  Florida{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/usa/mobile-app-development-in-losangeles">
+                                  {" "}
+                                  Los angeles{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/usa/mobile-app-development-in-newyork">
+                                  {" "}
+                                  New york{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/usa/mobile-app-development-in-chicago">
+                                  {" "}
+                                  Chicago{" "}
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-default"
+                              onClick={closeUsaModal}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </ul>
               </div>
               <div class="place_country">
@@ -194,11 +282,71 @@ const Page = () => {
                       Zürich
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#" data-toggle="modal" data-target="#SW">
                       More Cities
                     </Link>
+                  </li> */}
+                  <li>
+                    <a
+                      onClick={openSwitzerlandModal}
+                      style={{ cursor: "pointer" }}
+                    >
+                      More Cities
+                    </a>
                   </li>
+                  {switzerlandModel && (
+                    <div
+                      className="modal country-modal fade show"
+                      style={{ display: "block" }}
+                      tabIndex="-1"
+                      role="dialog"
+                    >
+                      <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h5 className="modal-title">Switzerland</h5>
+                            <button
+                              type="button"
+                              className="close"
+                              onClick={closeSwitzerlandModal}
+                            >x</button>
+                          </div>
+                          <div className="modal-body">
+                            <ul>
+                              <li>
+                                <a href="/switzerland/mobile-app-development-in-geneva/">
+                                  {" "}
+                                  Geneva{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/switzerland/mobile-app-development-in-zurich">
+                                  {" "}
+                                  Zürich{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/switzerland/mobile-app-development-in-basel">
+                                  {" "}
+                                  Basel{" "}
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-default"
+                              onClick={closeSwitzerlandModal}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </ul>
               </div>
             </div>
@@ -225,11 +373,74 @@ const Page = () => {
                       Abu Dhabi
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#" data-toggle="modal" data-target="#UAE">
                       More Cities
                     </Link>
+                  </li> */}
+                  <li>
+                    <a onClick={openUaeModal} style={{ cursor: "pointer" }}>
+                      More Cities
+                    </a>
                   </li>
+                  {uaeModel && (
+                    <div
+                      className="modal country-modal fade show"
+                      style={{ display: "block" }}
+                      tabIndex="-1"
+                      role="dialog"
+                    >
+                      <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h5 className="modal-title">UAE</h5>
+                            <button
+                              type="button"
+                              className="close"
+                              onClick={closeUaeModal}
+                            >x</button>
+                          </div>
+                          <div className="modal-body">
+                            <ul>
+                              <li>
+                                <a href="/uae/mobile-app-development-in-dubai/">
+                                  {" "}
+                                  Dubai{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/uae/mobile-app-development-in-abu-dhabi">
+                                  {" "}
+                                  Abu Dhabi{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/uae/mobile-app-development-in-ajman">
+                                  {" "}
+                                  Ajman{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/uae/mobile-app-development-in-al-ain">
+                                  {" "}
+                                  Al Ain{" "}
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-default"
+                              onClick={closeUaeModal}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </ul>
               </div>
               <div class="place_country">
@@ -254,11 +465,74 @@ const Page = () => {
                       Flanders
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#" data-toggle="modal" data-target="#belg">
                       More Cities
                     </Link>
+                  </li> */}
+                  <li>
+                    <a onClick={openBelgiumModal} style={{ cursor: "pointer" }}>
+                      More Cities
+                    </a>
                   </li>
+                  {belgiumModel && (
+                    <div
+                      className="modal country-modal fade show"
+                      style={{ display: "block" }}
+                      tabIndex="-1"
+                      role="dialog"
+                    >
+                      <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h5 className="modal-title">Belgium</h5>
+                            <button
+                              type="button"
+                              className="close"
+                              onClick={closeBelgiumModal}
+                            >x</button>
+                          </div>
+                          <div className="modal-body">
+                            <ul>
+                              <li>
+                                <a href="/belgium/mobile-app-development-in-brussels/">
+                                  {" "}
+                                  Brussels{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/belgium/mobile-app-development-in-antwerp">
+                                  {" "}
+                                  Antwerp{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/belgium/mobile-app-development-in-ghent">
+                                  {" "}
+                                  Ghent{" "}
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/belgium/mobile-app-development-in-flanders">
+                                  {" "}
+                                  Flanders{" "}
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-default"
+                              onClick={closeBelgiumModal}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </ul>
               </div>
             </div>
@@ -488,148 +762,6 @@ const Page = () => {
               </div>
             </Slider>
           </div>
-          {/* <div class="row case_s owl-carousel">
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs1.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo1.png"
-                />
-                <p>Responsive Custom build Website for photographer quoting.</p>
-                <Link href="/case-studies/photographers247">Case Study</Link>
-              </div>
-            </div>
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs2.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo2.png"
-                />
-                <p>Custom build Website for Community for online tattoo</p>
-                <Link href="/case-studies/mytattooist">Case Study</Link>
-              </div>
-            </div>
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs3.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo3.png"
-                />
-                <p>Best coffee ordering app for iPhone & Android users.</p>
-                <Link href="/case-studies/beano-app">Case Study</Link>
-              </div>
-            </div>
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs4.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo4.png"
-                />
-                <p>Responsive Custom build Website for online coaching.</p>
-                <Link href="/case-studies/coursetakers">Case Study</Link>
-              </div>
-            </div>
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs5.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo5.png"
-                />
-                <p>Best schedule tracking app for iPhone & Android users.</p>
-                <Link href="/case-studies/utrack-app">Case Study</Link>
-              </div>
-            </div>
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs6.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo6.png"
-                />
-                <p>An interactive iPhone to play with aphorisms.</p>
-                <Link href="/case-studies/bestcit-app">Case Study</Link>
-              </div>
-            </div>
-            <div class="item-case">
-              <div class="case-study-country">
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs7.png"
-                />
-                <Image
-                  width={100}
-                  height={100}
-                  unoptimized={true}
-                  alt=""
-                  src="/img/globalbusinesscountries/cs_logo7.png"
-                />
-                <p>Responsive Custom build Website for online coaching.</p>
-                <Link href="/case-studies/four-strokes">Case Study</Link>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -638,7 +770,7 @@ const Page = () => {
           <div class="row">
             <div class="col-sm-4">
               <Image
-                width={300}
+                width={1500}
                 height={100 / (100 / 100)}
                 unoptimized={true}
                 alt=""
@@ -658,7 +790,7 @@ const Page = () => {
                       src="/img/globalbusinesscountries/hotels_icon.png"
                     />
                     <p>
-                      <Link href="/industries/Hotels-apps">Hotels</Link>
+                      <Link href="/industries/Hotel-apps">Hotels</Link>
                     </p>
                   </div>
                 </div>
@@ -672,7 +804,7 @@ const Page = () => {
                       src="/img/globalbusinesscountries/transport_icon.png"
                     />
                     <p>
-                      <Link href="/industries/Transportation-apps">
+                      <Link href="/industries/transportation-apps">
                         Transportation
                       </Link>
                     </p>
@@ -704,7 +836,7 @@ const Page = () => {
                       src="/img/globalbusinesscountries/real_icon.png"
                     />
                     <p>
-                      <Link href="/industries/commercial-and-residential-real-estate-apps">
+                      <Link href="/industries/commercial-and-residential-apps">
                         Real Estate
                       </Link>
                     </p>
@@ -768,7 +900,7 @@ const Page = () => {
                       src="/img/globalbusinesscountries/accounts_icon.png"
                     />
                     <p>
-                      <Link href="/industries/accountants-and-financial-services-apps">
+                      <Link href="/industries/accountants-and-financial-services-real-estate-apps">
                         Accountants & Financial
                       </Link>
                     </p>
@@ -978,7 +1110,7 @@ const Page = () => {
                   &quot;Manish was very cooperative and professional during the
                   project. The team was great, the project was very complicated
                   and they tried their best to complete it with the best
-                  diligence. I
+                  diligence. I {" "}
                   <Link
                     href="#"
                     style={{ cursor: "pointer", color: "#31aae1" }}
@@ -1069,7 +1201,7 @@ const Page = () => {
               </div> */}
             </div>
             <div id="country_testimonial">
-            <div class="item">
+              <div class="item">
                 <Image
                   width={100}
                   height={100}
@@ -1089,7 +1221,7 @@ const Page = () => {
               </div>
             </div>
             <div id="country_testimonial">
-            <div class="item">
+              <div class="item">
                 <Image
                   width={100}
                   height={100}
@@ -1102,7 +1234,7 @@ const Page = () => {
                   &quot;Excellent work again from logicspice! They definitely
                   put their best effort into the project along with very
                   valuable inputs regarding possible enhancements of the web
-                  project. With logicspice
+                  project. With logicspice {" "}
                   <Link
                     href="#"
                     style={{ cursor: "pointer", color: "#31aae1" }}
@@ -1126,7 +1258,7 @@ const Page = () => {
               </div>
             </div>
             <div id="country_testimonial">
-            <div class="item">
+              <div class="item">
                 <Image
                   width={100}
                   height={100}

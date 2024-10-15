@@ -624,7 +624,7 @@ const Page = () => {
                     <div className="laravel_choose_features_img laravel_choose_features_img4">
                       <Image
                         unoptimized={true}
-                        width={60}
+                        width={40}
                         height={100}
                         src="/img/phpdevelopment/opencart-why-icon4.png"
                         alt="img1"

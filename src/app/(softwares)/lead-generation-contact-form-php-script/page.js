@@ -15,7 +15,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import {
   MDBAccordion,
   MDBAccordionItem,
@@ -1958,7 +1958,7 @@ const Page = () => {
                           </span>{" "}
                           Enquire Now
                           {
-                            <Enquirymodal
+                            <SoftwareEnquiry
                               modalStatus={showModal}
                               toggle={openModal}
                               title="Contact form php Script"
