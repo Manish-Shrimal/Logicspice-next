@@ -407,7 +407,7 @@ const Page = () => {
                             <SoftwareEnquiry
                               modalStatus={showModal}
                               toggle={openModal}
-                              title="Cake php CMS Script"
+                              title="Social Network Integration Script"
                             />
                           }
                         </Link>

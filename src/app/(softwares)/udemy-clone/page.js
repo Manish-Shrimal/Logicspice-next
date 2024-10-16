@@ -243,7 +243,7 @@ const Page = () => {
                       <GetDemoEnquiry
                       modalStatus={demoAccessModal}
                       toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Udemy Clone..See how it works yourself!"
+                      title="Please fill the form below and get access to the live demo of Udemy Clone. See how it works yourself!"
                     />
                     }
                   </div>
@@ -1156,7 +1156,7 @@ const Page = () => {
                     <GetDemoEnquiry
                     modalStatus={demoAccessModal}
                     toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Udemy Clone..See how it works yourself!"
+                    title="Please fill the form below and get access to the live demo of Udemy Clone. See how it works yourself!"
                   />
                   }
                 </div>
@@ -2376,7 +2376,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Udemy Clone."
+                    title="Udemy Clone"
                   />
                 }
               </div>

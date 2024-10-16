@@ -2613,7 +2613,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Job Board Software"
+                    title="Logistic Marketplace Software"
                   />
                 }
               </div>

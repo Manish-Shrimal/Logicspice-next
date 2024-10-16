@@ -266,7 +266,7 @@ const Page = () => {
                   <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Business Directory System. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of PHP Business Directory System. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1323,7 +1323,7 @@ const Page = () => {
                   <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Business Directory System. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of PHP Business Directory System. See how it works yourself!"
                       />
                   }
                 </div>

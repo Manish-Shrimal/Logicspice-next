@@ -2158,7 +2158,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Real Estate"
+                    title="Real Estate Script"
                   />
                 }
               </div>

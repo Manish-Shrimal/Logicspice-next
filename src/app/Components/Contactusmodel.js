@@ -329,7 +329,10 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                                 SEND YOUR INQUIRY
                               </button>
                               {loader && (
-                                <div className="side_page" id="loadloader6">
+                                <div
+                                  className="loadloader side_page"
+                                  id="loadloader6"
+                                >
                                   <Image
                                     width={100}
                                     height={100}

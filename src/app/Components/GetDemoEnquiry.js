@@ -402,15 +402,18 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                           </div>
                           {!resultSuccess && (
                             <div className="modal-footer">
-                              <button
+                              <div className="buttonArea"><button
                                 className="btn btn-primary"
                                 size="30"
                                 label=""
                                 type="submit"
                                 onClick={submitEnquiryForm}
                               >
-                                SEND
+                                REQUEST LIME DEMO ACCESS!
                               </button>
+                              
+                              <p>(Receive the access to demo details in your email)</p></div>
+                              
 
                               <div
                                 style={{ display: loader ? "block" : "none" }}

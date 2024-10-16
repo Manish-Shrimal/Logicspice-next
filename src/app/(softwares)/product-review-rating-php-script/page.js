@@ -185,7 +185,8 @@ const Page = () => {
                       <GetDemoEnquiry
                     modalStatus={demoAccessModal}
                     toggle={openDemoAccessModal}
-                    title="Product Review & Rating PHP Script"
+                    title="Please fill the form below and get access to the live demo of Product Review & Rating PHP Script.
+                    See how it works yourself!"
                   />
                     }
                   </div>
@@ -1046,7 +1047,8 @@ const Page = () => {
                     <GetDemoEnquiry
                     modalStatus={demoAccessModal}
                     toggle={openDemoAccessModal}
-                    title="Product Review & Rating PHP Script"
+                    title="Please fill the form below and get access to the live demo of Product Review & Rating PHP Script.
+                    See how it works yourself!"
                   />
                   }
                 </div>

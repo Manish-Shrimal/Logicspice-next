@@ -22,7 +22,6 @@ import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -50,7 +49,6 @@ const Page = () => {
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
 
   const openModal = () => {
-
     setShowModal(!showModal);
   };
 
@@ -318,15 +316,15 @@ const Page = () => {
                     onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
-                    <button>Get Demo Access!</button>
+                    <a>Get Demo Access!</a>
                     {
-                  //     <SoftwareEnquiry
-                  //       modalStatus={showModal}
-                  //       toggle={openModal}
-                  //       title="Please fill the form below and get access to the live demo of Fiverr Clone
-                  // .See how it work yourself!"
-                  //     />
-                  <GetDemoEnquiry
+                      //     <SoftwareEnquiry
+                      //       modalStatus={showModal}
+                      //       toggle={openModal}
+                      //       title="Please fill the form below and get access to the live demo of Fiverr Clone
+                      // .See how it work yourself!"
+                      //     />
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of Fiver Clone. See how it works yourself!"
@@ -1447,7 +1445,7 @@ const Page = () => {
 
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
-                  <button>Get Demo Access!</button>
+                  <a>Get Demo Access!</a>
                   {
                     // <SoftwareEnquiry
                     //   modalStatus={showModal}
@@ -1455,9 +1453,9 @@ const Page = () => {
                     //   title="Please fill the form below and get access to the live demo of Fiverr Clone.See how it work yourself!"
                     // />
                     <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Fiver Clone. See how it works yourself!"
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Fiver Clone. See how it works yourself!"
                     />
                   }
                 </div>

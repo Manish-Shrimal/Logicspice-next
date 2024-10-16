@@ -1600,6 +1600,31 @@
     width: auto !important;
   }
 
+  .hire-step li .hs1:last-child {
+    flex: 0 1 auto; /* Adjust size of the last child */
+    margin: 0 auto; /* Centers the last child */
+  }
+
+  .order_summarty{
+    margin-top: 0;
+  }
+
+  .order_summarty_left{
+    width: 100%;
+  }
+  .order_summarty_right{
+    width: 100%
+  }
+
+  .order_addonStep{
+    padding: 25px ;
+  }
+   
+
+  .industries_country .col-sm-4{
+    display: none;
+  }
+
   .lookSlider {
     width: auto !important;
     margin: 0 auto !important;

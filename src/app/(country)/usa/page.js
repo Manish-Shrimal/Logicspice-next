@@ -817,7 +817,10 @@ const Page = () => {
                         computer science, web development, foreign language,
                         history, English, etc. will serve Student/Clients with
                         their guidance. “ASK OUR EINSTEIN�? will not only{" "}
-                        <Link href="/case-studies/askoureinstein" target="_blank">
+                        <Link
+                          href="/case-studies/askoureinstein"
+                          target="_blank"
+                        >
                           Read More..
                         </Link>
                       </p>

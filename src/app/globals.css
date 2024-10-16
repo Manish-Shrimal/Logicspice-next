@@ -4652,6 +4652,18 @@ body.modal-open .quote_pop_plus {
 .ls-google-swction p {
   color: #fff;
   font-size: 15px;
+  display: inline-block
+}
+ .buttonArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonArea p{
+  text-align: left;
+  width: 100%;
+  font-size: 13px;
+  padding-top: 3px;
 }
 
 .show_fixxx,
@@ -7650,4 +7662,10 @@ section {
 .take-a-look .fas{
   font-size: 40px;
   color: #3c3c3c!important;
+}
+
+.loadloader {
+      display: none;
+      margin-left: 15px;
+      margin-top: 0px;
 }

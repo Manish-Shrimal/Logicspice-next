@@ -70,8 +70,8 @@ const Page = () => {
     // borderTop: '1px solid #ddd',
   };
   const [activeTab, setActiveTab] = useState("tab2");
-  const [sellerTab, setSellerTab] = useState(true);
-  const [buyerTab, setBuyerTab] = useState(false);
+  const [sellerTab, setSellerTab] = useState(false);
+  const [buyerTab, setBuyerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -213,7 +213,7 @@ const Page = () => {
                     onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
-                    <button>Get Demo Access!</button>
+                    <a>Get Demo Access!</a>
                     {
 
 <GetDemoEnquiry

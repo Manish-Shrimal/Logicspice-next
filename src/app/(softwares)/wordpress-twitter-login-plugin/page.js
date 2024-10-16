@@ -488,7 +488,7 @@ const Page = () => {
                             <GetDemoEnquiry
                     modalStatus={demoAccessModal}
                     toggle={openDemoAccessModal}
-                    title="WOrdpress Twitter Login Plugin"
+                    title="Wordpress Twitter Login Plugin"
                   />
                           }
                         </Link>

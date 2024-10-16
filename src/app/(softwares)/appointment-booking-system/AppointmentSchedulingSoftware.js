@@ -2151,7 +2151,7 @@ const AppointmentSchedulingSoftware = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Appointement"
+                    title="Appointement Booking System"
                   />
                 }
               </div>

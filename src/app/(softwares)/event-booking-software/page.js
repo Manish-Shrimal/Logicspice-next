@@ -2446,8 +2446,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Please fill the form below and get access to the live demo of Equipment Rental Script
-                  .See how it work yourself!"
+                    title="Event Booking Software"
                   />
                 }
               </div>

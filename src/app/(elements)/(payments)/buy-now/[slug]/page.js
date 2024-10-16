@@ -11,6 +11,7 @@ import Cookies from "js-cookie";
 import { Router } from "next/navigation";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Page = ({ params }) => {
@@ -593,21 +594,21 @@ const Page = ({ params }) => {
                         </span>
                         <div className="pay_pri_term">
                           For more detail visit following pages
-                          <a
-                            href="https://demo.imagetowebpage.com/logicspice_com_cake//privacy-policy"
+                          <Link
+                            href="/privacy-policy"
                             target="_blank"
                             rel="noreferrer"
                           >
                             Privacy Policy
-                          </a>{" "}
+                          </Link>{" "}
                           and
-                          <a
-                            href="https://demo.imagetowebpage.com/logicspice_com_cake//terms-of-use"
+                          <Link
+                            href="/terms-of-use"
                             target="_blank"
                             rel="noreferrer"
                           >
                             Terms Of Use
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

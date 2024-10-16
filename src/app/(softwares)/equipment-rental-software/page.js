@@ -206,7 +206,7 @@ const Page = () => {
                   <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Equipment Rental Software. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of Equipment Rental Script. See how it works yourself!"
                       />
                     }
                   </div>
@@ -1306,7 +1306,7 @@ const Page = () => {
                   <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Equipment Rental Software. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of Equipment Rental Script. See how it works yourself!"
                       />
                   }
                 </div>
@@ -2342,7 +2342,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title=" Classified Ads software"
+                    title="Equipment Rental Script"
                   />
                 }
               </div>

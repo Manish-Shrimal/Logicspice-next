@@ -205,7 +205,7 @@ const Page = () => {
                     onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
-                    Live Demo
+                    LIVE DEMO
                     <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
@@ -348,7 +348,7 @@ const Page = () => {
                         <div className="costomer_tab_right">
                           <Image
                             unoptimized={true}
-                            width={300}
+                            width={350}
                             height={100}
                             src="/img/blogscript/blogscript-user.png"
                             alt="User"
@@ -494,7 +494,7 @@ const Page = () => {
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
                             unoptimized={true}
-                            width={300}
+                            width={350}
                             height={100}
                             src="/img/blogscript/blogscrit_admin_mac.png"
                             alt="Admin Panel"

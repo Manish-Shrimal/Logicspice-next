@@ -835,3 +835,7 @@ section {
 .term-header {
     background-image: url(/img/images/terms-of-use-banner.jpg);
 }
+
+.pri-header {
+    background-image: url(/img/images/privacy-policy-banner.jpg);
+}

@@ -212,7 +212,7 @@ const Page = () => {
                   <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of eBay Clone. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of ebay Clone. See how it works yourself!"
                       />
                     }
                   </div>
@@ -2294,7 +2294,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title=" eBay clone"
+                    title=" ebay clone"
                   />
                 }
               </div>

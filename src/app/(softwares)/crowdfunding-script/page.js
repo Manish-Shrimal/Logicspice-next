@@ -1385,7 +1385,7 @@ const Page = () => {
               </strike>
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
-                  <button>Get Demo Access!</button>
+                  <button>GET DEMO ACCESS!</button>
                   {
                   //   <SoftwareEnquiry
                   //     modalStatus={showModal}

@@ -11,6 +11,7 @@ import Navbar from "@/app/Components/Navbar";
 import "../../elements.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import HTMLReactParser from "html-react-parser";
 
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
@@ -106,6 +107,10 @@ const Page = () => {
   let paymentUrl = useRef();
   let totalPrice = useRef();
   let discountHtml = useRef();
+  const [initialPriceBreakupHtml, setInitialPriceBreakupHtml] = useState();
+  const [totalFinalPrice, setTotalFinalPrice] = useState()
+
+  const initialHtml = useRef();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -270,6 +275,8 @@ const Page = () => {
     }
   };
 
+
+
   useEffect(() => {
     // const fetchData = async () => {
     //   try {
@@ -388,6 +395,8 @@ const Page = () => {
     //   }
     // };
 
+
+
     const sendFormInitials = async () => {
       try {
         const updatedData = {
@@ -407,8 +416,12 @@ const Page = () => {
         // return;
         const response = await axios.post(
           BaseAPI + "/softwares/billing",
-          {updatedData: updatedData}
+          updatedData
         );
+        console.log(response)
+        setInitialPriceBreakupHtml(response.data.html);
+        setTotalFinalPrice(response.data.total);
+        initialHtml.current = response.data.html
       } catch (error) {
         console.log(error.message);
       }
@@ -722,7 +735,7 @@ const Page = () => {
             <div className="order_summarty_right">
               <div className="order_summarty_right_inner">
                 <div className="order_title">Order Summary</div>
-                <div className="order_wrap">
+                {/* <div className="order_wrap">
                   <div id="offeer_sec">
                     <div className="order_wrap_row" id="and_sec">
                       <div className="order_wrap_left">
@@ -777,24 +790,26 @@ const Page = () => {
                     </span>
                     <div className="pay_pri_term">
                       For more detail visit following pages{" "}
-                      <a
-                        href="https://demo.imagetowebpage.com/logicspice_com_cake//privacy-policy"
+                      <Link
+                        href="/privacy-policy"
                         target="_blank"
                         rel="noreferrer"
                       >
                         Privacy Policy
-                      </a>{" "}
+                      </Link>{" "}
                       and{" "}
-                      <a
-                        href="https://demo.imagetowebpage.com/logicspice_com_cake//terms-of-use"
+                      <Link
+                        href="/terms-of-use"
                         target="_blank"
                         rel="noreferrer"
                       >
                         Terms Of Use
-                      </a>
+                      </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
+                {/* {initialPriceBreakupHtml} */}
+                {initialHtml.current && HTMLReactParser(initialHtml.current)}
               </div>
             </div>
           </form>
