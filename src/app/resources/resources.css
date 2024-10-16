@@ -831,3 +831,7 @@ section {
     color: white !important;
     content: var(--bs-breadcrumb-divider, "/");
 }
+
+.term-header {
+    background-image: url(/img/images/terms-of-use-banner.jpg);
+}

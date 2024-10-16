@@ -63,6 +63,7 @@ export default async function RootLayout({ children, params, searchParams }) {
 
   const metadata = await generateMetadata({ params, searchParams });
 
+  
   return (
     <html lang="en">
       <Head>
@@ -77,6 +78,7 @@ export default async function RootLayout({ children, params, searchParams }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
       />
+      
     </html>
   );
 }

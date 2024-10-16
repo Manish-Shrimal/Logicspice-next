@@ -12,6 +12,35 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Looksilder = () => {
+  // const settings = {
+  //   dots: false,
+  //   arrows: true,
+  //   lazyLoad: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   initialSlide: 2,
+  // };
+
+
+
+  const NextArrow = ({ className, onClick }) => {
+    return (
+      <div className={className} onClick={onClick}>
+        <i className="fas fa-chevron-right"></i> {/* Example of using Font Awesome for arrow icon */}
+      </div>
+    );
+  };
+  
+  const PrevArrow = ({ className, onClick }) => {
+    return (
+      <div className={className} onClick={onClick}>
+        <i className="fas fa-chevron-left"></i> {/* Example of using Font Awesome for arrow icon */}
+      </div>
+    );
+  };
+
   const settings = {
     dots: false,
     arrows: true,
@@ -21,6 +50,8 @@ const Looksilder = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 2,
+    nextArrow: <NextArrow />, // Custom next arrow
+    prevArrow: <PrevArrow />, // Custom prev arrow
   };
   const takeAlookData = [
     {
@@ -28,7 +59,7 @@ const Looksilder = () => {
       classname: "",
       originalImage: "/img/home/look/iwork-logo.webp",
       alt: "iwork",
-      
+
       text: "iWorks supports Multilingual and Social Media Sign in and Sign Up Features.",
       link: "/case-studies/iworks",
       logoSize: 200,
@@ -92,43 +123,162 @@ const Looksilder = () => {
 
   return (
     <>
-     <div className="look-slider">
-     <div id="">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={50}
-          loop={true}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {takeAlookData.map((lookData, index) => (
-            <SwiperSlide key={index} className="row d-flex mx-4">
-              <div className="col-md-7 ">
-                <Image
-                  data-aos="fade-right"
-                  src={lookData.notMobileImage}
-                  className={lookData.classname}
-                  alt={lookData.alt}
-                  width={700} // Adjust width and height according to your design
-                  height={300 / (300 / 300)}
-                  unoptimized={true}
-                />
-              </div>
-              <div className="col-md-5">
-                <div className="ClientLogoHome">
+      <div className="look-slider">
+        <div id="">
+          {/* <Swiper
+            slidesPerView={1}
+            spaceBetween={0}
+            loop={true}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {takeAlookData.map((lookData, index) => (
+              <SwiperSlide key={index} className="row d-flex">
+                <div className="row">
+                  <div className="col-md-7 ">
+                    <Image
+                      data-aos="fade-right"
+                      src={lookData.notMobileImage}
+                      className={lookData.classname}
+                      alt={lookData.alt}
+                      width={700} // Adjust width and height according to your design
+                      height={300 / (300 / 300)}
+                      unoptimized={true}
+                    />
+                  </div>
+                  <div className="col-md-5">
+                    <div className="ClientLogoHome">
+                      <Image
+                        src={lookData.originalImage}
+                        alt={lookData.alt}
+                        width={lookData.logoSize}
+                        height={100 / (100 / 100)}
+                        unoptimized={true}
+                      />
+                      <p className="to_matf">{lookData.text}</p>
+                      <Link href={lookData.link} className="case-study">
+                        Case Study
+                      </Link>
+                      <p className="have_look">
+                        Have a look on similar Project{" "}
+                      </p>
+                      <div className="multibutton">
+                        <Link
+                          href="/company/portfolio"
+                          className="btn btn-primary"
+                        >
+                          Portfolio
+                        </Link>
+                        <Link href="/contact-us" className="btn btn-default">
+                          Request a quote
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper> */}
+          {/* <Swiper
+            slidesPerView={1}
+            spaceBetween={0}
+            loop={true}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            breakpoints={{
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+              },
+              // when window width is >= 1024px
+              1024: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+            }}
+            className="mySwiper"
+          >
+            {takeAlookData.map((lookData, index) => (
+              <SwiperSlide key={index} className="row d-flex">
+                <div className="row">
+                  <div className="col-md-7 col-12">
+                    {" "}
+                  
+                    <Image
+                      data-aos="fade-right"
+                      src={lookData.notMobileImage}
+                      className={lookData.classname}
+                      alt={lookData.alt}
+                      width={700} 
+                      height={300}
+                      unoptimized={true}
+                    />
+                  </div>
+                  <div className="col-md-5 col-12">
+                    <div className="ClientLogoHome">
+                      <Image
+                        src={lookData.originalImage}
+                        alt={lookData.alt}
+                        width={lookData.logoSize}
+                        height={100}
+                        unoptimized={true}
+                      />
+                      <p className="to_matf">{lookData.text}</p>
+                      <Link href={lookData.link} className="case-study">
+                        Case Study
+                      </Link>
+                      <p className="have_look">
+                        Have a look on similar Project{" "}
+                      </p>
+                      <div className="multibutton">
+                        <Link
+                          href="/company/portfolio"
+                          className="btn btn-primary"
+                        >
+                          Portfolio
+                        </Link>
+                        <Link href="/contact-us" className="btn btn-default">
+                          Request a quote
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper> */}
+
+<Slider {...settings} className="mySlickSlider">
+      {takeAlookData.map((lookData, index) => (
+        <div key={index} className="row d-flex lookSlider">
+          <div className="row">
+            <div className="col-md-7 col-12">
+              <Image
+                data-aos="fade-right"
+                src={lookData.notMobileImage}
+                className={lookData.classname}
+                alt={lookData.alt}
+                width={700}
+                height={300}
+                unoptimized={true}
+              />
+            </div>
+            <div className="col-md-5 col-12">
+              <div className="ClientLogoHome">
                 <Image
                   src={lookData.originalImage}
                   alt={lookData.alt}
                   width={lookData.logoSize}
-                  height={100 / (100 / 100)}
+                  height={100}
                   unoptimized={true}
                 />
                 <p className="to_matf">{lookData.text}</p>
                 <Link href={lookData.link} className="case-study">
                   Case Study
                 </Link>
-                <p className="have_look">Have a look on similar Project </p>
+                <p className="have_look">Have a look on similar Project</p>
                 <div className="multibutton">
                   <Link href="/company/portfolio" className="btn btn-primary">
                     Portfolio
@@ -137,17 +287,20 @@ const Looksilder = () => {
                     Request a quote
                   </Link>
                 </div>
-                </div>
-              
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+          </div>
+        </div>
+      ))}
+    </Slider>
+        </div>
       </div>
-     </div>
-    
     </>
   );
 };
 
 export default Looksilder;
+
+
+
+

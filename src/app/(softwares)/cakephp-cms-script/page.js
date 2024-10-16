@@ -18,6 +18,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
@@ -93,6 +94,13 @@ const Page = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [demoAccessModal, setDemoAccessModal] = useState(false);
+  const openDemoAccessModal = () => {
+    // console.log(showModal);
+
+    setDemoAccessModal(!demoAccessModal);
+  };
 
   return (
     <>

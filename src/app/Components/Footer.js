@@ -20,8 +20,9 @@ const Footer = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const renderIcon = (isExpanded) =>
-    isExpanded ? <RemoveIcon /> : <AddIcon />;
+  const renderIcon = (isExpanded) => {
+    return isExpanded ? <RemoveIcon /> : <AddIcon />; // Show the correct icon
+  };
   return (
     <section className="footer_bg">
       <div className="container">
@@ -440,6 +441,7 @@ const Footer = () => {
                   <div className="company_informetion">
                     <i>
                       <Image
+                      unoptimized={true}
                         width={30}
                         height={100}
                         src="/img/footer/fleg_icon2.png"
@@ -451,6 +453,7 @@ const Footer = () => {
                   <div className="company_informetion">
                     <i>
                       <Image
+                      unoptimized={true}
                         width={30}
                         height={100}
                         src="/img/footer/fleg_icon1.png"
@@ -462,6 +465,7 @@ const Footer = () => {
                   <div className="company_informetion">
                     <i>
                       <Image
+                      unoptimized={true}
                         width={30}
                         height={100}
                         src="/img/footer/fleg_icon3.png"
@@ -473,6 +477,7 @@ const Footer = () => {
                   <div className="company_informetion">
                     <i>
                       <Image
+                      unoptimized={true}
                         width={30}
                         height={100}
                         src="/img/footer/massege_icon.png"
@@ -481,6 +486,7 @@ const Footer = () => {
                     </i>
                     <span className="InfoLogicspice">
                       <Image
+                      unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/footer/info-logicspice.png"
@@ -662,6 +668,7 @@ const Footer = () => {
               <div className="company_informetion">
                 <i>
                   <Image
+                  unoptimized={true}
                     width={23}
                     height={100}
                     src="/img/footer/fleg_icon2.png"
@@ -672,7 +679,7 @@ const Footer = () => {
               </div>
               <div className="company_informetion">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={23}
                     height={100}
                     src="/img/footer/fleg_icon1.png"
@@ -683,7 +690,7 @@ const Footer = () => {
               </div>
               <div className="company_informetion">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={23}
                     height={100}
                     src="/img/footer/fleg_icon3.png"
@@ -694,7 +701,7 @@ const Footer = () => {
               </div>
               <div className="company_informetion">
                 <i>
-                  <Image
+                  <Image unoptimized={true}
                     width={23}
                     height={100}
                     src="/img/footer/massege_icon.png"
@@ -703,6 +710,7 @@ const Footer = () => {
                 </i>
                 <span className="InfoLogicspice">
                   <Image
+                  unoptimized={true}
                     width={140}
                     height={100}
                     src="/img/footer/info-logicspice.png"
@@ -713,9 +721,10 @@ const Footer = () => {
               <div className="company_informetion">
                 <i>
                   <Image
+                  unoptimized={true}
                     width={21}
                     height={100}
-                    unoptimized={true}
+                    
                     src="/img/footer/skya_icon.png"
                     alt="Skype - Logicspice"
                   />
@@ -730,6 +739,7 @@ const Footer = () => {
             <ul>
               <li className="foot-arrowIng">
                 <Image
+                unoptimized={true}
                   width={200}
                   height={100}
                   src="/img/footer/foot-arrow.png"
@@ -743,6 +753,7 @@ const Footer = () => {
                 >
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/facebook_icon.png"
@@ -755,6 +766,7 @@ const Footer = () => {
                 <a href="https://twitter.com/logicspice" target="_blank">
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/tweetr-icon.png"
@@ -767,6 +779,7 @@ const Footer = () => {
                 <a href="https://www.logicspice.com/feed.rss" target="_blank">
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/rss_icon.png"
@@ -782,6 +795,7 @@ const Footer = () => {
                 >
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/youtube_icon.png"
@@ -794,6 +808,7 @@ const Footer = () => {
                 <a href="https://www.pinterest.com/logicspice/" target="_blank">
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/printres_icon.png"
@@ -809,6 +824,7 @@ const Footer = () => {
                 >
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/linkid_icon.png"
@@ -821,6 +837,7 @@ const Footer = () => {
                 <a href="https://blog.logicspice.com" target="_blank">
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/blog_icon.png"
@@ -836,6 +853,7 @@ const Footer = () => {
                 >
                   <i>
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/instagram_icon.png"
@@ -848,6 +866,7 @@ const Footer = () => {
                 <div class="countrys_menu_icon">
                   <Link href="/global-business-countries">
                     <Image
+                    unoptimized={true}
                       width={100}
                       height={100}
                       src="/img/footer/internet_icon.png"
@@ -862,6 +881,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/australia">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/australia_flag_img.png"
@@ -887,6 +907,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/uk">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/uk_flag_img.png"
@@ -912,6 +933,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/usa">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/usa_flag_img.png"
@@ -957,6 +979,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/uae">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/uae_flag_iimg.png"
@@ -992,6 +1015,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/switzerland">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/switzerland_flag_img.png"
@@ -1022,6 +1046,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/belgium">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/belgium_flag_img.png"
@@ -1058,6 +1083,7 @@ const Footer = () => {
                         <span class="country_nm">
                           <Link href="/india">
                             <Image
+                            unoptimized={true}
                               width={100}
                               height={100}
                               src="/img/footer/india_flag_img.png"

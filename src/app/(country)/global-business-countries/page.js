@@ -203,45 +203,47 @@ const Page = () => {
                               type="button"
                               className="close"
                               onClick={closeUsaModal}
-                            >x</button>
+                            >
+                              x
+                            </button>
                           </div>
                           <div className="modal-body">
                             <ul>
                               <li>
-                                <a href="/usa/mobile-app-development-in-california/">
+                                <Link href="/usa/mobile-app-development-in-california/">
                                   {" "}
                                   California{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/usa/mobile-app-development-in-miami">
+                                <Link href="/usa/mobile-app-development-in-miami">
                                   {" "}
                                   Miami{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/usa/mobile-app-development-in-florida">
+                                <Link href="/usa/mobile-app-development-in-florida">
                                   {" "}
                                   Florida{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/usa/mobile-app-development-in-losangeles">
+                                <Link href="/usa/mobile-app-development-in-losangeles">
                                   {" "}
                                   Los angeles{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/usa/mobile-app-development-in-newyork">
+                                <Link href="/usa/mobile-app-development-in-newyork">
                                   {" "}
                                   New york{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/usa/mobile-app-development-in-chicago">
+                                <Link href="/usa/mobile-app-development-in-chicago">
                                   {" "}
                                   Chicago{" "}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -310,27 +312,29 @@ const Page = () => {
                               type="button"
                               className="close"
                               onClick={closeSwitzerlandModal}
-                            >x</button>
+                            >
+                              x
+                            </button>
                           </div>
                           <div className="modal-body">
                             <ul>
                               <li>
-                                <a href="/switzerland/mobile-app-development-in-geneva/">
+                                <Link href="/switzerland/mobile-app-development-in-geneva/">
                                   {" "}
                                   Geneva{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/switzerland/mobile-app-development-in-zurich">
+                                <Link href="/switzerland/mobile-app-development-in-zurich">
                                   {" "}
                                   Zürich{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/switzerland/mobile-app-development-in-basel">
+                                <Link href="/switzerland/mobile-app-development-in-basel">
                                   {" "}
                                   Basel{" "}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -398,33 +402,35 @@ const Page = () => {
                               type="button"
                               className="close"
                               onClick={closeUaeModal}
-                            >x</button>
+                            >
+                              x
+                            </button>
                           </div>
                           <div className="modal-body">
                             <ul>
                               <li>
-                                <a href="/uae/mobile-app-development-in-dubai/">
+                                <Link href="/uae/mobile-app-development-in-dubai/">
                                   {" "}
                                   Dubai{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/uae/mobile-app-development-in-abu-dhabi">
+                                <Link href="/uae/mobile-app-development-in-abu-dhabi">
                                   {" "}
                                   Abu Dhabi{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/uae/mobile-app-development-in-ajman">
+                                <Link href="/uae/mobile-app-development-in-ajman">
                                   {" "}
                                   Ajman{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/uae/mobile-app-development-in-al-ain">
+                                <Link href="/uae/mobile-app-development-in-al-ain">
                                   {" "}
                                   Al Ain{" "}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -490,33 +496,35 @@ const Page = () => {
                               type="button"
                               className="close"
                               onClick={closeBelgiumModal}
-                            >x</button>
+                            >
+                              x
+                            </button>
                           </div>
                           <div className="modal-body">
                             <ul>
                               <li>
-                                <a href="/belgium/mobile-app-development-in-brussels/">
+                                <Link href="/belgium/mobile-app-development-in-brussels/">
                                   {" "}
                                   Brussels{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/belgium/mobile-app-development-in-antwerp">
+                                <Link href="/belgium/mobile-app-development-in-antwerp">
                                   {" "}
                                   Antwerp{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/belgium/mobile-app-development-in-ghent">
+                                <Link href="/belgium/mobile-app-development-in-ghent">
                                   {" "}
                                   Ghent{" "}
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="/belgium/mobile-app-development-in-flanders">
+                                <Link href="/belgium/mobile-app-development-in-flanders">
                                   {" "}
                                   Flanders{" "}
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -1110,7 +1118,7 @@ const Page = () => {
                   &quot;Manish was very cooperative and professional during the
                   project. The team was great, the project was very complicated
                   and they tried their best to complete it with the best
-                  diligence. I {" "}
+                  diligence. I{" "}
                   <Link
                     href="#"
                     style={{ cursor: "pointer", color: "#31aae1" }}
@@ -1234,7 +1242,7 @@ const Page = () => {
                   &quot;Excellent work again from logicspice! They definitely
                   put their best effort into the project along with very
                   valuable inputs regarding possible enhancements of the web
-                  project. With logicspice {" "}
+                  project. With logicspice{" "}
                   <Link
                     href="#"
                     style={{ cursor: "pointer", color: "#31aae1" }}

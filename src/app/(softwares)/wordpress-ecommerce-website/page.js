@@ -215,12 +215,7 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-//                       <SoftwareEnquiry
-//                         modalStatus={showModal}
-//                         toggle={openModal}
-//                         title="Please fill the form below and get access to the live demo of WordPress eCommerce Website.
-// See how it work yourself!"
-//                       />
+
 <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}

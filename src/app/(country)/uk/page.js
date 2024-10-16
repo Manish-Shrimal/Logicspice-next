@@ -700,7 +700,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={400}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/mymention.png"
@@ -757,7 +757,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={20}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 src="/img/globalpages/UK.png"

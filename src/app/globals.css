@@ -7602,3 +7602,52 @@ section {
   text-align: center;
   margin: 20px 0 30px;
 }
+
+
+.CustomQuickFAQScript .accordion-item {
+  border: none;
+  border-bottom: 1px #ddd solid;
+  border-radius: 0;
+}
+
+.CustomQuickFAQScript .accordion-item>.accordion-header {
+  color: #333;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px!important;
+  padding: 0;
+}
+
+.CustomQuickFAQScript .accordion-header .accordion-button {
+  background: url(/img/ordermanagement/faq_select-min.png) 4% center no-repeat #fff;
+  padding: 9px 5px 9px 35px!important;
+  font-size: 20px!important;
+  color: #303030;
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+
+.CustomQuickFAQScript .accordion-header .accordion-button::after {
+  display: none;
+}
+
+.CustomQuickFAQScript .accordion-header .accordion-button.collapsed {
+  background: url(/img/ordermanagement/faq_select-plus.png) 4% center no-repeat rgba(0, 0, 0, 0);
+  clear: both;
+  display: block;
+}
+
+.CustomQuickFAQScript .accordion-body {
+  padding: 0px 15px 15px 70px;
+  border: none !important;
+  font-size: 18px;
+}
+
+.take-a-look .slick-prev:before, .slick-next:before{
+  display: none;
+}
+
+.take-a-look .fas{
+  font-size: 40px;
+  color: #3c3c3c!important;
+}

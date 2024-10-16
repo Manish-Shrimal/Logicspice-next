@@ -451,7 +451,7 @@ const Navbar = () => {
                                 href="/softwares"
                                 className="btn btn-primary"
                               >
-                                View All Softwares
+                                VIEW ALL SOFTWARES
                               </Link>
                             </li>
                           </ul>
@@ -606,7 +606,7 @@ const Navbar = () => {
                                 href="/services"
                                 className="btn btn-primary"
                               >
-                                View All Services
+                                VIEW ALL SERVICES
                               </Link>
                             </li>
                           </ul>

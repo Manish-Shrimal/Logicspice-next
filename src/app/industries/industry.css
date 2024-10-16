@@ -1818,7 +1818,7 @@ border-radius:10px
 }
 
 
-.global_case_study .custom-prev-arrow, .custom-next-arrow {
+.global_case_study .custom-prev-arrow, .global_case_study  .custom-next-arrow {
   background: none;
   border: none;
   cursor: pointer;
@@ -1826,7 +1826,7 @@ border-radius:10px
   top: 50%;
   transform: translateY(-50%);
 }
-.global_case_study .custom-prev-arrow, .custom-next-arrow .fa {
+.global_case_study .custom-prev-arrow, .global_case_study .custom-next-arrow .fa {
 font-size: 30px !important;
 color: #000!important;
 }
@@ -1841,6 +1841,10 @@ color: #000!important;
 
 .country-modal {
   margin-top: 90px!important;
+}
+
+.mobileapp_devcountry_bx_right img{
+  padding: 45px 0 0;
 }
 
 

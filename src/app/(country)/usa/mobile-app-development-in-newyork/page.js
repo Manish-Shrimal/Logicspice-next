@@ -718,7 +718,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={100}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/b99da_Physical-EDGE.png"
@@ -780,7 +780,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={100}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 src="/img/globalpages/usa.png"
@@ -800,7 +800,7 @@ const Page = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <Image
-                        width={100}
+                        width={500}
                         height={100}
                         unoptimized={true}
                         src="/img/globalpages/Askoureinstein.png"
@@ -859,7 +859,7 @@ const Page = () => {
                           <span>
                             <strong className="flag">
                               <Image
-                                width={100}
+                                width={25}
                                 height={100}
                                 unoptimized={true}
                                 src="/img/globalpages/usa.png"

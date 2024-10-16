@@ -1347,7 +1347,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="/appointment-scheduling-software"
+                          href="/appointment-booking-system"
                           className="ready-product"
                           data-aos="fade-up"
                         >
@@ -3457,7 +3457,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="/appointment-scheduling-software"
+                          href="/appointment-booking-system"
                           className="ready-product"
                           data-aos="fade-up"
                         >

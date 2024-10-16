@@ -2371,8 +2371,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
-                  .See how it work yourself!"
+                    title="Crowd Funding Script"
                   />
                 }
               </div>

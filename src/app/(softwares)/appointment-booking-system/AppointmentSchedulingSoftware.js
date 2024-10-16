@@ -243,7 +243,7 @@ const AppointmentSchedulingSoftware = () => {
                     onClick={openDemoAccessModal}
                     style={{ textAlign: "center" }}
                   >
-                    <a>Get Demo Access!</a>
+                    <a>GET DEMO ACCESS!</a>
                     {
                       //     <SoftwareEnquiry
                       //       modalStatus={showModal}

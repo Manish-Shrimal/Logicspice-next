@@ -271,123 +271,151 @@ const Page = () => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
+    // const fetchData = async () => {
+    //   try {
+    //     console.log("object");
+    //     // Replace `injectedConstants.API_PATH` with your API path
+    //     const response = await axios.post(BaseAPI + "/softwares/billing");
+
+    //     console.log(response.data, "data heers");
+
+    //     setProductDetails(response.data);
+    //     const { currencyDetail, additionalPoints, addArray, productType } =
+    //       response.data;
+
+    //     let newTotalPrice = [currencyDetail.price];
+
+    //     additionalPoints.forEach((ele) => {
+    //       if (addArray.includes(ele.id.toString())) {
+    //         newTotalPrice.push(ele.price);
+    //       }
+    //     });
+
+    //     if (
+    //       [
+    //         "Food Ordering & Delivery Script",
+    //         "WhatsApp Clone",
+    //         "Chat Room Script",
+    //         "Classified Ads Script",
+    //         "Logistic Marketplace Software",
+    //         "Job Portal PHP Script",
+    //         "Fiverr Clone",
+    //         "Grocery Store Script",
+    //         "PHP Business Directory Script",
+    //         "Groupon Clone Script",
+    //         "Udemy Clone",
+    //         "Freelancer Clone",
+    //         "Service Marketplace Script",
+    //       ].includes(productType) &&
+    //       addArray.includes("android")
+    //     ) {
+    //       newTotalPrice.push(585.0);
+    //       setIsAndroid(true);
+    //     }
+
+    //     if (
+    //       [
+    //         "Food Ordering & Delivery Script",
+    //         "WhatsApp Clone",
+    //         "Chat Room Script",
+    //         "Classified Ads Script",
+    //         "Logistic Marketplace Software",
+    //         "Job Portal PHP Script",
+    //         "Fiverr Clone",
+    //         "Grocery Store Script",
+    //         "PHP Business Directory Script",
+    //         "Groupon Clone Script",
+    //         "Udemy Clone",
+    //         "Freelancer Clone",
+    //         "Service Marketplace Script",
+    //       ].includes(productType) &&
+    //       addArray.includes("iphone")
+    //     ) {
+    //       newTotalPrice.push(585.0);
+    //       setIsIphone(true);
+    //     }
+
+    //     if (isAndroid && isIphone) {
+    //       setSubtotalPrice(585.0 + 585.0);
+    //       setSubtotalDiscountPrice((subtotalPrice * 15) / 100);
+    //     }
+
+    //     const sum = newTotalPrice.reduce(
+    //       (accumulator, currentValue) => accumulator + currentValue,
+    //       0
+    //     );
+    //     const finalTotal = sum - subtotalDiscountPrice;
+
+    //     setTotal(
+    //       newTotalPrice.reduce(
+    //         (accumulator, currentValue) => accumulator + currentValue,
+    //         0
+    //       ) - subtotalDiscountPrice
+    //     );
+    //     setTotalPrice(newTotalPrice);
+
+    //     // Set form data
+    //     setFormData({
+    //       cost: total,
+    //       discount: 0.0,
+    //       total_cost: total,
+    //       currencySym: currencyDetail.currency_symbol,
+    //       currency: currencyDetail.name,
+    //       product_name: productType,
+    //     });
+
+    //     // Set promocode form
+    //     setPromocodeForm({
+    //       product_name: productType,
+    //       currencySym: currencyDetail.currency_symbol,
+    //       currency: currencyDetail.name,
+    //       total_amount: total,
+    //     });
+
+    //     // Initialize reCAPTCHA
+    //     setTimeout(() => {
+    //       const recaptchaContainer = document.getElementById("recaptchaBuy");
+    //       if (recaptchaContainer) {
+    //         grecaptcha.render(recaptchaContainer, {
+    //           sitekey: injectedConstants.RECAPTCHA,
+    //           callback: (response) => methods.onRecaptchaVerify(response),
+    //           expiredCallback: () => methods.onRecaptchaExpired(),
+    //         });
+    //       }
+    //     }, 500);
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // };
+
+    const sendFormInitials = async () => {
       try {
-        console.log("object");
-        // Replace `injectedConstants.API_PATH` with your API path
-        const response = await axios.post(BaseAPI + "/softwares/billing");
+        const updatedData = {
+          addArray: addArray,
+          additionalPoints: additionalPoints,
 
-        console.log(response.data, "data heers");
-        setProductDetails(response.data);
-        const { currencyDetail, additionalPoints, addArray, productType } =
-          response.data;
-
-        let newTotalPrice = [currencyDetail.price];
-
-        additionalPoints.forEach((ele) => {
-          if (addArray.includes(ele.id.toString())) {
-            newTotalPrice.push(ele.price);
-          }
-        });
-
-        if (
-          [
-            "Food Ordering & Delivery Script",
-            "WhatsApp Clone",
-            "Chat Room Script",
-            "Classified Ads Script",
-            "Logistic Marketplace Software",
-            "Job Portal PHP Script",
-            "Fiverr Clone",
-            "Grocery Store Script",
-            "PHP Business Directory Script",
-            "Groupon Clone Script",
-            "Udemy Clone",
-            "Freelancer Clone",
-            "Service Marketplace Script",
-          ].includes(productType) &&
-          addArray.includes("android")
-        ) {
-          newTotalPrice.push(585.0);
-          setIsAndroid(true);
-        }
-
-        if (
-          [
-            "Food Ordering & Delivery Script",
-            "WhatsApp Clone",
-            "Chat Room Script",
-            "Classified Ads Script",
-            "Logistic Marketplace Software",
-            "Job Portal PHP Script",
-            "Fiverr Clone",
-            "Grocery Store Script",
-            "PHP Business Directory Script",
-            "Groupon Clone Script",
-            "Udemy Clone",
-            "Freelancer Clone",
-            "Service Marketplace Script",
-          ].includes(productType) &&
-          addArray.includes("iphone")
-        ) {
-          newTotalPrice.push(585.0);
-          setIsIphone(true);
-        }
-
-        if (isAndroid && isIphone) {
-          setSubtotalPrice(585.0 + 585.0);
-          setSubtotalDiscountPrice((subtotalPrice * 15) / 100);
-        }
-
-        const sum = newTotalPrice.reduce(
-          (accumulator, currentValue) => accumulator + currentValue,
-          0
+          currencyDetail: {
+            android_app: currencyDetail.android_app,
+            ios_app: currencyDetail.ios_app,
+            price: currencyDetail.price,
+            name: currencyDetail.name,
+            currency_symbol: currencyDetail.currency_symbol,
+          },
+          productType: productType.replace(/"/g, ""),
+        };
+        console.log(updatedData, "for formInitials");
+        // return;
+        const response = await axios.post(
+          BaseAPI + "/softwares/billing",
+          {updatedData: updatedData}
         );
-        const finalTotal = sum - subtotalDiscountPrice;
-
-        setTotal(
-          newTotalPrice.reduce(
-            (accumulator, currentValue) => accumulator + currentValue,
-            0
-          ) - subtotalDiscountPrice
-        );
-        setTotalPrice(newTotalPrice);
-
-        // Set form data
-        setFormData({
-          cost: total,
-          discount: 0.0,
-          total_cost: total,
-          currencySym: currencyDetail.currency_symbol,
-          currency: currencyDetail.name,
-          product_name: productType,
-        });
-
-        // Set promocode form
-        setPromocodeForm({
-          product_name: productType,
-          currencySym: currencyDetail.currency_symbol,
-          currency: currencyDetail.name,
-          total_amount: total,
-        });
-
-        // Initialize reCAPTCHA
-        setTimeout(() => {
-          const recaptchaContainer = document.getElementById("recaptchaBuy");
-          if (recaptchaContainer) {
-            grecaptcha.render(recaptchaContainer, {
-              sitekey: injectedConstants.RECAPTCHA,
-              callback: (response) => methods.onRecaptchaVerify(response),
-              expiredCallback: () => methods.onRecaptchaExpired(),
-            });
-          }
-        }, 500);
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        console.log(error.message);
       }
     };
 
-    //fetchData();
+    // fetchData();
+    sendFormInitials();
     calculateTotal();
     getCountries();
   }, []); // Empty dependency array means this effect runs once on mount
@@ -451,10 +479,9 @@ const Page = () => {
 
   return (
     <>
-      
-    <section className="order_summary">
-    <Navbar />
-     
+      <section className="order_summary">
+        <Navbar />
+
         <div className="container">
           <form
           // onSubmit={submitForm}
@@ -860,9 +887,8 @@ const Page = () => {
             </div>
           </div>
         </div>
-      
-     
-      <div className="quoue_box_full_sec">
+
+        <div className="quoue_box_full_sec">
           <div className="whatsapp-call">
             <a
               href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
@@ -880,9 +906,8 @@ const Page = () => {
             <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
           </div>
         </div>
-      <Footer />
-    </section>
-      
+        <Footer />
+      </section>
     </>
   );
 };

@@ -631,6 +631,7 @@
   .to_matf {
     margin: 0 0 20px !important;
     max-width: 400px !important;
+    font-size: 17px !important;
   }
 
   .case-study {
@@ -641,6 +642,7 @@
   .to_matf {
     margin: 0 auto 20px !important;
     max-width: 400px !important;
+    /* text-align: center !important; */
   }
 
   .home-slide3 .sl-count:first-child {
@@ -977,8 +979,12 @@
     text-align: center !important;
   }
 
-  .mobileapp_devcountry_bx .mobileapp_devcountry_bx_right {
+  /* .mobileapp_devcountry_bx .mobileapp_devcountry_bx_right {
     margin-top: 35px !important;
+  } */
+
+  .mobileapp_devcountry_bx .mobileapp_devcountry_bx_right{
+    margin: 0px 0 17px !important;
   }
 
   .app_shown_describe_center_mob {
@@ -1589,6 +1595,20 @@
 }
 
 @media (max-width: 767px) {
+  .take-a-look .swiper-slide {
+    /* margin: 0 !important; */
+    width: auto !important;
+  }
+
+  .lookSlider {
+    width: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .take-a-look .fas {
+    font-size: 30px;
+  }
+
   .HireYiiDeveloperBanner {
     margin-top: 50px !important;
   }
@@ -2273,7 +2293,7 @@
 
   .app_shown_describe_bx_icn {
     display: block !important;
-    margin: 0 auto 12px !important;
+    margin: 5px auto 12px !important;
   }
 
   .app_shown_describe_bx_label {
@@ -4227,6 +4247,13 @@
   .readymateSolution {
     padding-top: 30px;
   }
+  .readymateSolution .ready-product {
+    width: 96% !important;
+  }
+
+  .modal-content.ContactModalContent{
+    border: none;
+  }
 
   .ClientLogoHome {
     display: inline-block !important;
@@ -4556,7 +4583,7 @@
   }
 
   .detail-advant {
-    padding: 10px 0 0;
+    padding: 10px 0 0 !important;
   }
   .country_header_secton.aust {
     margin-top: 50px !important;
@@ -4671,12 +4698,12 @@
     margin-top: 50px !important;
   }
 
-  /* .right-detail-advant strong::after,
+  .right-detail-advant strong::after,
   .detail-advant .right-detail-advant::before,
   .left-detail-advant strong::after,
   .detail-advant .left-detail-advant::before {
     display: none;
-  } */
+  }
 
   .detail-advant .right-detail-advant {
     border-left: none;

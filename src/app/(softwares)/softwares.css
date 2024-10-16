@@ -541,6 +541,7 @@ section {
   font-weight: 700;
   position: relative;
   padding-bottom: 15px;
+  font-family: 'lato', serif;
 }
 
 .taxt_tt_job::before {
