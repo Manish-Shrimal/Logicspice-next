@@ -225,11 +225,12 @@ const Page = () => {
           currencyDetail: currencyDetail,
           productType: productType,
         };
-        console.log(billingInitials.current, "here");
+        // console.log(billingInitials.current, "here");
 
         let updatedFormData = {
           ...formData,
-          total_cost: totalPrice.current,
+          // total_cost: totalPrice.current,
+          total_cost: totalFinalPrice,
           cost: totalPrice.current,
         };
         // console.log(updatedFormData.cost, updatedFormData.total_cost,"cost");
@@ -412,13 +413,13 @@ const Page = () => {
           },
           productType: productType.replace(/"/g, ""),
         };
-        console.log(updatedData, "for formInitials");
+        // console.log(updatedData, "for formInitials");
         // return;
         const response = await axios.post(
           BaseAPI + "/softwares/billing",
           updatedData
         );
-        console.log(response)
+        // console.log(response)
         setInitialPriceBreakupHtml(response.data.html);
         setTotalFinalPrice(response.data.total);
         initialHtml.current = response.data.html
@@ -456,7 +457,7 @@ const Page = () => {
         discountData
       );
 
-      console.log(response);
+      // console.log(response);
 
       if (response.data.status == 200) {
         setFormData((pre) => ({

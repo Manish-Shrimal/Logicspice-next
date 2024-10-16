@@ -3545,6 +3545,9 @@ a.StartFreeTrialBtn {
 
 /* IMS css start  */
 
+.service-market-ttd-new li{
+  width: 100%!important;
+}
 .service-market-ttd-new li {
   color: #808080;
   float: left;

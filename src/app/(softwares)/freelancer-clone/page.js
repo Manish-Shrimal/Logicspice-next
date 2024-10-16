@@ -366,7 +366,7 @@ const Page = () => {
               ></iframe>
             </div>
             <div className="col-md-6">
-              <div className="service-market-ttd">
+              <div className="service-market-ttd-new">
                 <ul>
                   <li>
                     Payment gateway: Payment solution is completely integrated
