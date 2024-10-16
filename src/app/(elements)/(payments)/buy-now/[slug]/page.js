@@ -381,7 +381,7 @@ const Page = ({ params }) => {
                           name="submit"
                           title="PayPal - The safer, easier way to pay online!"
                           alt="Subscribe"
-                          value="Checkout & Subscribe"
+                          value="Buy Now"
                         />
                       </form>
                     </div>

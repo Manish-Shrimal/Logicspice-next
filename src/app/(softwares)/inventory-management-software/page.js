@@ -213,19 +213,19 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
-                  <div className="btn btn-get" onClick={openDemoAccessModal}>
+                  <div className="btn btn-get" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
-                      // <SoftwareEnquiry
-                      //   modalStatus={showModal}
-                      //   toggle={openModal}
-                      //   title={"Inventory Management Software"}
-                      // />
-                      <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Inventory management software. See how it works yourself!"
+                      <SoftwareEnquiry
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title={"Inventory Management Software"}
                       />
+                      // <GetDemoEnquiry
+                      //   modalStatus={demoAccessModal}
+                      //   toggle={openDemoAccessModal}
+                      //   title="Please fill the form below and get access to the live demo of Inventory management software. See how it works yourself!"
+                      // />
                     }
                   </div>
                 </div>
@@ -1332,20 +1332,20 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openDemoAccessModal}>
+                <div className="btn btn-get" onClick={openModal}>
                   <button>Enquiry Now</button>
                   {
-                    // <SoftwareEnquiry
-                    //   modalStatus={showModal}
-                    //   toggle={openModal}
-                    //   title="Demo Details For Food Ordering PHP Script"
-                    // />
+                    <SoftwareEnquiry
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Inventory Management Software"
+                    />
 
-                    <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Inventory management software. See how it works yourself!"
-                      />
+                    // <GetDemoEnquiry
+                    //     modalStatus={demoAccessModal}
+                    //     toggle={openDemoAccessModal}
+                    //     title="Please fill the form below and get access to the live demo of Inventory management software. See how it works yourself!"
+                    //   />
                   }
                 </div>
               </div>

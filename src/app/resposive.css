@@ -3212,6 +3212,10 @@
     padding-top: 10px;
   }
 
+  .sectionset_iosands .headings{
+    margin-bottom: 10px;
+  }
+
   .jobportal-btn {
     font-size: 15px;
     width: auto;
@@ -4962,7 +4966,7 @@
       font-size: 15px !important;
       padding: 7px 15px !important;
       vertical-align: top !important;
-      margin-bottom: 20px;
+      margin-bottom: 35px;
     }
 
     .modal-footer .btn {
