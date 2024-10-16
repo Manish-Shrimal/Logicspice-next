@@ -275,7 +275,7 @@ const Page = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/buy-now/crowdfunding-script"
+                    href="/buy-now/crowdfunding"
                   >
                     Buy Now
                   </Link>
