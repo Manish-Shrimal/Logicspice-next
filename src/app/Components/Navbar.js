@@ -270,7 +270,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="/crowdfunding-script">
+                              <Link href="/crowdfunding">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_crowd_funding"></i>
                                 </span>
