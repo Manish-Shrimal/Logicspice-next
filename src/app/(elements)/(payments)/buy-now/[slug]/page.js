@@ -12,6 +12,8 @@ import { Router } from "next/navigation";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
 import Link from "next/link";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+
 
 
 const Page = ({ params }) => {
@@ -21,6 +23,8 @@ const Page = ({ params }) => {
   const [productPriceTot, setProductPriceTot] = useState(0);
   const [queryParameter, setQueryParameter] = useState(null);
   const [billingInitials, setBillingInitials] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
 
   let checkedAndroid = useRef(false);
   let checkedIphone = useRef(false);
@@ -29,6 +33,9 @@ const Page = ({ params }) => {
   const [billing, setBilling] = useState(false);
 
   const slug = params.slug;
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -619,6 +626,26 @@ const Page = ({ params }) => {
           </div>
         </section>
       )}
+
+<div className="quoue_box_full_sec">
+        <div className="whatsapp-call">
+          <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+          >
+            <Image
+              unoptimized={true}
+              width={50}
+              height={50}
+              src="/img/images/whatsapp.png"
+              alt="whatsapp-icon"
+            />
+          </a>
+        </div>
+        <div className="quote_pop_plus quote_pop_in" onClick={toggleModal}>
+          <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
+        </div>
+      </div>
       <Footer />
     </>
   );
