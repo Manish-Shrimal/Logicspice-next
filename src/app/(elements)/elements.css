@@ -567,12 +567,15 @@ sites_maps,
 
 
 /*-------Buynow---*/
+.buy_now_software{
+	padding: 100px 0;
+}
 .order_summarty {
 	background-color: #eee;
 	padding: 50px 0;
 	display: inline-block;
 	width: 100%;
-	margin-top: 50px;
+	/* margin-top: 50px; */
 }
 
 .order_title {
@@ -852,6 +855,7 @@ label.in-label::before {
 .contine_payment {
 	float: right;
 	margin: 20px 0 0;
+	padding: 25px 0;
 }
 
 .input_des,

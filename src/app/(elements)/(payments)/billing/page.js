@@ -711,7 +711,7 @@ const Page = () => {
                   <Image
                     width={100}
                     height={100}
-                    src="/img/images/paypal.webp"
+                    src="/img/images/paypal-logo.png"
                     alt="PayPal"
                   />
                 </div>

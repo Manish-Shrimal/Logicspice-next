@@ -35,6 +35,20 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+
+  useEffect(() => {
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  }, []); // Empty dependency array to run once on mount
   return (
     <>
       <Navbar />
@@ -434,7 +448,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="/crowdfunding-script"
+                          href="/crowdfunding"
                           className="ready-product"
                           data-aos="fade-up"
                         >
@@ -2544,7 +2558,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="/crowdfunding-script"
+                          href="/crowdfunding"
                           className="ready-product"
                           data-aos="fade-up"
                         >

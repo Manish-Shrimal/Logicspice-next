@@ -1604,16 +1604,25 @@
     flex: 0 1 auto; /* Adjust size of the last child */
     margin: 0 auto; /* Centers the last child */
   }
-
+  .buy_now_software{
+    padding: 50px 0;
+  }
   .order_summarty{
     margin-top: 0;
   }
 
   .order_summarty_left{
     width: 100%;
+    margin-bottom: 30px;
   }
+  .SubscribePlan {
+    padding: 20px 14px 15px;
+}
   .order_summarty_right{
-    width: 100%
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .order_addonStep{

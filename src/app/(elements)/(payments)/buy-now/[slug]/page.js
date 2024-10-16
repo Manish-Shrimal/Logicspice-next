@@ -322,6 +322,7 @@ const Page = ({ params }) => {
   return (
     <>
       <Navbar />
+      <div className="buy_now_software">
       <section className="breadcrems_header">
         <div className="container">
           <div className="row">
@@ -380,7 +381,7 @@ const Page = ({ params }) => {
                           name="submit"
                           title="PayPal - The safer, easier way to pay online!"
                           alt="Subscribe"
-                          value="Buy Now"
+                          value="Checkout & Subscribe"
                         />
                       </form>
                     </div>
@@ -400,6 +401,86 @@ const Page = ({ params }) => {
                   <h4 className="titke">
                     You’ve added {productDetails.productType} Software
                   </h4>
+                </div>
+                <div className="order_summarty_right">
+                  <div className="order_summarty_right_inner">
+                    <div className="order_title">Order Summary</div>
+                    <div className="order_wrap">
+                      <div id="offeer_sec">
+                        <div className="order_wrap_row" id="and_sec">
+                          <div className="order_wrap_left">
+                            <span className="basi_title">
+                              {productDetails.productType}
+                            </span>
+                            <br />
+                            (Web Version)
+                          </div>
+                          <div className="order_wrap_right">
+                            {productDetails.currencyDetail.currency_symbol}
+                            <span id="and_price">
+                              {productDetails.currencyDetail.price}
+                            </span>{" "}
+                            {productDetails.currencyDetail.name}
+                          </div>
+                        </div>
+                        <div id="custom_sec"></div>
+                      </div>
+                      <div id="ofer_nw">
+                        <div className="order_wrap_row">
+                          <div className="order_wrap_left">
+                            <span className="basi_title">Total</span>
+                          </div>
+                          <div className="order_wrap_right">
+                            {productDetails.currencyDetail.currency_symbol}
+                            <span id="tot_sec">
+                              {productDetails.currencyDetail.price}
+                            </span>{" "}
+                            {productDetails.currencyDetail.name}
+                          </div>
+                        </div>
+                      </div>
+                     
+                      <div className="off_sect">
+                        <span id="show" className="drop drop_left">
+                          We Offer Money Back Guarantee{" "}
+                          <i className="question_icon"></i>
+                          <div className="drop_contanet drop_left_content">
+                            <span id="hide"></span>
+                            Yes, we provide a 30 days money back guarantee to
+                            ensure customer satisfaction with our software. If,
+                            for any reason, you decide to stop using the
+                            product, you can request a refund. We will reimburse
+                            the entire amount, excluding the installation and
+                            configuration charges, which are either USD 65 or
+                            20% of the application cost, whichever is higher.
+                            Please note that the money back guarantee does not
+                            apply to customers who have received updates as per
+                            their specific requests, taking into account the
+                            significant efforts and time invested by the team
+                            for their project.
+                          </div>
+                        </span>
+                        <div className="pay_pri_term">
+                          For more detail visit following pages
+                          <Link
+                            href="/privacy-policy"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Privacy Policy
+                          </Link>{" "}
+                          and
+                          <Link
+                            href="/terms-of-use"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Terms Of Use
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="order_summarty_left">
                   <div className="oder_inner">
@@ -536,12 +617,12 @@ const Page = ({ params }) => {
                       className="custom_btn btn btn-primary"
                       // onClick={submitForm}
                     >
-                      Proceed
+                    Continue
                     </button>
                   </div>
                 </div>
 
-                <div className="order_summarty_right">
+                {/* <div className="order_summarty_right">
                   <div className="order_summarty_right_inner">
                     <div className="order_title">Order Summary</div>
                     <div className="order_wrap">
@@ -578,7 +659,7 @@ const Page = ({ params }) => {
                           </div>
                         </div>
                       </div>
-                      {/* <div id="ofer_finl"></div> */}
+                     
                       <div className="off_sect">
                         <span id="show" className="drop drop_left">
                           We Offer Money Back Guarantee{" "}
@@ -620,12 +701,14 @@ const Page = ({ params }) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>
         </section>
       )}
+      </div>
+    
 
 <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
