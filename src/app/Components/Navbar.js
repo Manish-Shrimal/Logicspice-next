@@ -81,7 +81,7 @@ const Navbar = () => {
             >
               <ul className="nav navbar-nav navbar-right ms-auto top-main-menu">
                 <li className="dropdown mega-menu-fw">
-                  <a
+                  <Link
                     className="dropdown-toggle"
                     href="#"
                     id="companyDropdown"
@@ -92,7 +92,7 @@ const Navbar = () => {
                   >
                     COMPANY
                     <b className="caret caret-company"></b>
-                  </a>
+                  </Link>
 
                   <div
                     className={`dropdown-menu company-menu company-menu-icon ${
@@ -237,9 +237,9 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li className="dropdown mega-menu-fw">
-                  <a
+                  <Link
                     className=" dropdown-toggle"
-                    href="#"
+                    href="/softwares"
                     id="softwareDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -248,7 +248,7 @@ const Navbar = () => {
                   >
                     SOFTWARES
                     <b className="caret caret-company"></b>
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-menu company-menu ${
                       dropdown2 ? "show" : ""
@@ -461,7 +461,7 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li className="dropdown mega-menu-fw">
-                  <a
+                  <Link
                     className="dropdown-toggle"
                     href="#"
                     id="servicesDropdown"
@@ -472,7 +472,7 @@ const Navbar = () => {
                   >
                     SERVICES
                     <b className="caret caret-company"></b>
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-menu company-menu ${
                       dropdown3 ? "show" : ""
@@ -687,7 +687,7 @@ const Navbar = () => {
                   </div>
                 </li>
                 <li className="dropdown mega-menu-fw">
-                  <a
+                  <Link
                     className=" dropdown-toggle"
                     href="#"
                     id="hiringDropdown"
@@ -698,7 +698,7 @@ const Navbar = () => {
                   >
                     CUSTOM SOLUTIONS
                     <b className="caret caret-company"></b>
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-menu company-menu company-menu-icon ${
                       dropdown4 ? "show" : ""
@@ -841,14 +841,14 @@ const Navbar = () => {
                       }}
                     >
                       <li className="logic_contact">
-                        <a
+                        <Link
                           href="#"
                           onMouseEnter={() => setDropdown5(true)}
                           onMouseLeave={() => setDropdown5(false)}
                         >
                           <i class="fa fa-phone" aria-hidden="true"></i>
                           <b className="caret"></b>
-                        </a>
+                        </Link>
                         <div
                           className={`sub-contact ${dropdown5 ? "show" : ""}`}
                           aria-labelledby=""

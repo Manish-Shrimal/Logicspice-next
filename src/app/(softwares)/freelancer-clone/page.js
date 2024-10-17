@@ -381,7 +381,7 @@ const Page = () => {
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new">
-                <ul>
+                <ul className="freelancer_features">
                   <li>
                     Payment gateway: Payment solution is completely integrated
                     with PayPal for the fast, easy and secure transaction.

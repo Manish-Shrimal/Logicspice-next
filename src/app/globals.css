@@ -4568,9 +4568,14 @@ body.modal-open .quote_pop_plus {
   float: left;
   margin-bottom: 0;
   margin-right: 5px;
-  width: 260px!important;
+  width: auto;
   font-size: 15px !important;
   padding: 8px 20px !important;
+}
+
+.get_demo_modal .btn{
+  width: 260px!important;
+  padding-top: 0;
 }
 
 .modal-footer {
@@ -7630,7 +7635,7 @@ section {
   padding: 0;
 }
 
-.CustomQuickFAQScript .accordion-header .accordion-button {
+/* .CustomQuickFAQScript .accordion-header .accordion-button {
   background: url(/img/ordermanagement/faq_select-min.png) 4% center no-repeat #fff;
   padding: 9px 5px 9px 35px!important;
   font-size: 20px!important;
@@ -7653,7 +7658,7 @@ section {
   padding: 0px 15px 15px 70px;
   border: none !important;
   font-size: 18px;
-}
+} */
 
 .take-a-look .slick-prev:before, .slick-next:before{
   display: none;

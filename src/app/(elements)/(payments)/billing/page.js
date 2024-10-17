@@ -59,7 +59,7 @@ const Page = () => {
   // Set the initial state with the parsed object
   const [currencyDetail, setCurrencyDetail] = useState(initialCurrencyDetail);
 
-  const [productType, setProductType] = useState(Cookies.get("productType"));
+  const [productType, setProductType] = useState(Cookies.get("productType").replace(/"/g, ""));
 
   const [formData, setFormData] = useState({
     billing_name: "",
@@ -223,7 +223,7 @@ const Page = () => {
           additionalPoints: additionalPoints,
           countries: countries,
           currencyDetail: currencyDetail,
-          productType: productType,
+          productType: productType.replace(/"/g, ""),
         };
         // console.log(billingInitials.current, "here");
 

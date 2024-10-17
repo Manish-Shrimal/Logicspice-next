@@ -91,7 +91,7 @@ const Page = () => {
   const [sellerTab, setSellerTab] = useState(false);
   const [buyerTab, setBuyerTab] = useState(true);
   const [adminTab, setAdminTab] = useState(false);
-  const [studentTab, setStudentTab] = useState(false);
+  const [studentTab, setStudentTab] = useState(true);
   const [instructorTab, setInstructorTab] = useState(false);
   const [adminpanelTab, setAdminpanelTab] = useState(false);
 
@@ -2037,36 +2037,39 @@ const Page = () => {
             <ul className="nav nav-tabs-slide" role="tablist">
               <li role="presentation" className={studentTab ? "active" : ""}>
                 <a
-                  href="#homefiveer"
+                  
                   aria-controls="homefiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="true"
                   onClick={() => handleStudentTab()}
+                  style={{cursor: "pointer"}}
                 >
                   Student Features
                 </a>
               </li>
               <li role="presentation" className={instructorTab ? "active" : ""}>
                 <a
-                  href="#profilefiveer"
+                 
                   aria-controls="profilefiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="false"
                   onClick={() => handleInstructorTab()}
+                  style={{cursor: "pointer"}}
                 >
                   Instructor Features
                 </a>
               </li>
               <li role="presentation" className={adminpanelTab ? "active" : ""}>
                 <a
-                  href="#adminfiveer"
+                
                   aria-controls="adminfiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="false"
                   onClick={() => handleAdminpanelTab()}
+                  style={{cursor: "pointer"}}
                 >
                   Admin Panel
                 </a>

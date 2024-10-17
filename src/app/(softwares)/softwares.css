@@ -3545,6 +3545,10 @@ a.StartFreeTrialBtn {
 
 /* IMS css start  */
 
+.service-market-ttd-new .freelancer_features li{
+   width: 100%;
+}
+
 .service-market-ttd-new li{
   width: 100%!important;
 }
@@ -3602,6 +3606,12 @@ a.StartFreeTrialBtn {
   color: #303030;
   box-shadow: none;
   border-radius: 0 !important;
+}
+
+.enquiry_software_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .CustomQuickFAQScript .accordion-header .accordion-button::after {

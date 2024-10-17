@@ -1014,8 +1014,9 @@ const Page = () => {
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
               <h4>
-                {pageData.currency_symbol}
-                {pageData.price}
+                {/* {pageData.currency_symbol}
+                {pageData.price} */}
+                $ 895
                 <span className="sml_labl"> {pageData.name}</span>
               </h4>
               <strike className="srik_cls">

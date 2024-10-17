@@ -88,7 +88,7 @@ const AppointmentSchedulingSoftware = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        BaseAPI + "/product/Details/appointment-scheduling-software"
+        BaseAPI + "/product/Details/appointment-booking-system"
       );
       // console.log(response.data.data)
       setPageData(response.data.data);
@@ -275,7 +275,7 @@ const AppointmentSchedulingSoftware = () => {
                   </div>
                   <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/buy-now/appointment-scheduling-software"
+                    href="/buy-now/appointment-booking-system"
                   >
                     Buy Now
                   </Link>

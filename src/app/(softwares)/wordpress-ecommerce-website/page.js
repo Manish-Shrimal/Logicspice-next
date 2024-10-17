@@ -222,6 +222,7 @@ const Page = () => {
                 </div>
                 <div className="job-valu-btn">
                   <span>Fill your basic details and</span>
+                  <div className="enquiry_software_btn">
                   <div
                     className=" btn-get"
                     onClick={openDemoAccessModal}
@@ -229,21 +230,39 @@ const Page = () => {
                   >
                     <a>Get Demo Access!</a>
                     {
-
-<GetDemoEnquiry
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of WordPress eCommerce Website.
- See how it works yourself!"
+                         See how it works yourself!"
                       />
                     }
                   </div>
-                  <Link
+                  <div className="" onClick={openModal}>
+                    <button className="btn fiverr-buys NewGreenBtnJob">
+                      Enquire Now
+                    </button>
+                    {
+                      <SoftwareEnquiry
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="WordPress eCommerce Website"
+                      />
+                    }
+                  </div>
+                  </div>
+                  
+                  {/* <button
                     className="btn fiverr-buys NewGreenBtnJob"
                     href="/udemy-clone"
                   >
                     Enquire Now
-                  </Link>
+                  </button>
+                   <SoftwareEnquiry
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="WordPress E-commerce website"
+                      /> */}
                 </div>
                 <div className="SubscriptionPrice">
                   <div className="line-border NewLineBoader">
@@ -1172,29 +1191,44 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openDemoAccessModal}>
-                  <button>Get Demo Access!</button>
+              <div className="enquiry_software_btn">
+              <div className="btn btn-get" onClick={openDemoAccessModal}>
+                  <a>Get Demo Access!</a>
                   {
-//                     <SoftwareEnquiry
-//                       modalStatus={showModal}
-//                       toggle={openModal}
-//                       title="Please fill the form below and get access to the live demo of WordPress eCommerce Website.
-// See how it work yourself!"
-//                     />
-<GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of WordPress eCommerce Website.
+                    //                     <SoftwareEnquiry
+                    //                       modalStatus={showModal}
+                    //                       toggle={openModal}
+                    //                       title="Please fill the form below and get access to the live demo of WordPress eCommerce Website.
+                    // See how it work yourself!"
+                    //                     />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of WordPress eCommerce Website.
  See how it works yourself!"
-                      />
+                    />
                   }
                 </div>
-                <Link
+                {/* <Link
                   className="btn fiverr-buys"
                   href="/crowdfunding"
                 >
                   Enquire Now
-                </Link>
+                </Link> */}
+                <div className="" onClick={openModal}>
+                  <button className="btn fiverr-buys NewGreenBtnJob">
+                    Enquire Now
+                  </button>
+                  {
+                    <SoftwareEnquiry
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="WordPress eCommerce Website"
+                    />
+                  }
+                </div>
+              </div>
+                
               </div>
               <div className="jocpp">
                 <div className="portel-btnbx">
@@ -2179,8 +2213,8 @@ const Page = () => {
                           toggleAccordion(7);
                         }}
                       >
-                        Am I permitted to eliminate your company&apos;s proprietary
-                        notices?
+                        Am I permitted to eliminate your company&apos;s
+                        proprietary notices?
                       </a>
                     </div>
                     <div style={activeIndex === 7 ? showStyle : collapseStyle}>
@@ -2189,8 +2223,8 @@ const Page = () => {
                           You have the flexibility to modify the script by
                           removing your company information and substituting it
                           with yours. However, it is not permissible to include
-                          &quot;copyright by&quot; since exclusive copyright ownership for
-                          the software rests with us.
+                          &quot;copyright by&quot; since exclusive copyright
+                          ownership for the software rests with us.
                         </p>
                       </div>
                     </div>
@@ -2260,8 +2294,8 @@ const Page = () => {
                     <div style={activeIndex === 10 ? showStyle : collapseStyle}>
                       <div style={bodyStyle}>
                         <p>
-                          Yes, we deliver the exact product. We don&apos;t compromise
-                          with quality at all.
+                          Yes, we deliver the exact product. We don&apos;t
+                          compromise with quality at all.
                         </p>
                       </div>
                     </div>
@@ -2410,11 +2444,7 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link
-                    href="/ebay-clone"
-                    title="View Detail"
-                    target="_black"
-                  >
+                  <Link href="/ebay-clone" title="View Detail" target="_black">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>
