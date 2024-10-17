@@ -29,6 +29,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
       schemaOrg = cleanedText && JSON.parse(cleanedText);
 
+      console.log(cleanedText)
   }
   // Return metadata
   return {
@@ -70,7 +71,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       <body className={inter.className}>{children}</body>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg).replace(/\\\//g, '/') }}
       />
     </html>
   );

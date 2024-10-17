@@ -400,7 +400,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                             )}
                           </div>
                           {!resultSuccess && (
-                            <div className="modal-footer">
+                            <div className="modal-footer pt-0">
                               <button
                                 className="btn btn-primary"
                                 size="30"

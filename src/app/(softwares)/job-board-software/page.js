@@ -12,6 +12,8 @@ import React, { useEffect, useState } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
 import {
   Accordion,
   AccordionSummary,
@@ -285,13 +287,10 @@ const Page = () => {
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
                     <li>
-                      <i
-                        className="fa-brands fa-android"
-                        aria-hidden="true"
-                      ></i>
+                      <i class="fa fa-android" aria-hidden="true"></i>
                     </li>
                     <li>
-                      <i className="fa-brands fa-apple" aria-hidden="true"></i>
+                      <i class="fa fa-apple" aria-hidden="true"></i>
                     </li>
                   </ul>
                   <div className="portel-btnbx">
@@ -1793,10 +1792,10 @@ const Page = () => {
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android" aria-hidden="true"></i>
+                    <i className="fa fa-android" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple" aria-hidden="true"></i>
+                    <i className="fa fa-apple" aria-hidden="true"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">

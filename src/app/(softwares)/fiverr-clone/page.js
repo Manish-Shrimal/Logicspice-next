@@ -21,6 +21,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -363,10 +365,11 @@ const Page = () => {
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android" aria-hidden="true"></i>
+                    {/* <i className="fa-brands fa-android" aria-hidden="true"></i> */}
+                    <i class="fa fa-android" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple" aria-hidden="true"></i>
+                  <i class="fa fa-apple" aria-hidden="true"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">
@@ -1473,10 +1476,11 @@ const Page = () => {
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android" aria-hidden="true"></i>
+                  <i class="fa fa-android" aria-hidden="true"></i>
+
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple" aria-hidden="true"></i>
+                  <i class="fa fa-apple" aria-hidden="true"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">

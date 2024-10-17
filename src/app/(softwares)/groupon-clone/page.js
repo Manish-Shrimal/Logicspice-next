@@ -14,6 +14,8 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Whylogicspice from "@/app/Components/Whylogicspice";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
@@ -280,16 +282,13 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon jobwidthauto">
                   <li>
-                    <i
-                      className="fa-solid fa-earth-americas"
-                      aria-hidden="true"
-                    ></i>
+                  <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android"></i>
+                    <i className="fa fa-android"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple"></i>
+                    <i className="fa fa-apple"></i>
                   </li>
                 </ul>
               </div>
@@ -1285,13 +1284,13 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                    <i className="fa-solid fa-earth-americas"></i>
+                  <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android"></i>
+                    <i className="fa fa-android"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple"></i>
+                    <i className="fa fa-apple"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">

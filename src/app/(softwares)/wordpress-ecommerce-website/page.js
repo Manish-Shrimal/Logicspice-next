@@ -2444,7 +2444,7 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/ebay-clone" title="View Detail" target="_black">
+                  <Link href="/ecommerce-website" title="View Detail" target="_black">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>

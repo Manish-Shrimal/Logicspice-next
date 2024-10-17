@@ -5288,7 +5288,7 @@ const Page = () => {
                                   <SoftwareEnquiry
                                     modalStatus={showModal}
                                     toggle={openModal}
-                                    title="Customised Website"
+                                    title="Customized Website"
                                   />
                                 }
                               </div>
@@ -5803,12 +5803,12 @@ const Page = () => {
               </div>
               <div className="col-md-6">
                 <p>
-                  Logicspice offers <span>Cost Effective</span> Solution and the
+                  Logicspice offers <span>Cost Effective</span> Solution and the {""}
                   <span>quality</span> of their work is very good. Logicspice
-                  has very
+                  has very{""}
                   <span>good reviews</span> and 100&apos;s of different project
                   of different areas and work with detailed feedback about our
-                  request with very
+                  request with very{""}
                   <span>standardized process.</span>
                 </p>
                 <p>

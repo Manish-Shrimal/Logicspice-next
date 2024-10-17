@@ -15,7 +15,7 @@ body {
 }
 .software_products{
   padding: 70px 0;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .job-portal-banner {
   color: #fff;
@@ -358,14 +358,27 @@ body {
 }
 
 .job-pr-icon li {
-  color: #fff;
+  /* color: #fff;
   float: left;
   margin-bottom: 0px;
   position: relative;
-  font-size: 24px;
+  font-size: 30px;
   margin-right: 18px;
   min-height: 30px;
   width: 32px;
+  padding: 0 12px; */
+  color: #5e5f5f;
+  float: left;
+  margin-bottom: 0px;
+  position: relative;
+  font-size: 30px;
+  margin-right: 0;
+  min-height: 0;
+  width: auto;
+  border-right: 1px #9a9b9b solid;
+  line-height: 23px;
+  padding: 0 12px;
+  cursor: pointer;
 }
 
 .fiverr-new-banner .job-pr-icon li {
@@ -384,6 +397,10 @@ body {
 }
 
 .fiverr-new-banner .job-pr-icon li:first-child {
+  padding-left: 0;
+}
+
+.job-pr-icon li:first-child{
   padding-left: 0;
 }
 
@@ -486,7 +503,7 @@ section {
 }
 
 .client-say {
-  background-color: #fff!important;
+  background-color: #fff;
   padding: 60px 0;
 }
 
@@ -891,7 +908,7 @@ section {
 
 .SubscriptionModelPrice .srik_cls {
   font-size: 22px;
-  color: #5e5d5d;
+  color: #4d4d4d;
   display: inline-block;
   margin-left: 4px;
 }
@@ -6245,4 +6262,9 @@ before {
     width: 100%;
     margin: 10px auto 0;
   }
+}
+
+
+.software_products .breadcrumb-item a:hover{
+  color: #fff !important;
 }

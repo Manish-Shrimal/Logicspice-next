@@ -3961,7 +3961,7 @@ positivitymain {
 
 /* client say css  */
 .client-say {
-  background-color: #eeeeee;
+  background-color: #eeeeee!important;
   padding: 60px 0;
 }
 
