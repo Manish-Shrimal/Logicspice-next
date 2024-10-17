@@ -409,7 +409,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                 type="submit"
                                 onClick={submitEnquiryForm}
                               >
-                                REQUEST LIME DEMO ACCESS!
+                                REQUEST LIVE DEMO ACCESS!
                               </button>
                               
                               <p>(Receive the access to demo details in your email)</p></div>
