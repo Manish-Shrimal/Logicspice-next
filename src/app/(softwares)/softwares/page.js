@@ -128,6 +128,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/softwares/wordpress-ecommerce-website-img.png"
@@ -151,6 +152,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/softwares/web_new.png"
@@ -168,6 +170,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -193,6 +196,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -211,6 +215,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -236,6 +241,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -245,6 +251,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -254,6 +261,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -272,6 +280,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -297,6 +306,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -306,6 +316,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -315,6 +326,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -333,6 +345,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -357,6 +370,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -366,6 +380,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -375,6 +390,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -393,6 +409,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -417,6 +434,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -426,6 +444,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -435,6 +454,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -453,6 +473,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -477,6 +498,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -495,6 +517,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -519,6 +542,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -528,6 +552,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -537,6 +562,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -555,6 +581,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -581,6 +608,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -599,6 +627,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -624,6 +653,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -642,6 +672,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -667,6 +698,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -676,6 +708,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -685,6 +718,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -703,6 +737,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -728,6 +763,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -737,6 +773,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -746,6 +783,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -764,6 +802,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -791,6 +830,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -800,6 +840,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -809,6 +850,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -827,6 +869,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -852,6 +895,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -870,6 +914,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -895,6 +940,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -913,6 +959,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -938,6 +985,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -947,6 +995,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -956,6 +1005,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -974,6 +1024,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -998,6 +1049,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1007,6 +1059,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1016,6 +1069,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1034,6 +1088,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1058,6 +1113,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1067,6 +1123,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1076,6 +1133,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1094,6 +1152,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1118,6 +1177,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1136,6 +1196,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1163,6 +1224,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1181,6 +1243,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1208,6 +1271,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1217,6 +1281,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1226,6 +1291,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1244,6 +1310,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1270,6 +1337,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1279,6 +1347,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1288,6 +1357,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1306,6 +1376,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1330,6 +1401,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1339,6 +1411,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1348,6 +1421,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1366,6 +1440,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1390,6 +1465,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1408,6 +1484,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1433,6 +1510,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1451,6 +1529,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1476,6 +1555,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1494,6 +1574,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1520,6 +1601,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1538,6 +1620,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1564,6 +1647,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1582,6 +1666,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1606,6 +1691,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1624,6 +1710,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1649,6 +1736,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1667,6 +1755,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1692,6 +1781,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1710,6 +1800,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1734,6 +1825,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1743,6 +1835,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1752,6 +1845,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1770,6 +1864,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1796,6 +1891,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1814,6 +1910,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1839,6 +1936,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1858,6 +1956,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1882,6 +1981,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1900,6 +2000,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1924,6 +2025,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1942,6 +2044,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -1965,6 +2068,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -1983,6 +2087,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2007,6 +2112,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2025,6 +2131,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2049,6 +2156,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2067,6 +2175,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2091,6 +2200,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2109,6 +2219,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2133,6 +2244,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2151,6 +2263,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2175,6 +2288,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2192,7 +2306,8 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
-                            width={100}
+                            unoptimized={true}
+                            width={500}
                             height={100}
                             src="/img/softwares/customized_website.png"
                             alt="Customized Website"
@@ -2238,6 +2353,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             src="/img/softwares/wordpress-ecommerce-website-img.png"
@@ -2261,6 +2377,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   src="/img/softwares/web_new.png"
@@ -2278,6 +2395,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2303,6 +2421,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2321,6 +2440,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2346,6 +2466,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2355,6 +2476,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2364,6 +2486,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2382,6 +2505,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2407,6 +2531,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2416,6 +2541,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2425,6 +2551,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2443,6 +2570,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2467,6 +2595,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2476,6 +2605,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2485,6 +2615,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2503,6 +2634,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2527,6 +2659,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2536,6 +2669,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2545,6 +2679,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2563,6 +2698,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2587,6 +2723,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2605,6 +2742,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2629,6 +2767,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2638,6 +2777,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2647,6 +2787,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2665,6 +2806,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2691,6 +2833,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2709,6 +2852,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2734,6 +2878,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2752,6 +2897,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2777,6 +2923,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2786,6 +2933,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2795,6 +2943,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2813,6 +2962,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2838,6 +2988,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2847,6 +2998,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2856,6 +3008,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2874,6 +3027,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2901,6 +3055,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2910,6 +3065,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2919,6 +3075,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2937,6 +3094,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -2962,6 +3120,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -2980,6 +3139,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3005,6 +3165,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3023,6 +3184,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3048,6 +3210,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3057,6 +3220,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3066,6 +3230,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3084,6 +3249,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3108,6 +3274,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3117,6 +3284,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3126,6 +3294,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3144,6 +3313,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3168,6 +3338,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3177,6 +3348,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3186,6 +3358,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3204,6 +3377,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3228,6 +3402,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3246,6 +3421,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3273,6 +3449,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3291,6 +3468,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3318,6 +3496,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3327,6 +3506,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3336,6 +3516,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3354,6 +3535,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3380,6 +3562,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3389,6 +3572,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3398,6 +3582,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3416,6 +3601,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3440,6 +3626,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3449,6 +3636,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3458,6 +3646,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3476,6 +3665,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3500,6 +3690,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3518,6 +3709,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3543,6 +3735,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3561,6 +3754,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3586,6 +3780,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3604,6 +3799,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3630,6 +3826,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3648,6 +3845,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3674,6 +3872,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3692,6 +3891,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3716,6 +3916,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3734,6 +3935,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3759,6 +3961,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3777,6 +3980,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3802,6 +4006,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3820,6 +4025,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3844,6 +4050,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3853,6 +4060,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3862,6 +4070,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3880,6 +4089,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3906,6 +4116,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3924,6 +4135,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3949,6 +4161,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -3968,6 +4181,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -3992,6 +4206,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4010,6 +4225,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4034,6 +4250,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4052,6 +4269,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4075,6 +4293,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4093,6 +4312,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4117,6 +4337,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4135,6 +4356,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4159,6 +4381,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4177,6 +4400,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4201,6 +4425,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4219,6 +4444,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4243,6 +4469,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4261,6 +4488,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4285,6 +4513,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4302,7 +4531,8 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
-                            width={100}
+                            unoptimized={true}
+                            width={500}
                             height={100}
                             src="/img/softwares/customized_website.png"
                             alt="Customized Website"
@@ -4348,6 +4578,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4373,6 +4604,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4382,6 +4614,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4391,6 +4624,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4409,6 +4643,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4434,6 +4669,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4443,6 +4679,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4452,6 +4689,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4470,6 +4708,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4494,6 +4733,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4503,6 +4743,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4512,6 +4753,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4530,6 +4772,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4554,6 +4797,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4563,6 +4807,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4572,6 +4817,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4591,6 +4837,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4615,6 +4862,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4624,6 +4872,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4633,6 +4882,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4652,6 +4902,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4677,6 +4928,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4686,6 +4938,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4695,6 +4948,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4713,6 +4967,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4738,6 +4993,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4747,6 +5003,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4756,6 +5013,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4774,6 +5032,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4801,6 +5060,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4810,6 +5070,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4819,6 +5080,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4838,6 +5100,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4863,6 +5126,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4872,6 +5136,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4881,6 +5146,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4899,6 +5165,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4923,6 +5190,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4932,6 +5200,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4941,6 +5210,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4959,6 +5229,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -4983,6 +5254,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -4992,6 +5264,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5001,6 +5274,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5020,6 +5294,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5047,6 +5322,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5056,6 +5332,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5065,6 +5342,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5083,6 +5361,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5109,6 +5388,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5118,6 +5398,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5127,6 +5408,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5145,6 +5427,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5169,6 +5452,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5178,6 +5462,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5187,6 +5472,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5206,6 +5492,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5230,6 +5517,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5239,6 +5527,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5248,6 +5537,7 @@ const Page = () => {
                               </li>
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5265,7 +5555,8 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
-                            width={100}
+                            unoptimized={true}
+                            width={500}
                             height={100}
                             src="/img/softwares/customized_website.png"
                             alt="Customized Website"
@@ -5311,6 +5602,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5335,6 +5627,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5353,6 +5646,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5377,6 +5671,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5395,6 +5690,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5418,6 +5714,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5436,6 +5733,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5460,6 +5758,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5478,6 +5777,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5502,6 +5802,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5520,6 +5821,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5544,6 +5846,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5562,6 +5865,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5586,6 +5890,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5604,6 +5909,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={100}
                             height={100}
                             className=""
@@ -5628,6 +5934,7 @@ const Page = () => {
                             <ul className="make-style">
                               <li>
                                 <Image
+                                  unoptimized={true}
                                   width={100}
                                   height={100}
                                   className=""
@@ -5645,6 +5952,7 @@ const Page = () => {
                           data-aos="fade-up"
                         >
                           <Image
+                            unoptimized={true}
                             width={500}
                             height={100 / (100 / 100)}
                             src="/img/softwares/customized_website.png"
@@ -5803,13 +6111,11 @@ const Page = () => {
               </div>
               <div className="col-md-6">
                 <p>
-                  Logicspice offers <span>Cost Effective</span> Solution and the {""}
+                  Logicspice offers <span>Cost Effective</span> Solution and the{" "}
                   <span>quality</span> of their work is very good. Logicspice
-                  has very{""}
-                  <span>good reviews</span> and 100&apos;s of different project
-                  of different areas and work with detailed feedback about our
-                  request with very{""}
-                  <span>standardized process.</span>
+                  has very <span>good reviews</span> and 100&apos;s of different
+                  project of different areas and work with detailed feedback
+                  about our request with very <span>standardized process.</span>
                 </p>
                 <p>
                   Very friendly environment and i highly recommend logicspice
@@ -5839,6 +6145,7 @@ const Page = () => {
               target="_blank"
             >
               <Image
+                unoptimized={true}
                 width={100}
                 height={100}
                 src="/img/images/whatsapp.png"

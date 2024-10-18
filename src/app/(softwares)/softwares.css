@@ -5170,15 +5170,20 @@ before {
   right: -80px;
 }
 
+#jobboardclients .slick-next:before {
+  color: #fff;
+}
+
 #jobboardclients .slick-prev {
   left: -80px;
 }
 
-#jobboardclients .slick-prev:before,
-#jobboardclients .slick-next:before {
-  /* color: #333; */
+#jobboardclients .slick-prev:before
+ {
+  color: #3e3e3e;
+ 
   width: 42px;
-  /* background: #fff; */
+  background: #fff;
   border-radius: 50%;
   height: 42px;
   text-align: center;
@@ -5186,7 +5191,28 @@ before {
   font-size: 36px;
   line-height: 41px;
   text-shadow: none;
+  content: "\f104";
+  font-family: FontAwesome;
+  display: inline-block;
 }
+
+#jobboardclients .slick-next::after{
+  color: #3e3e3e!important;
+  display: inline-block;
+  width: 42px!important;
+  background: #fff;
+  border-radius: 50%!important;
+  height: 42px!important;
+  text-align: center!important;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2)!important;
+  font-size: 36px!important;
+  line-height: 41px!important;
+  text-shadow: none!important;
+  content: "\f105"!important;
+  font-family: FontAwesome;
+}
+
+
 
 .site-titles {
   width: 100%;
@@ -5524,7 +5550,7 @@ before {
 
 .caption-bx h3 a {
   display: inline-block;
-  color: #fff;
+  color: #fff!important;
   font-size: 22px;
   font-weight: 600
 }
@@ -5998,9 +6024,9 @@ before {
   position: fixed; */
   cursor: pointer;
     border: 0;
-    position: sticky;
+    position: sticky!important;
     right: 0;
-    top: 3px;
+    top: -10px!important;
     width: 25px;
     height: 25px;
     background: #451095;

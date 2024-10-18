@@ -65,7 +65,7 @@ const Page = () => {
     setShowReviewModal(!showReviewModal);
   };
   var settings = {
-    dots: true,
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -74,6 +74,11 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
+
+
+
+  
+  
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);

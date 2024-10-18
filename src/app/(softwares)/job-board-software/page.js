@@ -127,6 +127,16 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
+  var companies = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
@@ -2146,14 +2156,14 @@ const Page = () => {
               className="img-fluid"
             />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
 
         <Modal
@@ -2168,7 +2178,7 @@ const Page = () => {
           ></Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
+              <Slider {...companies}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
@@ -2354,14 +2364,14 @@ const Page = () => {
               </Slider>
             </div>
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer>
             <button
               className="btn btn-secondary"
               onClick={toggleBuyJobPortalModal}
             >
               Close
             </button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal>
       </div>
       <section className="used_technology_section" id="technologies">
