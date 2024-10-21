@@ -1671,7 +1671,7 @@
   .HireFlexNewSection .new-hiring-div .title_heading {
     display: inline-block !important;
     text-align: left !important;
-    padding-left: 75px !important;
+    padding-left: 150px !important;
   }
   .cack_logo_img {
     display: none !important;
@@ -1682,6 +1682,10 @@
     width: 100px !important;
   }
   .team_head {
+    margin-top: 50px !important;
+  }
+
+  .guest-post-banner{
     margin-top: 50px !important;
   }
   .top-head-custom {

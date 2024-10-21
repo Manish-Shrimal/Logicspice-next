@@ -22,8 +22,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let text = product.data.schema;
 
   let schemaOrg = null;
+  let cleanedText;
   if(text){
-    const cleanedText = text
+    cleanedText = text
       .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
       .replace(/\\n/g, '')      // Remove \n (newline)
       .replace(/\\r/g, '')      // Remove \r (carriage return)
@@ -32,6 +33,11 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 
       schemaOrg = cleanedText && JSON.parse(cleanedText);
+
+      // console.log(cleanedText,)
+  } else {
+    cleanedText = "";
+    schemaOrg = "";
 
   }
 

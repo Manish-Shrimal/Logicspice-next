@@ -2019,7 +2019,7 @@ section {
 }
 .portel-btnbx {
   float: left;
-  padding-top: px;
+  padding-top: 14px;
   padding-left: 0px;
 }
 .ecommerce-portal-banner .line-border {
@@ -2194,14 +2194,21 @@ section {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+
 }
+/* .slide-website-services .slick-arrow.slick-next::after{
+  content: "\f105"!important;
+  font-family: FontAwesome !important;
+  color: #3f3f3f;
+} */
 .slide-website-services .slick-prev::before {
   content: "\f104";
   font-family: FontAwesome !important;
   color: #3f3f3f;
 }
-.slide-website-services .slick-next::before {
+.slide-website-services .slick-arrow.slick-next::after {
   content: "\f105";
+  font-size: 20px;
   font-family: FontAwesome !important;
   color: #3f3f3f;
 }
@@ -2594,7 +2601,7 @@ section {
 }
 .vill-all-projects .btn.btn-primary:hover {
   background-image: url(/img/ecommercewebsite/view-all-icon.png);
-  color: #000;
+  color: #000!important;
   border: 3px #f1484a solid !important;
   background-color: #fff !important;
   background-repeat: no-repeat;
@@ -2641,6 +2648,12 @@ section {
 #slide-website-portfolio2 .slick-arrow.slick-next {
   right: 30px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+#slide-website-portfolio2 .slick-arrow.slick-next::after {
+  content: "\f105";
+  font-size: 20px;
+  font-family: FontAwesome !important;
 }
 .ecommerce_review_section {
   padding: 50px 0 20px;
@@ -7853,6 +7866,35 @@ background: linear-gradient(to right,  #e9e5ff 0%,#e8cdff 100%); /* W3C, IE10+, 
 	background-size: cover;
 }
 
+
+.BlockchainDevelopmentBanner{
+background: linear-gradient(to right,  #fefeff 0%,#6186e2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+.GenerativeAIBanner .LaravelBannerHadding,
+.BlockchainDevelopmentBanner .LaravelBannerHadding {
+	color: #303030;
+}
+.BlockchainDescriptions{
+  background: url(/img/blockchain-development/blockchain-bg.jpg) center center no-repeat;
+    background-size: auto;
+  background-size: cover;
+  direction: rtl;
+}
+.BlockchainDescriptions .laravel_img {
+	text-align: center;
+	padding: 190px 0 0;
+}
+.GenerativeAIBanner{
+background: linear-gradient(to right,  #f8faff 0%,#c8d8ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+.Generativedescriptions{
+background: url(/img/generative-ai/generative-ai-bg.jpg) center center no-repeat;
+background-size: auto;
+background-size: cover;
+direction: rtl;
+}
 @media (max-width: 768px) {
   .faq_quick_sec {
     padding: 8px;

@@ -65,26 +65,11 @@ const Page = () => {
     <>
       <NavBar />
 
-      <section className="laravel-banner LaravelBanners">
-        <div className="LaravelLeftImg">
-          <Image
-            width={400}
-            height={500 / (100 / 100)}
-            src="/img/laraveldevelopment/laravel-left-img.png"
-            alt="laravel web development"
-          />
-        </div>
-        <div className="LaravelRightImg">
-          <Image
-            width={500}
-            height={500 / (100 / 100)}
-            src="/img/laraveldevelopment/laravel-right-img.png"
-            alt="laravel web development"
-          />
-        </div>
+      <section className="laravel-banner LaravelBanners BlockchainDevelopmentBanner">
+      
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-8">
+            <div className="col-xs-12 col-sm-6 col-md-7">
               <div className="laravel-banner-txt">
                 <h1>
                   <strong className="LaravelBannerHadding">Blockchain</strong>{" "}
@@ -137,13 +122,13 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-6 col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-5">
               <div className="page_img LaravelBannerImg">
                 <Image
-                  width={240}
+                  width={350}
                   height={500 / (100 / 100)}
-                  src="/img/laraveldevelopment/laravel-new-icon.png"
-                  alt="laravel web development"
+                  src="/img/blockchain-development/blockchain-banner-img.png"
+                  alt="blockchain development"
                 />
               </div>
             </div>
@@ -151,20 +136,20 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="laravel-descriptions ">
+      <section className="laravel-descriptions BlockchainDescriptions">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
                 <Image
                   width={310}
                   height={500 / (100 / 100)}
-                  src="/img/laraveldevelopment/laravel-logo-img.png"
-                  alt="laravel web development"
+                  src="/img/blockchain-development/blockchain-icon.png"
+                  alt="blockchain development"
                 />
               </div>
             </div>
-            <div className="col-sm-6 col-md-7 pull-left" dir="ltr">
+            <div className="col-sm-6 col-md-6 pull-left" dir="ltr">
               <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>Why Choose Blockchain?</h2>
                 <p>
@@ -214,15 +199,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon1.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/custom-blockchain-icon.png"
+                       alt="blockchain development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon1.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/custom-blockchain-white-icon.png"
+                        alt="blockchain development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -246,15 +231,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon2.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/consulting-services-icon.png"
+                        alt="blockchain development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon2.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/consulting-services-white-icon.png"
+                        alt="blockchain development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -276,15 +261,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon3.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/blockchain-app-development-icon.png"
+                        alt="blockchain development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon3.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/blockchain-app-development-white-icon.png"
+                        alt="blockchain development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -306,15 +291,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon4.png"
+                        src="/img/blockchain-development/smart-contract-icon.png"
                         alt="laravel web development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon4.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/smart-contract-white-icon.png"
+                        alt="blockchain development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -335,15 +320,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon5.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/nft-development-icon.png"
+                        alt="blockchain development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon5.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/nft-development-white-icon.png"
+                        alt="blockchain development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -365,15 +350,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon6.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/cryptocurrency-icon.png"
+                        alt="blockchain development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon6.png"
-                        alt="laravel web development"
+                        src="/img/blockchain-development/cryptocurrency-white-icon.png"
+                        alt="blockchain development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -498,9 +483,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon1.png"
+                      src="/img/blockchain-development/strategic-blockchain-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -526,9 +511,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon4.png"
+                      src="/img/blockchain-development/tailored-blockchain-solutions-icon.png"
                       alt="img4"
                     />
                   </div>
@@ -553,9 +538,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon2.png"
+                      src="/img/blockchain-development/proof-concept-icon.png"
                       alt="img2"
                     />
                   </div>
@@ -582,9 +567,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/blockchain-development/decentralized-application-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -607,9 +592,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/blockchain-development/smart-contract-design-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -632,9 +617,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/blockchain-development/security-audits-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -658,9 +643,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/blockchain-development/seamless-blockchain-integration-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -684,9 +669,9 @@ const Page = () => {
                 <div className="laravel_core_featureBox">
                   <div className="laravel_core_features_img">
                     <Image
-                      width={50}
+                      width={47}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/blockchain-development/ongoing-support-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -725,7 +710,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon1.png"
+                      src="/img/blockchain-development/experienced-developers-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -746,7 +731,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon2.png"
+                      src="/img/blockchain-development/tailored-solutions-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -768,7 +753,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon3.png"
+                      src="/img/blockchain-development/end-to-end-service-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -790,7 +775,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon4.png"
+                      src="/img/blockchain-development/security-first-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -811,7 +796,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon5.png"
+                      src="/img/blockchain-development/client-centric-approach-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -832,7 +817,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon6.png"
+                      src="/img/blockchain-development/scalability-performance-icon.png"
                       alt="img1"
                     />
                   </div>

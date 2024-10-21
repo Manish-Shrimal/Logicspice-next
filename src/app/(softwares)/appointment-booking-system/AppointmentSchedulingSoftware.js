@@ -27,7 +27,6 @@ import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
-
 const AppointmentSchedulingSoftware = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);

@@ -31,6 +31,9 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
+
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -63,6 +66,16 @@ const Page = () => {
 
   var settings = {
     dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+  var companies = {
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -291,10 +304,10 @@ const Page = () => {
                   ></i>
                 </li>
                 <li>
-                  <i className="fa-brands fa-android"></i>
+                  <i className="fa fa-android"></i>
                 </li>
                 <li>
-                  <i className="fa-brands fa-apple"></i>
+                  <i className="fa fa-apple"></i>
                 </li>
               </ul>
             </div>
@@ -1469,10 +1482,10 @@ const Page = () => {
                     ></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android"></i>
+                    <i className="fa fa-android"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple"></i>
+                    <i className="fa fa-apple"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">
@@ -1723,7 +1736,7 @@ const Page = () => {
           </Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
+              <Slider {...companies}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
@@ -1779,15 +1792,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://logistics.onestop.global/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                     logistics.onestop.global
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://logistics.onestop.global/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1795,7 +1808,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 /100)}
-                      src="/img/logisticmarketplace/salorapido.jpg"
+                      src="/img/logisticmarketplace/logisticsonestop.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1805,15 +1818,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://salorapido.com/"
+                      href="https://afodel.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      afodel.com
                     </Link>
                   </div>
                   <Link
-                    href="https://salorapido.com/"
+                    href="https://afodel.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1821,7 +1834,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 /100)}
-                      src="/img/logisticmarketplace/salorapido.jpg"
+                      src="/img/logisticmarketplace/afodel.jpg"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1829,42 +1842,56 @@ const Page = () => {
                   </Link>
                 </div>
                 <div className="SliderMainBx">
-                  <div className="feat-slide-img">
+                  <div className="site-titles">
+                    <Link
+                      href="http://esseltransport.co.ke/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      esseltransport.co.ke
+                    </Link>
+                  </div>
+                  <Link
+                    href="http://esseltransport.co.ke/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       unoptimized={true}
                       width={900}
                       height={100 / (100 /100)}
-                      src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                      alt="Job Management"
+                      src="/img/logisticmarketplace/esseltransport.jpg"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
                     />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Job Management</div>
-                    <div className="pro-feat-detai">
-                      Manage the jobs created by them making them active or
-                      inactive. Check the list of job seekers who applied for
-                      job.
-                    </div>
-                  </div>
+                  </Link>
                 </div>
                 <div className="SliderMainBx">
-                  <div className="feat-slide-img">
+                  <div className="site-titles">
+                    <Link
+                      href="https://loadboard.trucking21.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                    loadboard.trucking21.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://loadboard.trucking21.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       unoptimized={true}
                       width={900}
                       height={100 / (100 /100)}
-                      src="/img/jobboard/membership_plan_job_portal_script.png"
-                      alt="Membership Plan"
+                      src="/img/logisticmarketplace/loadboard.jpg"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
                     />
-                  </div>
-                  <div className="hands-proved">
-                    <div className="titleof_scnew">Membership Plan</div>
-                    <div className="pro-feat-detai">
-                      Employers buy membership plan which suits their
-                      requirement best.They can renew or update your membership
-                      plan at any time.
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               </Slider>
             </div>
@@ -2160,7 +2187,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="Job Board Software"
+                    title="Logistic Marketplace Software"
                   />
                 </div>
                 <div className="col-md-12">

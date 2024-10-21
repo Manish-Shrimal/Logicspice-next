@@ -49,10 +49,10 @@ const Page = () => {
       <Navbar />
       <section
         className="resources-header CareerBanners"
-        style={{
-          background:
-            "url(https://www.logicspice.com/app/webroot/files/pages/full/33537_carrers.png)",
-        }}
+        // style={{
+        //   background:
+        //     "url(/img/images/33537_carrers.png)",
+        // }}
       >
         <div className="container">
           <span>Career At Logicspice</span>
@@ -454,7 +454,7 @@ const Page = () => {
                     <strong>HR Email:</strong> hr@logicspice.com
                   </p>
                   <p className="CareersBtn">
-                    <Link href="/company/apply-now'" className="btn btn-primary">
+                    <Link href="/apply-now" className="btn btn-primary">
                       Submit Your Resume
                     </Link>
                     <Link

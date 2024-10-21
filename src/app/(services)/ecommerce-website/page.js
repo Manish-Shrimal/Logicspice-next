@@ -1305,10 +1305,7 @@ const Page = () => {
                   </Slider>
                 </div>
                 <div className="vill-all-projects">
-                  <Link
-                    href="/portfolio"
-                    className="btn btn-primary"
-                  >
+                  <Link href="/portfolio" className="btn btn-primary">
                     View all Portfolio
                   </Link>
                 </div>

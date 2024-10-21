@@ -1558,3 +1558,141 @@ label.error {
     margin: 30px 4% 0;
     float: left;
 }
+
+
+
+.CareerBanners{
+	background: url(/img/images/33537_carrers.png);
+}
+
+
+.guest-post-banner {
+    background: url(/img/images/guest-post-banner.jpg) right top no-repeat;
+    background-size: 100%;
+    padding: 60px 0;
+    background-size: cover;
+	margin-top: 100px;
+}
+
+.guest-post-banner h1 {
+    color: #fff;
+    font-size: 42px;
+    font-family: 'roboto', sans-serif!important;
+    font-weight: 400!important;
+}
+
+.guest-post-banner p {
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.8;
+    padding-top: 10px;
+}
+
+.why-guest-post-banner {
+    background: url(/img/images/bg-images.jpg) right top no-repeat;
+    background-size: 100%;
+    padding: 0px 0 60px;
+    overflow: visible;
+    background-size: cover;
+}
+
+.why-guest-post {
+    padding-top: 70px;
+}
+
+.why-guest-post h2 {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'roboto', sans-serif!important;
+}
+
+.why-guest-post p {
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.8;
+    padding-top: 10px;
+}
+
+.why-guest-post h3 {
+    color: #fff;
+    font-size: 20px;
+    padding-top: 15px;
+    font-family: 'roboto', sans-serif!important;
+}
+
+.guest-post-form {
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px 10px;
+    margin-bottom: -140px;
+    float: left;
+    box-shadow: 0px 10px 25px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.guest-post-form h3 {
+    color: #323232;
+    font-size: 24px;
+    padding-top: 15px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: 'roboto', sans-serif!important;
+}
+
+.guest-post-form .form-control {
+    font-size: 15px;
+    border-color: #ddd;
+    border-radius: 3px;
+    height: 42px;
+}
+
+.guest-post-form textarea.form-control {
+    height: 150px;
+}
+
+.guest-post-form .btn-primary {
+    color: #fff;
+    background-color: #451095;
+    border-color: #451095;
+    width: 100%;
+    font-family: 'roboto', sans-serif!important;
+    font-weight: 500!important;
+}
+
+
+.why-guest-post-contant {
+    background: #ebebeb;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.why-guest-post-contant h3 {
+    color: #323232;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'roboto', sans-serif!important;
+}
+
+.why-guest-post-contant p {
+    color: #323232;
+    font-size: 16px;
+    opacity: 0.8;
+    padding-bottom: 10px;
+}
+
+.why-guest-post-contant ul {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.why-guest-post-contant ul li {
+    float: left;
+    width: 100%;
+    list-style-type: disc;
+    color: #323232;
+    font-size: 16px;
+    opacity: 0.8;
+    padding-bottom: 10px;
+}

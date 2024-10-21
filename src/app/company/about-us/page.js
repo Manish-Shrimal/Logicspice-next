@@ -76,7 +76,7 @@ const Page = () => {
                       alt="tred-banch"
                     />
                   </div>
-                  <h3 class="text-center">Our credibility</h3>
+                  <h3 class="text-center">Our Credibility</h3>
                   <p class="text-center">
                     We have been in this industry for more than a decade now and
                     we are shaping up to be the best service provider online and

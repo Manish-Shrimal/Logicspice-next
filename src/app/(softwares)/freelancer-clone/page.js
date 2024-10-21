@@ -47,6 +47,16 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
+  var companies = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
   const [activeTab, setActiveTab] = useState("tab2");
   const [employerTab, setEmployerTab] = useState(true);
   const [freelancerTab, setFreelancerTab] = useState(false);
@@ -1959,7 +1969,7 @@ const Page = () => {
           </Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
+              <Slider {...companies}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link

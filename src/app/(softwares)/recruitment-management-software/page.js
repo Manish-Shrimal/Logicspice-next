@@ -25,6 +25,8 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.min.css";
+import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
   var settings = {
@@ -2103,7 +2105,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/udemy-clone'"
+                    href="/udemy-clone"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

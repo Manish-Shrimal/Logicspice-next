@@ -35,8 +35,6 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-   
-
     setShowModal(!showModal);
   };
   const openReviewModel = () => {
@@ -162,11 +160,11 @@ const Page = () => {
                       //   title="Order Management Software"
                       // />
                       <GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Order Management Software Solution.
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Order Management Software Solution.
                     See how it works yourself!"
-                  />
+                      />
                     }
                   </div>
                 </div>
@@ -1034,11 +1032,11 @@ const Page = () => {
                     //   title="Order Management Software"
                     // />
                     <GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Order Management Software Solution.
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Order Management Software Solution.
                     See how it works yourself!"
-                  />
+                    />
                   }
                 </div>
               </div>
@@ -1722,7 +1720,7 @@ const Page = () => {
                   <Link
                     href="/inventory-management-software"
                     title="View Detail"
-                    target="_black"
+                    target="_blank"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -1749,7 +1747,7 @@ const Page = () => {
                   <Link
                     href="/job-board-software"
                     title="View Detail"
-                    target="_black"
+                    target="_blank"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -1774,11 +1772,7 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link
-                    href="/ebay-clone"
-                    title="View Detail"
-                    target="_black"
-                  >
+                  <Link href="/ebay-clone" title="View Detail" target="_blank">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>eCommerce Software</h3>

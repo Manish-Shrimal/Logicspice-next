@@ -65,26 +65,11 @@ const Page = () => {
     <>
       <NavBar />
 
-      <section className="laravel-banner LaravelBanners">
-        <div className="LaravelLeftImg">
-          <Image
-            width={400}
-            height={500 / (100 / 100)}
-            src="/img/laraveldevelopment/laravel-left-img.png"
-            alt="laravel web development"
-          />
-        </div>
-        <div className="LaravelRightImg">
-          <Image
-            width={500}
-            height={500 / (100 / 100)}
-            src="/img/laraveldevelopment/laravel-right-img.png"
-            alt="laravel web development"
-          />
-        </div>
+      <section className="laravel-banner LaravelBanners GenerativeAIBanner">
+      
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-8">
+            <div className="col-xs-12 col-sm-6 col-md-7">
               <div className="laravel-banner-txt">
                 <h1>
                   <strong className="LaravelBannerHadding">Generative</strong>{" "}
@@ -134,13 +119,13 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-6 col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-5">
               <div className="page_img LaravelBannerImg">
                 <Image
-                  width={240}
+                  width={450}
                   height={500 / (100 / 100)}
-                  src="/img/laraveldevelopment/laravel-new-icon.png"
-                  alt="laravel web development"
+                  src="/img/generative-ai/generative-ai-banner-img.png"
+                  alt="Generative AI development"
                 />
               </div>
             </div>
@@ -148,20 +133,20 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="laravel-descriptions ">
+      <section className="laravel-descriptions Generativedescriptions">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
+            <div className="col-xs-12 col-sm-6 col-md-6 pull-right">
               <div className="laravel_img">
                 <Image
                   width={310}
                   height={500 / (100 / 100)}
-                  src="/img/laraveldevelopment/laravel-logo-img.png"
+                  src="/img/generative-ai/generative-ai-icon.png"
                   alt="laravel web development"
                 />
               </div>
             </div>
-            <div className="col-sm-6 col-md-7 pull-left" dir="ltr">
+            <div className="col-sm-6 col-md-6 pull-left" dir="ltr">
               <div className="laravel-descriptions-bx" dir="ltr">
                 <h2>Generative AI Development</h2>
                 <h3>The Future of Generative AI Development</h3>
@@ -214,15 +199,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon1.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/custom-generative-icon.png"
+                        alt="Generative AI Development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon1.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/custom-generative-white-icon.png"
+                        alt="Generative AI Development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -245,15 +230,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon2.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/generative-ai-consulting-icon.png"
+                        alt="Generative AI Development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon2.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/generative-ai-consulting-white-icon.png"
+                        alt="Generative AI Development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -275,15 +260,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon3.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/data-analysis-icon.png"
+                        alt="Generative AI Development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon3.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/data-analysis-white-icon.png"
+                        alt="Generative AI Development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -305,15 +290,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon4.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/innovative-generative-icon.png"
+                        alt="Generative AI Development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon4.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/innovative-generative-white-icon.png"
+                        alt="Generative AI Development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -337,15 +322,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon5.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/ongoing-support-icon.png"
+                        alt="Generative AI Development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon5.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/ongoing-support-white-icon.png"
+                        alt="Generative AI Development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -368,15 +353,15 @@ const Page = () => {
                         width={80}
                         height={100}
                         className="widout-hover"
-                        src="/img/laraveldevelopment/laravel-new-icon6.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/video-editing-icon.png"
+                        alt="Generative AI Development"
                       />
                       <Image
                         width={80}
                         height={100}
                         className="on-hover"
-                        src="/img/laraveldevelopment/laravel-white-icon6.png"
-                        alt="laravel web development"
+                        src="/img/generative-ai/video-editing-white-icon.png"
+                        alt="Generative AI Development"
                       />
                       <div className="mask"></div>
                     </i>
@@ -506,7 +491,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon1.png"
+                      src="/img/generative-ai/internet-technology-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -530,7 +515,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon4.png"
+                      src="/img/generative-ai/healthcare-icon.png"
                       alt="img4"
                     />
                   </div>
@@ -552,7 +537,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon2.png"
+                      src="/img/generative-ai/retail-icon.png"
                       alt="img2"
                     />
                   </div>
@@ -572,7 +557,7 @@ const Page = () => {
                     <Image
                       width={50}
                       height={100}
-                      src="/img/laraveldevelopment/core_features_icon5.png"
+                      src="/img/generative-ai/web-3-0-icon.png"
                       alt="img5"
                     />
                   </div>
@@ -607,7 +592,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon1.png"
+                      src="/img/generative-ai/innovative-solutions-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -628,7 +613,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon2.png"
+                      src="/img/generative-ai/expert-developers-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -648,7 +633,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon3.png"
+                      src="/img/generative-ai/local-expertise-icon.png"
                       alt="img1"
                     />
                   </div>
@@ -668,7 +653,7 @@ const Page = () => {
                     <Image
                       width={60}
                       height={100}
-                      src="/img/laraveldevelopment/laravel-why-icon4.png"
+                      src="/img/generative-ai/full-cycle-support-icon.png"
                       alt="img1"
                     />
                   </div>

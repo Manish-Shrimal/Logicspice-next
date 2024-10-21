@@ -24,7 +24,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
 const Page = () => {
@@ -51,7 +51,6 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-
     setShowModal(!showModal);
   };
   const openReviewModel = () => {
@@ -59,6 +58,16 @@ const Page = () => {
   };
   var settings = {
     dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+  var companies = {
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -217,10 +226,10 @@ const Page = () => {
                       //   title="Please fill the form below and get access to the live demo of Service Marketplace Script.See how it work yourself!"
                       // />
                       <GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Service Marketplace Script. See how it works yourself!"
-                  />
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Service Marketplace Script. See how it works yourself!"
+                      />
                     }
                   </div>
                   <Link
@@ -1267,10 +1276,10 @@ const Page = () => {
                     //   title="Please fill the form below and get access to the live demo of Service Marketplace Script.See how it work yourself!"
                     // />
                     <GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Service Marketplace Script. See how it works yourself!"
-                  />
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Service Marketplace Script. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link
@@ -1429,7 +1438,7 @@ const Page = () => {
           ></Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
+              <Slider {...companies}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
@@ -1537,7 +1546,6 @@ const Page = () => {
               </Slider>
             </div>
           </Modal.Body>
-          
         </Modal>
       </div>
       <section className="used_technology_section" id="technologies">
@@ -1977,149 +1985,178 @@ const Page = () => {
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion> */}
-                  <Accordion
-        expanded={expanded === 'panel1'}
-        onChange={handleChange('panel1')}
-      >
-        <AccordionSummary
-         
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          <Typography>How can a customer search for service providers around their location?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Customer can enter his location in application and search with the keywords relevant to the service he wants and all the service providers that are around will be listed to the customer.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography>
+                      How can a customer search for service providers around
+                      their location?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Customer can enter his location in application and search
+                      with the keywords relevant to the service he wants and all
+                      the service providers that are around will be listed to
+                      the customer.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel2'}
-        onChange={handleChange('panel2')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Can the Customer track booked service?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Yes, customer can track the booked Service and also customer can view the service status.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2-content"
+                    id="panel2-header"
+                  >
+                    <Typography>
+                      Can the Customer track booked service?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, customer can track the booked Service and also
+                      customer can view the service status.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel3'}
-        onChange={handleChange('panel3')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel3-content"
-          id="panel3-header"
-        >
-          <Typography>How many days will it take to implement the customization?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Time taken to implement your Service Offering depends on the level of customization and data migration. The time frame is generally 1 week.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3-content"
+                    id="panel3-header"
+                  >
+                    <Typography>
+                      How many days will it take to implement the customization?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Time taken to implement your Service Offering depends on
+                      the level of customization and data migration. The time
+                      frame is generally 1 week.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel4'}
-        onChange={handleChange('panel4')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel4-content"
-          id="panel4-header"
-        >
-          <Typography>How Can the Service providers manage their booking request that they have received from the customers?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Service providers can view a list of booking requests received by them and can accept or reject them and manage the availability status as available or not available by selecting the time slot.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4-content"
+                    id="panel4-header"
+                  >
+                    <Typography>
+                      How Can the Service providers manage their booking request
+                      that they have received from the customers?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Service providers can view a list of booking requests
+                      received by them and can accept or reject them and manage
+                      the availability status as available or not available by
+                      selecting the time slot.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel5'}
-        onChange={handleChange('panel5')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel5-content"
-          id="panel5-header"
-        >
-          <Typography>Can customer rate a service provider after they have finished the task?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Customer can add reviews & ratings to the Service Providers once they get the service.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5-content"
+                    id="panel5-header"
+                  >
+                    <Typography>
+                      Can customer rate a service provider after they have
+                      finished the task?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Customer can add reviews & ratings to the Service
+                      Providers once they get the service.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel6'}
-        onChange={handleChange('panel6')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel6-content"
-          id="panel6-header"
-        >
-          <Typography>Are there any hidden charges or installation charges?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            No. we don&apos;t have any type of hidden charges and after buying a product, installation will be done from our end which will be free.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6-content"
+                    id="panel6-header"
+                  >
+                    <Typography>
+                      Are there any hidden charges or installation charges?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No. we don&apos;t have any type of hidden charges and
+                      after buying a product, installation will be done from our
+                      end which will be free.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel7'}
-        onChange={handleChange('panel7')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel7-content"
-          id="panel7-header"
-        >
-          <Typography>Do I have the rights to resell the script?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            No. You don&apos;t have the right to resell the script. All rights will remain with Logicspice only. You can sell the vendor panel too on subscription basis.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel7"}
+                  onChange={handleChange("panel7")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel7-content"
+                    id="panel7-header"
+                  >
+                    <Typography>
+                      Do I have the rights to resell the script?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      No. You don&apos;t have the right to resell the script.
+                      All rights will remain with Logicspice only. You can sell
+                      the vendor panel too on subscription basis.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-      <Accordion
-        expanded={expanded === 'panel8'}
-        onChange={handleChange('panel8')}
-      >
-        <AccordionSummary
-          
-          aria-controls="panel8-content"
-          id="panel8-header"
-        >
-          <Typography>Along with hosting server details, what other recommendations?</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            We recommend you purchase SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all the websites these days and it provides a secure layer to the website as well.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+                <Accordion
+                  expanded={expanded === "panel8"}
+                  onChange={handleChange("panel8")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel8-content"
+                    id="panel8-header"
+                  >
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We recommend you purchase SSL certificate along with a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all the websites these days and it provides
+                      a secure layer to the website as well.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -2218,7 +2255,11 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/whatsapp-clone" title="View Detail" target="_black">
+                  <Link
+                    href="/whatsapp-clone"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>whatsapp clone</h3>
@@ -2241,7 +2282,11 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/fiverr-clone" title="View Detail" target="_black">
+                  <Link
+                    href="/fiverr-clone"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Fiverr clone</h3>
@@ -2265,7 +2310,11 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/logistic-marketplace-software" title="View Detail" target="_black">
+                  <Link
+                    href="/logistic-marketplace-software"
+                    title="View Detail"
+                    target="_black"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Uship clone</h3>

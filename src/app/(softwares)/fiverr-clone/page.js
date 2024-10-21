@@ -75,10 +75,6 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
 
-
-
-  
-  
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
@@ -334,7 +330,8 @@ const Page = () => {
                       <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Fiver Clone. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of Fiverr Clone.
+ See how it works yourself!"
                       />
                     }
                   </div>
@@ -374,7 +371,7 @@ const Page = () => {
                     <i class="fa fa-android" aria-hidden="true"></i>
                   </li>
                   <li>
-                  <i class="fa fa-apple" aria-hidden="true"></i>
+                    <i class="fa fa-apple" aria-hidden="true"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">
@@ -1463,7 +1460,8 @@ const Page = () => {
                     <GetDemoEnquiry
                       modalStatus={demoAccessModal}
                       toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Fiver Clone. See how it works yourself!"
+                      title="Please fill the form below and get access to the live demo of Fiverr Clone.
+ See how it works yourself!"
                     />
                   }
                 </div>
@@ -1481,11 +1479,10 @@ const Page = () => {
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                  <i class="fa fa-android" aria-hidden="true"></i>
-
+                    <i class="fa fa-android" aria-hidden="true"></i>
                   </li>
                   <li>
-                  <i class="fa fa-apple" aria-hidden="true"></i>
+                    <i class="fa fa-apple" aria-hidden="true"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">

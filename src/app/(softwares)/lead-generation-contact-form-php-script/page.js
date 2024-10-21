@@ -28,8 +28,14 @@ import {
 
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import DownloadForm from "@/app/Components/DownloadForm";
 
 const Page = () => {
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+
+  const openDownloadModel = () => {
+    setShowDownloadModal(!showDownloadModal);
+  };
   const [textColor, setTextColor] = useState("#222222");
   const [bgColor, setBgColor] = useState("#ffffff");
   const [formTitleBgColor, setFormTitleBgColor] = useState("#dedede");
@@ -41,8 +47,8 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedField, setSelectedField] = useState("");
   const [choices, setChoices] = useState([""]);
-  const [formDescription, setFormDescription] = useState('');
-  const [formTitle, setFormTitle] = useState('Untitled Form'); // Initial value
+  const [formDescription, setFormDescription] = useState("");
+  const [formTitle, setFormTitle] = useState("Untitled Form"); // Initial value
 
   const handleInputChange = (e) => {
     setFormDescription(e.target.value);
@@ -1579,10 +1585,15 @@ const Page = () => {
                             />
                             <input
                               type="button"
-                              onClick={() => openmodel()}
+                              onClick={openDownloadModel}
                               className="saveform"
                               id=""
                               value="Download Form"
+                            />
+                            <DownloadForm
+                              modalStatus={showDownloadModal}
+                              toggle={openDownloadModel}
+                              title="Job Board Software"
                             />
                           </div>
                         </div>
