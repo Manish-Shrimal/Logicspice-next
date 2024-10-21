@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, {useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Navbar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import "../elements.css";
@@ -24,80 +24,80 @@ const Page = () => {
   const resumeFile = useRef(null);
 
   const [formData, setFormData] = useState({
-    post:"",
-    first_name:"",
-    second_name:"",
-    last_name:"",
-    dob:"",
-    father_name:"",
-    mother_name:"",
-    father_occupation:"",
-    mother_occupation:"",
-    category:"",
-    gender:"",
-    marital_status:"",
-    physical_challenged:"",
-    current_address:"",
-    permanent_address:"",
-    email_address:"",
-    phone:"",
-    matric_course:"",
-    matric_college:"",
-    matric_university:"",
-    matric_year:"",
-    matric_percentage:"",
-    secondary_course:"",
-    secondary_college:"",
-    secondary_university:"",
-    secondary_year:"",
-    secondary_percentage:"",
-    graduation_course:"",
-    graduation_college:"",
-    graduation_university:"",
-    graduation_year:"",
-    graduation_percentage:"",
-    pg_course:"",
-    pg_college:"",
-    pg_university:"",
-    pg_year:"",
-    pg_percentage:"",
-    other_course:"",
-    other_college:"",
-    other_university:"",
-    other_year:"",
-    other_percentage:"",
-    work_experience_year:"",
-    work_experience_months:"",
-    start_date:"",
-    end_date:"",
-    organization:"",
-    designation:"",
-    leaving_reason:"",
-    start_date1:"",
-    end_date1:"",
-    organization1:"",
-    designation1:"",
-    leaving_reason1:"",
-    start_date2:"",
-    end_date2:"",
-    organization2:"",
-    designation2:"",
-    leaving_reason2:"",
-    start_date3:"",
-    end_date3:"",
-    organization3:"",
-    designation3:"",
-    leaving_reason3:"",
-    current_salary:"",
-    expected_salary:"",
-    notice_period:"",
-    pursuing:"",
-    certifications:"",
-    career_goals:"",
-    place:"",
-    resume:null,
-    image:null
-  })
+    post: "",
+    first_name: "",
+    second_name: "",
+    last_name: "",
+    dob: "",
+    father_name: "",
+    mother_name: "",
+    father_occupation: "",
+    mother_occupation: "",
+    category: "",
+    gender: "",
+    marital_status: "",
+    physical_challenged: "",
+    current_address: "",
+    permanent_address: "",
+    email_address: "",
+    phone: "",
+    matric_course: "",
+    matric_college: "",
+    matric_university: "",
+    matric_year: "",
+    matric_percentage: "",
+    secondary_course: "",
+    secondary_college: "",
+    secondary_university: "",
+    secondary_year: "",
+    secondary_percentage: "",
+    graduation_course: "",
+    graduation_college: "",
+    graduation_university: "",
+    graduation_year: "",
+    graduation_percentage: "",
+    pg_course: "",
+    pg_college: "",
+    pg_university: "",
+    pg_year: "",
+    pg_percentage: "",
+    other_course: "",
+    other_college: "",
+    other_university: "",
+    other_year: "",
+    other_percentage: "",
+    work_experience_year: "",
+    work_experience_months: "",
+    start_date: "",
+    end_date: "",
+    organization: "",
+    designation: "",
+    leaving_reason: "",
+    start_date1: "",
+    end_date1: "",
+    organization1: "",
+    designation1: "",
+    leaving_reason1: "",
+    start_date2: "",
+    end_date2: "",
+    organization2: "",
+    designation2: "",
+    leaving_reason2: "",
+    start_date3: "",
+    end_date3: "",
+    organization3: "",
+    designation3: "",
+    leaving_reason3: "",
+    current_salary: "",
+    expected_salary: "",
+    notice_period: "",
+    pursuing: "",
+    certifications: "",
+    career_goals: "",
+    place: "",
+    resume: null,
+    image: null,
+  });
 
   // const [formData, setFormData] = useState({
   //   post: "",
@@ -145,7 +145,7 @@ const Page = () => {
       ...prevData,
       recaptchaToken: token,
     }));
-    if(token){
+    if (token) {
       setErrors((prevError) => ({
         ...prevError,
         recaptchaerror: "",
@@ -169,17 +169,49 @@ const Page = () => {
     }));
   };
 
+  // const handleFileUpload = (event) => {
+  //   const uploadedFile = event.target.files[0];
+  //   resumeFile.current = uploadedFile;
+
+  //   if (uploadedFile) {
+  //     const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+
+  //     if (!allowedExtensions.exec(uploadedFile.name)) {
+  //       setErrors({
+  //         ...errors,
+  //         resume: "Invalid file type. Please upload a PDF, DOC, or DOCX file.",
+  //       });
+  //       return;
+  //     }
+
+  //     const maxSize = 5 * 1024 * 1024; // 5MB
+  //     if (uploadedFile.size > maxSize) {
+  //       setErrors({
+  //         ...errors,
+  //         resume: "File size exceeds the 5MB limit.",
+  //       });
+  //       return;
+  //     }
+
+  //     // Clear previous errors
+  //     setErrors({ ...errors, resume: null });
+  //     setFormData({ ...formData, resume: uploadedFile });
+  //   }
+
+  // };
+
   const handleFileUpload = (event) => {
     const uploadedFile = event.target.files[0];
     resumeFile.current = uploadedFile;
 
     if (uploadedFile) {
-      const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+      const allowedExtensions = /(\.pdf|\.doc|\.docx|\.jpg|\.jpeg|\.png)$/i;
 
       if (!allowedExtensions.exec(uploadedFile.name)) {
         setErrors({
           ...errors,
-          resume: "Invalid file type. Please upload a PDF, DOC, or DOCX file.",
+          resume:
+            "Invalid file type. Please upload a PDF, DOC, DOCX, JPG, or PNG file.",
         });
         return;
       }
@@ -197,7 +229,6 @@ const Page = () => {
       setErrors({ ...errors, resume: null });
       setFormData({ ...formData, resume: uploadedFile });
     }
-
   };
 
   const handleImageFileUpload = (event) => {
@@ -228,7 +259,6 @@ const Page = () => {
       setErrors({ ...errors, image: null });
       setFormData({ ...formData, image: uploadedFile });
     }
-
   };
 
   const validateForm = () => {
@@ -240,33 +270,56 @@ const Page = () => {
     if (!formData.dob) newErrors.dob = "This field is required.";
     if (!formData.father_name) newErrors.fatherName = "This field is required.";
     if (!formData.mother_name) newErrors.motherName = "This field is required.";
-    if (!formData.father_occupation) newErrors.fatherOccupation = "This field is required.";
-    if (!formData.mother_occupation) newErrors.motherOccupation = "This field is required.";
+    if (!formData.father_occupation)
+      newErrors.fatherOccupation = "This field is required.";
+    if (!formData.mother_occupation)
+      newErrors.motherOccupation = "This field is required.";
     if (!formData.category) newErrors.category = "This field is required.";
     if (!formData.gender) newErrors.gender = "This field is required.";
-    if (!formData.marital_status) newErrors.maritalStatus = "This field is required.";
-    if (!formData.current_address) newErrors.currentAddress = "This field is required.";
-    if (!formData.permanent_address) newErrors.permanentAddress = "This field is required.";
-    if (!formData.email_address) newErrors.emailAddress = "This field is required.";
+    if (!formData.marital_status)
+      newErrors.maritalStatus = "This field is required.";
+    if (!formData.current_address)
+      newErrors.currentAddress = "This field is required.";
+    if (!formData.permanent_address)
+      newErrors.permanentAddress = "This field is required.";
+    if (!formData.email_address)
+      newErrors.emailAddress = "This field is required.";
     if (!formData.phone) newErrors.Phone = "This field is required.";
-    if (!formData.matric_course) newErrors.matricCourse = "This field is required.";
-    if (!formData.matric_college) newErrors.matricCollege = "This field is required.";
-    if (!formData.matric_university) newErrors.matricUniversity = "This field is required.";
+    if (!formData.matric_course)
+      newErrors.matricCourse = "This field is required.";
+    if (!formData.matric_college)
+      newErrors.matricCollege = "This field is required.";
+    if (!formData.matric_university)
+      newErrors.matricUniversity = "This field is required.";
     if (!formData.matric_year) newErrors.matricYear = "This field is required.";
-    if (!formData.matric_percentage) newErrors.matricPercentage = "This field is required.";
-    if (!formData.secondary_course) newErrors.SecondaryCourse = "This field is required.";
-    if (!formData.secondary_college) newErrors.SecondaryCollege = "This field is required.";
-    if (!formData.secondary_university) newErrors.SecondaryUniversity = "This field is required.";
-    if (!formData.secondary_year) newErrors.SecondaryYear = "This field is required.";
-    if (!formData.secondary_percentage) newErrors.SecondaryPercentage = "This field is required.";
-    if (!formData.graduation_course) newErrors.graduationCourse = "This field is required.";
-    if (!formData.graduation_college) newErrors.graduationCollege = "This field is required.";
-    if (!formData.graduation_university) newErrors.graduationUniversity = "This field is required.";
-    if (!formData.graduation_year) newErrors.graduationYear = "This field is required.";
-    if (!formData.graduation_percentage) newErrors.graduationPercentage = "This field is required.";
-    if (!formData.work_experience_year) newErrors.expYear = "This field is required.";
-    if (!formData.work_experience_months) newErrors.expMonth = "This field is required.";
-    if (!formData.expected_salary) newErrors.expectedSalary = "This field is required.";
+    if (!formData.matric_percentage)
+      newErrors.matricPercentage = "This field is required.";
+    if (!formData.secondary_course)
+      newErrors.SecondaryCourse = "This field is required.";
+    if (!formData.secondary_college)
+      newErrors.SecondaryCollege = "This field is required.";
+    if (!formData.secondary_university)
+      newErrors.SecondaryUniversity = "This field is required.";
+    if (!formData.secondary_year)
+      newErrors.SecondaryYear = "This field is required.";
+    if (!formData.secondary_percentage)
+      newErrors.SecondaryPercentage = "This field is required.";
+    if (!formData.graduation_course)
+      newErrors.graduationCourse = "This field is required.";
+    if (!formData.graduation_college)
+      newErrors.graduationCollege = "This field is required.";
+    if (!formData.graduation_university)
+      newErrors.graduationUniversity = "This field is required.";
+    if (!formData.graduation_year)
+      newErrors.graduationYear = "This field is required.";
+    if (!formData.graduation_percentage)
+      newErrors.graduationPercentage = "This field is required.";
+    if (!formData.work_experience_year)
+      newErrors.expYear = "This field is required.";
+    if (!formData.work_experience_months)
+      newErrors.expMonth = "This field is required.";
+    if (!formData.expected_salary)
+      newErrors.expectedSalary = "This field is required.";
     if (!formData.place) newErrors.place = "This field is required.";
     if (!formData.resume) newErrors.resume = "This field is required.";
 
@@ -284,14 +337,17 @@ const Page = () => {
 
     // setLoader(true);
     try {
+      console.log("hi");
 
-      console.log('hi')
-
-      const response = await axios.post(BaseAPI + "/applicationform", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        BaseAPI + "/applicationform",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       if (response.data.status === 200) {
         // setResultSuccess(true);
@@ -305,79 +361,79 @@ const Page = () => {
         }
 
         setFormData({
-          post:"",
-          first_name:"",
-          second_name:"",
-          last_name:"",
-          dob:"",
-          father_name:"",
-          mother_name:"",
-          father_occupation:"",
-          mother_occupation:"",
-          category:"",
-          gender:"",
-          marital_status:"",
-          physical_challenged:"",
-          current_address:"",
-          permanent_address:"",
-          email_address:"",
-          phone:"",
-          matric_course:"",
-          matric_college:"",
-          matric_university:"",
-          matric_year:"",
-          matric_percentage:"",
-          secondary_course:"",
-          secondary_college:"",
-          secondary_university:"",
-          secondary_year:"",
-          secondary_percentage:"",
-          graduation_course:"",
-          graduation_college:"",
-          graduation_university:"",
-          graduation_year:"",
-          graduation_percentage:"",
-          pg_course:"",
-          pg_college:"",
-          pg_university:"",
-          pg_year:"",
-          pg_percentage:"",
-          other_course:"",
-          other_college:"",
-          other_university:"",
-          other_year:"",
-          other_percentage:"",
-          work_experience_year:"",
-          work_experience_months:"",
-          start_date:"",
-          end_date:"",
-          organization:"",
-          designation:"",
-          leaving_reason:"",
-          start_date1:"",
-          end_date1:"",
-          organization1:"",
-          designation1:"",
-          leaving_reason1:"",
-          start_date2:"",
-          end_date2:"",
-          organization2:"",
-          designation2:"",
-          leaving_reason2:"",
-          start_date3:"",
-          end_date3:"",
-          organization3:"",
-          designation3:"",
-          leaving_reason3:"",
-          current_salary:"",
-          expected_salary:"",
-          notice_period:"",
-          pursuing:"",
-          certifications:"",
-          career_goals:"",
-          place:"",
-          resume:null,
-          image:null
+          post: "",
+          first_name: "",
+          second_name: "",
+          last_name: "",
+          dob: "",
+          father_name: "",
+          mother_name: "",
+          father_occupation: "",
+          mother_occupation: "",
+          category: "",
+          gender: "",
+          marital_status: "",
+          physical_challenged: "",
+          current_address: "",
+          permanent_address: "",
+          email_address: "",
+          phone: "",
+          matric_course: "",
+          matric_college: "",
+          matric_university: "",
+          matric_year: "",
+          matric_percentage: "",
+          secondary_course: "",
+          secondary_college: "",
+          secondary_university: "",
+          secondary_year: "",
+          secondary_percentage: "",
+          graduation_course: "",
+          graduation_college: "",
+          graduation_university: "",
+          graduation_year: "",
+          graduation_percentage: "",
+          pg_course: "",
+          pg_college: "",
+          pg_university: "",
+          pg_year: "",
+          pg_percentage: "",
+          other_course: "",
+          other_college: "",
+          other_university: "",
+          other_year: "",
+          other_percentage: "",
+          work_experience_year: "",
+          work_experience_months: "",
+          start_date: "",
+          end_date: "",
+          organization: "",
+          designation: "",
+          leaving_reason: "",
+          start_date1: "",
+          end_date1: "",
+          organization1: "",
+          designation1: "",
+          leaving_reason1: "",
+          start_date2: "",
+          end_date2: "",
+          organization2: "",
+          designation2: "",
+          leaving_reason2: "",
+          start_date3: "",
+          end_date3: "",
+          organization3: "",
+          designation3: "",
+          leaving_reason3: "",
+          current_salary: "",
+          expected_salary: "",
+          notice_period: "",
+          pursuing: "",
+          certifications: "",
+          career_goals: "",
+          place: "",
+          resume: null,
+          image: null,
         });
       }
     } catch (error) {
@@ -427,18 +483,38 @@ const Page = () => {
                 </div>
                 <div className="appliction-top-right">
                   <div className="upload-photo">
+                    {/* <Image
+                      width={100}
+                      height={100}
+                      unoptimized={true}
+                      src={
+                        formData.resume
+                          ? URL.createObjectURL(formData.resume)
+                          : "/img/images/author_icon.png"
+                      }
+                      alt="photo"
+                      id="show_image"
+                    />
+                    <input
+                      type="file"
+                      name="image"
+                      className="form-control"
+                      id="add_image"
+                      onChange={handleFileUpload}
+                    /> */}
                     <Image
                       width={100}
                       height={100}
                       unoptimized={true}
                       src={
-                        formData.image
-                          ? URL.createObjectURL(formData.image)
-                          : "https://www.logicspice.com/app/webroot/img/images/author_icon.png"
+                        formData.resume
+                          ? URL.createObjectURL(formData.resume)
+                          : "/img/images/author_icon.png"
                       }
                       alt="photo"
                       id="show_image"
                     />
+
                     <input
                       type="file"
                       name="image"
@@ -544,7 +620,7 @@ const Page = () => {
                         </div>
                         <div className="personal-detals-tr">
                           <div className="personal-detals-td">
-                            <input
+                            {/* <input
                               name="dob"
                               id="dob"
                               placeholder="Date of birth*"
@@ -552,7 +628,18 @@ const Page = () => {
                               type="date"
                               value={formData.dob}
                               onChange={handleChange}
+                            /> */}
+                            <input
+                              name="dob"
+                              id="dob"
+                              placeholder="Date of birth*"
+                              className="form-control required"
+                              type="date"
+                              value={formData.dob}
+                              max={new Date().toISOString().split("T")[0]} // Set max to today's date
+                              onChange={handleChange}
                             />
+
                             <label
                               className="error"
                               style={{ display: "inline-block" }}
@@ -989,7 +1076,6 @@ const Page = () => {
                                   <select
                                     name="matric_year"
                                     placeholder="Year of passing"
-                                    
                                     className="form-control form-select required"
                                     id="matricYear"
                                     value={formData.matric_year}
@@ -1298,7 +1384,6 @@ const Page = () => {
                                   id="gender"
                                   value={formData.graduation_college}
                                   onChange={handleChange}
-
                                 />
                                 <label
                                   className="error"
@@ -1411,11 +1496,11 @@ const Page = () => {
                                     <option value="66">2027</option>
                                   </select>
                                   <label
-                                  className="error"
-                                  style={{ display: "inline-block" }}
-                                >
-                                  {errors.graduationYear}
-                                </label>
+                                    className="error"
+                                    style={{ display: "inline-block" }}
+                                  >
+                                    {errors.graduationYear}
+                                  </label>
                                 </div>{" "}
                               </div>
                               <div class="personal-detals-td">
@@ -1432,7 +1517,6 @@ const Page = () => {
                                   id="gender"
                                   value={formData.graduation_percentage}
                                   onChange={handleChange}
-                                  
                                 />
                                 <label
                                   className="error"
@@ -1724,7 +1808,6 @@ const Page = () => {
                               // class="form-control required"
                               // onchange="if (!window.__cfRLUnblockHandlers) return false; getYear(this.value)"
                               name="work_experience_year"
-                              
                               className="form-control required"
                               type="text"
                               id="expYear"
@@ -1803,7 +1886,6 @@ const Page = () => {
                               // class="form-control required"
                               // onchange="if (!window.__cfRLUnblockHandlers) return false; getMonth(this.value)"
                               name="work_experience_months"
-                              
                               className="form-control required"
                               type="text"
                               id="expMonth"
@@ -1868,6 +1950,7 @@ const Page = () => {
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.start_date}
                                   onChange={handleChange}
                                 />
@@ -1879,6 +1962,7 @@ const Page = () => {
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.end_date}
                                   onChange={handleChange}
                                 />
@@ -1925,6 +2009,7 @@ const Page = () => {
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.start_date1}
                                   onChange={handleChange}
                                 />
@@ -1936,6 +2021,7 @@ const Page = () => {
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.end_date1}
                                   onChange={handleChange}
                                 />
@@ -1982,6 +2068,7 @@ const Page = () => {
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.start_date2}
                                   onChange={handleChange}
                                 />
@@ -1993,6 +2080,7 @@ const Page = () => {
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.organization2}
                                   onChange={handleChange}
                                 />
@@ -2039,6 +2127,7 @@ const Page = () => {
                                   placeholder="Start Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.start_date3}
                                   onChange={handleChange}
                                 />
@@ -2050,6 +2139,7 @@ const Page = () => {
                                   placeholder="End Date"
                                   class="form-control hasDatepicker"
                                   type="date"
+                                  max={new Date().toISOString().split("T")[0]} // Set max to today's date
                                   value={formData.end_date3}
                                   onChange={handleChange}
                                 />
@@ -2118,19 +2208,18 @@ const Page = () => {
                             // type="text"
                             // id="ApplicationExpectedSalary"
                             name="expected_salary"
-                              placeholder="Expected Salary"
-                              className="form-control  required"
-                              id="gender"
-                              value={formData.expected_salary}
-                              onChange={handleChange}
-                            />
-                            <label
-                              className="error"
-                              style={{ display: "inline-block" }}
-                            >
-                              {errors.expectedSalary}
-                            </label>
-                          
+                            placeholder="Expected Salary"
+                            className="form-control  required"
+                            id="gender"
+                            value={formData.expected_salary}
+                            onChange={handleChange}
+                          />
+                          <label
+                            className="error"
+                            style={{ display: "inline-block" }}
+                          >
+                            {errors.expectedSalary}
+                          </label>
                         </div>
                       </div>
                       <div class="currwnt-bx">
@@ -2207,24 +2296,25 @@ const Page = () => {
                                 // type="text"
                                 // id="ApplicationPlace"
                                 name="place"
-                                  placeholder="Place"
-                                  className="form-control  required"
-                                  id="place"
-                                  value={formData.place}
-                                  onChange={handleChange}
-                                />
-                                <label
+                                placeholder="Place"
+                                className="form-control  required"
+                                id="place"
+                                value={formData.place}
+                                onChange={handleChange}
+                              />
+                              {/* <label
                                   className="error"
                                   style={{ display: "inline-block" }}
                                 >
                                   {errors.place}
-                                </label>
-                              
+                                </label> */}
                             </div>
                           </div>
                           <div class="currwnt-bx">
                             <label>Date:</label>
-                            <div class="current-input">30-08-2024 </div>
+                            <div class="current-input">
+                              {new Date().toLocaleDateString()}
+                            </div>
                           </div>
                         </div>
 
@@ -2238,32 +2328,31 @@ const Page = () => {
                               // class="form-control required"
                               // id="add_resume"
                               name="resume"
-                                  type="file"
-                                  className="form-control  required"
-                                  id="resume"
-                                  onChange={handleFileUpload}
-                                />
-                                <label
-                                  className="error"
-                                  style={{ display: "inline-block" }}
-                                >
-                                  {errors.resume}
-                                </label>
-                           
+                              type="file"
+                              className="form-control  required"
+                              id="resume"
+                              onChange={handleFileUpload}
+                            />
+                            <label
+                              className="error"
+                              style={{ display: "inline-block" }}
+                            >
+                              {errors.resume}
+                            </label>
                           </div>
                           {/* <div class="currwnt-bx">
                             <div id="recaptcha1" style="transform: scale(0.75); transform-origin: left top;"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-3mo9j5xxutq" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Leg3gITAAAAAPzWHZ1PgnMhko9tHq8yWvH2q2S7&amp;co=aHR0cHM6Ly93d3cubG9naWNzcGljZS5jb206NDQz&amp;hl=en&amp;v=WV-mUKO4xoWKy9M4ZzRyNrP_&amp;theme=light&amp;size=normal&amp;cb=nttq9a3kshdx"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
                         </div> */}
-                        <div className="form-group-google">
-                              <ReCAPTCHA
-                                key={recaptchaKey}
-                                sitekey={recaptchaKey}
-                                onChange={onRecaptchaChange}
-                              />
-                              <div className="gcpc FormError" id="captcha_msg">
-                                {errors.reacptchaerror}
-                              </div>
+                          <div className="form-group-google">
+                            <ReCAPTCHA
+                              key={recaptchaKey}
+                              sitekey={recaptchaKey}
+                              onChange={onRecaptchaChange}
+                            />
+                            <div className="gcpc FormError" id="captcha_msg">
+                              {errors.reacptchaerror}
                             </div>
+                          </div>
                         </div>
                       </div>
 
