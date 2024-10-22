@@ -208,7 +208,7 @@ const Page = () => {
                       <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Marketplace Software.
+                        title="Please fill the form below and get access to the live demo of Online Booking Software.
  See how it works yourself!"
                       />
                     }
@@ -1436,7 +1436,7 @@ const Page = () => {
                     <GetDemoEnquiry
                       modalStatus={demoAccessModal}
                       toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Marketplace Software.
+                      title="Please fill the form below and get access to the live demo of Online Booking Software.
  See how it works yourself!"
                     />
                   }
@@ -2209,7 +2209,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Marketplace Software"
+                    title="Online Booking Software"
                   />
                 }
               </div>
