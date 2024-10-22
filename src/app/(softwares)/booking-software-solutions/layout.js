@@ -9,13 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/case-studies`,{
+  const product = await fetch(`${MetadataApi}/marketplace-software-solution`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
   );
   // console.log(product)
-
   let text = product.data.schema;
 
   let schemaOrg = null;
@@ -31,7 +30,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
       schemaOrg = cleanedText && JSON.parse(cleanedText);
 
   }
-
   // Return metadata
   return {
     title: product.data.meta_title,
@@ -39,7 +37,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/case-studies`,
+      canonical: `${Domain}/marketplace-software-solution`,
     },
     robots: {
       index: true,
@@ -59,7 +57,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
- 
+//   console.log(metadata);
 
   return (
     <html lang="en">
@@ -67,6 +65,7 @@ export default async function RootLayout({ children, params, searchParams }) {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <title>{metadata.title}</title>
+        
       </Head>
       <body className={inter.className}>{children}</body>
       <script

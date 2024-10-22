@@ -1508,8 +1508,8 @@ label {
 }
 
 .appli-btn .btn {
-	font-size: 15px;
-	padding: 8px 20px
+	font-size: 15px!important;
+	padding: 8px 20px!important;
 }
 
 .appli-btn a {

@@ -1310,7 +1310,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="/case-studies/martgram-app"
+                              href="/case-study/martgram-app"
                               target="_blank"
                             >
                               Martgram
@@ -1336,7 +1336,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="/case-studies/beano-app"
+                              href="/case-study/beano-app"
                               target="_blank"
                             >
                               Beano
@@ -1361,7 +1361,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="/case-studies/social-securitas"
+                              href="/case-study/social-securitas"
                               target="_blank"
                             >
                               Social Securites
@@ -1387,7 +1387,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="/case-studies/utrack-app"
+                              href="/case-study/utrack-app"
                               target="_blank"
                             >
                               Utrack
@@ -1413,7 +1413,7 @@ const Page = () => {
                         <div className="casestudy_mobcontent">
                           <span>
                             <Link
-                              href="/case-studies/bestcit-app"
+                              href="/case-study/bestcit-app"
                               target="_blank"
                             >
                               Bestcit
@@ -1430,7 +1430,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="more_btn more_btnrevercebn">
-                  <Link className="btn btn-primary" href="/case-studies">
+                  <Link className="btn btn-primary" href="/case-study">
                     <span>Featured Case Studies</span>
                   </Link>
                 </div>

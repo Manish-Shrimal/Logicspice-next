@@ -222,7 +222,7 @@ const Page = () => {
                         </Link>
                         <ul>
                           <li>
-                            <Link href="/case-studies">Case Study</Link>
+                            <Link href="/case-study">Case Study</Link>
                           </li>
                           <li>
                             <Link href="/our-work-process">Development Methodology</Link>
@@ -334,6 +334,11 @@ const Page = () => {
                       <li>
                         <Link href="/service-marketplace-script">
                           Service Marketplace Script
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/booking-software-solutions">
+                          Online Booking Software
                         </Link>
                       </li>
                       <li>
@@ -916,6 +921,15 @@ const Page = () => {
                       </li>
                       <li>
                         <Link href="/psd-to-shopify">PSD to Shopify</Link>
+                      </li>
+                      <li>
+                        <Link href="/generative-ai-development">Generative AI Development</Link>
+                      </li>
+                      <li>
+                        <Link href="/blockchain-development">Blockchain Development</Link>
+                      </li>
+                      <li>
+                        <Link href="/video-creation">Video Creation</Link>
                       </li>
                     </ul>
                   </li>

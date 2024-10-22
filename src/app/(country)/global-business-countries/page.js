@@ -658,7 +658,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo1.png"
                 />
                 <p>Responsive Custom build Website for photographer quoting.</p>
-                <Link href="/case-studies/photographers247">Case Study</Link>
+                <Link href="/case-study/photographers247">Case Study</Link>
               </div>
               <div class="case-study-country">
                 <Image
@@ -676,7 +676,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo2.png"
                 />
                 <p>Custom build Website for Community for online tattoo</p>
-                <Link href="/case-studies/mytattooist">Case Study</Link>
+                <Link href="/case-study/mytattooist">Case Study</Link>
               </div>
               <div class="case-study-country">
                 <Image
@@ -694,7 +694,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo3.png"
                 />
                 <p>Best coffee ordering app for iPhone & Android users.</p>
-                <Link href="/case-studies/beano-app">Case Study</Link>
+                <Link href="/case-study/beano-app">Case Study</Link>
               </div>
               <div class="case-study-country">
                 <Image
@@ -712,7 +712,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo4.png"
                 />
                 <p>Responsive Custom build Website for online coaching.</p>
-                <Link href="/case-studies/coursetakers">Case Study</Link>
+                <Link href="/case-study/coursetakers">Case Study</Link>
               </div>
               <div class="case-study-country">
                 <Image
@@ -730,7 +730,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo5.png"
                 />
                 <p>Best schedule tracking app for iPhone & Android users.</p>
-                <Link href="/case-studies/utrack-app">Case Study</Link>
+                <Link href="/case-study/utrack-app">Case Study</Link>
               </div>
               <div class="case-study-country">
                 <Image
@@ -748,7 +748,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo6.png"
                 />
                 <p>An interactive iPhone to play with aphorisms.</p>
-                <Link href="/case-studies/bestcit-app">Case Study</Link>
+                <Link href="/case-study/bestcit-app">Case Study</Link>
               </div>
               <div class="case-study-country">
                 <Image
@@ -766,7 +766,7 @@ const Page = () => {
                   src="/img/globalbusinesscountries/cs_logo7.png"
                 />
                 <p>Responsive Custom build Website for online coaching.</p>
-                <Link href="/case-studies/four-strokes">Case Study</Link>
+                <Link href="/case-study/four-strokes">Case Study</Link>
               </div>
             </Slider>
           </div>

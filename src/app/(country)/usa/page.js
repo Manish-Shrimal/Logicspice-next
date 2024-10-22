@@ -736,7 +736,7 @@ const Page = () => {
                         listed either by everyone or by friends also. They can
                         post their likes{" "}
                         <Link
-                          href="/case-studies/physical-edge"
+                          href="/case-study/physical-edge"
                           target="_blank"
                         >
                           Read More..
@@ -818,7 +818,7 @@ const Page = () => {
                         history, English, etc. will serve Student/Clients with
                         their guidance. “ASK OUR EINSTEIN�? will not only{" "}
                         <Link
-                          href="/case-studies/askoureinstein"
+                          href="/case-study/askoureinstein"
                           target="_blank"
                         >
                           Read More..

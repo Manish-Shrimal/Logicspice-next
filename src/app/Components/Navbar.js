@@ -149,12 +149,12 @@ const Navbar = () => {
                             </li>
                             <li
                               className={
-                                router.pathname === "/case-studies"
+                                router.pathname === "/case-study"
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href="/case-studies">
+                              <Link href="/case-study">
                                 <span className="hover_btn_menu">
                                   <i className="menu_icon_all icon_case_study"></i>
                                 </span>

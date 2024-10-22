@@ -366,11 +366,9 @@ const Page = () => {
                       <div className="mask"></div>
                     </i>
                   </div>
-                  <h3>Video Editing Services</h3>
+                  <h3>Real-Time AI Adaptation</h3>
                   <p>
-                    Our professional video editing services ensure your content
-                    is polished and professional, from trimming and cutting to
-                    adding special effects and soundtracks.
+                  We create generative AI models that can adapt and improve in real-time. As your business grows and your needs change, our AI solutions evolve with you, staying relevant and providing accurate results. This helps you stay ahead in a fast-moving, tech-driven world.
                   </p>
                 </div>
               </div>

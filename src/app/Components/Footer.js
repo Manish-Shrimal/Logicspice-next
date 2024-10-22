@@ -296,7 +296,7 @@ const Footer = () => {
                       <Link href="/company/our-team">Our Team</Link>
                     </li>
                     <li>
-                      <Link href="/case-studies">Case Studies</Link>
+                      <Link href="/case-study">Case Studies</Link>
                     </li>
                     <li>
                       <Link href="https://www.logicspice.com/users/login">
@@ -541,7 +541,7 @@ const Footer = () => {
                 <Link href="/company/our-team">Our Team</Link>
               </li>
               <li>
-                <Link href="/case-studies">Case Studies</Link>
+                <Link href="/case-study">Case Studies</Link>
               </li>
               <li>
                 <Link href="https://www.logicspice.com/users/login">

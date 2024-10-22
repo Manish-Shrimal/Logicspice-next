@@ -667,6 +667,51 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
+                          href="/booking-software-solutions"
+                          className="ready-product"
+                          data-aos="fade-up"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width={100}
+                            height={100}
+                            className=""
+                            src="/img/softwares/marketplace-software-img.png"
+                            alt="Marketplace Software"
+                          />
+                          <div className="abs-product">
+                            <h3>Online Booking Software</h3>
+                            <p>
+                              Our Online Booking Software enables you to manage
+                              bookings effortlessly. Streamline scheduling,
+                              minimize errors, and boost your business
+                              efficiency with seamless online reservations.
+                            </p>
+                            <div className="product-star">
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div className="product-review">560 REVIEWS</div>
+                            <ul className="make-style">
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/web_new.png"
+                                  alt="web"
+                                />
+                              </li>
+                            </ul>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="col-sm-6 col-md-4">
+                        <Link
                           href="/groupon-clone"
                           className="ready-product"
                           data-aos="fade-up"
@@ -2866,6 +2911,51 @@ const Page = () => {
                               softwares for the sectors like freelance,
                               logistics, rental, scheduling, home cleaning and
                               appointment booking service.
+                            </p>
+                            <div className="product-star">
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div className="product-review">560 REVIEWS</div>
+                            <ul className="make-style">
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/web_new.png"
+                                  alt="web"
+                                />
+                              </li>
+                            </ul>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="col-sm-6 col-md-4">
+                        <Link
+                          href="/booking-software-solutions"
+                          className="ready-product"
+                          data-aos="fade-up"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width={100}
+                            height={100}
+                            className=""
+                            src="/img/softwares/marketplace-software-img.png"
+                            alt="Marketplace Software"
+                          />
+                          <div className="abs-product">
+                            <h3>Online Booking Software</h3>
+                            <p>
+                              Our Online Booking Software enables you to manage
+                              bookings effortlessly. Streamline scheduling,
+                              minimize errors, and boost your business
+                              efficiency with seamless online reservations.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>

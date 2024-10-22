@@ -746,7 +746,7 @@ const Page = () => {
                         will be able to view invites and can view details of
                         auction over the site. Users as a buyer will be able to
                         view details of a particular item{" "}
-                        <Link href="/case-studies/itenderyou" target="_blank">
+                        <Link href="/case-study/itenderyou" target="_blank">
                           Read More..
                         </Link>
                       </p>
@@ -815,7 +815,7 @@ const Page = () => {
                         payment online or selecting Cash on delivery option.
                         After attending the booked course, course taker will
                         receive an email notification to rate that{" "}
-                        <Link href="/case-studies" target="_blank">
+                        <Link href="/case-study" target="_blank">
                           Read More..
                         </Link>
                       </p>

@@ -105,7 +105,7 @@ const Page = () => {
                             <div class="media">
                               <h4 class="media-heading">
                                 <Link
-                                  href={`/case-studies/${item.slug}`}
+                                  href={`/case-study/${item.slug}`}
                                   class="light_blue"
                                 >
                                   {item.title}
@@ -123,7 +123,7 @@ const Page = () => {
                               </div>
                               <div class="media-body">
                                 <Link
-                                  href={`/case-studies/${item.slug}`}
+                                  href={`/case-study/${item.slug}`}
                                   class="blog_read_more"
                                   title="read more"
                                 >

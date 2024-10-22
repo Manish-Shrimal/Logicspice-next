@@ -61,7 +61,7 @@ const Looksilder = () => {
       alt: "iwork",
 
       text: "iWorks supports Multilingual and Social Media Sign in and Sign Up Features.",
-      link: "/case-studies/iworks",
+      link: "/case-study/iworks",
       logoSize: 200,
     },
     {
@@ -70,7 +70,7 @@ const Looksilder = () => {
       originalImage: "/img/home/look/logo-job-at-home.webp",
       alt: "JOB AT HOME",
       text: "Job At Home supports Multiple social channels to sharing the jobs including Whatsapp, Facebook, LinkedIn, Twitter etc",
-      link: "/case-studies/job-at-home",
+      link: "/case-study/job-at-home",
       logoSize: 150,
     },
     {
@@ -79,7 +79,7 @@ const Looksilder = () => {
       originalImage: "/img/home/look/logo-gb-lancers.webp",
       alt: "GB Lancers",
       text: "GB Lancers supports Seller and Buyer management.",
-      link: "/case-studies/gb-lancers",
+      link: "/case-study/gb-lancers",
       logoSize: 150,
     },
     {
@@ -89,7 +89,7 @@ const Looksilder = () => {
       width: "250px!important",
       alt: "We do it Cheaper",
       text: "We Do it Cheaper supports Buyer and Freelancer management.",
-      link: "/case-studies/we-do-it-cheaper",
+      link: "/case-study/we-do-it-cheaper",
       logoSize: 250,
     },
     {
@@ -98,7 +98,7 @@ const Looksilder = () => {
       originalImage: "/img/home/look/yp-logo.webp",
       alt: "YourPension",
       text: "Responsive Custom Build website for Pension Plan Management",
-      link: "/case-studies/pension-plan-management",
+      link: "/case-study/pension-plan-management",
       logoSize: 250,
     },
     {
@@ -107,7 +107,7 @@ const Looksilder = () => {
       originalImage: "/img/home/look/Iamcleaninglogo.webp",
       alt: "utrack",
       text: "It's provides domestic and commercial cleaning services.",
-      link: "/case-studies/Iamcleaning",
+      link: "/case-study/Iamcleaning",
       logoSize: 250,
     },
     {
@@ -116,7 +116,7 @@ const Looksilder = () => {
       originalImage: "/img/home/look/zip-joblogo.webp",
       alt: "Zibzob",
       text: "We Write Resumes that Get You Hired",
-      link: "/case-studies/zipjob",
+      link: "/case-study/zipjob",
       logoSize: 150,
     },
   ];

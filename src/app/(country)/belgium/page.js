@@ -727,7 +727,7 @@ const Page = () => {
                       video and then the buyers CV would be matched as per the
                       requirement and the review of video resume would be done .
                       If the buyer shortlists the resource
-                      <Link href="/case-studies/uuuga" target="_blank">
+                      <Link href="/case-study/uuuga" target="_blank">
                         Read More..
                       </Link>
                     </p>
@@ -796,7 +796,7 @@ const Page = () => {
                       can list themselves with their pictures, videos (YouTube),
                       and review rating etc. with free
                       <Link
-                        href="/case-studies/gigminute"
+                        href="/case-study/gigminute"
                         target="_blank"
                       >
                         Read More..

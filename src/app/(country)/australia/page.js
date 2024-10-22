@@ -750,7 +750,7 @@ const Page = () => {
                         different tabs in header and navigation in sub-nodes (in
                         right side of page), text and footer section over
                         website.{" "}
-                        <Link href="/case-studies/amcs" target="_blank">
+                        <Link href="/case-study/amcs" target="_blank">
                           Read More..
                         </Link>
                       </p>
@@ -817,7 +817,7 @@ const Page = () => {
                         they want,from the options of the mattress&apos;s variants
                         and can place an order for it by filling the mandatory
                         details over checkout page{" "}
-                        <Link href="/case-studies/onebed" target="_blank">
+                        <Link href="/case-study/onebed" target="_blank">
                           Read More..
                         </Link>
                       </p>
@@ -892,7 +892,7 @@ const Page = () => {
                         different regions. Customers over the site will be able
                         to search for advertisements using keywords or{" "}
                         <Link
-                          href="/case-studies/emergencyservice"
+                          href="/case-study/emergencyservice"
                           target="_blank"
                         >
                           Read More..
@@ -962,7 +962,7 @@ const Page = () => {
                         Doc and images.uLoan has chosen us for our ability to
                         develop complex websites and providing efficient
                         solutions with logical approach to the requirements{" "}
-                        <Link href="/case-studies/uloan" target="_blank">
+                        <Link href="/case-study/uloan" target="_blank">
                           Read More..
                         </Link>
                       </p>

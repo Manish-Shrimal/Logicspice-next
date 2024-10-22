@@ -77,7 +77,7 @@ const Page = ({ params }) => {
                       <Link href="/">Home</Link>
                     </li>
                     <li className="breadcrumb-item">
-                      <Link href="/case-studies">Case Studies</Link>
+                      <Link href="/case-study">Case Studies</Link>
                     </li>
                     <li className="breadcrumb-item active">{pageData.title}</li>
                   </ol>
@@ -150,7 +150,7 @@ const Page = ({ params }) => {
                           ).map((item, index) => {
                             return (
                               <li key={index}>
-                                <Link href={`/case-studies/${item.slug}`}>
+                                <Link href={`/case-study/${item.slug}`}>
                                   <strong>{item.title} </strong>
                                 </Link>
                               </li>

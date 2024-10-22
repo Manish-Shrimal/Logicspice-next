@@ -746,7 +746,7 @@ const Page = () => {
                         develop for complex websites, and the first PensionPlan
                         website version was released in the March of 2014.
                         <Link
-                          href="/case-studies/pension-plan-management"
+                          href="/case-study/pension-plan-management"
                           target="_blank"
                         >
                           Read More..
@@ -833,7 +833,7 @@ const Page = () => {
                         and can thus checkout for their favorite beverages if
                         they have visited one of the shops. Visitors have to
                         register & login over the app also using their{" "}
-                        <Link href="/case-studies/beano-app" target="_blank">
+                        <Link href="/case-study/beano-app" target="_blank">
                           Read More..
                         </Link>
                       </p>

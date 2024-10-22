@@ -229,7 +229,7 @@ const Page = () => {
                             </div>
                             <div className="more_btn">
                               <Link
-                                href={`/case-studies/${i.slug}`}
+                                href={`/case-study/${i.slug}`}
                                 target="_blank"
                                 className="btn btn-primary"
                               >
