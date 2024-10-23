@@ -1410,7 +1410,8 @@ label {
 	border: 1px #333 solid;
 	text-align: center;
 	padding: 10px;
-	border-bottom: none
+	border-bottom: none;
+	margin-bottom: 0px!important;
 }
 
 .personal-detals-bx {

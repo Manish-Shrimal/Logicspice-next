@@ -2486,7 +2486,7 @@ positivitymain {
 }
 
 .headings {
-  padding-bottom: 40px !important;
+  padding-bottom: 20px !important;
   text-align: center;
 }
 
@@ -5660,7 +5660,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .HomeSlider {
-    padding-top: 70px;
+    padding-top: 100px;
     height: unset !important;
   }
 
