@@ -3606,7 +3606,8 @@
 } */
 
   .slick-prev {
-    left: -12px !important;
+    left: -6px !important;
+    z-index: 99 !important;
   }
 
   .slick-next {
