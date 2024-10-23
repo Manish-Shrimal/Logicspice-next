@@ -1855,15 +1855,26 @@
     font-size: 34px;
     text-transform: uppercase;
   }
+  .blog-home .headings{
+    /* font-size: 25px; */
+    padding-bottom: 20px!important;
+  }
 
   .headings.headings_white h2,
   .headings h2 {
     font-size: 20px !important;
   }
+  .readymateSolution .headings p {
+    font-size: 15px !important;
+    padding: 0 10px;
+    color: #505458;
+  }
 
   .headings.headings p,
   .headings p {
     font-size: 15px !important;
+    padding: 0 10px;
+    /* color: #505458; */
   }
 
   .mid-span {
@@ -1998,6 +2009,7 @@
     background: #eee;
     text-transform: capitalize;
     display: inline-block;
+    /* min-width: 140px!important; */
   }
 
   .certificates .nav.nav-tabs {
@@ -2644,12 +2656,19 @@
   }
 
   .headings.headings_white {
-    padding-bottom: 5px;
+    padding-bottom: 5px!important;
   }
 
   .close-box-bottom {
     left: 10px;
     top: 3px;
+  }
+  .ind-we-serv .product-view{
+    margin-top: 25px!important;
+  }
+  .ind-we-serv .btn-primary{
+    margin-bottom: 15px!important;
+    /* margin-top: 30px!important; */
   }
 
   .ind-we-serv li span {
@@ -3500,7 +3519,7 @@
   }
 
   .blog-home {
-    padding: 30px 0 10px;
+    padding: 30px 0 10px!important;
   }
 
   .director-desk {
@@ -3607,7 +3626,7 @@
 
   .slick-prev {
     left: -6px !important;
-    z-index: 99 !important;
+    z-index: 99!important;
   }
 
   .slick-next {
@@ -4341,7 +4360,9 @@
   .certificates .nav-tabs>li.active>a:focus {
     background-color: #fff;
   }
-
+  .social_footer ul{
+    padding-left: 0!important;
+  }
   .certificates .nav-tabs>li.active>a::before {
     position: absolute;
     left: 0;
@@ -4948,6 +4969,9 @@
   .widget_recent_entries {
     margin-top: 330px !important;
   }
+  .readymateSolution .product-view{
+    padding-top: 0px!important;
+  }
 
   .php-development .laravel_core_features_detail {
     float: right;
@@ -4979,11 +5003,16 @@
 
     .client-say p {
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600!important;
       line-height: inherit;
       margin-bottom: 0;
       margin-top: 24px;
     }
+    .client-say .headings{
+      padding-bottom: 25px!important;
+    }
+
+   
 
     .feature_list li {
       min-height: 0;
@@ -5447,6 +5476,13 @@
       margin-bottom: 0 !important;
     }
   }
+}
+
+@media (max-width: 380px) {
+  .home-slider {
+    height: 580px;
+    /* overflow: hidden; */
+}
 }
 
 @media (max-width: 320px) {

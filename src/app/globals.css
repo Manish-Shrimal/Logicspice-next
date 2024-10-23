@@ -244,6 +244,8 @@ left: 190px;
   margin-left: 8px;
 }
 
+
+
 .social_footer li {
   display: inline-block;
   list-style: outside none none;
@@ -2485,7 +2487,7 @@ positivitymain {
   padding: 60px 0 50px;
 }
 
-.headings {
+ .headings {
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -2628,6 +2630,10 @@ positivitymain {
   background-color: #451095;
   border: 1px solid #451095 !important;
   box-shadow: none;
+}
+.readymateSolution .headings {
+  padding-bottom: 30px !important;
+  text-align: center;
 }
 
 /* Readymade section css end  */
@@ -3607,7 +3613,7 @@ positivitymain {
 .certificates .nav-tabs>li {
   display: inline-block;
   float: none;
-  margin: 0 3px;
+  margin: 0;
 }
 
 .cer-icon {
@@ -4787,7 +4793,7 @@ body.modal-open .quote_pop_plus {
 
 .customize-top .react-tabs__tab-list {
   border: 0 none;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -4913,7 +4919,7 @@ body.modal-open .quote_pop_plus {
 .react-tabs__tab-panel p {
   text-align: justify;
   /* margin-right: 20px; */
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .why-choose-us .media-left>span,

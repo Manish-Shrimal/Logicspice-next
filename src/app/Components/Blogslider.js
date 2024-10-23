@@ -287,6 +287,7 @@ const Blogslider = () => {
   // };
   const settings = {
     dots: false,
+    arrows: false,
     lazyLoad: true,
     infinite: true,
     autoplay: true,
