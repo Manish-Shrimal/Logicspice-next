@@ -20,7 +20,8 @@ const Certificationtabs = () => {
           onClick={() => handleTabClick("Certifications")}
           style={{ cursor: "pointer" }}
         >
-          <a aria-controls="home" role="tab" data-toggle="tab">
+          <a aria-controls="home" role="tab" data-toggle="tab" aria-hidden="true">
+        
             <span className="cer-icon">
               <Image
                 width={25}
@@ -39,7 +40,7 @@ const Certificationtabs = () => {
           onClick={() => handleTabClick("Achievements")}
           style={{ cursor: "pointer" }}
         >
-          <a aria-controls="profile" role="tab" data-toggle="tab">
+          <a aria-controls="profile" role="tab" data-toggle="tab" aria-hidden="true">
             <span className="cer-icon">
               <Image
                 width={25}
@@ -58,7 +59,7 @@ const Certificationtabs = () => {
           onClick={() => handleTabClick("Affiliates")}
           style={{ cursor: "pointer" }}
         >
-          <a aria-controls="messages" role="tab" data-toggle="tab">
+          <a aria-controls="messages" role="tab" data-toggle="tab" aria-hidden="true">
             <span className="cer-icon">
               <Image
                 width={25}
@@ -80,7 +81,7 @@ const Certificationtabs = () => {
           }`}
           id="Certifications"
         >
-          <ul>
+          {/* <ul>
             <li>
               <Image
                 width={70}
@@ -154,7 +155,82 @@ const Certificationtabs = () => {
                 alt="topappcreators certification - logicspice"
               />
             </li>
-          </ul>
+          </ul> */}
+          <ul>
+  <li>
+    <Image
+      width={70}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/iso_logo.webp"
+      alt="iOS app development"
+    />
+  </li>
+  <li>
+    <Image
+      width={230}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/freelancertopten.webp"
+      alt="freelancer web and app development"
+    />
+  </li>
+  <li>
+    <Image
+      width={200}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/nasscom.webp"
+      alt="web and app development certification"
+    />
+  </li>
+  <li>
+    <Image
+      width={240}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/applancer.webp"
+      alt="applancer certification"
+    />
+  </li>
+  <li>
+    <Image
+      width={100}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/goodFirms.webp"
+      alt="Good Firms certification"
+    />
+  </li>
+  <li>
+    <Image
+      width={210}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/extract.webp"
+      alt="Extract certification"
+    />
+  </li>
+  <li>
+    <Image
+      width={70}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/appfutura.webp"
+      alt="appfutura certification"
+    />
+  </li>
+  <li>
+    <Image
+      width={60}
+      height={100 / (100 / 100)}
+      className="lazy"
+      src="/img/home/certificates/TAC-iphone.webp"
+      alt="topappcreators certification - logicspice"
+    />
+  </li>
+</ul>
+
         </div>
         <div
           role="tabpanel"

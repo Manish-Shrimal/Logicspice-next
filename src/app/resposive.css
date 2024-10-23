@@ -1606,40 +1606,48 @@
 }
 
 @media (max-width: 767px) {
+  .product-view{
+    padding-top: 0px!important;
+  }
 
   .appliction-top-right {
-    width: 100%!important;
-    text-align: center!important;
-}
-.upload-photo {
-  float: none!important;
-  display: inline-block!important;
-}
-.personal-detals-table {
-  width: 800px!important;
-}
-.experience-post {
-  float: left!important;
-  width: 100%!important;
-}
+    width: 100% !important;
+    text-align: center !important;
+  }
 
-.experience-post label {
-  width: 30%!important;
-}
+  .upload-photo {
+    float: none !important;
+    display: inline-block !important;
+  }
 
-.places-bx-left {
-  width: 100%!important;
-}
-.places-bx-right {
-  float: left!important;
-  width: 100%!important;
-  text-align: left!important;
-  padding-top: 20px!important;
-}
+  .personal-detals-table {
+    width: 800px !important;
+  }
 
-.personal-detals-bx {
-  overflow-x: auto!important;
-}
+  .experience-post {
+    float: left !important;
+    width: 100% !important;
+  }
+
+  .experience-post label {
+    width: 30% !important;
+  }
+
+  .places-bx-left {
+    width: 100% !important;
+  }
+
+  .places-bx-right {
+    float: left !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding-top: 20px !important;
+  }
+
+  .personal-detals-bx {
+    overflow-x: auto !important;
+  }
+
   .take-a-look .swiper-slide {
     /* margin: 0 !important; */
     width: auto !important;
@@ -1726,18 +1734,21 @@
     padding-bottom: 130px !important;
   }
 
-  .appliction-top-left{
-    width: 100%!important;
+  .appliction-top-left {
+    width: 100% !important;
   }
+
   .appliction-post {
-    width: 100%!important;
-    text-align: left!important;
-    padding-top: 10px!important;
-    padding-bottom: 20px!important;
-}
-.application-input{
-  width: 100%!important;
-}
+    width: 100% !important;
+    text-align: left !important;
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .application-input {
+    width: 100% !important;
+  }
+
   .HireFlexNewSection .new-hiring-div .title_heading {
     display: inline-block !important;
     text-align: left !important;
@@ -3595,11 +3606,11 @@
 } */
 
   .slick-prev {
-    left: -12px !important;
+    left: 0px !important;
   }
 
   .slick-next {
-    right: -10px !important;
+    right: 0px !important;
   }
 
   .stat_data_tex_hos {
@@ -4395,7 +4406,10 @@
   }
 
   .readymateSolution {
-    padding-top: 30px;
+    padding: 30px 0 0 !important;
+  }
+  .take-a-look{
+    padding: 30px 0 0!important;
   }
 
   .readymateSolution .ready-product {
@@ -4945,12 +4959,12 @@
 
   @media (max-width: 480px) {
     .certificates .nav-tabs>li {
-      margin-bottom: 0px;
-      width: auto;
+      margin-bottom: 0px!important;
+      width: auto!important;
     }
 
     .certificates .tab-content li {
-      padding: 13px 4px;
+      padding: 13px 4px!important;
     }
 
     .certificates .tab-content li:nth-child(5) {

@@ -303,7 +303,7 @@ const Page = () => {
               Online Booking Software Solutions Features
             </h2>
           </div>
-          <div className="tatxt_txt_job MarketplaceTxtJob">
+          <div className="tatxt_txt_job MarketplaceTxtJob" style={{maxWidth: "1080px"}}>
             <p>
               We have very specific solutions available for different kinds of
               business sectors. These online booking software are designed for
@@ -1179,7 +1179,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <div className="libraries_laravel_choose">
-                  <a href="/event-booking-system-development" target="_blank">
+                  <a href="/event-booking-software" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img3">
                       <Image
                         unoptimized={true}
@@ -1311,7 +1311,7 @@ const Page = () => {
               </div>
             </div>
             <p className="laravel_core_sub2">
-              Our white label software marketplace empowers businesses to expand
+              Our online booking software marketplace empowers businesses to expand
               their reach&sbquo; streamline operations&sbquo; and provide a
               seamless experience to their customers. Join us in transforming
               your industry and achieving new heights of success.
@@ -1617,45 +1617,15 @@ const Page = () => {
               <div className="ecommerce--review">
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
-                    I have purchased the service marketplace software and have
+                    {/* I have purchased the service marketplace software and have
                     constructed my own website. This was an easy task because of
                     logicspice&apos;s free installation and support. Keep up the
                     good work. I will be back for more customization work in the
-                    future.
-                  </div>
-                  <div className="who_ratset">
-                    <span
-                      className="star_review_main"
-                      style={{ paddingRight: "10px", Color: "gold" }}
-                    >
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                    </span>
-                    Mark Henry&sbquo; Australia
-                    <span>
-                      <Image
-                        unoptimized={true}
-                        width={25}
-                        height={100}
-                        src="/img/jobboard/australia_flag_img.png"
-                        alt="mobile app development"
-                        style={{ width: "20px", marginLeft: "3px" }}
-                      />
-                    </span>
-                  </div>
-                </div>
-                <div className="customers_review_sec_row">
-                  <div className="customer_review_stext" id="fiveer-clone">
-                    This is the best readymade solution I found for my business.
-                    Thanks for your great efforts&sbquo; commitment and support
-                    while installing the software. Your prompt service regarding
-                    a few minor issues was superb and great communication
-                    skills.
-                  </div>
+                    future. */}
+                    The table booking feature in the online booking software was exactly what my restaurant needed. The system is user-friendly, and Logicspice&apos;s team was incredibly helpful during setup. We&apos;ve seen fewer booking errors and a faster turnaround.
 
+
+                  </div>
                   <div className="who_ratset">
                     <span
                       className="star_review_main"
@@ -1667,7 +1637,7 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    <span id="client-name">Davian Smith&sbquo; Italy</span>{" "}
+                    Luca Rossi, Italy
                     <span>
                       <Image
                         unoptimized={true}
@@ -1680,14 +1650,53 @@ const Page = () => {
                     </span>
                   </div>
                 </div>
+                <div className="customers_review_sec_row">
+                  <div className="customer_review_stext" id="fiveer-clone">
+                    {/* This is the best readymade solution I found for my business.
+                    Thanks for your great efforts&sbquo; commitment and support
+                    while installing the software. Your prompt service regarding
+                    a few minor issues was superb and great communication
+                    skills. */}
+                    I&apos;ve been using Logicspice&apos;s event booking software for a few months now, and I&apos;m impressed with how smoothly it handles everything from bookings to reminders. Great product and fantastic support from the team!
+
+
+                  </div>
+
+                  <div className="who_ratset">
+                    <span
+                      className="star_review_main"
+                      style={{ paddingRight: "10px", Color: "gold" }}
+                    >
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                    </span>
+                    <span id="client-name">Maria Gomez, USA</span>{" "}
+                    <span>
+                      <Image
+                        unoptimized={true}
+                        width={25}
+                        height={100}
+                        src="/img/jobboard/usa_flag_img.png"
+                        alt="mobile app development"
+                        style={{ width: "20px", marginLeft: "3px" }}
+                      />
+                    </span>
+                  </div>
+                </div>
 
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
-                    Recently I bought freelance software based upon gigs from
+                    {/* Recently I bought freelance software based upon gigs from
                     logicspice and it worked really nice&sbquo; it helped my
                     business to gain more efficiency. I recommend it to all who
                     are looking for freelance based models&sbquo; it&apos;s
-                    really nice.
+                    really nice. */}
+                    I used Logicspice&apos;s online booking software for seat bookings at my theater, and it made everything so much easier. The setup was fast, and their support team was great. I highly recommend it to anyone who wants a simpler way to manage bookings.
+
+
                   </div>
                   <div className="who_ratset">
                     <span
@@ -1700,13 +1709,13 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    <span id="client-name">Iam Convey&sbquo; USA</span>{" "}
+                    <span id="client-name">Robin Johnson, UK</span>{" "}
                     <span>
                       <Image
                         unoptimized={true}
                         width={25}
                         height={100}
-                        src="/img/jobboard/usa_flag_img.png"
+                        src="/img/jobboard/uk_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px" }}
                       />
@@ -1808,7 +1817,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="Job Board Software"
+                    title="Online Booking Software"
                   />
                 </div>
                 <div className="main-rait">
@@ -2255,7 +2264,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/logistic-marketplacesoftware"
+                    href="/logistic-marketplace-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">
@@ -2286,7 +2295,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/appointment-scheduling-software/"
+                    href="/appointment-booking-system"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

@@ -2227,7 +2227,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/logistic-marketplacesoftware"
+                    href="/logistic-marketplace-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

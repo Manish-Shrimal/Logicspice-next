@@ -187,8 +187,6 @@
 //     getData();
 //   }, []);
 
-
-
 //   const settings = {
 //     dots: false,
 //     lazyLoad: true,
@@ -236,8 +234,6 @@
 
 // export default Blogslider;
 
-
-
 "use client";
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
@@ -267,16 +263,14 @@ const Blogslider = () => {
   // };
 
   const getData = async () => {
-        try {
-           const response = await axios.get(BaseAPI + "/home/blog");
-           // console.log(response.data.data);
-           setBlogs(response.data && response.data.data);
-        } catch (error) {
-           console.log(error.message);
-         }
-       };
-    
-   
+    try {
+      const response = await axios.get(BaseAPI + "/home/blog");
+      // console.log(response.data.data);
+      setBlogs(response.data && response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   useEffect(() => {
     getData();
@@ -324,7 +318,6 @@ const Blogslider = () => {
       },
     ],
   };
-  
 
   return (
     <div className="slider-container">
@@ -337,7 +330,7 @@ const Blogslider = () => {
         //       <li style={{ listStyle: "none", marginRight : "50px" }}>
         //         <figure>
         //           <Image
-                     
+
         //             width={500}
         //             height={100}
         //             src={blog.img}
@@ -359,41 +352,39 @@ const Blogslider = () => {
         //   ))}
         // </Slider>
         <Slider {...settings}>
-  {blogs.map((blog, index) => (
-    <div key={index} style={{ gap: "10px" }}>
-      <li
-        style={{
-          listStyle: "none",
-          marginRight: window.innerWidth <= 768 ? "0px" : "50px", // Adjust for mobile
-        }}
-      >
-        <figure>
-          <Image
-            width={500}
-            height={100}
-            src={blog.img}
-            alt={blog.alt}
-            className="lazy"
-          />
-          <figcaption>
-            <a
-              href={blog.link}
-              title="Read more"
-              className="btn btn-primary"
-            >
-              Read more
-            </a>
-          </figcaption>
-        </figure>
-      </li>
-    </div>
-  ))}
-</Slider>
-
+          {blogs.map((blog, index) => (
+            <div key={index} style={{ gap: "10px" }}>
+              <li
+                style={{
+                  listStyle: "none",
+                  marginRight: window.innerWidth <= 768 ? "0px" : "50px", // Adjust for mobile
+                }}
+              >
+                <figure>
+                  <Image
+                    width={500}
+                    height={100}
+                    src={blog.img}
+                    alt={blog.alt}
+                    className="lazy"
+                  />
+                  <figcaption>
+                    <a
+                      href={blog.link}
+                      title="Read more"
+                      className="btn btn-primary"
+                    >
+                      Read more
+                    </a>
+                  </figcaption>
+                </figure>
+              </li>
+            </div>
+          ))}
+        </Slider>
       )}
     </div>
   );
 };
 
 export default Blogslider;
-

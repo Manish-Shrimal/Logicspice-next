@@ -841,14 +841,24 @@ const Navbar = () => {
                       }}
                     >
                       <li className="logic_contact">
-                        <Link
+                        {/* <Link
                           href="#"
                           onMouseEnter={() => setDropdown5(true)}
                           onMouseLeave={() => setDropdown5(false)}
                         >
                           <i class="fa fa-phone" aria-hidden="true"></i>
                           <b className="caret"></b>
-                        </Link>
+                        </Link> */}
+                        <Link
+  href="#"
+  onMouseEnter={() => setDropdown5(true)}
+  onMouseLeave={() => setDropdown5(false)}
+  aria-label="Contact us"
+>
+  <i className="fa fa-phone" aria-hidden="true"></i>
+  <b className="caret"></b>
+</Link>
+
                         <div
                           className={`sub-contact ${dropdown5 ? "show" : ""}`}
                           aria-labelledby=""

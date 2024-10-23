@@ -134,12 +134,29 @@ body {
 
 .sites_maps li a,
 h1.entry-title {
-	font-weight: bold;
+	font-weight: bold!important;
+	color: #337ab7!important;
+
+}
+
+.sites_maps li a,
+h1.entry-title:hover {
+	font-weight: bold!important;
+	color: #337ab7!important;
+
 }
 
 .sites_maps li ul li a {
-	font-weight: normal;
+	font-weight: normal!important;
+	color: #337ab7!important;
 }
+
+.sites_maps li ul li a:hover {
+	font-weight: normal!important;
+	color: #23527c!important;
+}
+
+
 
 .sites_maps .sub_mp>a {
 	font-weight: bold;

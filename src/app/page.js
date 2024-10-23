@@ -1,16 +1,15 @@
 // "use client";
 import Layout from "./layout";
-// import React, { useState, useEffect } from "react";
-
+import React, { lazy, Suspense } from "react";
 import NavBar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
-import Slidersimple from "./Components/Slidersimple";
+// import Slidersimple from "./Components/Slidersimple";
 import Looksilder from "./Components/Looksilder";
-import Blogslider from "./Components/Blogslider";
-import Workingwith from "./Components/Workingwith";
-import Certificationtabs from "./Components/Certificationtabs";
+// import Blogslider from "./Components/Blogslider";
+// import Workingwith from "./Components/Workingwith";
+// import Certificationtabs from "./Components/Certificationtabs";
 import Customizeweb from "./Components/Customizeweb";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "./resposive.css";
@@ -19,10 +18,35 @@ import Servercomponents from "./Components/Servercomponents";
 import "aos/dist/aos.css"; // Import AOS CSS
 import AOS from "aos"; // Import AOS
 
+const ServicesNewSection = lazy(() =>
+  import("./Components/ServicesNewSection")
+);
+const Slidersimple = lazy(() => import("./Components/Slidersimple"));
+
+const TakeaLook = lazy(() => import("./Components/home/TakeaLook"));
+
+const ClientSide = lazy(() => import("./Components/home/ClientSide"));
+
+const CustomizeTop = lazy(() => import("./Components/home/CustomizeTop"));
+
+const ClientSay = lazy(() => import("./Components/home/ClientSay"));
+
+const IndustriesWeServe = lazy(() =>
+  import("./Components/home/IndustriesWeServe")
+);
+
+const ReadymadeSolution = lazy(() =>
+  import("./Components/home/ReadymadeSolution")
+);
+
+const HireExpert = lazy(() => import("./Components/home/HireExpert"));
+
+const Blogslider = lazy(() => import("./Components/Blogslider"));
+const Certificationtabs = lazy(() => import("./Components/Certificationtabs"));
+const Workingwith = lazy(() => import("./Components/Workingwith"));
 // import React, { useState } from "react";
 
 const Page = () => {
-
   // useEffect(() => {
   //   AOS.init(); // Initialize AOS
   // }, []);
@@ -31,11 +55,17 @@ const Page = () => {
       <NavBar />
       <div className="home-slider">
         <div className="container">
-          <Slidersimple />
+          <Suspense fallback={<div>Loading Services...</div>}>
+            <Slidersimple />
+          </Suspense>
         </div>
       </div>
 
-      <section className="ServicesNewSection">
+      <Suspense fallback={<div>Loading Services...</div>}>
+        <ServicesNewSection />
+      </Suspense>
+
+      {/* <section className="ServicesNewSection">
         <div className="container">
           <div className="positivity">
             <div className="positivitymain">
@@ -170,24 +200,12 @@ const Page = () => {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Take a look Section  */}
-      {/* <section className="take-a-look">
-        <div className="container">
-          <div className="headings">
-            <h2>TAKE A LOOK AT WHAT WE HAVE BEEN WORKING ON</h2>
-            <p>
-              We have established partnerships with prominent organizations and
-              well-known brands,
-              <br /> offering innovative custom software solutions for both web
-              and mobile platforms.
-            </p>
-          </div>
-          <Looksilder />
-        </div>
       </section> */}
-      <section class="take-a-look">
+
+      <Suspense fallback={<div>Loading Take a look...</div>}>
+        <TakeaLook />
+      </Suspense>
+      {/* <section class="take-a-look">
         <div class="container">
           <div class="headings">
             <h2>TAKE A LOOK AT WHAT WE HAVE BEEN WORKING ON</h2>
@@ -200,11 +218,13 @@ const Page = () => {
           </div>
           <Looksilder />
         </div>
-      </section>
+      </section> */}
 
       {/* REadyMade Solution Section  */}
-
-      <section className="readymateSolution">
+      <Suspense fallback={<div>Loading readymade solution...</div>}>
+        <ReadymadeSolution />
+      </Suspense>
+      {/* <section className="readymateSolution">
         <div className="container">
           <div className="headings">
             <h2>READYMADE SOFTWARE SOLUTIONS</h2>
@@ -807,9 +827,13 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Hire section  */}
-      <section className="hire-expert-home">
+
+      <Suspense fallback={<div>Loading readymade hire expert...</div>}>
+        <HireExpert />
+      </Suspense>
+      {/* <section className="hire-expert-home">
         <div className="container">
           <div className="headings">
             <h2>HIRE DEVELOPER MINDS FOR DIFFERENT PLATFORM</h2>
@@ -903,7 +927,7 @@ const Page = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
       <section className="blog-home">
         <div className="container">
           <div className="headings">
@@ -911,18 +935,26 @@ const Page = () => {
             <p>A Sneak Peek into the Future of Innovation</p>
           </div>
           <div>
-            <Blogslider />
+            <Suspense fallback={<div>Loading ...</div>}>
+              <Blogslider />
+            </Suspense>
           </div>
         </div>
       </section>
       <section className="certificates">
         <div className="container">
-          <Certificationtabs />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Certificationtabs />
+          </Suspense>
         </div>
       </section>
 
       {/* client side  */}
-      <section className="client-side">
+
+      <Suspense fallback={<div>Loading client side...</div>}>
+        <ClientSide />
+      </Suspense>
+      {/* <section className="client-side">
         <div className="container">
           <div className="row">
             <div className="col-sm-3 col-xs-6">
@@ -947,7 +979,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="working_with">
         <div className="container">
           <h3
@@ -956,12 +988,16 @@ const Page = () => {
           >
             Worked with 1500+ companies worldwide, from startups to enterprises.
           </h3>
-
-          <Workingwith />
+          <Suspense fallback={<div>Loading ...</div>}>
+            <Workingwith />
+          </Suspense>
         </div>
       </section>
 
-      <section className="customize-top">
+      <Suspense fallback={<div>Loading customize top...</div>}>
+        <CustomizeTop />
+      </Suspense>
+      {/* <section className="customize-top">
         <div id="particles-js2"> </div>
         <div className="container">
           <div className="headings headings_white">
@@ -975,8 +1011,12 @@ const Page = () => {
 
           <Customizeweb />
         </div>
-      </section>
-      <section className="client-say">
+      </section> */}
+
+      <Suspense fallback={<div>Loading Client say...</div>}>
+        <ClientSay />
+      </Suspense>
+      {/* <section className="client-say">
         <div className="container">
           <div className="headings">
             <h2>WHAT OUR CLIENTS SAY</h2>
@@ -989,6 +1029,7 @@ const Page = () => {
                 src="https://www.youtube.com/embed/DwZRqMYOmZo?rel=0"
                 allow="encrypted-media"
                 allowfullscreen=""
+                title="Youtube-Video"
                 height="300"
                 width="100%"
                 frameborder="0"
@@ -1009,11 +1050,14 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Industries  */}
+      <Suspense fallback={<div>Loading Industries we serve...</div>}>
+        <IndustriesWeServe />
+      </Suspense>
 
-      <section className="ind-we-serv">
+      {/* <section className="ind-we-serv">
         <div class="IndustriesIcon1">
           <Image
             width={100}
@@ -1242,7 +1286,7 @@ const Page = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       <Servercomponents />
