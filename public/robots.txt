@@ -2,37 +2,8 @@ User-agent: *
 
 Sitemap: https://www.logicspice.com/sitemap.xml
 
-Disallow: /pages/contactUs1
-Disallow: /pages/quote
-Disallow: /pages/hirerequest
-Disallow: /pages/review
-Disallow: /pages/enquire
-Disallow: /pages/request
-Disallow: /pages/requestfood
-Disallow: /pages/requestconsult
-Disallow: /pages/templatedownload
-Disallow: /users/forgotpass
-Disallow: /homes/contact
-Disallow: /users/forgotPassword
-Disallow: /softwares/buynow
-Disallow: /softwares/billing
-Disallow: /softwares/paymentmethod
-Disallow: /blogs/subscribe
-Disallow: /pages/template/download
 
-Disallow: /app/webroot/files/template/Francohospital-site
-Disallow: /app/webroot/files/template/ls-bank/
-Disallow: /app/webroot/files/template/chocofun/
-Disallow: /app/webroot/files/template/Francohospital-site
-Disallow: /app/webroot/files/template/Sandka-purge
-Disallow: /app/webroot/files/template/eurotrad
-Disallow: /app/webroot/files/template/Askandhelp
-Disallow: /demo/
-Disallow: /app/webroot/files/template/My-way-site/
-Disallow: /app/webroot/files/template/wildlife
-Disallow: /app/webroot/files/template/devine_date/
-Disallow: /app/webroot/files/template/My-way-site/
-Disallow: /app/webroot/files/template/Interio-site/
-Disallow: /app/webroot/files/template/Interio-site/
-Disallow: /app/webroot/files/template/
-Disallow: /smtp/
+Disallow: /buynow
+Disallow: /billing
+
+
