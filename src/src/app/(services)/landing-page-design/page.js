@@ -505,7 +505,7 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true} unoptimized={true}
+            <Image unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

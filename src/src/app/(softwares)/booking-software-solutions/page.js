@@ -316,7 +316,7 @@ const Page = () => {
               business sectors. These online booking software are designed for
               various industries such as healthcare, restaurants, sports, spa
               centers, and more. It simplifies tasks like patient appointments
-              in clinics or table reservations in restaurants. Whether you're
+              in clinics or table reservations in restaurants. Whether you&apos;re
               running a medical practice or clinic, our medical appointment
               scheduling software helps organize patient bookings. It also
               serves reservation systems for other businesses, from doctor
@@ -1103,7 +1103,7 @@ const Page = () => {
             </h2>
             <p>
               Our Online Booking Software makes it easy for your business to
-              manage bookings, whether it's appointments, sports, reservations,
+              manage bookings, whether it&apos;s appointments, sports, reservations,
               or events. Customers can book online anytime, which saves you time
               and reduces mistakes. Automatic real-time availability keeps your
               business organized and improves the customer experience.

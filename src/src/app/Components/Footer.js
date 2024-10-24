@@ -20,9 +20,9 @@ const Footer = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const renderIcon = (isExpanded) => {
-    return isExpanded ? <RemoveIcon /> : <AddIcon />; // Show the correct icon
-  };
+  // const renderIcon = (isExpanded) => {
+  //   return isExpanded ? <RemoveIcon /> : <AddIcon />; // Show the correct icon
+  // };
 
   let url = window.location.pathname;
 

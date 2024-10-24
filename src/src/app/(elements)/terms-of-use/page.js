@@ -93,7 +93,7 @@ const Page = () => {
               <span style={{ fontSize: "medium" }}>
                 &nbsp;&nbsp;&nbsp; After the site/app gets launched, we offer
                 free support for the first month. After one month completion, we
-                charge according to the client's requirement.
+                charge according to the client&apos;s requirement.
               </span>
             </li>
             <li>
@@ -227,7 +227,7 @@ const Page = () => {
               </span>{" "}
               <br />
               <br />
-              Note : We don't offer money back guarantee on our any custom
+              Note : We don&apos;t offer money back guarantee on our any custom
               products or service. <br />
             </span>
           </p>

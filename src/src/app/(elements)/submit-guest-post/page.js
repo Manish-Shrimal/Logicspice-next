@@ -147,7 +147,7 @@ const Page = () => {
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="why-guest-post">
-                <h2>What We're Looking for a Guest Post Submission</h2>
+                <h2>What We&apos;re Looking for a Guest Post Submission</h2>
                 <p>
                   Aiming to find new contributors, Logicspice is looking for new
                   ideas. The following attributes are sought after in a guest
@@ -165,7 +165,7 @@ const Page = () => {
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <div class="guest-post-form">
-                <h3>Don't Miss This Opportunity</h3>
+                <h3>Don&apos;t Miss This Opportunity</h3>
                 {/* <form
       name="contactUs"
       id="contactUs"
@@ -341,25 +341,25 @@ const Page = () => {
             and it should be plagiarism free.
           </p>
           <p>
-            Quality material is our principal focus. We'd be delighted if you
+            Quality material is our principal focus. We&apos;d be delighted if you
             could write an article on a recent software, technology or any tech
-            related project, the lessons you've learnt, or the things that
-            worked and didn't work for you. An honorarium and full credit will
+            related project, the lessons you&apos;ve learnt, or the things that
+            worked and didn&apos;t work for you. An honorarium and full credit will
             be given for your effort.
           </p>
           <h3>Expertise</h3>
           <p>
             Your writing shows that you have authority on the topic matter,
             which is a great accomplishment. Make direct touch with someone who
-            has the required degree of competence if you don't have it. If you
-            use someone else's ideas or information, you must give them full
+            has the required degree of competence if you don&apos;t have it. If you
+            use someone else&apos;s ideas or information, you must give them full
             credit by citing their sources.
           </p>
           <h3>Solid writing</h3>
           <p>
             Submit tech guest posts with an interesting, well-organized
             technology related point and back it up with facts and anecdotes
-            from your own life. It's refreshing to hear someone with your unique
+            from your own life. It&apos;s refreshing to hear someone with your unique
             perspective on a topic instead of the usual, tired, or generic
             advice.
           </p>
@@ -372,7 +372,7 @@ const Page = () => {
             platform.
           </p>
           <p>
-            You can link your company's website in your author bio. If the links
+            You can link your company&apos;s website in your author bio. If the links
             are of value to our readers, we will consider including them in the
             post.
           </p>
@@ -382,9 +382,9 @@ const Page = () => {
           </p>
           <h3>Who Can Submit Guest Posts?</h3>
           <p>
-            Certainly! If you're a spammer, you won't be able to post here. Our
+            Certainly! If you&apos;re a spammer, you won&apos;t be able to post here. Our
             writers range from seasoned pros to those just getting their feet
-            wet in the writing world. We're a great place for software to submit
+            wet in the writing world. We&apos;re a great place for software to submit
             guest posts and technology related guest posts, because we have an
             editorial team checking your work before your content gets live.
           </p>
@@ -436,24 +436,24 @@ const Page = () => {
           </p>
           <ul>
             <li>
-              It's a new piece of work, not anything you've already written and
+              It&apos;s a new piece of work, not anything you&apos;ve already written and
               published elsewhere.
             </li>
-            <li>Be open to the editor's suggestions and work with them.</li>
+            <li>Be open to the editor&apos;s suggestions and work with them.</li>
             <li>
               With your editor, set a delivery date and communicate about the
               deadline.
             </li>
             <li>
-              Writing about something you've learnt while working on your
+              Writing about something you&apos;ve learnt while working on your
               products requires that you comply with our publication guidelines.
             </li>
             <li>If you are uncertain about something, consult your editor.</li>
           </ul>
           <h3>How to Submit Tech Guest Post</h3>
           <p>
-            It's easy to share your thoughts on an article topic using the form
-            below. Don't be vague about what you're talking about. Let us know
+            It&apos;s easy to share your thoughts on an article topic using the form
+            below. Don&apos;t be vague about what you&apos;re talking about. Let us know
             what makes your article stand out from the others already published
             on this topic. A draught of our editorial guidelines will be
             requested from you if this possibility is followed.

@@ -512,6 +512,10 @@ section {
   padding: 60px 0;
 }
 
+.jobBoardNewSoftware{
+  background: #eeeeee;
+}
+
 .job-video iframe {
   max-width: 100%;
 }

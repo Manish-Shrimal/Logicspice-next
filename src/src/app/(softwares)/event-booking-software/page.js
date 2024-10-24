@@ -2310,7 +2310,7 @@ const Page = () => {
                     </div>
                     <div className="hands-proved">
                         <div className="titleof_scnew">Payment History</div>
-                        <div className="pro-feat-detai">Organizer can able to view payments and it's details.</div>
+                        <div className="pro-feat-detai">Organizer can able to view payments and it&apos;s details.</div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
