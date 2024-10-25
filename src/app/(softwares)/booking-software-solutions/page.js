@@ -201,23 +201,23 @@ const Page = () => {
                   <div className="btn btn-get" onClick={openModal}>
                     <button>Enquire Now</button>
                     {
-                       <EnquiryModal
-                       modalStatus={showModal}
-                       toggle={openModal}
-                       title="Online Booking Software"
-                     />
+                      <EnquiryModal
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="Online Booking Software"
+                      />
                       //                       <SoftwareEnquiry
                       //                         modalStatus={showModal}
                       //                         toggle={openModal}
                       //                         title="Please fill the form below and get access to the live demo of Marketplace Software.
                       // See how it work yourself!"
                       //                       />
-//                       <GetDemoEnquiry
-//                         modalStatus={demoAccessModal}
-//                         toggle={openDemoAccessModal}
-//                         title="Please fill the form below and get access to the live demo of Online Booking Software.
-//  See how it works yourself!"
-//                       />
+                      //                       <GetDemoEnquiry
+                      //                         modalStatus={demoAccessModal}
+                      //                         toggle={openDemoAccessModal}
+                      //                         title="Please fill the form below and get access to the live demo of Online Booking Software.
+                      //  See how it works yourself!"
+                      //                       />
                     }
                   </div>
                 </div>
@@ -245,7 +245,7 @@ const Page = () => {
                   width={450}
                   height={100 / (100 / 100)}
                   className=""
-                  src="/img/marketplacesoftware/marketplace-banner-img.png"
+                  src="/img/marketplacesoftware/online-booking-banner-img.png"
                   alt="Marketplace Software"
                 />
               </div>
@@ -281,8 +281,8 @@ const Page = () => {
         </div>
       </section>
       <section
-        className="client-say MarketplaceSoftwareClient"
-        style={{ backgroundColor: "#fff;" }}
+        className=" MarketplaceSoftwareClient"
+        style={{ backgroundColor: "#fff;", padding: "60px 0" }}
       >
         <div className="container">
           <div className="service-market-ttd MarketplaceSoftwareFeatures">
@@ -310,17 +310,20 @@ const Page = () => {
               Online Booking Software Solutions Features
             </h2>
           </div>
-          <div className="tatxt_txt_job MarketplaceTxtJob" style={{maxWidth: "1080px"}}>
+          <div
+            className="tatxt_txt_job MarketplaceTxtJob"
+            style={{ maxWidth: "1080px" }}
+          >
             <p>
               We have very specific solutions available for different kinds of
               business sectors. These online booking software are designed for
               various industries such as healthcare, restaurants, sports, spa
               centers, and more. It simplifies tasks like patient appointments
-              in clinics or table reservations in restaurants. Whether you&apos;re
-              running a medical practice or clinic, our medical appointment
-              scheduling software helps organize patient bookings. It also
-              serves reservation systems for other businesses, from doctor
-              appointment booking software for healthcare facilities to
+              in clinics or table reservations in restaurants. Whether
+              you&apos;re running a medical practice or clinic, our medical
+              appointment scheduling software helps organize patient bookings.
+              It also serves reservation systems for other businesses, from
+              doctor appointment booking software for healthcare facilities to
               reservation systems for other businesses, our solution is flexible
               and efficient.
             </p>
@@ -1103,10 +1106,11 @@ const Page = () => {
             </h2>
             <p>
               Our Online Booking Software makes it easy for your business to
-              manage bookings, whether it&apos;s appointments, sports, reservations,
-              or events. Customers can book online anytime, which saves you time
-              and reduces mistakes. Automatic real-time availability keeps your
-              business organized and improves the customer experience.
+              manage bookings, whether it&apos;s appointments, sports,
+              reservations, or events. Customers can book online anytime, which
+              saves you time and reduces mistakes. Automatic real-time
+              availability keeps your business organized and improves the
+              customer experience.
             </p>
           </div>
 
@@ -1308,7 +1312,9 @@ const Page = () => {
                     <div className="laravel_choose_details">
                       <h3>Sports Area Booking</h3>
                       <p>
-                      Our Sports Area Booking Software is designed to manage bookings for various sports facilities, including turfs, tennis courts, football fields, and basketball courts.
+                        Our Sports Area Booking Software is designed to manage
+                        bookings for various sports facilities, including turfs,
+                        tennis courts, football fields, and basketball courts.
                       </p>
                     </div>
                   </a>
@@ -1316,10 +1322,10 @@ const Page = () => {
               </div>
             </div>
             <p className="laravel_core_sub2">
-              Our online booking software empowers businesses to expand
-              their reach&sbquo; streamline operations&sbquo; and provide a
-              seamless experience to their customers. Join us in transforming
-              your industry and achieving new heights of success.
+              Our online booking software empowers businesses to expand their
+              reach&sbquo; streamline operations&sbquo; and provide a seamless
+              experience to their customers. Join us in transforming your
+              industry and achieving new heights of success.
             </p>
           </div>
         </div>
@@ -1433,22 +1439,22 @@ const Page = () => {
                   <button>Enquire Now</button>
                   {
                     <EnquiryModal
-                    modalStatus={showModal}
-                    toggle={openModal}
-                    title="Online Booking Software"
-                  />
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Online Booking Software"
+                    />
                     //                     <SoftwareEnquiry
                     //                       modalStatus={showModal}
                     //                       toggle={openModal}
                     //                       title="Please fill the form below and get access to the live demo of Marketplace Software.
                     // See how it work yourself!"
                     //                     />
-//                     <GetDemoEnquiry
-//                       modalStatus={demoAccessModal}
-//                       toggle={openDemoAccessModal}
-//                       title="Please fill the form below and get access to the live demo of Online Booking Software.
-//  See how it works yourself!"
-//                     />
+                    //                     <GetDemoEnquiry
+                    //                       modalStatus={demoAccessModal}
+                    //                       toggle={openDemoAccessModal}
+                    //                       title="Please fill the form below and get access to the live demo of Online Booking Software.
+                    //  See how it works yourself!"
+                    //                     />
                   }
                 </div>
               </div>
@@ -1632,9 +1638,11 @@ const Page = () => {
                     logicspice&apos;s free installation and support. Keep up the
                     good work. I will be back for more customization work in the
                     future. */}
-                    The table booking feature in the online booking software was exactly what my restaurant needed. The system is user-friendly, and Logicspice&apos;s team was incredibly helpful during setup. We&apos;ve seen fewer booking errors and a faster turnaround.
-
-
+                    The table booking feature in the online booking software was
+                    exactly what my restaurant needed. The system is
+                    user-friendly, and Logicspice&apos;s team was incredibly
+                    helpful during setup. We&apos;ve seen fewer booking errors
+                    and a faster turnaround.
                   </div>
                   <div className="who_ratset">
                     <span
@@ -1667,9 +1675,11 @@ const Page = () => {
                     while installing the software. Your prompt service regarding
                     a few minor issues was superb and great communication
                     skills. */}
-                    I&apos;ve been using Logicspice&apos;s event booking software for a few months now, and I&apos;m impressed with how smoothly it handles everything from bookings to reminders. Great product and fantastic support from the team!
-
-
+                    I&apos;ve been using Logicspice&apos;s event booking
+                    software for a few months now, and I&apos;m impressed with
+                    how smoothly it handles everything from bookings to
+                    reminders. Great product and fantastic support from the
+                    team!
                   </div>
 
                   <div className="who_ratset">
@@ -1704,9 +1714,11 @@ const Page = () => {
                     business to gain more efficiency. I recommend it to all who
                     are looking for freelance based models&sbquo; it&apos;s
                     really nice. */}
-                    I used Logicspice&apos;s online booking software for seat bookings at my theater, and it made everything so much easier. The setup was fast, and their support team was great. I highly recommend it to anyone who wants a simpler way to manage bookings.
-
-
+                    I used Logicspice&apos;s online booking software for seat
+                    bookings at my theater, and it made everything so much
+                    easier. The setup was fast, and their support team was
+                    great. I highly recommend it to anyone who wants a simpler
+                    way to manage bookings.
                   </div>
                   <div className="who_ratset">
                     <span
@@ -2226,10 +2238,10 @@ const Page = () => {
                 <button>Enquire Now</button>
                 {
                   <EnquiryModal
-                  modalStatus={showModal}
-                  toggle={openModal}
-                  title="Online Booking Software"
-                />
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Online Booking Software"
+                  />
                   // <SoftwareEnquiry
                   //   modalStatus={showModal}
                   //   toggle={openModal}

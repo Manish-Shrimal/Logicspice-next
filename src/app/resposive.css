@@ -195,8 +195,8 @@
   }
 
   .su_rev_section .btn.btn-primary {
-    font-size: 14px;
-    padding: 14px 10px;
+    font-size: 14px!important;
+    padding: 14px 10px!important;
   }
 
   .fd-solution h1 {
@@ -1243,8 +1243,8 @@
   }
 
   .Quick_FAQ {
-    margin-top: 30px;
-    padding-left: inherit;
+    margin-top: 30px!important;
+    padding-left: inherit!important;
   }
 
   .design-step .col-md-6.pull-right {
@@ -1606,7 +1606,7 @@
 }
 
 @media (max-width: 767px) {
-  .product-view{
+  .product-view {
     padding-top: 35px !important;
   }
 
@@ -1855,15 +1855,17 @@
     font-size: 34px;
     text-transform: uppercase;
   }
-  .blog-home .headings{
+
+  .blog-home .headings {
     /* font-size: 25px; */
-    padding-bottom: 20px!important;
+    padding-bottom: 20px !important;
   }
 
   .headings.headings_white h2,
   .headings h2 {
     font-size: 20px !important;
   }
+
   .readymateSolution .headings p {
     font-size: 15px !important;
     padding: 0 10px;
@@ -1875,26 +1877,29 @@
     text-align: center;
   }
 
-  .footer_center{
-    padding-bottom: 0!important;
+  .footer_center {
+    padding-bottom: 0 !important;
   }
 
-  .hire-expert-home .headings{
-    padding-bottom: 15px!important;
+  .hire-expert-home .headings {
+    padding-bottom: 15px !important;
   }
 
-  .take-a-look .headings{
-    padding-bottom: 20px!important;
+  .take-a-look .headings {
+    padding-bottom: 20px !important;
   }
+
   .headings.headings p,
   .headings p {
     font-size: 15px !important;
     padding: 0 10px;
     /* color: #505458; */
   }
- .multibutton .btn{
-  margin-bottom: 0px!important;
- }
+
+  .multibutton .btn {
+    margin-bottom: 0px !important;
+  }
+
   .mid-span {
     display: inline;
   }
@@ -2076,14 +2081,16 @@
     padding-top: 0;
     padding-bottom: 10px;
   }
+
   .hr_enquiry p {
     margin-bottom: 0px;
-}
+  }
 
   .navbar-default .top-main-menu.navbar-nav>li>a {
     padding: 6px 5px;
     display: inline-block;
   }
+
   .grid-demo ul li a {
     /* border-bottom: 1px solid #f7f7f7; */
     border-bottom: 1px solid transparent;
@@ -2095,7 +2102,7 @@
     font-size: 14px;
     transition: 0.4s;
     font-family: "Lato", sans-serif !important;
-}
+  }
 
   .sales_enquiry p {
     margin-bottom: 0;
@@ -2633,15 +2640,15 @@
   }
 
   .devide_secs_right {
-    float: left;
-    width: 100%;
+    float: left !important;
+    width: 100% !important;
   }
 
   .devide_secs_icn {
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
+    float: left !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
   }
 
   .devide_secs_rrf {
@@ -2689,18 +2696,20 @@
   }
 
   .headings.headings_white {
-    padding-bottom: 5px!important;
+    padding-bottom: 5px !important;
   }
 
   .close-box-bottom {
     left: 10px;
     top: 3px;
   }
-  .ind-we-serv .product-view{
-    margin-top: 25px!important;
+
+  .ind-we-serv .product-view {
+    margin-top: 25px !important;
   }
-  .ind-we-serv .btn-primary{
-    margin-bottom: 15px!important;
+
+  .ind-we-serv .btn-primary {
+    margin-bottom: 15px !important;
     /* margin-top: 30px!important; */
   }
 
@@ -3552,7 +3561,7 @@
   }
 
   .blog-home {
-    padding: 30px 0 10px!important;
+    padding: 30px 0 10px !important;
   }
 
   .director-desk {
@@ -3659,7 +3668,7 @@
 
   .slick-prev {
     left: -6px !important;
-    z-index: 99!important;
+    z-index: 99 !important;
   }
 
   .slick-next {
@@ -3696,7 +3705,7 @@
   }
 
   .su_rev_section {
-    padding: 23px 0 20px;
+    padding: 23px 0 20px!important;
   }
 
   .reviews_down_pro {
@@ -3704,9 +3713,9 @@
   }
 
   .su_rev_section .btn.btn-primary {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin-top: 16px;
+    font-size: 16px!important;
+    padding: 10px 20px!important;
+    margin-top: 16px!important;
   }
 
   .supportsetting ul li {
@@ -4277,7 +4286,7 @@
 
   .page-contact-new {
     background: #020041;
-    margin-top: 50px!important;
+    margin-top: 50px !important;
   }
 
   .logic-fd {
@@ -4335,7 +4344,7 @@
   }
 
   .readymateSolution .readymateSolution {
-    padding: 0!important;
+    padding: 0 !important;
   }
 
   .entry-content-page .vieus {
@@ -4393,9 +4402,11 @@
   .certificates .nav-tabs>li.active>a:focus {
     background-color: #fff;
   }
-  .social_footer ul{
-    padding-left: 0!important;
+
+  .social_footer ul {
+    padding-left: 0 !important;
   }
+
   .certificates .nav-tabs>li.active>a::before {
     position: absolute;
     left: 0;
@@ -4464,8 +4475,9 @@
   .readymateSolution {
     padding: 30px 0 0 !important;
   }
-  .take-a-look{
-    padding: 30px 0 0!important;
+
+  .take-a-look {
+    padding: 30px 0 0 !important;
   }
 
   .readymateSolution .ready-product {
@@ -5002,8 +5014,9 @@
   .widget_recent_entries {
     margin-top: 330px !important;
   }
-  .readymateSolution .product-view{
-    padding-top: 0px!important;
+
+  .readymateSolution .product-view {
+    padding-top: 0px !important;
   }
 
   .php-development .laravel_core_features_detail {
@@ -5020,29 +5033,31 @@
   .breadcrumb-casestudies h1 {
     color: #fff;
     font-size: 26px;
-    font-weight: 600!important;
-    padding: 4px 0 8px 0px;
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-  @media (max-width: 480px) {
-      /* case-study */
-  .breadcrumb-casestudies h1 {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600!important;
+    font-weight: 600 !important;
     padding: 4px 0 8px 0px;
     display: inline-block;
     text-transform: uppercase;
   }
+
+  @media (max-width: 480px) {
+
+    /* case-study */
+    .breadcrumb-casestudies h1 {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 600 !important;
+      padding: 4px 0 8px 0px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
     .certificates .nav-tabs>li {
-      margin-bottom: 0px!important;
-      width: auto!important;
+      margin-bottom: 0px !important;
+      width: auto !important;
     }
 
     .certificates .tab-content li {
-      padding: 13px 4px!important;
+      padding: 13px 4px !important;
     }
 
     .certificates .tab-content li:nth-child(5) {
@@ -5055,16 +5070,17 @@
 
     .client-say p {
       font-size: 14px;
-      font-weight: 600!important;
+      font-weight: 600 !important;
       line-height: inherit;
       margin-bottom: 0;
       margin-top: 24px;
     }
-    .client-say .headings{
-      padding-bottom: 25px!important;
+
+    .client-say .headings {
+      padding-bottom: 25px !important;
     }
 
-   
+
 
     .feature_list li {
       min-height: 0;
@@ -5534,7 +5550,7 @@
   .home-slider {
     height: 580px;
     /* overflow: hidden; */
-}
+  }
 }
 
 @media (max-width: 320px) {

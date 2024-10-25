@@ -1442,8 +1442,11 @@ section {
 }
 
 .su_rev_section .title_main {
-  text-align: left;
-  color: #505458;
+  text-align: left!important;
+  color: #505458!important;
+  font-size: 25px!important;
+  margin-bottom: 25px!important;
+  font-family: "lato", sans-serif!important;
 }
 
 .main-rait {
@@ -1646,9 +1649,10 @@ section {
 }
 
 .feature_inner h2.title_main {
-  font-weight: 600;
+  font-weight: 600!important;
   color: #000;
-  font-family: "roboto", sans-serif !important;
+  /* font-family: "roboto", sans-serif !important; */
+  font-family: "lato", sans-serif!important;
 }
 
 #joblboardslide {

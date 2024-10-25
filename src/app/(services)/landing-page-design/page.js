@@ -8,13 +8,12 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-free/css/all.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-
     setShowModal(!showModal);
   };
 
@@ -37,7 +36,8 @@ const Page = () => {
               <p>We create websites that are compatible for any devices.</p>
             </div>
             <div className="col-md-6 col-sm-6">
-              <Image unoptimized={true}
+              <Image
+                unoptimized={true}
                 width={380}
                 height={500 / (100 / 100)}
                 alt="Landing page design"
@@ -90,7 +90,8 @@ const Page = () => {
                 </ul>
               </div>
               <div className="col-md-7 col-sm-6">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={600}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -115,7 +116,8 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -130,7 +132,8 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -145,7 +148,8 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -160,7 +164,8 @@ const Page = () => {
             <div className="col-md-3 col-sm-6">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -189,7 +194,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon_sh">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -204,7 +210,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon_sh">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -219,7 +226,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon_sh">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -234,7 +242,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon_sh">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -249,7 +258,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon_sh">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -264,7 +274,8 @@ const Page = () => {
             <div className="col-sm-4">
               <div className="why_cgooseus_section_col_bx">
                 <div className="why_cgooseus_section_col_bx_icon_sh">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     width={60}
                     height={100}
                     alt="img"
@@ -319,7 +330,8 @@ const Page = () => {
             <div className="col-md-6">
               <div className="text-center">
                 <div className="lets_tala_made">We made them Happy.</div>
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={150}
                   height={100}
                   alt="img"
@@ -345,7 +357,8 @@ const Page = () => {
           <div className="design-step">
             <div className="row">
               <div className="col-md-6">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -373,7 +386,8 @@ const Page = () => {
           <div className="design-step design-step-right">
             <div className="row">
               <div className="col-md-6 pull-right">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -400,7 +414,8 @@ const Page = () => {
           <div className="design-step">
             <div className="row">
               <div className="col-md-6">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -431,7 +446,8 @@ const Page = () => {
           <div className="design-step design-step-right">
             <div className="row">
               <div className="col-md-6 pull-right">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -454,7 +470,8 @@ const Page = () => {
           <div className="design-step">
             <div className="row">
               <div className="col-md-6">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -478,7 +495,8 @@ const Page = () => {
           <div className="design-step design-step-right">
             <div className="row">
               <div className="col-md-6 pull-right">
-                <Image unoptimized={true}
+                <Image
+                  unoptimized={true}
                   width={300}
                   height={500 / (100 / 100)}
                   alt="img"
@@ -505,7 +523,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team&sbquo; I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               width={100}
               height={100}
               src="/img/images/whatsapp.png"

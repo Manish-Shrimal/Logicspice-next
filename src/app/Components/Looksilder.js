@@ -23,20 +23,20 @@ const Looksilder = () => {
   //   initialSlide: 2,
   // };
 
-
-
   const NextArrow = ({ className, onClick }) => {
     return (
       <div className={className} onClick={onClick}>
-        <i className="fas fa-chevron-right"></i> {/* Example of using Font Awesome for arrow icon */}
+        <i className="fas fa-chevron-right"></i>{" "}
+        {/* Example of using Font Awesome for arrow icon */}
       </div>
     );
   };
-  
+
   const PrevArrow = ({ className, onClick }) => {
     return (
       <div className={className} onClick={onClick}>
-        <i className="fas fa-chevron-left"></i> {/* Example of using Font Awesome for arrow icon */}
+        <i className="fas fa-chevron-left"></i>{" "}
+        {/* Example of using Font Awesome for arrow icon */}
       </div>
     );
   };
@@ -250,49 +250,54 @@ const Looksilder = () => {
             ))}
           </Swiper> */}
 
-<Slider {...settings} className="mySlickSlider">
-      {takeAlookData.map((lookData, index) => (
-        <div key={index} className="row d-flex lookSlider">
-          <div className="row">
-            <div className="col-md-7 col-12">
-              <Image
-                data-aos="fade-right"
-                src={lookData.notMobileImage}
-                className={lookData.classname}
-                alt={lookData.alt}
-                width={700}
-                height={300}
-                unoptimized={true}
-              />
-            </div>
-            <div className="col-md-5 col-12">
-              <div className="ClientLogoHome">
-                <Image
-                  src={lookData.originalImage}
-                  alt={lookData.alt}
-                  width={lookData.logoSize}
-                  height={100}
-                  unoptimized={true}
-                />
-                <p className="to_matf">{lookData.text}</p>
-                <Link href={lookData.link} className="case-study">
-                  Case Study
-                </Link>
-                <p className="have_look">Have a look on similar Project</p>
-                <div className="multibutton">
-                  <Link href="/company/portfolio" className="btn btn-primary">
-                    Portfolio
-                  </Link>
-                  <Link href="/contact-us" className="btn btn-default">
-                    Request a quote
-                  </Link>
+          <Slider {...settings} className="mySlickSlider">
+            {takeAlookData.map((lookData, index) => (
+              <div key={index} className="row d-flex lookSlider">
+                <div className="row">
+                  <div className="col-md-7 col-12">
+                    <Image
+                      data-aos="fade-right"
+                      src={lookData.notMobileImage}
+                      className={lookData.classname}
+                      alt={lookData.alt}
+                      width={700}
+                      height={300}
+                      unoptimized={true}
+                    />
+                  </div>
+                  <div className="col-md-5 col-12">
+                    <div className="ClientLogoHome">
+                      <Image
+                        src={lookData.originalImage}
+                        alt={lookData.alt}
+                        width={lookData.logoSize}
+                        height={100}
+                        unoptimized={true}
+                      />
+                      <p className="to_matf">{lookData.text}</p>
+                      <Link href={lookData.link} className="case-study">
+                        Case Study
+                      </Link>
+                      <p className="have_look">
+                        Have a look on similar Project
+                      </p>
+                      <div className="multibutton">
+                        <Link
+                          href="/company/portfolio"
+                          className="btn btn-primary"
+                        >
+                          Portfolio
+                        </Link>
+                        <Link href="/contact-us" className="btn btn-default">
+                          Request a quote
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </Slider>
+            ))}
+          </Slider>
         </div>
       </div>
     </>
@@ -300,7 +305,3 @@ const Looksilder = () => {
 };
 
 export default Looksilder;
-
-
-
-

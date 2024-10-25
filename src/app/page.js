@@ -17,6 +17,7 @@ import Image from "next/image";
 import Servercomponents from "./Components/Servercomponents";
 import "aos/dist/aos.css"; // Import AOS CSS
 import AOS from "aos"; // Import AOS
+import GTMComponent from "./Components/GTMComponent";
 
 const ServicesNewSection = lazy(() =>
   import("./Components/ServicesNewSection")
@@ -52,6 +53,7 @@ const Page = () => {
   // }, []);
   return (
     <>
+    <GTMComponent />
       <NavBar />
       <div className="home-slider">
         <div className="container">

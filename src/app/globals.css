@@ -278,7 +278,7 @@ left: 190px;
 }
 
 .menu-item a:hover {
-  color: #d0bdee;
+  color: #d0bdee!important;
 }
 
 .footer_bg .panel.panel-default {
@@ -2487,7 +2487,7 @@ positivitymain {
   padding: 60px 0 50px;
 }
 
- .headings {
+.headings {
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -2631,6 +2631,7 @@ positivitymain {
   border: 1px solid #451095 !important;
   box-shadow: none;
 }
+
 .readymateSolution .headings {
   padding-bottom: 30px !important;
   text-align: center;
@@ -3940,7 +3941,7 @@ positivitymain {
 
 /* client say css  */
 .client-say {
-  background-color: #eeeeee ;
+  background-color: #eeeeee;
   padding: 60px 0;
 }
 
@@ -4403,6 +4404,10 @@ body.modal-open .quote_pop_plus {
 
 .logicspice-mail a img {
   width: 33px;
+}
+
+.logicspice-mail a:hover {
+  color: white !important;
 }
 
 .logicspice-call {
@@ -5167,11 +5172,13 @@ body.modal-open .quote_pop_plus {
     box-shadow: none;
     border-radius: 0 !important;
   }
+
   .footer-bg .CustomQuickFAQScript .accordion-item {
     border: none;
     /* border-bottom: 1px #ddd solid; */
     border-radius: 0;
   }
+
   .about-us .col-md-3 {
     margin-bottom: 20px;
   }
@@ -5660,9 +5667,9 @@ body.modal-open .quote_pop_plus {
   }
 
   .HomeSliderTxt {
-    padding-top: 20px!important;
-    text-align: center!important;
-    padding-bottom: 5px!important;
+    padding-top: 20px !important;
+    text-align: center !important;
+    padding-bottom: 5px !important;
   }
 
   .HomeSlider {

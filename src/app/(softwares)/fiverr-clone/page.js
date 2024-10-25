@@ -75,6 +75,17 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
 
+  var tab = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
@@ -2843,16 +2854,8 @@ const Page = () => {
             {studentTab && (
               <>
                 <div id="joblboardslide">
-                  <Swiper
-                    slidesPerView={1}
-                    spaceBetween={50}
-                    loop={true}
-                    navigation={true}
-                    pagination={{ clickable: true }}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                  >
-                    <SwiperSlide>
+                <Slider {...tab}>
+                    
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -2871,8 +2874,8 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                  
+                  
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -2891,8 +2894,8 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                   
+                    
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -2911,8 +2914,8 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                   
+                   
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -2931,8 +2934,8 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                    
+                    
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -2951,25 +2954,17 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  </Swiper>
+                    
+                  </Slider>
                 </div>
               </>
             )}
 
             {instructorTab && (
               <>
-                <div id="joblboardslide">
-                  <Swiper
-                    slidesPerView={1}
-                    spaceBetween={50}
-                    loop={true}
-                    navigation={true}
-                    pagination={{ clickable: true }}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                  >
-                    <SwiperSlide>
+
+                  <div id="joblboardslide">
+                  <Slider {...tab}>
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -2989,8 +2984,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                  
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -3009,8 +3003,6 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -3030,8 +3022,6 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -3050,8 +3040,6 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
                       <div className="SliderMainBx">
                         <div className="feat-slide-img">
                           <Image
@@ -3071,8 +3059,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  </Swiper>
+                  </Slider>
                 </div>
               </>
             )}
@@ -3080,25 +3067,21 @@ const Page = () => {
             {adminpanelTab && (
               <>
                 <div id="joblboardslide">
-                  <Slider {...settings}>
+                  <Slider {...tab}>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
                         <Image
                           unoptimized={true}
                           width={1075}
                           height={100}
-                          src="/img/udemyclone/search_course.png"
+                          src="/img/fiverrclone/admin-dashboard.png"
                           alt="searchcourse"
                         />
                       </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Search Course</div>
-                        <div className="pro-feat-detai">
-                          Students will be able to view listings of course and
-                          can be able to filter on the basis of topic, level,
-                          price, duration and rating.
-                        </div>
-                      </div>
+                      <div class="hands-proved">
+                        <div class="titleof_scnew">Admin dashboard</div>
+                        <div class="pro-feat-detai">It will facilitate admin to users, gigs and other details like : profile, orders, service request etc..</div>
+                    </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3106,17 +3089,14 @@ const Page = () => {
                           unoptimized={true}
                           width={1075}
                           height={100}
-                          src="/img/udemyclone/course_detail.png"
+                          src="/img/fiverrclone/manage-site-settings.png"
                           alt="Configuration"
                         />
                       </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Course Detail</div>
-                        <div className="pro-feat-detai">
-                          Students can view details about the course and can
-                          purchase from here.
-                        </div>
-                      </div>
+                      <div class="hands-proved">
+                        <div class="titleof_scnew">Manage Site Settings</div>
+                        <div class="pro-feat-detai">Admin can manage website setting like : name, logo, payment detail etc..</div>
+                    </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3124,17 +3104,14 @@ const Page = () => {
                           unoptimized={true}
                           width={1075}
                           height={100}
-                          src="/img/udemyclone/my_user_courses.png"
+                          src="/img/fiverrclone/manage-wallets.png"
                           alt="Manage Courses"
                         />
                       </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">My Courses</div>
-                        <div className="pro-feat-detai">
-                          Students can view the listing of his courses that they
-                          have purchased.
-                        </div>
-                      </div>
+                      <div class="hands-proved">
+                        <div class="titleof_scnew">Manage Wallets</div>
+                        <div class="pro-feat-detai"> Admin can view wallet detail of all users.</div>
+                    </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3142,18 +3119,14 @@ const Page = () => {
                           unoptimized={true}
                           width={1075}
                           height={100}
-                          src="/img/udemyclone/view_lecture_video.png"
+                          src="/img/fiverrclone/manage_gigs.png"
                           alt="View Payments"
                         />
                       </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">View Lecture Video</div>
-                        <div className="pro-feat-detai">
-                          Students can view the video for the related lecture.
-                          They are able to change the lecture from the right
-                          section for that course.
-                        </div>
-                      </div>
+                      <div class="hands-proved">
+                        <div class="titleof_scnew">Manage Gigs</div>
+                        <div class="pro-feat-detai">Admin can manage all added gig and admin can deactivate, activate and delete gigs from the website.</div>
+                    </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3161,17 +3134,14 @@ const Page = () => {
                           unoptimized={true}
                           width={1075}
                           height={100}
-                          src="/img/udemyclone/purchase_history.png"
+                          src="/img/fiverrclone/manage_qualifications.png"
                           alt="Manage Categories"
                         />
                       </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Purchase History</div>
-                        <div className="pro-feat-detai">
-                          Students can view the purchase history of when and how
-                          many courses he has purchased.
-                        </div>
-                      </div>
+                      <div class="hands-proved">
+                        <div class="titleof_scnew">Manage Qualifications</div>
+                        <div class="pro-feat-detai">Admin can view list of Qualifications &amp; can manage (view/add/edit/delete) qualifications.</div>
+                    </div>
                     </div>
                   </Slider>
                 </div>
@@ -3187,7 +3157,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <SoftwareEnquiry
                     modalStatus={showModal}

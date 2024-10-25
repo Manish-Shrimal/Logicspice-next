@@ -7,6 +7,7 @@ import Head from "next/head";
 import AOSInitializer from "./Components/AOSInitializer";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "./BaseAPI/Domain";
+import GTMComponent from "./Components/GTMComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,26 +66,26 @@ export async function generateMetadata({ params, searchParams }, parent) {
   };
 }
 
-export default async function RootLayout({ children, params, searchParams }) {
+export default function RootLayout({ children, params, searchParams }) {
 
-  const metadata = await generateMetadata({ params, searchParams });
+  // const metadata = await generateMetadata({ params, searchParams });
 
   
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-	<meta name="google-site-verification" content="ES-q5ICMG9LZbRpi9hEwYWjsDMdcabhsA0mKJ4Bsp0g" />
         <title>{metadata.title}</title>
-      </Head>
+      </Head> */}
       <body className={inter.className}>
         <AOSInitializer>{children}</AOSInitializer>
       </body>
-      <script
+      <GTMComponent />
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      />
+      /> */}
       
     </html>
   );

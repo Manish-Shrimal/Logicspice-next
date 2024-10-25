@@ -340,7 +340,7 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section className="client-say" style={{ backgroundColor: "#f1f1f1" }}>
+      <section className="" style={{ backgroundColor: "#f1f1f1", padding: "60px 0" }}>
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">

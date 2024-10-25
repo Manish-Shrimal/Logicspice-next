@@ -6210,8 +6210,8 @@ color: #505458;
 }
 
 .dev_flexibility .title_heading {
-	margin: 0 auto 40px;
-	max-width: 790px
+	margin: 0 auto 40px!important;
+	max-width: 790px!important;
 }
 
 .dev_flexibility {
@@ -6288,7 +6288,7 @@ color: #505458;
 	color: #fff
 }
 .dev_Packages_top .title_heading {
-	margin-bottom: 30px;
+	margin-bottom: 30px!important;
 }
 
 .dev_Packages .button-dev {

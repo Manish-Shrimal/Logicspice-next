@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(services)/services.css";
@@ -10,11 +10,14 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Certificationtabs from "@/app/Components/Certificationtabs";
-import Workingwith from "@/app/Components/Workingwith";
+// import Workingwith from "@/app/Components/Workingwith";
 import "../../globals.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
+
+
+const Workingwith = lazy(() => import("@/app/Components/Workingwith"));
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
@@ -97,6 +100,7 @@ const Page = () => {
   };
 
   const toggleModal = () => {
+    
     setModalOpen(!modalOpen);
   };
   return (
@@ -277,8 +281,7 @@ const Page = () => {
           <div className="button-dev">
             <a
               className="btn btn-primary"
-              data-toggle="modal"
-              data-target="#popup_sc_request"
+              onClick={toggleModal}
             >
               Request Free Consultation
             </a>
@@ -1211,14 +1214,30 @@ const Page = () => {
           <Certificationtabs />
         </div>
       </section>
+      <section className="working_with">
+        <div className="container">
+          <h3
+            className="title_heading title_heading_bgg"
+            style={{ marginBottom: "30px" }}
+          >
+            Worked with 1500+ companies worldwide, from startups to enterprises.
+          </h3>
+          <Suspense fallback={<div>Loading ...</div>}>
+            <Workingwith />
+          </Suspense>
+        </div>
+      </section>
 
       <section className="requirement_section">
         <div className="container">
           <div className="requir_title">
             Talk to us Now!! even if you have very short term requirement.
           </div>
-          <div className="requirment_btn" onclick={toggleModal}>
-            <a className="btn btn-primary">Enquire Now</a>
+          <div className="requirment_btn">
+            {/* <a className="btn btn-primary" onclick={toggleModal}>Enquire Now</a> */}
+            <a className="btn btn-primary" onClick={toggleModal}>
+                    <span>Enquire Now</span>
+                  </a>
           </div>
         </div>
       </section>
