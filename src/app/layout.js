@@ -75,6 +75,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
+	<meta name="google-site-verification" content="ES-q5ICMG9LZbRpi9hEwYWjsDMdcabhsA0mKJ4Bsp0g" />
         <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>
