@@ -16,6 +16,11 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(!showModal);
+  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -23,8 +28,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image:
-        "/img/pythondevelopment/alex-morgan.jpg",
+      image: "/img/pythondevelopment/alex-morgan.jpg",
       heading: "",
       text: "Our Python development needs were complex, but the developer we hired from Logicspice tackled them with ease. Their proficiency in Django was particularly impressive.",
       name: "Michael T.,",
@@ -32,8 +36,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image:
-        "/img/pythondevelopment/sophia-turner.jpg",
+      image: "/img/pythondevelopment/sophia-turner.jpg",
       heading: "",
       text: "We needed a Python expert for our machine learning project, and the professional from Logicspice exceeded all expectations.",
       name: "Sophia R.,",
@@ -41,8 +44,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image:
-        "/img/pythondevelopment/david-clark.jpg",
+      image: "/img/pythondevelopment/david-clark.jpg",
       heading: "",
       text: "Hiring a Python developer for our backend systems was a crucial step. The developer's skill in Flask and database management has greatly improved our application's performance.",
       name: "David K.,",
@@ -50,8 +52,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "/img/pythondevelopment/isabella-clark.jpg",
+      image: "/img/pythondevelopment/isabella-clark.jpg",
       heading: "",
       text: "The Python developer we hired was outstanding. They understood our vision and brought in their unique perspective, which added immense value to our web application.",
       name: "Isabella G.,",
@@ -59,8 +60,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image:
-        "/img/pythondevelopment/emma-turner.jpg",
+      image: "/img/pythondevelopment/emma-turner.jpg",
       heading: "",
       text: "The Python developer we brought on board from Logicspice was a game-changer for our project. Their expertise in data analysis and web development helped us achieve milestones ahead of schedule.",
       name: "Emma L.,",
@@ -105,10 +105,10 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="nt_cdl">
-                  <a onClick={toggleModal} className="btn btn-primary">
-                    <Contactusmodel
-                      modalStatus={modalOpen}
-                      toggle={toggleModal}
+                  <a onClick={openModal} className="btn btn-primary">
+                    <Enquirymodal
+                      modalStatus={showModal}
+                      toggle={openModal}
                       title="Hire Python Developers"
                     />
                     Hire Now!
@@ -461,11 +461,11 @@ const Page = () => {
           </div>
 
           <div class="step-but">
-            <a onClick={toggleModal} className="btn btn-primary">
-              <Contactusmodel
-                modalStatus={modalOpen}
-                toggle={toggleModal}
-                title="Hire Python Developers"
+            <a onClick={openModal} className="btn btn-primary">
+              <Enquirymodal
+                modalStatus={showModal}
+                toggle={openModal}
+                title="Request to hire-python-developers"
               />
               Hire Now!
             </a>
@@ -493,7 +493,7 @@ const Page = () => {
       <section class="ecommerce_faq_section NewFaqDesignSection">
         <div class="container">
           <div class="row">
-            <div class=" row ecommerce__Quick_FAQ">
+            <div class=" row  CustomQuickFAQScript">
               <div class="col-md-5">
                 <h4 class="title_main">
                   Frequently <br />
@@ -574,6 +574,24 @@ const Page = () => {
                     </p>
                   </MDBAccordionItem>
                 </MDBAccordion>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="enq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 text-center">
+              <div className="btn btn-primary" onClick={openModal}>
+                <a>Hire Now!</a>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="Hire Python Developers"
+                  />
+                }
               </div>
             </div>
           </div>

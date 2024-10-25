@@ -8,6 +8,7 @@ import AOSInitializer from "./Components/AOSInitializer";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "./BaseAPI/Domain";
 import GTMComponent from "./Components/GTMComponent";
+import Chatbot from "./Components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,8 +81,10 @@ export default function RootLayout({ children, params, searchParams }) {
       </Head> */}
       <body className={inter.className}>
         <AOSInitializer>{children}</AOSInitializer>
+        <Chatbot />
       </body>
       <GTMComponent />
+      
       {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}

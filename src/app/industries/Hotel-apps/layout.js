@@ -4,6 +4,7 @@ import Head from "next/head";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
+import Chatbot from "@/app/Components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,6 +66,7 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
+      <Chatbot />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
