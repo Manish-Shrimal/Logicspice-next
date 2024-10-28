@@ -1995,7 +1995,7 @@ section {
 }
 
 .job-ecommerce-icon {
-  /* display: inline-block!important; */
+  display: inline-block!important;
   margin-top: 8px !important;
   vertical-align: top !important;
 }
@@ -8495,4 +8495,26 @@ section.yellow_slider .btn_align .btn_same {
   -webkit-transform: scale(0.88);
   transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
+}
+
+
+.ecommerce-portal-banner .job-valu-btn .fiverr-buys {
+  padding: 8px 9px!important;
+  margin-top: 0px;
+  margin-right: 0;
+  width: 150px;
+  box-shadow: none;
+  margin-bottom: 0;
+  color: #363737;
+  display: inline-block;
+  border-radius: 5px!important;
+  border: 2px #363737 solid;
+  line-height: 23px;
+  font-weight: 600;
+}
+
+.ecommerce-portal-banner .job-valu-btn .fiverr-buys:hover{
+  background: #fff !important;
+  color: #efba1c;
+  border: 2px #efba1c solid;
 }

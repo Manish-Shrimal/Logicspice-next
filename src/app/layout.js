@@ -1,9 +1,7 @@
-// layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./resposive.css";
 import Head from "next/head";
-// import AOSInitializer from "../Components/AOSInitializer";
 import AOSInitializer from "./Components/AOSInitializer";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "./BaseAPI/Domain";
@@ -11,36 +9,28 @@ import GTMComponent from "./Components/GTMComponent";
 import Chatbot from "./Components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
+let schemaData;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/home`,{
-    cache: "no-store",
-  }).then((res) =>
-    res.json()
-  );
-  // console.log(product)
+  const product = await fetch(`${MetadataApi}/home`, { cache: "no-store" }).then((res) => res.json());
 
   let text = product.data.schema;
-
   let schemaOrg = null;
   let cleanedText;
-  if(text){
+  if (text) {
     cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
-
-
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
-
-      // console.log(cleanedText,)
+      .replace(/\\r\\n/g, '') // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, '') // Remove \n (newline)
+      .replace(/\\r/g, '') // Remove \r (carriage return)
+      .replace(/\\+/g, '') // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ''); // Remove control characters
+    schemaOrg = cleanedText && JSON.parse(cleanedText);
+    schemaData = cleanedText && JSON.parse(cleanedText);
+    // console.log(schemaData,"hi")
   } else {
     cleanedText = "";
     schemaOrg = "";
-
   }
 
   // Return metadata
@@ -64,32 +54,27 @@ export async function generateMetadata({ params, searchParams }, parent) {
       },
     },
     schemaOrg: schemaOrg || null,
+    schemaData : schemaOrg
   };
 }
 
 export default function RootLayout({ children, params, searchParams }) {
-
-  // const metadata = await generateMetadata({ params, searchParams });
-
-  
+  let schemaData2 = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://www.logicspice.com/",
+    "logo":"https://www.logicspice.com/img/images/logo.png"
+  }
   return (
     <html lang="en">
-      {/* <Head>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <title>{metadata.title}</title>
-      </Head> */}
       <body className={inter.className}>
         <AOSInitializer>{children}</AOSInitializer>
         <Chatbot />
+        <GTMComponent />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ __html: schemaData }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ __html: schemaData2 }) }} />
+
       </body>
-      <GTMComponent />
-      
-      {/* <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      /> */}
-      
     </html>
   );
 }

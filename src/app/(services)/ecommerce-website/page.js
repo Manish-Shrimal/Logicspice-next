@@ -168,7 +168,7 @@ const Page = () => {
                       }
                     </div>
 
-                    <div className="btn btn-primary" onClick={openModal}>
+                    {/* <div className="btn btn-primary" onClick={openModal}>
                       <a>Enquire Now</a>
                       {
                         <Enquirymodal
@@ -177,7 +177,14 @@ const Page = () => {
                           title="eCommerece Monthly Package"
                         />
                       }
-                    </div>
+                    </div> */}
+                    <a
+                      class="btn fiverr-buys"
+                      href="/buy-now/ecommerce-website"
+                      id="buy_now_1"
+                    >
+                      Buy Now
+                    </a>
                     <ul className="job-ecommerce-icon">
                       <li>
                         <i

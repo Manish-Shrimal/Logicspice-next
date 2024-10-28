@@ -32,6 +32,7 @@ const Page = () => {
       <Navbar />
       <div className="top-head-custom e-commerce DefoutEcommerceBanner E-commerceDevelopmentBanner">
         <div className="container">
+          <div className="row">
           <div className="col-md-8">
             <div className="head-enquiry">
               <h1>Custom E-commerce Development Services</h1>
@@ -49,13 +50,23 @@ const Page = () => {
               <li>Sparkle your business with our ecommerce solution</li>
             </ul>
             <div className="JewelleryBtbBx">
-              <a
+              {/* <a
                 id=""
                 className="btn btn-primary"
                 onClick={() => openEnquiryModal()}
               >
                 Enquire Now
-              </a>
+              </a> */}
+              <div className="btn btn-primary" onClick={openModal}>
+                <a>Enquire Now</a>
+                {
+                  <Enquirymodal
+                    modalStatus={showModal}
+                    toggle={openModal}
+                    title="eCommerce Ultimate Package"
+                  />
+                }
+              </div>
 
               <a
                 href="https://api.whatsapp.com/send?phone=+919829559922&text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
@@ -84,6 +95,11 @@ const Page = () => {
               </ol>
             </div>
           </div>
+          <div className="col-md-4">
+            
+          </div>
+          </div>
+          
         </div>
       </div>
 
@@ -291,7 +307,11 @@ const Page = () => {
         <div className="inner_content_SBG">
           <div className="container">
             <p>
-            Our custom ecommerce development solutions will facilitate the shoppers to buy various products online from the website. Customers will have the option to search for different products by selecting the relevant categories and subcategories. They can also search by entering the appropriate keyword.
+              Our custom ecommerce development solutions will facilitate the
+              shoppers to buy various products online from the website.
+              Customers will have the option to search for different products by
+              selecting the relevant categories and subcategories. They can also
+              search by entering the appropriate keyword.
             </p>
             <p>
               With the help of on-demand ecommerce development, customers can

@@ -746,7 +746,7 @@
   }
 
   .demand-content {
-    float: right;
+    float: right!important;
   }
 
   .gettoknow_sectins .media {
@@ -2250,7 +2250,7 @@
   }
 
   .app_solution .nav-tabs>li {
-    width: 100%;
+    width: 100%!important;
   }
 
   .app_solution .nav.nav-tabs .active>a,

@@ -2131,9 +2131,20 @@ h3.titlesettop {
 	background-color: #00448f;
 }
 /*----------ecommerce-development--------*/
-.E-commerceDevelopmentBanner.top-head-custom {
+/* .E-commerceDevelopmentBanner.top-head-custom {
 	background: url(/img/customsolutionspage/ecommerce-banner.jpg) left top no-repeat;
+} */
+.E-commerceDevelopmentBanner.top-head-custom {
+	background: url(/img/customsolutionspage/ecommerce-banner.jpg) right top no-repeat;
+	background-size: contain; /* Adjusts the image to stay within the container */
+	background-position: right center; /* Positions the image on the right side */
+	background-repeat: no-repeat; /* Ensures no repetition */
+	width: 100%; /* Make sure the container takes the full width */
+	height: auto; /* Adjust height as needed, or set a fixed height */
+	padding-right: 20px; /* Add padding if you want to create some spacing from the container's edge */
+	box-sizing: border-box;
 }
+
 .DefoutEcommerceBanner .head-enquiry p {
 	font-size: 17px;
 	color: #292521;

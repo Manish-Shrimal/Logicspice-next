@@ -838,11 +838,11 @@ const Page = () => {
                           Open Source CMS Development
                         </Link>
                       </li>
-                      <li>
-                        <Link href="/enterprises-solutions">
+                      {/* <li>
+                        <Link href="/web-development">
                           Enterprises Solution
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/dating-system-solution">
                           Dating Website Development
@@ -883,11 +883,11 @@ const Page = () => {
                           WordPress Development
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/oscommerce">
                           Oscommerce
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/digital-marketing">Digital Marketing</Link>
                       </li>
@@ -917,7 +917,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/software-maintainance-support">Support &amp; Maintenance</Link>
+                        <Link href="/software-maintenance-support">Support &amp; Maintenance</Link>
                       </li>
                       <li>
                         <Link href="/psd-to-shopify">PSD to Shopify</Link>

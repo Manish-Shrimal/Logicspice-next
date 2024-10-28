@@ -10,10 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata({ params, searchParams }, parent) {
   try {
     // Fetch data
-    const product = await fetch(`${MetadataApi}/advanced-web-programming`,
-      { cache: "no-store" }).then(
-      (res) => res.json()
-    );
+    const product = await fetch(`${MetadataApi}/advanced-web-programming`, {
+      cache: "no-store",
+    }).then((res) => res.json());
 
     // Clean up the schema string
     let text = product.data.schema;
@@ -47,18 +46,20 @@ export async function generateMetadata({ params, searchParams }, parent) {
         },
       },
       schemaOrg: {
-"@context": "http://schema.org/",
-"@type": "ProfessionalService",
-"name": " Advanced Web Development | Advance Web Application",
-// "image": [ "https://www.logicspice.com/app/webroot/img/images/lara/Advanced-web-develpment-company.jpg"
-// ],
-"description": "As a advance web development company, logicspice offers best solution in advanced web programming & web application at cost effective price",
-"aggregateRating": {
-"@type": "AggregateRating",
-"ratingValue": "4.7",
-"reviewCount": "412"  } }
+        "@context": "http://schema.org/",
+        "@type": "ProfessionalService",
+        name: " Advanced Web Development | Advance Web Application",
+        // "image": [ "https://www.logicspice.com/app/webroot/img/images/lara/Advanced-web-develpment-company.jpg"
+        // ],
+        description:
+          "As a advance web development company, logicspice offers best solution in advanced web programming & web application at cost effective price",
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.7",
+          reviewCount: "412",
+        },
+      },
     };
-
   } catch (error) {
     console.error("Failed to generate metadata:", error);
     return {
@@ -83,13 +84,12 @@ export async function generateMetadata({ params, searchParams }, parent) {
     };
   }
 }
-const htmlContent = '<p>This is <strong>dangerous</strong> HTML!</p>';
+const htmlContent = "<p>This is <strong>dangerous</strong> HTML!</p>";
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
 
   return (
-
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description} />
@@ -108,4 +108,3 @@ export default async function RootLayout({ children, params, searchParams }) {
     </html>
   );
 }
-

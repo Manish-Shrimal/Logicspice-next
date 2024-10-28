@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/android-app-developers`,{
+  const product = await fetch(`${MetadataApi}/ios-app-developers`,{
     cache: "no-store",
   }).then((res) =>
     res.json()

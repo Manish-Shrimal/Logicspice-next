@@ -278,7 +278,7 @@ left: 190px;
 }
 
 .menu-item a:hover {
-  color: #d0bdee!important;
+  color: #d0bdee !important;
 }
 
 .footer_bg .panel.panel-default {
@@ -573,11 +573,12 @@ bread-top {
   margin: 11px 0 0;
 }
 
-.grid-demo ul li:active {
+.grid-demo ul li a:active {
   background: #f7f7f7;
   color: #451095;
   border-bottom-color: #451095;
 }
+
 
 .countrys_menu {
   position: relative;

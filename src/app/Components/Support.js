@@ -6,7 +6,9 @@ const Support = () => {
     <>
       <div class="row">
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup1.png"
             alt="img12"
             style={{ display: "inline-block" }}
@@ -19,7 +21,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup2.png"
             alt="img13"
             style={{ display: "inline-block" }}
@@ -32,7 +36,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup3.png"
             alt="img14"
             style={{ display: "inline-block" }}
@@ -45,7 +51,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup4.png"
             alt="img15"
             style={{ display: "inline-block" }}
@@ -58,7 +66,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup5.png"
             alt="img16"
             style={{ display: "inline-block" }}
@@ -71,7 +81,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup6.png"
             alt="img17"
             style={{ display: "inline-block" }}
@@ -84,7 +96,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup7.png"
             alt="img18"
             style={{ display: "inline-block" }}
@@ -94,7 +108,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup8.png"
             alt="img9"
             style={{ display: "inline-block" }}
@@ -107,7 +123,9 @@ const Support = () => {
         </div>
 
         <div class="col-sm-4">
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             src="/img/jewelleryecommercesystemsolution/sup9.png"
             alt="img20"
             style={{ display: "inline-block" }}

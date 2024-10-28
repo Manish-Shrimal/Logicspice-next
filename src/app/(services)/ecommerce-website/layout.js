@@ -9,20 +9,26 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/ecommerce-development`,{
+  const product = await fetch(`${MetadataApi}/ecommerce-website`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
   );
   // console.log(product)
   let text = product.data.schema;
-    const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+  let cleanedText;
+  if(text) {
+    cleanedText = text
+    .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
+    .replace(/\\n/g, '')      // Remove \n (newline)
+    .replace(/\\r/g, '')      // Remove \r (carriage return)
+    .replace(/\\+/g, '')      // Remove unnecessary backslashes
+    .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
 
+  } else{
+    cleanedText = "";
+  }
+    
     // Parse the cleaned string as JSON
     const schemaOrg = cleanedText && JSON.parse(cleanedText);
 
@@ -33,7 +39,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/ecommerce-development`,
+      canonical: `${Domain}/ecommerce-website`,
     },
     robots: {
       index: true,
