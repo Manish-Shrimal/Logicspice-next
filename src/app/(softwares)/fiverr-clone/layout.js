@@ -152,10 +152,16 @@ export async function generateMetadata({ params, searchParams }, parent) {
   };
 
   // Combine the existing schema and FAQ schema
-  schemaOrg = {
-    // ...schemaOrg,
-    ...faqSchema,
-  };
+
+  // schemaOrg = {
+  //   ...schemaOrg,
+  //   ...faqSchema,
+  // };
+
+  // schemaOrg = {
+  //   ...schemaOrg,
+  //   // ...faqSchema,
+  // };
 
   // Return metadata
   return {
@@ -177,6 +183,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       },
     },
     schemaOrg: schemaOrg || null,
+    faqSchema: faqSchema,
   };
 }
 
@@ -192,10 +199,27 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      />
+      /> */}
+      {metadata.schemaOrg && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schemaOrg),
+          }}
+        />
+      )}
+      {/* Render the FAQ schema separately */}
+      {metadata.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.faqSchema),
+          }}
+        />
+      )}
     </html>
   );
 }
