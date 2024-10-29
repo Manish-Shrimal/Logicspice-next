@@ -274,7 +274,7 @@ const WhyHireFromLogicspice = ({ testimonialData }) => {
                       width={55}
                       height={100}
                       alt="deadlines developers"
-                      src="https://www.logicspice.com/app/webroot/img/images/calendar_icon.png"
+                      src="/img/hiredevelopers/calendar_icon.png"
                     />
                   </div>
                   <div className="developer_box_content">

@@ -1946,9 +1946,9 @@
   font-size: 30px;
 }
 
-.PortfolioWebsiteSlider .slick-slider .slick-next::before,
-.HireDevelopersWorking .slick-slider .slick-next::before,
-.HireDevelopersTestimonial .slick-slider .slick-next::before {
+.PortfolioWebsiteSlider .slick-slider .slick-next::after,
+.HireDevelopersWorking .slick-slider .slick-next::after,
+.HireDevelopersTestimonial .slick-slider .slick-next::after {
   content: "\f105" !important;
   font-family: FontAwesome !important;
   color: #3f3f3f !important;
