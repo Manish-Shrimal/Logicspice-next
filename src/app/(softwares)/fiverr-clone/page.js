@@ -2,17 +2,15 @@
 import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
 import Link from "next/link";
-import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "@/app/(softwares)/softwares.css";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import React, { useEffect, useRef, useState } from "react";
+import { lazy, Suspense } from "react";
 import "../../resposive.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
 import { Modal, ModalBody } from "react-bootstrap";
 import Reviewmodals from "@/app/Components/Reviewmodals";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -37,6 +35,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
+
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -46,6 +45,8 @@ const Page = () => {
   const [jobportal, setJobportal] = useState(false);
   const [buyjobportal, setBuyJobportal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
 
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
@@ -146,48 +147,6 @@ const Page = () => {
     setActiveTab(tab);
   };
 
-  // const Accordion = styled((props) => (
-  //   <MuiAccordion disableGutters elevation={0} square {...props} />
-  // ))(({ theme }) => ({
-  //   border: `1px solid ${theme.palette.divider}`,
-  //   "&:not(:last-child)": {
-  //     borderBottom: 0,
-  //   },
-  //   "&::before": {
-  //     display: "none",
-  //   },
-  // }));
-
-  // const AccordionSummary = styled((props) => (
-  //   <MuiAccordionSummary
-  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-  //     {...props}
-  //   />
-  // ))(({ theme }) => ({
-  //   backgroundColor: "rgba(0, 0, 0, .03)",
-  //   flexDirection: "row-reverse",
-  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-  //     transform: "rotate(90deg)",
-  //   },
-  //   "& .MuiAccordionSummary-content": {
-  //     marginLeft: theme.spacing(1),
-  //   },
-  //   ...theme.applyStyles("dark", {
-  //     backgroundColor: "rgba(255, 255, 255, .05)",
-  //   }),
-  // }));
-
-  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  //   padding: theme.spacing(2),
-  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
-  // }));
-
-  // const [expanded, setExpanded] = React.useState("panel1");
-
-  // const handleChange = (panel) => (event, newExpanded) => {
-  //   setExpanded(newExpanded ? panel : false);
-  // };
-
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -233,8 +192,6 @@ const Page = () => {
 
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
-    // console.log(showModal);
-
     setDemoAccessModal(!demoAccessModal);
   };
 
@@ -251,6 +208,25 @@ const Page = () => {
       s0.parentNode.insertBefore(s1, s0);
     })();
   }, []); // Empty dependency array to run once on mount
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { root: null, rootMargin: "0px", threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -407,14 +383,24 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                {/* <Image
                   unoptimized={true}
                   width={450}
                   height={500 / (100 / 100)}
                   src="/img/fiverrclone/gigger-mobiles.png"
                   alt="Fiverr_clone"
                   className="lazy"
-                />
+                /> */}
+                <Image
+                unoptimized={true}
+  priority={true}
+  width={450}
+  height={500}
+  src="/img/fiverrclone/gigger-mobiles.png"
+  alt="Fiverr Clone"
+  className="lazy"
+/>
+
               </div>
             </div>
           </div>
@@ -451,17 +437,19 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6 job-video">
-              <div className="jobvideo">
-                <iframe
-                  width="100%"
-                  height="312"
-                  src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=1"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
+            <div className="col-md-6 job-video" ref={ref}>
+              {inView && (
+                <div className="jobvideo">
+                  <iframe
+                    width="100%"
+                    height="312"
+                    src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              )}
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
@@ -2854,107 +2842,101 @@ const Page = () => {
             {studentTab && (
               <>
                 <div id="joblboardslide">
-                <Slider {...tab}>
-                    
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/dashboard.png"
-                            alt="Dashboard"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Dashboard</div>
-                          <div className="pro-feat-detai">
-                            User can view own dashboard with gigs and other
-                            details like : profile, service request etc..
-                          </div>
+                  <Slider {...tab}>
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/dashboard.png"
+                          alt="Dashboard"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Dashboard</div>
+                        <div className="pro-feat-detai">
+                          User can view own dashboard with gigs and other
+                          details like : profile, service request etc..
                         </div>
                       </div>
-                  
-                  
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/post_gig.png"
-                            alt="Post Gig"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Post Gig</div>
-                          <div className="pro-feat-detai">
-                            It will facilitate users to post gig over the site.
-                            Users can post gigs by specifying gig details.
-                          </div>
+                    </div>
+
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/post_gig.png"
+                          alt="Post Gig"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Post Gig</div>
+                        <div className="pro-feat-detai">
+                          It will facilitate users to post gig over the site.
+                          Users can post gigs by specifying gig details.
                         </div>
                       </div>
-                   
-                    
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/earning.png"
-                            alt="Earning"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Manage Earning</div>
-                          <div className="pro-feat-detai">
-                            User can manage their earning which earned by gigs
-                            over the site.
-                          </div>
+                    </div>
+
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/earning.png"
+                          alt="Earning"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Manage Earning</div>
+                        <div className="pro-feat-detai">
+                          User can manage their earning which earned by gigs
+                          over the site.
                         </div>
                       </div>
-                   
-                   
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/messaging-img.png"
-                            alt="Messaging system"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Messaging system</div>
-                          <div className="pro-feat-detai">
-                            Seller and buyer can communicate each other with
-                            using messaging feature.
-                          </div>
+                    </div>
+
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/messaging-img.png"
+                          alt="Messaging system"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Messaging system</div>
+                        <div className="pro-feat-detai">
+                          Seller and buyer can communicate each other with using
+                          messaging feature.
                         </div>
                       </div>
-                    
-                    
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/customer-img.png"
-                            alt="Custom Offer"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Custom Offer</div>
-                          <div className="pro-feat-detai">
-                            Seller can create any custom offer for buyer from
-                            message page.
-                          </div>
+                    </div>
+
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/customer-img.png"
+                          alt="Custom Offer"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Custom Offer</div>
+                        <div className="pro-feat-detai">
+                          Seller can create any custom offer for buyer from
+                          message page.
                         </div>
                       </div>
-                    
+                    </div>
                   </Slider>
                 </div>
               </>
@@ -2962,103 +2944,102 @@ const Page = () => {
 
             {instructorTab && (
               <>
-
-                  <div id="joblboardslide">
+                <div id="joblboardslide">
                   <Slider {...tab}>
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/search_gig.png"
-                            alt="Search Gig"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Search Gig</div>
-                          <div className="pro-feat-detai">
-                            It will facilitate users to search gigs over the
-                            site. Users can search gig by specifying keyword on
-                            search bar or they can search gigs by categories.
-                          </div>
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/search_gig.png"
+                          alt="Search Gig"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Search Gig</div>
+                        <div className="pro-feat-detai">
+                          It will facilitate users to search gigs over the site.
+                          Users can search gig by specifying keyword on search
+                          bar or they can search gigs by categories.
                         </div>
                       </div>
-                  
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/detail_gig.png"
-                            alt="Detail Gig"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Detail Gig</div>
-                          <div className="pro-feat-detai">
-                            User can view detail of gigs with category,
-                            location, gallery images etc.
-                          </div>
+                    </div>
+
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/detail_gig.png"
+                          alt="Detail Gig"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Detail Gig</div>
+                        <div className="pro-feat-detai">
+                          User can view detail of gigs with category, location,
+                          gallery images etc.
                         </div>
                       </div>
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/post_request.png"
-                            alt="Post Request"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Post Request</div>
-                          <div className="pro-feat-detai">
-                            It will facilitate users to request service request
-                            for gig over the site. Users can post service
-                            request for gigs by specifying request details.
-                          </div>
+                    </div>
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/post_request.png"
+                          alt="Post Request"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Post Request</div>
+                        <div className="pro-feat-detai">
+                          It will facilitate users to request service request
+                          for gig over the site. Users can post service request
+                          for gigs by specifying request details.
                         </div>
                       </div>
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/saved_gigs.png"
-                            alt="Saved Gigs"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">Saved Gigs</div>
-                          <div className="pro-feat-detai">
-                            User can do favorites any gig over the site and user
-                            can view all saved gigs in separate listing.
-                          </div>
+                    </div>
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/saved_gigs.png"
+                          alt="Saved Gigs"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">Saved Gigs</div>
+                        <div className="pro-feat-detai">
+                          User can do favorites any gig over the site and user
+                          can view all saved gigs in separate listing.
                         </div>
                       </div>
-                      <div className="SliderMainBx">
-                        <div className="feat-slide-img">
-                          <Image
-                            unoptimized={true}
-                            width={1075}
-                            height={100}
-                            src="/img/fiverrclone/view_profile.png"
-                            alt="View Profile"
-                          />
-                        </div>
-                        <div className="hands-proved">
-                          <div className="titleof_scnew">View Profile</div>
-                          <div className="pro-feat-detai">
-                            Buyer can view seller profile with gigs and other
-                            details like : reviews,profile details, service
-                            request etc..
-                          </div>
+                    </div>
+                    <div className="SliderMainBx">
+                      <div className="feat-slide-img">
+                        <Image
+                          unoptimized={true}
+                          width={1075}
+                          height={100}
+                          src="/img/fiverrclone/view_profile.png"
+                          alt="View Profile"
+                        />
+                      </div>
+                      <div className="hands-proved">
+                        <div className="titleof_scnew">View Profile</div>
+                        <div className="pro-feat-detai">
+                          Buyer can view seller profile with gigs and other
+                          details like : reviews,profile details, service
+                          request etc..
                         </div>
                       </div>
+                    </div>
                   </Slider>
                 </div>
               </>
@@ -3080,8 +3061,11 @@ const Page = () => {
                       </div>
                       <div class="hands-proved">
                         <div class="titleof_scnew">Admin dashboard</div>
-                        <div class="pro-feat-detai">It will facilitate admin to users, gigs and other details like : profile, orders, service request etc..</div>
-                    </div>
+                        <div class="pro-feat-detai">
+                          It will facilitate admin to users, gigs and other
+                          details like : profile, orders, service request etc..
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3095,8 +3079,11 @@ const Page = () => {
                       </div>
                       <div class="hands-proved">
                         <div class="titleof_scnew">Manage Site Settings</div>
-                        <div class="pro-feat-detai">Admin can manage website setting like : name, logo, payment detail etc..</div>
-                    </div>
+                        <div class="pro-feat-detai">
+                          Admin can manage website setting like : name, logo,
+                          payment detail etc..
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3110,8 +3097,11 @@ const Page = () => {
                       </div>
                       <div class="hands-proved">
                         <div class="titleof_scnew">Manage Wallets</div>
-                        <div class="pro-feat-detai"> Admin can view wallet detail of all users.</div>
-                    </div>
+                        <div class="pro-feat-detai">
+                          {" "}
+                          Admin can view wallet detail of all users.
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3125,8 +3115,11 @@ const Page = () => {
                       </div>
                       <div class="hands-proved">
                         <div class="titleof_scnew">Manage Gigs</div>
-                        <div class="pro-feat-detai">Admin can manage all added gig and admin can deactivate, activate and delete gigs from the website.</div>
-                    </div>
+                        <div class="pro-feat-detai">
+                          Admin can manage all added gig and admin can
+                          deactivate, activate and delete gigs from the website.
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -3140,8 +3133,11 @@ const Page = () => {
                       </div>
                       <div class="hands-proved">
                         <div class="titleof_scnew">Manage Qualifications</div>
-                        <div class="pro-feat-detai">Admin can view list of Qualifications &amp; can manage (view/add/edit/delete) qualifications.</div>
-                    </div>
+                        <div class="pro-feat-detai">
+                          Admin can view list of Qualifications &amp; can manage
+                          (view/add/edit/delete) qualifications.
+                        </div>
+                      </div>
                     </div>
                   </Slider>
                 </div>
