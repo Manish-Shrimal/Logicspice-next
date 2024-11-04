@@ -167,10 +167,10 @@
   }
 
   .head-enquiry h1 {
-    color: #fff;
-    font-size: 29px;
+    color: #fff !important;
+    font-size: 29px !important;
     font-weight: 900 !important;
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
   }
 
   .head-enquiry p {
@@ -195,8 +195,8 @@
   }
 
   .su_rev_section .btn.btn-primary {
-    font-size: 14px!important;
-    padding: 14px 10px!important;
+    font-size: 14px !important;
+    padding: 14px 10px !important;
   }
 
   .fd-solution h1 {
@@ -746,7 +746,7 @@
   }
 
   .demand-content {
-    float: right!important;
+    float: right !important;
   }
 
   .gettoknow_sectins .media {
@@ -1243,8 +1243,8 @@
   }
 
   .Quick_FAQ {
-    margin-top: 30px!important;
-    padding-left: inherit!important;
+    margin-top: 30px !important;
+    padding-left: inherit !important;
   }
 
   .design-step .col-md-6.pull-right {
@@ -2250,7 +2250,7 @@
   }
 
   .app_solution .nav-tabs>li {
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .app_solution .nav.nav-tabs .active>a,
@@ -3705,7 +3705,7 @@
   }
 
   .su_rev_section {
-    padding: 23px 0 20px!important;
+    padding: 23px 0 20px !important;
   }
 
   .reviews_down_pro {
@@ -3713,9 +3713,9 @@
   }
 
   .su_rev_section .btn.btn-primary {
-    font-size: 16px!important;
-    padding: 10px 20px!important;
-    margin-top: 16px!important;
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+    margin-top: 16px !important;
   }
 
   .supportsetting ul li {
@@ -4587,17 +4587,17 @@
   }
 
   .footer_bg .accordion-item {
-    margin-bottom: 5px;
-    border-radius: 0;
-    border: none;
-    background: transparent;
+    margin-bottom: 5px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: transparent !important;
   }
 
   .footer_bg .accordion-item .accordion-header .accordion-button {
-    padding: 10px;
-    border: none;
-    color: #451095;
-    border-radius: 0;
+    padding: 10px !important;
+    border: none !important;
+    color: #451095 !important;
+    border-radius: 0 !important;
   }
 
   .HomeSliderJobSlide .HomeSliderTxt {
@@ -4783,15 +4783,15 @@
   }
 
   .head-feature>li {
-    font-size: 15px;
-    font-weight: 500;
-    padding: 0px 20px;
-    width: 100%;
-    min-height: 30px;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    padding: 0px 20px !important;
+    width: 100% !important;
+    min-height: 30px !important;
   }
 
   .head-feature>li::after {
-    top: 7px;
+    top: 7px !important;
   }
 
   .top-box-BFC {

@@ -17,6 +17,7 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import { redirect } from 'next/navigation'
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -49,6 +50,7 @@ const Page = () => {
       s0.parentNode.insertBefore(s1, s0);
     })();
   }, []); // Empty dependency array to run once on mount
+  // redirect('/')
   return (
     <>
       <Navbar />
@@ -1480,7 +1482,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="/appointment-booking-system"
+                          href="/appointment-scheduling-software"
                           className="ready-product"
                           data-aos="fade-up"
                         >
@@ -3750,7 +3752,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="/appointment-booking-system"
+                          href="/appointment-scheduling-software"
                           className="ready-product"
                           data-aos="fade-up"
                         >

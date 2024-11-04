@@ -19,14 +19,10 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 
-
-
-
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
 
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
@@ -36,8 +32,6 @@ const Page = () => {
   };
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
-    
-
     setShowModal(!showModal);
   };
   const Accordion = styled((props) => (
@@ -82,7 +76,7 @@ const Page = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -121,7 +115,8 @@ const Page = () => {
       {!isScrolled && <NavBar />}
 
       <section className="product_top_sectins">
-        <Image unoptimized={true}
+        <Image
+          unoptimized={true}
           src="/img/leadgeneration/bg.png"
           alt="product-bg"
           className="bg_images"
@@ -170,7 +165,8 @@ const Page = () => {
           <div className="right-p-sec">
             <h4>Free</h4>
             <div className="line-border">
-              <Image unoptimized={true}
+              <Image
+                unoptimized={true}
                 src="/img/jobboard/stars.png"
                 alt="stars"
                 className=""
@@ -219,7 +215,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/unique_signupicon.png"
                         alt="Easy Registration"
@@ -240,7 +237,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/great_profile_managment_icon.png"
                         alt="Great Profile Management"
@@ -262,7 +260,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/fully_responsive_icon.png"
                         alt="Fully Responsive"
@@ -284,7 +283,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/lost-password-icon.png"
                         alt="Lost Password Recovery"
@@ -306,7 +306,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/search_filter_icon.png"
                         alt="Search Filter"
@@ -328,7 +329,8 @@ const Page = () => {
                 <div className="media">
                   <div className="media-left">
                     <a href="#">
-                      <Image unoptimized={true}
+                      <Image
+                        unoptimized={true}
                         className="media-object"
                         src="/img/leadgeneration/payment_options_icon.png"
                         alt="Payment Options"
@@ -350,78 +352,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      {/* <section className="product_middle_menu_box">
-        <section className="product_middle_menu">
-          <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-default">
-              <div className="container-fluid">
-                <div className="navbar-header">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
-                </div>
-                <div
-                  className="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <ul className="navbar-nav me-auto">
-                    <li>
-                      <a href="#features">Features</a>
-                    </li>
-                    <li>
-                      <a href="#technologies">Technologies</a>
-                    </li>
-                    <li>
-                      <a href="#support">Support</a>
-                    </li>
-                    <li>
-                      <a href="#reviews">Reviews</a>
-                    </li>
-                    <li>
-                      <a href="#">Enquire Now</a>
-                    </li>
-                  </ul>
-                  <ul className="navbar-nav ms-auto navbar-right">
-                    <li>
-                    <Link
-                        className="page-scroll btn btn-default"
-                        href="javascript:void(0);"
-                        onClick={openModal}
-                      >
-                        <span>
-                          <Image
-                            width={40}
-                            height={100}
-                            src="/img/leadgeneration/enquiry_btn_bg.png"
-                            alt="enquiry"
-                          />
-                        </span>{" "}
-                        Enquire Now
-                        {
-                          <Enquirymodal
-                            modalStatus={showModal}
-                            toggle={openModal}
-                            title="Cakephp Facebook Login Plugin Script"
-                          />
-                        }
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </section>
-      </section> */}
-       <section className="product_middle_menu_box">
+
+      <section className="product_middle_menu_box">
         {isScrolled && (
           <section className="product_middle_menu top-fixed">
             <div className="container">
@@ -630,7 +562,8 @@ const Page = () => {
             <ul>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/apple_phn_icon.png"
                     alt="iOS"
                     height={40}
@@ -641,7 +574,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_java_icon.png"
                     alt="Java"
                     height={40}
@@ -652,7 +586,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/andoird_icon.png"
                     alt="Android"
                     height={40}
@@ -663,7 +598,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_php_icon.png"
                     alt="PHP Development"
                     height={40}
@@ -674,7 +610,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_cakephp_icon.png"
                     alt="CakePHP"
                     height={40}
@@ -685,7 +622,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/bootstrap.png"
                     alt="manager_icn"
                     height={40}
@@ -696,7 +634,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_mysql_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -707,7 +646,8 @@ const Page = () => {
               </li>
               <li>
                 <div className="icntechimg">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/tech_apache_icon.png"
                     alt="manager_icn"
                     height={40}
@@ -729,7 +669,8 @@ const Page = () => {
             <ul>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/free_remove_icon.png"
                     alt="manager_icn"
                     height={60}
@@ -740,7 +681,8 @@ const Page = () => {
               </li>
               <li data-aos="fade">
                 <div className="supportsetting_icn">
-                  <Image unoptimized={true}
+                  <Image
+                    unoptimized={true}
                     src="/img/jobboard/access_secure_code_icon.png"
                     alt="manager_icn"
                     height={50}
@@ -916,72 +858,7 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Are your given source code modifiable?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      Yes, our given scripts are flexible. Clients can customize
-                      according to their requirement.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Do logicspice give technical support?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      Yes, we believe in long-term relationship and provide
-                      technical support to the client at affordable cost.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Are you willing to advise us with ideas?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      Sure, we fulfill the requirement of client. Your
-                      suggestion or ideas are always welcomed which can make
-                      your business more interactive.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Will you deliver the exact product as shown in demo?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      Yes, We deliver the exact product. We don&apos;t
-                      compromise with quality at all.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I use your script without any programming skills?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      Yes, You can directly install our given script and can
-                      manage everything in admin panel which is very user
-                      friendly.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I remove your company proprietary notices?"
-                    collapseId="flush-collapse6"
-                  >
-                    <p>
-                      You are allowed to modify the script. You can remove our
-                      company information and put yours. But you cannot put
-                      &quot;copyright by&quot; because only we own the
-                      copyrights for our products.{" "}
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
-                                <Accordion
+                <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
                 >
@@ -1116,7 +993,8 @@ const Page = () => {
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
             target="_blank"
           >
-            <Image unoptimized={true}
+            <Image
+              unoptimized={true}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
               height={50}

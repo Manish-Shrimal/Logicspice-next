@@ -209,18 +209,18 @@ const Page = () => {
                   >
                     <a>Get Demo Access!</a>
                     {
-//                       <SoftwareEnquiry
-//                         modalStatus={showModal}
-//                         toggle={openModal}
-//                         title="Please fill the form below and get access to the live demo of Recruitment Management Software.
-// See how it work yourself!"
-//                       />
-<GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Recruitment Management Software.
+                      //                       <SoftwareEnquiry
+                      //                         modalStatus={showModal}
+                      //                         toggle={openModal}
+                      //                         title="Please fill the form below and get access to the live demo of Recruitment Management Software.
+                      // See how it work yourself!"
+                      //                       />
+                      <GetDemoEnquiry
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Recruitment Management Software.
  See how it works yourself!"
-                  />
+                      />
                     }
                   </div>
                   <Link
@@ -985,18 +985,18 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <a>Get Demo Access!</a>
                   {
-//                     <SoftwareEnquiry
-//                       modalStatus={showModal}
-//                       toggle={openModal}
-//                       title="Please fill the form below and get access to the live demo of Recruitment Management Software.
-// See how it work yourself!"
-//                     />
-<GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Recruitment Management Software.
+                    //                     <SoftwareEnquiry
+                    //                       modalStatus={showModal}
+                    //                       toggle={openModal}
+                    //                       title="Please fill the form below and get access to the live demo of Recruitment Management Software.
+                    // See how it work yourself!"
+                    //                     />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Recruitment Management Software.
  See how it works yourself!"
-                  />
+                    />
                   }
                 </div>
                 <Link
@@ -1925,8 +1925,8 @@ const Page = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can&apos;t resell the script. All rights will remain
-                      with Logicspice only.
+                      No, you can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1968,7 +1968,8 @@ const Page = () => {
                   <AccordionDetails>
                     <Typography>
                       We recommend you purchase an SSL certificate along with a
-                      hosting server, as it&apos;s necessary for website security.
+                      hosting server, as it&apos;s necessary for website
+                      security.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -2053,7 +2054,7 @@ const Page = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
               <div className="btn btn-primary" onClick={openModal}>
-                <button>Enquire Now</button>
+                <a>Enquire Now</a>
                 {
                   <SoftwareEnquiry
                     modalStatus={showModal}
@@ -2102,11 +2103,7 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/udemy-clone"
-                  >
+                  <Link title="View Detail" target="_black" href="/udemy-clone">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>

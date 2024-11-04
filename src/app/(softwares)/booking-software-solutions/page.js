@@ -1136,7 +1136,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <div className="libraries_laravel_choose">
-                  <a href="/seat-booking-system" target="_blank">
+                  <Link href="/seat-booking-system" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img1">
                       <Image
                         unoptimized={true}
@@ -1154,7 +1154,7 @@ const Page = () => {
                         and real-time availability.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -1163,7 +1163,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
-                  <a href="/restaurant-table-booking-system" target="_blank">
+                  <Link href="/restaurant-table-booking-system" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img2">
                       <Image
                         unoptimized={true}
@@ -1181,7 +1181,7 @@ const Page = () => {
                         times, and optimizing seating arrangements.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -1190,7 +1190,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <div className="libraries_laravel_choose">
-                  <a href="/event-booking-software" target="_blank">
+                  <Link href="/event-booking-software" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img3">
                       <Image
                         unoptimized={true}
@@ -1208,7 +1208,7 @@ const Page = () => {
                         for events, with instant confirmations and updates.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -1217,7 +1217,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
-                  <a href="/hotel-booking-software" target="_blank">
+                  <Link href="/hotel-booking-software" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img4">
                       <Image
                         unoptimized={true}
@@ -1235,7 +1235,7 @@ const Page = () => {
                         their overall booking experience.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -1244,7 +1244,7 @@ const Page = () => {
                 data-aos="fade-right"
               >
                 <div className="libraries_laravel_choose">
-                  <a href="/appointment-scheduling-software" target="_blank">
+                  <Link href="/appointment-scheduling-software" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img5">
                       <Image
                         unoptimized={true}
@@ -1262,7 +1262,7 @@ const Page = () => {
                         automate slots, helping businesses reduce no-shows.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -1271,7 +1271,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
-                  <a href="" target="_blank">
+                  <Link href="" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img6">
                       <Image
                         unoptimized={true}
@@ -1291,7 +1291,7 @@ const Page = () => {
                         times and improving overall patient satisfaction.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div
@@ -1299,7 +1299,7 @@ const Page = () => {
                 data-aos="fade-left"
               >
                 <div className="libraries_laravel_choose libraries_laravel_choose-right">
-                  <a href="" target="_blank">
+                  <Link href="" target="_blank">
                     <div className="laravel_choose_features_img laravel_choose_features_img6">
                       <Image
                         unoptimized={true}
@@ -1317,7 +1317,7 @@ const Page = () => {
                         tennis courts, football fields, and basketball courts.
                       </p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1872,234 +1872,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              {/* <div className="col-md-7">
-                <div className="ecommerce__Quick_FAQ">
-                  <Accordion
-                    expanded={expanded === "panel1"}
-                    onChange={handleChange("panel1")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel1" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel1d-content"
-                      id="panel1d-header"
-                    >
-                      <Typography>Is the source code modifiable?</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, most of the software is completely flexible and
-                        clients can customize it as per their requirements.
-                        However, 1-2 core files are encrypted due to licensing
-                        purposes because we will allow you to run the script on
-                        the specific domain for which encryption will be done in
-                        1-2 core files; the rest of the code is open to make
-                        changes and those encrypted files will be part of the
-                        codebase as well.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel2"}
-                    onChange={handleChange("panel2")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel2" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel2d-content"
-                      id="panel2d-header"
-                    >
-                      <Typography>
-                        How much time will it take to make it live?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        The whole process will take a maximum of 1 week, and the
-                        rest depends on your response time and customization
-                        requirements.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel3"}
-                    onChange={handleChange("panel3")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel3" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel3d-content"
-                      id="panel3d-header"
-                    >
-                      <Typography>
-                        How will you deal with bugs and issues in the product?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        We will communicate with you via live chat, phone call,
-                        WhatsApp, Skype, and email during our business hours and
-                        try to solve your problem as soon as possible.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel4"}
-                    onChange={handleChange("panel4")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel4" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel4d-content"
-                      id="panel4d-header"
-                    >
-                      <Typography>
-                        Does Logicspice provide technical support?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, we are providing free 3 months technical support on
-                        the existing features and functionalities of the
-                        software.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel5"}
-                    onChange={handleChange("panel5")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel5" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel5d-content"
-                      id="panel5d-header"
-                    >
-                      <Typography>Do I own my software completely?</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, you will own the license to use it for the domain
-                        you purchased for.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel6"}
-                    onChange={handleChange("panel6")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel6" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel6d-content"
-                      id="panel6d-header"
-                    >
-                      <Typography>
-                        Do I need to provide a Google Maps API key? If yes, how
-                        to generate a Google Map API key?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, you need to provide a map API key. Please follow
-                        the steps mentioned in the below URL to generate the
-                        Google Maps API key:
-                        <a
-                          href="https://developers.google.com/maps/documentation/javascript/get-api-key"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Google Maps API Key
-                        </a>
-                        . You need to set up your billing details over that.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel7"}
-                    onChange={handleChange("panel7")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel7" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel7d-content"
-                      id="panel7d-header"
-                    >
-                      <Typography>
-                        Can I update some design and functionality in the
-                        application code myself?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Yes, you will have access to all the code, except for
-                        some of the core encrypted files.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel8"}
-                    onChange={handleChange("panel8")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel8" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel8d-content"
-                      id="panel8d-header"
-                    >
-                      <Typography>
-                        Will I be able to use it on multiple domains after I
-                        purchase this software?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        You will be licensed to use it only for the domain you
-                        purchased for.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    expanded={expanded === "panel9"}
-                    onChange={handleChange("panel9")}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        expanded === "panel9" ? <RemoveIcon /> : <AddIcon />
-                      }
-                      aria-controls="panel9d-content"
-                      id="panel9d-header"
-                    >
-                      <Typography>
-                        Can I resell the software? Will I have rights over the
-                        software code?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        No, you can’t resell the software. All rights will
-                        remain with Logicspice only.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </div>
-              </div> */}
+            
               <div className="col-md-7">
                 <div className="panel-group faq_quick_sec" id="accordion">
                   <MDBAccordion v-model="activeItem" borderless>
@@ -2322,7 +2095,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/appointment-booking-system"
+                    href="/appointment-scheduling-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

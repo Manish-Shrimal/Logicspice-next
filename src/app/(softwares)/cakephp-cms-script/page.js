@@ -382,77 +382,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      {/* <section className="product_middle_menu_box">
-        <section className="product_middle_menu">
-          <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-default">
-              <div className="container-fluid">
-                <div className="navbar-header">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
-                </div>
-                <div
-                  className="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <ul className="navbar-nav me-auto">
-                    <li>
-                      <a href="#features">Features</a>
-                    </li>
-                    <li>
-                      <a href="#technologies">Technologies</a>
-                    </li>
-                    <li>
-                      <a href="#support">Support</a>
-                    </li>
-                    <li>
-                      <a href="#reviews">Reviews</a>
-                    </li>
-                    <li>
-                      <a href="#">Enquire Now</a>
-                    </li>
-                  </ul>
-                  <ul className="navbar-nav ms-auto navbar-right">
-                    <li>
-                      <Link
-                        className="page-scroll btn btn-default"
-                        href="javascript:void(0);"
-                        onClick={openModal}
-                      >
-                        <span>
-                          <Image
-                            width={40}
-                            height={100}
-                            src="/img/leadgeneration/enquiry_btn_bg.png"
-                            alt="enquiry"
-                          />
-                        </span>{" "}
-                        Enquire Now
-                        {
-                          <Enquirymodal
-                            modalStatus={showModal}
-                            toggle={openModal}
-                            title="CakePhp Cms Script"
-                          />
-                        }
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </section>
-      </section> */}
+     
       <section className="Frequently_Asked_Questions" id="features">
         <div className="container">
           <h2>

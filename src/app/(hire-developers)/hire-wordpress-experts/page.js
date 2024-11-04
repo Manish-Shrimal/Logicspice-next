@@ -55,8 +55,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "/img/globalbusinesscountries/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -144,8 +143,8 @@ const Page = () => {
               <div class="col-md-3 col-sm-4 p-0">
                 <div class="HireFlexNewImg">
                   <Image
-                      width={300}
-                      height={500 / (100 / 100)}
+                    width={300}
+                    height={500 / (100 / 100)}
                     alt="app development"
                     src="/img/hiredevelopers/hire-women-img.png"
                   />
@@ -718,7 +717,7 @@ const Page = () => {
       <section className="latest_feature_product latest_feature_services">
         <div className="container">
           <h2 className="title_main">Other Popular Hire Developer</h2>
-          <div className="other-product-box">
+          {/* <div className="other-product-box">
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
@@ -809,6 +808,99 @@ const Page = () => {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div class="other-product-box">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <Link
+                    title="View Detail"
+                    target="_black"
+                    href="/hire-magento-experts"
+                  >
+                    <div class="caption">
+                      <div class="other-caption-bx">
+                        <h3>Hire Magento Developer</h3>
+                        <div class="other-project-logo">
+                        <Image
+                            src="/img/hiredevelopers/magento_img.png"
+                            alt="laravel"
+                            width={70}
+                            height={100}
+                          />
+                        </div>
+                        <p>
+                          <span>
+                            Hire certified, expert &amp; dedicated Magento
+                            developers for full time and hourly.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <Link
+                    title="View Detail"
+                    target="_black"
+                    href="/hire-cakephp-developers"
+                  >
+                    <div class="caption">
+                      <div class="other-caption-bx">
+                        <h3>Hire CakePHP Developer</h3>
+                        <div class="other-project-logo">
+                        <Image
+                            src="/img/hiredevelopers/cakephp_img.png"
+                            alt="Hire Hybrid App Developer"
+                            width={70}
+                            height={100}
+                          />
+                        </div>
+                        <p>
+                          <span>
+                            Hire dedicated, fulltime and freelance CakePHP
+                            programmers, who have a good mix of knowledge,
+                            skills &amp; experience.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <Link
+                    title="View Detail"
+                    target="_black"
+                    href="/hire-laravel-developers"
+                  >
+                    <div class="caption">
+                      <div class="other-caption-bx">
+                        <h3>Hire Laravel Developer</h3>
+                        <div class="other-project-logo">
+                        
+                          <Image
+                            src="/img/hiredevelopers/laravel_img.png"
+                            alt="laravel"
+                            width={70}
+                            height={100}
+                          />
+                        </div>
+                        <p>
+                          <span>
+                            Hire dedicated and expert laravel developers to
+                            develop high performance Laravel web applications.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>{" "}
           </div>
         </div>
       </section>

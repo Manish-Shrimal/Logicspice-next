@@ -800,11 +800,12 @@ const Page = () => {
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-12 text-center">
-              <a
-                href="javascript:void(0);"
-                click={() => openmodelcontactus()}
-                class="btn btn-primary"
-              >
+               <a onClick={toggleModal} className="btn btn-primary">
+                <Contactusmodel
+                  modalStatus={modalOpen}
+                  toggle={toggleModal}
+                  title="Hire Laravel Developer"
+                />
                 Hire Now!
               </a>
             </div>
@@ -852,7 +853,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/hire-angular-js-developers"
+                    href="/hire-angular-js-experts"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">

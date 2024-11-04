@@ -217,13 +217,13 @@ const Page = () => {
                     }
                   </div>
 
-                  <a
+                  <Link
                     className="btn fiverr-buys NewGreenBtnJob"
-                    href="/buy-now/job-portal-script"
+                    href="/buy-now/jobsite"
                     id="buy_now_1"
                   >
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className="portal-price portal-priceNew"
@@ -2067,13 +2067,13 @@ const Page = () => {
                       />
                   }
                 </div>
-                <a
+                <Link
                   className="btn fiverr-buys"
-                  href="/buy-now/job-portal-script"
+                  href="/buy-now/jobsite"
                   id="buy_now_1"
                 >
                   Buy Now
-                </a>
+                </Link>
               </div>
               <div className="jocpp">
                 <ul className="job-pr-icon">

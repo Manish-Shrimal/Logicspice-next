@@ -24,7 +24,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.min.css";
@@ -271,14 +271,14 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                  //     <SoftwareEnquiry
-                  //       modalStatus={showModal}
-                  //       toggle={openModal}
-                  //       title="Please fill the form below and get access to the live demo of Classified Ads software
-                  // .See how it work yourself!"
-                  //     />
+                      //     <SoftwareEnquiry
+                      //       modalStatus={showModal}
+                      //       toggle={openModal}
+                      //       title="Please fill the form below and get access to the live demo of Classified Ads software
+                      // .See how it work yourself!"
+                      //     />
 
-                  <GetDemoEnquiry
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of LS Classifier. See how it works yourself!"
@@ -1160,18 +1160,18 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                  //   <SoftwareEnquiry
-                  //     modalStatus={showModal}
-                  //     toggle={openModal}
-                  //     title="Please fill the form below and get access to the live demo of Classified Ads software
-                  // .See how it work yourself!"
-                  //   />
+                    //   <SoftwareEnquiry
+                    //     modalStatus={showModal}
+                    //     toggle={openModal}
+                    //     title="Please fill the form below and get access to the live demo of Classified Ads software
+                    // .See how it work yourself!"
+                    //   />
 
-                  <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of LS Classifier. See how it works yourself!"
-                      />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of LS Classifier. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link
@@ -1861,72 +1861,131 @@ const Page = () => {
                   </MDBAccordionItem>
                 </MDBAccordion> */}
 
-<Accordion expanded={expanded === "panel1"} onChange={handleChange("panel1")}>
-  <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" className="aos-init aos-animate">
-    <Typography>How can a user search for classifieds around their location?</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      The user can enter their city on the website, and all the items around will be listed to them.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
+                <Accordion
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                    className="aos-init aos-animate"
+                  >
+                    <Typography>
+                      How can a user search for classifieds around their
+                      location?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      The user can enter their city on the website, and all the
+                      items around will be listed to them.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-<Accordion expanded={expanded === "panel2"} onChange={handleChange("panel2")}>
-  <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-    <Typography>Can a user upload one classified ad in multiple categories?</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      Yes, a user can put one classified ad in multiple categories.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
+                    <Typography>
+                      Can a user upload one classified ad in multiple
+                      categories?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, a user can put one classified ad in multiple
+                      categories.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-<Accordion expanded={expanded === "panel3"} onChange={handleChange("panel3")}>
-  <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-    <Typography>How many days will it take to implement?</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      It will take 7 days to implement your PHP Classified software.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
+                <Accordion
+                  expanded={expanded === "panel3"}
+                  onChange={handleChange("panel3")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                  >
+                    <Typography>
+                      How many days will it take to implement?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      It will take 7 days to implement your PHP Classified
+                      software.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-<Accordion expanded={expanded === "panel4"} onChange={handleChange("panel4")}>
-  <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-    <Typography>Can a user upload multiple classified ads to the website?</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      Yes, a user can upload more than one classified ad to the website.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
+                <Accordion
+                  expanded={expanded === "panel4"}
+                  onChange={handleChange("panel4")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                  >
+                    <Typography>
+                      Can a user upload multiple classified ads to the website?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes, a user can upload more than one classified ad to the
+                      website.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-<Accordion expanded={expanded === "panel5"} onChange={handleChange("panel5")}>
-  <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-    <Typography>Can a user view the contact information of the seller?</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      Yes. If a seller chooses to share their contact information on the website, the user can see it.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
+                <Accordion
+                  expanded={expanded === "panel5"}
+                  onChange={handleChange("panel5")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel5d-content"
+                    id="panel5d-header"
+                  >
+                    <Typography>
+                      Can a user view the contact information of the seller?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Yes. If a seller chooses to share their contact
+                      information on the website, the user can see it.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-<Accordion expanded={expanded === "panel6"} onChange={handleChange("panel6")}>
-  <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
-    <Typography>Along with hosting server details, what other recommendations?</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      We recommend you purchase an SSL certificate along with a hosting server, considering that an SSL certificate is necessary for all websites these days and it provides a secure layer to the website as well.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
-
+                <Accordion
+                  expanded={expanded === "panel6"}
+                  onChange={handleChange("panel6")}
+                >
+                  <AccordionSummary
+                    aria-controls="panel6d-content"
+                    id="panel6d-header"
+                  >
+                    <Typography>
+                      Along with hosting server details, what other
+                      recommendations?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      We recommend you purchase an SSL certificate along with a
+                      hosting server, considering that an SSL certificate is
+                      necessary for all websites these days and it provides a
+                      secure layer to the website as well.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </div>

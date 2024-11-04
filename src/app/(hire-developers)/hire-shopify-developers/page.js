@@ -23,8 +23,7 @@ const Page = () => {
   const testimonialData = [
     {
       id: 1,
-      image:
-        "/img/pythondevelopment/alex-morgan.jpg",
+      image: "/img/pythondevelopment/alex-morgan.jpg",
       heading: "",
       text: "Our Python development needs were complex, but the developer we hired from Logicspice tackled them with ease. Their proficiency in Django was particularly impressive.",
       name: "Michael T.,",
@@ -32,8 +31,7 @@ const Page = () => {
     },
     {
       id: 2,
-      image:
-        "/img/pythondevelopment/sophia-turner.jpg",
+      image: "/img/pythondevelopment/sophia-turner.jpg",
       heading: "",
       text: "We needed a Python expert for our machine learning project, and the professional from Logicspice exceeded all expectations.",
       name: "Sophia R.,",
@@ -41,8 +39,7 @@ const Page = () => {
     },
     {
       id: 3,
-      image:
-        "/img/pythondevelopment/david-clark.jpg",
+      image: "/img/pythondevelopment/david-clark.jpg",
       heading: "",
       text: "Hiring a Python developer for our backend systems was a crucial step. The developer's skill in Flask and database management has greatly improved our application's performance.",
       name: "David K.,",
@@ -50,8 +47,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "/img/pythondevelopment/isabella-clark.jpg",
+      image: "/img/pythondevelopment/isabella-clark.jpg",
       heading: "",
       text: "The Python developer we hired was outstanding. They understood our vision and brought in their unique perspective, which added immense value to our web application.",
       name: "Isabella G.,",
@@ -59,8 +55,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image:
-        "/img/pythondevelopment/emma-turner.jpg",
+      image: "/img/pythondevelopment/emma-turner.jpg",
       heading: "",
       text: "The Python developer we brought on board from Logicspice was a game-changer for our project. Their expertise in data analysis and web development helped us achieve milestones ahead of schedule.",
       name: "Emma L.,",
@@ -140,38 +135,65 @@ const Page = () => {
       </section>
       <section class="dev_flexibility new-hirig-section HireFlexNewSection">
         <div class="container">
-          
-        <div class="new-hiring-div">
-          <div class="row">
-                <div class="col-md-3 col-sm-4 p-0">
-                    <div class="HireFlexNewImg"><Image   width={300}
-                     height={500 / (100 / 100)} alt="app development" src="/img/hiredevelopers/hire-women-img.png" /></div>
+          <div class="new-hiring-div">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 p-0">
+                <div class="HireFlexNewImg">
+                  <Image
+                    width={300}
+                    height={500 / (100 / 100)}
+                    alt="app development"
+                    src="/img/hiredevelopers/hire-women-img.png"
+                  />
                 </div>
-                
-                <div class="col-md-9 col-sm-8 p-0">
-                    <div class="title_heading">Hiring Model </div>  
-                    <div class="row">
-                <div class="col-md-4 col-sm-4">
+              </div>
+
+              <div class="col-md-9 col-sm-8 p-0">
+                <div class="title_heading">Hiring Model </div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/periodic-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Periodic Basis</div>
-                    </div></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="HireFlexNewTxt">
-                        <i><Image width={27} height={100} alt="app development" src="/img/hiredevelopers/clock-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Hourly Basis</div>
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/periodic-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Periodic Basis</div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-md-4 col-sm-4">
                     <div class="HireFlexNewTxt">
-                        <i><Image width={41} height={100} alt="app development" src="/img/hiredevelopers/checklist-new-icon.png" /></i>
-                        <div class="HireFlexNewHeading">Project Basis</div>
+                      <i>
+                        <Image
+                          width={27}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/clock-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Hourly Basis</div>
                     </div>
-                </div> 
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="HireFlexNewTxt">
+                      <i>
+                        <Image
+                          width={41}
+                          height={100}
+                          alt="app development"
+                          src="/img/hiredevelopers/checklist-new-icon.png"
+                        />
+                      </i>
+                      <div class="HireFlexNewHeading">Project Basis</div>
+                    </div>
+                  </div>
                 </div>
-                </div> 
-                </div>
+              </div>
             </div>
+          </div>
 
           <div class="hiring-sr">
             <div class="row">
@@ -179,13 +201,13 @@ const Page = () => {
                 <div class="jumbotron">
                   <h2>Hire Shopify Developers</h2>
                   <p>
-                    Hire Logicspice Shopify&apos;s developers to build your online
-                    shop. We assist you in creating the best online business
-                    possible. When it comes to Shopify, our shopify experts can
-                    do it all, from helping you set up your store from the
-                    ground up to help you become an online marketing master to
-                    helping you build the unique features and functions that
-                    make your store stand out from the crowd.
+                    Hire Logicspice Shopify&apos;s developers to build your
+                    online shop. We assist you in creating the best online
+                    business possible. When it comes to Shopify, our shopify
+                    experts can do it all, from helping you set up your store
+                    from the ground up to help you become an online marketing
+                    master to helping you build the unique features and
+                    functions that make your store stand out from the crowd.
                   </p>
                   <p>
                     If you want a safe, scalable online store, we have an
@@ -193,11 +215,8 @@ const Page = () => {
                     The Shopify platform is designed for businesses in mind,
                     giving you complete power over your e-commerce site and a
                     seamless one for your customers. Hire dedicated Shopify
-                    Developers from Logicspice to get the
-                    <Link
-                      href="/shopify-development"
-                      target="_blank"
-                    >
+                    Developers from Logicspice to get the {""}
+                    <Link href="/shopify-development" target="_blank">
                       Shopify development services. and Speed Optimization.
                     </Link>
                   </p>
@@ -223,7 +242,8 @@ const Page = () => {
                   </li>
                   <li class="list-group-item">
                     <span>
-                      Have extensive experience dealing with the platform&apos;s APIs
+                      Have extensive experience dealing with the platform&apos;s
+                      APIs
                     </span>
                   </li>
                   <li class="list-group-item">
@@ -332,7 +352,6 @@ const Page = () => {
               </div>
               <div class="col-md-6">
                 <ul class="list-group">
-                
                   <li class="list-group-item">
                     <i>
                       <Image
@@ -382,12 +401,12 @@ const Page = () => {
                       />
                     </i>
                     <div class="custom-ser-txt custom-ser-txt7">
-                <h3>7. Developing an Online Store using Shopify</h3>
-                <p>
-                  Our team of specialists offers a wide variety of tailor-made
-                  and flexible eCommerce development services.
-                </p>
-              </div>
+                      <h3>7. Developing an Online Store using Shopify</h3>
+                      <p>
+                        Our team of specialists offers a wide variety of
+                        tailor-made and flexible eCommerce development services.
+                      </p>
+                    </div>
                   </li>
                   <li class="list-group-item">
                     <i>
@@ -400,102 +419,107 @@ const Page = () => {
                       />
                     </i>
                     <div class="custom-ser-txt custom-ser-txt8">
-                <h3>8. Shopify Payment Gateway Integration</h3>
-                <p>
-                  Hire experienced Shopify developers to connect third-party
-                  payment sources and construct a customized checkout.
-                </p>
-              </div>
+                      <h3>8. Shopify Payment Gateway Integration</h3>
+                      <p>
+                        Hire experienced Shopify developers to connect
+                        third-party payment sources and construct a customized
+                        checkout.
+                      </p>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>{" "}
           </div>
           <div class="shopify-faq">
-        <h2>FAQs on Shopify Developers Service</h2>
-        <div class="shopify-faq-main">
-          <div class="shopify-faq-bx">
-            <h3>What sets our Shopify experts apart from the rest?</h3>
-            <h6>
-              Our Shopify programmers pass a rigorous application and interview
-              procedure before joining our team. When you engage with us, you
-              will have access to web engineering and design professionals who
-              have a thorough grasp of your business&apos;s aims, challenges, and
-              dynamics when it comes to Shopify.
-            </h6>
+            <h2>FAQs on Shopify Developers Service</h2>
+            <div class="shopify-faq-main">
+              <div class="shopify-faq-bx">
+                <h3>What sets our Shopify experts apart from the rest?</h3>
+                <h6>
+                  Our Shopify programmers pass a rigorous application and
+                  interview procedure before joining our team. When you engage
+                  with us, you will have access to web engineering and design
+                  professionals who have a thorough grasp of your
+                  business&apos;s aims, challenges, and dynamics when it comes
+                  to Shopify.
+                </h6>
+              </div>
+              <div class="shopify-faq-bx">
+                <h3>
+                  I have no technical Shopify knowledge. How may I benefit from
+                  your assistance?
+                </h3>
+                <h6>
+                  After hiring Logicspice top Shopify developers, you will not
+                  have to worry about a thing. We manage the creation,
+                  deployment, and post-deployment procedures. Our assistance and
+                  maintenance team is always available to serve you.
+                </h6>
+              </div>
+              <div class="shopify-faq-bx">
+                <h3>Why hire a team of Shopify Developers?</h3>
+                <h6>
+                  You should engage a development team to maximize your returns
+                  and get the most out of Shopify. Below are just a few of the
+                  many reasons why you should consider hiring our Shopify
+                  developers:
+                </h6>
+                <ul>
+                  <li>
+                    Freedom to contact and collaborate directly with Logicspice
+                    Shopify&apos;s developers.
+                  </li>
+                  <li>
+                    You have absolute control over the Shopify web development
+                    process due to the ability to organize and distribute
+                    specific tasks.
+                  </li>
+                  <li>
+                    Capability to add extra resources at any time to fulfil
+                    short deadlines or alterations to the project&apos;s
+                    delivery timeline.
+                  </li>
+                  <li>
+                    Employing a specialized Shopify development team ensures
+                    quality assurance and on-time delivery.
+                  </li>
+                  <li>
+                    Offer a professional project manager to handle the Shopify
+                    development project and the team at no extra cost to ensure
+                    timely delivery.
+                  </li>
+                  <li>
+                    We provide the most affordable pricing on the market for
+                    hiring a Shopify development team with the highest quality
+                    code.
+                  </li>
+                </ul>
+              </div>
+              <div class="shopify-faq-bx">
+                <h3>Can Shopify integrate with existing systems?</h3>
+                <h6>
+                  Shopify is a highly versatile and adaptive platform because of
+                  its app-based environment. Shopify can work with a wide
+                  variety of third-party applications, improving your
+                  store&apos;s functionality and saving you time. Thanks to its
+                  extensive app store, Shopify can support and integrate with
+                  all of your business&apos;s software, from your accounting
+                  program to your email provider.
+                </h6>
+              </div>
+              <div class="shopify-faq-bx">
+                <h3>What kind of post-deployment assistance do you provide?</h3>
+                <h6>
+                  Yes, we provide support and technical assistance after project
+                  implementation, as we feel that this is where the actual
+                  business begins.
+                </h6>
+              </div>
+            </div>
           </div>
-          <div class="shopify-faq-bx">
-            <h3>
-              I have no technical Shopify knowledge. How may I benefit from your
-              assistance?
-            </h3>
-            <h6>
-              After hiring Logicspice top Shopify developers, you will not have
-              to worry about a thing. We manage the creation, deployment, and
-              post-deployment procedures. Our assistance and maintenance team is
-              always available to serve you.
-            </h6>
-          </div>
-          <div class="shopify-faq-bx">
-            <h3>Why hire a team of Shopify Developers?</h3>
-            <h6>
-              You should engage a development team to maximize your returns and
-              get the most out of Shopify. Below are just a few of the many
-              reasons why you should consider hiring our Shopify developers:
-            </h6>
-            <ul>
-              <li>
-                Freedom to contact and collaborate directly with Logicspice
-                Shopify&apos;s developers.
-              </li>
-              <li>
-                You have absolute control over the Shopify web development
-                process due to the ability to organize and distribute specific
-                tasks.
-              </li>
-              <li>
-                Capability to add extra resources at any time to fulfil short
-                deadlines or alterations to the project&apos;s delivery timeline.
-              </li>
-              <li>
-                Employing a specialized Shopify development team ensures quality
-                assurance and on-time delivery.
-              </li>
-              <li>
-                Offer a professional project manager to handle the Shopify
-                development project and the team at no extra cost to ensure
-                timely delivery.
-              </li>
-              <li>
-                We provide the most affordable pricing on the market for hiring
-                a Shopify development team with the highest quality code.
-              </li>
-            </ul>
-          </div>
-          <div class="shopify-faq-bx">
-            <h3>Can Shopify integrate with existing systems?</h3>
-            <h6>
-              Shopify is a highly versatile and adaptive platform because of its
-              app-based environment. Shopify can work with a wide variety of
-              third-party applications, improving your store&apos;s functionality and
-              saving you time. Thanks to its extensive app store, Shopify can
-              support and integrate with all of your business&apos;s software, from
-              your accounting program to your email provider.
-            </h6>
-          </div>
-          <div class="shopify-faq-bx">
-            <h3>What kind of post-deployment assistance do you provide?</h3>
-            <h6>
-              Yes, we provide support and technical assistance after project
-              implementation, as we feel that this is where the actual business
-              begins.
-            </h6>
-          </div>
-        </div>
-      </div>
         </div>
       </section>
-    
       <section class="dev_step_solution">
         <div class="container">
           <h2 class="title_heading">
@@ -602,19 +626,78 @@ const Page = () => {
       <section className="latest_feature_product latest_feature_services">
         <div className="container">
           <h2 className="title_main">Other Popular Hire Developer</h2>
-          <div className="other-product-box">
-            <div className="row">
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <Link
+
+          <div class="other-product-box">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <a
+                    title="View Detail"
+                    target="_black"
+                    href="/hire-laravel-developers"
+                  >
+                    <div class="caption">
+                      <div class="other-caption-bx">
+                        <h3>Hire Laravel Developer</h3>
+                        <div class="other-project-logo">
+                          <Image
+                            src="/img/hiredevelopers/laravel_img.png"
+                            alt="laravel logo"
+                            width={70}
+                            height={100}
+                          />
+                        </div>
+                        <p>
+                          <span>
+                            Hire dedicated and expert laravel developers to
+                            develop high performance Laravel web applications.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <a
+                    title="View Detail"
+                    target="_black"
+                    href="/hire-node-js-experts"
+                  >
+                    <div class="caption">
+                      <div class="other-caption-bx">
+                        <h3>Hire Node.JS developer</h3>
+                        <div class="other-project-logo">
+                          <Image
+                            src="/img/hiredevelopers/nodejs-img.png"
+                            alt="nodejs logo"
+                            width={70}
+                            height={100}
+                          />
+                        </div>
+                        <p>
+                          <span>
+                            Hire Node.js developers and programmers for best
+                            NodeJS eCommerce solutions development.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <a
                     title="View Detail"
                     target="_black"
                     href="/hire-wordpress-experts"
                   >
-                    <div className="caption">
-                      <div className="other-caption-bx">
+                    <div class="caption">
+                      <div class="other-caption-bx">
                         <h3>Hire WordPress Developer</h3>
-                        <div className="other-project-logo">
+                        <div class="other-project-logo">
                           <Image
                             src="/img/hiredevelopers/wordpress_img.png"
                             alt="wordpress logo"
@@ -624,75 +707,16 @@ const Page = () => {
                         </div>
                         <p>
                           <span>
-                            Our expert Wordpress developers offers customized
-                            web development at low cost.
+                            Our expert Wordpress developers offer customized web
+                            development at low cost.
                           </span>
                         </p>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/hire-magento-experts"
-                  >
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Hire Magento Developer</h3>
-                        <div className="other-project-logo">
-                          <Image
-                            src="/img/hiredevelopers/magento_img.png"
-                            alt="laravel"
-                            width={70}
-                            height={100}
-                          />
-                        </div>
-                        <p>
-                          <span>
-                            Hire certified, expert & dedicated Magento
-                            developers for full time and hourly.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-sm-6 col-md-4">
-                <div className="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/hire-cakephp-developers"
-                  >
-                    <div className="caption">
-                      <div className="other-caption-bx">
-                        <h3>Hire CakePHP Developer</h3>
-                        <div className="other-project-logo">
-                          <Image
-                            src="/img/hiredevelopers/cakephp_img.png"
-                            alt="Hire Hybrid App Developer"
-                            width={70}
-                            height={100}
-                          />
-                        </div>
-                        <p>
-                          <span>
-                            Hire dedicated, fulltime and freelance CakePHP
-                            programmers, who have a good mix of knowledge,
-                            skills & experience.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            </div>{" "}
           </div>
         </div>
       </section>

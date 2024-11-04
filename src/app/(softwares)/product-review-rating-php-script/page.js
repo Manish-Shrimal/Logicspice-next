@@ -1981,7 +1981,7 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/appointment-booking-system" title="View Detail" target="_black">
+                  <Link href="/appointment-scheduling-software" title="View Detail" target="_black">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Appointment Booking System</h3>

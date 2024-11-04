@@ -2611,7 +2611,7 @@ positivitymain {
   border-radius: 3px !important;
   font-size: 16px !important;
   padding: 13px 20px !important;
-  text-transform: uppercase !important;
+  text-transform: uppercase;
   position: relative !important;
   transform: perspective(1px) translateZ(0px) !important;
   transition-duration: 0.3s !important;
@@ -5175,9 +5175,9 @@ body.modal-open .quote_pop_plus {
   }
 
   .footer-bg .CustomQuickFAQScript .accordion-item {
-    border: none;
+    border: none !important;
     /* border-bottom: 1px #ddd solid; */
-    border-radius: 0;
+    border-radius: 0 !important;
   }
 
   .about-us .col-md-3 {
@@ -5290,7 +5290,7 @@ body.modal-open .quote_pop_plus {
   }
 
   .crowdfunding-say .service-market-ttd-new li {
-    width: 99%;
+    width: 99% !important;
   }
 
   .fiverr-new-banner .job-pr-icon li {
@@ -6571,9 +6571,9 @@ body.modal-open .quote_pop_plus {
   }
 
   .JewelleryEcommerceFAQ .title_main {
-    font-size: 28px;
-    padding-bottom: 20px;
-    padding-left: 10px;
+    font-size: 28px !important;
+    padding-bottom: 20px !important;
+    padding-left: 10px !important;
   }
 
   .ecommerce-process {

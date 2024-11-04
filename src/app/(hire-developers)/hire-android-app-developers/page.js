@@ -204,19 +204,22 @@ const Page = () => {
                       android apps development
                     </Link>{" "}
                     for past years with a team of dedicated
-                    developers&nbsp;towards their skills.&lt;br /&gt;&lt;br
-                    /&gt; We keep ourselves updated with the latest technologies
-                    so we can meet the client&rsquo;s requirements and deliver
-                    high-quality apps. We are one of the emerging platforms that
-                    provides amazing Android apps in the market.&lt;br
-                    /&gt;&lt;br /&gt; Hire Android app developer in India and
-                    other countries on hourly/monthly or fixed price. You get
-                    amazing technical support, a quality analyst, a project
-                    manager, and an innovative Android app that maximizes your
-                    profit to an optimal level.&lt;br /&gt; Let&rsquo;s come
-                    forward and hire &lt;strong&gt;&lt;i&gt;android app
-                    programmer&lt;/i&gt;&lt;/strong&gt; who can convert your
-                    ideas into mobile apps.
+                    developers&nbsp;towards their skills. <br />
+                    <br /> We keep ourselves updated with the latest
+                    technologies so we can meet the client&rsquo;s requirements
+                    and deliver high-quality apps. We are one of the emerging
+                    platforms that provides amazing Android apps in the market.
+                    <br />
+                    <br /> Hire Android app developer in India and other
+                    countries on hourly/monthly or fixed price. You get amazing
+                    technical support, a quality analyst, a project manager, and
+                    an innovative Android app that maximizes your profit to an
+                    optimal level.
+                    <br /> Let&rsquo;s come forward and hire{" "}
+                    <strong>
+                      <i>android app programmer</i>
+                    </strong>{" "}
+                    who can convert your ideas into mobile apps.
                   </p>
                 </div>
               </div>

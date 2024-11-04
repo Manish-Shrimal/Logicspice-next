@@ -3164,6 +3164,17 @@ h3.titlesettop {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 
+/* .faq_logic .panel-title a{
+	color: #000!important;
+    font-size: 19px!important;
+}
+
+.faq_logic .panel-title>a {
+    display: block!important;
+    padding: 15px!important;
+    text-decoration: none!important;
+} */
+
 
 @media (max-width: 768px) {
 	.faq_logic .title_main {

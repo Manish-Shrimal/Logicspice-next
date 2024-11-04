@@ -1427,7 +1427,7 @@ section {
 .Quick_FAQ {
   position: relative;
   z-index: 99;
-  padding-left: 50px !important;
+  padding-left: 50px ;
 }
 
 .su_rev_section::after {

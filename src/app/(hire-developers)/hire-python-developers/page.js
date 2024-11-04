@@ -474,22 +474,6 @@ const Page = () => {
       </section>
       <WhyHireFromLogicspice testimonialData={testimonialData} />
       <div class="clearfix"></div>
-      <section class="enq-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 text-center">
-              <a onClick={toggleModal} className="btn btn-primary">
-                <Contactusmodel
-                  modalStatus={modalOpen}
-                  toggle={toggleModal}
-                  title="Hire Python Developers"
-                />
-                Hire Now!
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>{" "}
       <section class="ecommerce_faq_section NewFaqDesignSection">
         <div class="container">
           <div class="row">

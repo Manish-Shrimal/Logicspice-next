@@ -103,17 +103,11 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="nt_cdl">
-                  <a
-                    href="javascript:void(0);"
-                    data-toggle="modal"
-                    data-target="#popup_sc_product"
-                    onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("Request to hire wordpress developer");
-                                    $("#contact_fr").val("Hire WordPress Developer");
-                           '
-                    id=""
-                    class="btn btn-primary"
-                    data-cf-modified-949a7b4c82dc726a6db240c6-=""
-                  >
+                <a onClick={toggleModal} className="btn btn-primary">
+                    <Contactusmodel
+                      modalStatus={modalOpen}
+                      toggle={toggleModal}
+                    />
                     Hire Now!
                   </a>
 
@@ -458,19 +452,13 @@ const Page = () => {
             </div>
           </div>
           <div class="step-but">
-            <a
-              href="javascript:void(0);"
-              data-toggle="modal"
-              data-target="#popup_sc_product"
-              onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("Request to hire wordpress developer");
-                        $("#contact_fr").val("hire wordpress developer");
-               '
-              id=""
-              class="btn btn-primary"
-              data-cf-modified-949a7b4c82dc726a6db240c6-=""
-            >
-              Hire Now!
-            </a>
+          <a onClick={toggleModal} className="btn btn-primary">
+                    <Contactusmodel
+                      modalStatus={modalOpen}
+                      toggle={toggleModal}
+                    />
+                    Hire Now!
+                  </a>
           </div>
         </div>
       </section>
@@ -480,13 +468,13 @@ const Page = () => {
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-12 text-center">
-              <a
-                href="javascript:void(0);"
-                click={() => openmodelcontactus()}
-                class="btn btn-primary"
-              >
-                Hire Now!
-              </a>
+            <a onClick={toggleModal} className="btn btn-primary">
+                    <Contactusmodel
+                      modalStatus={modalOpen}
+                      toggle={toggleModal}
+                    />
+                    Hire Now!
+                  </a>
             </div>
           </div>
         </div>

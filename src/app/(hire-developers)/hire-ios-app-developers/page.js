@@ -55,8 +55,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "/img/globalbusinesscountries/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -106,17 +105,11 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="nt_cdl">
-                  <a
-                    href="javascript:void(0);"
-                    data-toggle="modal"
-                    data-target="#popup_sc_product"
-                    onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("Request to hire iphone app developer");
-                                    $("#contact_fr").val("Hire iPhone App Developer");
-                           '
-                    id=""
-                    class="btn btn-primary"
-                    data-cf-modified-0c2ec2f01c437bbcc25d3bb1-=""
-                  >
+                  <a onClick={toggleModal} className="btn btn-primary">
+                    <Contactusmodel
+                      modalStatus={modalOpen}
+                      toggle={toggleModal}
+                    />
                     Hire Now!
                   </a>
 
@@ -462,17 +455,8 @@ const Page = () => {
             </div>
           </div>
           <div class="step-but">
-            <a
-              href="javascript:void(0);"
-              data-toggle="modal"
-              data-target="#popup_sc_product"
-              onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("Request to hire iphone app developer");
-                        $("#contact_fr").val("hire iphone app developer");
-               '
-              id=""
-              class="btn btn-primary"
-              data-cf-modified-0c2ec2f01c437bbcc25d3bb1-=""
-            >
+            <a onClick={toggleModal} className="btn btn-primary">
+              <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
               Hire Now!
             </a>
           </div>

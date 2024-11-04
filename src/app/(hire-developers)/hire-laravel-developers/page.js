@@ -45,8 +45,7 @@ const Page = () => {
     },
     {
       id: 4,
-      image:
-        "/img/globalbusinesscountries/beatbuehlmann.jpg",
+      image: "/img/globalbusinesscountries/beatbuehlmann.jpg",
       heading: "Financial Web Application For Pensioners",
       text: "&quot;Excellent work again from logicspice! They definitely put their best effort into the project along with very valuable inputs regarding possible enhancements of the web project. With logicspice",
       name: "Beat B.",
@@ -96,7 +95,7 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="nt_cdl">
-                  <a
+                  {/* <a
                     href="javascript:void(0);"
                     data-toggle="modal"
                     data-target="#popup_sc_product"
@@ -107,6 +106,14 @@ const Page = () => {
                     class="btn btn-primary"
                     data-cf-modified-1a16f141c132cb889313ca56-=""
                   >
+                    Hire Now!
+                  </a> */}
+                  <a onClick={toggleModal} className="btn btn-primary">
+                    <Contactusmodel
+                      modalStatus={modalOpen}
+                      toggle={toggleModal}
+                      title="Hire Python Developers"
+                    />
                     Hire Now!
                   </a>
 
@@ -456,17 +463,12 @@ const Page = () => {
             </div>
           </div>
           <div class="step-but">
-            <a
-              href="javascript:void(0);"
-              data-toggle="modal"
-              data-target="#popup_sc_product"
-              onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("Request to hire laravel developers");
-                        $("#contact_fr").val("hire laravel developers");
-               '
-              id=""
-              class="btn btn-primary"
-              data-cf-modified-1a16f141c132cb889313ca56-=""
-            >
+            <a onClick={toggleModal} className="btn btn-primary">
+              <Contactusmodel
+                modalStatus={modalOpen}
+                toggle={toggleModal}
+                title="Hire Python Developers"
+              />
               Hire Now!
             </a>
           </div>
@@ -532,7 +534,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/hire-codeigniter-developers"
+                    href="/hire-codeignitor-developers"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
