@@ -51,9 +51,10 @@ const nextConfig = {
       },
       {
         source: '/hire-experts/:slug*',
-        destination: '/hire-:slug', // Add "hire-" as a prefix to the dynamic part
+        destination: '/hire-:slug*', // Correctly adds "hire-" as a prefix to the dynamic part
         permanent: true,
       },
+      
       {
         source: '/erp-system-software-developement',
         destination: '/erp-system-software-development', // Redirect to the path without `/products`
