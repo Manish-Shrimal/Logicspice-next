@@ -14,7 +14,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }).then((res) =>
     res.json()
   );
-  // console.log(product)
+
+  let pageSlug = params;
 
   let text = product.data.schema;
 
@@ -39,7 +40,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/case-study`,
+      canonical: `${Domain}/case-study/${pageSlug.slug}`,
     },
     robots: {
       index: true,

@@ -204,7 +204,7 @@ const Page = () => {
               for making team understand the requirements, effective
               communication is the key. After the execution of ample products
               efficiently
-              <a href="injectedConstants.HTTPS_PATH+''" target="_blank"
+              <a href="/" target="_blank"
                 >Logicspice</a
               >
               understands the importance of communication and has developed a
@@ -264,7 +264,7 @@ const Page = () => {
             <p>
               Logicspice always follow standard project strategy for both
               <a
-                href="injectedConstants.HTTPS_PATH+'mobile-app-development'"
+                href="/mobile-app-development"
                 target="_blank"
                 >mobile application development</a
               >

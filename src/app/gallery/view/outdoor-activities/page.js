@@ -35,11 +35,11 @@ const Page = () => {
             <div class="col-md-6">
               <ol class="breadcrumb">
                 <li>
-                  <Link href="/Vuejs/">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 
                 <li>
-                  <Link href="/Vuejs/gallery/">Gallery</Link>
+                  <Link href="/gallery/">Gallery</Link>
                 </li>
                 
                 <li class="current">

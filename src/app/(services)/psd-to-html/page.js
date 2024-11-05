@@ -560,7 +560,7 @@ const Page = () => {
                   </Link>
                 </li>
                 <li className="different_experts_name">
-                  <Link href="/hire-angular-js-developers">
+                  <Link href="/hire-angular-js-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Angular jS Developers
                   </Link>

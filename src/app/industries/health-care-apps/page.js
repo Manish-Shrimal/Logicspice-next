@@ -825,12 +825,12 @@ const Page = () => {
                   </div>
                   <div className="blog_head_detail">
                     <h3 className="entry-title heading_subsiti">
-                      <a href="">
+                      <Link href="/blog/factors-to-consider-while-choosing-ecommerce-web-builder">
                         <span>
                           Factors To Consider While Choosing Web Builder For
                           E-Commerce Website
                         </span>
-                      </a>
+                      </Link>
                     </h3>
                     <div className="method_blog">
                       <ul>

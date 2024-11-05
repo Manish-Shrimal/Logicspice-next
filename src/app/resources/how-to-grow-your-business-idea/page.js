@@ -40,10 +40,10 @@ const Page = () => {
             <div class="col-md-6">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <Link href="injectedConstants.HTTPS_PATH+''">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li class="breadcrumb-item">
-                  <Link href="/resources'">Resources</Link>
+                  <Link href="/resources">Resources</Link>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   How to grow your business idea

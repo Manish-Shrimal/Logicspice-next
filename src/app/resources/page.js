@@ -66,7 +66,7 @@ const Page = () => {
                     smooth and easy process, you should defiinitley plan for web
                     or{" "}
                     <Link
-                      href="/services/mobile-app-development"
+                      href="/mobile-app-development"
                       target="_blank"
                     >
                       mobile application development services
@@ -118,7 +118,7 @@ const Page = () => {
                     Contract &amp; Payment: - To maintain the transparency in
                     our work we frame contract between client and{" "}
                     <Link
-                      href="injectedConstants.HTTPS_PATH+''"
+                      href="/"
                       target="_blank"
                     >
                       LogicSpice

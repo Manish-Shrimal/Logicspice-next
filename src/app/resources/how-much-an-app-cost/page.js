@@ -77,7 +77,7 @@ const Page = () => {
                       these days rather they spend on software as a boost for
                       their business. And as it is very common these days, the
                       <Link
-                        href="/services/mobile-app-development'"
+                        href="/mobile-app-development'"
                         target="_blank"
                       >
                         mobile app
@@ -154,7 +154,7 @@ const Page = () => {
                         </Link>
                       </li>
                       <li class="page_item">
-                        <Link href="resources/project-communication">
+                        <Link href="/resources/project-communication">
                           Project Communication Strategy
                         </Link>
                       </li>

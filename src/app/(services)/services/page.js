@@ -897,7 +897,7 @@ const Page = () => {
                   <div className="technologi-bx">
                     <ul>
                       <li>
-                        <Link href="/android-app-developmen">
+                        <Link href="/android-app-development">
                           <span className="circle_icon andri-img">
                             <Image
                               width={100}
