@@ -517,12 +517,12 @@ const Page = () => {
                     Hire Wordpress Developer
                   </Link>
                 </li>
-                <li className="different_experts_name">
+                {/* <li className="different_experts_name">
                   <Link href="/hire-drupal-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}
                     Hire Drupal Developer
                   </Link>
-                </li>
+                </li> */}
                 <li className="different_experts_name">
                   <Link href="/hire-magento-experts">
                     <i aria-hidden="true" className="fa fa-angle-right"></i>{" "}

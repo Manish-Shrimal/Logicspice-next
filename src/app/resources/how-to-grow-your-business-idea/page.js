@@ -112,10 +112,10 @@ const Page = () => {
                     <p>
                       <strong>4. Forming Alliances-</strong> Just join hands
                       with a similar business to make your business grow faster
-                      like we do at
+                      like we do at{" "}
                       <Link href="/" target="_blank">
                         LogicSpice
-                      </Link>
+                      </Link>{" "}
                       . This has even helped us in developing products and
                       improving our services, which has eventually increased the
                       sales. We tried aligning with prospective users too for

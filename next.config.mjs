@@ -78,6 +78,14 @@ const nextConfig = {
         permanent: true,
       },
       
+
+      // Case study
+      
+      {
+        source: "/casestudies/view/:slug*",
+        destination: "/case-study/:slug*", 
+        permanent: true,
+      },
     ];
   },
 };

@@ -9,7 +9,6 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../resources.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
-
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,7 +24,7 @@ const Page = () => {
   };
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section class="resources-header HowMuchBanner">
         <div class="container">
           <span>How Much An App Cost </span>
@@ -75,11 +74,8 @@ const Page = () => {
                       creating anything in this business hasn&apos;t changed for
                       long. People simply don&apos;t invest in infrastructure
                       these days rather they spend on software as a boost for
-                      their business. And as it is very common these days, the
-                      <Link
-                        href="/mobile-app-development'"
-                        target="_blank"
-                      >
+                      their business. And as it is very common these days, the{" "}
+                      <Link href="/mobile-app-development" target="_blank">
                         mobile app
                       </Link>{" "}
                       is a smarter ways to catch the attention of users.
@@ -120,7 +116,7 @@ const Page = () => {
                       required and concept of the application. Thus, a mobile
                       app cost vary according to the customization need So if
                       you are looking to take your business online, LogicSpice
-                      is the perfect place know that
+                      is the perfect place know that{" "}
                       <strong>
                         <Link href="/" target="_blank">
                           how much does it cost to make a mobile App
@@ -207,7 +203,7 @@ const Page = () => {
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

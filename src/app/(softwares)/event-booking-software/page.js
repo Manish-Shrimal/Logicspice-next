@@ -2495,7 +2495,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/ebay-clone'"
+                    href="/ebay-clone"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

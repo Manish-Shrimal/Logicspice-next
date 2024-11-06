@@ -391,7 +391,7 @@ const Page = () => {
                   alt="Fiverr_clone"
                   className="lazy"
                 /> */}
-                <Image
+                {/* <Image
                 unoptimized={true}
   priority={true}
   width={450}
@@ -399,7 +399,18 @@ const Page = () => {
   src="/img/fiverrclone/gigger-mobiles.png"
   alt="Fiverr Clone"
   className="lazy"
+/> */}
+
+<Image
+  priority={true}
+  width={450}
+  height={500}
+  src="/img/fiverrclone/gigger-mobiles.png"
+  alt="Fiverr Clone"
+  sizes="(max-width: 768px) 100vw, 450px"
+  className="lazy"
 />
+
 
               </div>
             </div>

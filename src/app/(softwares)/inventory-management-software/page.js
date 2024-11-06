@@ -172,7 +172,6 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      
 
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign InventoryManagementBanner">
         <div className="container">
@@ -2138,8 +2137,8 @@ const Page = () => {
                         You have the flexibility to modify the script by
                         removing your company information and substituting it
                         with yours. However, it is not permissible to include
-                        &quot;copyright by&quot; since exclusive copyright ownership for
-                        the software rests with us.
+                        &quot;copyright by&quot; since exclusive copyright
+                        ownership for the software rests with us.
                       </p>
                     </MDBAccordionItem>
 
@@ -2399,7 +2398,7 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/job-board-software'"
+                    href="/job-board-software"
                   >
                     <div className="caption">
                       <div className="other-caption-bx">

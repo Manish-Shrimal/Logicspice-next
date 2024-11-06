@@ -1842,7 +1842,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
-                          href="https://taxi-booking-app.logicspice.com/"
+                          href="/softwares"
                           className="ready-product"
                           data-aos="fade-up"
                         >
@@ -4112,7 +4112,7 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <a
-                          href="https://taxi-booking-app.logicspice.com/"
+                          href="/softwares"
                           className="ready-product"
                           data-aos="fade-up"
                         >

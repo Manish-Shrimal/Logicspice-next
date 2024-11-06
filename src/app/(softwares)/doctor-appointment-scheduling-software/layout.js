@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/best-online-booking-software-for-seamless-appointment-scheduling`,{
+  const product = await fetch(`${MetadataApi}/doctor-appointment-scheduling-software`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
@@ -27,8 +27,11 @@ export async function generateMetadata({ params, searchParams }, parent) {
       .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
 
 
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
+      
+      schemaOrg = cleanedText;
 
+  } else {
+    schemaOrg = "";
   }
   // Return metadata
   return {
@@ -37,7 +40,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/booking-software-solution`,
+      canonical: `${Domain}/doctor-appointment-scheduling-software`,
     },
     robots: {
       index: true,

@@ -3705,7 +3705,7 @@
   }
 
   .su_rev_section {
-    padding: 23px 0 20px !important;
+    padding: 46px 0 0px !important;
   }
 
   .reviews_down_pro {
@@ -4215,7 +4215,8 @@
   }
 
   .enq-section .btn.btn-primary {
-    margin-bottom: 0;
+    margin-bottom: 0!important;
+    text-transform: capitalize !important;
   }
 
   .enq-section {
@@ -4257,7 +4258,7 @@
   }
 
   .tatxt_txt_job {
-    padding: 20px 0 20px;
+    padding: 20px 0 20px!important;
   }
 
   .service-market-ttd li:last-child {
@@ -4712,8 +4713,12 @@
 
   .LaravelLeftImg,
   .LaravelRightImg {
-    display: none;
+    display: none!important;
   }
+
+  /* .LaravelLeftImg{
+    width: 80px!important;
+  } */
 
   .LaravelBanners .LaravelBannerImg {
     display: none;

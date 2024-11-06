@@ -281,7 +281,7 @@ body {
 
 
 .software_products .new-product-box .ready-product{
-  min-height: 350px !important;
+  min-height: 360px !important;
 }
 
 
@@ -297,7 +297,7 @@ body {
   border-radius: 5px !important;
   border: 2px #363737 solid;
   line-height: 23px;
-  font-weight: 600;
+  font-weight: 600!important;
 }
 
 .fiverr-new-banner .job-valu-btn .fiverr-buys:hover {
@@ -435,7 +435,10 @@ body {
   left: 0;
   bottom: 0px;
 }
-
+.softwareBreadcumbs{
+  bottom: 40px!important;
+  z-index: 9;
+}
 .fiverr-new-banner .job-portal-banner-link {
   bottom: 20px;
   z-index: 9;
@@ -492,7 +495,7 @@ body {
 }
 
 .JobBoardSectionNew {
-  padding: 30px 0;
+  padding: 30px 0!important;
 }
 
 .job-section-top-new p {
@@ -554,7 +557,7 @@ section {
 }
 
 .job_portal_area {
-  padding: 40px 0;
+  padding: 40px 0 40px!important;
 }
 
 .job_or_title {
@@ -671,9 +674,9 @@ section {
   background-size: 110px;
 }
 
-.tab_contant {
+/* .tab_contant {
   padding: 30px 0 20px;
-}
+} */
 
 .costomer_tab_right {
   position: relative;
@@ -1090,6 +1093,7 @@ section {
 
 .logic-parter a {
   display: inline-block;
+  /* width: 90%; */
   margin: 0 20px;
   color: #363737;
   font-size: 19px;
@@ -1381,7 +1385,7 @@ section {
 
 .whatsupport_section {
   background: #f3f3f3;
-  padding: 80px 0;
+  padding: 80px 0!important;
 }
 
 .supportsetting ul {
@@ -1543,7 +1547,7 @@ section {
 }
 
 .latest_feature_product {
-  padding: 40px 0 40px;
+  padding: 40px 0 40px!important;
 }
 
 .other-product-box {
@@ -2016,7 +2020,8 @@ section {
 	background: #fff !important;
 	border-color: #258635 !important;
 	color: #258635 !important;
-	font-weight: 500 !important;
+	/* font-weight: 500 !important; */
+  font-family: 'lato',sans-serif;
 }
 /* Fiverr-clone start*/
 .job-portal-banner {
@@ -3316,7 +3321,7 @@ section {
 
 .portel-btnbx {
   float: left;
-  padding-top: 14px!important;
+  padding-top: 20px!important;
   padding-left: 0px;
 }
 
@@ -6288,6 +6293,7 @@ before {
   }
   .logic-parter a {
     margin: 4px 20px;
+    width: 90%;
   }
   .taxt_tt_job {
     font-size: 23px;

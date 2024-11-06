@@ -83,6 +83,19 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
+    // if (formData.phone_no === "") {
+    //   newErrors.phone_no = "Please enter your phone number";
+    // } else
+    if(formData.phone_no) {
+      if (!/^\d+$/.test(formData.phone_no)) {
+        newErrors.phone_no = "Please enter a valid phone number with only digits";
+      }
+    }
+    
+    
+    // if (formData.phone_no != ""){
+    //   newErrors.phone_no ="Please enter a valid phone";
+    // }
 
     if (formData.message === "") {
       newErrors.message = "Please enter your message";
@@ -216,7 +229,11 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                             id="phone_no"
                             value={formData.phone_no}
                             onChange={handleChange}
-                            className="form-control"
+                            // className="form-control"
+                            className={`form-control ${
+                              errors.phone_no ? "fieldRequired" : ""
+                            }`}
+                            
                             placeholder="Your Mobile Number"
                             aria-describedby="inputGroupPrepend"
                           />
@@ -278,7 +295,7 @@ const Contactusmodel = ({ modalStatus, toggle, title }) => {
                     </div>
                   )}
                 </div>
-                <hr />
+              
                 {!resultSuccess && (
                   <div className="modal-footer">
                     <input

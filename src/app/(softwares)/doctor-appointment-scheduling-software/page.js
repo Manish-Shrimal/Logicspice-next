@@ -178,9 +178,12 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">
-              <h1>LS Jobber - Online Job Board Software</h1>
+              <h1>Online Doctor Appointment Scheduling Software</h1>
               <div className="both-left-p-sec">
-                <h2>Create your own White Label Job Board</h2>
+                <h2>
+                  Manage patient appointments with flexible scheduling solutions
+                  easily.
+                </h2>
               </div>
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
@@ -229,14 +232,14 @@ const Page = () => {
                       <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Job Board Software. See how it works yourself!"
+                        title="Please fill the form below and get access to the live demo of Online Doctor Appointment Scheduling Software. See how it works yourself!"
                       />
                     }
                   </div>
 
                   <a
                     className=" fiverr-buys NewGreenBtnJob text-center"
-                    href="/buy-now/job-board-software"
+                    href="/buy-now/doctor-appointment-scheduling-software"
                     id="buy_now_1"
                   >
                     BUY NOW
@@ -346,7 +349,7 @@ const Page = () => {
                   height={100}
                   className="lazy"
                   src="/img/jobboard/new-img-jobboard.png"
-                  alt="Job_Board_Software"
+                  alt="Online Doctor Appointment Scheduling Software"
                   unoptimized={true}
                 />
               </div>
@@ -362,7 +365,7 @@ const Page = () => {
                   <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  Job Board Software
+                  Online Doctor Appointment Scheduling Software
                 </li>
               </ol>
             </div>
@@ -391,29 +394,31 @@ const Page = () => {
             <i>white Label job board</i> in less time.
           </p>
           <p>
-            LS Jobber, a{" "}
             <strong>
-              <i>job board software</i>
+              <i>Online Doctor Appointment Scheduling Software</i>
             </strong>{" "}
-            that makes it easy for businesses to hire people online. It works
-            similar to popular job sites like Indeed, Monster, Naukri, and
-            CareerBuilder. With LS Jobber, job seekers can search and apply for
-            open positions. They can upload their resumes in different file
-            formats, including video resumes (video CVs). LS Jobber is a
-            white-label job board, which means companies can customize it to
-            match their own branding. It&apos;s a ready-to-use software that
-            allows businesses, organizations, recruitment agencies, and
-            investors to quickly set up their own white label job board website.
-            Overall, this Job board software is designed to make the job hiring
-            process smoother and more efficient for both employers and job
-            seekers.
+            makes the scheduling of medical appointments easy and hassle-free.
+            This software is specifically designed for healthcare providers.
+            Patients can find their doctor online and book an appointment in a
+            few simple steps. With just a few clicks, patients will be allowed
+            to choose their time slots in accordance with the availability of
+            doctors.
+          </p>
+          <p>
+            This is a white-label solution that can be themed to one&apos;s own brand
+            name and identity. It&apos;s a ready-to-use software that helps clinics,
+            hospitals, and private practices set up their own appointment
+            booking system in no time.
           </p>
         </div>
       </section>
-      <section className="client-say jobBoardNewSoftware" style={{ backgroundColor: "#f1f1f1",  }}>
+      <section
+        className="client-say jobBoardNewSoftware"
+        style={{ backgroundColor: "#f1f1f1" }}
+      >
         <div className="container">
           <div className="row">
-            <div className="col-md-6 job-video">
+            {/* <div className="col-md-6 job-video">
               <iframe
                 width="100%"
                 height="312"
@@ -423,7 +428,7 @@ const Page = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""
               ></iframe>
-            </div>
+            </div> */}
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
@@ -2157,13 +2162,13 @@ const Page = () => {
             />
           </Modal.Body>
           {/* <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer> */}
+                <button
+                  className="btn btn-secondary"
+                  onClick={toggleJobPortalModal}
+                >
+                  Close
+                </button>
+              </Modal.Footer> */}
         </Modal>
 
         <Modal
@@ -2365,13 +2370,13 @@ const Page = () => {
             </div>
           </Modal.Body>
           {/* <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer> */}
+                <button
+                  className="btn btn-secondary"
+                  onClick={toggleBuyJobPortalModal}
+                >
+                  Close
+                </button>
+              </Modal.Footer> */}
         </Modal>
       </div>
       <section className="used_technology_section" id="technologies">
@@ -2787,349 +2792,349 @@ const Page = () => {
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
               {/* <div className="panel-group faq_quick_sec" id="accordion">
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        aria-expanded="true"
-                        href="#collapse1"
-                      >
-                        <span>01. </span> Can a Jobseeker upload his CV to apply
-                        for job?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            aria-expanded="true"
+                            href="#collapse1"
+                          >
+                            <span>01. </span> Can a Jobseeker upload his CV to apply
+                            for job?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse1" className="panel-collapse collapse in">
+                        <div className="panel-body">
+                          <p>
+                            No. The information about the jobseeker will go from his
+                            profile to the employer that he is applying the job for.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse1" className="panel-collapse collapse in">
-                    <div className="panel-body">
-                      <p>
-                        No. The information about the jobseeker will go from his
-                        profile to the employer that he is applying the job for.
-                      </p>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse2"
+                          >
+                            <span>02. </span> Will there be any installation charges
+                            when I purchase the job portal script?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse2" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            No. The installation of our Job Portal Product will be
+                            absolutely free of cost.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse2"
-                      >
-                        <span>02. </span> Will there be any installation charges
-                        when I purchase the job portal script?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse3"
+                          >
+                            <span>03. </span> Can jobseeker download the CV that he
+                            has created on this website?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse3" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            Yes. Once the job seeker creates his CV, he can download
+                            the same in a PDF format.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse2" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        No. The installation of our Job Portal Product will be
-                        absolutely free of cost.
-                      </p>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse4"
+                          >
+                            <span>04. </span> Can employer or jobseeker write blog
+                            posts?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse4" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            The employers and jobseekers can not write blog posts.
+                            The blog posts will be written by admin and employers
+                            &amp; Job Seekers can view them.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse3"
-                      >
-                        <span>03. </span> Can jobseeker download the CV that he
-                        has created on this website?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse6"
+                          >
+                            <span>05. </span> Once I purchase the job portal script,
+                            how many days will it take to go online?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse6" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            It takes 2 working days generally, provided all the
+                            information to make it live has been given. If you want
+                            customizations, then time taken to implement your Job
+                            portal depends on the level of customization and data
+                            migration.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse3" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes. Once the job seeker creates his CV, he can download
-                        the same in a PDF format.
-                      </p>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse7"
+                          >
+                            <span>06. </span> How can Jobseeker apply for a job?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse7" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            Jobseeker can send their details directly to the job
+                            company or they can attached a cover letter along with
+                            their application. They can edit add or delete their
+                            cover letter from the profile.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse4"
-                      >
-                        <span>04. </span> Can employer or jobseeker write blog
-                        posts?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse8"
+                          >
+                            <span>07. </span> How can Jobseeker create job alerts?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse8" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            Jobseekers will be able to manage the alerts that will
+                            help them to receive emails if the job is available
+                            according to their set criteria. They can add alerts by
+                            providing the information like designation of job
+                            required and location of job.{" "}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse4" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        The employers and jobseekers can not write blog posts.
-                        The blog posts will be written by admin and employers
-                        &amp; Job Seekers can view them.
-                      </p>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse201"
+                          >
+                            <span>08. </span> Can I update some design and
+                            functionality in application code myself?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse201" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            Yes, You will have access of the all the code, except
+                            some of the core encrypted files.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse6"
-                      >
-                        <span>05. </span> Once I purchase the job portal script,
-                        how many days will it take to go online?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse202"
+                          >
+                            <span>09. </span> Will I be able to use it on multiple
+                            domains, after I purchase this script?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse202" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            You will be licensed to use it only for the domain, you
+                            purchased for.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse6" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        It takes 2 working days generally, provided all the
-                        information to make it live has been given. If you want
-                        customizations, then time taken to implement your Job
-                        portal depends on the level of customization and data
-                        migration.
-                      </p>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse203"
+                          >
+                            <span>10. </span> Can I resell the script? Will I have
+                            rights over the script code?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse203" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            All rights will remain with Logicspice only, and you can
+                            not resell it.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse7"
-                      >
-                        <span>06. </span> How can Jobseeker apply for a job?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse204"
+                          >
+                            <span>11. </span> Do you offer Money Back Guarantee?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse204" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            Yes, we offer 30 days money back guarantee to ensure
+                            customer satisfaction of our softwares. If for any
+                            reason, you wish to discontinue using the product, you
+                            can ask us for refund. We will refund your total money
+                            except the installation and configuration charges, which
+                            is USD 65 or 20% of application cost, whichever is
+                            greater. Any cost of customization will not be refunded.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse7" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Jobseeker can send their details directly to the job
-                        company or they can attached a cover letter along with
-                        their application. They can edit add or delete their
-                        cover letter from the profile.
-                      </p>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse07"
+                          >
+                            <span>12. </span> Do I need to provide Google map API
+                            key? If yes, how to generate Google map API key?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse07" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            Yes, you need to provide map API key. Please follow the
+                            steps mentioned in below URL to generate Google map API
+                            key:
+                            https://developers.google.com/maps/documentation/javascript/get-api-key.
+                            You need to setup your billing details over that.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse8"
-                      >
-                        <span>07. </span> How can Jobseeker create job alerts?
-                      </a>
+                    <div
+                      className="panel panel-default aos-init aos-animate"
+                      data-aos="fade-up"
+                    >
+                      <div className="panel-heading">
+                        <div className="panel-title">
+                          <a
+                            data-toggle="collapse"
+                            data-parent="#accordion"
+                            href="#collapse504"
+                          >
+                            <span>13. </span> Along with hosting server details,
+                            what other recommendations?
+                          </a>
+                        </div>
+                      </div>
+                      <div id="collapse504" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <p>
+                            We recommend you purchase SSL certificate along with a
+                            hosting server, considering that an SSL certificate is
+                            necessary for all the websites these days and it
+                            provides a secure layer to the website as well.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div id="collapse8" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Jobseekers will be able to manage the alerts that will
-                        help them to receive emails if the job is available
-                        according to their set criteria. They can add alerts by
-                        providing the information like designation of job
-                        required and location of job.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse201"
-                      >
-                        <span>08. </span> Can I update some design and
-                        functionality in application code myself?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse201" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes, You will have access of the all the code, except
-                        some of the core encrypted files.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse202"
-                      >
-                        <span>09. </span> Will I be able to use it on multiple
-                        domains, after I purchase this script?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse202" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        You will be licensed to use it only for the domain, you
-                        purchased for.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse203"
-                      >
-                        <span>10. </span> Can I resell the script? Will I have
-                        rights over the script code?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse203" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        All rights will remain with Logicspice only, and you can
-                        not resell it.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse204"
-                      >
-                        <span>11. </span> Do you offer Money Back Guarantee?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse204" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes, we offer 30 days money back guarantee to ensure
-                        customer satisfaction of our softwares. If for any
-                        reason, you wish to discontinue using the product, you
-                        can ask us for refund. We will refund your total money
-                        except the installation and configuration charges, which
-                        is USD 65 or 20% of application cost, whichever is
-                        greater. Any cost of customization will not be refunded.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse07"
-                      >
-                        <span>12. </span> Do I need to provide Google map API
-                        key? If yes, how to generate Google map API key?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse07" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes, you need to provide map API key. Please follow the
-                        steps mentioned in below URL to generate Google map API
-                        key:
-                        https://developers.google.com/maps/documentation/javascript/get-api-key.
-                        You need to setup your billing details over that.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse504"
-                      >
-                        <span>13. </span> Along with hosting server details,
-                        what other recommendations?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse504" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        We recommend you purchase SSL certificate along with a
-                        hosting server, considering that an SSL certificate is
-                        necessary for all the websites these days and it
-                        provides a secure layer to the website as well.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+                  </div> */}
               <div id="accordion">
                 <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>

@@ -1151,7 +1151,7 @@ const Page = () => {
               >
                 <div className="libraries_laravel_choose">
                   <a
-                    href="https://www.logicspice.com/logistic-marketplacesoftware"
+                    href="https://www.logicspice.com/logistic-marketplace-software"
                     target="_blank"
                   >
                     <div className="laravel_choose_features_img laravel_choose_features_img3">

@@ -323,11 +323,11 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="job-portal-banner-link">
+          <div className="job-portal-banner-link softwareBreadcumbs">
             <div aria-label="breadcrumb" className="my-breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <Link href="">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
                   <Link href="/softwares">Softwares</Link>
@@ -2037,7 +2037,7 @@ const Page = () => {
                       my project... Thanks LogicSpice Team !!! &quot;
                     </div>
 
-                    <div className="who_ratset">
+                    <div className="who_ratset" style={{textAlign:"right", paddingRight:"17px"}}>
                       <span className="star_review_main">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -2063,7 +2063,7 @@ const Page = () => {
                       I am pleased with My LogicSpice Experience.&quot;
                     </div>
 
-                    <div className="who_ratset">
+                    <div className="who_ratset" style={{textAlign:"right", paddingRight:"17px"}}>
                       <span className="star_review_main">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -2090,7 +2090,7 @@ const Page = () => {
                       LS Crowdfunding Script.&quot;
                     </div>
 
-                    <div className="who_ratset">
+                    <div className="who_ratset" style={{textAlign:"right", paddingRight:"17px"}}>
                       <span className="star_review_main">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>

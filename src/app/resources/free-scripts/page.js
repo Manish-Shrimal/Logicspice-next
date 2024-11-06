@@ -9,7 +9,6 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../resources.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 
-
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -106,8 +105,8 @@ const Page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="FreeScriptProductsImg">
                       <Image
-                       width={650}
-                       height={500 / (100 / 100)}
+                        width={650}
+                        height={500 / (100 / 100)}
                         alt="FAQ Script"
                         src="/img/resources/Faqscript-img.jpg"
                         class=""
@@ -151,8 +150,8 @@ const Page = () => {
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="FreeScriptProductsImg">
                       <Image
-                      width={650}
-                      height={500 / (100 / 100)}
+                        width={650}
+                        height={500 / (100 / 100)}
                         alt="Blog Script"
                         src="/img/resources/blogscript-img.jpg"
                         class=""
@@ -246,18 +245,20 @@ const Page = () => {
             </h4>
             <div class="UsedTechnologySectionDataa">
               <ul>
-                
-                <li data-aos="fade-up" class="iOSUsedTechnology aos-init aos-animate">
-                <div class="UsedTechnologyImg">
+                <li
+                  data-aos="fade-up"
+                  class="iOSUsedTechnology aos-init aos-animate"
+                >
+                  <div class="UsedTechnologyImg">
                     <Image
-                     width={40}
-                     height={500 / (100 / 100)}
+                      width={40}
+                      height={500 / (100 / 100)}
                       alt="iOS Development"
                       src="/img/resources/tech_ios_icon.png"
                     />
                   </div>
-                        <div class="UsedTechnologyTxt">iOS</div>
-                    </li>
+                  <div class="UsedTechnologyTxt">iOS</div>
+                </li>
                 <li
                   data-aos="fade-up"
                   class="JavaUsedTechnology aos-init aos-animate"

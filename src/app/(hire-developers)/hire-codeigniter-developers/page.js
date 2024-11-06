@@ -5,6 +5,9 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/(hire-developers)/hire-developer.css";
 import Image from "next/image";
 import Link from "next/link";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
@@ -12,9 +15,16 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import Support from "@/app/Components/Support";
 import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";
-const Page = () => {
-  const [modalOpen, setModalOpen] = useState(false);
 
+const Page = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+  const item = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
@@ -53,7 +63,7 @@ const Page = () => {
     },
     {
       id: 5,
-      image: "/img/globalbusinesscountries/tjulia1.jpg",
+      image: "/img/home/look/yp-logo.webp",
       heading: "Build a Social Networking Website With Payment System",
       text: "&quot;I hired this team for a very complex project that involved handling many different types of users, payment options, and social network integration. Extremely timely and professional. Will use again!&quot;",
       name: "Tom J.",
@@ -62,7 +72,7 @@ const Page = () => {
   ];
   return (
     <>
-      <Navbar />
+       <Navbar />
       <section
         style={{}}
         class="hire_developer_back_iin otherhire_developer_back_iin"
@@ -71,9 +81,9 @@ const Page = () => {
           <div class="container">
             <div class="row">
               <div class="col-md-8 text-start">
-                <h1 class="slide_title">Hire Laravel Developers</h1>
+                <h1 class="slide_title">Hire CodeIgniter Developer</h1>
                 <div class="subinstet">
-                  Hire dedicated laravel programmers from the hub of talented
+                  Hire codeigniter programmer from the hub of talented
                   developers to attain your development needs.
                 </div>
                 <div class="developer-servicees-bx">
@@ -95,26 +105,13 @@ const Page = () => {
                   </div>
                 </div>
                 <div class="nt_cdl">
-                  {/* <a
-                    href="javascript:void(0);"
-                    data-toggle="modal"
-                    data-target="#popup_sc_product"
-                    onclick='if (!window.__cfRLUnblockHandlers) return false; $("#update_frm").html("Request to hire laravel developers");
-                                    $("#contact_fr").val("Hire Laravel Developers");
-                           '
-                    id=""
-                    class="btn btn-primary"
-                    data-cf-modified-1a16f141c132cb889313ca56-=""
-                  >
-                    Hire Now!
-                  </a> */}
                   <a onClick={toggleModal} className="btn btn-primary">
                     <Contactusmodel
                       modalStatus={modalOpen}
                       toggle={toggleModal}
-                      title="Hire Python Developers"
+                      title="Hire CodeIgniter Developer"
                     />
-                    Hire Now!
+                    Hire Now
                   </a>
 
                   <a
@@ -128,10 +125,10 @@ const Page = () => {
               <div class="col-md-4">
                 <div class="cack_logo_img">
                   <Image
-                    width={312}
+                    width={233}
                     height={100}
-                    alt="Hire Laravel Developers"
-                    src="/img/hiredevelopers/hire_laravel_developer.png"
+                    alt="Hire WordPress Developer"
+                    src="/img/hiredevelopers/Hire_codeigniter_developer.png"
                   />
                 </div>
               </div>
@@ -205,63 +202,53 @@ const Page = () => {
             <div class="row">
               <div class="col-md-6">
                 <div class="jumbotron">
-                  <h2>Hire Laravel Expert</h2>
+                  <h2>Codeigniter developer for hire</h2>
                   <p>
-                    We help businesses grow, by partnering with them to provide
-                    expert and dedicated Laravel developers.{" "}
-                    <strong>Hire Expert Laravel developers</strong> from
-                    Logicspice, who are well experienced and highly
-                    knowledgeable.
-                    <br />
-                    Laravel is the most amazing and fantastic framework which is
-                    developed by writing code syntax. So, if you are planning to
-                    get this code syntax for your e-commerce store and site,
-                    then, we can provide you with the most dedicated Laravel
-                    developers. &nbsp;
-                    <br />
-                    &nbsp;
-                    <br />
-                    When you hire Laravel developers in India, USA, UK &amp;
-                    other european countries, you gain access to a vast talent
-                    pool renowned for its technical proficiency and
-                    cost-effectiveness. Our team of dedicated Laravel developers
-                    is well-versed in crafting dynamic, high-performance web
-                    applications that align with your business goals. &nbsp;
-                    <br />
-                    Our freelance Laravel developers have years of experience
-                    and there is no doubt in saying that we are one of the
-                    finest{" "}
-                    <Link href="/laravel-development">
-                      Laravel service providers
+                    Codeigniter is a powerful application development framework
+                    to create full-featured web application which provides a
+                    rich set of libraries for commonly needed tasks with a
+                    simple interface and logical structure to access these
+                    libraries. Logicspice offers the most proficient and expert{" "}
+                    <Link href="/codeigniter-development">
+                      codeigniter web developers
                     </Link>{" "}
-                    available in the market. We have in-depth knowledge of
-                    scripting and can help in building easy-to-maintain, modern,
-                    and platform-friendly websites.
-                  </p>{" "}
+                    offering affordable, cost-effective solutions that best suit
+                    your project development requirements. <br />
+                    <br />
+                    Our dedicated codeigniter programmers have extensive
+                    knowledge in MVC pattern, they deliver highly effective and
+                    quality solution for your PHP development needs. After
+                    hiring our expert codeigniter developer, you get the neatly
+                    coded solution and extensive support from our codeigniter
+                    web developers.
+                    <br />
+                    <br />
+                    Logicspice is well known for its innovative and creative
+                    approach in codeigniter. Hire codeigniter developer from us
+                    and get outstanding results in the competitive market.
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <h2>Technical expertise</h2>
                 <ul class="list-group">
                   <li class="list-group-item">
-                    <span>Advance skills in PHP, HTML, CSS</span>
+                    <span>Understanding in codeigniter framework</span>
                   </li>
                   <li class="list-group-item">
-                    <span>Experience working with a PHP framework</span>
+                    <span>Skills in PHP & HTML5</span>
                   </li>
                   <li class="list-group-item">
-                    <span>
-                      Have worked on projects like e-Commerce, CRM, CMS
-                    </span>
+                    <span>Expertise in AJAX & MySQL</span>
                   </li>
                   <li class="list-group-item">
-                    <span>Experience in frontend and backend</span>
+                    <span>Experience in codeigniter extension development</span>
                   </li>
                   <li class="list-group-item">
-                    <span>Good understanding of database performance</span>
+                    <span>CorePHP skills</span>
                   </li>
                   <li class="list-group-item">
-                    <span>Understanding of cross platforms</span>
+                    <span>Excellence in handling clients</span>
                   </li>
                 </ul>{" "}
               </div>
@@ -272,9 +259,7 @@ const Page = () => {
 
       <section class="new-custom-section">
         <div class="container">
-          <h2>
-            Hire Laravel developer in India for custom Laravel development
-          </h2>
+          <h2>Hire us for following codeigniter development solution</h2>
           <div class="custom-solution-bx">
             <div class="row">
               <div class="col-md-6">
@@ -284,15 +269,15 @@ const Page = () => {
                       <Image
                         width={64}
                         height={100}
-                        src="/img/hiredevelopers/custom-icon1.png"
                         alt="icon-1"
+                        src="/img/hiredevelopers/custom-icon1.png"
                       />
                     </i>
                     <div class="custom-ser-txt">
-                      <h3>1. eCommerce development</h3>
+                      <h3>1. Codeigniter web development</h3>
                       <p>
-                        Get the most flexible solution for your eCommerce
-                        business with the help of our laravel developers.
+                        Featured rich & result driven web development solution
+                        at affordable price.
                       </p>
                     </div>
                   </li>
@@ -301,15 +286,15 @@ const Page = () => {
                       <Image
                         width={64}
                         height={100}
-                        src="/img/hiredevelopers/custom-icon2.png"
                         alt="icon-2"
+                        src="/img/hiredevelopers/custom-icon2.png"
                       />
                     </i>
                     <div class="custom-ser-txt">
                       <h3>2. Migration solution</h3>
                       <p>
-                        Our dedicated laravel developers will help you to get
-                        the right kind of migration services.
+                        Easily use your code to the another project through
+                        codeigniter migration to save money and time.
                       </p>
                     </div>
                   </li>
@@ -318,15 +303,15 @@ const Page = () => {
                       <Image
                         width={64}
                         height={100}
-                        src="/img/hiredevelopers/custom-icon3.png"
                         alt="icon-3"
+                        src="/img/hiredevelopers/custom-icon3.png"
                       />
                     </i>
                     <div class="custom-ser-txt">
-                      <h3>3. CMS solution</h3>
+                      <h3>3. eCommerce solution</h3>
                       <p>
-                        Affordable and result driven cakephp development
-                        solutions to help your business to grow.
+                        Get you eCommerce online store with flexible solution
+                        developed by our developers.
                       </p>
                     </div>
                   </li>
@@ -339,15 +324,15 @@ const Page = () => {
                       <Image
                         width={64}
                         height={100}
-                        src="/img/hiredevelopers/custom-icon4.png"
                         alt="icon-4"
+                        src="/img/hiredevelopers/custom-icon4.png"
                       />
                     </i>
                     <div class="custom-ser-txt">
-                      <h3>4. Social networking solution</h3>
+                      <h3>4. Custom module development</h3>
                       <p>
-                        Make networking easier with the right kind of one-source
-                        web application with our laravel programmers.
+                        Develop modules which suits your business requirement
+                        best in application.
                       </p>
                     </div>
                   </li>
@@ -356,15 +341,15 @@ const Page = () => {
                       <Image
                         width={64}
                         height={100}
-                        src="/img/hiredevelopers/custom-icon5.png"
                         alt="icon-5"
+                        src="/img/hiredevelopers/custom-icon5.png"
                       />
                     </i>
                     <div class="custom-ser-txt">
-                      <h3>5. Theme design &amp; integration</h3>
+                      <h3>5. Integrate 3rd party API</h3>
                       <p>
-                        Easiest framework to integrate new themes and templates
-                        with the help of our developers.
+                        Our developers have experience in developing 3rd Party
+                        API for adding more functionality.
                       </p>
                     </div>
                   </li>
@@ -373,28 +358,29 @@ const Page = () => {
                       <Image
                         width={64}
                         height={100}
-                        src="/img/hiredevelopers/custom-icon6.png"
                         alt="icon-6"
+                        src="/img/hiredevelopers/custom-icon6.png"
                       />
                     </i>
                     <div class="custom-ser-txt">
-                      <h3>6. Extension development</h3>
+                      <h3>6. Theme integration</h3>
                       <p>
-                        We are ready to help you with extending your Laravel
-                        extension.
+                        Integrate theme in codeigniter with the help of our
+                        codeigniter programmer.
                       </p>
                     </div>
                   </li>
                 </ul>
               </div>
-            </div>
-            <p>&nbsp;</p>{" "}
+            </div>{" "}
           </div>
         </div>
       </section>
       <section class="dev_step_solution">
         <div class="container">
-          <h2 class="title_heading">Hire laravel programmer in 5 easy steps</h2>
+          <h2 class="title_heading">
+            Hire expert codeigniter developer in 5 easy steps
+          </h2>
           <div class="step-row">
             <div class="col-md-2">
               <div class="dev-steps">
@@ -467,11 +453,146 @@ const Page = () => {
               <Contactusmodel
                 modalStatus={modalOpen}
                 toggle={toggleModal}
-                title="Hire Python Developers"
+                title="Hire Codeignitor Developer"
               />
-              Hire Now!
+              Hire Now
             </a>
           </div>
+        </div>
+      </section>
+      <section class="portfolio_hire PortfolioWebsiteSlider">
+        <div class="container">
+          <Slider {...item}>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="/img/hiredevelopers/gloryfastboats--1-.png"
+                        alt="Logicspice codeigniter portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> GloryFastBoats
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.gloryfastboats.com/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Codeigniter
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Boat Company Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="/img/hiredevelopers/shjewellery.png"
+                        alt="Logicspice codeigniter portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> shjewellery
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.shjewellery.com.au/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Codeigniter
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> Jewelry Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="port_feat_img">
+                    <span>
+                      <Image
+                        width={808}
+                        height={100}
+                        src="/img/hiredevelopers/entitymakers.png"
+                        alt="Logicspice codeigniter portfolio"
+                        class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image"
+                      />{" "}
+                    </span>
+                  </div>
+                  <div class="portimagesec_shadow"></div>
+                </div>
+                <div class="col-md-6">
+                  <ul class="port_feat">
+                    <li>
+                      <b>Website Name:</b> EntityMakers
+                    </li>
+                    <li>
+                      <b>Website URL:</b> http://www.entitymakers.com.au/
+                    </li>
+                    <li>
+                      <b>Framework:</b> Codeigniter
+                    </li>
+                    <li>
+                      <b>Language:</b> PHP5, AJAX, jQuery, Java scripts
+                    </li>
+                    <li>
+                      <b>Database:</b> MySQL
+                    </li>
+                    <li>
+                      <b>Server:</b> Apache
+                    </li>
+                    <li>
+                      <b>Overview:</b> PDF generation Website
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
       </section>
 
@@ -485,7 +606,7 @@ const Page = () => {
                 <Contactusmodel
                   modalStatus={modalOpen}
                   toggle={toggleModal}
-                  title="Hire Laravel Developer"
+                  title="Hire Codeignitor Developer"
                 />
                 Hire Now!
               </a>
@@ -504,6 +625,36 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
+                    href="/hire-laravel-developers"
+                  >
+                    <div class="caption">
+                      <div class="other-caption-bx">
+                        <h3>Hire Laravel Developer</h3>
+                        <div class="other-project-logo">
+                          <Image
+                            width={100}
+                            height={100}
+                            src="/img/hiredevelopers/laravel_img.png"
+                            alt="img"
+                          />
+                        </div>
+                        <p>
+                          <span>
+                            Hire dedicated and expert laravel developers to
+                            develop high performance Laravel web applications.
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <Link
+                    title="View Detail"
+                    target="_black"
                     href="/hire-cakephp-developers"
                   >
                     <div class="caption">
@@ -511,7 +662,7 @@ const Page = () => {
                         <h3>Hire CakePHP Developer</h3>
                         <div class="other-project-logo">
                           <Image
-                            width={90}
+                            width={100}
                             height={100}
                             src="/img/hiredevelopers/cakephp_img.png"
                             alt="img"
@@ -534,52 +685,23 @@ const Page = () => {
                   <Link
                     title="View Detail"
                     target="_black"
-                    href="/hire-codeigniter-developers"
+                    href="/hire-wordpress-experts"
                   >
                     <div class="caption">
                       <div class="other-caption-bx">
-                        <h3>Hire CodeIgniter Developer</h3>
+                        <h3>Hire WordPress Developer</h3>
                         <div class="other-project-logo">
                           <Image
-                            width={90}
+                            width={100}
                             height={100}
-                            src="/img/hiredevelopers/codeigniter_img.png"
+                            src="/img/hiredevelopers/wordpress_img.png"
                             alt="img"
                           />
                         </div>
                         <p>
                           <span>
-                            We have expert CodeIgniter web developers to work
-                            with your project at budget friendly rates.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/hire-node-js-experts"
-                  >
-                    <div class="caption">
-                      <div class="other-caption-bx">
-                        <h3>Hire Node.JS developer</h3>
-                        <div class="other-project-logo">
-                          <Image
-                            width={90}
-                            height={100}
-                            src="/img/hiredevelopers/nodejs-img.png"
-                            alt="img"
-                          />
-                        </div>
-                        <p>
-                          <span>
-                            Hire Node.js developers and programmers for best
-                            NodeJS eCommerce solutions development.
+                            Our expert Wordpress developers offer customized web
+                            development at low cost.
                           </span>
                         </p>
                       </div>
@@ -598,10 +720,10 @@ const Page = () => {
             target="_blank"
           >
             <Image
-              width={100}
-              height={100}
               src="/img/images/whatsapp.png"
               alt="whatsapp-icon"
+              width={50}
+              height={50}
             />
           </a>
         </div>
@@ -611,7 +733,7 @@ const Page = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

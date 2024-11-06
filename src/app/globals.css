@@ -116,9 +116,9 @@ body {
   color: red !important;
 }
 
-.btn button {
+/* .btn button {
   text-transform: uppercase;
-}
+} */
 
 /* footer css  */
 .nav.navbar-nav .ad-footer-view-all .btn.btn-primary {
@@ -2611,7 +2611,7 @@ positivitymain {
   border-radius: 3px !important;
   font-size: 16px !important;
   padding: 13px 20px !important;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   position: relative !important;
   transform: perspective(1px) translateZ(0px) !important;
   transition-duration: 0.3s !important;
