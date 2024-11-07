@@ -808,7 +808,7 @@ section {
   margin-bottom: 20px;
 }
 .SubscriptionModel {
-  padding: 40px 0;
+  padding: 30px 0!important;
 }
 .job_or_title {
   text-align: center;
@@ -6184,7 +6184,7 @@ before {
   }
 
   .SubscriptionpriceSection {
-    display: none;
+    display: none!important;
   }
   .NewJobSiteDesign {
     margin-top: 58px;
@@ -6249,11 +6249,17 @@ before {
     margin-top: 0 !important;
     margin-bottom: 15px;
   }
+  .job_product_page_header_in{
+    padding: 25px 0 10px!important;
+  }
   .job_product_page_header_in h2 {
     font-size: 20px;
   }
   .job_product_page_header_in h3 {
     font-size: 20px;
+  }
+  .SubscriptionModel{
+    padding: 15px 0!important;
   }
   .taxt_tt_job {
     font-size: 23px;

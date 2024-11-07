@@ -1492,6 +1492,14 @@ body {
 .case-study-listing .blog_row::before {
 	opacity: 1
 }
+.learn-n-earn_header::before {
+    background: rgb(95,95,139);
+    opacity: 0.7;
+}
+.loadboard-trucking21_header::before {
+    background: rgb(42,24,103);
+    opacity: 0.7;
+}
 .we-do-it-cheaper_header::before {
     background: rgb(255,18,130);
     opacity: 0.7;

@@ -3095,9 +3095,9 @@
     font-size: 30px;
   }
 
-  .job_product_page_header_in {
+  /* .job_product_page_header_in {
     margin-top: 20px;
-  }
+  } */
 
   .web_build_head p {
     font-size: 16px;
@@ -3315,9 +3315,9 @@
   .por-mobile img {
     max-width: 80%;
   }
-
   .job-portal-ttd {
     margin-top: 20px !important;
+    width: 100%;
   }
 
   .job-portal-ttd li {
@@ -3345,6 +3345,7 @@
 
   .client-say {
     padding-bottom: 10px;
+    padding: 20px 0;
   }
 
   .portel-btnbx {
@@ -4599,7 +4600,7 @@
   }
 
   .footer_bg .accordion-item .accordion-header .accordion-button {
-    padding: 10px !important;
+    padding: 10px 35px !important;
     border: none !important;
     color: #451095 !important;
     border-radius: 0 !important;
