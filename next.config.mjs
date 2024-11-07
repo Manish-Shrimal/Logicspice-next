@@ -52,16 +52,17 @@ const nextConfig = {
         destination: "https://setcourses.logicspice.com/", 
         permanent: true,
       },
+      // {
+      //   source: "/services/:slug*",
+      //   destination: "/:slug*", 
+      //   permanent: true,
+      // },
       {
         source: "/services/website-development/cakephp-development",
         destination: "/cakephp-development", 
         permanent: true,
       },
-      {
-        source: "/services/:slug*",
-        destination: "/:slug*", 
-        permanent: true,
-      },
+      
       {
         source: "/softwares/blog-script",
         destination: "/blog-script", 

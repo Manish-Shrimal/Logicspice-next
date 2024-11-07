@@ -394,7 +394,7 @@ const Page = () => {
               <iframe
                 width="100%"
                 height="312"
-                src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0&autoplay=1"
+                src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0&autoplay=0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"

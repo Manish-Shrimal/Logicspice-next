@@ -41,7 +41,7 @@ const Page = ({ params }) => {
       setLoading(true);
       const response = await axios.get(BaseAPI + `/case-studies/${slug}`);
       setPageData(response.data.allblogs);
-      console.log(response.data.allblogs);
+      // console.log(response.data.allblogs);
       setBlogData(response.data.latestBlog);
       caseStudyImagePath.current = response.data.caseStudyImage;
       blogImagePath.current = response.data.blogImage;
@@ -68,7 +68,7 @@ const Page = ({ params }) => {
         <div className="loaderScreen"></div>
       ) : (
         <>
-          <section className="casestudies_header we_do_it_cheaper_header">
+          <section className={`casestudies_header ${pageData.slug}_header`}>
             <div className="container">
               <div className="casestudies_sec">
                 <div className="breadcrumb-casestudies">

@@ -283,7 +283,7 @@ const Looksilder = () => {
                       </p>
                       <div className="multibutton">
                         <Link
-                          href="/company/portfolio"
+                          href="/portfolio"
                           className="btn btn-primary"
                         >
                           Portfolio

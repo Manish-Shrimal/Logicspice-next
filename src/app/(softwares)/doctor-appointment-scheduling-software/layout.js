@@ -28,7 +28,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 
       
-      schemaOrg = cleanedText;
+      schemaOrg = cleanedText && JSON.parse(cleanedText);
 
   } else {
     schemaOrg = "";

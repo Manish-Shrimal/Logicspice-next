@@ -59,7 +59,6 @@
 //   );
 // }
 
-
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
@@ -71,27 +70,23 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/angular-development`,{
+  const product = await fetch(`${MetadataApi}/angular-development`, {
     cache: "no-store",
-  }).then((res) =>
-    res.json()
-  );
+  }).then((res) => res.json());
   // console.log(product)
 
   let text = product.data.schema;
 
   let schemaOrg = null;
-  if(text){
+  if (text) {
     const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+      .replace(/\\n/g, "") // Remove \n (newline)
+      .replace(/\\r/g, "") // Remove \r (carriage return)
+      .replace(/\\+/g, "") // Remove unnecessary backslashes
+      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
-
+    schemaOrg = cleanedText && JSON.parse(cleanedText);
   }
 
   // Return metadata
@@ -121,7 +116,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
- 
+
   return (
     <html lang="en">
       <Head>
@@ -132,7 +127,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       <body className={inter.className}>{children}</body>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(metadata.schemaOrg) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
       />
     </html>
   );

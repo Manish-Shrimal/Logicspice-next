@@ -49,7 +49,9 @@ const Page = () => {
   }, []);
 
   const handlePageChange = (page) => {
+
     setCurrentPage(page);
+    window.scrollTo(0,0);
   };
 
   // Calculate the displayed items based on the current page
@@ -111,7 +113,7 @@ const Page = () => {
                                   {item.title}
                                 </Link>
                               </h4>
-                              <h3>Tipping Platform</h3>
+                              <h3>{item.sub_title}</h3>
                               <div class="media-left">
                                 <Image
                                   width={300}

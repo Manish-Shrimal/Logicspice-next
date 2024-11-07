@@ -72,7 +72,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       <body className={inter.className}>{children}</body>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: metadata.schemaOrg }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
       />
     </html>
   );

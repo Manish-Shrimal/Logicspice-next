@@ -1492,6 +1492,22 @@ body {
 .case-study-listing .blog_row::before {
 	opacity: 1
 }
+.we-do-it-cheaper_header::before {
+    background: rgb(255,18,130);
+    opacity: 0.7;
+}
+.gb-lancers_header::before {
+    background: rgb(193,32,92);
+    opacity: 0.7;
+}
+.job-at-home_header::before {
+    background: rgb(1,155,227);
+    opacity: 0.7;
+}
+.cupana_header::before {
+    background: rgb(92,131,47);
+    opacity: 0.7;
+}
 
 .iworks_header::before {
 	background: rgb(38, 192, 243);
@@ -2279,13 +2295,13 @@ section.nav-portfolio-top ul.nav {
 	float: left;
 	height: 100%;
 	width: 100%;
+	/* min-height: 324px; */
+}
+.port_base_img {
+	min-height: 196px;
 }
 
-.portfolio_single_content {
-	float: left;
-	height: 100%;
-	width: 100%;
-}
+
 
 .port_base_img img {
 	height: auto !important;

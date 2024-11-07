@@ -35,7 +35,6 @@ import { Pagination, Navigation } from "swiper/modules";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
-
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
@@ -47,6 +46,8 @@ const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const iframeRef = useRef();
 
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
@@ -95,6 +96,7 @@ const Page = () => {
   const [instructorTab, setInstructorTab] = useState(false);
   const [adminpanelTab, setAdminpanelTab] = useState(false);
   const [pageData, setPageData] = useState([]);
+  const videoRef = useRef();
 
   const getData = async () => {
     try {
@@ -209,21 +211,44 @@ const Page = () => {
     })();
   }, []); // Empty dependency array to run once on mount
 
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       setInView(entry.isIntersecting);
+  //     },
+  //     { root: null, rootMargin: "0px", threshold: 0.1 }
+  //   );
+
+  //   if (ref.current) {
+  //     observer.observe(ref.current);
+  //   }
+
+  //   return () => {
+  //     if (ref.current) {
+  //       observer.unobserve(ref.current);
+  //     }
+  //   };
+  // }, []);
+
   useEffect(() => {
+    // Intersection Observer to detect when the iframe enters the viewport
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setInView(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsInView(true); // Set to true when the iframe is in the viewport
+          observer.unobserve(entry.target); // Stop observing after it starts playing
+        }
       },
-      { root: null, rootMargin: "0px", threshold: 0.1 }
+      { threshold: 0.5 } // Trigger when 50% of the iframe is visible
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (iframeRef.current) {
+      observer.observe(iframeRef.current); // Start observing the iframe
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (iframeRef.current) {
+        observer.unobserve(iframeRef.current); // Cleanup observer when component unmounts
       }
     };
   }, []);
@@ -401,17 +426,15 @@ const Page = () => {
   className="lazy"
 /> */}
 
-<Image
-  priority={true}
-  width={450}
-  height={500}
-  src="/img/fiverrclone/gigger-mobiles.png"
-  alt="Fiverr Clone"
-  sizes="(max-width: 768px) 100vw, 450px"
-  className="lazy"
-/>
-
-
+                <Image
+                  priority={true}
+                  width={450}
+                  height={500}
+                  src="/img/fiverrclone/gigger-mobiles.png"
+                  alt="Fiverr Clone"
+                  sizes="(max-width: 768px) 100vw, 450px"
+                  className="lazy"
+                />
               </div>
             </div>
           </div>
@@ -448,19 +471,34 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6 job-video" ref={ref}>
-              {inView && (
+            <div className="col-md-6 job-video" >
+              {/* {inView && (
                 <div className="jobvideo">
                   <iframe
                     width="100%"
                     height="312"
                     src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=1"
+                     viewport="0 0 0"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
+ 
+
                 </div>
-              )}
+              )} */}
+              <div ref={iframeRef}>
+                {isInView && (
+                  <iframe
+                    width="100%"
+                    height="312"
+                    src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=0"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                )}
+              </div>
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">

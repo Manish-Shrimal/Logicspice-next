@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
@@ -35,6 +35,7 @@ const Page = () => {
   const [buyjobportal, setBuyJobportal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
 
+
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
 
@@ -45,7 +46,7 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-    console.log(showModal);
+    
 
     setShowModal(!showModal);
   };
@@ -57,7 +58,7 @@ const Page = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        BaseAPI + "/product/Details/crowdfunding"
+        BaseAPI + "/product/Details/crowdfunding-script"
       );
       // console.log(response.data.data)
       setPageData(response.data.data);
@@ -66,47 +67,6 @@ const Page = () => {
     }
   };
 
-  // const Accordion = styled((props) => (
-  //   <MuiAccordion disableGutters elevation={0} square {...props} />
-  // ))(({ theme }) => ({
-  //   border: `1px solid ${theme.palette.divider}`,
-  //   "&:not(:last-child)": {
-  //     borderBottom: 0,
-  //   },
-  //   "&::before": {
-  //     display: "none",
-  //   },
-  // }));
-
-  // const AccordionSummary = styled((props) => (
-  //   <MuiAccordionSummary
-  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-  //     {...props}
-  //   />
-  // ))(({ theme }) => ({
-  //   backgroundColor: "rgba(0, 0, 0, .03)",
-  //   flexDirection: "row-reverse",
-  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-  //     transform: "rotate(90deg)",
-  //   },
-  //   "& .MuiAccordionSummary-content": {
-  //     marginLeft: theme.spacing(1),
-  //   },
-  //   ...theme.applyStyles("dark", {
-  //     backgroundColor: "rgba(255, 255, 255, .05)",
-  //   }),
-  // }));
-
-  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  //   padding: theme.spacing(2),
-  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
-  // }));
-
-  // const [expanded, setExpanded] = React.useState("panel1");
-
-  // const handleChange = (panel) => (event, newExpanded) => {
-  //   setExpanded(newExpanded ? panel : false);
-  // };
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -202,7 +162,6 @@ const Page = () => {
 
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
-    // console.log(showModal);
 
     setDemoAccessModal(!demoAccessModal);
   };
@@ -220,6 +179,47 @@ const Page = () => {
       s0.parentNode.insertBefore(s1, s0);
     })();
   }, []); // Empty dependency array to run once on mount
+
+
+  const [isInView, setIsInView] = useState(0);
+  
+  // Reference for the iframe
+  const iframeRef = useRef(null);
+  const [iframeSrc, setIframeSrc] = useState("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
+
+  useEffect(() => {
+    // Set up the IntersectionObserver
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // If the iframe is in view, set state to 1, else 0
+        if (entry.isIntersecting) {
+          setIsInView(1);
+          // Change the autoplay value to 1 when the iframe is in view
+          setIframeSrc("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=1");
+        } else {
+          setIsInView(0);
+          // Optionally, reset autoplay to 0 when it's out of view
+          setIframeSrc("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when at least 50% of the iframe is visible
+      }
+    );
+
+    // Observe the iframe
+    if (iframeRef.current) {
+      observer.observe(iframeRef.current);
+    }
+    console.log(iframeSrc);
+    // Cleanup observer on component unmount
+    return () => {
+      if (iframeRef.current) {
+        observer.unobserve(iframeRef.current);
+      }
+    };
+    
+  }, []);
   
   return (
     <>
@@ -355,7 +355,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              <iframe
+              {/* <iframe
                 width="100%"
                 height="312"
                 src="https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=1"
@@ -363,7 +363,27 @@ const Page = () => {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-              ></iframe>
+              ></iframe> */}
+              {iframeSrc && (
+             <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src={iframeSrc}  
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              )}
+            
+
+
+
+       
+      
+               
             </div>
             <div className="col-md-6">
               <div className="job-portal-ttd">

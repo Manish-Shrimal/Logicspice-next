@@ -89,7 +89,8 @@ const AppointmentSchedulingSoftware = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        BaseAPI + "/product/Details/appointment-scheduling-software")
+        BaseAPI + "/product/Details/appointment-scheduling-software"
+      );
       // console.log(response.data.data)
       setPageData(response.data.data);
     } catch (error) {
