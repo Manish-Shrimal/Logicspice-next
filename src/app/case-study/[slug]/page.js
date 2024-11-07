@@ -16,7 +16,7 @@ import BlogSliderDynamic from "@/app/Components/BlogSliderDynamic";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import HTMLReactParser from "html-react-parser";
 // import "../../../responsive.css";
-import "@/app/resposive.css"
+import "@/app/resposive.css";
 
 const Page = ({ params }) => {
   const [pageData, setPageData] = useState([]);
@@ -183,28 +183,28 @@ const Page = ({ params }) => {
               <Ourclient />
             
           </section> */}
-              <section class="testimonial-hire">
-                <div className="container">
-                  <div className="headings">
-                    <h2 class="our-title">OUR CLIENTS</h2>
-                  </div>
-                  <Ourclient />
-                </div>
-              </section>
-              <section className="blog-home" style={{ position: "relative" }}>
-                <div className="container">
-                  <div className="headings">
-                    <h2>OUR BLOGS</h2>
-                    <p>A Sneak Peek into the Future of Innovation</p>
-                  </div>
-                  <div>
-                    <BlogSliderDynamic
-                      blogData={blogData}
-                      blogImagePath={blogImagePath.current}
-                    />
-                  </div>
-                </div>
-              </section>
+            </div>
+          </section>
+          <section class="testimonial-hire">
+            <div className="container">
+              <div className="headings">
+                <h2 class="our-title">OUR CLIENTS</h2>
+              </div>
+              <Ourclient />
+            </div>
+          </section>
+          <section className="blog-home" style={{ position: "relative" }}>
+            <div className="container">
+              <div className="headings">
+                <h2>OUR BLOGS</h2>
+                <p>A Sneak Peek into the Future of Innovation</p>
+              </div>
+              <div>
+                <BlogSliderDynamic
+                  blogData={blogData}
+                  blogImagePath={blogImagePath.current}
+                />
+              </div>
             </div>
           </section>
           <section className="enq-section">
