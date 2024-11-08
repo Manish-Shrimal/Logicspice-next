@@ -294,7 +294,7 @@ const Page = () => {
                     <p>219 Reviews</p>
                   </div>
                 </div>
-                <div className="jocpp">
+                <div className="jocpp robotic_icons">
                   <ul className="job-pr-icon jobwidthauto">
                     <li>
                       <i className="fa fa-globe" aria-hidden="true"></i>
@@ -345,7 +345,7 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={350}
+                  width={440}
                   height={100}
                   className="lazy"
                   src="/img/jobboard/new-img-jobboard.png"
@@ -405,10 +405,10 @@ const Page = () => {
             doctors.
           </p>
           <p>
-            This is a white-label solution that can be themed to one&apos;s own brand
-            name and identity. It&apos;s a ready-to-use software that helps clinics,
-            hospitals, and private practices set up their own appointment
-            booking system in no time.
+            This is a white-label solution that can be themed to one&apos;s own
+            brand name and identity. It&apos;s a ready-to-use software that
+            helps clinics, hospitals, and private practices set up their own
+            appointment booking system in no time.
           </p>
         </div>
       </section>
@@ -429,23 +429,21 @@ const Page = () => {
                 allowfullscreen=""
               ></iframe>
             </div> */}
-            <div className="col-md-6">
+            <div className="col-md-12">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
-                  <li>Post Unlimited Jobs</li>
-                  <li>Responsive &amp; SEO Friendly</li>
-                  <li>Advanced Search Filter</li>
-                  <li>Manage Candidate Database</li>
-                  <li>New Announcement</li>
-                  <li>Social Media Sharing</li>
-                  <li>Multiple Payment Gateway</li>
-                  <li>Upload Video CV</li>
-                  <li>Theme Color Management</li>
-                  <li>One time License Fee</li>
-                  <li>Email Notification</li>
-                  <li>Auto Suggestion Filtering</li>
-                  <li>Multi-Language/Currency Support</li>
-                  <li>Optimized job search with filters</li>
+                  <li>Smart Search Filters</li>
+                  <li>Accept online bookings</li>
+                  <li>Responsive website (mobile friendly)</li>
+                  <li>White-Labeled Software</li>
+                  <li>Highly scalable & robust</li>
+                  <li>Email Notifications</li>
+                  <li>WhatsApp Notifications</li>
+                  <li>User Friendly</li>
+                  <li>Customized Calendar</li>
+                  <li>Reporting and Analytics</li>
+                  <li>SEO-Friendly</li>
+                  <li>Multi-Location Access</li>
                 </ul>
               </div>
             </div>
@@ -455,26 +453,24 @@ const Page = () => {
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Prime Features of Our LS Jobber</h2>
+            <h2 className="taxt_tt_job">Online Medical Appointment Scheduling Software Features</h2>
           </div>
           <div className="tatxt_txt_job">
             Our{" "}
             <strong>
-              <i>dynamic PHP job board</i>
+              <i>Doctor Appointment Scheduling </i>
             </strong>{" "}
-            script serves as a versatile platform for employers to post job
-            listings, outlining necessary skill sets and finer details.
-            Jobseekers can effortlessly navigate through available opportunities
-            that align with their qualifications, geographical preferences, and
-            work experience. Once registration is complete, jobseekers gain the
-            privilege to apply for specific jobs that pique their interest.
-            Within this sophisticated job board application management software,
-            employers wield the ability to sift through job applications,
-            earmarking potential matches as favorites. This intelligent curation
-            aids in streamlining the hiring process, identifying top-notch
-            prospects for each vacancy. Empowered by a secure admin dashboard,
-            users can seamlessly manage employers, jobseekers, job postings, and
-            more. This Job Posting Software also boasts a{" "}
+            Software has been designed to facilitate smooth and easy
+            management of appointments of patients. This software allows
+            healthcare providers to automate the scheduling process, enabling
+            patients to easily book, reschedule, or cancel appointments online.
+            The system works 24/7, offering flexibility in both the patients&apos;
+            and the medical staff&apos;s busy schedules while reducing the
+            administrative workload. With built-in features like email
+            notifications or WhatsApp reminders, healthcare providers can ensure
+            patients never miss an appointment. It is a complete white-label
+            solution and can be fully customized to your branding in order to
+            provide a professional, consistent interface.
             <strong>
               <i>multi-job posting</i>
             </strong>{" "}
@@ -491,14 +487,14 @@ const Page = () => {
                   }`}
                   onClick={() => handleSellerTab()}
                 >
-                  <a>Jobseeker App Features </a>
+                  <a>Patient Panel </a>
                 </li>
                 <li
                   id="tab2_li"
                   className={`emplyer_app_job ddlj ${buyerTab ? "active" : ""}`}
                   onClick={() => handleBuyerTab()}
                 >
-                  <a>Employer App Features </a>
+                  <a>Staff Panel (Doctors and Medical Staff) </a>
                 </li>
                 <li
                   id="tab3_li"
@@ -541,11 +537,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Jobseeker Registration
+                                Patient Registration
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can register on the Job Portal
-                                    using Email Address.
+                                    Patients can create profiles to manage
+                                    appointments and access personalized
+                                    services.
                                   </p>
                                 </div>
                               </span>
@@ -562,13 +559,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Job Alerts
+                                Patient Login
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can apply for Job Alerts &amp;
-                                    will get the Job alerts for specific Job,
-                                    location &amp; Category. Jobseekers can
-                                    manage(add/edit/delete) Job alerts.
+                                    Registered users can log in to manage
+                                    appointments, view history, and update
+                                    information easily.
                                   </p>
                                 </div>
                               </span>
@@ -585,12 +581,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Profile
+                                Profile Management
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can view their profile details
-                                    &amp; can manage(add/edit/delete) their
-                                    Profile.
+                                    Patients can create and manage their
+                                    profiles, including medical history,
+                                    preferred doctors, and saved payment details
+                                    for a faster appointment process.
                                   </p>
                                 </div>
                               </span>
@@ -607,11 +604,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Save Favorite Jobs
+                                Easy Appointment Booking
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can save the Job as Favorite and
-                                    can apply in future or soon.
+                                    Users can search for doctors by specialty,
+                                    location, or availability, and book their
+                                    appointments with just a few clicks.
                                   </p>
                                 </div>
                               </span>
@@ -628,11 +626,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Apply to a Job
+                                Real-time Availability
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can apply for the Jobs which are
-                                    relevant to their Profile.{" "}
+                                    Patients can see up-to-date appointment
+                                    slots, ensuring they can choose a convenient
+                                    time without scheduling conflicts.
                                   </p>
                                 </div>
                               </span>
@@ -649,12 +648,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Search Jobs
+                                Appointment History
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can search Jobs using Keyword,
-                                    Category, Location &amp; Work Type etc.
-                                    which will provide the relevant result.
+                                    Patients can view their upcoming and past
+                                    appointments, track their medical visits,
+                                    and follow up with doctors as needed.
                                   </p>
                                 </div>
                               </span>
@@ -671,11 +670,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Applied List
+                                Medical Services
                                 <div className="product-idea">
                                   <p>
-                                    Jobseeker can view the list of applied jobs
-                                    on the portal.
+                                    Patients can browse available medical
+                                    services, and book an appointment with
+                                    available staff with the booking date and
+                                    time.
                                   </p>
                                 </div>
                               </span>
@@ -692,12 +693,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Share a Job
+                                Our Experts
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can share Job Tumblr, Facebook,
-                                    Twitter, Print, Pinterest, Gmail, Google+
-                                    etc.
+                                    Patients can view the list of healthcare
+                                    professionals and book an appointment based
+                                    on their specialties and availability.
                                   </p>
                                 </div>
                               </span>
@@ -714,17 +715,17 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Education
+                                Guest Mode
                                 <div className="product-idea">
                                   <p>
-                                    Jobseekers can view their Education details
-                                    &amp; can manage(add/edit/delete) the
-                                    Education.
+                                    Patients can even book appointments without
+                                    registration for a quick, hassle-free
+                                    experience.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
+                            {/* <li>
                               <i className="JobBoardImg">
                                 <Image
                                   unoptimized={true}
@@ -961,7 +962,7 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>
@@ -999,11 +1000,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employer Registration
+                                Appointment Management
                                 <div className="product-idea">
                                   <p>
-                                    Employers can register on the Job Portal
-                                    using Email Address.
+                                    Doctors and staff can view, approve,
+                                    reschedule, or cancel appointments with
+                                    real-time updates, ensuring an organized
+                                    workflow.
                                   </p>
                                 </div>
                               </span>
@@ -1020,12 +1023,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Membership Plans
+                                User Management
                                 <div className="product-idea">
                                   <p>
-                                    Employers can purchase the Membership
-                                    Plan(Free/paid) as per their requirement
-                                    which is relevant to them.
+                                    Staff can access patient profiles, including
+                                    medical history, current medications, and
+                                    previous appointment notes, all in one
+                                    place.
                                   </p>
                                 </div>
                               </span>
@@ -1042,12 +1046,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Favorite Candidates
+                                Real-time Notifications
                                 <div className="product-idea">
                                   <p>
-                                    Employers can mark the Candidate as
-                                    Favorites who is relevant to the Job Post or
-                                    requirement.
+                                    Staff receive instant notifications about
+                                    new appointments, cancellations, or
+                                    rescheduling, helping them stay on top of
+                                    daily schedules.
                                   </p>
                                 </div>
                               </span>
@@ -1064,15 +1069,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Create Job
+                                Doctor Availability Management
                                 <div className="product-idea">
                                   <p>
-                                    Employers can create a job by adding Job
-                                    Title, Category, Job Description, Company
-                                    Name, Company Profile, Work Type, Contact
-                                    Name &amp; Contact Number, Company Website,
-                                    Skills, Designation, Location, Experience,
-                                    Annual salary, Company Logo etc.
+                                    Doctors can update their available time
+                                    slots, manage personal time off, and block
+                                    specific hours for meetings or breaks.
                                   </p>
                                 </div>
                               </span>
@@ -1089,11 +1091,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Jobs
+                                Staff Dashboard
                                 <div className="product-idea">
                                   <p>
-                                    Employers can view the list of Created Jobs
-                                    &amp; can manage(add/edit/delete) Jobs.
+                                    Staff can access a summary of their
+                                    appointments from the previous day, today,
+                                    and tomorrow, with options to filter by date
+                                    range on the dashboard.
                                   </p>
                                 </div>
                               </span>
@@ -1110,11 +1114,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Update Job status
+                                Manage Slots
                                 <div className="product-idea">
                                   <p>
-                                    Employer can activate/deactivate the Jobs
-                                    which are posted.
+                                    Staff can view, add, edit, or delete their
+                                    slots, and can also activate or deactivate
+                                    any slot as needed.
                                   </p>
                                 </div>
                               </span>
@@ -1132,12 +1137,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Profile
+                                Configuration
                                 <div className="product-idea">
                                   <p>
-                                    Employer can view Profile &amp; can
-                                    manage(update) Profile. Employers can change
-                                    passwords &amp; logos.
+                                    Staff can update their email, password,
+                                    username, contact information, and social
+                                    media links.
                                   </p>
                                 </div>
                               </span>
@@ -1155,16 +1160,18 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Count Search view
+                                Account Reports
                                 <div className="product-idea">
                                   <p>
-                                    Employers can view the count for total
-                                    numbers of Search views.
+                                    Staff can view detailed reports of completed
+                                    bookings, including payment amounts, with
+                                    options to filter by daily, monthly, or
+                                    custom date ranges.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
+                            {/* <li>
                               <i className="JobBoardImg">
                                 <Image
                                   unoptimized={true}
@@ -1269,7 +1276,7 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>
@@ -1315,27 +1322,7 @@ const Page = () => {
                                 </div>
                               </span>
                             </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/admin_dash.png"
-                                />
-                              </i>
-                              <span>
-                                Admin Dashboard
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view dashboard which will display
-                                    the total number of counts for Seller,
-                                    Buyer, Gig orders etc.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
+
                             <li>
                               <i>
                                 <Image
@@ -1350,9 +1337,9 @@ const Page = () => {
                                 Manage Users
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Users(Seller/Buyer) &
-                                    can manage(add/edit/delete) Users. Admin can
-                                    activate/deactivate Users.
+                                    Admin can create, edit, or delete accounts,
+                                    and manage roles and permissions for both
+                                    doctors and patients across departments.
                                   </p>
                                 </div>
                               </span>
@@ -1368,12 +1355,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Gigs
+                                Manage Staff
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Gigs & can
-                                    manage(delete) Gigs. Admin can
-                                    activate/deactivate Gigs.
+                                    Admin can view and manage staff details,
+                                    including adding, editing, deleting, and
+                                    setting availability or unavailability for
+                                    staff members.
                                   </p>
                                 </div>
                               </span>
@@ -1389,11 +1377,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Gig Orders
+                                Admin Dashboard
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Gig orders & can
-                                    manage (view) gig Orders.
+                                    Admin can view a summary of appointments
+                                    from the previous day, today, and tomorrow,
+                                    with options to filter by date range.
                                   </p>
                                 </div>
                               </span>
@@ -1409,11 +1398,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Services
+                                Appointment Management
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of services & can
-                                    manage(view/add/edit/delete) services.
+                                    Admin can monitor and manage all
+                                    appointments across multiple doctors or
+                                    departments, including the ability to
+                                    reschedule the appointments.
                                   </p>
                                 </div>
                               </span>
@@ -1429,12 +1420,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Categories
+                                Account Reports
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Categories & can
-                                    manage(view/add/edit/delete) Categories.
-                                    Admin can activate/deactivate Categories.
+                                    Admin can view details of completed
+                                    bookings, including payment amounts, with
+                                    options to filter by daily, monthly, or
+                                    custom date ranges.
                                   </p>
                                 </div>
                               </span>
@@ -1450,11 +1442,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Skills
+                                Configuration
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Skills & can manage
-                                    (view/add/edit/delete) skills.
+                                    Admin can update personal details, contact
+                                    information, social media links, and
+                                    configure appointment settings.
                                   </p>
                                 </div>
                               </span>
@@ -1470,13 +1463,13 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Sub-categories
+                                Multi-location Management
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Sub-categories & can
-                                    manage(view/add/edit/delete) Sub-categories.
-                                    Admin can activate/deactivate
-                                    Sub-categories.
+                                    If the clinic operates across multiple
+                                    locations, admins can manage schedules,
+                                    appointments, and resources for each
+                                    facility from a single platform.
                                   </p>
                                 </div>
                               </span>
@@ -1492,12 +1485,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Countries
+                                Blog Management
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Countries & can
-                                    manage(view/add/edit/delete) Countries.
-                                    Admin can activate/deactivate Countries.
+                                    This feature allows admins to create, edit,
+                                    and publish blog posts on the platform.
                                   </p>
                                 </div>
                               </span>
@@ -1513,16 +1505,17 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                View Reviews & Ratings
+                                Customer Support
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view the list of Reviews & Ratings
-                                    Seller & Buyer has received.
+                                    Admins can monitor support tickets, assign
+                                    them to staff members, and track how issues
+                                    are resolved.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
+                            {/* <li>
                               <i>
                                 <Image
                                   unoptimized={true}
@@ -1542,7 +1535,7 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>
@@ -1557,9 +1550,12 @@ const Page = () => {
       <section className="job_product_page_header_in">
         <div className="container">
           <div className="whateissuprt">
-            <h2 className="headhs">What does our LS Jobber do for you?</h2>
-            <h3 className="Haeddinh2">Empowering Your Recruitment Journey</h3>
+            <h2 className="headhs">How Our Doctor Appointment Scheduling Software Helps You</h2>
             <p>
+            Our Doctor Appointment Scheduling Software simplifies the entire process of managing medical appointments. Whether you run a clinic, hospital, or private practice, this software makes it easy for patients to book their appointments online, reducing the workload for your staff and improving patient satisfaction.
+            </p>
+            <h3 className="Haeddinh2">Simple and Easy for Patients</h3>
+            {/* <p>
               Our exceptional job board advertising software doesn&apos;t just
               stop at facilitating connections; it empowers you to craft your
               own recruitment portal. This ready-to-deploy script,{" "}
@@ -1571,46 +1567,24 @@ const Page = () => {
               know-how - our expert technical team ensures a seamless setup for
               you. Effortlessly launch your own job board advertising website in
               record time with our ready-to-use Job Board Software Script.
-            </p>
-            <h3 className="Haeddinh2">A Seamless Experience for All Users</h3>
+            </p> */}
             <p>
-              Candidates are bestowed with the power to create and curate their
-              profiles within this best Job Board Software. The functionality to
-              mark favored job listings and apply directly or save them for
-              future reference is just the tip of the iceberg. Sharing potential
-              opportunities via social media and even generating CVs with the
-              &quot;Generate A CV?&quot; feature ensures a comprehensive
-              experience. For employers, our Job Board App offers an
-              unparalleled arena to post unlimited jobs and meticulously review
-              prospective candidates. Email notifications can be dispatched
-              directly to job seekers, while job statuses can be seamlessly
-              updated. Employers can also keep track of membership plans,
-              payment history, email correspondences, and job applications, all
-              within a user-friendly dashboard.
+            Apart from booking, patients can reschedule or cancel their appointments with just a few clicks. They can choose available time slots, get instant confirmations, and receive notifications via email or WhatsApp. It minimizes missed appointments and keeps everything orderly.
             </p>
-            <h3 className="Haeddinh2">Elevated Control with Admin Dashboard</h3>
+            <h3 className="Haeddinh2">Efficient for Healthcare Providers</h3>
             <p>
-              The backbone of our jobboard software lies in its comprehensive
-              admin dashboard. Admins can oversee and manage job seekers,
-              employers, categories, skills, locations, job listings, and even
-              blogs within this dynamic interface. The control center empowers
-              swift management of user credentials, password security questions,
-              plans, and more. Additionally, the admin holds the authority to
-              update and modify payment gateway configurations, ensuring
-              uninterrupted operations.
+            Doctors and staff can easily manage appointments through a user-friendly dashboard. The software manages patient bookings, and doctor availability, and performs real-time updates. The smooth running of everything will be easier without manual interference or effort.
             </p>
-            <h3 className="Haeddinh2">Global Reach of Our Solution</h3>
+            <h3 className="Haeddinh2">Customizable for Your Needs
+            </h3>
             <p>
-              Our cutting-edge white label job board software isn&apos;t
-              confined to geographical limits. From the vibrant landscapes of
-              the UK and USA to the diverse territories of Europe, Australia,
-              India, and beyond, our solution spans the globe. Whether
-              you&apos;re an employer aiming to streamline the recruitment
-              process, a business seeking efficient job posting and
-              shortlisting, or a job consultant aiming to manage a comprehensive
-              candidate database, our feature-rich job site software stands as
-              your unwavering ally. Join us on the journey to revolutionize
-              recruitment and forge meaningful professional connections.
+            Our software can be customized to fit the branding and needs of your healthcare facility. It is flexible enough to support either small practices or big hospitals and grows with your business when the need arises.
+
+            </p>
+            <h3 className="Haeddinh2">Comprehensive and Reliable
+            </h3>
+            <p>
+            This software is not just about scheduling; it&apos;s a complete solution for managing patient appointments and improving the overall experience. It has easy calendar management and real-time updates, taking the headache out of appointment management, and allowing you to focus more on patient care.
             </p>
           </div>
         </div>
@@ -2108,7 +2082,7 @@ const Page = () => {
             </h2>
             <br />
             <div className="logic-parter">
-              <a
+              {/* <a
                 className=""
                 aria-controls="jobportal"
                 onClick={toggleJobPortalModal}
@@ -2123,7 +2097,7 @@ const Page = () => {
               >
                 <i className="fa fa-building" aria-hidden="true"></i>
                 <span>Companies Using It</span>
-              </a>
+              </a> */}
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
@@ -2581,10 +2555,10 @@ const Page = () => {
               <div className="ecommerce--review">
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
-                    I have purchased this script and has constructed my own
-                    job-site. This was an easy task because of logicspice&apos;s
-                    free installation and support. Keep up the good work. I will
-                    be back for more in the future.
+                    I just love how this software makes appointment scheduling
+                    so easy; reminder notifications keep our staff and patients
+                    well-informed, and attendance has improved. We have received
+                    a good return on the investment so far in this practice!
                   </div>
                   <div className="who_ratset">
                     <span
@@ -2597,13 +2571,13 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    John, USA
+                    Dr. Sam Patel, UK
                     <span>
                       <Image
                         unoptimized={true}
                         width={100}
                         height={100}
-                        src="/img/jobboard/usa_flag_img.png"
+                        src="/img/jobboard/uk_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -2612,9 +2586,10 @@ const Page = () => {
                 </div>
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
-                    This is the best job portal script. Thanks for your great
-                    efforts and support while installing the script. Your prompt
-                    service regarding a few minor issues was superb
+                    Switching over to this scheduling software was among the
+                    best decisions we ever made for the clinic. The ability for
+                    patients to self-book has minimized phone calls and made
+                    this a piece of cake. Highly recommended!
                   </div>
 
                   <div className="who_ratset">
@@ -2628,46 +2603,49 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    <span id="client-name">D. Smith, Germany in USA</span>{" "}
-                    <span>
-                      <Image
-                        unoptimized={true}
-                        width={100}
-                        height={100}
-                        src="/img/jobboard/german.png"
-                        alt="mobile app development in USA"
-                        style={{ width: "20px", marginLeft: "3px;" }}
-                      />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="customers_review_sec_row">
-                  <div className="customer_review_stext" id="fiveer-clone">
-                    Recently I bought this script from logicspice and it worked
-                    really nice, it helped my business to gain more efficiency.
-                    I recommend for all whom looking for a job board script,
-                    it&apos;s really nice.
-                  </div>
-
-                  <div className="who_ratset">
-                    <span
-                      className="star_review_main"
-                      style={{ paddingRight: "10px", color: "gold;" }}
-                    >
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                    </span>
-                    <span id="client-name">mike wilshon, AUS</span>{" "}
+                    <span id="client-name">
+                      Linda S., Office Manager, Australia
+                    </span>{" "}
                     <span>
                       <Image
                         unoptimized={true}
                         width={100}
                         height={100}
                         src="/img/jobboard/australia_flag_img.png"
+                        alt="mobile app development in USA"
+                        style={{ width: "20px", marginLeft: "3px;" }}
+                      />
+                    </span>
+                  </div>
+                </div>
+
+                <div className="customers_review_sec_row">
+                  <div className="customer_review_stext" id="fiveer-clone">
+                    I just can&apos;t say enough good things about this doctor&apos;s
+                    appointment scheduling software! It&apos;s really intuitive. I
+                    can manage my appointments really easily. And the patients
+                    love it because they can book online and save us a lot of
+                    time.
+                  </div>
+
+                  <div className="who_ratset">
+                    <span
+                      className="star_review_main"
+                      style={{ paddingRight: "10px", color: "gold;" }}
+                    >
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                    </span>
+                    <span id="client-name">Dr. Rachel Lewis, Canada</span>{" "}
+                    <span>
+                      <Image
+                        unoptimized={true}
+                        width={100}
+                        height={100}
+                        src="/img/jobboard/canada_flag_img.png"
                         alt="mobile app development in USA"
                         style={{ width: "20px", marginLeft: "3px;" }}
                       />
@@ -2791,350 +2769,7 @@ const Page = () => {
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
-              {/* <div className="panel-group faq_quick_sec" id="accordion">
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            aria-expanded="true"
-                            href="#collapse1"
-                          >
-                            <span>01. </span> Can a Jobseeker upload his CV to apply
-                            for job?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse1" className="panel-collapse collapse in">
-                        <div className="panel-body">
-                          <p>
-                            No. The information about the jobseeker will go from his
-                            profile to the employer that he is applying the job for.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse2"
-                          >
-                            <span>02. </span> Will there be any installation charges
-                            when I purchase the job portal script?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse2" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            No. The installation of our Job Portal Product will be
-                            absolutely free of cost.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse3"
-                          >
-                            <span>03. </span> Can jobseeker download the CV that he
-                            has created on this website?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse3" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            Yes. Once the job seeker creates his CV, he can download
-                            the same in a PDF format.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse4"
-                          >
-                            <span>04. </span> Can employer or jobseeker write blog
-                            posts?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse4" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            The employers and jobseekers can not write blog posts.
-                            The blog posts will be written by admin and employers
-                            &amp; Job Seekers can view them.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse6"
-                          >
-                            <span>05. </span> Once I purchase the job portal script,
-                            how many days will it take to go online?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse6" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            It takes 2 working days generally, provided all the
-                            information to make it live has been given. If you want
-                            customizations, then time taken to implement your Job
-                            portal depends on the level of customization and data
-                            migration.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse7"
-                          >
-                            <span>06. </span> How can Jobseeker apply for a job?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse7" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            Jobseeker can send their details directly to the job
-                            company or they can attached a cover letter along with
-                            their application. They can edit add or delete their
-                            cover letter from the profile.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse8"
-                          >
-                            <span>07. </span> How can Jobseeker create job alerts?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse8" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            Jobseekers will be able to manage the alerts that will
-                            help them to receive emails if the job is available
-                            according to their set criteria. They can add alerts by
-                            providing the information like designation of job
-                            required and location of job.{" "}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse201"
-                          >
-                            <span>08. </span> Can I update some design and
-                            functionality in application code myself?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse201" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            Yes, You will have access of the all the code, except
-                            some of the core encrypted files.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse202"
-                          >
-                            <span>09. </span> Will I be able to use it on multiple
-                            domains, after I purchase this script?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse202" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            You will be licensed to use it only for the domain, you
-                            purchased for.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse203"
-                          >
-                            <span>10. </span> Can I resell the script? Will I have
-                            rights over the script code?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse203" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            All rights will remain with Logicspice only, and you can
-                            not resell it.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse204"
-                          >
-                            <span>11. </span> Do you offer Money Back Guarantee?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse204" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            Yes, we offer 30 days money back guarantee to ensure
-                            customer satisfaction of our softwares. If for any
-                            reason, you wish to discontinue using the product, you
-                            can ask us for refund. We will refund your total money
-                            except the installation and configuration charges, which
-                            is USD 65 or 20% of application cost, whichever is
-                            greater. Any cost of customization will not be refunded.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse07"
-                          >
-                            <span>12. </span> Do I need to provide Google map API
-                            key? If yes, how to generate Google map API key?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse07" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            Yes, you need to provide map API key. Please follow the
-                            steps mentioned in below URL to generate Google map API
-                            key:
-                            https://developers.google.com/maps/documentation/javascript/get-api-key.
-                            You need to setup your billing details over that.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="panel panel-default aos-init aos-animate"
-                      data-aos="fade-up"
-                    >
-                      <div className="panel-heading">
-                        <div className="panel-title">
-                          <a
-                            data-toggle="collapse"
-                            data-parent="#accordion"
-                            href="#collapse504"
-                          >
-                            <span>13. </span> Along with hosting server details,
-                            what other recommendations?
-                          </a>
-                        </div>
-                      </div>
-                      <div id="collapse504" className="panel-collapse collapse">
-                        <div className="panel-body">
-                          <p>
-                            We recommend you purchase SSL certificate along with a
-                            hosting server, considering that an SSL certificate is
-                            necessary for all the websites these days and it
-                            provides a secure layer to the website as well.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
+
               <div id="accordion">
                 <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>
@@ -3146,15 +2781,16 @@ const Page = () => {
                       }}
                       style={titleStyle}
                     >
-                      <span>01. </span> Can a Jobseeker upload his CV to apply
-                      for job?
+                      <span>01. </span> How can I book an appointment in the
+                      software?
                     </a>
                   </div>
                   <div style={activeIndex === 0 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        No. The information about the jobseeker will go from his
-                        profile to the employer that he is applying the job for.
+                        You can easily book an appointment by selecting your
+                        desired service, choosing an available date and time,
+                        and confirming the details using our friendly interface.
                       </p>
                     </div>
                   </div>
@@ -3170,15 +2806,16 @@ const Page = () => {
                       }}
                       style={titleStyle}
                     >
-                      <span>02. </span> Will there be any installation charges
-                      when I purchase the job portal script?
+                      <span>02. </span> Can I modify or cancel my appointment?
                     </a>
                   </div>
                   <div style={activeIndex === 1 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        No. The installation of our Job Portal Product will be
-                        absolutely free of cost.
+                        Yes, you&apos;ll be able to modify or cancel an appointment
+                        right from the platform, however, your cancellation must
+                        be made while adhering to the business&apos;s cancellation
+                        policy.
                       </p>
                     </div>
                   </div>
@@ -3194,15 +2831,16 @@ const Page = () => {
                       }}
                       style={titleStyle}
                     >
-                      <span>03. </span> Can jobseeker download the CV that he
-                      has created on this website?
+                      <span>03. </span> Is there a way I can book an appointment
+                      without making an account?
                     </a>
                   </div>
                   <div style={activeIndex === 2 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes. Once the job seeker creates his CV, he can download
-                        the same in a PDF format.
+                        Yes, this software provides a feature called guest mode,
+                        where anyone can securely make appointments without
+                        registering or logging in.
                       </p>
                     </div>
                   </div>
@@ -3218,16 +2856,16 @@ const Page = () => {
                         toggleAccordion(3);
                       }}
                     >
-                      <span>04. </span> Can employer or jobseeker write blog
-                      posts?
+                      <span>04. </span> Will the system send me notifications
+                      about my appointment?
                     </a>
                   </div>
                   <div style={activeIndex === 3 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        The employers and jobseekers cannot write blog posts.
-                        The blog posts will be written by the admin, and
-                        employers & Job Seekers can view them.
+                        Yes, the system automatically sends notifications via
+                        email or WhatsApp to help you remember your upcoming
+                        appointments.
                       </p>
                     </div>
                   </div>
@@ -3243,24 +2881,23 @@ const Page = () => {
                         toggleAccordion(4);
                       }}
                     >
-                      <span>05. </span> Once I purchase the job portal script,
-                      how many days will it take to go online?
+                      <span>05. </span> Are the healthcare provider profiles
+                      visible before booking?
                     </a>
                   </div>
                   <div style={activeIndex === 4 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        It takes 2 working days generally, provided all the
-                        information to make it live has been given. If you want
-                        customizations, then the time taken to implement your
-                        Job portal depends on the level of customization and
-                        data migration.
+                        Yes, you&apos;ll have full access to all of the profiles of
+                        the available healthcare providers, complete with a
+                        description of the specialty so that you can make an
+                        informed decision.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div style={panelStyle} data-aos="fade-up">
+                {/* <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>
                     <a
                       href="#collapse7"
@@ -3469,13 +3106,13 @@ const Page = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="content_area feature_inner" id="features">
+      {/* <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="title_main">LS Jobber Features</h2>
           <div id="joblboardslide">
@@ -3593,9 +3230,9 @@ const Page = () => {
             </Slider>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="JObboardVideSection">
+      {/* <section className="JObboardVideSection">
         <div className="container">
           <div className="JobBoardVideoBottom JobBoardbxVideoBottom">
             <iframe
@@ -3608,7 +3245,7 @@ const Page = () => {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="enq-section">
         <div className="container">
@@ -3620,7 +3257,7 @@ const Page = () => {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Job Board Software"
+                    title="Online Doctor Appointment Scheduling Software"
                   />
                 }
               </div>

@@ -1530,7 +1530,7 @@ const Page = () => {
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job">
-              Logicspice is the best partner for Service Marketplace solutions!
+              Logicspice is the best partner for Online Booking Software Solutions!
             </h2>
             <br />
             <div className="logic-parter">

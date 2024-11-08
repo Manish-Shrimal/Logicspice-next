@@ -181,45 +181,111 @@ const Page = () => {
   }, []); // Empty dependency array to run once on mount
 
 
-  const [isInView, setIsInView] = useState(0);
+  // const [isInView, setIsInView] = useState(0);
   
-  // Reference for the iframe
-  const iframeRef = useRef(null);
-  const [iframeSrc, setIframeSrc] = useState("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
+  // // Reference for the iframe
+  // const iframeRef = useRef(null);
+  // const [iframeSrc, setIframeSrc] = useState("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
 
+  // useEffect(() => {
+  //   // Set up the IntersectionObserver
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       // If the iframe is in view, set state to 1, else 0
+  //       if (entry.isIntersecting) {
+  //         setIsInView(1);
+  //         // Change the autoplay value to 1 when the iframe is in view
+  //         setIframeSrc("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=1");
+  //       } else {
+  //         setIsInView(0);
+  //         // Optionally, reset autoplay to 0 when it's out of view
+  //         setIframeSrc("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
+  //       }
+  //     },
+  //     {
+  //       threshold: 0.5, // Trigger when at least 50% of the iframe is visible
+  //     }
+  //   );
+
+  //   // Observe the iframe
+  //   if (iframeRef.current) {
+  //     observer.observe(iframeRef.current);
+  //   }
+  //   console.log(iframeSrc);
+  //   // Cleanup observer on component unmount
+  //   return () => {
+  //     if (iframeRef.current) {
+  //       observer.unobserve(iframeRef.current);
+  //     }
+  //   };
+    
+  // }, []);
+
+
+
+
+
+  const iframeRef = useRef(null);
+  const [player, setPlayer] = useState(null);
+  const [isInView, setIsInView] = useState(false);
+
+  // Load and initialize the YouTube Player API
   useEffect(() => {
-    // Set up the IntersectionObserver
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new YT.Player("ytplayer", {
+        events: {
+          onReady: (event) => {
+            const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            event.target.seekTo(savedTime);
+            setPlayer(event.target);
+          },
+          onStateChange: (event) => {
+            if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.PAUSED) {
+              const currentTime = event.target.getCurrentTime();
+              localStorage.setItem("lastPlayedTime", currentTime);
+            }
+          },
+        },
+      });
+    };
+
+    return () => {
+      document.body.removeChild(tag);
+    };
+  }, []);
+
+  // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // If the iframe is in view, set state to 1, else 0
-        if (entry.isIntersecting) {
-          setIsInView(1);
-          // Change the autoplay value to 1 when the iframe is in view
-          setIframeSrc("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=1");
-        } else {
-          setIsInView(0);
-          // Optionally, reset autoplay to 0 when it's out of view
-          setIframeSrc("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
-        }
+        setIsInView(entry.isIntersecting);
       },
-      {
-        threshold: 0.5, // Trigger when at least 50% of the iframe is visible
-      }
+      { threshold: 0.5 }
     );
 
-    // Observe the iframe
-    if (iframeRef.current) {
-      observer.observe(iframeRef.current);
-    }
-    console.log(iframeSrc);
-    // Cleanup observer on component unmount
+    if (iframeRef.current) observer.observe(iframeRef.current);
+
     return () => {
-      if (iframeRef.current) {
-        observer.unobserve(iframeRef.current);
-      }
+      if (iframeRef.current) observer.unobserve(iframeRef.current);
     };
-    
   }, []);
+
+  // Control playback based on `isInView` and `player` readiness
+  useEffect(() => {
+    if (player) {
+      if (isInView) {
+        const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        player.seekTo(savedTime);
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  }, [isInView, player]);
   
   return (
     <>
@@ -364,7 +430,9 @@ const Page = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe> */}
-              {iframeSrc && (
+
+              {/* The view port playing works fine with this */}
+              {/* {iframeSrc && (
              <div ref={iframeRef}>
                 <iframe
                   id="ytplayer"
@@ -376,7 +444,20 @@ const Page = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              )}
+              )} */}
+
+
+<div ref={iframeRef}>
+      <iframe
+        id="ytplayer"
+        width="100%"
+        height="312"
+        src="https://www.youtube.com/embed/DSEYDgFahFU?enablejsapi=1&mute=1"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
             
 
 
