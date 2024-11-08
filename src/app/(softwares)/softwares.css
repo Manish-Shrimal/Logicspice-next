@@ -6328,6 +6328,10 @@ before {
   .tab_bbx_job ul {
     width: 100%;
   }
+
+  .doctor_appointment .tab_bbx_job ul{
+    width: 100%!important;
+  }
   .modal-service .modal-dialog, .modal-service .modal-dialog-service {
     max-width: 97%;
     width: 100%;
@@ -6343,4 +6347,8 @@ before {
 
 .robotic_icons{
   padding-top: 17px!important;
+}
+
+.doctor_appointment .tab_bbx_job ul{
+  width: 100%!important;
 }

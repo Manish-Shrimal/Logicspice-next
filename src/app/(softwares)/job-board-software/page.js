@@ -8,19 +8,10 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -86,13 +77,9 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-    // console.log(showModal);
-
     setShowModal(!showModal);
   };
   const openDemoAccessModal = () => {
-    // console.log(showModal);
-
     setDemoAccessModal(!demoAccessModal);
   };
   const openReviewModel = () => {
@@ -106,7 +93,6 @@ const Page = () => {
       const response = await axios.get(
         BaseAPI + "/product/Details/job-board-software"
       );
-      // console.log(response.data.data)
       setPageData(response.data.data);
     } catch (error) {
       console.log(error.message);
@@ -171,6 +157,68 @@ const Page = () => {
       s0.parentNode.insertBefore(s1, s0);
     })();
   }, []); // Empty dependency array to run once on mount
+
+  const iframeRef = useRef(null);
+  const [player, setPlayer] = useState(null);
+  const [isInView, setIsInView] = useState(false);
+
+  // Load and initialize the YouTube Player API
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new YT.Player("ytplayer", {
+        events: {
+          onReady: (event) => {
+            const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            event.target.seekTo(savedTime);
+            setPlayer(event.target);
+          },
+          onStateChange: (event) => {
+            if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.PAUSED) {
+              const currentTime = event.target.getCurrentTime();
+              localStorage.setItem("lastPlayedTime", currentTime);
+            }
+          },
+        },
+      });
+    };
+
+    return () => {
+      document.body.removeChild(tag);
+    };
+  }, []);
+
+  // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (iframeRef.current) observer.observe(iframeRef.current);
+
+    return () => {
+      if (iframeRef.current) observer.unobserve(iframeRef.current);
+    };
+  }, []);
+
+  // Control playback based on `isInView` and `player` readiness
+  useEffect(() => {
+    if (player) {
+      if (isInView) {
+        const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        player.seekTo(savedTime);
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  }, [isInView, player]);
   return (
     <>
       <Navbar />
@@ -341,14 +389,16 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
-                  width={350}
-                  height={100}
-                  className="lazy"
-                  src="/img/jobboard/new-img-jobboard.png"
-                  alt="Job_Board_Software"
-                  unoptimized={true}
-                />
+              <Image
+  width={350}
+  height={100}
+  className="lazy"
+  src="/img/jobboard/new-img-jobboard.png"
+  alt="Job_Board_Software"
+  sizes="(max-width: 768px) 100vw, 350px"
+  unoptimized={false} // Ensure image optimization is enabled
+/>
+
               </div>
             </div>
           </div>
@@ -414,7 +464,18 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              <iframe
+            <div ref={iframeRef}>
+      <iframe
+        id="ytplayer"
+        width="100%"
+        height="312"
+        src="https://www.youtube.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+              {/* <iframe
                 width="100%"
                 height="312"
                 src="https://www.youtube.com/embed/jZUjtbUTuHQ?si=NrWfYG4wQYAnm1bJ?rel=0&autoplay=0"
@@ -422,7 +483,7 @@ const Page = () => {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""
-              ></iframe>
+              ></iframe> */}
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">

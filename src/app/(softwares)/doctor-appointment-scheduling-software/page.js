@@ -174,6 +174,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
+      <div className="doctor_appointment">
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
         <div className="container">
           <div className="row">
@@ -346,9 +347,9 @@ const Page = () => {
               <div className="por-mobile-new">
                 <Image
                   width={440}
-                  height={100}
+                  height={100/ (100/100)}
                   className="lazy"
-                  src="/img/jobboard/new-img-jobboard.png"
+                  src="/img/doctorappointment/doctor-appointment-banner-img.png"
                   alt="Online Doctor Appointment Scheduling Software"
                   unoptimized={true}
                 />
@@ -517,7 +518,7 @@ const Page = () => {
                             unoptimized={true}
                             width={300}
                             height={100}
-                            src="/img/jobboard/mobile-job-seeker.png"
+                            src="/img/doctorappointment/patient-mobile-screen.png"
                             alt="Jobseeker App Feature"
                           />
                         </div>
@@ -981,7 +982,7 @@ const Page = () => {
                             unoptimized={true}
                             width={300}
                             height={100}
-                            src="/img/jobboard/emplyer-mobile.png"
+                            src="/img/doctorappointment/staff-panel-admin.png"
                             alt="Buyer App Features"
                           />
                         </div>
@@ -1295,7 +1296,7 @@ const Page = () => {
                             unoptimized={true}
                             width={300}
                             height={100}
-                            src="/img/fiverrclone/gigger_deshboard.png"
+                            src="/img/doctorappointment/doctor-appointment-admin.png"
                             alt="Admin Panel"
                           />{" "}
                         </div>
@@ -1589,7 +1590,11 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="SubscriptionModel" id="subscriptionmodel">
+      <section
+        className="SubscriptionModel"
+        id="subscriptionmodel"
+        style={{ background: "#f1f1f1" }}
+      >
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job">Subscription Model</h2>
@@ -1597,82 +1602,22 @@ const Page = () => {
             <div className="SubscriptionModelBx">
               <p>
                 Experience convenience like never before with our
-                subscription-based hassle-free model, available at just{" "}
-                <strong>USD 45 per month</strong>, limited offer available for
-                the first year.
+                subscription-based hassle-free model, available at just USD 145
+                per month.
               </p>
-              <div className="JobBoardPlans">
-                <ul>
-                  <li>
-                    <span>Custom Domain &amp; Free SSL</span>
-                  </li>
-                  <li>
-                    <span>Styles and Texts Customization</span>
-                  </li>
-                  <li>
-                    <span>Custom Static Pages</span>
-                  </li>
-                  <li>
-                    <span>Built-in Blogging Platform</span>
-                  </li>
-                  <li>
-                    <span>Charge for Job Postings</span>
-                  </li>
-                  <li>
-                    <span>3,000 Active Jobs</span>
-                  </li>
-                  <li>
-                    <span>Payment Gateway Integration</span>
-                  </li>
-                  <li>
-                    <span>Language Translation</span>
-                  </li>
-                  <li>
-                    <span>Subscriptions &amp; Packages</span>
-                  </li>
-                  <li>
-                    <span>Apply With Resume</span>
-                  </li>
-                  <li>
-                    <span>Featured Employers</span>
-                  </li>
-                  <li>
-                    <span>Banner Ads</span>
-                  </li>
-                  <li>
-                    <span>XML Feed Importers</span>
-                  </li>
-                  <li>
-                    <span>Remove Branding From Footer</span>
-                  </li>
-                  <li>
-                    <span>Currency Management</span>
-                  </li>
-                  <li>
-                    <span>Sub Admin Feature</span>
-                  </li>
-                  <li>
-                    <span>Newsletter Management</span>
-                  </li>
-                  <li>
-                    <span>Manage Payment Gateway Configuration</span>
-                  </li>
-                  <li>
-                    <span>Manage Announcement</span>
-                  </li>
-                  <li>
-                    <span>Invoice Generator</span>
-                  </li>
-                </ul>
-              </div>
               <p>Key Benefits:</p>
               <ul>
                 <li>
                   <span>
+                    Experience convenience like never before with our
+                    subscription-based hassle-free model, available at just USD
+                    145 per month.
+                  </span>
+                </li>
+                <li>
+                  <span>
                     Lifetime Updates: Enjoy complimentary updates for your
-                    software version throughout its lifespan, including{" "}
-                    <strong>Free bug &amp; security fixes</strong> under the
-                    subscription model.
+                    software version throughout its lifespan.
                   </span>
                 </li>
                 <li>
@@ -1683,27 +1628,24 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    <strong>Zero Setup Fees</strong>:- Customers can easily get
-                    started with the <strong>Search Engine Friendly</strong>{" "}
-                    software as there are no additional charges for setup and
-                    installation, ensuring a smooth onboarding experience.
+                    Zero Setup Fees:- There are no additional charges for the
+                    setup and installation of the software, making it easier for
+                    customers to get started.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Unlimited Job Postings: Post as many job openings as you
-                    need without any limitations.
+                    Unlimited Appointment Booking: Book as many appointments as you need
+                    without any limitations.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Mobile Apps: Stay perpetually connected with Android and
-                    iPhone apps, available for an additional USD 45 per month
-                    for each, android or iPhone. These apps will be launched
-                    through your dedicated developer accounts on Google Play and
-                    the Apple App Store.
+                    Enhanced Communication: Avail yourself of 5 domain-based
+                    email accounts to enhance your professional communication.
                   </span>
                 </li>
+                
                 <li>
                   <span>
                     Effortless Program Operation: Revel in robust bandwidth that
@@ -1715,12 +1657,10 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                    Enduring Support: Our dedicated{" "}
-                    <strong>Customer Care team</strong> is dedicated to
-                    providing lifelong assistance through our subscription
-                    model. Any software issues that arise will be promptly
-                    addressed by our dedicated technical team during office
-                    hours.
+                    Enduring Support: We are committed to providing lifelong
+                    assistance through our subscription model. If any software
+                    issues arise, our dedicated technical team will promptly
+                    address them during office hours.
                   </span>
                 </li>
                 <li>
@@ -1862,7 +1802,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="job_portal_area script-update-bg">
+      {/* <section className="job_portal_area script-update-bg">
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job">Script Update History</h2>
@@ -2072,7 +2012,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
@@ -2380,11 +2320,11 @@ const Page = () => {
                         unoptimized={true}
                         width={60}
                         height={100}
-                        src="/img/jobboard/LaravelLogo.png"
+                        src="/img/doctorappointment/django-logo-icon.png"
                         alt="Laravel Development"
                       />
                     </div>
-                    <div className="icntechimg_nm">Laravel</div>
+                    <div className="icntechimg_nm">Django</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
@@ -2410,7 +2350,7 @@ const Page = () => {
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
                   </li>
-                  <li data-aos="fade-up">
+                  {/* <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
@@ -2421,33 +2361,9 @@ const Page = () => {
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
-                  </li>
-                  <li data-aos="fade-up">
-                    <div className="icntechimg">
-                      <Image
-                        unoptimized={true}
-                        width={50}
-                        height={100}
-                        src="/img/jobboard/apple_phn_icon.png"
-                        alt="MySQL"
-                        className="lazy"
-                      />
-                    </div>
-                    <div className="icntechimg_nm">iOS</div>
-                  </li>
-                  <li data-aos="fade-up">
-                    <div className="icntechimg">
-                      <Image
-                        unoptimized={true}
-                        width={50}
-                        height={100}
-                        src="/img/jobboard/andoird_icon.png"
-                        alt="Apache"
-                        className="lazy"
-                      />
-                    </div>
-                    <div className="icntechimg_nm">Android</div>
-                  </li>
+                  </li> */}
+                  
+                  
                 </ul>
               </div>
               <div className="col-sm-6">
@@ -2457,10 +2373,10 @@ const Page = () => {
                     Safari 5+, IE 9+
                   </li>
                   <li className="same aos-init aos-animate" data-aos="fade-up">
-                    <b>Framework - </b> CakePHP
+                    <b>Framework - </b> ReactJs, Django
                   </li>
                   <li className="same aos-init aos-animate" data-aos="fade-up">
-                    <b>Language - </b> PHP 7 Supported, AJAX, jQuery
+                    <b>Language - </b> Javascript, Python
                   </li>
                   <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Design - </b> HTML 5, CSS 3, JavaScript
@@ -3380,6 +3296,8 @@ const Page = () => {
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div>
+      </div>
+
       <Footer />
     </>
   );

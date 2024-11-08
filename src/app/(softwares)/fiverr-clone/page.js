@@ -230,28 +230,95 @@ const Page = () => {
   //   };
   // }, []);
 
-  useEffect(() => {
-    // Intersection Observer to detect when the iframe enters the viewport
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true); // Set to true when the iframe is in the viewport
-          observer.unobserve(entry.target); // Stop observing after it starts playing
-        }
-      },
-      { threshold: 0.5 } // Trigger when 50% of the iframe is visible
-    );
+  // useEffect(() => {
+  //   // Intersection Observer to detect when the iframe enters the viewport
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setIsInView(true); // Set to true when the iframe is in the viewport
+  //         observer.unobserve(entry.target); // Stop observing after it starts playing
+  //       }
+  //     },
+  //     { threshold: 0.5 } // Trigger when 50% of the iframe is visible
+  //   );
 
-    if (iframeRef.current) {
-      observer.observe(iframeRef.current); // Start observing the iframe
-    }
+  //   if (iframeRef.current) {
+  //     observer.observe(iframeRef.current); // Start observing the iframe
+  //   }
+
+  //   return () => {
+  //     if (iframeRef.current) {
+  //       observer.unobserve(iframeRef.current); // Cleanup observer when component unmounts
+  //     }
+  //   };
+  // }, []);
+
+  // const iframeRef = useRef(null);
+  const [player, setPlayer] = useState(null);
+  // const [isInView, setIsInView] = useState(false);
+
+  // Load and initialize the YouTube Player API
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new YT.Player("ytplayer", {
+        events: {
+          onReady: (event) => {
+            const savedTime =
+              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            event.target.seekTo(savedTime);
+            setPlayer(event.target);
+          },
+          onStateChange: (event) => {
+            if (
+              event.data === YT.PlayerState.PLAYING ||
+              event.data === YT.PlayerState.PAUSED
+            ) {
+              const currentTime = event.target.getCurrentTime();
+              localStorage.setItem("lastPlayedTime", currentTime);
+            }
+          },
+        },
+      });
+    };
 
     return () => {
-      if (iframeRef.current) {
-        observer.unobserve(iframeRef.current); // Cleanup observer when component unmounts
-      }
+      document.body.removeChild(tag);
     };
   }, []);
+
+  // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (iframeRef.current) observer.observe(iframeRef.current);
+
+    return () => {
+      if (iframeRef.current) observer.unobserve(iframeRef.current);
+    };
+  }, []);
+
+  // Control playback based on `isInView` and `player` readiness
+  useEffect(() => {
+    if (player) {
+      if (isInView) {
+        const savedTime =
+          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        player.seekTo(savedTime);
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  }, [isInView, player]);
 
   return (
     <>
@@ -471,7 +538,7 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6 job-video" >
+            <div className="col-md-6 job-video">
               {/* {inView && (
                 <div className="jobvideo">
                   <iframe
@@ -487,7 +554,7 @@ const Page = () => {
 
                 </div>
               )} */}
-              <div ref={iframeRef}>
+              {/* <div ref={iframeRef}>
                 {isInView && (
                   <iframe
                     width="100%"
@@ -498,6 +565,17 @@ const Page = () => {
                     allowFullScreen
                   ></iframe>
                 )}
+              </div> */}
+              <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src="https://www.youtube.com/embed/83xCE7lMRTs?enablejsapi=1&mute=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
             <div className="col-md-6">

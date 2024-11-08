@@ -17,7 +17,7 @@ import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation";
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -470,6 +470,134 @@ const Page = () => {
                       </div>
                       <div className="col-sm-6 col-md-4">
                         <Link
+                          href="/doctor-appointment-scheduling-software"
+                          className="ready-product"
+                          data-aos="fade-up"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width={100}
+                            height={100}
+                            className=""
+                            src="/img/softwares/logisticr-product-img.png"
+                            alt="Logicstic Marketplace Software"
+                          />
+                          <div className="abs-product">
+                            <h3>
+                              Online Doctor Appointment Scheduling Software
+                            </h3>
+                            <p>
+                            Doctor Appointment Scheduling Software offers an easy, efficient way to manage bookings, making healthcare appointments stress-free for everyone.
+                            </p>
+                            <div className="product-star">
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div className="product-review">173 REVIEWS</div>
+                            <ul className="make-style">
+                              {/* <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/android-new.png"
+                                  alt="android"
+                                />
+                              </li>
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/apple.png"
+                                  alt="apple"
+                                />
+                              </li> */}
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/web_new.png"
+                                  alt="web"
+                                />
+                              </li>
+                            </ul>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="col-sm-6 col-md-4">
+                        <Link
+                          href="/salon-booking-software"
+                          className="ready-product"
+                          data-aos="fade-up"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width={100}
+                            height={100}
+                            className=""
+                            src="/img/softwares/logisticr-product-img.png"
+                            alt="Logicstic Marketplace Software"
+                          />
+                          <div className="abs-product">
+                            <h3>
+                              Salon Booking Software
+                            </h3>
+                            <p>
+                            Our Salon Booking Software helps salons and spas manage appointments with ease, and creating a smooth booking experience for clients.
+                            </p>
+                            <div className="product-star">
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div className="product-review">173 REVIEWS</div>
+                            <ul className="make-style">
+                              {/* <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/android-new.png"
+                                  alt="android"
+                                />
+                              </li>
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/apple.png"
+                                  alt="apple"
+                                />
+                              </li> */}
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/web_new.png"
+                                  alt="web"
+                                />
+                              </li>
+                            </ul>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="col-sm-6 col-md-4">
+                        <Link
                           href="/crowdfunding-script"
                           className="ready-product"
                           data-aos="fade-up"
@@ -529,9 +657,7 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Classified Ads Script</h3>
                             <p>
-                              The crowdfunding product that we have developed
-                              will enable the people to donate money for various
-                              categories of causes that they may have favor for.
+                            Our Classified Ads Script offers a reliable, easy-to-use platform for listing, buying, and selling items in any location.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -1840,7 +1966,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/softwares"
                           className="ready-product"
@@ -1903,7 +2029,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
+                      </div> */}
                       <div className="col-sm-6 col-md-4">
                         <Link
                           href="/product-review-rating-php-script"
@@ -2171,7 +2297,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/cakephp-cms-script"
                           className="ready-product ready-product-min2"
@@ -2214,8 +2340,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/cakephp-facebook-login-plugin-script"
                           className="ready-product ready-product-min2"
@@ -2258,8 +2384,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/wordpress-twitter-login-plugin"
                           className="ready-product ready-product-min2"
@@ -2302,8 +2428,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/social-network-integration-in-android-app"
                           className="ready-product ready-product-min"
@@ -2346,7 +2472,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
+                      </div> */}
                       <div className="col-sm-6 col-md-4">
                         <div
                           className="thumbnail customized-website"
@@ -2799,9 +2925,7 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Classified Ads Script</h3>
                             <p>
-                              The crowdfunding product that we have developed
-                              will enable the people to donate money for various
-                              categories of causes that they may have favor for.
+                            Our Classified Ads Script offers a reliable, easy-to-use platform for listing, buying, and selling items in any location.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -4110,7 +4234,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <a
                           href="/softwares"
                           className="ready-product"
@@ -4173,7 +4297,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </a>
-                      </div>
+                      </div> */}
                       <div className="col-sm-6 col-md-4">
                         <Link
                           href="/product-review-rating-php-script"
@@ -4220,7 +4344,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <a
                           href="https://setcourses.logicspice.com/"
                           className="ready-product"
@@ -4264,7 +4388,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </a>
-                      </div>
+                      </div> */}
 
                       <div className="col-sm-6 col-md-4">
                         <a
@@ -4441,7 +4565,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/cakephp-cms-script"
                           className="ready-product ready-product-min2"
@@ -4484,8 +4608,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/cakephp-facebook-login-plugin-script"
                           className="ready-product ready-product-min2"
@@ -4528,8 +4652,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/wordpress-twitter-login-plugin"
                           className="ready-product ready-product-min2"
@@ -4572,8 +4696,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/social-network-integration-in-android-app"
                           className="ready-product ready-product-min"
@@ -4616,7 +4740,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
+                      </div> */}
                       <div className="col-sm-6 col-md-4">
                         <div
                           className="thumbnail customized-website"
@@ -4939,9 +5063,7 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Classified Ads Script</h3>
                             <p>
-                              The crowdfunding product that we have developed
-                              will enable the people to donate money for various
-                              categories of causes that they may have favor for.
+                            Our Classified Ads Script offers a reliable, easy-to-use platform for listing, buying, and selling items in any location.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -5577,7 +5699,7 @@ const Page = () => {
                         </Link>
                       </div>
 
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <a
                           href="/softwares"
                           className="ready-product"
@@ -5640,7 +5762,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </a>
-                      </div>
+                      </div> */}
                       <div className="col-sm-6 col-md-4">
                         <div
                           className="thumbnail customized-website"
@@ -5862,7 +5984,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/cakephp-cms-script"
                           className="ready-product ready-product-min2"
@@ -5905,8 +6027,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/cakephp-facebook-login-plugin-script"
                           className="ready-product ready-product-min2"
@@ -5949,8 +6071,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/wordpress-twitter-login-plugin"
                           className="ready-product ready-product-min2"
@@ -5993,8 +6115,8 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
-                      <div className="col-sm-6 col-md-4">
+                      </div> */}
+                      {/* <div className="col-sm-6 col-md-4">
                         <Link
                           href="/social-network-integration-in-android-app"
                           className="ready-product ready-product-min"
@@ -6037,7 +6159,7 @@ const Page = () => {
                             </ul>
                           </div>
                         </Link>
-                      </div>
+                      </div> */}
                       <div className="col-sm-6 col-md-4">
                         <div
                           className="thumbnail customized-website"

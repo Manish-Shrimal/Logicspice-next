@@ -35,7 +35,6 @@ const Page = () => {
   const [buyjobportal, setBuyJobportal] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
 
-
   const toggleJobPortalModal = () => setJobportal(!jobportal);
   const toggleBuyJobPortalModal = () => setBuyJobportal(!buyjobportal);
 
@@ -46,8 +45,6 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-    
-
     setShowModal(!showModal);
   };
   const openReviewModel = () => {
@@ -66,7 +63,6 @@ const Page = () => {
       console.log(error.message);
     }
   };
-
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -162,7 +158,6 @@ const Page = () => {
 
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
-
     setDemoAccessModal(!demoAccessModal);
   };
 
@@ -180,9 +175,8 @@ const Page = () => {
     })();
   }, []); // Empty dependency array to run once on mount
 
-
   // const [isInView, setIsInView] = useState(0);
-  
+
   // // Reference for the iframe
   // const iframeRef = useRef(null);
   // const [iframeSrc, setIframeSrc] = useState("https://www.youtube.com/embed/DSEYDgFahFU?rel=0&autoplay=0");
@@ -218,12 +212,8 @@ const Page = () => {
   //       observer.unobserve(iframeRef.current);
   //     }
   //   };
-    
+
   // }, []);
-
-
-
-
 
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
@@ -239,12 +229,16 @@ const Page = () => {
       const ytPlayer = new YT.Player("ytplayer", {
         events: {
           onReady: (event) => {
-            const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            const savedTime =
+              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
             event.target.seekTo(savedTime);
             setPlayer(event.target);
           },
           onStateChange: (event) => {
-            if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.PAUSED) {
+            if (
+              event.data === YT.PlayerState.PLAYING ||
+              event.data === YT.PlayerState.PAUSED
+            ) {
               const currentTime = event.target.getCurrentTime();
               localStorage.setItem("lastPlayedTime", currentTime);
             }
@@ -278,7 +272,8 @@ const Page = () => {
   useEffect(() => {
     if (player) {
       if (isInView) {
-        const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        const savedTime =
+          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
         player.seekTo(savedTime);
         player.playVideo();
       } else {
@@ -286,7 +281,7 @@ const Page = () => {
       }
     }
   }, [isInView, player]);
-  
+
   return (
     <>
       <NavBar />
@@ -336,13 +331,13 @@ const Page = () => {
                   >
                     <a>Get Demo Access!</a>
                     {
-                  //     <SoftwareEnquiry
-                  //       modalStatus={showModal}
-                  //       toggle={openModal}
-                  //       title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
-                  // .See how it work yourself!"
-                  //     />
-                  <GetDemoEnquiry
+                      //     <SoftwareEnquiry
+                      //       modalStatus={showModal}
+                      //       toggle={openModal}
+                      //       title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
+                      // .See how it work yourself!"
+                      //     />
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script. See how it works yourself!"
@@ -446,25 +441,17 @@ const Page = () => {
               </div>
               )} */}
 
-
-<div ref={iframeRef}>
-      <iframe
-        id="ytplayer"
-        width="100%"
-        height="312"
-        src="https://www.youtube.com/embed/DSEYDgFahFU?enablejsapi=1&mute=1"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
-            
-
-
-
-       
-      
-               
+              <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src="https://www.youtube.com/embed/DSEYDgFahFU?enablejsapi=1&mute=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
             <div className="col-md-6">
               <div className="job-portal-ttd">
@@ -1513,24 +1500,21 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>GET DEMO ACCESS!</button>
                   {
-                  //   <SoftwareEnquiry
-                  //     modalStatus={showModal}
-                  //     toggle={openModal}
-                  //     title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
-                  // .See how it work yourself!"
-                  //   />
+                    //   <SoftwareEnquiry
+                    //     modalStatus={showModal}
+                    //     toggle={openModal}
+                    //     title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script
+                    // .See how it work yourself!"
+                    //   />
 
-                  <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script. See how it works yourself!"
-                      />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Crowd Funding PHP Script. See how it works yourself!"
+                    />
                   }
                 </div>
-                <Link
-                  className="btn fiverr-buys"
-                  href="/buy-now/crowdfunding"
-                >
+                <Link className="btn fiverr-buys" href="/buy-now/crowdfunding">
                   Buy Now
                 </Link>
               </div>
@@ -2138,7 +2122,10 @@ const Page = () => {
                       my project... Thanks LogicSpice Team !!! &quot;
                     </div>
 
-                    <div className="who_ratset" style={{textAlign:"right", paddingRight:"17px"}}>
+                    <div
+                      className="who_ratset"
+                      style={{ textAlign: "right", paddingRight: "17px" }}
+                    >
                       <span className="star_review_main">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -2164,7 +2151,10 @@ const Page = () => {
                       I am pleased with My LogicSpice Experience.&quot;
                     </div>
 
-                    <div className="who_ratset" style={{textAlign:"right", paddingRight:"17px"}}>
+                    <div
+                      className="who_ratset"
+                      style={{ textAlign: "right", paddingRight: "17px" }}
+                    >
                       <span className="star_review_main">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -2191,7 +2181,10 @@ const Page = () => {
                       LS Crowdfunding Script.&quot;
                     </div>
 
-                    <div className="who_ratset" style={{textAlign:"right", paddingRight:"17px"}}>
+                    <div
+                      className="who_ratset"
+                      style={{ textAlign: "right", paddingRight: "17px" }}
+                    >
                       <span className="star_review_main">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>

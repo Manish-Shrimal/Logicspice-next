@@ -3392,5 +3392,35 @@ section.nav-portfolio-top {
     text-align: justify;
 }
 
+.caseStudy_slider{
+	padding-bottom: 25px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.Our_clientstestinomials{
+	text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600 !important;
+}
+
+.blog-home{
+	padding: 0 0 50px;
+}
+
+.case__study .blog_innovation{
+	padding: 0 0 50px!important;
+}
+
+.case__study .content_area_resources{
+	padding: 15px 0;
+}
+
+.case__study .testimonial-hire{
+	padding: 25px 0;
+}
+
 
 

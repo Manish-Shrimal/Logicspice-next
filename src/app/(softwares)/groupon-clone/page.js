@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
@@ -202,6 +202,72 @@ const Page = () => {
       s0.parentNode.insertBefore(s1, s0);
     })();
   }, []); // Empty dependency array to run once on mount
+  const iframeRef = useRef(null);
+  const [player, setPlayer] = useState(null);
+  const [isInView, setIsInView] = useState(false);
+
+  // Load and initialize the YouTube Player API
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new YT.Player("ytplayer", {
+        events: {
+          onReady: (event) => {
+            const savedTime =
+              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            event.target.seekTo(savedTime);
+            setPlayer(event.target);
+          },
+          onStateChange: (event) => {
+            if (
+              event.data === YT.PlayerState.PLAYING ||
+              event.data === YT.PlayerState.PAUSED
+            ) {
+              const currentTime = event.target.getCurrentTime();
+              localStorage.setItem("lastPlayedTime", currentTime);
+            }
+          },
+        },
+      });
+    };
+
+    return () => {
+      document.body.removeChild(tag);
+    };
+  }, []);
+
+  // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (iframeRef.current) observer.observe(iframeRef.current);
+
+    return () => {
+      if (iframeRef.current) observer.unobserve(iframeRef.current);
+    };
+  }, []);
+
+  // Control playback based on `isInView` and `player` readiness
+  useEffect(() => {
+    if (player) {
+      if (isInView) {
+        const savedTime =
+          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        player.seekTo(savedTime);
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  }, [isInView, player]);
   return (
     <>
       <NavBar />
@@ -352,6 +418,8 @@ const Page = () => {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen=""
               ></iframe>
+             
+              
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd JobBoardServiceMarketFeatures">

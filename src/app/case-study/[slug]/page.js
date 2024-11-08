@@ -64,6 +64,7 @@ const Page = ({ params }) => {
   return (
     <>
       <NavBar />
+      <div className="case__study">
       {loading ? (
         <div className="loaderScreen"></div>
       ) : (
@@ -187,13 +188,13 @@ const Page = ({ params }) => {
           </section>
           <section class="testimonial-hire">
             <div className="container">
-              <div className="headings">
-                <h2 class="our-title">OUR CLIENTS</h2>
+              <div className="caseStudy_slider">
+                <h2 class="Our_clientstestinomials">OUR CLIENTS</h2>
               </div>
               <Ourclient />
             </div>
           </section>
-          <section className="blog-home" style={{ position: "relative" }}>
+          <section className="blog-home blog_innovation" style={{ position: "relative" }}>
             <div className="container">
               <div className="headings">
                 <h2>OUR BLOGS</h2>
@@ -228,6 +229,8 @@ const Page = ({ params }) => {
           <Footer />
         </>
       )}
+      </div>
+      
     </>
   );
 };

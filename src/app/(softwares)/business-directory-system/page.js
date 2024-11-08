@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "@/app/(softwares)/softwares.css";
 import Link from "next/link";
 import Footer from "@/app/Components/Footer";
@@ -134,41 +134,6 @@ const Page = () => {
     setShowModal(!showModal);
   };
 
-  // const Accordion = styled((props) => (
-  //   <MuiAccordion disableGutters elevation={0} square {...props} />
-  // ))(({ theme }) => ({
-  //   border: `1px solid ${theme.palette.divider}`,
-  //   "&:not(:last-child)": {
-  //     borderBottom: 0,
-  //   },
-  //   "&::before": {
-  //     display: "none",
-  //   },
-  // }));
-
-  // const AccordionSummary = styled((props) => (
-  //   <MuiAccordionSummary
-  //     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-  //     {...props}
-  //   />
-  // ))(({ theme }) => ({
-  //   backgroundColor:
-  //     theme.palette.mode === "dark"
-  //       ? "rgba(255, 255, 255, .05)"
-  //       : "rgba(0, 0, 0, .03)",
-  //   flexDirection: "row-reverse",
-  //   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-  //     transform: "rotate(90deg)",
-  //   },
-  //   "& .MuiAccordionSummary-content": {
-  //     marginLeft: theme.spacing(1),
-  //   },
-  // }));
-
-  // const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  //   padding: theme.spacing(2),
-  //   borderTop: "1px solid rgba(0, 0, 0, .125)",
-  // }));
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -212,7 +177,6 @@ const Page = () => {
     setExpanded(newExpanded ? panel : false);
   };
 
-
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
     // console.log(showModal);
@@ -233,6 +197,73 @@ const Page = () => {
       s0.parentNode.insertBefore(s1, s0);
     })();
   }, []); // Empty dependency array to run once on mount
+
+  const iframeRef = useRef(null);
+  const [player, setPlayer] = useState(null);
+  const [isInView, setIsInView] = useState(false);
+
+  // Load and initialize the YouTube Player API
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new YT.Player("ytplayer", {
+        events: {
+          onReady: (event) => {
+            const savedTime =
+              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            event.target.seekTo(savedTime);
+            setPlayer(event.target);
+          },
+          onStateChange: (event) => {
+            if (
+              event.data === YT.PlayerState.PLAYING ||
+              event.data === YT.PlayerState.PAUSED
+            ) {
+              const currentTime = event.target.getCurrentTime();
+              localStorage.setItem("lastPlayedTime", currentTime);
+            }
+          },
+        },
+      });
+    };
+
+    return () => {
+      document.body.removeChild(tag);
+    };
+  }, []);
+
+  // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (iframeRef.current) observer.observe(iframeRef.current);
+
+    return () => {
+      if (iframeRef.current) observer.unobserve(iframeRef.current);
+    };
+  }, []);
+
+  // Control playback based on `isInView` and `player` readiness
+  useEffect(() => {
+    if (player) {
+      if (isInView) {
+        const savedTime =
+          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        player.seekTo(savedTime);
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  }, [isInView, player]);
   return (
     <>
       <Navbar />
@@ -283,13 +314,13 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                  //     <SoftwareEnquiry
-                  //       modalStatus={showModal}
-                  //       toggle={openModal}
-                  //       title="Please fill the form below and get access to the live demo of PHP Business Directory Script
-                  // .See how it work yourself!"
-                  //     />
-                  <GetDemoEnquiry
+                      //     <SoftwareEnquiry
+                      //       modalStatus={showModal}
+                      //       toggle={openModal}
+                      //       title="Please fill the form below and get access to the live demo of PHP Business Directory Script
+                      // .See how it work yourself!"
+                      //     />
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of PHP Business Directory System. See how it works yourself!"
@@ -391,7 +422,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              <iframe
+              {/* <iframe
                 width="100%"
                 height="312"
                 src="https://www.youtube-nocookie.com/embed/IlTZW3v7WYs?rel=0&autoplay=0"
@@ -399,7 +430,18 @@ const Page = () => {
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen=""
-              ></iframe>
+              ></iframe> */}
+              <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src="https://www.youtube.com/embed/IlTZW3v7WYs?enablejsapi=1&mute=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
 
             <div className="col-md-6">
@@ -1340,17 +1382,17 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                  //   <SoftwareEnquiry
-                  //     modalStatus={showModal}
-                  //     toggle={openModal}
-                  //     title="Please fill the form below and get access to the live demo of PHP Business Directory Script
-                  // .See how it work yourself!"
-                  //   />
-                  <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of PHP Business Directory System. See how it works yourself!"
-                      />
+                    //   <SoftwareEnquiry
+                    //     modalStatus={showModal}
+                    //     toggle={openModal}
+                    //     title="Please fill the form below and get access to the live demo of PHP Business Directory Script
+                    // .See how it work yourself!"
+                    //   />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of PHP Business Directory System. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link

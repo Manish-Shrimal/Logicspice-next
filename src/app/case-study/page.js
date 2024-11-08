@@ -13,8 +13,6 @@ import BlogSlider from "@/app/Components/BlogSliderDynamic";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-
-
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -49,9 +47,8 @@ const Page = () => {
   }, []);
 
   const handlePageChange = (page) => {
-
     setCurrentPage(page);
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   };
 
   // Calculate the displayed items based on the current page
@@ -69,6 +66,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
+      <div className="case__study">
       <section class="breadcrems_header_new">
         <div class="container">
           <h1>Case Studies</h1>
@@ -159,15 +157,15 @@ const Page = () => {
       </section>
       <section class="testimonial-hire">
         <div className="container">
-          <div className="headings">
-            <h2 class="our-title">OUR CLIENTS</h2>
+          <div className=" caseStudy_slider">
+            <h2 class=" Our_clientstestinomials">OUR CLIENTS</h2>
           </div>
           <div>
             <Ourclient />
           </div>
         </div>
       </section>
-      <section className="blog-home" style={{ position: "relative" }}>
+      <section className="blog-home blog_innovation" style={{ position: "relative", padding: "0px 0px 50px" }}>
         <div className="container">
           <div className="headings">
             <h2>OUR BLOGS</h2>
@@ -200,8 +198,9 @@ const Page = () => {
           <Contactusmodel modalStatus={modalOpen} toggle={toggleModal} />
         </div>
       </div>
+      </div>
       
-      
+
       <Footer />
     </>
   );

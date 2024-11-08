@@ -87,6 +87,8 @@ import GTMComponent from "./Components/GTMComponent";
 import Chatbot from "./Components/Chatbot";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "./BaseAPI/Domain";
+import Head from "next/head";
+
 
 const inter = Inter({ subsets: ["latin"] });
 let schemaData;
@@ -149,6 +151,7 @@ export default function RootLayout({ children, params, searchParams }) {
 
   return (
     <html lang="en">
+    
       <body className={inter.className}>
         <AOSInitializer>{children}</AOSInitializer>
         <Chatbot />

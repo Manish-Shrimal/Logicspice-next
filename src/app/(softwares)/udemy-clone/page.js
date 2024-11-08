@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
@@ -206,6 +206,73 @@ const Page = () => {
     })();
   }, []); // Empty dependency array to run once on mount
 
+  const iframeRef = useRef(null);
+  const [player, setPlayer] = useState(null);
+  const [isInView, setIsInView] = useState(false);
+
+  // Load and initialize the YouTube Player API
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new YT.Player("ytplayer", {
+        events: {
+          onReady: (event) => {
+            const savedTime =
+              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            event.target.seekTo(savedTime);
+            setPlayer(event.target);
+          },
+          onStateChange: (event) => {
+            if (
+              event.data === YT.PlayerState.PLAYING ||
+              event.data === YT.PlayerState.PAUSED
+            ) {
+              const currentTime = event.target.getCurrentTime();
+              localStorage.setItem("lastPlayedTime", currentTime);
+            }
+          },
+        },
+      });
+    };
+
+    return () => {
+      document.body.removeChild(tag);
+    };
+  }, []);
+
+  // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (iframeRef.current) observer.observe(iframeRef.current);
+
+    return () => {
+      if (iframeRef.current) observer.unobserve(iframeRef.current);
+    };
+  }, []);
+
+  // Control playback based on `isInView` and `player` readiness
+  useEffect(() => {
+    if (player) {
+      if (isInView) {
+        const savedTime =
+          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        player.seekTo(savedTime);
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    }
+  }, [isInView, player]);
+
   return (
     <>
       <NavBar />
@@ -340,7 +407,7 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              <iframe
+              {/* <iframe
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/9I7UC62GoqQ?rel=0&autoplay=0"
@@ -348,7 +415,18 @@ const Page = () => {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-              ></iframe>
+              ></iframe> */}
+              <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src="https://www.youtube.com/embed/9I7UC62GoqQ?enablejsapi=1&mute=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
