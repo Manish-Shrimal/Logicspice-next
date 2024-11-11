@@ -43,6 +43,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/hire-angular-js-developers",
+        destination: "/hire-angular-js-experts", 
+        permanent: true,
+      },
+      {
         source: "/erp-system-software-developement",
         destination: "/erp-system-software-development",
         permanent: true,
@@ -60,6 +65,11 @@ const nextConfig = {
       {
         source: "/services/website-development/cakephp-development",
         destination: "/cakephp-development", 
+        permanent: true,
+      },
+      {
+        source: "/software-mainenance-support",
+        destination: "/software-maintenance-support", 
         permanent: true,
       },
       

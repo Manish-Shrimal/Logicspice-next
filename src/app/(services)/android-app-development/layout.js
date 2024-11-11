@@ -17,7 +17,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
   // console.log(product)
 
       // Clean up the schema string
+      let schemaOrg;
       let text = product.data.schema;
+
+      if(text) {
       const cleanedText = text
         .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
         .replace(/\\n/g, '')      // Remove \n (newline)
@@ -26,8 +29,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
         .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
   
       // Parse the cleaned string as JSON
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
-
+      schemaOrg = cleanedText;
+      } else{
+        schemaOrg = "";
+      }
   // Return metadata
   return {
     title: product.data.meta_title,
