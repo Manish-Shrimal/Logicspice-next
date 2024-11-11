@@ -1,17 +1,19 @@
 "use client";
+import { lazy, Suspense } from "react";
+
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState, useRef } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import "../../../../public/css/font-awesome.min.css";
-import "../../../../public/css/font-awesome.css";
+// import "../../../../public/css/font-awesome.min.css";
+// import "../../../../public/css/font-awesome.css";
 import "../../resposive.css";
 import Whylogicspice from "@/app/Components/Whylogicspice";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -20,6 +22,9 @@ import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+const BannerSection = lazy(() => import("./BannerSection"),{
+  ssr: false,
+});
 
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -172,12 +177,16 @@ const Page = () => {
       const ytPlayer = new YT.Player("ytplayer", {
         events: {
           onReady: (event) => {
-            const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+            const savedTime =
+              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
             event.target.seekTo(savedTime);
             setPlayer(event.target);
           },
           onStateChange: (event) => {
-            if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.PAUSED) {
+            if (
+              event.data === YT.PlayerState.PLAYING ||
+              event.data === YT.PlayerState.PAUSED
+            ) {
               const currentTime = event.target.getCurrentTime();
               localStorage.setItem("lastPlayedTime", currentTime);
             }
@@ -211,7 +220,8 @@ const Page = () => {
   useEffect(() => {
     if (player) {
       if (isInView) {
-        const savedTime = parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+        const savedTime =
+          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
         player.seekTo(savedTime);
         player.playVideo();
       } else {
@@ -222,7 +232,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
+      {/* <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">
@@ -389,16 +399,15 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-              <Image
-  width={350}
-  height={100}
-  className="lazy"
-  src="/img/jobboard/new-img-jobboard.png"
-  alt="Job_Board_Software"
-  sizes="(max-width: 768px) 100vw, 350px"
-  unoptimized={false} // Ensure image optimization is enabled
-/>
-
+                <Image
+                  width={350}
+                  height={100}
+                  className="lazy"
+                  src="/img/jobboard/new-img-jobboard.png"
+                  alt="Job_Board_Software"
+                  sizes="(max-width: 768px) 100vw, 350px"
+                  unoptimized={false} // Ensure image optimization is enabled
+                />
               </div>
             </div>
           </div>
@@ -459,22 +468,28 @@ const Page = () => {
             seekers.
           </p>
         </div>
-      </section>
-      <section className="client-say jobBoardNewSoftware" style={{ backgroundColor: "#f1f1f1",  }}>
+      </section> */}
+      <Suspense fallback={<div>Loading Banner...</div>}>
+        <BannerSection />
+      </Suspense>
+      <section
+        className="client-say jobBoardNewSoftware"
+        style={{ backgroundColor: "#f1f1f1" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-            <div ref={iframeRef}>
-      <iframe
-        id="ytplayer"
-        width="100%"
-        height="312"
-        src="https://www.youtube.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
+              <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src="https://www.youtube.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
               {/* <iframe
                 width="100%"
                 height="312"

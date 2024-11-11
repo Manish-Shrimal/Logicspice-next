@@ -18,6 +18,7 @@ import Servercomponents from "./Components/Servercomponents";
 import "aos/dist/aos.css"; // Import AOS CSS
 import AOS from "aos"; // Import AOS
 import GTMComponent from "./Components/GTMComponent";
+import Chatbot from "./Components/Chatbot";
 
 const ServicesNewSection = lazy(() =>
   import("./Components/ServicesNewSection")
@@ -75,6 +76,7 @@ const Page = () => {
   // }, []);s
   return (
     <>
+    <Chatbot />
     <GTMComponent />
       <NavBar />
       <div className="home-slider">
