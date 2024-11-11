@@ -1,6 +1,4 @@
 "use client";
-import { lazy, Suspense } from "react";
-
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
@@ -22,9 +20,6 @@ import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
-const BannerSection = lazy(() => import("./BannerSection"),{
-  ssr: false,
-});
 
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -229,10 +224,55 @@ const Page = () => {
       }
     }
   }, [isInView, player]);
+
+
+
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { root: null, rootMargin: "0px", threshold: 0.1 }
+    );
+
+    if (iframeRef.current) {
+      observer.observe(iframeRef.current);
+    }
+
+    return () => {
+      if (iframeRef.current) {
+        observer.unobserve(iframeRef.current);
+      }
+    };
+  }, []);
+
+  const secondVideoRef = useRef(null);
+  const [inViewSecond, setInViewSecond] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInViewSecond(entry.isIntersecting);
+      },
+      { root: null, rootMargin: "0px", threshold: 0.1 }
+    );
+
+    if (secondVideoRef.current) {
+      observer.observe(secondVideoRef.current);
+    }
+
+    return () => {
+      if (secondVideoRef.current) {
+        observer.unobserve(secondVideoRef.current);
+      }
+    };
+  }, []);
   return (
     <>
       <Navbar />
-      {/* <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
+      <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">
@@ -468,10 +508,7 @@ const Page = () => {
             seekers.
           </p>
         </div>
-      </section> */}
-      <Suspense fallback={<div>Loading Banner...</div>}>
-        <BannerSection />
-      </Suspense>
+      </section>
       <section
         className="client-say jobBoardNewSoftware"
         style={{ backgroundColor: "#f1f1f1" }}
@@ -480,15 +517,17 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6 job-video">
               <div ref={iframeRef}>
+              {inView && (
                 <iframe
                   id="ytplayer"
                   width="100%"
                   height="312"
-                  src="https://www.youtube.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
+                  src="https://www.youtube-nocookie.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
+                )}
               </div>
               {/* <iframe
                 width="100%"
@@ -3668,15 +3707,17 @@ const Page = () => {
 
       <section className="JObboardVideSection">
         <div className="container">
-          <div className="JobBoardVideoBottom JobBoardbxVideoBottom">
+          <div className="JobBoardVideoBottom JobBoardbxVideoBottom" ref={secondVideoRef}>
+          {inViewSecond && (
             <iframe
               width="100%"
               height="312"
-              src="https://www.youtube.com/embed/7fJVD2R2kkA?rel=0"
+              src="https://www.youtube-nocookie.com/embed/7fJVD2R2kkA?rel=0"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen=""
             ></iframe>
+            )}
           </div>
         </div>
       </section>
