@@ -13,6 +13,29 @@ const BlogSliderDynamic = ({ blogData, blogImagePath }) => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets and larger screens
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768, // For mobile devices in landscape mode
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // For mobile devices in portrait mode
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   // console.log(blogData, "data");

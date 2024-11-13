@@ -208,7 +208,7 @@
   }
 
   .fd-solution .poweredBy li {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .fd-solution .fd-list-top li {
@@ -762,80 +762,81 @@
   }
 
   .fd-solution {
-    padding: 80px 0;
+    padding: 80px 0!important;
+    margin-top: 50px !important;
   }
 
   .fd-solution h1 {
-    font-size: 25px;
-    margin-bottom: 16px;
-    text-align: center;
+    font-size: 25px!important;
+    margin-bottom: 16px!important;
+    text-align: center!important;
   }
 
   .fd-solution .poweredBy {
-    padding: 0 0 20px;
-    text-align: center;
+    padding: 0 0 20px!important;
+    text-align: center!important;
   }
 
   .fd-solution .red-strip {
-    margin: 0 auto 19px;
-    max-width: 450px;
-    text-align: center;
+    margin: 0 auto 19px!important;
+    max-width: 450px!important;
+    text-align: center!important;
   }
 
   .fd-list-top {
-    text-align: center;
+    text-align: center!important;
   }
 
   .red-system-app p {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .red-system-app {
-    padding: 15px 0;
+    padding: 15px 0!important;
   }
 
   .advance-unique h2 {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .advance-unique .fd-feature h3 {
-    font-size: 18px;
+    font-size: 18px!important;
   }
 
   .fd-feature p {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   .fd-feature img {
-    width: 55px;
+    width: 55px!important;
   }
 
   .fd-website h2,
   .fd-dashboard h2,
   .fd-mapps h2 {
-    font-size: 25px;
+    font-size: 25px!important;
   }
 
   .fd-mapps p {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 18px!important;
+    line-height: 24px!important;
   }
 
   .fd-work-task h2 {
-    font-size: 20px;
-    margin-top: 0;
+    font-size: 20px!important;
+    margin-top: 0!important;
   }
 
   .fd-dashboard p {
-    font-size: 15px;
+    font-size: 15px!important;
   }
 
   .fd-dashboard li {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   .hire_developer_back_iin {
-    margin-top: 10px;
+    margin-top: 10px!important;
   }
 
   .hire_type .mobile_view {
@@ -1606,6 +1607,14 @@
 }
 
 @media (max-width: 767px) {
+
+  .slick-prev:before{
+    display: none !important;
+  }
+
+  .case-study-listing .media{
+    display: inline-block!important;
+  }
   .product-view {
     padding-top: 35px !important;
   }
@@ -2290,7 +2299,7 @@
   }
 
   .fd-mapps {
-    background: #eee none repeat scroll 0 0;
+    background: #eee none repeat scroll 0 0!important;
   }
 
   .pull-right {
@@ -2305,7 +2314,7 @@
   }
 
   .fd-dashboard {
-    background: #e6ebf1 none repeat scroll 0 0;
+    background: #e6ebf1 none repeat scroll 0 0!important;
   }
 
   .countrys_menu:hover .countrys_menus {

@@ -19,6 +19,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let text = product.data.schema;
 
   let schemaOrg = null;
+
   if(text){
     const cleanedText = text
       .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
@@ -69,10 +70,11 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
       </Head>
       <body className={inter.className}>{children}</body>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      />
+      /> */}
+      
     </html>
   );
 }

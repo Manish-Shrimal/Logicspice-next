@@ -1,4 +1,5 @@
 "use client";
+import dynamic from 'next/dynamic';
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
@@ -18,9 +19,12 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+// import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+// import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 
+
+const GetDemoEnquiry = dynamic(() => import('@/app/Components/GetDemoEnquiry'), { ssr: false }); 
+const SoftwareEnquiry = dynamic(() => import('@/app/Components/SoftwareEnquiry'), { ssr: false });
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -509,6 +513,7 @@ const Page = () => {
           </p>
         </div>
       </section>
+
       <section
         className="client-say jobBoardNewSoftware"
         style={{ backgroundColor: "#f1f1f1" }}

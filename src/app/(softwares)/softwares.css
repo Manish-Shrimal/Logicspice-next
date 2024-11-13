@@ -14,10 +14,12 @@ body {
 .container {
   max-width: 1280px;
 }
-.software_products{
+
+.software_products {
   padding: 70px 0;
   margin-top: 50px;
 }
+
 .job-portal-banner {
   color: #fff;
   background-repeat: repeat;
@@ -79,7 +81,7 @@ body {
 .fiverr-new-banner h1 {
   font-size: 40px;
   color: #363737;
-  font-family: "roboto", sans-serif!important;
+  font-family: "roboto", sans-serif !important;
 }
 
 .NewJobSiteDesign h1 {
@@ -97,17 +99,19 @@ body {
 
 
 .fiverr-new-banner h2 {
-	font-size: 22px;
-	padding-top: 15px;
-	color: #626262;
-	font-family: 'roboto',sans-serif!important;
-	font-weight: normal !important;
-}
-.FiverrCloneMainBanner h2 {
-	font-size: 30px;
-	color: #363737;
+  font-size: 22px;
+  padding-top: 15px;
+  color: #626262;
+  font-family: 'roboto', sans-serif !important;
   font-weight: normal !important;
 }
+
+.FiverrCloneMainBanner h2 {
+  font-size: 30px;
+  color: #363737;
+  font-weight: normal !important;
+}
+
 .job-valu {
   display: inline-block;
   width: 100%;
@@ -258,7 +262,7 @@ body {
 }
 
 .fiverr-new-banner .job-valu-btn .btn-get {
-  padding: 8px 9px!important;
+  padding: 8px 9px !important;
   margin-top: 0px;
   margin-right: 12px;
   width: 180px;
@@ -268,7 +272,7 @@ body {
   background: #10a12a !important;
   color: #fff;
   display: inline-block;
-  border-radius: 5px!important;
+  border-radius: 5px !important;
   border: 2px #10a12a solid;
   cursor: pointer;
   font-family: "Lato", sans-serif !important;
@@ -281,13 +285,13 @@ body {
 }
 
 
-.software_products .new-product-box .ready-product{
+.software_products .new-product-box .ready-product {
   min-height: 360px !important;
 }
 
 
 .fiverr-new-banner .job-valu-btn .fiverr-buys {
-  padding:8px 8px !important;
+  padding: 8px 8px !important;
   margin-top: 0px;
   margin-right: 0;
   width: 150px;
@@ -298,7 +302,7 @@ body {
   border-radius: 5px !important;
   border: 2px #363737 solid;
   line-height: 23px;
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 
 .fiverr-new-banner .job-valu-btn .fiverr-buys:hover {
@@ -406,7 +410,7 @@ body {
   padding-left: 0;
 }
 
-.job-pr-icon li:first-child{
+.job-pr-icon li:first-child {
   padding-left: 0;
 }
 
@@ -436,16 +440,19 @@ body {
   left: 0;
   bottom: 0px;
 }
-.softwareBreadcumbs{
-  bottom: 40px!important;
+
+.softwareBreadcumbs {
+  bottom: 40px !important;
   z-index: 9;
 }
+
 .fiverr-new-banner .job-portal-banner-link {
   bottom: 20px;
   z-index: 9;
 }
+
 #popup_sc_review .modal-header .btn-close {
-	color: #fff !important;
+  color: #fff !important;
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 
@@ -496,7 +503,7 @@ body {
 }
 
 .JobBoardSectionNew {
-  padding: 30px 0!important;
+  padding: 30px 0 !important;
 }
 
 .job-section-top-new p {
@@ -516,7 +523,7 @@ section {
   padding: 60px 0;
 }
 
-.jobBoardNewSoftware{
+.jobBoardNewSoftware {
   background: #eeeeee;
 }
 
@@ -558,7 +565,7 @@ section {
 }
 
 .job_portal_area {
-  padding: 40px 0 40px!important;
+  padding: 40px 0 40px !important;
 }
 
 .job_or_title {
@@ -798,22 +805,27 @@ section {
   background: linear-gradient(to right, #100727 0%, #9e9aa7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#100727', endColorstr='#9e9aa7', GradientType=1);
 }
+
 .job_product_page_header_in h2 {
   color: #fff;
   font-size: 34px;
   font-weight: 600 !important;
   padding-bottom: 30px;
 }
+
 .job_product_page_header_in .whateissuprt p {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .SubscriptionModel {
-  padding: 30px 0!important;
+  padding: 30px 0 !important;
 }
+
 .job_or_title {
   text-align: center;
 }
+
 .taxt_tt_job {
   font-size: 33px;
   color: #000;
@@ -821,6 +833,7 @@ section {
   position: relative;
   padding-bottom: 15px;
 }
+
 .taxt_tt_job::before {
   position: absolute;
   left: 50%;
@@ -831,16 +844,19 @@ section {
   height: 3px;
   transform: translate(-50%, 0);
 }
+
 .tab_bbx_job ul li.active::before,
 .taxt_tt_job::before {
   content: "";
   height: 3px;
 }
+
 .SubscriptionModelBx {
   max-width: 810px;
   margin: 0 auto;
   text-align: left;
 }
+
 .SubscriptionModelBx p {
   padding-top: 21px;
   font-size: 18px;
@@ -931,12 +947,12 @@ section {
 }
 
 .SubscriptionModelPriceBx .btn-get {
-  background: #fff!important;
-  color: #a51077!important;
-  padding: 9px 20px!important;
-  font-weight: 600!important;
-  border-radius: 9px!important;
-  border: 1px #a51077 solid!important;
+  background: #fff !important;
+  color: #a51077 !important;
+  padding: 9px 20px !important;
+  font-weight: 600 !important;
+  border-radius: 9px !important;
+  border: 1px #a51077 solid !important;
 }
 
 .SubscriptionModelPriceBx .btn {
@@ -944,12 +960,12 @@ section {
 }
 
 .SubscriptionModelPriceBx .fiverr-buys {
-  background: #a51077!important;
-  color: #fff!important;
-  padding: 9px 20px!important;
-  font-weight: 600!important;
-  border-radius: 9px!important;
-  border: 1px #a51077 solid!important;
+  background: #a51077 !important;
+  color: #fff !important;
+  padding: 9px 20px !important;
+  font-weight: 600 !important;
+  border-radius: 9px !important;
+  border: 1px #a51077 solid !important;
 }
 
 .SubscriptionModelPriceBx .jocpp {
@@ -1005,14 +1021,14 @@ section {
 }
 
 .SubscriptionModelPriceBx .btn-get:hover {
-  background: #a51077!important;
-  color: #fff!important;
+  background: #a51077 !important;
+  color: #fff !important;
 }
 
 .SubscriptionModelPriceBx .fiverr-buys:hover {
-  background: #fff!important;
-  color: #a51077!important;
-  box-shadow: 0 0 15px 0 rgba(165, 16, 119, 0.5)!important;
+  background: #fff !important;
+  color: #a51077 !important;
+  box-shadow: 0 0 15px 0 rgba(165, 16, 119, 0.5) !important;
 }
 
 .NewLineBoader img {
@@ -1139,12 +1155,15 @@ section {
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
 }
+
 .small_bbx_job_new .thumbnail-box {
-	min-height: 340px;
+  min-height: 340px;
 }
+
 .small_bbx_job_new .productthumbnail-box {
-	min-height: 220px;
+  min-height: 220px;
 }
+
 .thumbnail-bx1 {
   background: #e6f0f6;
 }
@@ -1386,7 +1405,7 @@ section {
 
 .whatsupport_section {
   background: #f3f3f3;
-  padding: 80px 0!important;
+  padding: 80px 0 !important;
 }
 
 .supportsetting ul {
@@ -1432,7 +1451,7 @@ section {
 .Quick_FAQ {
   position: relative;
   z-index: 99;
-  padding-left: 50px ;
+  padding-left: 50px;
 }
 
 .su_rev_section::after {
@@ -1447,11 +1466,11 @@ section {
 }
 
 .su_rev_section .title_main {
-  text-align: left!important;
-  color: #505458!important;
-  font-size: 25px!important;
-  margin-bottom: 25px!important;
-  font-family: "lato", sans-serif!important;
+  text-align: left !important;
+  color: #505458 !important;
+  font-size: 25px !important;
+  margin-bottom: 25px !important;
+  font-family: "lato", sans-serif !important;
 }
 
 .main-rait {
@@ -1533,22 +1552,24 @@ section {
   background: #fff;
   padding: 30px 0;
 }
-.enq-section .btn :hover{
+
+.enq-section .btn :hover {
   color: white !important;
 
 }
 
 .new_red_food a {
-  color: #fff!important;
-  text-decoration: underline!important;
+  color: #fff !important;
+  text-decoration: underline !important;
 }
+
 .new_red_food a:hover {
- 
-  text-decoration: none!important;
+
+  text-decoration: none !important;
 }
 
 .latest_feature_product {
-  padding: 40px 0 40px!important;
+  padding: 40px 0 40px !important;
 }
 
 .other-product-box {
@@ -1654,10 +1675,10 @@ section {
 }
 
 .feature_inner h2.title_main {
-  font-weight: 600!important;
+  font-weight: 600 !important;
   color: #000;
   /* font-family: "roboto", sans-serif !important; */
-  font-family: "lato", sans-serif!important;
+  font-family: "lato", sans-serif !important;
 }
 
 #joblboardslide {
@@ -2017,13 +2038,17 @@ section {
   color: #fff;
   border: 2px #28c960 solid;
 }
-.job-valu-btn .crowdfunding-buys.NewGreenBtnJob, .NewJobSiteDesign .job-valu-btn .NewGreenBtnJob, .NewGreenBtnJob {
-	background: #fff !important;
-	border-color: #258635 !important;
-	color: #258635 !important;
-	/* font-weight: 500 !important; */
-  font-family: 'lato',sans-serif;
+
+.job-valu-btn .crowdfunding-buys.NewGreenBtnJob,
+.NewJobSiteDesign .job-valu-btn .NewGreenBtnJob,
+.NewGreenBtnJob {
+  background: #fff !important;
+  border-color: #258635 !important;
+  color: #258635 !important;
+  /* font-weight: 500 !important; */
+  font-family: 'lato', sans-serif;
 }
+
 /* Fiverr-clone start*/
 .job-portal-banner {
   color: #fff;
@@ -2118,7 +2143,7 @@ section {
   margin-top: 26px;
 }
 
-.NewJobSiteDesign  {
+.NewJobSiteDesign {
   margin-top: 104px;
 }
 
@@ -2419,12 +2444,12 @@ section {
 
 /* Market Place Solution start */
 .MarketplaceSoftwareBanner .job-valu-btn .btn-get {
-	background: #ff5757 !important;
-	color: #fff;
-	border: 2px #ff5757 solid;
-	width: 167px;
-	padding: 8px 9px !important;
-	border-radius: 5px !important;
+  background: #ff5757 !important;
+  color: #fff;
+  border: 2px #ff5757 solid;
+  width: 167px;
+  padding: 8px 9px !important;
+  border-radius: 5px !important;
 }
 
 .MarketplaceSoftwareBanner .job-valu-btn .fiverr-buys {
@@ -2453,21 +2478,21 @@ section {
 }
 
 .MarketplaceSoftwareFeatures li {
-  color: #808080!important;
-  float: left!important;
-  margin-bottom: 15px!important;
-  position: relative!important;
-  font-size: 16px!important;
-  padding-left: 30px!important;
-  background-size: 17px!important;
-  background-image: url(/img/jobboard/tick-box-new.png)!important;
-  min-height: 0px!important;
-  background-repeat: no-repeat!important;
-  line-height: 22px!important;
-  padding-right: 0px!important;
-  width: 25%!important;
-  font-weight: 400!important;
-  background-position: left 4px!important;
+  color: #808080 !important;
+  float: left !important;
+  margin-bottom: 15px !important;
+  position: relative !important;
+  font-size: 16px !important;
+  padding-left: 30px !important;
+  background-size: 17px !important;
+  background-image: url(/img/jobboard/tick-box-new.png) !important;
+  min-height: 0px !important;
+  background-repeat: no-repeat !important;
+  line-height: 22px !important;
+  padding-right: 0px !important;
+  width: 25% !important;
+  font-weight: 400 !important;
+  background-position: left 4px !important;
 }
 
 .MarketplaceSoftwareFeatures li span {
@@ -2505,16 +2530,18 @@ section {
 }
 
 .InventoryManagementBanner .job-valu-btn .btn-get {
-	background: #347ae3 !important;
-	color: #fff;
-	border: 2px #347ae3 solid;
-	width: 167px;
-	padding: 8px 9px !important;
-	border-radius: 5px !important;
+  background: #347ae3 !important;
+  color: #fff;
+  border: 2px #347ae3 solid;
+  width: 167px;
+  padding: 8px 9px !important;
+  border-radius: 5px !important;
 }
+
 .InventoryManagementBanner .job-portal-banner-link {
-	bottom: 0;
+  bottom: 0;
 }
+
 .InventoryManagementBanner .job-valu-btn .fiverr-buys {
   color: #363737;
   border: 2px #363737 solid;
@@ -2883,9 +2910,11 @@ section {
   font-family: "Lato", sans-serif;
   font-weight: 700 !important;
 }
+
 .FaqUsedTechnologiesSection .used_technology_section_dataa {
-	margin-top: 60px;
+  margin-top: 60px;
 }
+
 .FaqBannerSection h1 span {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -3322,7 +3351,7 @@ section {
 
 .portel-btnbx {
   float: left;
-  padding-top: 20px!important;
+  padding-top: 20px !important;
   padding-left: 0px;
 }
 
@@ -3407,8 +3436,8 @@ a.StartFreeTrialBtn {
   color: #292929;
   font-size: 36px;
   text-align: center;
-  font-family: "roboto", sans-serif!important;
-  font-weight: 600!important;
+  font-family: "roboto", sans-serif !important;
+  font-weight: 600 !important;
 }
 
 .CustomerReviewsMainBx {
@@ -3492,16 +3521,17 @@ a.StartFreeTrialBtn {
 }
 
 .ecommerce--review--btn .btn-primary {
-  background-color: #451095!important;
-  border: none!important;
-  padding: 10px 10px!important;
-  border-radius: 6px!important;
-  width: 100%!important;
-  text-transform: uppercase!important;
-  font-size: 14px!important;
+  background-color: #451095 !important;
+  border: none !important;
+  padding: 10px 10px !important;
+  border-radius: 6px !important;
+  width: 100% !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
 }
+
 .ecommerce--review--btn .btn-primary:hover {
-  color: #fff!important;
+  color: #fff !important;
 }
 
 .ecommerce__Quick_FAQ .accordion-item {
@@ -3595,13 +3625,14 @@ a.StartFreeTrialBtn {
 
 /* IMS css start  */
 
-.service-market-ttd-new .freelancer_features li{
-   width: 100%;
+.service-market-ttd-new .freelancer_features li {
+  width: 100%;
 }
 
-.service-market-ttd-new li{
-  width: 100%!important;
+.service-market-ttd-new li {
+  width: 100% !important;
 }
+
 .service-market-ttd-new li {
   color: #808080;
   float: left;
@@ -3629,7 +3660,7 @@ a.StartFreeTrialBtn {
   text-align: left;
   font-size: 42px;
   margin-bottom: 10px;
-  font-weight: 600!important;
+  font-weight: 600 !important;
   color: #303030;
   padding-bottom: 50px;
   position: relative;
@@ -3652,13 +3683,13 @@ a.StartFreeTrialBtn {
 .CustomQuickFAQScript .accordion-header .accordion-button {
   background: url(/img/ordermanagement/faq_select-min.png) 4% center no-repeat #fff;
   padding: 18px 10px 18px 70px;
-  font-size: 20px!important;
+  font-size: 20px !important;
   color: #303030;
   box-shadow: none;
   border-radius: 0 !important;
 }
 
-.enquiry_software_btn{
+.enquiry_software_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4808,10 +4839,10 @@ before {
   background: #eeebeb;
   width: 100%; */
   color: #252525;
-    font-size: 14px;
-    margin: 0 0 21px 5px;
-    padding: 5px 0 0 10px;
-    text-align: left;
+  font-size: 14px;
+  margin: 0 0 21px 5px;
+  padding: 5px 0 0 10px;
+  text-align: left;
 }
 
 .note {
@@ -4830,12 +4861,15 @@ before {
   padding: 10px 0 0;
   border: none; */
 
-    margin: 6px 0 11px 1px;
-    width: 92%;
+  margin: 6px 0 11px 1px;
+  width: 92%;
 
 }
 
-.lfha:hover{border:1px dashed #074376}
+.lfha:hover {
+  border: 1px dashed #074376
+}
+
 .lf_va.chbb {
   width: 100%;
   text-align: left;
@@ -5211,10 +5245,9 @@ before {
   left: -80px;
 }
 
-#jobboardclients .slick-prev:before
- {
+#jobboardclients .slick-prev:before {
   color: #3e3e3e;
- 
+
   width: 42px;
   background: #fff;
   border-radius: 50%;
@@ -5229,19 +5262,19 @@ before {
   display: inline-block;
 }
 
-#jobboardclients .slick-next::after{
-  color: #3e3e3e!important;
+#jobboardclients .slick-next::after {
+  color: #3e3e3e !important;
   display: inline-block;
-  width: 42px!important;
+  width: 42px !important;
   background: #fff;
-  border-radius: 50%!important;
-  height: 42px!important;
-  text-align: center!important;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2)!important;
-  font-size: 36px!important;
-  line-height: 41px!important;
-  text-shadow: none!important;
-  content: "\f105"!important;
+  border-radius: 50% !important;
+  height: 42px !important;
+  text-align: center !important;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2) !important;
+  font-size: 36px !important;
+  line-height: 41px !important;
+  text-shadow: none !important;
+  content: "\f105" !important;
   font-family: FontAwesome;
 }
 
@@ -5258,15 +5291,17 @@ before {
   border-bottom: 1px #ddd solid;
   padding-bottom: 6px;
 }
+
 .site-titles a {
-  
-  color: #337ab7!important;
-  text-decoration: none!important;
+
+  color: #337ab7 !important;
+  text-decoration: none !important;
 }
 
-.site-titles a:focus,a:hover{
-  color:#23527c!important;
-  text-decoration:underline
+.site-titles a:focus,
+a:hover {
+  color: #23527c !important;
+  text-decoration: underline
 }
 
 .modal-service .modal-dialog .btn-close,
@@ -5298,8 +5333,9 @@ before {
 .modal-service .modal-dialog-service .close i {
   position: relative;
 }
-.modal-dialog-service{
-  border-bottom: unset!important;
+
+.modal-dialog-service {
+  border-bottom: unset !important;
 }
 
 /* How it works Modal css end  */
@@ -5583,7 +5619,7 @@ before {
 
 .caption-bx h3 a {
   display: inline-block;
-  color: #fff!important;
+  color: #fff !important;
   font-size: 22px;
   font-weight: 600
 }
@@ -5596,7 +5632,7 @@ before {
 }
 
 .caption-bx a:hover {
- color: #fff!important;
+  color: #fff !important;
 }
 
 .project-logo,
@@ -5728,7 +5764,7 @@ before {
 }
 
 .content_area h3 {
-  font-weight: 600!important;
+  font-weight: 600 !important;
   color: #000;
   float: left;
   font-size: 18px;
@@ -5793,14 +5829,14 @@ before {
   width: calc(100% / 3) !important;
 }
 
-.tab_bbx_job .tab_listing li{
+.tab_bbx_job .tab_listing li {
   float: left;
   position: relative;
   width: calc(100% / 2) !important;
 }
 
 .new-product-box .ready-product {
-   min-height: 390px!important;
+  min-height: 390px !important;
 }
 
 
@@ -5810,7 +5846,7 @@ before {
   color: #999;
 }
 
-.job-portal-ttd{
+.job-portal-ttd {
   float: left;
   /* padding: 20px 0 10px; */
   width: 100%;
@@ -5843,40 +5879,40 @@ before {
 
 /* Material ui accordiation  */
 
-.css-1fderfv-MuiPaper-root-MuiAccordion-root{
-  margin-bottom: 20px!important;
-  background-color: #fff!important;
-  border: 1px solid transparent!important;
-  border-radius: 4px!important;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05)!important;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .05)!important;
+.css-1fderfv-MuiPaper-root-MuiAccordion-root {
+  margin-bottom: 20px !important;
+  background-color: #fff !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05) !important;
 }
 
 
-.css-ahj2mt-MuiTypography-root{
+.css-ahj2mt-MuiTypography-root {
   font-size: 16px !important;
 }
 
-#joblboardslide .slick-dots{
-  bottom: -30px!important;
+#joblboardslide .slick-dots {
+  bottom: -30px !important;
 }
 
 
 .taxt_tt_job {
   font-size: 33px;
   color: #000;
-  font-weight: 700!important;
+  font-weight: 700 !important;
   position: relative;
   padding-bottom: 15px;
 }
 
 
-.ecommerce__Quick_FAQ .css-1cp7t8q-MuiButtonBase-root-MuiAccordionSummary-root{
+.ecommerce__Quick_FAQ .css-1cp7t8q-MuiButtonBase-root-MuiAccordionSummary-root {
   background: white !important;
 }
 
-.Quick_FAQ .MainFaqBx .css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root{
-  background: grey!important;
+.Quick_FAQ .MainFaqBx .css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root {
+  background: grey !important;
 }
 
 
@@ -5929,22 +5965,22 @@ before {
   padding: 5px 20px;
 }
 
-.WhatsaapCliets .service-market-ttd li{
+.WhatsaapCliets .service-market-ttd li {
   color: #808080;
-    float: left;
-    margin-bottom: 20px;
-    position: relative;
-    font-size: 16px;
-    padding-left: 30px;
-    background-size: 22px;
-    background-image: url(/img/jobboard/tick-box.png);
-    min-height: 0px;
-    background-repeat: no-repeat;
-    line-height: 22px;
-    padding-right: 30px;
-    /* width: 49%; */
-    font-weight: 500;
-    background-position: left 0;
+  float: left;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 16px;
+  padding-left: 30px;
+  background-size: 22px;
+  background-image: url(/img/jobboard/tick-box.png);
+  min-height: 0px;
+  background-repeat: no-repeat;
+  line-height: 22px;
+  padding-right: 30px;
+  /* width: 49%; */
+  font-weight: 500;
+  background-position: left 0;
 }
 
 /* .service-market-say .service-market-ttd li{
@@ -5976,7 +6012,8 @@ before {
   /* display: none; */
 }
 
-.ld_main::after, .lfsavebtn {
+.ld_main::after,
+.lfsavebtn {
   left: 50%;
   position: absolute;
 }
@@ -5991,7 +6028,7 @@ before {
   background-color: #074376;
   border: 1px solid #074376;
   float: right;
-  color: white!important;
+  color: white !important;
 }
 
 .titlesettop span {
@@ -6005,20 +6042,22 @@ before {
   padding: 6px 0 0;
 }
 
-.af_la{
+.af_la {
   float: left;
   margin: 6px 0 0;
   width: 30%;
   padding: 0 10px;
   color: #252525;
   font-size: 14px;
-}   
+}
+
 .af_ra {
   float: left;
   width: 63%;
 }
 
-.af_ra input[type=text], .af_ra textarea {
+.af_ra input[type=text],
+.af_ra textarea {
   border: 1px solid #d6d6d6;
   border-radius: 3px;
   color: #666;
@@ -6060,73 +6099,83 @@ before {
   border-radius: 50%; 
   position: fixed; */
   cursor: pointer;
-    border: 0;
-    position: sticky!important;
-    right: 0;
-    top: -10px!important;
-    width: 25px;
-    height: 25px;
-    background: #451095;
-    opacity: 1;
-    text-shadow: none;
-    border-radius: 50%;
-    z-index: 99999;
-    font-size: 21px;
-    color: #fff;
-    text-align: center;
-    position: sticky;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 0;
+  position: sticky !important;
+  right: 0;
+  top: -10px !important;
+  width: 25px;
+  height: 25px;
+  background: #451095;
+  opacity: 1;
+  text-shadow: none;
+  border-radius: 50%;
+  z-index: 99999;
+  font-size: 21px;
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-close-button:hover {
-  background-color: darkblue; /* Darker blue on hover */
+  background-color: darkblue;
+  /* Darker blue on hover */
 }
+
 .tab_bbx_job ul.JobBoardNewtab li {
-	width: calc(100%/3) !important;
+  width: calc(100%/3) !important;
 }
 
 
 .JobBoardNewDesign .job-valu .UdemyPortalPrice {
-	margin-top: 2px;
+  margin-top: 2px;
 }
+
 .classified-banner::after {
-	border-bottom-color: #ed6217;
+  border-bottom-color: #ed6217;
 }
+
 .classified-banner .job-valu-btn .btn-get {
-	background: #ed6217 !important;
-	color: #fff;
-	border: 2px #ed6217 solid;
+  background: #ed6217 !important;
+  color: #fff;
+  border: 2px #ed6217 solid;
 }
+
 .classified-banner .job-valu-btn .btn-get:hover {
-	background: #fff !important;
-	color: #ed6217;
-	border: 2px #ed6217 solid;
+  background: #fff !important;
+  color: #ed6217;
+  border: 2px #ed6217 solid;
 }
+
 .classified-banner .job-pr-icon {
-	margin-top: 20px;
+  margin-top: 20px;
 }
+
 .fiverr-new-banner .job-pr-icon li i.fa-earth-americas {
-	font-size: 24px;
+  font-size: 24px;
 }
+
 .BusinessDirectoryBanner h1 {
-	font-size: 32px;
+  font-size: 32px;
 }
+
 .free-img {
-	display: inline-block;
-	width: 130px;
-	overflow: hidden;
+  display: inline-block;
+  width: 130px;
+  overflow: hidden;
 }
+
 .free-img img {
-  text-align:center;
+  text-align: center;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6138,7 +6187,7 @@ before {
 }
 
 .free-img img {
-  text-align:center;
+  text-align: center;
   background: none;
   -webkit-animation: zoomout 10s ease-in infinite;
   animation: zoomout 10s ease-in infinite;
@@ -6148,191 +6197,279 @@ before {
 
 
 @-webkit-keyframes zoomin {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.5);}
-  100% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 @keyframes zoomin {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.5);}
-  100% {transform: scale(1);}
-} 
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
 
 @-webkit-keyframes zoomout {
-  0% {transform: scale(1);}
-  50% {transform: scale(0.67);}
-  100% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.67);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 @keyframes zoomout {
-    0% {transform: scale(1);}
-  50% {transform: scale(0.67);}
-  100% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.67);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 .af_ra textarea {
-	height: 80px;
+  height: 80px;
 }
 
 
 @media (max-width: 767px) {
-  .software_products{
+  .software_products {
     padding: 0;
     margin-top: 50px;
   }
+
   .job-valu .portal-price {
     margin-bottom: 10px !important;
     text-align: center !important;
   }
 
   .SubscriptionpriceSection {
-    display: none!important;
+    display: none !important;
   }
+
   .NewJobSiteDesign {
     margin-top: 58px;
   }
+
   .job-portal-bg h1 {
     margin-top: 10px;
   }
+
   .NewJobSiteDesign .job-valu {
     padding-top: 0;
   }
+
   .NewJobSiteDesign .job-valu .portal-price {
     width: 100%;
   }
+
   .job-pr-icon.jobwidthauto {
     width: 100% !important;
     margin-top: 30px;
   }
+
   .service-market-ttd li {
     width: 100%;
   }
+
   .JobBoardServiceMarketFeatures li {
     padding-right: 0;
     width: 100%;
   }
+
   .JobBoardServiceMarketFeatures {
     padding-top: 20px;
   }
+
   .client-say {
     padding-bottom: 10px;
-    padding: 20px 0!important;
+    padding: 20px 0 !important;
   }
+
   .job_portal_area {
-    padding: 10px 0!important;
+    padding: 10px 0 !important;
   }
+
   .tab_bbx_job ul li a {
     font-size: 12px;
     padding: 65px 3px 15px;
     background-size: 50px;
   }
+
   .JobBoardNewtab .jobseeker_app_job a {
     background-size: 65px;
   }
+
   .tab_bbx_job .JobBoardNewtab li a {
     padding-top: 55px;
   }
-  .food_restaurant_job.ebay_cutting a, .tab_bbx_job ul li a:hover, .tab_bbx_job ul li.active a {
+
+  .food_restaurant_job.ebay_cutting a,
+  .tab_bbx_job ul li a:hover,
+  .tab_bbx_job ul li.active a {
     background-size: 50px;
   }
-  .JobBoardNewtab .emplyer_app_job a, .JobBoardNewtab .emplyer_app_job.active a, .JobBoardNewtab .emplyer_app_job:hover a {
+
+  .JobBoardNewtab .emplyer_app_job a,
+  .JobBoardNewtab .emplyer_app_job.active a,
+  .JobBoardNewtab .emplyer_app_job:hover a {
     background-size: 65px;
   }
-  .JobBoardNewtab .admin_app_job a, .JobBoardNewtab .admin_app_job.active a, .JobBoardNewtab .admin_app_job:hover a {
+
+  .JobBoardNewtab .admin_app_job a,
+  .JobBoardNewtab .admin_app_job.active a,
+  .JobBoardNewtab .admin_app_job:hover a {
     background-size: 60px;
   }
+
   .JobBoardNewtab .jobseeker_app_job a {
     background-size: 65px;
   }
-  .content_area.feature_inner, .costomer_tab_right {
+
+  .content_area.feature_inner,
+  .costomer_tab_right {
     display: none;
   }
+
   .costomer_tab_left ul li {
     width: 100% !important;
     margin-top: 0 !important;
     margin-bottom: 15px;
   }
-  .job_product_page_header_in{
-    padding: 25px 0 10px!important;
+
+  .job_product_page_header_in {
+    padding: 25px 0 10px !important;
   }
+
   .job_product_page_header_in h2 {
     font-size: 20px;
   }
+
   .job_product_page_header_in h3 {
     font-size: 20px;
   }
-  .SubscriptionModel{
-    padding: 15px 0!important;
+
+  .SubscriptionModel {
+    padding: 15px 0 !important;
   }
+
   .taxt_tt_job {
     font-size: 23px;
     margin: 15px 0px;
   }
+
   .SubscriptionModelBx .JobBoardPlans ul li {
     width: 100%;
   }
+
   .taxt_tt_job {
     font-size: 23px;
     margin: 15px 0;
   }
+
   .SubscriptionpriceSection {
     display: inline-block;
   }
+
   .SubscriptionModelPrice {
     padding: 20px 20px;
     margin-top: 20px;
   }
+
   .SubscriptionModelPriceBx {
     padding: 20px 10px;
   }
+
   .SubscriptionModelPrice h4 {
-    font-size: 45px!important;
+    font-size: 45px !important;
   }
+
   .SubscriptionModelPrice .srik_cls {
     font-size: 28px;
   }
+
   .SubscriptionModelPriceBx .btn-get {
     padding: 9px 10px !important;
     font-size: 14px !important;
     text-transform: capitalize !important;
   }
+
   .SubscriptionModelPriceBx .fiverr-buys {
     padding: 9px 10px !important;
     font-size: 14px !important;
   }
+
   .logic-parter a {
     margin: 4px 20px;
     width: 90%;
   }
+
   .taxt_tt_job {
     font-size: 23px;
     margin: 15px 0;
   }
-  .used_technology_section, .whatsupport_section {
+
+  .used_technology_section,
+  .whatsupport_section {
     padding: 30px 0 10px;
   }
+
   .title_main {
     margin-bottom: 35px;
     margin-top: 0px;
   }
-  .used_technology_section, .whatsupport_section {
+
+  .used_technology_section,
+  .whatsupport_section {
     padding: 30px 0 10px;
   }
+
   .ecommerce--review--point {
     padding: 40px 15px 27px;
     height: auto;
     margin-top: 7px;
   }
+
   .fiverr-new-banner .job-pr-icon li {
     float: none;
   }
+
   .tab_bbx_job ul {
     width: 100%;
   }
 
-  .doctor_appointment .tab_bbx_job ul{
-    width: 100%!important;
+  .doctor_appointment .tab_bbx_job ul {
+    width: 100% !important;
   }
-  .modal-service .modal-dialog, .modal-service .modal-dialog-service {
+
+  .modal-service .modal-dialog,
+  .modal-service .modal-dialog-service {
     max-width: 97%;
     width: 100%;
     margin: 10px auto 0;
@@ -6340,15 +6477,352 @@ before {
 }
 
 
-.software_products .breadcrumb-item a:hover{
+.software_products .breadcrumb-item a:hover {
   color: #fff !important;
 }
 
 
-.robotic_icons{
-  padding-top: 17px!important;
+.robotic_icons {
+  padding-top: 17px !important;
 }
 
-.doctor_appointment .tab_bbx_job ul{
-  width: 100%!important;
+.doctor_appointment .tab_bbx_job ul {
+  width: 100% !important;
+}
+
+
+
+
+
+/* Online Food Orsdering System  */
+.fd-solution {
+  background-image: url(/img/Onlinefoodorderingsystem/fd-slide.png);
+  padding: 80px 0 0;
+  margin-top: 100px;
+}
+
+.fd-solution h1 {
+  color: #000;
+  font-size: 40px;
+  font-weight: 700!important;
+  margin-bottom: 20px;
+}
+
+.fd-solution .poweredBy {
+  padding: 30px 0 40px;
+}
+
+.fd-solution .poweredBy ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.fd-solution .poweredBy li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  /* display: inline-block; */
+  font-size: 25px;
+  font-weight: 700!important;
+  margin-right: 10px;
+}
+
+.fd-solution .poweredBy p {
+  color: #000;
+  font-size: 25px;
+  margin: 0;
+  font-weight: 700!important;
+  text-align: center;
+}
+
+.free-trial .btn.btn-primary {
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 25px;
+}
+
+.fd-solution .red-strip {
+  background-color: #ed431f;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700!important;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.fd-solution .fd-list-top li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-size: 23px;
+  font-weight: 700!important;
+  padding: 5px 0 0;
+}
+
+.red-system-app {
+  background-color: #ed431f;
+  padding: 40px 0;
+}
+
+.red-system-app p {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700!important;
+  line-height: 30px;
+  margin: 0 auto;
+  max-width: 1060px;
+  text-align: center;
+}
+
+.advance-unique {
+  padding: 70px 0;
+}
+
+.advance-unique h2 {
+  font-size: 29px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.advance-unique .fd-feature {
+  border: 1px solid #ed431f;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: all .5s ease-out;
+}
+
+.fd-feature img {
+  transition: all .5s ease-out;
+  display: inline-block;
+}
+
+.advance-unique .fd-feature h3 {
+  font-size: 25px;
+  font-weight: 700!important;
+  margin: 20px 0 10px;
+  min-height: 55px;
+}
+
+.fd-feature p {
+  color: #4c4c4c;
+  font-size: 17px;
+  min-height: 80px;
+}
+
+
+.advance-unique .fd-feature,
+.fd-feature img {
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out
+}
+
+.fd-mapps,
+.fd-solution {
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+.fd-dashboard,
+.fd-mapps,
+.fd-solution {
+  background-repeat: no-repeat
+}
+
+.advance-unique h2,
+.fd-dashboard h2,
+.fd-mapps h2,
+.fd-website h2,
+.fd-work-task h2 {
+  font-weight: 700!important;
+  text-transform: uppercase!important;
+}
+
+
+
+.fd-mapps h2,
+.fd-mapps p,
+.fd-website h2,
+.fd-work-task h2,
+.fd-work-task p {
+  margin-bottom: 15px
+}
+
+.fd-feature p {
+  color: #4c4c4c;
+  font-size: 17px;
+  min-height: 80px
+}
+
+.fd-feature:hover {
+  background-color: #f1f1f1;
+  border-radius: 0;
+  border-color: #000
+}
+
+
+
+.fd-feature:hover img {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  filter: grayscale(1)
+}
+
+.fd-mapps {
+  background-image: url(/img/Onlinefoodorderingsystem/fd-ma-bg.png)
+}
+
+.fd-mapps h2 {
+  color: #ed431f;
+  font-size: 40px;
+  margin-top: 100px
+}
+
+.fd-mapps p {
+  font-size: 24px;
+  line-height: 35px
+}
+
+.fd-work-task h2 {
+  font-size: 29px;
+  margin-top: 60px
+}
+
+.fd-work-task p {
+  color: #4c4c4c;
+  font-size: 16px
+}
+
+.fd-work-task li {
+  color: #000;
+  font-size: 16px;
+  padding: 5px 0 5px 20px;
+  position: relative
+}
+
+.fd-work-task li::after {
+  background-color: #000;
+  border-radius: 50%;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 13px;
+  width: 10px
+}
+
+.fd-website h2 {
+  color: #ed431f;
+  font-size: 40px;
+  text-align: center
+}
+
+.fd-feat-list-img {
+  float: left;
+  margin-right: 21px
+}
+
+.fd-feat-list-img img {
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out
+}
+
+.fd-feat-list-cont {
+  float: left;
+  width: calc(100% - 120px);
+  padding: 20px 0 0
+}
+
+.fd-feat-list {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px
+}
+
+.fd-website p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  line-height: 30px
+}
+
+.fd-feat-list-cont h3 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700!important;
+}
+
+.fd-feat-list-cont p {
+  color: #4c4c4c;
+  font-size: 18px;
+  text-align: left
+}
+
+.fd-feat-list:nth-child(2),
+.fd-feat-list:nth-child(4) {
+  padding-left: 30px
+}
+
+.fd-feat-list:nth-child(3) {
+  padding-left: 60px
+}
+
+.website-img {
+  margin-top: 50px
+}
+
+.fd-dashboard {
+  background-image: url(/img/Onlinefoodorderingsystem/fd-dashboard.png);
+  background-position: left bottom;
+  background-size: 100%;
+  background-color: #e6ebf1;
+  padding: 58px 0
+}
+
+.fd-dashboard h2 {
+  color: #ed431f;
+  font-size: 40px;
+  margin-bottom: 15px
+}
+
+.fd-dashboard p {
+  font-size: 20px;
+  margin-bottom: 30px
+}
+
+.fd-dashboard li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000
+}
+
+.fd-dashboard li span {
+  margin-right: 10px
+}
+
+.fd-website,
+.fd-work-task {
+  padding: 50px 0
+}
+
+.CustomerApp {
+  direction: rtl;
+    text-align: left;
+    width: 100%;
 }

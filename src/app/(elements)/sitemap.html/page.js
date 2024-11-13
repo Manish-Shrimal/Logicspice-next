@@ -251,6 +251,16 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
+                        <Link href="/doctor-appointment-scheduling-software">
+                        Online Doctor Appointment Scheduling Software
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/salon-booking-software">
+                        Salon Booking Software
+                        </Link>
+                      </li>
+                      <li>
                         <Link href="/job-portal-script">
                           Job Portal PHP Script
                         </Link>

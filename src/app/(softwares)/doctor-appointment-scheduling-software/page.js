@@ -366,7 +366,7 @@ const Page = () => {
                   <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  Online Doctor Appointment Scheduling Software
+                   Doctor Appointment Scheduling Software
                 </li>
               </ol>
             </div>
@@ -395,9 +395,9 @@ const Page = () => {
             <i>white Label job board</i> in less time.
           </p>
           <p>
-            <strong>
-              <i>Online Doctor Appointment Scheduling Software</i>
-            </strong>{" "}
+            
+              Online Doctor Appointment Scheduling Software
+            {" "}
             makes the scheduling of medical appointments easy and hassle-free.
             This software is specifically designed for healthcare providers.
             Patients can find their doctor online and book an appointment in a
@@ -472,10 +472,10 @@ const Page = () => {
             patients never miss an appointment. It is a complete white-label
             solution and can be fully customized to your branding in order to
             provide a professional, consistent interface.
-            <strong>
+            {/* <strong>
               <i>multi-job posting</i>
             </strong>{" "}
-            feature to further enhance efficiency.
+            feature to further enhance efficiency. */}
           </div>
 
           <div className="tab_bbx_job">
