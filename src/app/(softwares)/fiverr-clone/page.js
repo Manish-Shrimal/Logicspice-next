@@ -1,5 +1,5 @@
 "use client";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
 import Link from "next/link";
 import "@/app/(softwares)/softwares.css";
@@ -19,7 +19,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
-import "../../../../public/css/font-awesome.min.css";
+// import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
 // Import Swiper styles

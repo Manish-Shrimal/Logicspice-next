@@ -19,6 +19,8 @@ import "aos/dist/aos.css"; // Import AOS CSS
 import AOS from "aos"; // Import AOS
 import GTMComponent from "./Components/GTMComponent";
 import Chatbot from "./Components/Chatbot";
+import "../../public/css/font-awesome.css";
+
 
 const ServicesNewSection = lazy(() =>
   import("./Components/ServicesNewSection")

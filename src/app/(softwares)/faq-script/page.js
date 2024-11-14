@@ -6,7 +6,7 @@ import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Reviewmodals from "@/app/Components/Reviewmodals";
@@ -21,6 +21,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton } from "@mui/material";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.css";
 
 
 const Page = () => {

@@ -5,7 +5,7 @@ import NavBar from "@/app/Components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import "@/app/(softwares)/softwares.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Reviewmodals from "@/app/Components/Reviewmodals";
 import "../../resposive.css";
@@ -19,6 +19,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.css"
 
 const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);

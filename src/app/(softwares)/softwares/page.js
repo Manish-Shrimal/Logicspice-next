@@ -6,7 +6,7 @@ import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,6 +18,8 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import { redirect } from "next/navigation";
+import "../../../../public/css/font-awesome.css";
+
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab1");

@@ -6,7 +6,7 @@ import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import "../../resposive.css";
@@ -22,6 +22,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);

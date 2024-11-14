@@ -2,7 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap'); */
 
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'robotoregular';
   font-weight: 400;
   color: #3F3F3F !important;
   font-size: 15px;
@@ -10,6 +10,81 @@ body {
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('/fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotolight';
+  src: url('/fonts/roboto-light-webfont.woff2') format('woff2'),
+       url('/fonts/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url('/fonts/roboto-medium-webfont.woff2') format('woff2'),
+       url('/fonts/roboto-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'robotoblack';
+  src: url('/fonts/roboto-black-webfont.woff2') format('woff2'),
+       url('/fonts/roboto-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'robotobold';
+  src: url('/fonts/roboto-bold-webfont.woff2') format('woff2'),
+       url('/fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'latolight';
+  src: url('/fonts/lato-light-webfont.woff2') format('woff2'),
+       url('/fonts/lato-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'latoregular';
+  src: url('/fonts/lato-regular-webfont.woff2') format('woff2'),
+       url('/fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'latoblack';
+  src: url('/fonts/lato-black-webfont.woff2') format('woff2'),
+       url('/fonts/lato-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'latobold';
+  src: url('/fonts/lato-bold-webfont.woff2') format('woff2'),
+       url('/fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 .container {
   max-width: 1280px;
@@ -74,14 +149,15 @@ body {
 
 .job-portal-banner h1 {
   font-size: 53px;
-  font-weight: 600 !important;
+  font-weight: normal !important;
+  font-family: 'robotoregular';
   color: #fff;
 }
 
 .fiverr-new-banner h1 {
   font-size: 40px;
   color: #363737;
-  font-family: "roboto", sans-serif !important;
+  font-family: 'robotobold' !important;
 }
 
 .NewJobSiteDesign h1 {
@@ -102,13 +178,14 @@ body {
   font-size: 22px;
   padding-top: 15px;
   color: #626262;
-  font-family: 'roboto', sans-serif !important;
+  font-family: 'robotoregular' !important;
   font-weight: normal !important;
 }
 
 .FiverrCloneMainBanner h2 {
   font-size: 30px;
   color: #363737;
+  font-family: 'robotoregular' !important;
   font-weight: normal !important;
 }
 
@@ -137,7 +214,7 @@ body {
 .NewJobSiteDesign .job-valu .portal-price {
   font-size: 22px;
   color: #363737;
-  font-family: "roboto", sans-serif;
+  font-family: 'robotoregular';
   margin-top: 7px;
   float: left;
   text-align: left;
@@ -153,13 +230,13 @@ body {
   font-size: 30px;
   margin-bottom: 4px;
   display: inline-block;
-  font-weight: 600 !important;
+  font-weight: normal !important;
   margin-top: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'robotobold' !important;
 }
 
 .job-valu .portal-price h4 small {
-  font-weight: 300;
+  font-family: 'robotolight';
   color: #242424;
   font-size: 14px;
 }
@@ -214,7 +291,7 @@ body {
   width: 170px;
   background: #fff;
   font-size: 14px;
-  font-weight: 500;
+  font-family: 'robotomedium';
   left: 50%;
   top: 40px;
   padding: 5px 10px;
@@ -225,7 +302,6 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   display: none;
   color: #333;
-  font-family: "roboto", sans-serif;
 }
 
 .MoreInfo p::before {
@@ -275,7 +351,7 @@ body {
   border-radius: 5px !important;
   border: 2px #10a12a solid;
   cursor: pointer;
-  font-family: "Lato", sans-serif !important;
+  font-family: 'latoregular' !important;
   vertical-align: top;
   text-transform: uppercase;
 }
@@ -302,7 +378,8 @@ body {
   border-radius: 5px !important;
   border: 2px #363737 solid;
   line-height: 23px;
-  font-weight: 600 !important;
+  font-weight: normal!important;
+  font-family: 'robotobold';
 }
 
 .fiverr-new-banner .job-valu-btn .fiverr-buys:hover {
@@ -324,9 +401,10 @@ body {
   color: #cecece;
   margin-top: 35px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: normal;
   display: inline-block;
   width: 100%;
+  font-family: 'robotomedium';
 }
 
 .fiverr-new-banner .line-border {
@@ -342,6 +420,7 @@ body {
   margin: 0 0 0;
   padding: 0;
   font-weight: normal;
+  font-family: 'robotoregular';
 }
 
 .fiverr-new-banner .line-border img {
@@ -555,7 +634,7 @@ section {
   min-height: 30px;
   background-repeat: no-repeat;
   line-height: 22px;
-  font-weight: 500;
+  font-family: 'robotomedium';
 }
 
 .job_portal_area {
@@ -575,10 +654,10 @@ section {
 .taxt_tt_job {
   font-size: 33px;
   color: #000;
-  font-weight: 700;
+  font-weight: normal;
   position: relative;
   padding-bottom: 15px;
-  font-family: 'lato', serif;
+  font-family: 'latobold';
 }
 
 .taxt_tt_job::before {
@@ -645,8 +724,9 @@ section {
   display: block;
   font-size: 18px;
   color: #000;
-  font-weight: 700;
+  font-weight: normal !important;
   padding: 115px 20px 15px;
+  font-family: 'robotobold';
 }
 
 .tab_bbx_job ul li.active::before {
@@ -724,11 +804,12 @@ section {
   float: left;
   width: 33% !important;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: normal;
   text-align: left;
   margin-top: 20px;
   position: relative;
   margin-bottom: 20px;
+  font-family: 'robotobold';
 }
 
 .costomer_tab_left ul li i {
@@ -778,6 +859,7 @@ section {
   display: none;
   text-transform: none;
   line-height: 17px;
+  font-family: 'robotoregular';
 }
 
 .product-idea:hover p {
@@ -809,8 +891,9 @@ section {
 .job_product_page_header_in h2 {
   color: #fff;
   font-size: 34px;
-  font-weight: 600 !important;
+  font-weight: normal !important;
   padding-bottom: 30px;
+  font-family: 'robotobold';
 }
 
 .job_product_page_header_in .whateissuprt p {
@@ -829,9 +912,10 @@ section {
 .taxt_tt_job {
   font-size: 33px;
   color: #000;
-  font-weight: 700;
+  font-weight: normal;
   position: relative;
   padding-bottom: 15px;
+  font-family: 'robotobold';
 }
 
 .taxt_tt_job::before {
@@ -924,11 +1008,11 @@ section {
 
 .SubscriptionModelPrice h4 {
   font-size: 100px;
-  font-family: "roboto", sans-serif;
   color: #a51077;
   margin-bottom: 10px;
   display: inline-block;
-  font-weight: 500;
+  font-weight: normal;
+  font-family: 'robotomedium';
 }
 
 .sml_labl {
@@ -950,9 +1034,10 @@ section {
   background: #fff !important;
   color: #a51077 !important;
   padding: 9px 20px !important;
-  font-weight: 600 !important;
+  font-weight: normal !important;
   border-radius: 9px !important;
   border: 1px #a51077 solid !important;
+  font-family: 'robotobold';
 }
 
 .SubscriptionModelPriceBx .btn {
@@ -963,9 +1048,10 @@ section {
   background: #a51077 !important;
   color: #fff !important;
   padding: 9px 20px !important;
-  font-weight: 600 !important;
+  font-weight: normal !important;
   border-radius: 9px !important;
   border: 1px #a51077 solid !important;
+  font-family: 'robotobold';
 }
 
 .SubscriptionModelPriceBx .jocpp {
@@ -1302,11 +1388,12 @@ section {
 .small_bbx_job_new .thumbnail-new h3 {
   font-size: 17px;
   text-transform: uppercase;
-  font-weight: 700 !important;
+  font-weight: normal !important;
   padding-bottom: 8px;
   display: inline-block;
   position: relative;
   color: #000;
+  font-family: 'robotobold';
 }
 
 .small_bbx_job_new .thumbnail-new p {
@@ -1314,6 +1401,7 @@ section {
   font-weight: 400;
   color: #626262;
   padding-top: 8px;
+  font-family: 'robotoregular';
 }
 
 .small_bbx_job_new .thumbnail-new:hover {
@@ -1345,7 +1433,8 @@ section {
 }
 
 .title_main span {
-  font-weight: 700;
+  font-weight: normal;
+  font-family: 'robotobold';
 }
 
 .used_technology_section_dataa ul {
@@ -1359,7 +1448,7 @@ section {
   margin-bottom: 20px;
   padding: 0 20px;
   color: #3F3F3F;
-  font-family: 'roboto', sans-serif;
+  font-family: 'robotoregular';
   font-size: 15px;
 }
 
@@ -1470,7 +1559,7 @@ section {
   color: #505458 !important;
   font-size: 25px !important;
   margin-bottom: 25px !important;
-  font-family: "lato", sans-serif !important;
+  font-family: 'latoregular' !important;
 }
 
 .main-rait {
@@ -1492,7 +1581,7 @@ section {
   float: left;
   width: 15%;
   color: #3f3f3f;
-  font-family: "roboto", sans-serif;
+  font-family: 'robotoregular';
   font-size: 15px;
 }
 
@@ -1601,14 +1690,15 @@ section {
   display: inline-block;
   width: 100%;
 }
-
+.other-product-box .other-caption-bx h3,
 .other-caption-bx h3,
 .other-caption-bx h3 a {
   font-size: 18px;
   color: #505458;
-  font-weight: 600;
+  font-weight: normal !important;
   text-transform: uppercase;
   min-height: 43px;
+  font-family: 'robotobold';
 }
 
 .other-project-logo {
@@ -1675,10 +1765,9 @@ section {
 }
 
 .feature_inner h2.title_main {
-  font-weight: 600 !important;
+  font-weight: normal !important;
   color: #000;
-  /* font-family: "roboto", sans-serif !important; */
-  font-family: "lato", sans-serif !important;
+  font-family: 'latobold' !important;
 }
 
 #joblboardslide {
@@ -1720,10 +1809,11 @@ section {
   display: inline-block;
   float: left;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: normal;
   padding: 20px 28px 0;
   text-align: center;
   width: 100%;
+  font-family: 'robotobold';
 }
 
 .hands-proved .titleof_scnew {
@@ -1796,8 +1886,9 @@ section {
   line-height: 22px;
   padding-right: 30px;
   width: 49%;
-  font-weight: 500;
+  font-weight: normal;
   background-position: left 4px;
+  font-family: 'robotomedium';
 }
 
 .SubscriptionModelBx .JobBoardPlans ul li {
@@ -1819,10 +1910,11 @@ section {
 
 .ecommerce_review_section h2 {
   font-size: 34px;
-  font-weight: 600;
+  font-weight: normal !important;
   color: #303030;
   text-align: center;
   padding-bottom: 30px;
+  font-family: 'robotobold';
 }
 
 .ecommerce--review {
@@ -1840,9 +1932,10 @@ section {
   padding: 20px;
   font-size: 17px;
   color: #4f4f4f;
-  font-weight: 300;
+  font-weight: normal;
   position: relative;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+  font-family: 'robotolight';
 }
 
 .ecommerce--review .who_ratset {
@@ -1897,11 +1990,12 @@ section {
   text-align: center;
   font-size: 38px;
   margin-bottom: 45px;
-  font-weight: 600;
+  font-weight: normal;
   color: #303030;
   border-bottom: 1px #ddd solid;
   padding-bottom: 50px;
   position: relative;
+  font-family: 'robotobold';
 }
 
 .ecommerce__Quick_FAQ .title_main:before {
@@ -2046,7 +2140,7 @@ section {
   border-color: #258635 !important;
   color: #258635 !important;
   /* font-weight: 500 !important; */
-  font-family: 'lato', sans-serif;
+  font-family: 'latoregular';
 }
 
 /* Fiverr-clone start*/
@@ -2117,8 +2211,9 @@ section {
   color: #fff;
   margin-bottom: 10px;
   display: inline-block;
-  font-weight: 600;
+  font-weight: normal;
   margin-left: 13px;
+  font-family: 'robotobold';
 }
 
 .job-valu-btn {
@@ -2196,6 +2291,7 @@ section {
 
 .tab_bbx_job .JobBoardNewtab li a {
   padding-top: 145px;
+  font-weight: normal;
 }
 
 /* Fiverr-clone end */
@@ -2234,8 +2330,9 @@ section {
   line-height: 22px;
   padding-right: 30px;
   width: 49%;
-  font-weight: 500;
+  font-weight: normal;
   background-position: left 4px;
+  font-family: 'robotomedium';
 }
 
 .MainFaqBx .accordion-item {
@@ -2390,10 +2487,11 @@ section {
   display: inline-block;
   float: left;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: normal;
   padding: 20px 28px 0;
   text-align: center;
   width: 100%;
+  font-family: 'robotobold';
 }
 
 #equipment_sldier {
@@ -2493,10 +2591,12 @@ section {
   width: 25% !important;
   font-weight: 400 !important;
   background-position: left 4px !important;
+  font-family: 'robotoregular';
 }
 
 .MarketplaceSoftwareFeatures li span {
   font-weight: 400;
+  font-family: 'robotoregular';
 }
 
 .MarketplaceSoftwareClient {
@@ -2598,8 +2698,8 @@ section {
   text-align: center;
   color: #303030;
   font-size: 40px;
-  font-weight: 500;
-  font-family: "roboto", sans-serif;
+  font-weight: normal;
+  font-family: 'robotomedium';
 }
 
 .libraries_laravel_choose {
@@ -2635,24 +2735,22 @@ section {
 .laravel_choose_details h3 {
   color: #303030;
   font-size: 24px;
-  font-family: "roboto", sans-serif;
+  font-family: 'robotoregular';
 }
 
 .laravel_choose_details p {
-  font-family: "roboto", sans-serif;
+  font-family: 'robotolight';
   font-size: 16px;
   color: #303030;
   padding-top: 10px;
   opacity: 0.8;
-  font-weight: 300;
 }
 
 .laravel_core_sub2 {
   color: #2d3545;
   font-size: 16px;
-  font-family: "roboto", sans-serif;
+  font-family: 'robotolight';
   text-align: center;
-  font-weight: 300;
   padding-top: 15px;
 }
 
@@ -2688,8 +2786,8 @@ section {
   text-align: center;
   color: #303030;
   font-size: 40px;
-  font-weight: 500;
-  font-family: "roboto", sans-serif;
+  font-weight: normal;
+  font-family: 'robotomedium';
 }
 
 .laravel-slider-bx {
@@ -2828,10 +2926,11 @@ section {
   text-align: left;
   font-size: 42px;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: normal;
   color: #303030;
   padding-bottom: 50px;
   position: relative;
+  font-family: 'robotobold';
 }
 
 /* Market Place Solution end */
@@ -2907,8 +3006,8 @@ section {
 .FaqBannerSection h1 {
   color: #000;
   font-size: 50px;
-  font-family: "Lato", sans-serif;
-  font-weight: 700 !important;
+  font-weight: normal !important;
+  font-family: 'latobold';
 }
 
 .FaqUsedTechnologiesSection .used_technology_section_dataa {
@@ -2916,7 +3015,7 @@ section {
 }
 
 .FaqBannerSection h1 span {
-  font-family: "Lato", sans-serif;
+  font-family: 'latoregular';
   font-weight: 400;
 }
 
@@ -2924,22 +3023,22 @@ section {
   color: #021d1a;
   font-size: 32px;
   padding: 15px 0;
-  font-family: "roboto", sans-serif;
+  font-family: 'robotoregular';
   line-height: 42px;
   font-weight: 400;
 }
 
 .FaqBannerSection h2 strong {
-  font-family: "roboto", sans-serif;
-  font-weight: 600;
+  font-family: 'robotobold';
+  font-weight: normal;
   font-size: 30px;
 }
 
 .FaqBannerSection .btn-primary {
   margin-top: 10px;
   padding: 11px 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
+  font-family: 'latobold';
+  font-weight: normal;
   border-radius: 6px;
 }
 
@@ -3108,9 +3207,9 @@ section {
 .FaqScriptUpdateBx h3 {
   color: #303030;
   font-size: 22px;
-  font-family: "roboto", sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 30px;
+  font-family: 'robotomedium';
 }
 
 .FaqScriptUpdateBx ul {
@@ -3370,7 +3469,8 @@ a.StartFreeTrialBtn {
   display: inline-block;
   margin-left: 20px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: normal;
+  font-family: 'robotomedium';
   z-index: 9;
 }
 
@@ -3436,8 +3536,8 @@ a.StartFreeTrialBtn {
   color: #292929;
   font-size: 36px;
   text-align: center;
-  font-family: "roboto", sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: normal !important;
+  font-family: 'robotobold' !important;
 }
 
 .CustomerReviewsMainBx {
@@ -3452,8 +3552,9 @@ a.StartFreeTrialBtn {
   padding: 20px;
   font-size: 17px;
   color: #4f4f4f;
-  font-weight: 300;
+  font-weight: normal;
   position: relative;
+  font-family: 'robotolight';
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -3477,7 +3578,8 @@ a.StartFreeTrialBtn {
   padding: 8px 60px 0 0;
   color: #303030;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: normal;
+  font-family: 'robotomedium';
 }
 
 .CustomerReviewsClient i {
@@ -3542,7 +3644,7 @@ a.StartFreeTrialBtn {
 .ecommerce__Quick_FAQ .accordion-item .accordion-button {
   padding: 25px 10px;
   font-size: 18px;
-  font-family: "roboto", sans-serif;
+  font-family: 'robotoregular';
   color: #303030 !important;
   background: #fff !important;
 }
@@ -3570,9 +3672,10 @@ a.StartFreeTrialBtn {
 .job_product_page_header_in h3 {
   color: #fff;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: normal;
   padding-bottom: 20px;
   padding-top: 20px;
+  font-family: 'robotomedium';
 }
 
 .OrderManagementSoftwareBanner .job-valu-btn .btn-get {
@@ -3614,8 +3717,9 @@ a.StartFreeTrialBtn {
   line-height: 22px;
   padding-right: 30px;
   width: 100%;
-  font-weight: 500;
+  font-weight: normal;
   background-position: left 5px;
+  font-family: 'robotomedium';
 }
 
 /*------OrderManagement-----*/
@@ -3647,7 +3751,8 @@ a.StartFreeTrialBtn {
   line-height: 22px;
   padding-right: 30px;
   width: 50%;
-  font-weight: 500;
+  font-weight: normal;
+  font-family: 'robotomedium';
   background-position: left center;
 }
 
@@ -3660,10 +3765,11 @@ a.StartFreeTrialBtn {
   text-align: left;
   font-size: 42px;
   margin-bottom: 10px;
-  font-weight: 600 !important;
+  font-weight: normal !important;
   color: #303030;
   padding-bottom: 50px;
   position: relative;
+  font-family: 'robotobold';
 }
 
 .CustomQuickFAQScript .accordion-item {
@@ -4095,9 +4201,9 @@ a.StartFreeTrialBtn {
   display: block;
   color: #021d1a;
   font-size: 20px;
-  font-family: "roboto", sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   padding-top: 10px;
+  font-family: 'robotomedium';
 }
 
 .FaqNavTabs li a i img {
@@ -4141,8 +4247,8 @@ a.StartFreeTrialBtn {
 .FaqScriptFeaturesBx h3 {
   color: #303030;
   font-size: 18px;
-  font-family: "roboto", sans-serif;
-  font-weight: 500;
+  font-weight: normal;
+  font-family: 'robotomedium';
 }
 
 .FaqScriptFeaturesBx p {
@@ -4375,8 +4481,9 @@ a.StartFreeTrialBtn {
 
 .product_middle_menu .navbar-default .navbar-nav>li>a {
   color: #fff;
-  font-weight: 700;
+  font-weight: normal;
   padding: 15px 30px;
+  font-family: 'robotobold';
 }
 
 .product_middle_menu .navbar-default .navbar-nav>li>a.btn.btn-default {
@@ -4411,7 +4518,8 @@ a.StartFreeTrialBtn {
 .Frequently_Asked_Questions h2 span,
 .Frequently_Asked_Questions h3 span,
 .product_mobileappase h2 span {
-  font-weight: 700;
+  font-weight: normal;
+  font-family: 'robotobold';
 }
 
 .Frequently_Asked_Questions p {
@@ -5070,6 +5178,7 @@ before {
   line-height: normal;
   padding: 5px 20px;
   position: relative;
+  font-family: 'robotoregular';
 }
 
 .af_ra textarea {
@@ -5285,11 +5394,12 @@ before {
   text-align: center;
   color: #000;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: normal;
   margin-bottom: 14px;
   display: inline-block;
   border-bottom: 1px #ddd solid;
   padding-bottom: 6px;
+  font-family: 'robotobold';
 }
 
 .site-titles a {
@@ -5438,8 +5548,9 @@ a:hover {
   line-height: 22px;
   padding-right: 30px;
   width: 100%;
-  font-weight: 500;
+  font-weight: normal;
   background-position: left 5px;
+  font-family: 'robotomedium';
 }
 
 .HotelBokingSoftwareFeatures li {
@@ -5460,8 +5571,9 @@ a:hover {
 .breadcrems_header h1 {
   color: #fff;
   font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: 'robotobold';
 }
 
 .breadcrems_header ol.breadcrumb {
@@ -5518,7 +5630,8 @@ a:hover {
   color: #fff;
   font-size: 20px;
   width: 100%;
-  font-weight: 500
+  font-weight: normal;
+  font-family: 'robotomedium';
 }
 
 .new-product-tab>li>a:hover,
@@ -5621,7 +5734,8 @@ a:hover {
   display: inline-block;
   color: #fff !important;
   font-size: 22px;
-  font-weight: 600
+  font-weight: normal;
+  font-family: 'robotobold';
 }
 
 .caption-bx p {
@@ -5764,14 +5878,15 @@ a:hover {
 }
 
 .content_area h3 {
-  font-weight: 600 !important;
+  font-weight: normal !important;
   color: #000;
   float: left;
   font-size: 18px;
   margin-bottom: 15px;
   margin-top: 15px;
   position: relative;
-  width: 100%
+  width: 100%;
+  font-family: 'robotobold';
 }
 
 .testing-statred-section {
@@ -5783,10 +5898,11 @@ a:hover {
 .testing-statred-section h2 {
   color: #151515;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: normal;
   display: inline-block;
   vertical-align: middle;
   padding-right: 20px;
+  font-family: 'robotobold';
 }
 
 .new-products-tab {
@@ -5870,8 +5986,9 @@ a:hover {
   min-height: 30px;
   background-repeat: no-repeat;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 16px;
+  font-family: 'robotomedium';
 }
 
 
@@ -5901,9 +6018,10 @@ a:hover {
 .taxt_tt_job {
   font-size: 33px;
   color: #000;
-  font-weight: 700 !important;
+  font-weight: normal !important;
   position: relative;
   padding-bottom: 15px;
+  font-family: 'robotobold';
 }
 
 
@@ -5961,8 +6079,9 @@ a:hover {
 
 .product_middle_menu.top-fixed .navbar-default .navbar-nav>li>a {
   color: #fff;
-  font-weight: 700;
+  font-weight: normal;
   padding: 5px 20px;
+  font-family: 'robotobold';
 }
 
 .WhatsaapCliets .service-market-ttd li {
@@ -5979,8 +6098,9 @@ a:hover {
   line-height: 22px;
   padding-right: 30px;
   /* width: 49%; */
-  font-weight: 500;
+  font-weight: normal;
   background-position: left 0;
+  font-family: 'robotomedium';
 }
 
 /* .service-market-say .service-market-ttd li{
@@ -6033,7 +6153,8 @@ a:hover {
 
 .titlesettop span {
   display: block;
-  font-weight: 700;
+  font-weight: normal;
+  font-family: 'robotobold';
 }
 
 /* Lead generation Css  */
@@ -6320,6 +6441,7 @@ a:hover {
     font-size: 12px;
     padding: 65px 3px 15px;
     background-size: 50px;
+    font-weight: normal;
   }
 
   .JobBoardNewtab .jobseeker_app_job a {
@@ -6504,8 +6626,9 @@ a:hover {
 .fd-solution h1 {
   color: #000;
   font-size: 40px;
-  font-weight: 700!important;
+  font-weight: normal !important;
   margin-bottom: 20px;
+  font-family: 'robotobold';
 }
 
 .fd-solution .poweredBy {
@@ -6526,16 +6649,18 @@ a:hover {
   color: #000;
   /* display: inline-block; */
   font-size: 25px;
-  font-weight: 700!important;
+  font-weight: normal !important;
   margin-right: 10px;
+  font-family: 'robotobold';
 }
 
 .fd-solution .poweredBy p {
   color: #000;
   font-size: 25px;
   margin: 0;
-  font-weight: 700!important;
+  font-weight: normal!important;
   text-align: center;
+  font-family: 'robotobold';
 }
 
 .free-trial .btn.btn-primary {
@@ -6548,9 +6673,10 @@ a:hover {
   background-color: #ed431f;
   color: #fff;
   font-size: 24px;
-  font-weight: 700!important;
+  font-weight: normal!important;
   padding: 10px;
   margin-bottom: 10px;
+  font-family: 'robotobold';
 }
 
 .fd-solution .fd-list-top li {
@@ -6559,8 +6685,9 @@ a:hover {
   gap: 10px;
   color: #000;
   font-size: 23px;
-  font-weight: 700!important;
+  font-weight: normal!important;
   padding: 5px 0 0;
+  font-family: 'robotobold';
 }
 
 .red-system-app {
@@ -6571,11 +6698,12 @@ a:hover {
 .red-system-app p {
   color: #fff;
   font-size: 25px;
-  font-weight: 700!important;
+  font-weight: normal!important;
   line-height: 30px;
   margin: 0 auto;
   max-width: 1060px;
   text-align: center;
+  font-family: 'robotobold';
 }
 
 .advance-unique {
@@ -6604,9 +6732,10 @@ a:hover {
 
 .advance-unique .fd-feature h3 {
   font-size: 25px;
-  font-weight: 700!important;
+  font-weight: normal!important;
   margin: 20px 0 10px;
   min-height: 55px;
+  font-family: 'robotobold';
 }
 
 .fd-feature p {
@@ -6642,8 +6771,9 @@ a:hover {
 .fd-mapps h2,
 .fd-website h2,
 .fd-work-task h2 {
-  font-weight: 700!important;
+  font-weight: normal!important;
   text-transform: uppercase!important;
+  font-family: 'robotobold';
 }
 
 
@@ -6762,7 +6892,8 @@ a:hover {
 .fd-feat-list-cont h3 {
   color: #000;
   font-size: 20px;
-  font-weight: 700!important;
+  font-weight: normal!important;
+  font-family: 'robotobold';
 }
 
 .fd-feat-list-cont p {

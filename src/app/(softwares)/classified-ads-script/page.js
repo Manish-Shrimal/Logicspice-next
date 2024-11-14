@@ -5,7 +5,7 @@ import "@/app/(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Lsclassified from "@/app/Components/Lsclassified";
 import Contactusmodel from "@/app/Components/Contactusmodel";
@@ -27,7 +27,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
-import "../../../../public/css/font-awesome.min.css";
+// import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
@@ -315,7 +315,7 @@ const Page = () => {
                 <ul className="job-pr-icon jobwidthauto">
                   <li>
                     <i
-                      className="fa-solid fa-earth-americas"
+                      className="fa fa-globe"
                       aria-hidden="true"
                     ></i>
                   </li>
@@ -1186,7 +1186,7 @@ const Page = () => {
                 <ul className="job-pr-icon">
                   <li>
                     <i
-                      className="fa-solid fa-earth-americas"
+                      className="fa fa-globe"
                       aria-hidden="true"
                     ></i>
                   </li>

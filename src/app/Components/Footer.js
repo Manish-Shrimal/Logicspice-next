@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Accordion, AccordionItem } from "./Accordian";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 
 import Image from "next/image";

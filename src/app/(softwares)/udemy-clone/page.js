@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
 import "../../resposive.css";
 
@@ -15,7 +15,7 @@ import {
 } from "mdb-react-ui-kit";
 import "bootstrap/dist/css/bootstrap.min.css";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
-import "../../../../public/css/font-awesome.min.css";
+// import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
 import Link from "next/link";

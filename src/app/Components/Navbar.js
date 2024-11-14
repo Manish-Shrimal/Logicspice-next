@@ -10,6 +10,8 @@ import { useRouter } from "next/navigation";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+// import "../../../../public/css/font-awesome.css";
+import "../../../public/css/font-awesome.css"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

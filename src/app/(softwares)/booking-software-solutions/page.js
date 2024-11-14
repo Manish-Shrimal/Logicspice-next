@@ -5,7 +5,7 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
 import "../../resposive.css";
@@ -26,6 +26,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab2");

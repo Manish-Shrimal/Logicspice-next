@@ -68,6 +68,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/php-programing",
+        destination: "/php-development", 
+        permanent: true,
+      },
+      {
         source: "/software-mainenance-support",
         destination: "/software-maintenance-support", 
         permanent: true,

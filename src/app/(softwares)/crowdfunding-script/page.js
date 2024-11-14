@@ -6,7 +6,7 @@ import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -367,7 +367,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                    <i className="fa-solid fa-earth-americas"></i>
+                    <i className="fa fa-globe"></i>
                   </li>
                 </ul>
               </div>
@@ -1521,7 +1521,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                    <i className="fa-solid fa-earth-americas"></i>
+                    <i className="fa fa-globe"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">

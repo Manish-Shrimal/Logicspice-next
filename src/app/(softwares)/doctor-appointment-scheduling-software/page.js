@@ -4,7 +4,7 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
-import "../../../../public/css/font-awesome.min.css";
+// import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 import {
   Accordion,
@@ -225,11 +225,7 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-                      // <SoftwareEnquiry
-                      //   modalStatus={showModal}
-                      //   toggle={openModal}
-                      //   title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
-                      // />
+                      
                       <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
@@ -300,14 +296,9 @@ const Page = () => {
                     <li>
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
-                    <li>
-                      <i class="fa fa-android" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-apple" aria-hidden="true"></i>
-                    </li>
+                   
                   </ul>
-                  <div className="portel-btnbx">
+                  {/* <div className="portel-btnbx">
                     <Link
                       href=""
                       className="StartFreeTrialBtn animate-charcter"
@@ -339,7 +330,7 @@ const Page = () => {
                       </i>
                       Subscription Model
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -1703,8 +1694,8 @@ const Page = () => {
                     <GetDemoEnquiry
                       modalStatus={demoAccessModal}
                       toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Job Board Software. See how it works yourself!"
-                    />
+                      title="Please fill the form below and get access to the live demo of Online Doctor Appointment Scheduling Software. See how it works yourself!"
+                      />
                   }
                 </div>
                 <a
@@ -1720,12 +1711,7 @@ const Page = () => {
                   <li>
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
-                  <li>
-                    <i className="fa fa-android" aria-hidden="true"></i>
-                  </li>
-                  <li>
-                    <i className="fa fa-apple" aria-hidden="true"></i>
-                  </li>
+                  
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
@@ -2666,7 +2652,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="Job Board Software"
+                    title="Online Doctor Appointment Scheduling Software"
                   />
                 </div>
                 <div className="main-rait">

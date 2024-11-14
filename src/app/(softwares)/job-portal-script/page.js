@@ -4,7 +4,7 @@ import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,6 +18,7 @@ import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "../../../../public/css/font-awesome.css";
 
 
 const Page = () => {
@@ -348,12 +349,12 @@ const Page = () => {
                     </li>
                     <li>
                       <i
-                        className="fa-brands fa-android"
+                        className="fa fa-android"
                         aria-hidden="true"
                       ></i>
                     </li>
                     <li>
-                      <i className="fa-brands fa-apple" aria-hidden="true"></i>
+                      <i className="fa fa-apple" aria-hidden="true"></i>
                     </li>
                   </ul>
                 </div>
@@ -2159,10 +2160,10 @@ const Page = () => {
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-android" aria-hidden="true"></i>
+                    <i className="fa fa-android" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i className="fa-brands fa-apple" aria-hidden="true"></i>
+                    <i className="fa fa-apple" aria-hidden="true"></i>
                   </li>
                 </ul>
                 <div className="portel-btnbx">
