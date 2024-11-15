@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/(services)/services.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";

@@ -4,7 +4,8 @@ import Link from "next/link";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "@/app/resources/resources.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";

@@ -6,7 +6,8 @@ import Footer from "@/app/Components/Footer";
 import DescriptionIcon from "@mui/icons-material/Description";
 // import "@/app/globals.css"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import "/public/css/font-awesome.css"
 import "/public/css/font-awesome.min.css"
 

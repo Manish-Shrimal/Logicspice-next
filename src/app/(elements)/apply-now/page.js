@@ -8,7 +8,8 @@ import Footer from "@/app/Components/Footer";
 import "../elements.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import axios from "axios";
 import Swal from "sweetalert2";

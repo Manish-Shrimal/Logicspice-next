@@ -11,7 +11,7 @@ import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import BlogSlider from "@/app/Components/BlogSliderDynamic";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../public/css/font-awesome.css";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);

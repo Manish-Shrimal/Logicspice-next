@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../public/css/font-awesome.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "./resources.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
@@ -15,7 +15,6 @@ const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
 
     setShowModal(!showModal);
   };

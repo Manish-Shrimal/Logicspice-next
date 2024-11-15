@@ -216,7 +216,8 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="job-valu-btn">
-                    <span>Fill your basic details and</span>
+                   
+                    {/* <span>Fill your basic details and</span>
 
                     <div
                       className="btn-get"
@@ -240,7 +241,19 @@ const Page = () => {
                       id="buy_now_1"
                     >
                       BUY NOW
-                    </a>
+                    </a> */}
+                    <div className="enquiry_software_btn" style={{marginTop: "15px"}} onClick={openModal}>
+                    <button className="btn fiverr-buys NewGreenBtnJob">
+                      Enquire Now
+                    </button>
+                    {
+                      <SoftwareEnquiry
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="WordPress eCommerce Website"
+                      />
+                    }
+                  </div>
                   </div>
                   <div
                     className="portal-price portal-priceNew"

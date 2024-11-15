@@ -6,7 +6,9 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "@/app/(services)/services.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+
+import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

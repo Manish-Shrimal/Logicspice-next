@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 // import "../../resposive.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../../public/css/font-awesome.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

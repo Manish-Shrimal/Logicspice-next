@@ -486,7 +486,7 @@ const Page = () => {
                           />
                           <div className="abs-product">
                             <h3>
-                              Online Doctor Appointment Scheduling Software
+                              Doctor Appointment Scheduling Software
                             </h3>
                             <p>
                             Doctor Appointment Scheduling Software offers an easy, efficient way to manage bookings, making healthcare appointments stress-free for everyone.
@@ -2537,7 +2537,7 @@ const Page = () => {
                           />
                           <div className="abs-product">
                             <h3>
-                              Online Doctor Appointment Scheduling Software
+                              Doctor Appointment Scheduling Software
                             </h3>
                             <p>
                             Doctor Appointment Scheduling Software offers an easy, efficient way to manage bookings, making healthcare appointments stress-free for everyone.

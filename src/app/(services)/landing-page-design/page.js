@@ -7,7 +7,8 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

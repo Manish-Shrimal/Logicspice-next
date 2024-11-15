@@ -10,8 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-import "@fortawesome/fontawesome-free/css/all.css";
-
+import "../../../../public/css/font-awesome.css";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("case-study");

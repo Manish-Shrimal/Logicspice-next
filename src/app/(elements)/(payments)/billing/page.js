@@ -9,7 +9,8 @@ import Cookies from "js-cookie";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "../../elements.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../../public/css/font-awesome.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import HTMLReactParser from "html-react-parser";
 

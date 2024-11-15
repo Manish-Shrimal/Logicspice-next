@@ -6,7 +6,7 @@ import Footer from "@/app/Components/Footer";
 import "@/app/company/company.css";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";

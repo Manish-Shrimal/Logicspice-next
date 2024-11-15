@@ -5,7 +5,8 @@ import NavBar from "@/app/Components/Navbar";
 import "@/app/(services)/services.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";

@@ -14,7 +14,8 @@ import Contactusmodel from "@/app/Components/Contactusmodel";
 import Workingwith from "@/app/Components/Workingwith";
 import Certificationtabs from "@/app/Components/Certificationtabs";
 import "../../resposive.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import Support from "@/app/Components/Support";
 import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";

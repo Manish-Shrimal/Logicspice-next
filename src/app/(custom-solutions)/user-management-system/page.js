@@ -8,7 +8,8 @@ import Link from "next/link";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import { Accordion, Card, Button } from "react-bootstrap";
 

@@ -6,7 +6,8 @@ import Footer from "@/app/Components/Footer";
 import "../elements.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";

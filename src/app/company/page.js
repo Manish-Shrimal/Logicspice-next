@@ -5,7 +5,7 @@ import "@/app/company/company.css";
 import NavBar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../public/css/font-awesome.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

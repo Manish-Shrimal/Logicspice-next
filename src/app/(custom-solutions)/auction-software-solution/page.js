@@ -8,7 +8,7 @@ import Link from "next/link";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Support from "@/app/Components/Support";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import { Collapse } from "react-bootstrap";
+import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

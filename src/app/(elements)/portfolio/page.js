@@ -4,7 +4,8 @@ import NavBar from "@/app/Components/Navbar";
 import "@/app/company/company.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";

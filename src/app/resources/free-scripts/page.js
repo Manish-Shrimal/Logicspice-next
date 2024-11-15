@@ -4,18 +4,15 @@ import Link from "next/link";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
-import "@fortawesome/fontawesome-free/css/all.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../resources.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-
+import "../../../../public/css/font-awesome.css";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log(showModal);
-
     setShowModal(!showModal);
   };
 

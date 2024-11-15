@@ -5,7 +5,8 @@ import NavBar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import "../elements.css";
 import Workingwith from "@/app/Components/Workingwith";
 import Reviewmodals from "@/app/Components/Reviewmodals";

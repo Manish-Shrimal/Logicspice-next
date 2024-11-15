@@ -290,7 +290,7 @@ const Page = () => {
                 <h3>Custom Order Status</h3>
                 <p>
                   Restaurant owners can add multiple custom order status and
-                  update them for customer's ease.
+                  update them for customer&apos;s ease.
                 </p>
               </div>
             </div>
@@ -488,11 +488,11 @@ const Page = () => {
                 </li>
                 <li>
                   See the customer and order details and then can mark it as
-                  'preparing' when they start to prepare it.
+                  &apos;preparing&apos; when they start to prepare it.
                 </li>
                 <li>
                   Once the food is ready, kitchen staff can mark the order as
-                  'ready' and the order would appear with the list of other
+                  &apos;ready&apos; and the order would appear with the list of other
                   ready to deliver orders.
                 </li>
                 <li>

@@ -6,7 +6,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import "@/app/company/company.css";
 import BlogSlider from "@/app/Components/BlogSliderDynamic";
-import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import parse from "html-react-parser";

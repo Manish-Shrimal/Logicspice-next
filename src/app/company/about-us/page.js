@@ -10,8 +10,7 @@ import Image from "next/image";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import React, { useEffect, useState } from "react";
 import Enquirymodal from "@/app/Components/Enquirymodal";
-import "@fortawesome/fontawesome-free/css/all.css";
-
+import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);

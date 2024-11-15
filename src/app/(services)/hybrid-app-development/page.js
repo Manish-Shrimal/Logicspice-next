@@ -8,7 +8,8 @@ import Link from "next/link";
 import Enquirymodal from "@/app/Components/Enquirymodal";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../public/css/font-awesome.css"
 import Certificationtabs from "@/app/Components/Certificationtabs";
 import Workingwith from "@/app/Components/Workingwith";
 import "../../globals.css";

@@ -9,7 +9,8 @@ import Billing from "@/app/Components/Billing";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Cookies from "js-cookie";
 import { Router } from "next/navigation";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
+import "../../../../../../public/css/font-awesome.css"
 import Image from "next/image";
 import Link from "next/link";
 import Contactusmodel from "@/app/Components/Contactusmodel";
