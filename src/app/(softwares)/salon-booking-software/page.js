@@ -1768,7 +1768,7 @@ const Page = () => {
                 </strike>
 
                 <div className="SubscriptionModelPriceBtn">
-                  <div className="btn btn-get" onClick={openDemoAccessModal}>
+                  {/* <div className="btn btn-get" onClick={openDemoAccessModal}>
                     <button>Get Demo Access!</button>
                     {
                       <GetDemoEnquiry
@@ -1784,7 +1784,19 @@ const Page = () => {
                     id="buy_now_1"
                   >
                     Buy Now
-                  </a>
+                  </a> */}
+                  <div className="enquiry_software_btn" style={{marginTop: "15px"}} onClick={openModal}>
+                    <button className="btn fiverr-buys NewGreenBtnJob">
+                      Enquire Now
+                    </button>
+                    {
+                      <SoftwareEnquiry
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="Salon Booking Software"
+                      />
+                    }
+                  </div>
                 </div>
                 <div className="jocpp">
                   <ul className="job-pr-icon">
