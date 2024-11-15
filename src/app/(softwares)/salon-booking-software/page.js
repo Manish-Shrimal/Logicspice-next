@@ -175,7 +175,7 @@ const Page = () => {
     <>
       <Navbar />
       <div className="doctor_appointment">
-        <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
+        <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign SalonBookingBanner">
           <div className="container">
             <div className="row">
               <div className="col-sm-7 col-md-7">
@@ -353,7 +353,7 @@ const Page = () => {
                     width={440}
                     height={100 / (100 / 100)}
                     className="lazy"
-                    src="/img/doctorappointment/doctor-appointment-banner-img.png"
+                    src="/img/doctorappointment/salon-img.png"
                     alt="Salon Booking Software"
                     unoptimized={true}
                   />
@@ -540,18 +540,10 @@ const Page = () => {
                   <>
                     <div className="costomer_tab rj JobseekerTab" id="tab1">
                       <div className="row">
-                        <div className="col-lg-4 col-md-3">
-                          <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
-                            <Image
-                              unoptimized={true}
-                              width={300}
-                              height={100}
-                              src="/img/doctorappointment/patient-mobile-screen.png"
-                              alt="Jobseeker App Feature"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-8 col-md-9">
+
+                  
+
+                        <div className="col-lg-12 col-md-12">
                           <div className="costomer_tab_left costomer_tab_leftright">
                             <ul>
                               <li>
@@ -1010,18 +1002,8 @@ const Page = () => {
                   <>
                     <div className="costomer_tab rj EmployerTab" id="tab2">
                       <div className="row">
-                        <div className="col-lg-4 col-md-3">
-                          <div className="costomer_tab_right">
-                            <Image
-                              unoptimized={true}
-                              width={300}
-                              height={100}
-                              src="/img/doctorappointment/staff-panel-admin.png"
-                              alt="Buyer App Features"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-8 col-md-9">
+                        
+                        <div className="col-lg-12 col-md-12">
                           <div className="costomer_tab_left">
                             <ul>
                               <li>
@@ -1326,18 +1308,8 @@ const Page = () => {
                   <>
                     <div className="costomer_tab rj AdminTab" id="tab3">
                       <div className="row">
-                        <div className="col-lg-4 col-md-3 ">
-                          <div className="costomer_tab_right costomer_tab_rightleft2">
-                            <Image
-                              unoptimized={true}
-                              width={300}
-                              height={100}
-                              src="/img/doctorappointment/doctor-appointment-admin.png"
-                              alt="Admin Panel"
-                            />{" "}
-                          </div>
-                        </div>
-                        <div className="col-lg-8 col-md-9">
+                        
+                        <div className="col-lg-12 col-md-12">
                           <div className="costomer_tab_left costomer_tab_leftright2">
                             <ul>
                               <li>

@@ -481,8 +481,8 @@ const Page = () => {
                             width={100}
                             height={100}
                             className=""
-                            src="/img/softwares/logisticr-product-img.png"
-                            alt="Logicstic Marketplace Software"
+                            src="/img/doctorappointment/doctor-appointment-icon.png"
+                            alt="Doctor Appointment Scheduling Software"
                           />
                           <div className="abs-product">
                             <h3>
@@ -545,8 +545,8 @@ const Page = () => {
                             width={100}
                             height={100}
                             className=""
-                            src="/img/softwares/logisticr-product-img.png"
-                            alt="Logicstic Marketplace Software"
+                            src="/img/doctorappointment/salon-booking-icon.png"
+                            alt="Salon Booking Software"
                           />
                           <div className="abs-product">
                             <h3>
@@ -2532,8 +2532,8 @@ const Page = () => {
                             width={100}
                             height={100}
                             className=""
-                            src="/img/softwares/logisticr-product-img.png"
-                            alt="Logicstic Marketplace Software"
+                            src="/img/doctorappointment/doctor-appointment-icon.png"
+                            alt="Doctor Appointment Scheduling Software"
                           />
                           <div className="abs-product">
                             <h3>
@@ -2596,8 +2596,8 @@ const Page = () => {
                             width={100}
                             height={100}
                             className=""
-                            src="/img/softwares/logisticr-product-img.png"
-                            alt="Logicstic Marketplace Software"
+                            src="/img/doctorappointment/salon-booking-icon.png"
+                            alt="Salon Booking Software"
                           />
                           <div className="abs-product">
                             <h3>

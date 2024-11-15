@@ -6377,7 +6377,9 @@ a:hover {
 .af_ra textarea {
   height: 80px;
 }
-
+.SalonBookingBanner::after{
+  border-bottom-color: #b9ab9b;
+}
 
 @media (max-width: 767px) {
   .software_products {
@@ -6595,6 +6597,9 @@ a:hover {
     max-width: 97%;
     width: 100%;
     margin: 10px auto 0;
+  }
+  .fiverr-new-banner::after {
+    border-left-width: 470px !important;
   }
 }
 
