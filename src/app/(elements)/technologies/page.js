@@ -136,7 +136,7 @@ const Page = () => {
                 <i>
                   <Image
                     unoptimized={true}
-                    width={60}
+                    width={50}
                     height={100}
                     src="/img/technology/devops-icon.png"
                     alt="DevOps Infrastructure"

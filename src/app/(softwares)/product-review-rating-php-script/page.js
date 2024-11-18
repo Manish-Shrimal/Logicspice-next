@@ -1525,11 +1525,23 @@ const Page = () => {
                         unoptimized={true}
                         width={60}
                         height={100}
-                        src="/img/jobboard/LaravelLogo.png"
-                        alt="Laravel Development"
+                        src="/img/jobboard/tech_reactjs_icon.png"
+                        alt="Reactjs Development"
                       />
                     </div>
-                    <div className="icntechimg_nm">Laravel</div>
+                    <div className="icntechimg_nm">Reactjs</div>
+                  </li>
+                  <li data-aos="fade-up">
+                    <div className="icntechimg">
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
+                        src="/img/jobboard/django-icon.png"
+                        alt="Django Development"
+                      />
+                    </div>
+                    <div className="icntechimg_nm">Django</div>
                   </li>
                   <li data-aos="fade-up">
                     <div className="icntechimg">
@@ -1555,7 +1567,7 @@ const Page = () => {
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
                   </li>
-                  <li data-aos="fade-up">
+                  {/* <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
@@ -1566,7 +1578,7 @@ const Page = () => {
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="col-sm-6">
@@ -1576,13 +1588,13 @@ const Page = () => {
                     Safari 5+, IE 9+
                   </li>
                   <li className="same">
-                    <b>Framework - </b> Laravel 8.16
+                    <b>Framework - </b> Reactjs-18.3.1, Django
                   </li>
                   <li className="same ">
-                    <b>Language - </b> PHP 5.4+, AJAX, jQuery
+                    <b>Language - </b> Javascript, Python, AJAX, jQuery
                   </li>
                   <li className="other">
-                    <b>Design - </b> HTML 5, CSS 3, Bootstrap 4.7, JavaScript
+                    <b>Design - </b> HTML 5, CSS 3, Bootstrap 5.7
                   </li>
                   <li className="other">
                     <b>Database - </b> MySQL 5.5+{" "}

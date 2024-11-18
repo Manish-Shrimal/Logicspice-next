@@ -16,17 +16,96 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  // var settings = {
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 7,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  //   margin: 20,
+  // };
+
   var settings = {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 500,
+    speed: 200,
     slidesToShow: 7,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
-    margin: 10,
+    rtl: false,
+    margin: 20,
+    responsive: [
+      {
+        breakpoint: 1200, // For screens smaller than 1200px
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 992, // For screens smaller than 992px
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768, // For screens smaller than 768px
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 576, // For screens smaller than 576px
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
+
+  var settings2 = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    rtl: true,
+    margin: 20,
+    responsive: [
+      {
+        breakpoint: 1200, // For screens smaller than 1200px
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 992, // For screens smaller than 992px
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768, // For screens smaller than 768px
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 576, // For screens smaller than 576px
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
+  
   useEffect(() => {
     if (window.FB) {
       window.FB.XFBML.parse();
@@ -272,61 +351,12 @@ const Page = () => {
       </section>
       <section class="OurGallerySection">
         <h2>Gallery</h2>
-        {/* <div id="galleryslider1" class="owl-carousel OurGallery slide">
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img1.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img2.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img3.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img4.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img5.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img6.png"
-              alt="icon"
-            />
-          </div>
-        </div> */}
+      
         <Slider {...settings} className="hidedot OurGallery">
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                width={500}
                 height={100}
                 src="/img/ourteam/gallery-img1.png"
                 alt="icon"
@@ -336,7 +366,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                width={500}
                 height={100}
                 src="/img/ourteam/gallery-img2.png"
                 alt="icon"
@@ -346,7 +376,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img3.png"
                 alt="icon"
@@ -356,7 +386,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img4.png"
                 alt="icon"
@@ -366,7 +396,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                width={500}
                 height={100}
                 src="/img/ourteam/gallery-img5.png"
                 alt="icon"
@@ -377,7 +407,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img6.png"
                 alt="icon"
@@ -385,61 +415,12 @@ const Page = () => {
             </div>
           </div>
         </Slider>
-        {/* <div id="galleryslider2" class="owl-carousel OurGallery slide">
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img7.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img8.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img9.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img10.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img11.png"
-              alt="icon"
-            />
-          </div>
-          <div class="OurGalleryImg">
-            <Image
-              width={100}
-              height={100}
-              src="/img/ourteam/gallery-img12.png"
-              alt="icon"
-            />
-          </div>
-        </div> */}
-        <Slider {...settings} className="hidedot OurGallery">
+        
+        <Slider {...settings2} className="hidedot OurGallery">
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img7.png"
                 alt="icon"
@@ -449,7 +430,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                width={500}
                 height={100}
                 src="/img/ourteam/gallery-img8.png"
                 alt="icon"
@@ -459,7 +440,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img9.png"
                 alt="icon"
@@ -469,7 +450,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                width={500}
                 height={100}
                 src="/img/ourteam/gallery-img10.png"
                 alt="icon"
@@ -479,7 +460,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img11.png"
                 alt="icon"
@@ -490,7 +471,7 @@ const Page = () => {
           <div>
             <div class="OurGalleryImg">
               <Image
-                width={100}
+                width={500}
                 height={100}
                 src="/img/ourteam/gallery-img12.png"
                 alt="icon"

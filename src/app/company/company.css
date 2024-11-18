@@ -2498,6 +2498,7 @@ section.nav-portfolio-top ul.nav {
 }
 
 .OurGalleryImg {
+	padding: 0 5px;
 	display: inline-block;
 	width: 100%;
 }
