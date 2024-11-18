@@ -414,6 +414,26 @@ const Page = () => {
               />
             </div>
           </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                 width={500}
+                height={100}
+                src="/img/ourteam/diwali-img3.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                 width={500}
+                height={100}
+                src="/img/ourteam/cricket-day.png"
+                alt="icon"
+              />
+            </div>
+          </div>
         </Slider>
         
         <Slider {...settings2} className="hidedot OurGallery">
@@ -474,6 +494,26 @@ const Page = () => {
                 width={500}
                 height={100}
                 src="/img/ourteam/gallery-img12.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={500}
+                height={100}
+                src="/img/ourteam/diwali-img1.png"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="OurGalleryImg">
+              <Image
+                width={500}
+                height={100}
+                src="/img/ourteam/diwali-img2.png"
                 alt="icon"
               />
             </div>

@@ -2498,9 +2498,11 @@ section.nav-portfolio-top ul.nav {
 }
 
 .OurGalleryImg {
-	padding: 0 5px;
-	display: inline-block;
-	width: 100%;
+    padding: 0 5px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .OurOfficeSection {
