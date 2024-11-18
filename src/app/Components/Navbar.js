@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 // import "../../../../public/css/font-awesome.css";
-import "../../../public/css/font-awesome.css"
+import "../../../public/css/font-awesome.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <li className="dropdown mega-menu-fw">
                   <Link
                     className="dropdown-toggle"
-                    href="#"
+                    href="/company"
                     id="companyDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -165,9 +165,7 @@ const Navbar = () => {
                             </li>
                             <li
                               className={
-                                router.pathname === "/portfolio"
-                                  ? "active"
-                                  : ""
+                                router.pathname === "/portfolio" ? "active" : ""
                               }
                             >
                               <Link href="/portfolio">
@@ -465,7 +463,7 @@ const Navbar = () => {
                 <li className="dropdown mega-menu-fw">
                   <Link
                     className="dropdown-toggle"
-                    href="#"
+                    href="/services"
                     id="servicesDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -502,10 +500,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link
-                                href="/cakephp-development"
-                                className=""
-                              >
+                              <Link href="/cakephp-development" className="">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_cakephp"></i>{" "}
                                 </span>
@@ -547,8 +542,6 @@ const Navbar = () => {
                                 <span>eCommerce Website Package</span>
                               </Link>
                             </li>
-
-                            
                           </ul>
                         </div>
                         <div className="col-sm-4">
@@ -584,10 +577,7 @@ const Navbar = () => {
                               </Link>
                             </span>
                             <li>
-                              <Link
-                                href="/website-design"
-                                className=""
-                              >
+                              <Link href="/website-design" className="">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_web"></i>
                                 </span>
@@ -625,10 +615,7 @@ const Navbar = () => {
                               </Link>
                             </span>
                             <li>
-                              <Link
-                                href="/software-development"
-                                className=""
-                              >
+                              <Link href="/software-development" className="">
                                 <span className="hover_btn_menu icon_software-development">
                                   <i className="menu_icon_all icon_software-development"></i>
                                 </span>
@@ -636,10 +623,7 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link
-                                href="/digital-marketing"
-                                className=""
-                              >
+                              <Link href="/digital-marketing" className="">
                                 <span className="hover_btn_menu icon_digital_marketing">
                                   <i className="menu_icon_all icon_digital_marketing"></i>{" "}
                                 </span>
@@ -681,7 +665,11 @@ const Navbar = () => {
                                 <span>Placement Launch Pad</span>
                               </Link>
                             </li>
-                            <li class="ad-footer-view-all mobile-show"><Link href="/services" class="btn btn-primary">View All Services</Link></li>
+                            <li class="ad-footer-view-all mobile-show">
+                              <Link href="/services" class="btn btn-primary">
+                                View All Services
+                              </Link>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -691,7 +679,7 @@ const Navbar = () => {
                 <li className="dropdown mega-menu-fw">
                   <Link
                     className=" dropdown-toggle"
-                    href="#"
+                    href="/custom-solutions"
                     id="hiringDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -852,14 +840,14 @@ const Navbar = () => {
                           <b className="caret"></b>
                         </Link> */}
                         <Link
-  href="#"
-  onMouseEnter={() => setDropdown5(true)}
-  onMouseLeave={() => setDropdown5(false)}
-  aria-label="Contact us"
->
-  <i className="fa fa-phone" aria-hidden="true"></i>
-  <b className="caret"></b>
-</Link>
+                          href="#"
+                          onMouseEnter={() => setDropdown5(true)}
+                          onMouseLeave={() => setDropdown5(false)}
+                          aria-label="Contact us"
+                        >
+                          <i className="fa fa-phone" aria-hidden="true"></i>
+                          <b className="caret"></b>
+                        </Link>
 
                         <div
                           className={`sub-contact ${dropdown5 ? "show" : ""}`}

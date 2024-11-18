@@ -544,8 +544,8 @@ const Page = () => {
                             width={100}
                             height={100}
                             className=""
-                            src="/img/doctorappointment/doctor-appointment-icon.png"
-                            alt="Doctor Appointment Scheduling Software"
+                            src="/img/hrms/human-resource-icon.png"
+                            alt="Human Resource Management Software"
                           />
                           <div className="abs-product">
                             <h3>Human Resource Management Software</h3>
@@ -2143,51 +2143,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      <div className="col-sm-6 col-md-4">
-                        <Link
-                          href="https://setcourses.logicspice.com"
-                          className="ready-product"
-                          data-aos="fade-up"
-                        >
-                          <Image
-                            unoptimized={true}
-                            width={100}
-                            height={100}
-                            className=""
-                            src="/img/softwares/online-course-img.png"
-                            alt="Online Course Management Script"
-                          />
-                          <div className="abs-product">
-                            <h3>Online Course Management Script</h3>
-                            <p>
-                              This Online Course Management Script that we have
-                              developed will serve as an attractive medium for
-                              students to search for courses online and view
-                              detailed information about them.
-                            </p>
-                            <div className="product-star">
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <div className="product-review">10 REVIEWS</div>
-                            <ul className="make-style">
-                              <li>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className=""
-                                  src="/img/softwares/web_new.png"
-                                  alt="web"
-                                />
-                              </li>
-                            </ul>
-                          </div>
-                        </Link>
-                      </div>
+                      
 
                       <div className="col-sm-6 col-md-4">
                         <Link
@@ -4541,51 +4497,7 @@ const Page = () => {
                           </div>
                         </Link>
                       </div>
-                      {/* <div className="col-sm-6 col-md-4">
-                        <a
-                          href="https://setcourses.logicspice.com/"
-                          className="ready-product"
-                          data-aos="fade-up"
-                        >
-                          <Image
-                            unoptimized={true}
-                            width={100}
-                            height={100}
-                            className=""
-                            src="/img/softwares/online-course-img.png"
-                            alt="Online Course Management Script"
-                          />
-                          <div className="abs-product">
-                            <h3>Online Course Management Script</h3>
-                            <p>
-                              This Online Course Management Script that we have
-                              developed will serve as an attractive medium for
-                              students to search for courses online and view
-                              detailed information about them.
-                            </p>
-                            <div className="product-star">
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                              <i className="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                            <div className="product-review">10 REVIEWS</div>
-                            <ul className="make-style">
-                              <li>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className=""
-                                  src="/img/softwares/web_new.png"
-                                  alt="web"
-                                />
-                              </li>
-                            </ul>
-                          </div>
-                        </a>
-                      </div> */}
+                      
 
                       <div className="col-sm-6 col-md-4">
                         <a

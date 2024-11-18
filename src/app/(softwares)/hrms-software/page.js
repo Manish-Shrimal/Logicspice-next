@@ -278,7 +278,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign">
+      <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign HumanResourceBanner">
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">
@@ -446,10 +446,10 @@ const Page = () => {
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
                 <Image
-                  width={350}
+                  width={430}
                   height={100}
                   className="lazy"
-                  src="/img/jobboard/new-img-jobboard.png"
+                  src="/img/hrms/human-resource-banner-img.png"
                   alt="Job_Board_Software"
                   sizes="(max-width: 768px) 100vw, 350px"
                   unoptimized={false} // Ensure image optimization is enabled
@@ -639,7 +639,7 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj JobseekerTab" id="tab1">
                     <div className="row">
-                      <div className="col-lg-4 col-md-3">
+                      {/* <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
                           <Image
                             unoptimized={true}
@@ -649,8 +649,8 @@ const Page = () => {
                             alt="Jobseeker App Feature"
                           />
                         </div>
-                      </div>
-                      <div className="col-lg-8 col-md-9">
+                      </div> */}
+                      <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright">
                           <ul>
                             <li>
@@ -1101,7 +1101,7 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj EmployerTab" id="tab2">
                     <div className="row">
-                      <div className="col-lg-4 col-md-3">
+                      {/* <div className="col-lg-4 col-md-3">
                         <div className="costomer_tab_right">
                           <Image
                             unoptimized={true}
@@ -1111,8 +1111,8 @@ const Page = () => {
                             alt="Buyer App Features"
                           />
                         </div>
-                      </div>
-                      <div className="col-lg-8 col-md-9">
+                      </div> */}
+                      <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left">
                           <ul>
                             <li>
@@ -1410,7 +1410,7 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj AdminTab" id="tab3">
                     <div className="row">
-                      <div className="col-lg-4 col-md-3 ">
+                      {/* <div className="col-lg-4 col-md-3 ">
                         <div className="costomer_tab_right costomer_tab_rightleft2">
                           <Image
                             unoptimized={true}
@@ -1420,8 +1420,8 @@ const Page = () => {
                             alt="Admin Panel"
                           />{" "}
                         </div>
-                      </div>
-                      <div className="col-lg-8 col-md-9">
+                      </div> */}
+                      <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
                             <li>
@@ -2522,18 +2522,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6">
                 <ul>
-                  <li data-aos="fade-up">
-                    <div className="icntechimg">
-                      <Image
-                        unoptimized={true}
-                        width={60}
-                        height={100}
-                        src="/img/jobboard/tech_reactjs_icon.png"
-                        alt="ReactJS Development"
-                      />
-                    </div>
-                    <div className="icntechimg_nm">ReactJS</div>
-                  </li>
+                
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
@@ -2582,32 +2571,7 @@ const Page = () => {
                     </div>
                     <div className="icntechimg_nm">Apache</div>
                   </li>
-                  <li data-aos="fade-up">
-                    <div className="icntechimg">
-                      <Image
-                        unoptimized={true}
-                        width={50}
-                        height={100}
-                        src="/img/jobboard/apple_phn_icon.png"
-                        alt="MySQL"
-                        className="lazy"
-                      />
-                    </div>
-                    <div className="icntechimg_nm">iOS</div>
-                  </li>
-                  <li data-aos="fade-up">
-                    <div className="icntechimg">
-                      <Image
-                        unoptimized={true}
-                        width={50}
-                        height={100}
-                        src="/img/jobboard/andoird_icon.png"
-                        alt="Apache"
-                        className="lazy"
-                      />
-                    </div>
-                    <div className="icntechimg_nm">Android</div>
-                  </li>
+            
                 </ul>
               </div>
               <div className="col-sm-6">

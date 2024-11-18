@@ -6380,6 +6380,9 @@ a:hover {
 .SalonBookingBanner::after{
   border-bottom-color: #b9ab9b;
 }
+.HumanResourceBanner::after{
+  border-bottom-color: #cec2b9;
+}
 
 @media (max-width: 767px) {
   .software_products {
