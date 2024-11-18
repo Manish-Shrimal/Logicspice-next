@@ -392,7 +392,7 @@ const Page = () => {
                       alt=""
                       className="lazy"
                     />
-                    <p>219 Reviews</p>
+                    <p>310 Reviews</p>
                   </div>
                 </div>
                 <div className="jocpp">

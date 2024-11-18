@@ -28,7 +28,8 @@ const Looksilder = () => {
     return (
       <div className={className} onClick={onClick}>
         {/* <i className="fas fa-chevron-right"></i>{" "} */}
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>{" "}
+        {/* <i class="fa fa-chevron-right" aria-hidden="true"></i>{" "} */}
+        <i class="fa fa-angle-right" aria-hidden="true"></i>{" "}
         {/* Example of using Font Awesome for arrow icon */}
       </div>
     );
@@ -38,7 +39,8 @@ const Looksilder = () => {
     return (
       <div className={className} onClick={onClick}>
         {/* <i className="fas fa-chevron-left"></i>{" "} */}
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>{" "}
+        {/* <i class="fa fa-chevron-left" aria-hidden="true"></i>{" "} */}
+        <i class="fa fa-angle-left" aria-hidden="true"></i>{" "}
         {/* Example of using Font Awesome for arrow icon */}
       </div>
     );

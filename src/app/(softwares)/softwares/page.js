@@ -561,7 +561,7 @@ const Page = () => {
                               <i className="fa fa-star" aria-hidden="true"></i>
                               <i className="fa fa-star" aria-hidden="true"></i>
                             </div>
-                            <div className="product-review">173 REVIEWS</div>
+                            <div className="product-review">310 REVIEWS</div>
                             <ul className="make-style">
                               {/* <li>
                                 <Image

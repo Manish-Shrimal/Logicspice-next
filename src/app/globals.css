@@ -7698,6 +7698,13 @@ section {
 }
 
 .take-a-look .fa {
-  font-size: 40px;
+  font-size: 55px;
   color: #3c3c3c !important;
+  opacity: 0.5;
+}
+
+.take-a-look .fa:hover {
+  font-size: 55px;
+  color: #3c3c3c !important;
+  opacity: 1;
 }
