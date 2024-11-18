@@ -27,7 +27,8 @@ const Looksilder = () => {
   const NextArrow = ({ className, onClick }) => {
     return (
       <div className={className} onClick={onClick}>
-        <i className="fas fa-chevron-right"></i>{" "}
+        {/* <i className="fas fa-chevron-right"></i>{" "} */}
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>{" "}
         {/* Example of using Font Awesome for arrow icon */}
       </div>
     );
@@ -36,7 +37,8 @@ const Looksilder = () => {
   const PrevArrow = ({ className, onClick }) => {
     return (
       <div className={className} onClick={onClick}>
-        <i className="fas fa-chevron-left"></i>{" "}
+        {/* <i className="fas fa-chevron-left"></i>{" "} */}
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>{" "}
         {/* Example of using Font Awesome for arrow icon */}
       </div>
     );

@@ -20,7 +20,6 @@ import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import { redirect } from "next/navigation";
 import "../../../../public/css/font-awesome.css";
 
-
 const Page = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const [modalOpen, setModalOpen] = useState(false);
@@ -485,11 +484,75 @@ const Page = () => {
                             alt="Doctor Appointment Scheduling Software"
                           />
                           <div className="abs-product">
-                            <h3>
-                              Doctor Appointment Scheduling Software
-                            </h3>
+                            <h3>Doctor Appointment Scheduling Software</h3>
                             <p>
-                            Doctor Appointment Scheduling Software offers an easy, efficient way to manage bookings, making healthcare appointments stress-free for everyone.
+                              Doctor Appointment Scheduling Software offers an
+                              easy, efficient way to manage bookings, making
+                              healthcare appointments stress-free for everyone.
+                            </p>
+                            <div className="product-star">
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                              <i className="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div className="product-review">173 REVIEWS</div>
+                            <ul className="make-style">
+                              {/* <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/android-new.png"
+                                  alt="android"
+                                />
+                              </li>
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/apple.png"
+                                  alt="apple"
+                                />
+                              </li> */}
+                              <li>
+                                <Image
+                                  unoptimized={true}
+                                  width={100}
+                                  height={100}
+                                  className=""
+                                  src="/img/softwares/web_new.png"
+                                  alt="web"
+                                />
+                              </li>
+                            </ul>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="col-sm-6 col-md-4">
+                        <Link
+                          href="/hrms-software"
+                          className="ready-product"
+                          data-aos="fade-up"
+                        >
+                          <Image
+                            unoptimized={true}
+                            width={100}
+                            height={100}
+                            className=""
+                            src="/img/doctorappointment/doctor-appointment-icon.png"
+                            alt="Doctor Appointment Scheduling Software"
+                          />
+                          <div className="abs-product">
+                            <h3>Human Resource Management Software</h3>
+                            <p>
+                              HR Management Software makes handling employee
+                              data and HR tasks simple and efficient, helping
+                              businesses save time and stay organized.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -549,11 +612,11 @@ const Page = () => {
                             alt="Salon Booking Software"
                           />
                           <div className="abs-product">
-                            <h3>
-                              Salon Booking Software
-                            </h3>
+                            <h3>Salon Booking Software</h3>
                             <p>
-                            Our Salon Booking Software helps salons and spas manage appointments with ease, and creating a smooth booking experience for clients.
+                              Our Salon Booking Software helps salons and spas
+                              manage appointments with ease, and creating a
+                              smooth booking experience for clients.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -659,7 +722,9 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Classified Ads Script</h3>
                             <p>
-                            Our Classified Ads Script offers a reliable, easy-to-use platform for listing, buying, and selling items in any location.
+                              Our Classified Ads Script offers a reliable,
+                              easy-to-use platform for listing, buying, and
+                              selling items in any location.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -2521,7 +2586,7 @@ const Page = () => {
                 <div id="tab2" className="costomer_tab rj">
                   <div className="new-product-box">
                     <div className="row">
-                    <div className="col-sm-6 col-md-4">
+                      <div className="col-sm-6 col-md-4">
                         <Link
                           href="/doctor-appointment-scheduling-software"
                           className="ready-product"
@@ -2536,11 +2601,11 @@ const Page = () => {
                             alt="Doctor Appointment Scheduling Software"
                           />
                           <div className="abs-product">
-                            <h3>
-                              Doctor Appointment Scheduling Software
-                            </h3>
+                            <h3>Doctor Appointment Scheduling Software</h3>
                             <p>
-                            Doctor Appointment Scheduling Software offers an easy, efficient way to manage bookings, making healthcare appointments stress-free for everyone.
+                              Doctor Appointment Scheduling Software offers an
+                              easy, efficient way to manage bookings, making
+                              healthcare appointments stress-free for everyone.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -2600,11 +2665,11 @@ const Page = () => {
                             alt="Salon Booking Software"
                           />
                           <div className="abs-product">
-                            <h3>
-                              Salon Booking Software
-                            </h3>
+                            <h3>Salon Booking Software</h3>
                             <p>
-                            Our Salon Booking Software helps salons and spas manage appointments with ease, and creating a smooth booking experience for clients.
+                              Our Salon Booking Software helps salons and spas
+                              manage appointments with ease, and creating a
+                              smooth booking experience for clients.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -3055,7 +3120,9 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Classified Ads Script</h3>
                             <p>
-                            Our Classified Ads Script offers a reliable, easy-to-use platform for listing, buying, and selling items in any location.
+                              Our Classified Ads Script offers a reliable,
+                              easy-to-use platform for listing, buying, and
+                              selling items in any location.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -5193,7 +5260,9 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Classified Ads Script</h3>
                             <p>
-                            Our Classified Ads Script offers a reliable, easy-to-use platform for listing, buying, and selling items in any location.
+                              Our Classified Ads Script offers a reliable,
+                              easy-to-use platform for listing, buying, and
+                              selling items in any location.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>

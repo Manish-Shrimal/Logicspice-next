@@ -7696,3 +7696,8 @@ section {
   margin-left: 15px;
   margin-top: 0px;
 }
+
+.take-a-look .fa {
+  font-size: 40px;
+  color: #3c3c3c !important;
+}

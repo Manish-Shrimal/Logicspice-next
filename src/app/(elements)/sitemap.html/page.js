@@ -257,6 +257,11 @@ const Page = () => {
                         </Link>
                       </li>
                       <li>
+                        <Link href="/hrms-software">
+                        Human Resource Management Software
+                        </Link>
+                      </li>
+                      <li>
                         <Link href="/salon-booking-software">
                         Salon Booking Software
                         </Link>
