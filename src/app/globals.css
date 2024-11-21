@@ -119,7 +119,29 @@ body {
 .CookiePolicyBtnBx {float: right;padding-top: 35px; width: 29%;text-align: right;}
 .CookiePolicyBtnBx .btn {display: inline-block;background: #fff;color: #4A0D3D;font-size: 15px;font-weight: 500;border-radius: 5px;padding: 12px 0;width: 170px !important;text-align: center;
 margin-left: 8px;}
+.CookiePolicyBtnBx .btn:hover{display: inline-block;background: #fff;color: #4A0D3D;font-size: 15px;font-weight: 500;border-radius: 5px;padding: 12px 0;width: 170px !important;text-align: center;
+  margin-left: 8px;}
 .CookiePolicycloseSection{ display: none}
+
+/* end */
+
+/* cookies policies */
+.CookiesPolicies {
+  margin-top: 107px;
+}
+.CookiesPoliciesBx {text-align: left;padding-top: 50px;}
+.CookiesPoliciesBx h3,
+.CookiesPoliciesBx h2 {font-size: 22px;color: #000;font-family: 'roboto', sans-serif;font-weight: 700 !important; padding-bottom: 10px}
+.CookiesPoliciesBx h3 {padding-top: 20px;padding-bottom: 10px;}
+.CookiesPoliciesBx ul li {float: left;width: 100%;list-style-type: disc;margin-top: 10px;color: #5a5a5a;font-size: 17px;font-weight: 400;}
+.CookiesPoliciesBx ul li strong{color: #333;font-weight: 500;}
+.CookiesPoliciesBx ul {display: inline-block;width: 100%;padding-left: 25px;}
+.CookiesPoliciesBx p {color: #5a5a5a;font-size: 17px;font-weight: 400;padding-bottom: 10px;}
+.CookiesPoliciesBx p strong {color: #333;font-weight: 500;}
+.CookiesPolicies {padding: 0 0 50px;}
+.CookiesPoliciesHadding h1 {color: #000;font-size: 38px;font-weight: 700 !important;font-family: 'roboto', sans-serif;text-align: center;}
+.CookiesPoliciesHadding {text-align: center;padding: 25px 0;background: #cecece;}
+/* end */
 
 .fieldRequired {
   color: red !important;

@@ -39,7 +39,7 @@ const CookiePolicyModal = () => {
               website. Gain a deeper understanding of our practices regarding
               the use of cookies for enhancing your browsing journey.{" "}
               <a
-                href="https://www.logicspice.com/cookies-policies"
+                href="/cookies-policies"
                 target="_blank"
                 rel="noopener noreferrer"
               >
