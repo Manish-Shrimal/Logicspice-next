@@ -117,7 +117,7 @@ body {
 .CookiePolicyBx p a:hover {color: #fde3f8;border-bottom: 1px transparent solid;}
 .CookiePolicyBx {float: left;width: 71%;}
 .CookiePolicyBtnBx {float: right;padding-top: 35px; width: 29%;text-align: right;}
-.CookiePolicyBtnBx .btn {display: inline-block;background: #fff;color: #4A0D3D;font-size: 15px;font-weight: 500;border-radius: 5px;padding: 12px 0;width: 170px;text-align: center;
+.CookiePolicyBtnBx .btn {display: inline-block;background: #fff;color: #4A0D3D;font-size: 15px;font-weight: 500;border-radius: 5px;padding: 12px 0;width: 170px !important;text-align: center;
 margin-left: 8px;}
 .CookiePolicycloseSection{ display: none}
 
