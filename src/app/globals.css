@@ -107,6 +107,20 @@ body {
   }
 }
 
+/* Cookies consent css */
+.CookiePolicySection {position: fixed;width: 100%;left: 0;bottom: 70px;background: rgba(74,13,61,0.9);z-index: 99;padding:15px 20px;display: none;}
+.CookiePolicySection.cookie-consent-modal.active {display: block;}
+.CookiePolicySectionClose {position: absolute;right: 20px;top: 10px;}
+.CookiePolicyBx h3 {color: #fff;font-family: 'roboto', sans-serif;font-size: 30px;font-weight: 500;padding: 10px 0;}
+.CookiePolicyBx p {color: #fff;font-size: 14px; margin-bottom: 10px}
+.CookiePolicyBx p a {color: #fde3f8;border-bottom: 1px #fff solid;}
+.CookiePolicyBx p a:hover {color: #fde3f8;border-bottom: 1px transparent solid;}
+.CookiePolicyBx {float: left;width: 71%;}
+.CookiePolicyBtnBx {float: right;padding-top: 35px; width: 29%;text-align: right;}
+.CookiePolicyBtnBx .btn {display: inline-block;background: #fff;color: #4A0D3D;font-size: 15px;font-weight: 500;border-radius: 5px;padding: 12px 0;width: 160px;text-align: center;
+margin-left: 8px;}
+.CookiePolicycloseSection{ display: none}
+
 .fieldRequired {
   color: red !important;
   border: 1px solid red !important;
