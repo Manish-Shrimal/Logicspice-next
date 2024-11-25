@@ -84,7 +84,7 @@ import "./globals.css";
 import "./resposive.css";
 import AOSInitializer from "./Components/AOSInitializer";
 import GTMComponent from "./Components/GTMComponent";
-import CookiesConsent from "./Components/CookiesConsent";
+// import CookiesConsent from "./Components/CookiesConsent";
 
 import Chatbot from "./Components/Chatbot";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
@@ -162,7 +162,7 @@ export default function RootLayout({ children, params, searchParams }) {
         <AOSInitializer>{children}</AOSInitializer>
         <Chatbot />
         <GTMComponent />
-        <CookiesConsent />
+        {/* <CookiesConsent /> */}
         {isHomePage && (
           <>
             <script
