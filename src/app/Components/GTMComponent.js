@@ -86,28 +86,66 @@
 import { useEffect } from 'react';
 
 export default function GTMComponent() {
-  useEffect(() => {
-    // Add event listener for page load
+  console.log("From component")
+  // useEffect(() => { 
+  //   // Add event listener for page load
+  //   const handlePageLoad = () => {
+  //     // Initialize dataLayer if not already done
+  //     window.dataLayer = window.dataLayer || [];
+  //     // Function to push data to dataLayer
+  //     function gtag() {
+  //       window.dataLayer.push(arguments);
+  //     }
+
+  //     console.log("From inside")
+  //     // Initialize Google Analytics configurations
+  //     gtag('js', new Date());
+  //     gtag('config', 'AW-946594877');
+  //     gtag('config', 'G-080ZLKT6JT');
+  //     gtag('config', 'G-ZXWWBTSP0T');
+
+  //     // Load GTM script dynamically after page load
+  //     const script = document.createElement('script');
+  //     script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-946594877';
+  //     script.async = true;
+  //     document.head.appendChild(script);
+
+  //     // Inject GTM initialization script
+  //     const initScript = document.createElement('script');
+  //     initScript.innerHTML = `
+  //       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  //         var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  //         j.async=true; j.defer=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  //         f.parentNode.insertBefore(j,f);
+  //       })(window,document,'script','dataLayer','GTM-5357VDW');
+  //     `;
+  //     document.head.appendChild(initScript);
+  //   };
+
+  //   // Listen for the full page load event
+  //   window.addEventListener('load', handlePageLoad);
+
+  //   // Cleanup the event listener on component unmount
+  //   return () => window.removeEventListener('load', handlePageLoad);
+  // }, []);
+
+  useEffect(() => { 
     const handlePageLoad = () => {
-      // Initialize dataLayer if not already done
       window.dataLayer = window.dataLayer || [];
-      // Function to push data to dataLayer
       function gtag() {
         window.dataLayer.push(arguments);
       }
-      // Initialize Google Analytics configurations
+      console.log("From inside");
       gtag('js', new Date());
       gtag('config', 'AW-946594877');
       gtag('config', 'G-080ZLKT6JT');
       gtag('config', 'G-ZXWWBTSP0T');
-
-      // Load GTM script dynamically after page load
+      
       const script = document.createElement('script');
       script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-946594877';
       script.async = true;
       document.head.appendChild(script);
-
-      // Inject GTM initialization script
+  
       const initScript = document.createElement('script');
       initScript.innerHTML = `
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
@@ -118,13 +156,17 @@ export default function GTMComponent() {
       `;
       document.head.appendChild(initScript);
     };
-
-    // Listen for the full page load event
-    window.addEventListener('load', handlePageLoad);
-
-    // Cleanup the event listener on component unmount
+  
+    // Run on load event and call immediately
+    if (document.readyState === 'complete') {
+      handlePageLoad(); // Call immediately if the page is already loaded
+    } else {
+      window.addEventListener('load', handlePageLoad);
+    }
+  
     return () => window.removeEventListener('load', handlePageLoad);
   }, []);
+  
 
   return null; // No need to render anything directly
 }

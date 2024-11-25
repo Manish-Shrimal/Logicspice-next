@@ -1,15 +1,23 @@
 "use client";
-import { useEffect, useState } from "react";
 
-const CookiePolicyModal = () => {
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
+const CookiesConsent = () => {
   const [isActive, setIsActive] = useState(false);
+  const pathname = usePathname(); // Get the current route
 
   useEffect(() => {
-    const cookieAccepted = localStorage.getItem("cookieAccepted");
-    if (cookieAccepted !== "yes") {
-      setTimeout(() => setIsActive(true), 2000); // Show modal after 2 seconds
+    if (typeof window !== "undefined") {
+      console.log("Here");
+      const cookieAccepted = localStorage.getItem("cookieAccepted");
+      if (!cookieAccepted || cookieAccepted !== "yes") {
+        console.log("Cookie not accepted");
+        setIsActive(true);
+      }
     }
-  }, []);
+  }, [pathname]); // Re-run this effect whenever the route changes
+  
 
   const handleAccept = () => {
     localStorage.setItem("cookieAccepted", "yes");
@@ -25,10 +33,7 @@ const CookiePolicyModal = () => {
       <div className="CookiePolicySection cookie-consent-modal active">
         <div className="CookiePolicySectionClose">
           <a href="#" className="closesection" onClick={handleDecline}>
-            <img
-              src="/img/cookie-close.png"
-              alt="Close"
-            />
+            <img src="/img/cookie-close.png" alt="Close" />
           </a>
         </div>
         <div className="container-home content">
@@ -63,4 +68,4 @@ const CookiePolicyModal = () => {
   );
 };
 
-export default CookiePolicyModal;
+export default CookiesConsent;
