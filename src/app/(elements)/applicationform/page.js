@@ -7,7 +7,7 @@ import "../elements.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 // import "@fortawesome/fontawesome-free/css/all.css";
-import "../../../../public/css/font-awesome.css"
+import "../../../../public/css/font-awesome.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
@@ -18,6 +18,7 @@ const Page = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
+  const [loading, setLoading] = useState(false);
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
@@ -343,7 +344,7 @@ const Page = () => {
 
     // setLoader(true);
     try {
-      // console.log("hi");
+      setLoading(true);
 
       const response = await axios.post(
         BaseAPI + "/applicationform",
@@ -354,7 +355,8 @@ const Page = () => {
           },
         }
       );
-
+      setLoading(false);
+      // return;
       if (response.data.status === 200) {
         router.push("/apply-now");
         // setResultSuccess(true);
@@ -444,6 +446,8 @@ const Page = () => {
         });
       }
     } catch (error) {
+      setLoading(false);
+
       console.error("Submission error:", error.message);
     }
   };
@@ -529,6 +533,17 @@ const Page = () => {
   return (
     <>
       <Navbar />
+      {loading && (
+        <div className="main_cart_loader" id="loadercart">
+          <Image
+            width={100}
+            height={100}
+            src="/img/loader_large_blue.gif"
+            alt=""
+          />
+        </div>
+      )}
+
       <div className="application-form-section ">
         <div className="container">
           <div className="appliction-form-bxs">
