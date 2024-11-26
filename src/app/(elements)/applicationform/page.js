@@ -12,9 +12,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Swal from "sweetalert2";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
+  const router = useRouter();
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -332,6 +334,7 @@ const Page = () => {
   const handleSubmit = async (e) => {
     // console.log("hii");
     e.preventDefault();
+    if(loading) return;
 
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
@@ -356,18 +359,18 @@ const Page = () => {
         }
       );
       setLoading(false);
-      // return;
+      console.log(response);
+      console.log("Outer")
       if (response.data.status === 200) {
         router.push("/apply-now");
-        // setResultSuccess(true);
+        console.log("Inner")
+        
 
-        if (response.data.status === 200) {
-          Swal.fire({
-            icon: "success",
-            title: "Successfully Applied",
-            text: response.data.message,
-          });
-        }
+        Swal.fire({
+          icon: "success",
+          title: "Successfully Applied",
+          text: response.data.message,
+        });
 
         setFormData({
           post: "",
