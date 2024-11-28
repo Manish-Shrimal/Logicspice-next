@@ -1,3 +1,3 @@
-const BaseAPI = "https://lswebsitedemo.logicspice.com/logicspice/api";
+const BaseAPI = "https://www.manage.logicspice.com/api";
 
 export default BaseAPI;
