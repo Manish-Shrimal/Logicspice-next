@@ -16,7 +16,7 @@ const Page = () => {
           <div class="CookiesPoliciesBx">
             <h2>1. Introduction</h2>
             <p>
-              Welcome to Logicspice Consultancy Private Limited's Cookies
+              Welcome to Logicspice Consultancy Private Limited&apos;s Cookies
               Policy. This document aims to clarify how we employ cookies on our
               website, the types of cookies used, and the impact on your
               privacy. By continuing to use our website, you consent to the use
@@ -88,7 +88,7 @@ const Page = () => {
             <p>
               We may periodically update this Cookies Policy to align with
               evolving practices or legal requirements. Any revisions will be
-              posted on this page, accompanied by the updated "Last Updated"
+              posted on this page, accompanied by the updated &quot;Last Updated&quot;
               date.
             </p>
             <h3>7. How can you manage cookies?</h3>

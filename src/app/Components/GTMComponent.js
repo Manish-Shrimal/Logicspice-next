@@ -131,11 +131,13 @@ export default function GTMComponent() {
 
   useEffect(() => { 
     const handlePageLoad = () => {
+      console.log("From inside");
       window.dataLayer = window.dataLayer || [];
+      
       function gtag() {
         window.dataLayer.push(arguments);
       }
-      console.log("From inside");
+      
       gtag('js', new Date());
       gtag('config', 'AW-946594877');
       gtag('config', 'G-080ZLKT6JT');
