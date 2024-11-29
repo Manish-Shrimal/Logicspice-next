@@ -487,7 +487,7 @@ const Page = () => {
                     </div>
                     <div className="WebProjectInfoView">
                       <Link
-                        href="https://www.logicspice.com/portfolio"
+                        href="/portfolio"
                         className=""
                       >
                         View Portfolio

@@ -88,11 +88,11 @@ const Page = () => {
                           <li>
                             <Link href="/technologies">Technologies</Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link href="https://www.logicspice.com/blog">
                               Blogs
                             </Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link href="/gallery">Gallery</Link>
                           </li>
@@ -303,11 +303,11 @@ const Page = () => {
                           Online Exam Test
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/taxi-booking-script">
                           Taxi Booking PHP Script
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/faq-script">FAQ Script</Link>
                       </li>
@@ -340,11 +340,11 @@ const Page = () => {
                           Cake PHP Facebook Login Plugin Script
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/angularjs-blog-script">
                           Angular Js Blog Script
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/wordpress-twitter-login-plugin">
                           Wordpress Twitter Login Plugin

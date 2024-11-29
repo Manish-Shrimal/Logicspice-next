@@ -904,7 +904,7 @@ const Page = () => {
                       ecommerce website doesn&APOS;t convey these services,
                       you&APOS;re missing out on huge online sales and
                       <a
-                        href="/blogs/detail/factors-to-consider-while-choosing-ecommerce-web-builder"
+                        href="/factors-to-consider-while-choosing-ecommerce-web-builder"
                         className="blog_read_more"
                         title="read more"
                       >
