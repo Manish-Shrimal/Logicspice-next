@@ -68,6 +68,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/android-app-development/",
+        destination: "/android-app-development", 
+        permanent: true,
+      },
+      {
+        source: "/startup-mobile-app-development-company/",
+        destination: "/startup-mobile-app-development-company", 
+        permanent: true,
+      },
+      {
         source: "/php-programing",
         destination: "/php-development", 
         permanent: true,
