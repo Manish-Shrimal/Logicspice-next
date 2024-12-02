@@ -2825,21 +2825,24 @@ const Page = () => {
                     Safari 5+, IE 9+
                   </li>
                   <li className="same ">
-                    <b>Framework - </b> Laravel 10.x ReactJS (Version 18.2.0)
+                    <b>Framework - </b> Laravel 10.x 
+                  </li>
+                  <li className="same ">
+                    <b>Library - </b> ReactJS (Version 18.2.0)
                   </li>
                   <li className="same">
-                    <b>Language - </b> PHP 8.2 Supported ReactJS (library),
+                    <b>Language - </b> PHP 8.2,
                     jQuery
                   </li>
                   <li className="other">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap4, JavaScript
                   </li>
-                  <li className="other">
+                  {/* <li className="other">
                     <b>Laravel - </b> 10.x{" "}
                   </li>
                   <li className="other">
                     <b>PHP - </b> 8.2{" "}
-                  </li>
+                  </li> */}
                   <li className="other">
                     <b>Database - </b> MySQL 5.5+
                   </li>
