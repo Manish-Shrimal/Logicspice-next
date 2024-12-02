@@ -1,5 +1,3 @@
-
-
 "use client";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
@@ -9,7 +7,7 @@ import "../elements.css";
 import Contactusmodel from "@/app/Components/Contactusmodel";
 import Image from "next/image";
 // import "@fortawesome/fontawesome-free/css/all.css";
-import "../../../../public/css/font-awesome.css"
+import "../../../../public/css/font-awesome.css";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -76,11 +74,87 @@ const Page = () => {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if(isEnquiryRequested){
+  //     return;
+  //   }
+
+  //   const newErrors = {};
+
+  //   // Basic validation
+  //   if (!formData.name) newErrors.name = "Name is required";
+  //   if (!formData.email) {
+  //     newErrors.email = "Email is required";
+  //   } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+  //     newErrors.email = "Email address is invalid";
+  //   }
+  //   if (!formData.contact) newErrors.contact = "Contact Number is required";
+  //   if (!formData.city_state)
+  //     newErrors.city_state = "City and State are required";
+  //   if (!formData.current_ctc)
+  //     newErrors.current_ctc = "Current CTC is required";
+  //   if (!formData.expected_ctc)
+  //     newErrors.expected_ctc = "Expected CTC is required";
+  //   if (!formData.notice_days)
+  //     newErrors.notice_days = "Notice Days are required";
+  //   if (!formData.apply_for) newErrors.apply_for = "Job title is required";
+  //   if (!resumeFile.current) newErrors.resume = "Resume is required";
+
+  //   if (Object.keys(newErrors).length > 0) {
+  //     setErrors(newErrors);
+  //     return;
+  //   }
+
+  //   try {
+  //     const data = new FormData();
+  //     data.append("name", formData.name);
+  //     data.append("email", formData.email);
+  //     data.append("contact", formData.contact);
+  //     data.append("city_state", formData.city_state);
+  //     data.append("apply_for", formData.apply_for);
+  //     data.append("current_ctc", formData.current_ctc);
+  //     data.append("expected_ctc", formData.expected_ctc);
+  //     data.append("notice_days", formData.notice_days);
+  //     data.append("resume", resumeFile.current);
+
+  //     const response = await axios.post(BaseAPI + "/applynow", data, {
+  //       headers: {
+  //         "Content-Type": "multipart/form-data",
+  //       },
+  //     });
+  //     if (response.data.status === 200) {
+  //       setIsEnquiryRequested(true);
+  //       Swal.fire({
+  //         icon: "success",
+  //         title: "Successfully Applied",
+  //         text: response.data.message,
+  //       });
+  //     }
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       contact: "",
+  //       city_state: "",
+  //       apply_for: "",
+  //       resume: "",
+  //       current_ctc: "",
+  //       expected_ctc: "",
+  //       notice_days: "",
+  //     });
+  //     setIsEnquiryRequested(false);
+
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(isEnquiryRequested){
-      return;
-    }
+
+    if (isEnquiryRequested) return; // Prevent multiple submissions
+    setIsEnquiryRequested(true); // Immediately block further clicks
 
     const newErrors = {};
 
@@ -105,6 +179,7 @@ const Page = () => {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setIsEnquiryRequested(false); // Allow retry if validation fails
       return;
     }
 
@@ -125,18 +200,29 @@ const Page = () => {
           "Content-Type": "multipart/form-data",
         },
       });
+
       if (response.data.status === 200) {
-        setIsEnquiryRequested(true);
         Swal.fire({
           icon: "success",
           title: "Successfully Applied",
           text: response.data.message,
         });
+        setFormData({
+          name: "",
+          email: "",
+          contact: "",
+          city_state: "",
+          apply_for: "",
+          resume: "",
+          current_ctc: "",
+          expected_ctc: "",
+          notice_days: "",
+        });
       }
-
-      console.log(response.data);
     } catch (error) {
-      console.log(error.message);
+      console.error(error.message);
+    } finally {
+      setIsEnquiryRequested(false); // Reset to allow another submission
     }
   };
 
@@ -335,13 +421,20 @@ const Page = () => {
             </div>
             <div className="form-group row">
               <div className="col-md-6">
-                <input
+                {/* <input
                   title="Submit"
                   className="btn btn-primary"
                   size="30"
                   label=""
                   type="submit"
                   value="Send"
+                /> */}
+                <input
+                  title="Submit"
+                  className="btn btn-primary"
+                  type="submit"
+                  value="Send"
+                  disabled={isEnquiryRequested}
                 />
               </div>
             </div>
