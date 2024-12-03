@@ -17,7 +17,7 @@ const Page = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 2.35,
+    slidesToShow: 2.95,
     centerMode: true,
     vertical: false,
   };
