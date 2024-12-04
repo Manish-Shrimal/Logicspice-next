@@ -335,26 +335,26 @@ const Page = () => {
                           Appointment Scheduling Software
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/cakephp-facebook-login-plugin-script">
                           Cake PHP Facebook Login Plugin Script
                         </Link>
-                      </li>
+                      </li> */}
                       {/* <li>
                         <Link href="/angularjs-blog-script">
                           Angular Js Blog Script
                         </Link>
                       </li> */}
-                      <li>
+                      {/* <li>
                         <Link href="/wordpress-twitter-login-plugin">
                           Wordpress Twitter Login Plugin
                         </Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link href="/cakephp-cms-script">
                           CakePHP CMS Script
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/lead-generation-contact-form-php-script">
                           Contact Form PHP Script
