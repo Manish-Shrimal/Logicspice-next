@@ -2896,7 +2896,7 @@ const Page = () => {
                 <div className="main-rait">
                   <span>
                     <i className="fa fa-star"></i>{" "}
-                    <span>4.7 out of 5 stars</span>
+                    <span>4.9 out of 5 stars</span>
                   </span>
                 </div>
               </div>

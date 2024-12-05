@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import "@/app/(softwares)/softwares.css";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+// import Footer from "@/app/Components/Footer";
+// import Navbar from "@/app/Components/Navbar";
 import React, { useEffect, useRef, useState } from "react";
 import { lazy, Suspense } from "react";
 import "../../resposive.css";
@@ -17,8 +17,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+// import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+// import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
@@ -34,11 +34,28 @@ import "slick-carousel/slick/slick-theme.css";
 import { Pagination, Navigation } from "swiper/modules";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import dynamic from "next/dynamic";
+
+const GetDemoEnquiry = lazy(() => import("@/app/Components/GetDemoEnquiry"), {
+  ssr: false,
+});
+const SoftwareEnquiry = lazy(() => import("@/app/Components/SoftwareEnquiry"), {
+  ssr: false,
+});
+// import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
+const Footer = lazy(() => import("@/app/Components/Footer"), { ssr: false });
+const TabSection = lazy(
+  () => import("@/app/(softwares)/fiverr-clone/TabSection"),
+  { ssr: false }
+);
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-
+  const [studentTab, setStudentTab] = useState(true);
+  const [instructorTab, setInstructorTab] = useState(false);
+  const [adminpanelTab, setAdminpanelTab] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [jobportal, setJobportal] = useState(false);
@@ -46,7 +63,6 @@ const Page = () => {
   const [showReviewModal, setShowReviewModal] = useState(false);
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
-  const [isInView, setIsInView] = useState(false);
   const iframeRef = useRef();
 
   const toggleJobPortalModal = () => setJobportal(!jobportal);
@@ -89,14 +105,8 @@ const Page = () => {
   };
 
   const [activeTab, setActiveTab] = useState("tab2");
-  const [sellerTab, setSellerTab] = useState(true);
-  const [buyerTab, setBuyerTab] = useState(false);
-  const [adminTab, setAdminTab] = useState(false);
-  const [studentTab, setStudentTab] = useState(true);
-  const [instructorTab, setInstructorTab] = useState(false);
-  const [adminpanelTab, setAdminpanelTab] = useState(false);
+
   const [pageData, setPageData] = useState([]);
-  const videoRef = useRef();
 
   const getData = async () => {
     try {
@@ -113,37 +123,6 @@ const Page = () => {
   useEffect(() => {
     getData();
   }, []);
-  const handleStudentTab = () => {
-    setStudentTab(true);
-    setInstructorTab(false);
-    setAdminpanelTab(false);
-  };
-  const handleInstructorTab = () => {
-    setStudentTab(false);
-    setInstructorTab(true);
-    setAdminpanelTab(false);
-  };
-  const handleAdminpanelTab = () => {
-    setStudentTab(false);
-    setInstructorTab(false);
-    setAdminpanelTab(true);
-  };
-
-  const handleSellerTab = () => {
-    setSellerTab(true);
-    setBuyerTab(false);
-    setAdminTab(false);
-  };
-  const handleBuyerTab = () => {
-    setSellerTab(false);
-    setBuyerTab(true);
-    setAdminTab(false);
-  };
-  const handleAdminTab = () => {
-    setSellerTab(false);
-    setBuyerTab(false);
-    setAdminTab(true);
-  };
 
   const opendiv = (tab) => {
     setActiveTab(tab);
@@ -197,132 +176,134 @@ const Page = () => {
     setDemoAccessModal(!demoAccessModal);
   };
 
-  useEffect(() => {
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  }, []); // Empty dependency array to run once on mount
-
   // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       setInView(entry.isIntersecting);
-  //     },
-  //     { root: null, rootMargin: "0px", threshold: 0.1 }
-  //   );
+  //   var Tawk_API = Tawk_API || {},
+  //     Tawk_LoadStart = new Date();
+  //   (function () {
+  //     var s1 = document.createElement("script"),
+  //       s0 = document.getElementsByTagName("script")[0];
+  //     s1.async = true;
+  //     s1.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
+  //     s1.charset = "UTF-8";
+  //     s1.setAttribute("crossorigin", "*");
+  //     s0.parentNode.insertBefore(s1, s0);
+  //   })();
+  // }, []); // Empty dependency array to run once on mount
 
-  //   if (ref.current) {
-  //     observer.observe(ref.current);
-  //   }
-
-  //   return () => {
-  //     if (ref.current) {
-  //       observer.unobserve(ref.current);
-  //     }
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   // Intersection Observer to detect when the iframe enters the viewport
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setIsInView(true); // Set to true when the iframe is in the viewport
-  //         observer.unobserve(entry.target); // Stop observing after it starts playing
-  //       }
-  //     },
-  //     { threshold: 0.5 } // Trigger when 50% of the iframe is visible
-  //   );
-
-  //   if (iframeRef.current) {
-  //     observer.observe(iframeRef.current); // Start observing the iframe
-  //   }
-
-  //   return () => {
-  //     if (iframeRef.current) {
-  //       observer.unobserve(iframeRef.current); // Cleanup observer when component unmounts
-  //     }
-  //   };
-  // }, []);
-
-  // const iframeRef = useRef(null);
-  const [player, setPlayer] = useState(null);
-  // const [isInView, setIsInView] = useState(false);
-
-  // Load and initialize the YouTube Player API
   useEffect(() => {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
+    const timer = setTimeout(() => {
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    }, 5000); // 5000 milliseconds = 5 seconds
 
-    window.onYouTubeIframeAPIReady = () => {
-      const ytPlayer = new YT.Player("ytplayer", {
-        events: {
-          onReady: (event) => {
-            const savedTime =
-              parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
-            event.target.seekTo(savedTime);
-            setPlayer(event.target);
-          },
-          onStateChange: (event) => {
-            if (
-              event.data === YT.PlayerState.PLAYING ||
-              event.data === YT.PlayerState.PAUSED
-            ) {
-              const currentTime = event.target.getCurrentTime();
-              localStorage.setItem("lastPlayedTime", currentTime);
-            }
-          },
-        },
-      });
-    };
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array to run only once
 
-    return () => {
-      document.body.removeChild(tag);
-    };
-  }, []);
+  const [isFullyVisible, setIsFullyVisible] = useState(false);
+  const videoRef = useRef(null);
 
-  // Set up IntersectionObserver to handle play/pause based on viewport visibility
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          // Fully visible
+          setIsFullyVisible(true);
+          observer.disconnect(); // Stop observing once fully visible
+        }
       },
-      { threshold: 0.5 }
+      {
+        threshold: 1.0, // Trigger only when the entire element is visible
+      }
     );
 
-    if (iframeRef.current) observer.observe(iframeRef.current);
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
 
-    return () => {
-      if (iframeRef.current) observer.unobserve(iframeRef.current);
-    };
+    return () => observer.disconnect(); // Clean up observer on component unmount
   }, []);
 
-  // Control playback based on `isInView` and `player` readiness
-  useEffect(() => {
-    if (player) {
-      if (isInView) {
-        const savedTime =
-          parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
-        player.seekTo(savedTime);
-        player.playVideo();
-      } else {
-        player.pauseVideo();
-      }
-    }
-  }, [isInView, player]);
+  // const iframeRef = useRef(null);
+  // const [player, setPlayer] = useState(null);
+  // // const [isInView, setIsInView] = useState(false);
+
+  // // Load and initialize the YouTube Player API
+  // useEffect(() => {
+  //   const tag = document.createElement("script");
+  //   tag.src = "https://www.youtube.com/iframe_api";
+  //   document.body.appendChild(tag);
+
+  //   window.onYouTubeIframeAPIReady = () => {
+  //     const ytPlayer = new YT.Player("ytplayer", {
+  //       events: {
+  //         onReady: (event) => {
+  //           const savedTime =
+  //             parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+  //           event.target.seekTo(savedTime);
+  //           setPlayer(event.target);
+  //         },
+  //         onStateChange: (event) => {
+  //           if (
+  //             event.data === YT.PlayerState.PLAYING ||
+  //             event.data === YT.PlayerState.PAUSED
+  //           ) {
+  //             const currentTime = event.target.getCurrentTime();
+  //             localStorage.setItem("lastPlayedTime", currentTime);
+  //           }
+  //         },
+  //       },
+  //     });
+  //   };
+
+  //   return () => {
+  //     document.body.removeChild(tag);
+  //   };
+  // }, []);
+
+  // // Set up IntersectionObserver to handle play/pause based on viewport visibility
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       setIsInView(entry.isIntersecting);
+  //     },
+  //     { threshold: 0.5 }
+  //   );
+
+  //   if (iframeRef.current) observer.observe(iframeRef.current);
+
+  //   return () => {
+  //     if (iframeRef.current) observer.unobserve(iframeRef.current);
+  //   };
+  // }, []);
+
+  // // Control playback based on `isInView` and `player` readiness
+  // useEffect(() => {
+  //   if (player) {
+  //     if (isInView) {
+  //       const savedTime =
+  //         parseFloat(localStorage.getItem("lastPlayedTime")) || 0;
+  //       player.seekTo(savedTime);
+  //       player.playVideo();
+  //     } else {
+  //       player.pauseVideo();
+  //     }
+  //   }
+  // }, [isInView, player]);
 
   return (
     <>
       <Navbar />
+
 
       <section className="paid-pro job-portal-banner job-portal-bg fiverr-new-banner NewJobSiteDesign JobBoardNewDesign FiverrCloneMainBanner">
         <div className="container">
@@ -534,26 +515,25 @@ const Page = () => {
 
       <section
         className="client-say crowdfunding-say NewTorowLi"
-        style={{ backgroundColor: "#fff" }}
+        style={{ backgroundColor: "#fff", marginTop: "100px" }}
       >
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              {/* {inView && (
-                <div className="jobvideo">
-                  <iframe
-                    width="100%"
-                    height="312"
-                    src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=1"
-                     viewport="0 0 0"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
- 
-
-                </div>
-              )} */}
+              <div ref={videoRef}>
+                {isFullyVisible && (
+                  <div className="jobvideo">
+                    <iframe
+                      width="100%"
+                      height="312"
+                      src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=1"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+              </div>
               {/* <div ref={iframeRef}>
                 {isInView && (
                   <iframe
@@ -566,7 +546,7 @@ const Page = () => {
                   ></iframe>
                 )}
               </div> */}
-              <div ref={iframeRef}>
+              {/* <div ref={iframeRef}>
                 <iframe
                   id="ytplayer"
                   width="100%"
@@ -576,7 +556,7 @@ const Page = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-              </div>
+              </div> */}
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
@@ -596,847 +576,9 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="job_portal_area">
-        <div className="container">
-          <div className="job_or_title">
-            <h2 className="taxt_tt_job">Fiverr Clone Features</h2>
-          </div>
-          <div className="tatxt_txt_job text-center">
-            The <b>Fiverr Clone</b> enables people to act as buyers or sellers
-            of job services from the same account. Being a seller, they can
-            create gigs(jobs) over the site and being buyers they can search for
-            gigs present over the site through different categories or can do
-            keyword search for them.
-            <br />
-            With the help of our readymade marketplace script, the buyer can go
-            through the list of gigs that they have searched for and see the
-            details of selected ones. They can add the gigs they like to a cart
-            and purchase them by making payment through a payment gateway.
-          </div>
-          <div className="tab_bbx_job">
-            <div className="tab_bbx_top_job">
-              <ul className="fiverrClone">
-                <li
-                  id="tab1_li"
-                  className={`jobseeker_app_job ddlj ${
-                    sellerTab ? "active" : ""
-                  }`}
-                  onClick={() => handleSellerTab()}
-                >
-                  <a>Seller App Features</a>
-                </li>
-                <li
-                  id="tab2_li"
-                  className={`emplyer_app_job ddlj ${buyerTab ? "active" : ""}`}
-                  onClick={() => handleBuyerTab()}
-                >
-                  <a>Buyer App Features</a>
-                </li>
-                <li
-                  id="tab3_li"
-                  className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
-                  onClick={() => handleAdminTab()}
-                >
-                  <a>Admin Panel</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="tab_contant">
-              {sellerTab && (
-                <>
-                  <div className="costomer_tab rj JobseekerTab" id="tab1">
-                    <div className="row">
-                      <div className="col-lg-4 col-md-3">
-                        <div className="costomer_tab_right costomer_tab_rightleft">
-                          <Image
-                            unoptimized={true}
-                            width={300}
-                            height={100}
-                            src="/img/fiverrclone/gigger_saler.png"
-                            alt="Seller App Features"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-8 col-md-9">
-                        <div className="costomer_tab_left costomer_tab_leftright">
-                          <ul>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/secure_login.png"
-                                />
-                              </i>
-                              <span>
-                                Secure Login
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can log in securely using Facebook,
-                                    Gmail or Email
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/add_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Create New Gig & Post Gig
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can post the gigs by creating new gig
-                                    and adding Gig Title, Category, SubCategory
-                                    & Tags.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Gigs
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view list of Gigs & can
-                                    manage(view/add/edit/delete) Gigs. Seller
-                                    can create gig by adding Gig Title,
-                                    Category, SubCategory & Tags.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/admin_dash.png"
-                                />
-                              </i>
-                              <span>
-                                Seller Dashboard
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the dashboard with the total
-                                    number of counts & Statistics.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/gig_gallery.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Buyer Request
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the list of Active Request &
-                                    Offers sent by Buyers & can manage Active
-                                    Request & Offers.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/view_public.png"
-                                />
-                              </i>
-                              <span>
-                                Preview Public Mode
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the public view of their
-                                    profile after making updates in profile with
-                                    ratings & reviews.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/reviews_ratings.png"
-                                />
-                              </i>
-                              <span>
-                                View Reviews & Ratings
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view the reviews & rating Buyer
-                                    has received on the portal.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage-notifi.png"
-                                />
-                              </i>
-                              <span>
-                                View Notifications
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can get updates through the
-                                    notifications.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_profile.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Profile
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can view their profile & can change
-                                    password & PayPal email address.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/contact.png"
-                                />
-                              </i>
-                              <span>
-                                Buyers Contact
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can find the contact of Buyer using
-                                    this portal.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_selling_order.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Gig Order
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can receive the order for posted gig
-                                    & Seller can manage(add/edit/delete) gigs.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/view_order.png"
-                                />
-                              </i>
-                              <span>
-                                Get Payment
-                                <div className="product-idea">
-                                  <p>
-                                    Seller can receive the payment for the gig &
-                                    can keep track of the transaction history.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {buyerTab && (
-                <>
-                  <div className="costomer_tab rj EmployerTab" id="tab2">
-                    <div className="row">
-                      <div className="col-lg-4 col-md-3">
-                        <div className="costomer_tab_right">
-                          <Image
-                            unoptimized={true}
-                            width={300}
-                            height={100}
-                            src="/img/fiverrclone/buyegigger_buyer.png"
-                            alt="Buyer App Features"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-8 col-md-9">
-                        <div className="costomer_tab_left">
-                          <ul>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/secure_login.png"
-                                />
-                              </i>
-                              <span>
-                                Secure Login
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can login securely using Facebook,
-                                    Gmail or Email.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/browse_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Browse Gigs
-                                <div className="product-idea">
-                                  <p>Buyer can browse gigs on the portal.</p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/refine_search.png"
-                                />
-                              </i>
-                              <span>
-                                Refine Search
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can search for the gig from posted one
-                                    by apply filters{" "}
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_profile.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Profile
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can view their profile & can change
-                                    their password & PayPal e-mail address.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/select_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Select Gig
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can select the best gig from the
-                                    posted one as per their requirement.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/reviews_ratings.png"
-                                />
-                              </i>
-                              <span>
-                                View Reviews & Ratings
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can view the reviews & rating Seller
-                                    has received on the portal.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_order.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Buying Request
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can view send Buying Request to
-                                    Sellers & can manage(add/edit/delete) Buying
-                                    Request.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage-notifi.png"
-                                />
-                              </i>
-                              <span>
-                                View Notifications
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can get updates through the
-                                    notifications
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/post_request.png"
-                                />
-                              </i>
-                              <span>
-                                Post Request
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can post gig request on the portal
-                                    with details Gig Title, Category,
-                                    SubCategory & Tags.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/saved_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Saved Gigs
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can save the gigs which found relevant
-                                    & Buyer can remove from saved gigs.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/payment_history.png"
-                                />
-                              </i>
-                              <span>
-                                Payment Transaction History
-                                <div className="product-idea">
-                                  <p>
-                                    Buyer can make the payment & can view
-                                    payment status (Paid/pending).
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {adminTab && (
-                <>
-                  <div className="costomer_tab rj AdminTab" id="tab3">
-                    <div className="row">
-                      <div className="col-lg-4 col-md-3 ">
-                        <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image
-                            unoptimized={true}
-                            width={300}
-                            height={100}
-                            src="/img/fiverrclone/gigger_deshboard.png"
-                            alt="Admin Panel"
-                          />{" "}
-                        </div>
-                      </div>
-                      <div className="col-lg-8 col-md-9">
-                        <div className="costomer_tab_left costomer_tab_leftright2">
-                          <ul>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/secure_login.png"
-                                />
-                              </i>
-                              <span>
-                                Secure Login
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can login securely on this portal.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/admin_dash.png"
-                                />
-                              </i>
-                              <span>
-                                Admin Dashboard
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view dashboard which will display
-                                    the total number of counts for Seller,
-                                    Buyer, Gig orders etc.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_user.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Users
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Users(Seller/Buyer) &
-                                    can manage(add/edit/delete) Users. Admin can
-                                    activate/deactivate Users.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_gig.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Gigs
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Gigs & can
-                                    manage(delete) Gigs. Admin can
-                                    activate/deactivate Gigs.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_gig_order.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Gig Orders
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Gig orders & can
-                                    manage (view) gig Orders.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_service.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Services
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of services & can
-                                    manage(view/add/edit/delete) services.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_category.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Categories
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Categories & can
-                                    manage(view/add/edit/delete) Categories.
-                                    Admin can activate/deactivate Categories.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_skill.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Skills
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Skills & can manage
-                                    (view/add/edit/delete) skills.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_cat.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Sub-categories
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Sub-categories & can
-                                    manage(view/add/edit/delete) Sub-categories.
-                                    Admin can activate/deactivate
-                                    Sub-categories.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_countries.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Countries
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Countries & can
-                                    manage(view/add/edit/delete) Countries.
-                                    Admin can activate/deactivate Countries.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_testimonial.png"
-                                />
-                              </i>
-                              <span>
-                                View Reviews & Ratings
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view the list of Reviews & Ratings
-                                    Seller & Buyer has received.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/payment_history.png"
-                                />
-                              </i>
-                              <span>
-                                Transaction History
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view payment transactions which
-                                    will display the status of the payment
-                                    paid/pending.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
+      <Suspense fallback={<div>Loading Services...</div>}>
+        <TabSection />
+      </Suspense>
 
       <section className="job_product_page_header_in">
         <div className="container">
@@ -2116,9 +1258,6 @@ const Page = () => {
       </section>
 
       <div>
-        {/* Button to Open Job Portal Modal */}
-
-        {/* Job Portal Modal */}
         <Modal
           show={jobportal}
           onHide={toggleJobPortalModal}
@@ -2471,7 +1610,7 @@ const Page = () => {
                     <div className="main-rait">
                       <span>
                         <i className="fa fa-star"></i>{" "}
-                        <span>4.7 out of 5 stars</span>
+                        <span>4.9 out of 5 stars</span>
                       </span>
                     </div>
                     <div className="review_rating_fjs">
@@ -2488,7 +1627,7 @@ const Page = () => {
                           style={{ width: "100%" }}
                         ></div>
                       </div>
-                      <div className="people_star_num">510</div>
+                      <div className="people_star_num">512</div>
                     </div>
 
                     <div className="review_rating_fjs">
@@ -2505,7 +1644,7 @@ const Page = () => {
                           style={{ width: "60%" }}
                         ></div>
                       </div>
-                      <div className="people_star_num">46</div>
+                      <div className="people_star_num">57</div>
                     </div>
 
                     <div className="review_rating_fjs">

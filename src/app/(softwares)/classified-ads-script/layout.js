@@ -161,13 +161,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     ],
   };
 
-  // Combine the existing schema and FAQ schema
-  // schemaOrg = {
-  //   ...schemaOrg,
-  //   ...faqSchema,
-  // };
 
-  // Return metadata
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
@@ -221,7 +215,7 @@ export default async function RootLayout({ children, params, searchParams }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.faqSchema),
+            __html: metadata.faqSchema,
           }}
         />
       )}

@@ -311,17 +311,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
     ],
   };
 
-  // Combine the existing schema and FAQ schema
-  if (schemaOrg) {
-    if (Array.isArray(schemaOrg)) {
-      schemaOrg.push(faqSchema);
-    } else {
-      schemaOrg = [schemaOrg, faqSchema];
-    }
-  } else {
-    schemaOrg = faqSchema;
-  }
-
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
@@ -340,7 +329,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg,
+    schemaOrg: schemaOrg || null,
+    faqSchema: faqSchema,
   };
 }
 
@@ -361,6 +351,15 @@ export default async function RootLayout({ children, params, searchParams }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(metadata.schemaOrg),
+          }}
+        />
+      )}
+
+      {metadata.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: metadata.faqSchema,
           }}
         />
       )}
