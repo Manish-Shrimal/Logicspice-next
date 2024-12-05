@@ -206,14 +206,14 @@ export default async function RootLayout({ children, params, searchParams }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
       /> */}
-      {metadata.schemaOrg && (
+      {/* {metadata.schemaOrg && ( */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(metadata.schemaOrg),
           }}
         />
-      )}
+      {/* )} */}
       {/* Render the FAQ schema separately */}
       {metadata.faqSchema && (
         <script
