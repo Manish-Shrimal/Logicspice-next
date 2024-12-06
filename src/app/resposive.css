@@ -1693,21 +1693,21 @@
     margin-bottom: 20px!important;
   }
   .SubscribeBtn {
-    display: inline-block;
-    margin: 1px 0 0 0px;
-    vertical-align: top;
+    display: inline-block!important;
+    margin: 1px 0 0 0!important;
+    vertical-align: top!important;
   }
   .order_addonStep {
     padding: 25px!important;
   }
 
-  .oder_dfied iframe {
-    /* transform: scale(0.88)!important;
+  /* .oder_dfied iframe {
+    transform: scale(0.88)!important;
     -webkit-transform: scale(0.88)!important;
     transform-origin: 0 0!important;
     -webkit-transform-origin: 0 0!important; */
-    /* width: 180px; */
-}
+    /* width: 180px;
+} */
 .oder_form {
   width: 100% !important;
   float: left;
