@@ -1701,6 +1701,18 @@
     padding: 25px!important;
   }
 
+  .oder_dfied iframe {
+    /* transform: scale(0.88)!important;
+    -webkit-transform: scale(0.88)!important;
+    transform-origin: 0 0!important;
+    -webkit-transform-origin: 0 0!important; */
+    /* width: 180px; */
+}
+.oder_form {
+  width: 100%;
+  float: left;
+}
+
 
   .industries_country .col-sm-4 {
     display: none;
