@@ -2588,7 +2588,7 @@ section {
   background-repeat: no-repeat !important;
   line-height: 22px !important;
   padding-right: 0px !important;
-  width: 25% !important;
+  width: 25% ;
   font-weight: 400 !important;
   background-position: left 4px !important;
   font-family: 'robotoregular';

@@ -161,7 +161,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
     ],
   };
 
-
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
@@ -182,7 +181,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
     },
     schemaOrg: schemaOrg || null,
     faqSchema: faqSchema,
-    
   };
 }
 
@@ -202,20 +200,32 @@ export default async function RootLayout({ children, params, searchParams }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
       /> */}
-      {metadata.schemaOrg && (
+      {/* {metadata.schemaOrg && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schemaOrg),
+            __html: metadata.schemaOrg,
           }}
         />
-      )}
+      )}  */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
       {/* Render the FAQ schema separately */}
-      {metadata.faqSchema && (
+      {/* {metadata.faqSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: metadata.faqSchema,
+          }}
+        />
+      )} */}
+      {metadata.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.faqSchema),
           }}
         />
       )}
