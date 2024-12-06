@@ -1709,7 +1709,7 @@
     /* width: 180px; */
 }
 .oder_form {
-  width: 100%;
+  width: 100% !important;
   float: left;
 }
 
