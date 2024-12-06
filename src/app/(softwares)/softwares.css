@@ -3611,6 +3611,9 @@ a.StartFreeTrialBtn {
 .ecommerce--review--point .progress-bar-danger {
   background-color: #451095 !important;
 }
+.ecommerce--review--point .progress .progress-bar{
+     background-color: #451095!important;
+}
 
 .ecommerce--review--point .progress {
   background: #fff;
@@ -6403,9 +6406,9 @@ a:hover {
     text-align: center !important;
   }
 
-  .SubscriptionpriceSection {
+  /* .SubscriptionpriceSection {
     display: none !important;
-  }
+  } */
 
   .NewJobSiteDesign {
     margin-top: 58px;
@@ -6529,7 +6532,7 @@ a:hover {
   }
 
   .SubscriptionpriceSection {
-    display: inline-block;
+    display: inline-block!important;
   }
 
   .SubscriptionModelPrice {

@@ -289,7 +289,7 @@ const Page = ({ params }) => {
         discountData
       );
 
-      console.log(response);
+      // console.log(response);
 
       if (response.data.status == 200) {
         // setFormData((pre) => ({

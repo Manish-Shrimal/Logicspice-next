@@ -847,6 +847,7 @@ label.in-label::before {
 
 .input_des {
 	width: 58.33333333%;
+	padding-left: 12px;
 	float: left;
 	font-size: 23px;
 	color: #1a1615;
