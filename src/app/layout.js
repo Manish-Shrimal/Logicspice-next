@@ -154,7 +154,7 @@ export default function RootLayout({ children, params, searchParams }) {
       </Head>
       
       <body className={inter.className}>
-      {/* <Chatbot /> */}
+      <Chatbot />
         <AOSInitializer>{children}</AOSInitializer>
         
         <GTMComponent />
