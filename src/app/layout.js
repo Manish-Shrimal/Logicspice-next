@@ -158,7 +158,7 @@ export default function RootLayout({ children, params, searchParams }) {
         <AOSInitializer>{children}</AOSInitializer>
         
         <GTMComponent />
-        <CookiesConsent />
+        {/* <CookiesConsent /> */}
         {isHomePage && (
           <>
             <script
