@@ -38,20 +38,7 @@ const Page = () => {
     setModalOpen(!modalOpen);
   };
 
-  useEffect(() => {
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  }, []); // Empty dependency array to run once on mount
-  // redirect('/')
+
   return (
     <>
       <Navbar />
@@ -678,7 +665,12 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Live Chat Software</h3>
                             <p>
-                            Our Live Chat Software enables businesses to provide real-time support to customers, enhancing user experience and boosting conversions. It’s an easy-to-use tool that helps teams engage with visitors instantly, answer queries, and offer solutions. 
+                              Our Live Chat Software enables businesses to
+                              provide real-time support to customers, enhancing
+                              user experience and boosting conversions. It’s an
+                              easy-to-use tool that helps teams engage with
+                              visitors instantly, answer queries, and offer
+                              solutions.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
@@ -740,7 +732,11 @@ const Page = () => {
                           <div className="abs-product">
                             <h3>Group Chat App</h3>
                             <p>
-                            Our Group Chat Internal Communication Software makes team collaboration smooth and efficient. It allows employees to stay connected, share ideas, and communicate instantly, whether they&apos;re in the office or working remotely. 
+                              Our Group Chat Internal Communication Software
+                              makes team collaboration smooth and efficient. It
+                              allows employees to stay connected, share ideas,
+                              and communicate instantly, whether they&apos;re in
+                              the office or working remotely.
                             </p>
                             <div className="product-star">
                               <i className="fa fa-star" aria-hidden="true"></i>
