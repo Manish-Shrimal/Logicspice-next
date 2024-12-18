@@ -69,7 +69,6 @@
 //     <html lang="en">
 //       <body className={inter.className}>
 //         <AOSInitializer>{children}</AOSInitializer>
-//         <Chatbot />
 //         <GTMComponent />
 //         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ __html: schemaData }) }} />
 //         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ __html: schemaData2 }) }} />
@@ -84,13 +83,12 @@ import "./globals.css";
 import "./resposive.css";
 import AOSInitializer from "./Components/AOSInitializer";
 import GTMComponent from "./Components/GTMComponent";
-// import CookiesConsent from "./Components/CookiesConsent";
+import CookiesConsent from "./Components/CookiesConsent";
 
 import Chatbot from "./Components/Chatbot";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "./BaseAPI/Domain";
 import Head from "next/head";
-
 const inter = Inter({ subsets: ["latin"] });
 let schemaData;
 
@@ -143,12 +141,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 export default function RootLayout({ children, params, searchParams }) {
   const isHomePage = params && params.slug === undefined; // Adjust as necessary to match your home page route
-  // let schemaData2 = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Organization",
-  //   url: "https://www.logicspice.com/",
-  //   logo: "https://www.logicspice.com/img/images/logo.png",
-  // };
+
 
   return (
     <html lang="en">
@@ -157,12 +150,15 @@ export default function RootLayout({ children, params, searchParams }) {
           name="google-site-verification"
           content="mGh8hmWuw4T_mXtpY3zzzIpZSMy-k0ua2kHramwX7j4"
         />
+        
       </Head>
+      
       <body className={inter.className}>
+      {/* <Chatbot /> */}
         <AOSInitializer>{children}</AOSInitializer>
-        <Chatbot />
+        
         <GTMComponent />
-        {/* <CookiesConsent /> */}
+        <CookiesConsent />
         {isHomePage && (
           <>
             <script
@@ -171,12 +167,7 @@ export default function RootLayout({ children, params, searchParams }) {
                 __html: JSON.stringify({ __html: schemaData }),
               }}
             />
-            {/* <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({ __html: schemaData2 }),
-              }}
-            /> */}
+            
           </>
         )}
       </body>
