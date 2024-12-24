@@ -2002,7 +2002,7 @@ const Page = () => {
               <ul>
                 <li>
                   <span>
-                    Admin can now efficiently import jobs via <b>CSV or XLSX</b> files,
+                    Admin now can efficiently import jobs via <b>CSV or XLSX</b> files,
                     automatically associating them with the selected employer
                     for streamlined management.
                   </span>
@@ -2017,7 +2017,7 @@ const Page = () => {
 
                 <li>
                   <span>
-                    Admin can now assign specific roles to <b>sub-admins</b>,
+                    Admin now can assign specific roles to <b>sub-admins</b>,
                     restricting their access to authorized features and sections
                     only.
                   </span>
