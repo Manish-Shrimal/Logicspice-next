@@ -1598,7 +1598,7 @@ const Page = () => {
                           style={{ width: "100%" }}
                         ></div>
                       </div>
-                      <div className="people_star_num">512</div>
+                      <div className="people_star_num">499</div>
                     </div>
 
                     <div className="review_rating_fjs">
