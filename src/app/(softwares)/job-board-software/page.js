@@ -2002,7 +2002,7 @@ const Page = () => {
               <ul>
                 <li>
                   <span>
-                    Admin can now efficiently import jobs via CSV or XLSX files,
+                    Admin can now efficiently import jobs via <b>CSV or XLSX</b> files,
                     automatically associating them with the selected employer
                     for streamlined management.
                   </span>
@@ -2017,7 +2017,7 @@ const Page = () => {
 
                 <li>
                   <span>
-                    Admin can now assign specific roles to sub-admins,
+                    Admin can now assign specific roles to <b>sub-admins</b>,
                     restricting their access to authorized features and sections
                     only.
                   </span>
@@ -2025,7 +2025,7 @@ const Page = () => {
 
                 <li>
                   <span>
-                    The platform now supports Greek, German and Ukrainian
+                    The platform now supports <b>Greek, German and Ukrainian </b>
                     languages, allowing users to navigate and use the system in
                     their preferred language for a more localized experience.{" "}
                   </span>
