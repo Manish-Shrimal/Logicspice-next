@@ -1,5 +1,5 @@
 "use client";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
@@ -18,10 +18,14 @@ import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
-
-
-const GetDemoEnquiry = dynamic(() => import('@/app/Components/GetDemoEnquiry'), { ssr: false }); 
-const SoftwareEnquiry = dynamic(() => import('@/app/Components/SoftwareEnquiry'), { ssr: false });
+const GetDemoEnquiry = dynamic(
+  () => import("@/app/Components/GetDemoEnquiry"),
+  { ssr: false }
+);
+const SoftwareEnquiry = dynamic(
+  () => import("@/app/Components/SoftwareEnquiry"),
+  { ssr: false }
+);
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -145,7 +149,6 @@ const Page = () => {
     setAdminTab(true);
   };
 
- 
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
   const [isInView, setIsInView] = useState(false);
@@ -212,8 +215,6 @@ const Page = () => {
       }
     }
   }, [isInView, player]);
-
-
 
   const [inView, setInView] = useState(false);
 
@@ -506,16 +507,16 @@ const Page = () => {
           <div className="row">
             <div className="col-md-6 job-video">
               <div ref={iframeRef}>
-              {inView && (
-                <iframe
-                  id="ytplayer"
-                  width="100%"
-                  height="312"
-                  src="https://www.youtube-nocookie.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                {inView && (
+                  <iframe
+                    id="ytplayer"
+                    width="100%"
+                    height="312"
+                    src="https://www.youtube-nocookie.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 )}
               </div>
               {/* <iframe
@@ -1993,6 +1994,46 @@ const Page = () => {
             <h2 className="taxt_tt_job">Script Update History</h2>
             <br />
             <div className="script-update_title">
+              <p>
+                V7.0 - December 24th, 2024 - New feature added and several key
+                improvements to enhance functionality and user experience.
+              </p>
+
+              <ul>
+                <li>
+                  <span>
+                    Admin can now efficiently import jobs via CSV or XLSX files,
+                    automatically associating them with the selected employer
+                    for streamlined management.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    Optimization techniques implemented for faster page load
+                    times and a smoother user experience.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    Admin can now assign specific roles to sub-admins,
+                    restricting their access to authorized features and sections
+                    only.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    The platform now supports Greek, German and Ukrainian
+                    languages, allowing users to navigate and use the system in
+                    their preferred language for a more localized experience.{" "}
+                  </span>
+                </li>
+              </ul>
+
+              
+              {/* New updates end */}
               <p>
                 V6.0 - September 19th, 2023 - Latest release brings new
                 features, coupled with significant leaps in technologies!
@@ -3702,16 +3743,19 @@ const Page = () => {
 
       <section className="JObboardVideSection">
         <div className="container">
-          <div className="JobBoardVideoBottom JobBoardbxVideoBottom" ref={secondVideoRef}>
-          {inViewSecond && (
-            <iframe
-              width="100%"
-              height="312"
-              src="https://www.youtube-nocookie.com/embed/7fJVD2R2kkA?rel=0"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""
-            ></iframe>
+          <div
+            className="JobBoardVideoBottom JobBoardbxVideoBottom"
+            ref={secondVideoRef}
+          >
+            {inViewSecond && (
+              <iframe
+                width="100%"
+                height="312"
+                src="https://www.youtube-nocookie.com/embed/7fJVD2R2kkA?rel=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen=""
+              ></iframe>
             )}
           </div>
         </div>

@@ -155,12 +155,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
     ],
   };
 
-  // Combine the existing schema and FAQ schema
-  // schemaOrg = {
-  //   ...schemaOrg,
-  //   ...faqSchema,
-  // };
-
   // Return metadata
   return {
     title: product.data.meta_title,
@@ -191,7 +185,6 @@ export default async function RootLayout({ children, params, searchParams }) {
 
   return (
     <html lang="en">
-      <Chatbot />
       <Head>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
@@ -199,10 +192,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
-      {/* <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      /> */}
+      
       {metadata.schemaOrg && (
         <script
           type="application/ld+json"

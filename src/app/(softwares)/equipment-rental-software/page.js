@@ -152,8 +152,6 @@ const Page = () => {
     setDemoAccessModal(!demoAccessModal);
   };
 
-
-
   return (
     <>
       <NavBar />
@@ -1446,6 +1444,34 @@ const Page = () => {
             <br />
             <div className="script-update_title">
               <p>
+                V2.0 - December 24th, 2024 - Featuring significant upgrades and
+                enhancements to improve performance and accessibility.
+              </p>
+
+              <ul>
+                <li>
+                  <span>
+                    Updated to PHP 8.1 for improved performance, security, and
+                    compatibility.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Migrated to the Laravel 10 framework, ensuring a modern and
+                    robust development environment.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    The platform now supports German and French languages,
+                    allowing users to navigate and use the system in their
+                    preferred language for a more localized experience.
+                  </span>
+                </li>
+              </ul>
+
+              {/* New features end */}
+              <p>
                 V1.0 - March 28th, 2022 - Major updates and improvements
                 completed!
               </p>
@@ -1736,10 +1762,10 @@ const Page = () => {
                     Safari 5+, IE 9+
                   </li>
                   <li className="same aos-init aos-animate" data-aos="fade-up">
-                    <b>Framework - </b> Laravel 5.5.41
+                    <b>Framework - </b> Laravel 10
                   </li>
                   <li className="same aos-init aos-animate" data-aos="fade-up">
-                    <b>Language - </b> PHP 7 Supported, AJAX, jQuery
+                    <b>Language - </b> PHP 8.1 Supported, AJAX, jQuery
                   </li>
                   <li className="other aos-init aos-animate" data-aos="fade-up">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap 3.3.6, JavaScript
@@ -2534,7 +2560,11 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/crowdfunding-script" title="View Detail" target="_blank">
+                  <Link
+                    href="/crowdfunding-script"
+                    title="View Detail"
+                    target="_blank"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Crowdfunding</h3>
@@ -2561,7 +2591,11 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/whatsapp-clone" title="View Detail" target="_blank">
+                  <Link
+                    href="/whatsapp-clone"
+                    title="View Detail"
+                    target="_blank"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>WhatsApp Clone App</h3>
@@ -2585,7 +2619,11 @@ const Page = () => {
               </div>
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link href="/groupon-clone" title="View Detail" target="_blank">
+                  <Link
+                    href="/groupon-clone"
+                    title="View Detail"
+                    target="_blank"
+                  >
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Groupon clone</h3>
