@@ -2002,37 +2002,39 @@ const Page = () => {
               <ul>
                 <li>
                   <span>
-                    Admin now can efficiently import jobs via <b>CSV or XLSX</b> files,
-                    automatically associating them with the selected employer
-                    for streamlined management.
+                    Admin can now efficiently{" "}
+                    <b>import jobs via CSV or XLSX files</b>, automatically
+                    associating them with the selected employer for streamlined
+                    management.
                   </span>
                 </li>
 
                 <li>
                   <span>
-                    Optimization techniques implemented for faster page load
-                    times and a smoother user experience.
+                    Optimization techniques implemented for faster page load and{" "}
+                    <b>performance optimization</b> for smoother user
+                    experience.
                   </span>
                 </li>
 
                 <li>
                   <span>
-                    Admin now can assign specific roles to <b>sub-admins</b>,
-                    restricting their access to authorized features and sections
-                    only.
+                    Admin can now assign specific roles to sub-admins through{" "}
+                    <b>sub-admin role management</b>, restricting their access
+                    to authorized features and sections only.
                   </span>
                 </li>
 
                 <li>
                   <span>
-                    The platform now supports <b>Greek, German and Ukrainian </b>
-                    languages, allowing users to navigate and use the system in
-                    their preferred language for a more localized experience.{" "}
+                    The platform's <b>multilingual support</b> feature is now
+                    updated with Greek, German and Ukrainian languages, allowing
+                    users to navigate and use the system in their preferred
+                    language for a more <b>localized experience</b>.
                   </span>
                 </li>
               </ul>
 
-              
               {/* New updates end */}
               <p>
                 V6.0 - September 19th, 2023 - Latest release brings new

@@ -1451,21 +1451,22 @@ const Page = () => {
               <ul>
                 <li>
                   <span>
-                    Updated to <b>PHP 8.1</b> for improved performance, security, and
-                    compatibility.
+                    Updated to <b>PHP 8.1</b> for improved{" "}
+                    <b>performance, security</b>, and <b>compatibility</b>.
                   </span>
                 </li>
                 <li>
                   <span>
-                    Migrated to the <b>Laravel 10</b> framework, ensuring a modern and
-                    robust development environment.
+                    Migrated to the <b>Laravel 10</b> framework, ensuring a{" "}
+                    <b>modern</b> and <b>robust</b> development environment.
                   </span>
                 </li>
                 <li>
                   <span>
-                    The platform now supports <b>German and French</b> languages,
-                    allowing users to navigate and use the system in their
-                    preferred language for a more localized experience.
+                    The platform's <b>multilingual support</b> feature is now
+                    updated with German and French languages, allowing users to
+                    navigate and use the system in their preferred language for
+                    a more <b>localized experience</b>.
                   </span>
                 </li>
               </ul>
