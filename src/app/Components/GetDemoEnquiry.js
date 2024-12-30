@@ -25,6 +25,8 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     post_slug: "",
     post_url: "",
     // budget: "",
+    recaptcha_token: "", // Field to hold the reCAPTCHA token
+
   });
   const [formErrors, setFormErrors] = useState({
     name: "",
@@ -54,13 +56,33 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
     }));
   }, []);
 
+  // const onRecaptchaChange = (token) => {
+  //   if (token) {
+  //     setIsRecaptchaVerified(true);
+  //     setFormErrors((prevError) => ({
+  //       ...prevError,
+  //       recaptchaerror: "",
+  //     }));
+  //   }
+  // };
+
   const onRecaptchaChange = (token) => {
     if (token) {
       setIsRecaptchaVerified(true);
+
+      // Save the reCAPTCHA token in the form data
+      setFormData((prevData) => ({
+        ...prevData,
+        recaptcha_token: token,
+      }));
+
+      // Clear any previous reCAPTCHA errors
       setFormErrors((prevError) => ({
         ...prevError,
         recaptchaerror: "",
       }));
+    } else {
+      setIsRecaptchaVerified(false);
     }
   };
 
@@ -107,6 +129,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
       setLoading(true);
       const response = await axios.post(`${BaseAPI}/pages/request`, formData);
       setLoading(false);
+      console.log(response.data.status,"hi");
   
       if (response.data.status === 200) {
         setResultSuccess(true);
@@ -121,7 +144,15 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
           product_name: "",
           post_slug: "",
           post_url: "",
+          recaptcha_token: "",
         });
+        if (recaptchaRef.current) recaptchaRef.current.reset();
+        setIsRecaptchaVerified(false);
+      } else if(response.data.status === 500) {
+        // console.log("yaha aaya")
+        setFormErrors({
+          recaptchaerror: response.data.message,
+        })
       }
     } catch (error) {
       setLoading(false);
