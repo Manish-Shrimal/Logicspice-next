@@ -42,6 +42,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
 
   const [resultSuccess, setResultSuccess] = useState(false);
   const [html, setHtml] = useState("");
+  const [responseData, setResponseData] = useState([]);
   const [loader, setLoader] = useState(false);
   useEffect(() => {
     const currentUrl = window.location.href;
@@ -133,6 +134,7 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
   
       if (response.data.status === 200) {
         setResultSuccess(true);
+        setResponseData(response.data);
         setHtml(response.data.message);
         if (recaptchaRef.current) recaptchaRef.current.reset();
         setIsRecaptchaVerified(false);
@@ -467,22 +469,20 @@ const Enquirymodal = ({ modalStatus, toggle, title }) => {
                                                 className="thnk_ss"
                                                 id="thnak_message_sec"
                                               >
-                                                Thank you, we have received your
-                                                message
+                                                {responseData.message}
                                               </span>
                                               <p
                                                 className="hh_cls"
                                                 id="sub_message"
                                               >
-                                                We will get back to you within
-                                                the next 24 hours.
+                                                {responseData.submessage}
                                               </p>
-                                              <span
+                                              {/* <span
                                                 id="pnglnk"
                                                 dangerouslySetInnerHTML={{
                                                   __html: html,
                                                 }}
-                                              ></span>{" "}
+                                              ></span>{" "} */}
                                               <br />
                                               <a
                                                 onClick={closeModal}
