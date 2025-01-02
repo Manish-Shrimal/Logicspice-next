@@ -1,33 +1,28 @@
 "use client";
-import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
-import DescriptionIcon from "@mui/icons-material/Description";
-// import "@/app/globals.css"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css";
 import "/public/css/font-awesome.css";
 import "/public/css/font-awesome.min.css";
-
-import PersonIcon from "@mui/icons-material/Person";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DraftsOutlinedIcon from "@mui/icons-material/DraftsOutlined";
-import TextSnippetOutlinedIcon from "@mui/icons-material/TextSnippetOutlined";
 import Image from "next/image";
 import "../elements.css";
 import "@/app/globals.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Swal from "sweetalert2";
 
 const Page = () => {
   const recaptchaRef = useRef(null);
+  const recaptchaNewsletterRef = useRef(null);
+
   const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
+  const [isNewsletterRecaptchaVerified, setIsNewsletterRecaptchaVerified] =
+    useState(false);
+
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -42,6 +37,10 @@ const Page = () => {
     post_url: "",
     recaptcha_token: "", // Field to hold the reCAPTCHA token
   });
+  const [newsletterData, setNewsletterData] = useState({
+    newsletter_email: "",
+    recaptcha_token: "", // Field to hold the reCAPTCHA tokenphone_no: "",
+  });
   const [formErrors, setFormErrors] = useState({
     name: "",
     email: "",
@@ -49,8 +48,9 @@ const Page = () => {
     product_name: "",
     post_slug: "",
     post_url: "",
-
+    newsletter_email: "",
     recaptchaerror: "",
+    newsletter_recaptchaerror: "",
   });
   const [isEnquiryRequested, setIsEnquiryRequested] = useState(false);
 
@@ -58,6 +58,18 @@ const Page = () => {
     const { name, value } = e.target;
 
     setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setFormErrors((prevError) => ({
+      ...prevError,
+      [name]: "",
+    }));
+  };
+
+  const handleNewsletterChange = (e) => {
+    const { name, value } = e.target;
+    setNewsletterData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -86,6 +98,25 @@ const Page = () => {
       setIsRecaptchaVerified(false);
     }
   };
+  const onNewsletterRecaptchaChange = (token) => {
+    if (token) {
+      setIsNewsletterRecaptchaVerified(true);
+
+      // Save the reCAPTCHA token in the form data
+      setNewsletterData((prevData) => ({
+        ...prevData,
+        recaptcha_token: token,
+      }));
+
+      // Clear any previous reCAPTCHA errors
+      setFormErrors((prevError) => ({
+        ...prevError,
+        newsletter_recaptchaerror: "",
+      }));
+    } else {
+      setIsNewsletterRecaptchaVerified(false);
+    }
+  };
 
   const submitEnquiryForm = async (e) => {
     e.preventDefault();
@@ -112,13 +143,7 @@ const Page = () => {
       newErrors.message = "Please enter your message";
     }
 
-    // if (formData.phone_no !== "") {
-    //   const phoneRegex = /^[0-9$.,]*$/;
-    //   if (!phoneRegex.test(formData.phone_no)) {
-    //     newErrors.phone_no =
-    //       "Please enter a valid phone number (only numbers and special characters are allowed)";
-    //   }
-    // }
+    
 
     if (Object.keys(newErrors).length > 0) {
       setFormErrors(newErrors);
@@ -141,8 +166,8 @@ const Page = () => {
           recaptcha_token: "",
         });
 
-        if (recaptchaRef.current) {
-          recaptchaRef.current.reset();
+        if (recaptchaNewsletterRef.current) {
+          recaptchaNewsletterRef.current.reset();
         }
       } else if (response.data.status === 500) {
         // console.log("yaha aaya")
@@ -171,6 +196,61 @@ const Page = () => {
       };
     }
   }, []);
+
+  useEffect(() => {
+    if (recaptchaNewsletterRef.current) {
+      recaptchaNewsletterRef.current.reset();
+
+      // Add the expired callback to reset verification status
+      recaptchaNewsletterRef.current.execute(); // Trigger the reCAPTCHA
+
+      recaptchaNewsletterRef.current.props.onExpired = () => {
+        setIsNewsletterRecaptchaVerified(false); // Reset verification status when reCAPTCHA expires
+      };
+    }
+  }, []);
+
+  const handleNewsletterSubmit = async () => {
+    if (newsletterData.newsletter_email === "") {
+      setFormErrors({
+        newsletter_email: "Please enter your email",
+      });
+      return;
+    }
+    if (!isNewsletterRecaptchaVerified) {
+      setFormErrors({
+        newsletter_recaptchaerror: "Please verify that you are not a robot",
+      });
+      return;
+    }
+    try {
+      const response = await axios.post(BaseAPI + "/subscribe", {
+        email: newsletterData,
+      });
+      if (response.data.status == 200) {
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: response.data.message,
+        });
+        setNewsletterData({
+          newsletter_email: "",
+          recaptcha_token: "",
+        });
+        if (recaptchaNewsletterRef.current) {
+          recaptchaNewsletterRef.current.reset();
+        }
+      } else {
+        Swal.fire({
+          icon: "warning",
+          title: "",
+          text: response.data.message,
+        });
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <>
@@ -343,6 +423,64 @@ const Page = () => {
                   </form>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="gest-contact-bx">
+            <h2 className="SubscribeHadding">Subscribe to our newsletter</h2>
+            <div className="SubscribeNews">
+              <div className="form-group">
+                <div className="SubscribeInput">
+                  <span>
+                    <DraftsOutlinedIcon />{" "}
+                  </span>
+                  <input
+                    name="newsletter_email"
+                    placeholder="Enter your email address"
+                    value={newsletterData.newsletter_email}
+                    size="40"
+                    className={`form-control ${
+                      formErrors.newsletter_email ? "fieldRequired" : ""
+                    }`}
+                    type="text"
+                    style={{ height: "40px" }}
+                    id="UserPhoneNo"
+                    onChange={handleNewsletterChange}
+                  />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <div className="SubscribeInput">
+                  <ReCAPTCHA
+                    key={recaptchaKey}
+                    sitekey={recaptchaKey}
+                    onChange={onNewsletterRecaptchaChange}
+                  />
+                  <div className="gcpc FormError" id="captcha_msg">
+                    {formErrors.newsletter_recaptchaerror}
+                  </div>
+                </div>
+              </div>
+              <div className="form-group newcontact-btn">
+                <button
+                  title="Subscribe"
+                  className="btn btn-primary"
+                  size="30"
+                  label=""
+                  type="submit"
+                  onClick={handleNewsletterSubmit}
+                >
+                  SUBSCRIBE
+                </button>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6"></div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6"></div>
+              <div className="cart-icons"></div>
             </div>
           </div>
           <div className="gest-contact-bx">
@@ -682,7 +820,7 @@ const Page = () => {
               </div>
               <div className="col-sm-4">
                 <div className="logic-fd">
-                  <i className="fa fa-handshake" aria-hidden="true"></i>
+                  <i className="fa fa-handshake-o" aria-hidden="true"></i>
                   <span>
                     Be a Part of Logicspice Family
                     <br />
@@ -693,7 +831,7 @@ const Page = () => {
               <div className="col-sm-4">
                 <div className="logic-fd">
                   {/* <i className="fa fa-skype" aria-hidden="true"></i> */}
-                  <i className="fa-brands fa-skype"></i>
+                  <i className="fa fa-skype"></i>
                   <span>
                     Don&apos;t Have Much Time?
                     <br />
