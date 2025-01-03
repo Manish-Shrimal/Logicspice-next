@@ -68,6 +68,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/devops-services",
+        destination: "/devops-development", 
+        permanent: true,
+      },
+      {
         source: "/android-app-development/",
         destination: "/android-app-development", 
         permanent: true,
