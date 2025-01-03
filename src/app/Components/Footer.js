@@ -83,7 +83,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="http://plp.logicspice.com/" target="_blank">
+                      <Link href="https://plp.logicspice.com/" target="_blank">
                         Training & Internships
                       </Link>
                     </li>
@@ -321,7 +321,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="http://plp.logicspice.com/" target="_blank">
+                      <Link href="https://plp.logicspice.com/" target="_blank">
                         Training & Internships
                       </Link>
                     </li>
@@ -566,7 +566,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="http://plp.logicspice.com/" target="_blank">
+                <Link href="https://plp.logicspice.com/" target="_blank">
                   Training & Internships
                 </Link>
               </li>
