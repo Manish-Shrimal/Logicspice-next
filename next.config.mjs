@@ -57,11 +57,11 @@ const nextConfig = {
         destination: "https://setcourses.logicspice.com/", 
         permanent: true,
       },
-      // {
-      //   source: "/services/:slug*",
-      //   destination: "/:slug*", 
-      //   permanent: true,
-      // },
+      {
+        source: "/services/:slug*",
+        destination: "/:slug*", 
+        permanent: true,
+      },
       {
         source: "/services/website-development/cakephp-development",
         destination: "/cakephp-development", 
@@ -108,6 +108,7 @@ const nextConfig = {
         destination: "/lead-generation-contact-form-php-script", 
         permanent: true,
       },
+      
       
 
       // Case study
