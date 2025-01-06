@@ -100,12 +100,28 @@ const nextConfig = {
       },
       {
         source: "/softwares/cakephp-cms-script",
-        destination: "/cakephp-cms-script", 
+        destination: "/softwares", 
+        permanent: true,
+      },
+      {
+        source: "/cakephp-cms-script",
+        destination: "/softwares", 
         permanent: true,
       },
       {
         source: "/softwares/lead-generation-contact-form-php-script",
-        destination: "/lead-generation-contact-form-php-script", 
+        destination: "/softwares", 
+        permanent: true,
+      },
+      {
+        source: "/lead-generation-contact-form-php-script",
+        destination: "/softwares", 
+        permanent: true,
+      },
+
+      {
+        source: "/social-network-integration-in-android-app ",
+        destination: "/softwares", 
         permanent: true,
       },
       

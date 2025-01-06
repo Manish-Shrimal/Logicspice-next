@@ -159,7 +159,7 @@ const Page = () => {
                     complete stack through the Cloud&sbquo; Business
                     Logic&sbquo; API Layer and the front-end. Our team of
                     dedicated developers specialized in Android&sbquo; iPhone &{" "}
-                    <Link href="/website-development">
+                    <Link href="/web-development">
                       web development service
                     </Link>{" "}
                     has helped the startup to reach their goal with minimized
