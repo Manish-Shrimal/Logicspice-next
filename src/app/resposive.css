@@ -90,6 +90,13 @@
   .NewJobSiteDesign {
     padding-bottom: 0;
   }
+  
+}
+@media (max-width: 1278px) and (min-width: 1250px) {
+  .CookiePolicyBtnBx {
+    width: 28%;
+    display: flex;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -465,6 +472,14 @@
     padding-bottom: 0;
   }
 }
+
+@media (max-width: 1078px) and (min-width: 1050px) {
+  .CookiePolicyBtnBx {
+    width: 34%;
+    display: flex;
+  }
+}
+
 
 @media (max-width: 1026px) {
   .home-slide3 {
@@ -3477,7 +3492,7 @@
   }
 
   .service-market-ttd li {
-    width: 100%;
+    width: 100% !important;
   }
 
   .app-footer-mobile {
