@@ -57,9 +57,15 @@ const nextConfig = {
         destination: "https://setcourses.logicspice.com/", 
         permanent: true,
       },
+      
+      // {
+      //   source: "/services/:slug*",
+      //   destination: "/:slug*", 
+      //   permanent: true,
+      // },
       {
-        source: "/services/:slug*",
-        destination: "/:slug*", 
+        source: "/services/digital-marketing",
+        destination: "/digital-marketing", 
         permanent: true,
       },
       {
@@ -120,8 +126,13 @@ const nextConfig = {
       },
 
       {
-        source: "/social-network-integration-in-android-app ",
+        source: "/social-network-integration-in-android-app",
         destination: "/softwares", 
+        permanent: true,
+      },
+      {
+        source: "/best/best-property-management-software",
+        destination: "/rental-property-management-software", 
         permanent: true,
       },
       
