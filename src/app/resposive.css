@@ -90,14 +90,19 @@
   .NewJobSiteDesign {
     padding-bottom: 0;
   }
+  .CookiePolicyBx {
+    float: left;
+    width: 62%;
+  }
+  .CookiePolicyBtnBx {
+    float: right;
+    padding-top: 35px;
+    width: 38%;
+    text-align: right;
+  }
   
 }
-@media (max-width: 1278px) and (min-width: 1250px) {
-  .CookiePolicyBtnBx {
-    width: 28%;
-    display: flex;
-  }
-}
+
 
 @media (max-width: 1200px) {
   .home-slide3 {
@@ -473,12 +478,6 @@
   }
 }
 
-@media (max-width: 1078px) and (min-width: 1050px) {
-  .CookiePolicyBtnBx {
-    width: 34%;
-    display: flex !important;
-  }
-}
 
 
 @media (max-width: 1026px) {
@@ -549,10 +548,7 @@
 
 
 @media (min-width: 992px) and (max-width: 1100px) {
-  .CookiePolicyBtnBx {
-    width: 34%;
-    display: flex;
-  }
+  
   .home-project__clip .home-project__phone .phone__reveal img {
     height: auto;
   }
@@ -604,6 +600,27 @@
 }
 
 @media (max-width: 991px) {
+  .CookiePolicyBtnBx .btn {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .CookiePolicyBx {
+    float: left;
+    width: 58%;
+  }
+  .CookiePolicyBtnBx {
+    float: right;
+    padding-top: 35px;
+    width: 38%;
+    text-align: right;
+  }
+  .CookiePolicyBtnBx {
+    float: right;
+    padding-top: 35px;
+    width: 42%;
+    text-align: right;
+  }
   .wl-cont {
     float: left !important;
     width: 100% !important;
