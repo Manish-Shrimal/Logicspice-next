@@ -85,7 +85,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="innovative_startup">
+      {/* <section className="innovative_startup">
         <div className="container">
           <h2 className="title_main">
             Our Latest Additions: Innovative Services and Software Solutions for
@@ -94,7 +94,7 @@ const Page = () => {
           <h4>Helping Startups Succeed with Smart Solutions</h4>
           <p>
             At Logicspice, we know how important it is for startups to have the
-            right tools and technology to grow. That’s why we’ve added services
+            right tools and technology to grow. That&apos;s why we&apos;ve added services
             and software solutions that make a real difference.
           </p>
           <p>
@@ -112,14 +112,14 @@ const Page = () => {
             creative, and boost productivity using advanced AI models.
           </p>
           <p>
-            Our Video Creation Services help bring your brand’s story to life,
-            whether it’s for pitching to investors or attracting customers.
+            Our Video Creation Services help bring your brand&apos;s story to life,
+            whether it&apos;s for pitching to investors or attracting customers.
           </p>
           <p>
             We also offer ready-to-use software to make running your business
             easier. From Doctor Appointment Booking Software for healthcare
             startups to Salon Booking Software for beauty and wellness
-            businesses, we’ve got you covered. Our Group Chat Apps are perfect
+            businesses, we&apos;ve got you covered. Our Group Chat Apps are perfect
             for improving internal communication and team collaboration, while
             our Live Chat Software helps you engage with customers in real time,
             boosting satisfaction and conversions. We also provide{" "}
@@ -131,27 +131,27 @@ const Page = () => {
           </p>
           <p>
             Let us help your startup turn your ideas into success. Whether
-            you're just starting out or looking to grow, we’ve got the right
+            you&apos;re just starting out or looking to grow, we&apos;ve got the right
             tools and support to help you move forward.
           </p>
           <p>
-            Ready to get started? Reach out to us today and let’s chat about how
+            Ready to get started? Reach out to us today and let&apos;s chat about how
             our services can help your startup thrive!
           </p>
           <div className="mt-5">
             <Link href="/contact-us" className="btn btn-startup">
-              Let's Talk About Your Startup
+              Let&apos;s Talk About Your Startup
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="working_process">
         <div className="container">
           <h2 className="title_main">How We Nourish Your Startup Business?</h2>
           <div className="work_section">
             <div className="row">
-              <div className="col-sm-4 col-md-6" data-aos="fade-left">
+              <div className="col-sm-4 col-md-6" >
                 <div className="image_working right_img">
                   <Image
                     unoptimized={true}
@@ -162,7 +162,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div className="col-sm-8 col-md-6" data-aos="fade-right">
+              <div className="col-sm-8 col-md-6" >
                 <div className="idea_working">
                   <h3>Innovation as a Core Value</h3>
                   <p>
@@ -176,7 +176,7 @@ const Page = () => {
             </div>
           </div>
           <div className="work_section">
-            <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-left">
+            <div className="col-sm-4 col-md-6 pull-right" >
               <div className="image_working right_img">
                 <Image
                   unoptimized={true}
@@ -187,7 +187,7 @@ const Page = () => {
                 />
               </div>
             </div>
-            <div className="col-sm-8 col-md-6 pull-left" data-aos="fade-right">
+            <div className="col-sm-8 col-md-6 pull-left" >
               <div className="idea_working">
                 <h3>Stand Ahead From Competition</h3>
                 <p>
@@ -201,7 +201,7 @@ const Page = () => {
           </div>
           <div className="work_section">
             <div className="row">
-              <div className="col-sm-4 col-md-6" data-aos="fade-left">
+              <div className="col-sm-4 col-md-6" >
                 <div className="image_working right_img">
                   <Image
                     unoptimized={true}
@@ -212,7 +212,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div className="col-sm-8 col-md-6" data-aos="fade-right">
+              <div className="col-sm-8 col-md-6" >
                 <div className="idea_working">
                   <h3>Skilled Developers</h3>
                   <p>
@@ -229,7 +229,7 @@ const Page = () => {
             </div>
           </div>
           <div className="work_section">
-            <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-right">
+            <div className="col-sm-4 col-md-6 pull-right" >
               <div className="image_working">
                 <Image
                   unoptimized={true}
@@ -240,7 +240,7 @@ const Page = () => {
                 />
               </div>
             </div>
-            <div className="col-sm-8 col-md-6 pull-left" data-aos="fade-left">
+            <div className="col-sm-8 col-md-6 pull-left" >
               <div className="idea_working">
                 <h3>Interactive UI</h3>
                 <p>
@@ -254,7 +254,7 @@ const Page = () => {
           </div>
           <div className="work_section">
             <div className="row">
-              <div className="col-sm-4 col-md-6" data-aos="fade-right">
+              <div className="col-sm-4 col-md-6" >
                 <div className="image_working">
                   <Image
                     unoptimized={true}
@@ -265,7 +265,7 @@ const Page = () => {
                   />
                 </div>
               </div>
-              <div className="col-sm-8 col-md-6" data-aos="fade-left">
+              <div className="col-sm-8 col-md-6" >
                 <div className="idea_working">
                   <h3>Flexibility in Execution</h3>
                   <p>
@@ -278,7 +278,7 @@ const Page = () => {
             </div>
           </div>
           <div className="work_section">
-            <div className="col-sm-4 col-md-6 pull-right" data-aos="fade-right">
+            <div className="col-sm-4 col-md-6 pull-right" >
               <div className="image_working">
                 <Image
                   unoptimized={true}
@@ -289,7 +289,7 @@ const Page = () => {
                 />
               </div>
             </div>
-            <div className="col-sm-8 col-md-6 pull-left" data-aos="fade-left">
+            <div className="col-sm-8 col-md-6 pull-left" >
               <div className="idea_working">
                 <h3>User-End Priority</h3>
                 <p>
