@@ -5278,10 +5278,10 @@ body.modal-open .quote_pop_plus {
   }
 
   .CookiePolicyBtnBx {
-    width: 100%;
-    float: left;
-    padding-top: 4px;
-    text-align: center;
+    width: 100%!important;
+    float: left!important;
+    padding-top: 4px!important;
+    text-align: center!important;
   }
 
   .CookiePolicyBtnBx .btn {
