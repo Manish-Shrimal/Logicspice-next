@@ -3646,6 +3646,7 @@ positivitymain {
 .take-a-look hr{
   /* color: #000!important; */
   border-bottom: 1px solid black!important;
+  margin: 0!important;
 
 }
 
@@ -5264,6 +5265,9 @@ body.modal-open .quote_pop_plus {
 }
 
 @media (max-width: 991px) {
+  .innovative_startup p {
+    word-spacing: unset!important;
+   }
   .about-us .col-md-3 {
     margin-bottom: 20px;
   }
