@@ -63,7 +63,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/services/hire-web-developer/hire-wordpress-experts ",
+        source: "/services/hire-web-developer/hire-wordpress-experts",
         destination: "/hire-wordpress-experts",
         permanent: true,
       },
@@ -190,6 +190,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/services/digital-marketing/internet-marketing-solutions",
+        destination: "/digital-marketing",
+        permanent: true,
+      },
+      {
         source: "/services/website-development/laravel-development",
         destination: "/laravel-development",
         permanent: true,
@@ -294,6 +299,28 @@ const nextConfig = {
       {
         source: "/casestudies/view/:slug*",
         destination: "/case-study/:slug*",
+        permanent: true,
+      },
+
+      // blog
+      {
+        source: "/blog/why-choose-wordpress-for-your-website-development",
+        destination: "https://blog.logicspice.com/why-choose-wordpress-for-your-website-development",
+        permanent: true,
+      },
+      {
+        source: "/blog/startup-ideas-for-small-business-with-low-investment",
+        destination: "https://blog.logicspice.com/startup-ideas-for-small-business-with-low-investment",
+        permanent: true,
+      },
+      {
+        source: "/blog/facebook-an-impressive-marketing-platform",
+        destination: "https://blog.logicspice.com/facebook-an-impressive-marketing-platform",
+        permanent: true,
+      },
+      {
+        source: "/why-choose-wordpress-for-your-website-development",
+        destination: "https://blog.logicspice.com/why-choose-wordpress-for-your-website-development",
         permanent: true,
       },
     ];
