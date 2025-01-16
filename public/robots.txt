@@ -17,6 +17,9 @@ Disallow: /app/webroot/files/template/My-way-site/
 Disallow: /app/webroot/files/template/Interio-site/
 Disallow: /app/webroot/files/template/Interio-site/
 Disallow: /app/webroot/files/template/
+Disallow: /app/webroot/files/template//Paperless-html/index.html
+Disallow: /app/webroot/files/template//TravelWorld_site/index.html
+
 Disallow: /smtp/
 
 Sitemap: https://www.logicspice.com/sitemap.xml
