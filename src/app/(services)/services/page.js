@@ -136,7 +136,23 @@ const Page = () => {
                         alt="Generative AI development"
                       />
                     </div>
-                    <h2>Robotic Process Automation (RPA)</h2>
+                    <h2>Robotic Process Automation</h2>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="col-md-4 col-sm-4 padding-no">
+                <Link href="/next-js-development-services">
+                  <div className="our-services-bx">
+                    <div className="our-services-img">
+                      <Image
+                        width={125}
+                        height={100}
+                        src="/img/services/nextjs-srevice-icon.png"
+                        alt="serv_4"
+                      />
+                    </div>
+                    <h2>Next.js Development Services</h2>
                   </div>
                 </Link>
               </div>
