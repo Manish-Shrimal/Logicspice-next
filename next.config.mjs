@@ -85,6 +85,17 @@ const nextConfig = {
         destination: "/industries/commercial-and-residential-apps",
         permanent: true,
       },
+
+      {
+        source: "/industries/transportation-apps/",
+        destination: "/industries/transportation-apps",
+        permanent: true,
+      },
+      // {
+      //   source: "/industries/Transportation-apps",
+      //   destination: "/industries/transportation-apps",
+      //   permanent: true,
+      // },
       {
         source: "/company/industries-we-served/transportation-apps/",
         destination: "/industries/transportation-apps",
@@ -95,16 +106,8 @@ const nextConfig = {
         destination: "/industries/transportation-apps",
         permanent: true,
       },
-      {
-        source: "/industries/Transportation-apps",
-        destination: "/industries/transportation-apps",
-        permanent: true,
-      },
-      {
-        source: "/industries/Transportation-apps/",
-        destination: "/industries/transportation-apps",
-        permanent: true,
-      },
+      
+     
       {
         source: "/industries/Hotels-apps/",
         destination: "/industries/Hotel-apps",
