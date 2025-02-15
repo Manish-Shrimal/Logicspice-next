@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import axios from "axios";
+import Link from "next/link";
 
 const Blogslider = () => {
   const [blogs, setBlogs] = useState([]);
@@ -97,14 +98,14 @@ const Blogslider = () => {
                     className="lazy"
                   />
                   <figcaption>
-                    <a
-                      href={i.link}
+                    <Link
+                      href={`/blog/${i.slug}`}
                       title="Read more"
                       className="btn btn-primary"
                       target="_blank"
                     >
                       Read more
-                    </a>
+                    </Link>
                   </figcaption>
                 </figure>
               </li>
