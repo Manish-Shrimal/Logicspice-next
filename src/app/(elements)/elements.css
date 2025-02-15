@@ -1829,3 +1829,18 @@ label.error {
 .btn-get{
 	text-align: center;
 }
+
+
+@media (max-width: 767px) {
+    .web_build_head h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+	.web_build_head  {
+       padding: 75px 0 0!important;
+    }
+
+	.web_build_head .btn.btn-primary {
+		text-align: center!important;
+	}
+}

@@ -53,7 +53,7 @@ const Page = () => {
                 onClick={openDemoAccessModal}
                 style={{ textAlign: "center" }}
               >
-                <a>GET DEMO ACCESS!</a>
+                <a>Enquire Now</a>
                 {
                   //     <SoftwareEnquiry
                   //       modalStatus={showModal}

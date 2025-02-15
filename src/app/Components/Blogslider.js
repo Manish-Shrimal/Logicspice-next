@@ -18,7 +18,7 @@ const Blogslider = () => {
     try {
       const response = await axios.get("https://manage.logicspice.com/api/blog/listing");
       // console.log(response.data.data);
-      setBlogs(response.data.response);
+      setBlogs(response.data.response.blogData);
     } catch (error) {
       console.log(error.message);
     }
