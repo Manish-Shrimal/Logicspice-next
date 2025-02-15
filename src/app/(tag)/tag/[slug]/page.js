@@ -12,6 +12,7 @@ import parse from "html-react-parser";
 import Swal from "sweetalert2";
 import Loader from "@/app/Components/loader";
 const Page = ({ params }) => {
+  let currentTime = Date.now();
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const [isCaptchaValid, setIsCaptchaValid] = useState(false);
   const [recaptcha1, setrecaptcha1] = useState("");
@@ -64,22 +65,30 @@ const Page = ({ params }) => {
           "/blog/subscribe",
           {
             email_address: subscribeEmail,
+            slug: currentTime,
           }
         );
 
         // If subscription is successful
-        if (response.status === 200) {
+        if (response.data.status === 200) {
           Swal.fire({
             icon: "success",
             title: "Subscription Successful",
             text: "You have been successfully subscribed.",
           });
-        } else {
-          // Handle other response statuses if needed
+        } else if(response.data.status === 500){
+          
+          Swal.fire({
+            icon: "warning",
+            // title: "Something went wrong",
+            text: response.data.message,
+          });
+        }
+        else{
           Swal.fire({
             icon: "error",
-            title: "Something went wrong",
-            text: "Please try again later.",
+            // title: "Something went wrong",
+            text: response.message,
           });
         }
         setSubscribeEmail("");

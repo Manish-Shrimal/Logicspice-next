@@ -13,6 +13,7 @@ import Loader from "@/app/Components/loader";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
 const Page = ({ params }) => {
+  let currentTime = Date.now();
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
   const [isCaptchaValid, setIsCaptchaValid] = useState(false);
   const [isCaptchaValid1, setIsCaptchaValid1] = useState(false);
@@ -92,26 +93,29 @@ const Page = ({ params }) => {
     if (validateSubscribeForm()) {
       setSubscribeLoading(true);
       try {
-        const response = await axios.post(BaseAPI +
-          "/blog/subscribe",
-          {
-            email_address: subscribeEmail,
-          }
-        );
+        const response = await axios.post(BaseAPI + "/blog/subscribe", {
+          email_address: subscribeEmail,
+          slug: currentTime,
+        });
 
         // If subscription is successful
-        if (response.status === 200) {
+        if (response.data.status === 200) {
           Swal.fire({
             icon: "success",
             title: "Subscription Successful",
             text: "You have been successfully subscribed.",
           });
+        } else if (response.data.status === 500) {
+          Swal.fire({
+            icon: "warning",
+            // title: "Something went wrong",
+            text: response.data.message,
+          });
         } else {
-          // Handle other response statuses if needed
           Swal.fire({
             icon: "error",
-            title: "Something went wrong",
-            text: "Please try again later.",
+            // title: "Something went wrong",
+            text: response.message,
           });
         }
         setSubscribeEmail("");
@@ -257,8 +261,8 @@ const Page = ({ params }) => {
     if (validateForm()) {
       setCommentLoading(true);
       try {
-        const response = await axios.post(BaseAPI +
-          `/${params.slug}/comments`,
+        const response = await axios.post(
+          BaseAPI + `/${params.slug}/comments`,
           commentData
         );
         Swal.fire({
@@ -284,9 +288,7 @@ const Page = ({ params }) => {
   const getData = async () => {
     try {
       // const response = await axios.get(`${BaseAPI}/blog/listing`);
-      const response = await axios.get(BaseAPI +
-        `/blog/detail/${params.slug}`
-      );
+      const response = await axios.get(BaseAPI + `/blog/detail/${params.slug}`);
       setBlogData(response.data.response.blogData);
       setCategoryList(response.data.response.categoryList);
       setRecentPostsList(response.data.response.recentBlogs);
@@ -297,9 +299,7 @@ const Page = ({ params }) => {
   };
   const getCommentData = async () => {
     try {
-      const response = await axios.get(BaseAPI +
-        `/${params.slug}/comments`
-      );
+      const response = await axios.get(BaseAPI + `/${params.slug}/comments`);
       console.log(response.data.comments);
       setTotalComments(response.data.total_comments);
       setTotalCommentsData(response.data.comments);
@@ -329,10 +329,9 @@ const Page = ({ params }) => {
       setLoading(true);
 
       try {
-        const response = await axios.get(BaseAPI +
-          `/blog/${keyword}/search`,
-          { params: { keyword: keyword } }
-        );
+        const response = await axios.get(BaseAPI + `/blog/${keyword}/search`, {
+          params: { keyword: keyword },
+        });
         setSearchResults(response.data.data);
         setCurrentPage(1);
         // console.log(response.data.response);
@@ -467,7 +466,7 @@ const Page = ({ params }) => {
                     >
                       Previous
                     </button>
-                    
+
                     <div className="pagination-numbers">
                       {[...Array(totalPages)].map((_, index) => {
                         const pageNumber = index + 1;
@@ -532,10 +531,9 @@ const Page = ({ params }) => {
                         <span class="pointer-events-none mx-2 text-slate-800">
                           /
                         </span>
-                        
                       </li>
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
-                      <Link href="#">
+                        <Link href="#">
                           <p className="text-lg font-medium !pb-0">
                             {blogData.subject}
                           </p>
