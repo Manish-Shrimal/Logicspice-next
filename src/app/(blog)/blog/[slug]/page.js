@@ -356,13 +356,17 @@ const Page = ({ params }) => {
                     <ol class="flex flex-wrap items-center rounded-md bg-slate-100 px-4 py-2">
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="/blog">
-                          <p className="text-lg font-medium !pb-0">Blog</p>
+                          <p className="text-lg font-medium !pb-0 !mb-0">
+                            Blog
+                          </p>
                         </Link>
                         <span class="pointer-events-none mx-2 text-slate-800">
                           /
                         </span>
+                      </li>
+                      <li>
                         <Link href="#">
-                          <p className="text-lg font-medium !pb-0">
+                          <p className="text-lg font-medium !pb-0 !mb-0">
                             {blogData.subject}
                           </p>
                         </Link>
@@ -395,7 +399,7 @@ const Page = ({ params }) => {
                                 <React.Fragment key={index}>
                                   <Link
                                     className="text-[#337ab7]"
-                                    href={`/category/${category_names
+                                    href={`/blog/category/${category_names
                                       .trim()
                                       .toLowerCase()
                                       .replace(/\s+/g, "-")}`}
@@ -415,7 +419,7 @@ const Page = ({ params }) => {
                           blog.tags.split(",").map((tag, index) => (
                             <Link
                               key={index}
-                              href={`/tag/${tag.trim().replace(/\s+/g, "-")}`}
+                              href={`/blog/tag/${tag.trim().replace(/\s+/g, "-")}`}
                             >
                               {tag.trim()}
                               {index < blog.tags.split(",").length - 1
@@ -562,7 +566,7 @@ const Page = ({ params }) => {
                                 <React.Fragment key={index}>
                                   <Link
                                     className="text-[#337ab7]"
-                                    href={`/category/${category_id
+                                    href={`/blog/category/${category_id
                                       .trim()
                                       .toLowerCase()
                                       .replace(/\s+/g, "-")}`}
@@ -598,7 +602,7 @@ const Page = ({ params }) => {
                               <Link
                                 key={index}
                                 className="blog-tag"
-                                href={`/tag/${tag.trim().replace(/\s+/g, "-")}`}
+                                href={`/blog/tag/${tag.trim().replace(/\s+/g, "-")}`}
                               >
                                 {tag.trim()}
                                 {index < blogData.tags.split(",").length - 1
@@ -833,7 +837,7 @@ const Page = ({ params }) => {
                           className="fa fa-chevron-right"
                           aria-hidden="true"
                         ></i>{" "}
-                        <Link href={`/category/${category.slug}`}>
+                        <Link href={`/blog/category/${category.slug}`}>
                           {category.name}
                         </Link>
                       </li>

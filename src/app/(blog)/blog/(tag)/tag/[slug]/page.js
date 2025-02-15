@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import axios from "axios";
-import "@/app/(category)/category.css";
+import "@/app/(blog)/blog/(tag)/tag.css";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Image from "next/image";
 import Link from "next/link";
@@ -61,14 +61,10 @@ const Page = ({ params }) => {
     if (validateForm()) {
       setSubscribeLoading(true);
       try {
-        const response = await axios.post(BaseAPI +
-          "/blog/subscribe",
-          {
-            email_address: subscribeEmail,
-            slug: currentTime,
-          }
-        );
-        console.log(response,"here")
+        const response = await axios.post(BaseAPI + "/blog/subscribe", {
+          email_address: subscribeEmail,
+          slug: currentTime,
+        });
 
         // If subscription is successful
         if (response.data.status === 200) {
@@ -77,22 +73,20 @@ const Page = ({ params }) => {
             title: "Subscription Successful",
             text: "You have been successfully subscribed.",
           });
-        } else if(response.data.status === 500){
-          
+        } else if (response.data.status === 500) {
           Swal.fire({
             icon: "warning",
             // title: "Something went wrong",
             text: response.data.message,
           });
-        }
-        else{
+        } else {
           Swal.fire({
             icon: "error",
             // title: "Something went wrong",
             text: response.message,
           });
         }
-        setSubscribeEmail();
+        setSubscribeEmail("");
         setSubscribeLoading(false);
       } catch (error) {
         console.error(error);
@@ -129,12 +123,10 @@ const Page = ({ params }) => {
   };
 
   const getData = async () => {
-    setLoading(true);
+    // setLoading(true);
     try {
       // const response = await axios.get(`${BaseAPI}/blog/listing`);
-      const response = await axios.get(BaseAPI +
-        "/blog/listing"
-      );
+      const response = await axios.get(BaseAPI + "/blog/listing");
       setBlogData(response.data.response.blogData);
       setFilteredBlogs(response.data.response.blogData);
       setCategoryList(response.data.response.categoryList);
@@ -153,11 +145,11 @@ const Page = ({ params }) => {
         setFilteredBlogs(
           blogData.filter(
             (blog) =>
-              blog.category_names &&
-              blog.category_names
+              blog.tags &&
+              blog.tags
                 .toLowerCase()
                 .replace(/\s+/g, "-")
-                .includes(params.slug)
+                .includes(params.slug.toLowerCase())
           )
         );
       } else {
@@ -226,18 +218,27 @@ const Page = ({ params }) => {
                 <nav aria-label="breadcrumb" className="w-max mb-3">
                   <ol class="flex flex-wrap items-center rounded-md bg-slate-100 px-4 py-2">
                     <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
-                      <Link href="#">
-                        <p className="text-lg font-medium !pb-0">Category</p>
+                      <Link href="/blog">
+                        <p className="text-lg font-medium !pb-0 !mb-0">Blog</p>
                       </Link>
                       <span class="pointer-events-none mx-2 text-slate-800">
                         /
                       </span>
-                      
                     </li>
                     <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
-                    <Link href="#">
-                        <p className="text-lg font-medium !pb-0">
-                          {params.slug.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase())}
+                      <Link href="#">
+                        <p className="text-lg font-medium !pb-0 !mb-0">Tag</p>
+                      </Link>
+                      <span class="pointer-events-none mx-2 text-slate-800">
+                        /
+                      </span>
+                    </li>
+                    <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
+                      <Link href="#">
+                        <p className="text-lg font-medium !pb-0 !mb-0">
+                          {params.slug
+                            .replace(/-/g, " ")
+                            .replace(/\b\w/g, (char) => char.toUpperCase())}
                         </p>
                       </Link>
                     </li>
@@ -270,7 +271,7 @@ const Page = ({ params }) => {
                                 <React.Fragment key={index}>
                                   <Link
                                     className="text-[#337ab7]"
-                                    href={`/category/${category_names
+                                    href={`/blog/category/${category_names
                                       .trim()
                                       .toLowerCase()
                                       .replace(/\s+/g, "-")}`}
@@ -290,7 +291,7 @@ const Page = ({ params }) => {
                           blog.tags.split(",").map((tag, index) => (
                             <Link
                               key={index}
-                              href={`/tag/${tag.trim().replace(/\s+/g, "-")}`}
+                              href={`/blog/tag/${tag.trim().replace(/\s+/g, "-")}`}
                             >
                               {tag.trim()}
                               {index < blog.tags.split(",").length - 1
@@ -333,7 +334,7 @@ const Page = ({ params }) => {
                     </div>
                   ))
                 ) : (
-                  <div className="text-purple-700 text-2xl w-full mt-4 text-center font-semibold">
+                  <div className="text-purple-700 text-2xl mt-4 w-full text-center font-semibold">
                     No Blogs Found...
                   </div>
                 )}
@@ -470,7 +471,7 @@ const Page = ({ params }) => {
                           className="fa fa-chevron-right"
                           aria-hidden="true"
                         ></i>{" "}
-                        <Link href={`/category/${category.slug}`}>
+                        <Link href={`/blog/category/${category.slug}`}>
                           {category.name}
                         </Link>
                       </li>
