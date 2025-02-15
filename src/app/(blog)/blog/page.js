@@ -57,8 +57,8 @@ const Page = () => {
     if (validateForm()) {
       setSubscribeLoading(true);
       try {
-        const response = await axios.post(
-          "https://lswebsitedemo.logicspice.com/logicspice/api/blog/subscribe",
+        const response = await axios.post(BaseAPI +
+          "/blog/subscribe",
           {
             email_address: subscribeEmail,
           }
@@ -119,8 +119,8 @@ const Page = () => {
     setLoading(true);
     try {
       // const response = await axios.get(`${BaseAPI}/blog/listing`);
-      const response = await axios.get(
-        "https://lswebsitedemo.logicspice.com/logicspice/api/blog/listing"
+      const response = await axios.get(BaseAPI +
+        "/blog/listing"
       );
       setBlogData(response.data.response.blogData);
       setFilteredBlogs(response.data.response.blogData);

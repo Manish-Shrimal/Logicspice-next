@@ -10,6 +10,7 @@ import parse from "html-react-parser";
 import Link from "next/link";
 import Swal from "sweetalert2";
 import Loader from "@/app/Components/loader";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 
 const Page = ({ params }) => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
@@ -91,8 +92,8 @@ const Page = ({ params }) => {
     if (validateSubscribeForm()) {
       setSubscribeLoading(true);
       try {
-        const response = await axios.post(
-          "https://lswebsitedemo.logicspice.com/logicspice/api/blog/subscribe",
+        const response = await axios.post(BaseAPI +
+          "/blog/subscribe",
           {
             email_address: subscribeEmail,
           }
@@ -256,8 +257,8 @@ const Page = ({ params }) => {
     if (validateForm()) {
       setCommentLoading(true);
       try {
-        const response = await axios.post(
-          `https://lswebsitedemo.logicspice.com/logicspice/api/${params.slug}/comments`,
+        const response = await axios.post(BaseAPI +
+          `/${params.slug}/comments`,
           commentData
         );
         Swal.fire({
@@ -283,8 +284,8 @@ const Page = ({ params }) => {
   const getData = async () => {
     try {
       // const response = await axios.get(`${BaseAPI}/blog/listing`);
-      const response = await axios.get(
-        ` https://lswebsitedemo.logicspice.com/logicspice/api/blog/detail/${params.slug}`
+      const response = await axios.get(BaseAPI +
+        `/blog/detail/${params.slug}`
       );
       setBlogData(response.data.response.blogData);
       setCategoryList(response.data.response.categoryList);
@@ -296,8 +297,8 @@ const Page = ({ params }) => {
   };
   const getCommentData = async () => {
     try {
-      const response = await axios.get(
-        `https://lswebsitedemo.logicspice.com/logicspice/api/${params.slug}/comments`
+      const response = await axios.get(BaseAPI +
+        `/${params.slug}/comments`
       );
       console.log(response.data.comments);
       setTotalComments(response.data.total_comments);
@@ -328,8 +329,8 @@ const Page = ({ params }) => {
       setLoading(true);
 
       try {
-        const response = await axios.get(
-          `https://lswebsitedemo.logicspice.com/logicspice/api/blog/${keyword}/search`,
+        const response = await axios.get(BaseAPI +
+          `/blog/${keyword}/search`,
           { params: { keyword: keyword } }
         );
         setSearchResults(response.data.data);
