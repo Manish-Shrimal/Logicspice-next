@@ -530,7 +530,7 @@ const Page = ({ params }) => {
                     <ol class="flex flex-wrap items-center rounded-md bg-slate-100 px-4 py-2">
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="/blog">
-                          <p className="text-lg font-medium !pb-0">Blog</p>
+                          <p className="text-lg font-medium !pb-0 !mb-0">Blog</p>
                         </Link>
                         <span class="pointer-events-none mx-2 text-slate-800">
                           /
@@ -538,7 +538,7 @@ const Page = ({ params }) => {
                       </li>
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="#">
-                          <p className="text-lg font-medium !pb-0">
+                          <p className="text-lg font-medium !pb-0 !mb-0">
                             {blogData.subject}
                           </p>
                         </Link>

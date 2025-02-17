@@ -136,7 +136,9 @@
   font-family: "intersemi_bold";
   font-weight: normal;
   color: black;
+  font-size: 18px !important;
 }
+
 .blog-detail-text h3::after {
   content: "";
   background: #451095 !important;
@@ -146,6 +148,9 @@
   margin: 5px 0 0;
   /* vertical-align: top; */
   width: 47px;
+}
+.blog-detail-text ul{
+  padding-left: 0 !important;
 }
 
 .blog-detail-text ul.webvevtwo li h4, .blog-detail-text ul.webvevtwo li {
