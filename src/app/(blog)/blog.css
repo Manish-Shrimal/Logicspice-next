@@ -136,7 +136,7 @@
 }
 
 .blog-detail-text h2 {
-  display: inline-block;
+  /* display: inline-block; */
   color: #451095 !important;
   font-size: 23px;
   font-weight: 600 !important;
@@ -144,7 +144,7 @@
 }
 
 .blog-detail-text h3 {
-  display: inline-block;
+  /* display: inline-block; */
   font-family: "intersemi_bold";
   font-weight: normal;
   color: black;
@@ -537,12 +537,28 @@ a:focus {
   margin-bottom: 15px;
 }
 
-.blog-detail-text {
+/* .blog-detail-text {
   margin: 30px 0;
   font-size: 18px;
   line-height: 30px;
   font-family: "interregular";
   color: #333333;
+} */
+
+
+.blog-detail-text {
+  margin: 30px 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: interregular;
+  color: #333;
+  display: block;
+  clear: both;
+  display: block;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 6px;
+  text-align: left;
 }
 
 .blog-detail-text img {
