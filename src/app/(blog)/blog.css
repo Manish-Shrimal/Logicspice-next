@@ -110,12 +110,22 @@
 }
 
 .blog-text {
-  display: block;
+  display: inline;
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 6px;
   text-align: left;
   color: rgb(75, 74, 74);
+}
+
+.blog-text h2 {
+  display: inline-block;
+  font-size: inherit;
+  margin: 0;
+  width: auto;
+}
+.blog-text p {
+  display: inline;
 }
 
 .blog-detail-text p {
@@ -126,6 +136,7 @@
 }
 
 .blog-detail-text h2 {
+  display: inline-block;
   color: #451095 !important;
   font-size: 23px;
   font-weight: 600 !important;
@@ -133,10 +144,37 @@
 }
 
 .blog-detail-text h3 {
+  display: inline-block;
   font-family: "intersemi_bold";
   font-weight: normal;
   color: black;
   font-size: 18px !important;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+table tbody tr td {
+  width: 182px;
+  position: relative;
+  border: 2px solid #ccc;
+  border-bottom: none;
+  border-right: none;
+}
+
+.blog-detail-text table {
+  border: 2px #b7b7b7 solid;
+  width: 100%;
+  background: #fff;
+  text-align: left;
+  font-size: 14px;
+}
+
+.blog-detail-text table td {
+  border-bottom: 2px #b7b7b7 solid;
+  border-right: 2px #b7b7b7 solid;
+  padding: 10px 15px;
+  font-size: 15px;
 }
 
 .blog-detail-text h3::after {
@@ -149,17 +187,37 @@
   /* vertical-align: top; */
   width: 47px;
 }
-.blog-detail-text ul{
+.blog-detail-text ul {
   padding-left: 0 !important;
 }
+.blog-detail-text ul.webvevtwo li h3 {
+  font-family: "intersemi_bold";
+  font-weight: normal;
+  display: inline-block;
+  width: auto;
+  float: none;
+  margin: 0;
+  color: #3f3f3f;
+}
+.blog-detail-text ul.webvevtwo li h3::after {
+  background: none !important;
+}
 
-.blog-detail-text ul.webvevtwo li h4, .blog-detail-text ul.webvevtwo li {
+.blog-detail-text ul.webvevtwo li h4,
+.blog-detail-text ul.webvevtwo li {
   font-size: 18px;
   line-height: 30px;
   background-position: 0 7px;
-  font-family: 'interregular';
+  font-family: "interregular";
 }
-ul.webvevtwo li, .new_sid ul li {
+.blog-detail-text ul.webvevtwo li h4 {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  margin-right: 5px;
+}
+ul.webvevtwo li,
+.new_sid ul li {
   background: url("/img/icn_list_detail.png") no-repeat scroll 0 2px;
   float: left;
   font-size: 17px;
@@ -168,8 +226,10 @@ ul.webvevtwo li, .new_sid ul li {
   width: 100%;
 }
 
-.blog-detail-text h6, .blog-detail-text h5, .blog-detail-text h4 {
-  font-family: 'intersemi_bold';
+.blog-detail-text h6,
+.blog-detail-text h5,
+.blog-detail-text h4 {
+  font-family: "intersemi_bold";
   font-weight: normal;
   color: #000;
   display: inline-block;
@@ -191,6 +251,8 @@ a:focus {
   color: #23527c;
   text-decoration: underline;
 }
+
+
 
 .notify-block {
   float: none;
@@ -232,6 +294,9 @@ a:focus {
 .notify-block h5 a {
   color: #000;
   font-size: 16px;
+}
+.notify-block p{
+  margin: 0 !important;
 }
 
 .blog-button {

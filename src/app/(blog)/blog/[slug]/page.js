@@ -364,10 +364,12 @@ const Page = ({ params }) => {
                           /
                         </span>
                       </li>
-                      <li>
+                      <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="#">
                           <p className="text-lg font-medium !pb-0 !mb-0">
-                            {blogData.subject}
+                            {blogData.subject.length > 60
+                              ? blogData.subject.slice(0, 60) + "..."
+                              : blogData.subject}
                           </p>
                         </Link>
                       </li>
@@ -419,7 +421,9 @@ const Page = ({ params }) => {
                           blog.tags.split(",").map((tag, index) => (
                             <Link
                               key={index}
-                              href={`/blog/tag/${tag.trim().replace(/\s+/g, "-")}`}
+                              href={`/blog/tag/${tag
+                                .trim()
+                                .replace(/\s+/g, "-")}`}
                             >
                               {tag.trim()}
                               {index < blog.tags.split(",").length - 1
@@ -456,7 +460,17 @@ const Page = ({ params }) => {
                         )}
                       </p>
 
-                      <Link href={`/blog/${blog.slug}`} className="blog-button">
+                      <Link
+                        href={`/blog/${blog.slug}`}
+                        onClick={() => {
+                          if (blog.slug === params.slug) {
+                            setSearchKeyword("");
+                            setSearchResults([]);
+                            setCurrentPage(1);
+                          }
+                        }}
+                        className="blog-button"
+                      >
                         READ MORE
                       </Link>
                     </div>
@@ -530,7 +544,9 @@ const Page = ({ params }) => {
                     <ol class="flex flex-wrap items-center rounded-md bg-slate-100 px-4 py-2">
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="/blog">
-                          <p className="text-lg font-medium !pb-0 !mb-0">Blog</p>
+                          <p className="text-lg font-medium !pb-0 !mb-0">
+                            Blog
+                          </p>
                         </Link>
                         <span class="pointer-events-none mx-2 text-slate-800">
                           /
@@ -539,7 +555,9 @@ const Page = ({ params }) => {
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="#">
                           <p className="text-lg font-medium !pb-0 !mb-0">
-                            {blogData.subject}
+                            {blogData.subject.length > 60
+                              ? blogData.subject.slice(0, 60) + "..."
+                              : blogData.subject}
                           </p>
                         </Link>
                       </li>
@@ -592,17 +610,19 @@ const Page = ({ params }) => {
                         {parse(blogData.blog_description)}
                       </p>
 
-                      <div className="flex flex-col gap-2 mb-4">
+                      <div className="flex flex-col w-full gap-2 mb-4">
                         <p className="blog-tags flex gap-1 items-center">
                           <i class="fa fa-tag" aria-hidden="true"></i>Tags
                         </p>
-                        <div className="flex flex-wrap gap-y-1 gap-x-2">
+                        {/* <div className="flex flex-wrap gap-y-1 gap-x-2">
                           {blogData.tags &&
                             blogData.tags.split(",").map((tag, index) => (
                               <Link
                                 key={index}
                                 className="blog-tag"
-                                href={`/blog/tag/${tag.trim().replace(/\s+/g, "-")}`}
+                                href={`/blog/tag/${tag
+                                  .trim()
+                                  .replace(/\s+/g, "-")}`}
                               >
                                 {tag.trim()}
                                 {index < blogData.tags.split(",").length - 1
@@ -610,6 +630,24 @@ const Page = ({ params }) => {
                                   : ""}
                               </Link>
                             ))}
+                        </div> */}
+                        <div className="flex flex-wrap gap-y-1 gap-x-2">
+                          {blogData.tags &&
+                            blogData.tags
+                              .split(",")
+                              .map((tag, index, array) => (
+                                <React.Fragment key={index}>
+                                  <Link
+                                    className="blog-tag"
+                                    href={`/blog/tag/${tag
+                                      .trim()
+                                      .replace(/\s+/g, "-")}`}
+                                  >
+                                    {tag.trim()}
+                                  </Link>
+                                  {index < array.length - 1 && <span>, </span>}
+                                </React.Fragment>
+                              ))}
                         </div>
                       </div>
 
@@ -641,7 +679,7 @@ const Page = ({ params }) => {
                                     </p>
                                   </div>
                                   <p className="text-black break-all">
-                                    {comments.comment}
+                                    {parse(comments.comment)}
                                   </p>
                                 </div>
                               );
