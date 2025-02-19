@@ -204,7 +204,7 @@ const Page = () => {
                 {currentBlogs.length > 0 ? (
                   currentBlogs.map((blog, i) => (
                     <div className="blog-box" key={blog.id}>
-                      <h1 className="blog-title">
+                      <h3 className="blog-title">
                         <Link
                           href={`/blog/${blog.slug}`}
                           className="light_blue"
@@ -212,7 +212,7 @@ const Page = () => {
                         >
                           {blog.subject || "Untitled Blog"}
                         </Link>
-                      </h1>
+                      </h3>
                       <p className="blog-date">
                         {new Date(blog.created_at).toLocaleDateString("en-US", {
                           month: "short",

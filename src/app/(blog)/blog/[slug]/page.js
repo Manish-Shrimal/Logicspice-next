@@ -645,7 +645,7 @@ const Page = ({ params }) => {
                                   >
                                     {tag.trim()}
                                   </Link>
-                                  {index < array.length - 1 && <span>, </span>}
+                                  {/* {index < array.length - 1 && <span>, </span>} */}
                                 </React.Fragment>
                               ))}
                         </div>
