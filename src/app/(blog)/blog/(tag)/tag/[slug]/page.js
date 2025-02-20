@@ -33,11 +33,86 @@ const Page = ({ params }) => {
   useEffect(() => {
     getData();
   }, []);
+  const [visiblePages, setVisiblePages] = useState([]);
+
   const handlePageChange = (pageNumber) => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     setCurrentPage(pageNumber);
   };
 
+  useEffect(() => {
+    const updateVisiblePages = () => {
+      const newVisiblePages = [];
+      const range = 2;
+
+      newVisiblePages.push(1);
+
+      let start = Math.max(2, currentPage - range);
+      let end = Math.min(totalPages - 1, currentPage + range);
+
+      if (start > 2) {
+        newVisiblePages.push("...");
+      }
+
+      for (let i = start; i <= end; i++) {
+        newVisiblePages.push(i);
+      }
+
+      if (end < totalPages - 1) {
+        newVisiblePages.push("...");
+      }
+
+      if (totalPages > 1) {
+        newVisiblePages.push(totalPages);
+      }
+
+      setVisiblePages(newVisiblePages);
+    };
+
+    if (totalPages > 0) {
+      updateVisiblePages();
+    }
+  }, [currentPage, totalPages]);
+
+  const handleEllipsisClick = (index) => {
+    const isLeftEllipsis = index === 1;
+    const isRightEllipsis = index === visiblePages.length - 2;
+
+    if (isLeftEllipsis) {
+      const newPage = Math.max(1, currentPage - 5);
+      handlePageChange(newPage);
+    } else if (isRightEllipsis) {
+      const newPage = Math.min(totalPages, currentPage + 5);
+      handlePageChange(newPage);
+    }
+  };
+
+  const renderPaginationButtons = () => {
+    return visiblePages.map((page, index) => {
+      if (page === "...") {
+        return (
+          <button
+            key={index}
+            className="pagination-button disabled"
+            onClick={() => handleEllipsisClick(index)}
+          >
+            ...
+          </button>
+        );
+      }
+      return (
+        <button
+          key={index}
+          className={`pagination-button ${
+            currentPage === page ? "active" : ""
+          }`}
+          onClick={() => handlePageChange(page)}
+        >
+          {page}
+        </button>
+      );
+    });
+  };
   const validateForm = () => {
     let isValid = true;
     const emailInput = document.getElementById("subscribe-email");
@@ -291,7 +366,9 @@ const Page = ({ params }) => {
                           blog.tags.split(",").map((tag, index) => (
                             <Link
                               key={index}
-                              href={`/blog/tag/${tag.trim().replace(/\s+/g, "-")}`}
+                              href={`/blog/tag/${tag
+                                .trim()
+                                .replace(/\s+/g, "-")}`}
                             >
                               {tag.trim()}
                               {index < blog.tags.split(",").length - 1
@@ -361,7 +438,7 @@ const Page = ({ params }) => {
                       ))}
                     </div> */}
                     <div className="pagination-numbers">
-                      {[...Array(totalPages)].map((_, index) => {
+                      {/* {[...Array(totalPages)].map((_, index) => {
                         const pageNumber = index + 1;
 
                         // Show first 3 pages, last 3 pages, and current page if necessary
@@ -402,7 +479,8 @@ const Page = ({ params }) => {
                         }
 
                         return null; // Skip rendering for other pages
-                      })}
+                      })} */}
+                      {renderPaginationButtons()}
                     </div>
                     <button
                       className="pagination-button"
