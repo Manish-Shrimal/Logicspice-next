@@ -10,11 +10,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
 //   Fetch data
+if(params.slug !== "sitemap.xml") {
   const product = await fetch(`${BaseAPI}/blog/getMetadataBySlug/${params.slug}`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
   );
+}
+  
 
 //   const product = await fetch(`https://lswebsitedemo.logicspice.com/logicspice/api/blog/${params.slug}/metadata`,{
 //     cache: "no-store",
