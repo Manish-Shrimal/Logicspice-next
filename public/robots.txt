@@ -21,8 +21,7 @@ Disallow: /app/webroot/files/template//Paperless-html/index.html
 Disallow: /app/webroot/files/template//TravelWorld_site/index.html
 Disallow: /app/webroot/files/template//turdo/index.html
 Disallow: /app/webroot/files/template//Redchilli/index.html
-Disallow: /blog/category/
-Disallow: /blog/tag/
+
 Disallow: /smtp/
 
 Sitemap: https://www.logicspice.com/sitemap.xml
