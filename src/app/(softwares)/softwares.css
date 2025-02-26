@@ -6992,3 +6992,10 @@ a:hover {
 .group_chat .job-portal-banner{
   min-height: 446px!important;
 }
+
+.special_links{
+  color: #451095!important;
+  /* border-bottom: 1px solid #451095; */
+  /* padding-bottom: 2px; */
+  cursor: pointer;
+}

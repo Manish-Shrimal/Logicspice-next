@@ -32,7 +32,6 @@ const SoftwareEnquiry = dynamic(
 );
 
 const Page = () => {
-
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -155,8 +154,6 @@ const Page = () => {
     setAdminTab(true);
   };
 
- 
-
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
   const [isInView, setIsInView] = useState(false);
@@ -269,14 +266,17 @@ const Page = () => {
 
   return (
     <>
-         <Navbar />
+      <Navbar />
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign HumanResourceBanner">
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">
               <h1>Support Ticket System</h1>
               <div className="both-left-p-sec">
-                <h2>Enhance Customer Support with Our All-in-One Help Desk Software</h2>
+                <h2>
+                  Enhance Customer Support with Our All-in-One Help Desk
+                  Software
+                </h2>
               </div>
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
@@ -307,29 +307,25 @@ const Page = () => {
                     </span>
                   </div>
                 </div>
-               
 
-
-
-<div className="job-valu-btn">
-                    
-                    <div
-                      className="enquiry_software_btn"
-                      style={{ marginTop: "15px" }}
-                      onClick={openModal}
-                    >
-                      <button className="btn fiverr-buys NewGreenBtnJob">
-                        Enquire Now
-                      </button>
-                      {
-                        <EnquiryModal
-                          modalStatus={showModal}
-                          toggle={openModal}
-                          title="WordPress eCommerce Website"
-                        />
-                      }
-                    </div>
+                <div className="job-valu-btn">
+                  <div
+                    className="enquiry_software_btn"
+                    style={{ marginTop: "15px" }}
+                    onClick={openModal}
+                  >
+                    <button className="btn fiverr-buys NewGreenBtnJob">
+                      Enquire Now
+                    </button>
+                    {
+                      <EnquiryModal
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="WordPress eCommerce Website"
+                      />
+                    }
                   </div>
+                </div>
                 <div
                   className="portal-price portal-priceNew"
                   style={{ display: "none" }}
@@ -451,7 +447,7 @@ const Page = () => {
                   <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                Support Ticket System
+                  Support Ticket System
                 </li>
               </ol>
             </div>
@@ -479,8 +475,8 @@ const Page = () => {
             Software that can assist you to launch your own{" "}
             <i>white Label job board</i> in less time.
           </p>
-        
-          <p style={{ marginBottom: "15px"}}>
+
+          <p style={{ marginBottom: "15px" }}>
             {/* Efficiently manage your human resources with our HRMS payroll
             Software, a complete solution for HR and payroll needs. Built to
             simplify HR operations, our software is ideal for small to mid-sized
@@ -489,11 +485,21 @@ const Page = () => {
             information, tracking attendance, or processing payroll, our best HR
             Management software helps you handle everything from one easy-to-use
             platform. */}
-            The Logicspice Support Ticket System is an easy-to-use help desk software that helps businesses manage customer support more effectively. Whether you&apos;re a small business or a large company, our best help desk system makes it simple for your team to communicate with customers and solve their issues quickly. With a user-friendly design, automated workflows, and support for multiple channels (email, chat, etc.), our support ticket software helps businesses respond faster and stay organized.
-
+            The Logicspice Support Ticket System is an easy-to-use help desk
+            software that helps businesses manage customer support more
+            effectively. Whether you&apos;re a small business or a large
+            company, our best help desk system makes it simple for your team to
+            communicate with customers and solve their issues quickly. With a
+            user-friendly design, automated workflows, and support for multiple
+            channels (email, chat, etc.), our support ticket software helps
+            businesses respond faster and stay organized.
           </p>
           <p>
-          Customers can easily submit and track their issues, while businesses can sort, assign, and resolve tickets smoothly. Our customer support ticket system ensures that every query gets the attention it needs, improving customer satisfaction and making support operations more efficient.
+            Customers can easily submit and track their issues, while businesses
+            can sort, assign, and resolve tickets smoothly. Our customer support
+            ticket system ensures that every query gets the attention it needs,
+            improving customer satisfaction and making support operations more
+            efficient.
           </p>
         </div>
       </section>
@@ -545,12 +551,19 @@ const Page = () => {
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Prime Features of Our Support Ticket Script </h2>
+            <h2 className="taxt_tt_job">
+              Prime Features of Our Support Ticket Script{" "}
+            </h2>
           </div>
           <div className="tatxt_txt_job">
-          
-           Our support ticket software makes it easy for businesses to manage customer inquiries in one place. No more lost emails or missed messages—everything is organized and easy to track. With smart automation, support teams can respond faster, keeping customers happy and reducing wait times. Whether you&apos;re handling a few tickets or a high volume of requests, our system helps you stay on top of things. It’s designed to work for any business, making customer support smoother, more efficient, and stress-free.
-
+            Our support ticket software makes it easy for businesses to manage
+            customer inquiries in one place. No more lost emails or missed
+            messages—everything is organized and easy to track. With smart
+            automation, support teams can respond faster, keeping customers
+            happy and reducing wait times. Whether you&apos;re handling a few
+            tickets or a high volume of requests, our system helps you stay on
+            top of things. It’s designed to work for any business, making
+            customer support smoother, more efficient, and stress-free.
           </div>
 
           <div className="tab_bbx_job">
@@ -587,7 +600,6 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj JobseekerTab" id="tab1">
                     <div className="row">
-                    
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright">
                           <ul>
@@ -603,10 +615,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Easy Ticket Submission
+                                Easy Ticket Submission
                                 <div className="product-idea">
                                   <p>
-                                  Customers can quickly create support tickets through an intuitive interface without any technical knowledge.
+                                    Customers can quickly create support tickets
+                                    through an intuitive interface without any
+                                    technical knowledge.
                                   </p>
                                 </div>
                               </span>
@@ -623,10 +637,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Ticket Tracking & Status Updates
+                                Ticket Tracking & Status Updates
                                 <div className="product-idea">
                                   <p>
-                                  Users can track their ticket status in real-time, ensuring transparency and better engagement.
+                                    Users can track their ticket status in
+                                    real-time, ensuring transparency and better
+                                    engagement.
                                   </p>
                                 </div>
                               </span>
@@ -643,10 +659,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Email & Multi-Channel Support
+                                Email & Multi-Channel Support
                                 <div className="product-idea">
                                   <p>
-                                  Customers can submit tickets via email, website forms, or live chat, making support more accessible.
+                                    Customers can submit tickets via email,
+                                    website forms, or live chat, making support
+                                    more accessible.
                                   </p>
                                 </div>
                               </span>
@@ -663,10 +681,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Self-Service Knowledge Base
+                                Self-Service Knowledge Base
                                 <div className="product-idea">
                                   <p>
-                                  A built-in FAQ and knowledge base help customers find instant answers without waiting for an agent.
+                                    A built-in FAQ and knowledge base help
+                                    customers find instant answers without
+                                    waiting for an agent.
                                   </p>
                                 </div>
                               </span>
@@ -683,11 +703,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              File Attachments & Screenshots
+                                File Attachments & Screenshots
                                 <div className="product-idea">
                                   <p>
-                                  Customers can upload files, screenshots, or documents to help explain their issues more effectively.
-
+                                    Customers can upload files, screenshots, or
+                                    documents to help explain their issues more
+                                    effectively.
                                   </p>
                                 </div>
                               </span>
@@ -704,11 +725,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Automated Responses & Notifications
+                                Automated Responses & Notifications
                                 <div className="product-idea">
                                   <p>
-                                  Instant notifications keep customers updated about ticket progress, replies, and resolution.
-
+                                    Instant notifications keep customers updated
+                                    about ticket progress, replies, and
+                                    resolution.
                                   </p>
                                 </div>
                               </span>
@@ -725,11 +747,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Multi-Language Support
+                                Multi-Language Support
                                 <div className="product-idea">
                                   <p>
-                                  Customers can communicate in their preferred language for a seamless support experience.
-
+                                    Customers can communicate in their preferred
+                                    language for a seamless support experience.
                                   </p>
                                 </div>
                               </span>
@@ -746,10 +768,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Secure & Private Communication
+                                Secure & Private Communication
                                 <div className="product-idea">
                                   <p>
-                                  Strong data protection ensures customer information remains safe and confidential.
+                                    Strong data protection ensures customer
+                                    information remains safe and confidential.
                                   </p>
                                 </div>
                               </span>
@@ -776,7 +799,6 @@ const Page = () => {
                                 </div>
                               </span>
                             </li> */}
-                            
                           </ul>
                         </div>
                       </div>
@@ -789,7 +811,6 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj EmployerTab" id="tab2">
                     <div className="row">
-                      
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left">
                           <ul>
@@ -804,10 +825,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Unified Dashboard
+                                Unified Dashboard
                                 <div className="product-idea">
                                   <p>
-                                  Agents can manage all incoming tickets, view priorities, and handle customer queries efficiently.
+                                    Agents can manage all incoming tickets, view
+                                    priorities, and handle customer queries
+                                    efficiently.
                                   </p>
                                 </div>
                               </span>
@@ -824,12 +847,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Auto-Assignment & Workflow Automation
-
+                                Auto-Assignment & Workflow Automation
                                 <div className="product-idea">
                                   <p>
-                                  Tickets can be auto-assigned based on predefined rules to reduce manual work and improve response time.
-
+                                    Tickets can be auto-assigned based on
+                                    predefined rules to reduce manual work and
+                                    improve response time.
                                   </p>
                                 </div>
                               </span>
@@ -846,11 +869,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Canned Responses & Quick Replies
+                                Canned Responses & Quick Replies
                                 <div className="product-idea">
                                   <p>
-                                  Save time with pre-written responses for common issues, ensuring fast and consistent support.
-
+                                    Save time with pre-written responses for
+                                    common issues, ensuring fast and consistent
+                                    support.
                                   </p>
                                 </div>
                               </span>
@@ -867,11 +891,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Internal Notes & Collaboration
+                                Internal Notes & Collaboration
                                 <div className="product-idea">
                                   <p>
-                                  Agents can add private notes to tickets, share updates, or collaborate with teammates to resolve issues faster.
-
+                                    Agents can add private notes to tickets,
+                                    share updates, or collaborate with teammates
+                                    to resolve issues faster.
                                   </p>
                                 </div>
                               </span>
@@ -888,16 +913,16 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Ticket Merging & Splitting
+                                Ticket Merging & Splitting
                                 <div className="product-idea">
                                   <p>
-                                  Merge duplicate tickets for better organization or split complex issues into multiple tickets for detailed resolution.
-
+                                    Merge duplicate tickets for better
+                                    organization or split complex issues into
+                                    multiple tickets for detailed resolution.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            
 
                             <li>
                               <i className="JobBoardImg">
@@ -911,10 +936,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Priority & SLA Management
+                                Priority & SLA Management
                                 <div className="product-idea">
                                   <p>
-                                  Set priorities and enforce service level agreements (SLAs) to ensure timely resolution.
+                                    Set priorities and enforce service level
+                                    agreements (SLAs) to ensure timely
+                                    resolution.
                                   </p>
                                 </div>
                               </span>
@@ -932,10 +959,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Customer Interaction History
+                                Customer Interaction History
                                 <div className="product-idea">
                                   <p>
-                                  Agents can access past interactions to provide personalized support and avoid repetitive questions.
+                                    Agents can access past interactions to
+                                    provide personalized support and avoid
+                                    repetitive questions.
                                   </p>
                                 </div>
                               </span>
@@ -952,16 +981,15 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Multi-Channel Ticket Handling
+                                Multi-Channel Ticket Handling
                                 <div className="product-idea">
                                   <p>
-                                  Respond to customer tickets from email, chat, or social media in one place.
-
+                                    Respond to customer tickets from email,
+                                    chat, or social media in one place.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            
                           </ul>
                         </div>
                       </div>
@@ -974,7 +1002,6 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj AdminTab" id="tab3">
                     <div className="row">
-                     
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
@@ -989,10 +1016,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Comprehensive Reports & Analytics
+                                Comprehensive Reports & Analytics
                                 <div className="product-idea">
                                   <p>
-                                  Get insights into ticket trends, agent performance, and customer satisfaction to improve support operations.
+                                    Get insights into ticket trends, agent
+                                    performance, and customer satisfaction to
+                                    improve support operations.
                                   </p>
                                 </div>
                               </span>
@@ -1008,10 +1037,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Customizable Ticket Categories & Tags
+                                Customizable Ticket Categories & Tags
                                 <div className="product-idea">
                                   <p>
-                                  Organize tickets efficiently with custom categories, priorities, and labels.
+                                    Organize tickets efficiently with custom
+                                    categories, priorities, and labels.
                                   </p>
                                 </div>
                               </span>
@@ -1027,10 +1057,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Role-Based Access Control
+                                Role-Based Access Control
                                 <div className="product-idea">
                                   <p>
-                                  Manage agent roles, permissions, and responsibilities to maintain security and workflow efficiency.
+                                    Manage agent roles, permissions, and
+                                    responsibilities to maintain security and
+                                    workflow efficiency.
                                   </p>
                                 </div>
                               </span>
@@ -1046,11 +1078,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Real-Time Monitoring & Supervision
+                                Real-Time Monitoring & Supervision
                                 <div className="product-idea">
                                   <p>
-                                  Track ongoing ticket resolutions and intervene when necessary to ensure top-quality support.
-
+                                    Track ongoing ticket resolutions and
+                                    intervene when necessary to ensure
+                                    top-quality support.
                                   </p>
                                 </div>
                               </span>
@@ -1066,11 +1099,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Multi-Brand & Multi-Department Support
+                                Multi-Brand & Multi-Department Support
                                 <div className="product-idea">
                                   <p>
-                                  Manage support tickets across different brands, departments, or business units from a single system.
-
+                                    Manage support tickets across different
+                                    brands, departments, or business units from
+                                    a single system.
                                   </p>
                                 </div>
                               </span>
@@ -1086,10 +1120,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Automated Workflows & Escalation Rules
+                                Automated Workflows & Escalation Rules
                                 <div className="product-idea">
                                   <p>
-                                  Configure automation rules for ticket assignment, escalation, and follow-ups to prevent delays.
+                                    Configure automation rules for ticket
+                                    assignment, escalation, and follow-ups to
+                                    prevent delays.
                                   </p>
                                 </div>
                               </span>
@@ -1105,10 +1141,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                              Customer Feedback & Satisfaction Ratings
+                                Customer Feedback & Satisfaction Ratings
                                 <div className="product-idea">
                                   <p>
-                                  Collect feedback through post-resolution surveys to improve service quality.
+                                    Collect feedback through post-resolution
+                                    surveys to improve service quality.
                                   </p>
                                 </div>
                               </span>
@@ -1120,14 +1157,16 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_skill.png"
+                                  src="/img/support-ticket/helpdesk-icon.png"
                                 />
                               </i>
                               <span>
-                              Help Desk & CRM Integration
+                                Help Desk & CRM Integration
                                 <div className="product-idea">
                                   <p>
-                                  Seamlessly integrate with popular CRM and help desk software for a unified support experience.
+                                    Seamlessly integrate with popular CRM and
+                                    help desk software for a unified support
+                                    experience.
                                   </p>
                                 </div>
                               </span>
@@ -1139,14 +1178,15 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_skill.png"
+                                  src="/img/support-ticket/security-compliance-icon.png"
                                 />
                               </i>
                               <span>
-                              Security & Compliance Management
+                                Security & Compliance Management
                                 <div className="product-idea">
                                   <p>
-                                  Ensure GDPR compliance, data protection, and secure customer communication.
+                                    Ensure GDPR compliance, data protection, and
+                                    secure customer communication.
                                   </p>
                                 </div>
                               </span>
@@ -1158,20 +1198,19 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_skill.png"
+                                  src="/img/support-ticket/custom-notifications-icon.png"
                                 />
                               </i>
                               <span>
-                              Custom Notifications & Alerts
-
+                                Custom Notifications & Alerts
                                 <div className="product-idea">
                                   <p>
-                                  Keep agents and customers informed with real-time email and SMS notifications.
+                                    Keep agents and customers informed with
+                                    real-time email and SMS notifications.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            
                           </ul>
                         </div>
                       </div>
@@ -1187,7 +1226,7 @@ const Page = () => {
         <div className="container">
           <div className="whateissuprt">
             <h2 className="headhs">
-            What Does Our Support Ticket Software Script Do for You?
+              What Does Our Support Ticket Software Script Do for You?
             </h2>
             <h3 className="Haeddinh2">Makes Customer Support Easy</h3>
             <p>
@@ -1202,32 +1241,56 @@ const Page = () => {
               know-how - our expert technical team ensures a seamless setup for
               you. Effortlessly launch your own job board advertising website in
               record time with our ready-to-use Job Board Software Script. */}
-            Our support ticket PHP software helps businesses handle customer queries without any hassle. Instead of sorting through messy emails and lost messages, all support requests are organized in one place. Tickets are tracked, assigned, and resolved smoothly, so nothing gets missed. The best part? You don’t need any technical skills to use it, and we’ll help you get set up in no time!
-
+              Our support ticket PHP software helps businesses handle customer
+              queries without any hassle. Instead of sorting through messy
+              emails and lost messages, all support requests are organized in
+              one place. Tickets are tracked, assigned, and resolved smoothly,
+              so nothing gets missed. The best part? You don’t need any
+              technical skills to use it, and we’ll help you get set up in no
+              time!
             </p>
             <h3 className="Haeddinh2">
-            A Better Experience for Customers and Support Teams
+              A Better Experience for Customers and Support Teams
             </h3>
             <p>
-            With our best help desk system, customers can easily submit and track their support requests, while your team can manage and respond to them quickly. Smart features like automatic ticket routing, saved responses, and a self-service help center make everything more efficient. No matter how many tickets you get, our system keeps things running smoothly.
+              With our best help desk system, customers can easily submit and
+              track their support requests, while your team can manage and
+              respond to them quickly. Smart features like automatic ticket
+              routing, saved responses, and a self-service help center make
+              everything more efficient. No matter how many tickets you get, our
+              system keeps things running smoothly.
             </p>
             <h3 className="Haeddinh2">Advanced Control with Admin Dashboard</h3>
             <p>
-            Managers can stay on top of everything with a powerful dashboard that tracks all tickets, monitors team performance, and generates useful reports. You can control who has access to what, automate workflows, and make sure your support process runs like a well-oiled machine.
+              Managers can stay on top of everything with a powerful dashboard
+              that tracks all tickets, monitors team performance, and generates
+              useful reports. You can control who has access to what, automate
+              workflows, and make sure your support process runs like a
+              well-oiled machine.
             </p>
             <h3 className="Haeddinh2">Faster Responses with AI & Automation</h3>
             <p>
-            Our  <strong>customer support ticket system </strong>helps businesses reply faster and more efficiently. Automated responses, ticket categorization, and follow-ups save time and ensure that every customer gets the help they need without long wait times.
+              Our <strong>customer support ticket system </strong>helps
+              businesses reply faster and more efficiently. Automated responses,
+              ticket categorization, and follow-ups save time and ensure that
+              every customer gets the help they need without long wait times.
             </p>
             <h3 className="Haeddinh2">Grows with Your Business</h3>
             <p>
-            Whether you&apos;re a small startup or a large company, our best help desk software is built to grow with you. It’s flexible, customizable, and supports multiple languages, so you can create a <Link href="/software-maintenance-support"> customer support </Link> system that fits your needs perfectly.
+              Whether you&apos;re a small startup or a large company, our best
+              help desk software is built to grow with you. It’s flexible,
+              customizable, and supports multiple languages, so you can create a{" "}
+              <Link href="/software-maintenance-support" className="special_links">
+                {" "}
+                customer support{" "}
+              </Link>{" "}
+              system that fits your needs perfectly.
             </p>
           </div>
         </div>
       </section>
-    
-       <section className="SubscriptionModel" id="subscriptionmodel">
+
+      <section className="SubscriptionModel" id="subscriptionmodel">
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job">Subscription Model</h2>
@@ -1262,10 +1325,12 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                  Unlimited Support Tickets & Fast Resolutions: Handle every support request without limits, making it simple for your team to track and quickly resolve issues.
+                    Unlimited Support Tickets & Fast Resolutions: Handle every
+                    support request without limits, making it simple for your
+                    team to track and quickly resolve issues.
                   </span>
                 </li>
-                 <li>
+                <li>
                   <span>
                     Enhanced Communication: Avail yourself of 5 domain-based
                     email accounts to enhance your professional communication.
@@ -1310,7 +1375,7 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-            <h4>
+              <h4>
                 {/* {pageData.currency_symbol}
                 {pageData.price} */}
                 $895
@@ -1347,7 +1412,7 @@ const Page = () => {
                 </Link>
               </div> */}
 
-<div className="SubscriptionModelPriceBtn">
+              <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
                   <button>Enquire Now</button>
                   {
@@ -1446,7 +1511,6 @@ const Page = () => {
           </div>
         </div>
       </section>
-   
 
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
@@ -1456,7 +1520,6 @@ const Page = () => {
             </h2>
             <br />
             <div className="logic-parter">
-            
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
@@ -1475,7 +1538,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       {/* <section className="used_technology_section" id="technologies">
         <div className="container">
           <h4 className="title_main">
@@ -1640,7 +1703,9 @@ const Page = () => {
               <div className="ecommerce--review">
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
-                  Most ticketing systems are either too complicated or too expensive. This one is perfect for our growing business—easy, efficient, and cost-effective!
+                    Most ticketing systems are either too complicated or too
+                    expensive. This one is perfect for our growing
+                    business—easy, efficient, and cost-effective!
                   </div>
                   <div className="who_ratset">
                     <span
@@ -1668,7 +1733,9 @@ const Page = () => {
                 </div>
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
-                  We needed reliable help desk software, and Logicspice delivered! Setting up was simple, and our team got the hang of it in no time. The multi-channel support is a big plus.
+                    We needed reliable help desk software, and Logicspice
+                    delivered! Setting up was simple, and our team got the hang
+                    of it in no time. The multi-channel support is a big plus.
                   </div>
 
                   <div className="who_ratset">
@@ -1698,7 +1765,10 @@ const Page = () => {
 
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
-                  We used to struggle with managing customer emails and support requests, but the Logicspice Support Ticket System changed everything. Now, we never miss a ticket, and our customers get faster responses.
+                    We used to struggle with managing customer emails and
+                    support requests, but the Logicspice Support Ticket System
+                    changed everything. Now, we never miss a ticket, and our
+                    customers get faster responses.
                   </div>
 
                   <div className="who_ratset">
@@ -1853,13 +1923,18 @@ const Page = () => {
                         toggleAccordion(0);
                       }}
                       style={titleStyle}
-                    ><span>01. </span> What is the Logicspice Support Ticket System?
+                    >
+                      <span>01. </span> What is the Logicspice Support Ticket
+                      System?
                     </a>
                   </div>
                   <div style={activeIndex === 0 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Our support ticket system software is a tool that helps businesses manage customer inquiries efficiently. It tracks, organizes, and automates support tickets to ensure quick resolutions.
+                        Our support ticket system software is a tool that helps
+                        businesses manage customer inquiries efficiently. It
+                        tracks, organizes, and automates support tickets to
+                        ensure quick resolutions.
                       </p>
                     </div>
                   </div>
@@ -1881,8 +1956,9 @@ const Page = () => {
                   <div style={activeIndex === 1 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Any business that provides customer support! It’s perfect for IT support teams, service-based businesses, eCommerce, healthcare, and more.
-
+                        Any business that provides customer support! It’s
+                        perfect for IT support teams, service-based businesses,
+                        eCommerce, healthcare, and more.
                       </p>
                     </div>
                   </div>
@@ -1898,13 +1974,16 @@ const Page = () => {
                       }}
                       style={titleStyle}
                     >
-                      <span>03. </span>  Does it support multiple channels like email and chat? 
+                      <span>03. </span> Does it support multiple channels like
+                      email and chat?
                     </a>
                   </div>
                   <div style={activeIndex === 2 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Yes! Customers can submit tickets via email, live chat, or a web portal, and everything is managed in one central dashboard.
+                        Yes! Customers can submit tickets via email, live chat,
+                        or a web portal, and everything is managed in one
+                        central dashboard.
                       </p>
                     </div>
                   </div>
@@ -1920,13 +1999,16 @@ const Page = () => {
                         toggleAccordion(3);
                       }}
                     >
-                      <span>04. </span> Can I automate responses and ticket assignments?
+                      <span>04. </span> Can I automate responses and ticket
+                      assignments?
                     </a>
                   </div>
                   <div style={activeIndex === 3 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Absolutely! Our best help desk software comes with automation features that assign tickets based on priority, team availability, or predefined rules.
+                        Absolutely! Our best help desk software comes with
+                        automation features that assign tickets based on
+                        priority, team availability, or predefined rules.
                       </p>
                     </div>
                   </div>
@@ -1948,7 +2030,8 @@ const Page = () => {
                   <div style={activeIndex === 4 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Yes! No technical skills are required. We provide full setup support to help you get started quickly.
+                        Yes! No technical skills are required. We provide full
+                        setup support to help you get started quickly.
                       </p>
                     </div>
                   </div>
@@ -1970,8 +2053,9 @@ const Page = () => {
                   <div style={activeIndex === 5 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Yes! Our customer support ticket system follows industry security standards, ensuring encrypted data storage and privacy protection.
-
+                        Yes! Our customer support ticket system follows industry
+                        security standards, ensuring encrypted data storage and
+                        privacy protection.
                       </p>
                     </div>
                   </div>
@@ -1987,14 +2071,15 @@ const Page = () => {
                         toggleAccordion(6);
                       }}
                     >
-                      <span>07. </span>  Can I customize the software to match my brand?
+                      <span>07. </span> Can I customize the software to match my
+                      brand?
                     </a>
                   </div>
                   <div style={activeIndex === 6 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Yes! You can add your company logo, adjust workflows, and personalize settings to fit your business needs.
-
+                        Yes! You can add your company logo, adjust workflows,
+                        and personalize settings to fit your business needs.
                       </p>
                     </div>
                   </div>
@@ -2010,14 +2095,16 @@ const Page = () => {
                         toggleAccordion(7);
                       }}
                     >
-                      <span>08. </span> What kind of reports does the system provide?
+                      <span>08. </span> What kind of reports does the system
+                      provide?
                     </a>
                   </div>
                   <div style={activeIndex === 7 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      You get insights on ticket volume, response times, agent performance, and customer feedback, helping you improve your support strategy.
-
+                        You get insights on ticket volume, response times, agent
+                        performance, and customer feedback, helping you improve
+                        your support strategy.
                       </p>
                     </div>
                   </div>
@@ -2033,14 +2120,15 @@ const Page = () => {
                         toggleAccordion(8);
                       }}
                     >
-                      <span>09. </span>  How do I get started?
+                      <span>09. </span> How do I get started?
                     </a>
                   </div>
                   <div style={activeIndex === 8 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                      Contact us today for a free demo and see how our support ticket system software can improve your customer service!
-
+                        Contact us today for a free demo and see how our support
+                        ticket system software can improve your customer
+                        service!
                       </p>
                     </div>
                   </div>
@@ -2434,10 +2522,7 @@ const Page = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Page
-
-
-
+export default Page;
