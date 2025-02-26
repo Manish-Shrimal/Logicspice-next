@@ -16,9 +16,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   let pageSlug = params;
 
-  let text = product.data.schema;
+  let text = product.data.meta_keyword;
 
-  let schemaOrg = null;
+  let keywordOrg = null;
   if (text) {
     const cleanedText = text
       .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
@@ -27,13 +27,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
       .replace(/\\+/g, "") // Remove unnecessary backslashes
       .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-    schemaOrg = cleanedText && JSON.parse(cleanedText);
+    keywordOrg = cleanedText;
   }
 
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
-    keywords: JSON.parse(product.data.meta_keyword),
+    keywords: keywordOrg,
     // Add other meta tags as needed
     alternates: {
       canonical: `${Domain}/blog/tag/${params.slug}`,
@@ -49,7 +49,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: schemaOrg || null,
+    // schemaOrg: schemaOrg || null,
   };
 }
 
@@ -86,10 +86,10 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      />
+      /> */}
     </html>
   );
 }
