@@ -3,6 +3,8 @@ import dynamic from "next/dynamic";
 import Footer from "@/app/Components/Footer";
 import Navbar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
+import "@/app/globals.css";
+
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -11,6 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState, useRef } from "react";
 import Contactusmodel from "@/app/Components/Contactusmodel";
+import EnquiryModal from "@/app/Components/Enquirymodal";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 import "../../resposive.css";
@@ -19,7 +22,6 @@ import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
-
 const GetDemoEnquiry = dynamic(
   () => import("@/app/Components/GetDemoEnquiry"),
   { ssr: false }
@@ -30,6 +32,7 @@ const SoftwareEnquiry = dynamic(
 );
 
 const Page = () => {
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -263,16 +266,17 @@ const Page = () => {
       }
     };
   }, []);
+
   return (
     <>
-      <Navbar />
+         <Navbar />
       <section className="paid-pro job-portal-banner fiverr-new-banner job-portal-bg NewJobSiteDesign JobBoardNewDesign HumanResourceBanner">
         <div className="container">
           <div className="row">
             <div className="col-sm-7 col-md-7">
-              <h1>Human Resource Management Software</h1>
+              <h1>Support Ticket System</h1>
               <div className="both-left-p-sec">
-                <h2>Your All-in-One HR and Payroll Solution</h2>
+                <h2>Enhance Customer Support with Our All-in-One Help Desk Software</h2>
               </div>
               <div className="job-valu">
                 <div className="portal-price NewPriceDesign">
@@ -303,37 +307,29 @@ const Page = () => {
                     </span>
                   </div>
                 </div>
-                <div className="job-valu-btn">
-                  <span>Fill your basic details and</span>
+               
 
-                  <div
-                    className="btn-get"
-                    onClick={openDemoAccessModal}
-                    style={{ textAlign: "center" }}
-                  >
-                    <button>Get Demo Access!</button>
-                    {
-                      // <SoftwareEnquiry
-                      //   modalStatus={showModal}
-                      //   toggle={openModal}
-                      //   title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
-                      // />
-                      <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Human Resource Management Software. See how it works yourself!"
-                      />
-                    }
+
+
+<div className="job-valu-btn">
+                    
+                    <div
+                      className="enquiry_software_btn"
+                      style={{ marginTop: "15px" }}
+                      onClick={openModal}
+                    >
+                      <button className="btn fiverr-buys NewGreenBtnJob">
+                        Enquire Now
+                      </button>
+                      {
+                        <EnquiryModal
+                          modalStatus={showModal}
+                          toggle={openModal}
+                          title="WordPress eCommerce Website"
+                        />
+                      }
+                    </div>
                   </div>
-
-                  <Link
-                    className=" fiverr-buys NewGreenBtnJob text-center"
-                    href="/buy-now/hrms-software"
-                    id="buy_now_1"
-                  >
-                    BUY NOW
-                  </Link>
-                </div>
                 <div
                   className="portal-price portal-priceNew"
                   style={{ display: "none" }}
@@ -380,7 +376,7 @@ const Page = () => {
                       alt=""
                       className="lazy"
                     />
-                    <p>310 Reviews</p>
+                    <p>412 Reviews</p>
                   </div>
                 </div>
                 <div className="jocpp">
@@ -437,7 +433,7 @@ const Page = () => {
                   width={430}
                   height={100}
                   className="lazy"
-                  src="/img/hrms/human-resource-banner-img.png"
+                  src="/img/support-ticket/support-ticket-banner-img.png"
                   alt="Job_Board_Software"
                   sizes="(max-width: 768px) 100vw, 350px"
                   unoptimized={false} // Ensure image optimization is enabled
@@ -455,7 +451,7 @@ const Page = () => {
                   <Link href="/softwares">Softwares</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  Human Resource Management Software
+                Support Ticket System
                 </li>
               </ol>
             </div>
@@ -483,33 +479,21 @@ const Page = () => {
             Software that can assist you to launch your own{" "}
             <i>white Label job board</i> in less time.
           </p>
-          {/* <p>
-            LS Jobber, a{" "}
-            <strong>
-              <i>job board software</i>
-            </strong>{" "}
-            that makes it easy for businesses to hire people online. It works
-            similar to popular job sites like Indeed, Monster, Naukri, and
-            CareerBuilder. With LS Jobber, job seekers can search and apply for
-            open positions. They can upload their resumes in different file
-            formats, including video resumes (video CVs). LS Jobber is a
-            white-label job board, which means companies can customize it to
-            match their own branding. It&apos;s a ready-to-use software that
-            allows businesses, organizations, recruitment agencies, and
-            investors to quickly set up their own white label job board website.
-            Overall, this Job board software is designed to make the job hiring
-            process smoother and more efficient for both employers and job
-            seekers.
-          </p> */}
-          <p>
-            Efficiently manage your human resources with our HRMS payroll
+        
+          <p style={{ marginBottom: "15px"}}>
+            {/* Efficiently manage your human resources with our HRMS payroll
             Software, a complete solution for HR and payroll needs. Built to
             simplify HR operations, our software is ideal for small to mid-sized
             businesses seeking reliable, scalable, and customizable HRMS
             software solutions. Whether you&apos;re managing employee
             information, tracking attendance, or processing payroll, our best HR
             Management software helps you handle everything from one easy-to-use
-            platform.
+            platform. */}
+            The Logicspice Support Ticket System is an easy-to-use help desk software that helps businesses manage customer support more effectively. Whether you&apos;re a small business or a large company, our best help desk system makes it simple for your team to communicate with customers and solve their issues quickly. With a user-friendly design, automated workflows, and support for multiple channels (email, chat, etc.), our support ticket software helps businesses respond faster and stay organized.
+
+          </p>
+          <p>
+          Customers can easily submit and track their issues, while businesses can sort, assign, and resolve tickets smoothly. Our customer support ticket system ensures that every query gets the attention it needs, improving customer satisfaction and making support operations more efficient.
           </p>
         </div>
       </section>
@@ -538,18 +522,18 @@ const Page = () => {
             <div className="col-md-12">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
-                  <li>Payroll Management</li>
-                  <li>Employee Database Management</li>
-                  <li>Attendance and Leave Tracking</li>
-                  <li>Performance Evaluation</li>
-                  <li>Customizable Reports</li>
-                  <li>User-Friendly Interface</li>
-                  <li>Scalable and Customizable</li>
-                  <li>Recruitment and Onboarding</li>
-                  {/* <li>Theme Color Management</li>
-                  <li>One time License Fee</li>
-                  <li>Email Notification</li>
-                  <li>Auto Suggestion Filtering</li>
+                  <li>Automated Ticketing System</li>
+                  <li>Multi-Channel Support</li>
+                  <li>Customizable Ticket Workflow</li>
+                  <li>Canned Responses & Automation</li>
+                  <li>Multi-Language Support</li>
+                  {/* <li>Role-Based Access Control</li> */}
+                  <li>Real-Time Notifications</li>
+                  <li>Customer Feedback & Ratings</li>
+                  <li>Multi-Currency Support </li>
+                  <li>One-Time License Fee</li>
+                  <li>Reports & Analytics</li>
+                  {/* <li>Auto Suggestion Filtering</li>
                   <li>Multi-Language/Currency Support</li>
                   <li>Optimized job search with filters</li> */}
                 </ul>
@@ -561,37 +545,12 @@ const Page = () => {
       <section className="job_portal_area">
         <div className="container">
           <div className="job_or_title">
-            <h2 className="taxt_tt_job">Prime Features of Our HRMS Software</h2>
+            <h2 className="taxt_tt_job">Prime Features of Our Support Ticket Script </h2>
           </div>
           <div className="tatxt_txt_job">
-            {/* Our{" "}
-            <strong>
-              <i>dynamic PHP job board</i>
-            </strong>{" "}
-            script serves as a versatile platform for employers to post job
-            listings, outlining necessary skill sets and finer details.
-            Jobseekers can effortlessly navigate through available opportunities
-            that align with their qualifications, geographical preferences, and
-            work experience. Once registration is complete, jobseekers gain the
-            privilege to apply for specific jobs that pique their interest.
-            Within this sophisticated job board application management software,
-            employers wield the ability to sift through job applications,
-            earmarking potential matches as favorites. This intelligent curation
-            aids in streamlining the hiring process, identifying top-notch
-            prospects for each vacancy. Empowered by a secure admin dashboard,
-            users can seamlessly manage employers, jobseekers, job postings, and
-            more. This Job Posting Software also boasts a{" "}
-            <strong>
-              <i>multi-job posting</i>
-            </strong>{" "}
-            feature to further enhance efficiency. */}
-            Our Human Resource Management System software combines all essential
-            HR functions into one user-friendly system. From employee data
-            management and attendance tracking to payroll processing, our HRMS
-            payroll software offers everything that simplifies HR operations.
-            With enhanced data management and workflow automation, your company
-            can reduce administrative burdens and provide valuable insights into
-            employee performance.
+          
+           Our support ticket software makes it easy for businesses to manage customer inquiries in one place. No more lost emails or missed messages—everything is organized and easy to track. With smart automation, support teams can respond faster, keeping customers happy and reducing wait times. Whether you&apos;re handling a few tickets or a high volume of requests, our system helps you stay on top of things. It’s designed to work for any business, making customer support smoother, more efficient, and stress-free.
+
           </div>
 
           <div className="tab_bbx_job">
@@ -604,21 +563,21 @@ const Page = () => {
                   }`}
                   onClick={() => handleSellerTab()}
                 >
-                  <a>Employee Panel </a>
+                  <a>End-User (Customer/Visitor) </a>
                 </li>
                 <li
                   id="tab2_li"
                   className={`emplyer_app_job ddlj ${buyerTab ? "active" : ""}`}
                   onClick={() => handleBuyerTab()}
                 >
-                  <a>HR Panel </a>
+                  <a>Agent/Support Representative </a>
                 </li>
                 <li
                   id="tab3_li"
                   className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
                   onClick={() => handleAdminTab()}
                 >
-                  <a>Admin Panel</a>
+                  <a>Administrator (Manager/Supervisor)</a>
                 </li>
               </ul>
             </div>
@@ -628,17 +587,7 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj JobseekerTab" id="tab1">
                     <div className="row">
-                      {/* <div className="col-lg-4 col-md-3">
-                        <div className="costomer_tab_right costomer_tab_rightleft JobBoardImg">
-                          <Image
-                            unoptimized={true}
-                            width={300}
-                            height={100}
-                            src="/img/jobboard/mobile-job-seeker.png"
-                            alt="Jobseeker App Feature"
-                          />
-                        </div>
-                      </div> */}
+                    
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright">
                           <ul>
@@ -654,11 +603,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Registration
+                              Easy Ticket Submission
                                 <div className="product-idea">
                                   <p>
-                                    Employees can create their profiles, view
-                                    payslips, and track performance reviews.
+                                  Customers can quickly create support tickets through an intuitive interface without any technical knowledge.
                                   </p>
                                 </div>
                               </span>
@@ -675,12 +623,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Login
+                              Ticket Tracking & Status Updates
                                 <div className="product-idea">
                                   <p>
-                                    Registered users can log in securely to
-                                    access personal data, request time off, and
-                                    view payroll information.
+                                  Users can track their ticket status in real-time, ensuring transparency and better engagement.
                                   </p>
                                 </div>
                               </span>
@@ -697,12 +643,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Profile Management
+                              Email & Multi-Channel Support
                                 <div className="product-idea">
                                   <p>
-                                    Employees can update contact details, job
-                                    history, and bank details for salary
-                                    deposits.
+                                  Customers can submit tickets via email, website forms, or live chat, making support more accessible.
                                   </p>
                                 </div>
                               </span>
@@ -719,13 +663,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Leave Management
+                              Self-Service Knowledge Base
                                 <div className="product-idea">
                                   <p>
-                                    Employees can request and track their leave
-                                    (sick, vacation, etc.), view their leave
-                                    balance, and receive real-time approval
-                                    notifications.
+                                  A built-in FAQ and knowledge base help customers find instant answers without waiting for an agent.
                                   </p>
                                 </div>
                               </span>
@@ -742,12 +683,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Payroll Access
+                              File Attachments & Screenshots
                                 <div className="product-idea">
                                   <p>
-                                    Employees can view and download payslips,
-                                    track salary history, and access tax details
-                                    for easy financial planning.
+                                  Customers can upload files, screenshots, or documents to help explain their issues more effectively.
+
                                   </p>
                                 </div>
                               </span>
@@ -764,12 +704,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Performance Tracking
+                              Automated Responses & Notifications
                                 <div className="product-idea">
                                   <p>
-                                    Employees can view their performance
-                                    reviews, set personal goals, and monitor
-                                    progress over time.
+                                  Instant notifications keep customers updated about ticket progress, replies, and resolution.
+
                                   </p>
                                 </div>
                               </span>
@@ -786,12 +725,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Training and Development
+                              Multi-Language Support
                                 <div className="product-idea">
                                   <p>
-                                    Employees can browse and sign up for
-                                    training programs, webinars, or courses to
-                                    grow skills and careers.
+                                  Customers can communicate in their preferred language for a seamless support experience.
+
                                   </p>
                                 </div>
                               </span>
@@ -808,17 +746,15 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Directory
+                              Secure & Private Communication
                                 <div className="product-idea">
                                   <p>
-                                    Employees can search for colleagues by
-                                    department, role, or location, making
-                                    internal communication easier.
+                                  Strong data protection ensures customer information remains safe and confidential.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
+                            {/* <li>
                               <i className="JobBoardImg">
                                 <Image
                                   unoptimized={true}
@@ -839,245 +775,8 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
-                            {/* <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/manage_exp.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Manage Experience
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can view all experience details
-                                    which they have added in the profile &amp;
-                                    can manage(add/edit/delete) Experience.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/genrate_cv.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Generate a CV
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can create CV by selecting the
-                                    format &amp; adding the fields which are
-                                    mandatory for creating CV. Jobseekers can
-                                    update the CV as per their requirement.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/jobs_by.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Jobs by Industry, Functions, City
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can search for Jobs using
-                                    Specific Industry, Specific Functions &amp;
-                                    Specific City.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/approve_tickets.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Declaration Statement
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseeker need to select a declaration
-                                    statement while applying for jobs.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/manage_blog.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Professional Registration
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseeker need to fill all the professional
-                                    descriptions.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/send_mail.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Mail Communication
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can communicate with employers
-                                    through email.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/tickets_history.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Mail History
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can manage mail history of custom
-                                    mail communication.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/deletes_acc.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Delete Account
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can delete accounts by entering
-                                    the reason for account deletion.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/upload-video.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Upload Video CV
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can upload their video CV and
-                                    employers can view it in their jobseeker
-                                    profile.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/categories-auto.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Membership Plan
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseekers can purchase the Membership
-                                    Plan(Free/paid) as per their requirement
-                                    which is relevant to them.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/simple_application.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Email Notification
-                                <div className="product-idea">
-                                  <p>
-                                    Jobseeker will receive email notifications
-                                    for the Job Alerts and for some important
-                                    features.
-                                  </p>
-                                </div>
-                              </span>
                             </li> */}
+                            
                           </ul>
                         </div>
                       </div>
@@ -1090,17 +789,7 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj EmployerTab" id="tab2">
                     <div className="row">
-                      {/* <div className="col-lg-4 col-md-3">
-                        <div className="costomer_tab_right">
-                          <Image
-                            unoptimized={true}
-                            width={300}
-                            height={100}
-                            src="/img/jobboard/emplyer-mobile.png"
-                            alt="Buyer App Features"
-                          />
-                        </div>
-                      </div> */}
+                      
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left">
                           <ul>
@@ -1115,12 +804,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Management
+                              Unified Dashboard
                                 <div className="product-idea">
                                   <p>
-                                    HR can manage employee profiles, track job
-                                    changes, and maintain compliance-ready
-                                    records.
+                                  Agents can manage all incoming tickets, view priorities, and handle customer queries efficiently.
                                   </p>
                                 </div>
                               </span>
@@ -1137,12 +824,12 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Leave Approval
+                              Auto-Assignment & Workflow Automation
+
                                 <div className="product-idea">
                                   <p>
-                                    HR can review and approve/reject employee
-                                    leave requests for efficient resource
-                                    management.
+                                  Tickets can be auto-assigned based on predefined rules to reduce manual work and improve response time.
+
                                   </p>
                                 </div>
                               </span>
@@ -1159,12 +846,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Payroll Management
+                              Canned Responses & Quick Replies
                                 <div className="product-idea">
                                   <p>
-                                    HR can process payroll, manage salary
-                                    adjustments, and ensure timely and accurate
-                                    salary disbursements.
+                                  Save time with pre-written responses for common issues, ensuring fast and consistent support.
+
                                   </p>
                                 </div>
                               </span>
@@ -1181,12 +867,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Attendance Management
+                              Internal Notes & Collaboration
                                 <div className="product-idea">
                                   <p>
-                                    HR can monitor attendance, manage working
-                                    hours, and view real-time attendance and
-                                    absence data.
+                                  Agents can add private notes to tickets, share updates, or collaborate with teammates to resolve issues faster.
+
                                   </p>
                                 </div>
                               </span>
@@ -1203,37 +888,16 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Reports
+                              Ticket Merging & Splitting
                                 <div className="product-idea">
                                   <p>
-                                    HR can generate and view detailed reports on
-                                    employee performance, leave, payroll, and
-                                    attendance for better decisions.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            {/* <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/update_job.png"
-                                  alt=""
-                                />
-                              </i>
-                              <span>
-                              Recruitment Management
-                                <div className="product-idea">
-                                  <p>
-                                  HR can post job openings, review candidate applications, schedule interviews, and manage the hiring process.
+                                  Merge duplicate tickets for better organization or split complex issues into multiple tickets for detailed resolution.
 
                                   </p>
                                 </div>
                               </span>
-                            </li> */}
+                            </li>
+                            
 
                             <li>
                               <i className="JobBoardImg">
@@ -1247,12 +911,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Performance Management
+                              Priority & SLA Management
                                 <div className="product-idea">
                                   <p>
-                                    HR can track employee performance, set up
-                                    review cycles, and generate individual
-                                    performance reports.
+                                  Set priorities and enforce service level agreements (SLAs) to ensure timely resolution.
                                   </p>
                                 </div>
                               </span>
@@ -1270,12 +932,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Training Management
+                              Customer Interaction History
                                 <div className="product-idea">
                                   <p>
-                                    HR can assign employees to required or
-                                    voluntary training, monitor progress, and
-                                    track certification status.
+                                  Agents can access past interactions to provide personalized support and avoid repetitive questions.
                                   </p>
                                 </div>
                               </span>
@@ -1292,101 +952,16 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Real-time Notifications
+                              Multi-Channel Ticket Handling
                                 <div className="product-idea">
                                   <p>
-                                    HR can receive instant notifications for new
-                                    leave requests, payroll updates, and
-                                    performance review submissions.
+                                  Respond to customer tickets from email, chat, or social media in one place.
+
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            {/* <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/payment_history.png"
-                                  alt=""
-                                />
-                              </i>
-                              <span>
-                                Payment History
-                                <div className="product-idea">
-                                  <p>
-                                    Employers can view the Payment Transaction
-                                    as per the purchased plan.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/manage_user_acc.png"
-                                  alt=""
-                                />
-                              </i>
-                              <span>
-                                View Jobseeker Profile
-                                <div className="product-idea">
-                                  <p>
-                                    Employer can view Profile of Jobseekers who
-                                    have shortlisted or want to Hire.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/manage_content.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Plan Invoice
-                                <div className="product-idea">
-                                  <p>
-                                    According to the purchased plan invoice will
-                                    be generated &amp; employer can
-                                    display/download.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/send_mail.png"
-                                  alt=""
-                                />
-                              </i>
-                              <span>
-                                Mail Communication
-                                <div className="product-idea">
-                                  <p>
-                                    Employers can communicate with jobseekers by
-                                    using the mail.
-                                  </p>
-                                </div>
-                              </span>
-                            </li> */}
+                            
                           </ul>
                         </div>
                       </div>
@@ -1399,17 +974,7 @@ const Page = () => {
                 <>
                   <div className="costomer_tab rj AdminTab" id="tab3">
                     <div className="row">
-                      {/* <div className="col-lg-4 col-md-3 ">
-                        <div className="costomer_tab_right costomer_tab_rightleft2">
-                          <Image
-                            unoptimized={true}
-                            width={300}
-                            height={100}
-                            src="/img/fiverrclone/gigger_deshboard.png"
-                            alt="Admin Panel"
-                          />{" "}
-                        </div>
-                      </div> */}
+                     
                       <div className="col-lg-12 col-md-12">
                         <div className="costomer_tab_left costomer_tab_leftright2">
                           <ul>
@@ -1424,12 +989,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Secure Login
+                              Comprehensive Reports & Analytics
                                 <div className="product-idea">
                                   <p>
-                                    Admins can securely log in to the system
-                                    with role-based access and permissions for
-                                    added security.
+                                  Get insights into ticket trends, agent performance, and customer satisfaction to improve support operations.
                                   </p>
                                 </div>
                               </span>
@@ -1445,12 +1008,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Manage Users
+                              Customizable Ticket Categories & Tags
                                 <div className="product-idea">
                                   <p>
-                                    Admins can create, edit, or delete employee
-                                    and HR accounts, assigning roles for smooth
-                                    workflows.
+                                  Organize tickets efficiently with custom categories, priorities, and labels.
                                   </p>
                                 </div>
                               </span>
@@ -1466,12 +1027,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Dashboard
+                              Role-Based Access Control
                                 <div className="product-idea">
                                   <p>
-                                    Admins can view a summary of attendance,
-                                    payroll, leave balances, and HR metrics on a
-                                    central dashboard.
+                                  Manage agent roles, permissions, and responsibilities to maintain security and workflow efficiency.
                                   </p>
                                 </div>
                               </span>
@@ -1487,12 +1046,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Payroll Processing
+                              Real-Time Monitoring & Supervision
                                 <div className="product-idea">
                                   <p>
-                                    Admins can manage payroll settings, adjust
-                                    salary structures, and oversee the
-                                    disbursement of payments.
+                                  Track ongoing ticket resolutions and intervene when necessary to ensure top-quality support.
+
                                   </p>
                                 </div>
                               </span>
@@ -1508,12 +1066,11 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Report Generation
+                              Multi-Brand & Multi-Department Support
                                 <div className="product-idea">
                                   <p>
-                                    Admins can generate detailed reports on
-                                    employee activity, attendance, salary, and
-                                    other HR activities.
+                                  Manage support tickets across different brands, departments, or business units from a single system.
+
                                   </p>
                                 </div>
                               </span>
@@ -1529,12 +1086,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                System Configuration
+                              Automated Workflows & Escalation Rules
                                 <div className="product-idea">
                                   <p>
-                                    Admins can configure the HRMS system, update
-                                    personal details, manage notifications, and
-                                    customize the software as needed.
+                                  Configure automation rules for ticket assignment, escalation, and follow-ups to prevent delays.
                                   </p>
                                 </div>
                               </span>
@@ -1550,12 +1105,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Employee Management
+                              Customer Feedback & Satisfaction Ratings
                                 <div className="product-idea">
                                   <p>
-                                    Admins can view detailed employee records,
-                                    update information, and manage employee
-                                    onboarding processes.
+                                  Collect feedback through post-resolution surveys to improve service quality.
                                   </p>
                                 </div>
                               </span>
@@ -1571,35 +1124,10 @@ const Page = () => {
                                 />
                               </i>
                               <span>
-                                Multi-location Management
+                              Help Desk & CRM Integration
                                 <div className="product-idea">
                                   <p>
-                                    If the company operates in multiple
-                                    locations, admins can manage employees,
-                                    payroll, and attendance across different
-                                    branches from a single platform.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            {/* <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/manage_cat.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Sub-categories
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view list of Sub-categories & can
-                                    manage(view/add/edit/delete) Sub-categories.
-                                    Admin can activate/deactivate
-                                    Sub-categories.
+                                  Seamlessly integrate with popular CRM and help desk software for a unified support experience.
                                   </p>
                                 </div>
                               </span>
@@ -1611,16 +1139,14 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_countries.png"
+                                  src="/img/jobboard/manage_skill.png"
                                 />
                               </i>
                               <span>
-                                Manage Countries
+                              Security & Compliance Management
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view list of Countries & can
-                                    manage(view/add/edit/delete) Countries.
-                                    Admin can activate/deactivate Countries.
+                                  Ensure GDPR compliance, data protection, and secure customer communication.
                                   </p>
                                 </div>
                               </span>
@@ -1632,40 +1158,20 @@ const Page = () => {
                                   width={100}
                                   height={100}
                                   alt="img"
-                                  src="/img/jobboard/manage_testimonial.png"
+                                  src="/img/jobboard/manage_skill.png"
                                 />
                               </i>
                               <span>
-                                View Reviews & Ratings
+                              Custom Notifications & Alerts
+
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view the list of Reviews & Ratings
-                                    Seller & Buyer has received.
+                                  Keep agents and customers informed with real-time email and SMS notifications.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  alt="img"
-                                  src="/img/jobboard/payment_history.png"
-                                />
-                              </i>
-                              <span>
-                                Transaction History
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can view payment transactions which
-                                    will display the status of the payment
-                                    paid/pending.
-                                  </p>
-                                </div>
-                              </span>
-                            </li> */}
+                            
                           </ul>
                         </div>
                       </div>
@@ -1681,9 +1187,9 @@ const Page = () => {
         <div className="container">
           <div className="whateissuprt">
             <h2 className="headhs">
-              What Does Our HR Management Software Do for You?
+            What Does Our Support Ticket Software Script Do for You?
             </h2>
-            <h3 className="Haeddinh2">Streamlining Your HR Processes</h3>
+            <h3 className="Haeddinh2">Makes Customer Support Easy</h3>
             <p>
               {/* Our exceptional job board advertising software doesn&apos;t just
               stop at facilitating connections; it empowers you to craft your
@@ -1696,138 +1202,31 @@ const Page = () => {
               know-how - our expert technical team ensures a seamless setup for
               you. Effortlessly launch your own job board advertising website in
               record time with our ready-to-use Job Board Software Script. */}
-              Our HRMS software simplifies and automates HR tasks, offering a
-              comprehensive HRMS solution for businesses of all sizes. With a
-              user-friendly interface and powerful features, it helps you manage
-              everything from employee data to payroll, attendance, and
-              performance—all in one place. No coding skills are needed, and our
-              team ensures a smooth setup process so you can start quickly.
+            Our support ticket PHP software helps businesses handle customer queries without any hassle. Instead of sorting through messy emails and lost messages, all support requests are organized in one place. Tickets are tracked, assigned, and resolved smoothly, so nothing gets missed. The best part? You don’t need any technical skills to use it, and we’ll help you get set up in no time!
+
             </p>
             <h3 className="Haeddinh2">
-              A Seamless Experience for HR Teams and Employees
+            A Better Experience for Customers and Support Teams
             </h3>
             <p>
-              Our software for human resource management makes it easy for HR
-              teams to stay organized and efficient. Employees can access their
-              profiles, request time off, and track performance, all through the
-              intuitive interface. With automated payroll, tax deductions, and
-              leave management, your team can focus on priorities. Our best HR
-              software for small business helps you manage your HR tasks with
-              ease, without unnecessary complexity or cost.
+            With our best help desk system, customers can easily submit and track their support requests, while your team can manage and respond to them quickly. Smart features like automatic ticket routing, saved responses, and a self-service help center make everything more efficient. No matter how many tickets you get, our system keeps things running smoothly.
             </p>
             <h3 className="Haeddinh2">Advanced Control with Admin Dashboard</h3>
             <p>
-              The HR management software provides a powerful admin dashboard,
-              allowing HR teams to manage employee records, track payroll, and
-              review performance from a central location. You’ll have full
-              control over user roles, security settings, and data access,
-              ensuring smooth operations.
+            Managers can stay on top of everything with a powerful dashboard that tracks all tickets, monitors team performance, and generates useful reports. You can control who has access to what, automate workflows, and make sure your support process runs like a well-oiled machine.
             </p>
-            <h3 className="Haeddinh2">Comprehensive Payroll and Compliance</h3>
+            <h3 className="Haeddinh2">Faster Responses with AI & Automation</h3>
             <p>
-              Our best HR and payroll software automates payroll calculations,
-              tax compliance, and reporting, keeping your business aligned with
-              current regulations. It reduces manual errors and streamlines
-              payroll processes effortlessly.
+            Our  <strong>customer support ticket system </strong>helps businesses reply faster and more efficiently. Automated responses, ticket categorization, and follow-ups save time and ensure that every customer gets the help they need without long wait times.
             </p>
-            <h3 className="Haeddinh2">Global Reach with Local Flexibility</h3>
+            <h3 className="Haeddinh2">Grows with Your Business</h3>
             <p>
-              Our HRMS solution adapts to local labor laws and regulations,
-              supporting global operations smoothly, whether you&apos;re based
-              in the UK, USA, India, or beyond.
+            Whether you&apos;re a small startup or a large company, our best help desk software is built to grow with you. It’s flexible, customizable, and supports multiple languages, so you can create a <Link href="/software-maintenance-support"> customer support </Link> system that fits your needs perfectly.
             </p>
           </div>
         </div>
       </section>
-      {/* <section className="SubscriptionModel" id="subscriptionmodel">
-        <div className="container">
-          <div className="job_or_title">
-            <h2 className="taxt_tt_job">Subscription Model</h2>
-            <br />
-            <div className="SubscriptionModelBx">
-              <p>
-                Experience convenience like never before with our
-                subscription-based hassle-free model, available at just{" "}
-                <strong>USD 45 per month</strong>, limited offer available for
-                the first year.
-              </p>
-            
-              <p>Key Benefits:</p>
-              <ul>
-                <li>
-                  <span>
-                    Lifetime Updates: Enjoy complimentary updates for your
-                    software version throughout its lifespan, including{" "}
-                    <strong>Free bug &amp; security fixes</strong> under the
-                    subscription model.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Timely Upgrades: Seamlessly transition to upgraded versions
-                    at regular intervals, all at no extra cost.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <strong>Zero Setup Fees</strong>:- Customers can easily get
-                    started with the <strong>Search Engine Friendly</strong>{" "}
-                    software as there are no additional charges for setup and
-                    installation, ensuring a smooth onboarding experience.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Effective Payroll Management: Easily handle payroll for your
-                    team with accurate calculations, on-time payments, and full
-                    compliance with legal requirements.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Mobile Apps: Stay perpetually connected with Android and
-                    iPhone apps, available for an additional USD 45 per month
-                    for each, android or iPhone. These apps will be launched
-                    through your dedicated developer accounts on Google Play and
-                    the Apple App Store.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Effortless Program Operation: Revel in robust bandwidth that
-                    guarantees your program runs flawlessly, supported by
-                    resources allocated to your subscription model. Any increase
-                    in allocated resources will incur additional charges beyond
-                    the standard subscription model.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Enduring Support: Our dedicated{" "}
-                    <strong>Customer Care team</strong> is dedicated to
-                    providing lifelong assistance through our subscription
-                    model. Any software issues that arise will be promptly
-                    addressed by our dedicated technical team during office
-                    hours.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Personalized Customization Assistance: Delivering Custom
-                    Features According to Client Requirements at additional
-                    cost.
-                  </span>
-                </li>
-              </ul>
-              <p>
-                Discover a new era of convenience and efficiency with our
-                subscription offering. Subscribe today and elevate your
-                experience with our readymade solution!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
+    
        <section className="SubscriptionModel" id="subscriptionmodel">
         <div className="container">
           <div className="job_or_title">
@@ -1861,11 +1260,11 @@ const Page = () => {
                     making it easier for customers to get started.
                   </span>
                 </li>
-                {/* <li>
+                <li>
                   <span>
-                  Unlimited Appointment Booking: Book as many appointments as you need without any limitations.
+                  Unlimited Support Tickets & Fast Resolutions: Handle every support request without limits, making it simple for your team to track and quickly resolve issues.
                   </span>
-                </li> */}
+                </li>
                  <li>
                   <span>
                     Enhanced Communication: Avail yourself of 5 domain-based
@@ -1911,7 +1310,13 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              <h4>
+            <h4>
+                {/* {pageData.currency_symbol}
+                {pageData.price} */}
+                $895
+                {/* <span className="sml_labl"> {pageData.name}</span> */}
+              </h4>
+              {/* <h4>
                 {pageData.currency_symbol}
                 {pageData.price}
                 <span className="sml_labl"> {pageData.name}</span>
@@ -1929,7 +1334,7 @@ const Page = () => {
                     <GetDemoEnquiry
                       modalStatus={demoAccessModal}
                       toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Human Resource Management Software. See how it works yourself!"
+                      title="Please fill the form below and get access to the live demo of Support Ticket System. See how it works yourself!"
                     />
                   }
                 </div>
@@ -1940,6 +1345,19 @@ const Page = () => {
                 >
                   Buy Now
                 </Link>
+              </div> */}
+
+<div className="SubscriptionModelPriceBtn">
+                <div className="btn btn-get" onClick={openModal}>
+                  <button>Enquire Now</button>
+                  {
+                    <EnquiryModal
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Marketplace Software"
+                    />
+                  }
+                </div>
               </div>
               <div className="jocpp">
                 <ul className="job-pr-icon">
@@ -1963,7 +1381,7 @@ const Page = () => {
                       alt=""
                       className="lazy"
                     />
-                    <p>310 Reviews</p>
+                    <p>412 Reviews</p>
                   </div>
                 </div>
               </div>
@@ -2028,217 +1446,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      {/* <section className="job_portal_area script-update-bg">
-        <div className="container">
-          <div className="job_or_title">
-            <h2 className="taxt_tt_job">Script Update History</h2>
-            <br />
-            <div className="script-update_title">
-              <p>
-                V6.0 - September 19th, 2023 - Latest release brings new
-                features, coupled with significant leaps in technologies!
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    Enjoy a unified modern design on both web and mobile
-                    platforms.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Upgraded to the latest PHP version, switched to the{" "}
-                    <strong>Laravel framework</strong>, and revamped it&apos;s
-                    frontend with <strong>ReactJS</strong>.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Stripe Payment Gateway Integration Updated with latest
-                    version.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Latest optimizations have resulted in noticeable performance
-                    enhancements.
-                  </span>
-                </li>
-              </ul>
-              <p>
-                V5.0 - April 26th, 2023 - New feature added and minor
-                improvements!
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    Employer Membership Plan Feature: We have updated our
-                    membership plan feature, and employers will be able to view
-                    the jobseeker contact details only if they have that
-                    respective membership plan active.
-                  </span>
-                </li>
-                <li>
-                  <span>Optimized job search method.</span>
-                </li>
-                <li>
-                  <span>Minor bug fixes and UI improvements.</span>
-                </li>
-              </ul>
-              <p>
-                V4.0 - June 14th, 2022 - New features added and minor
-                improvements!
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    Job import using XML format:- Admin have the option to
-                    import the jobs in XML format with any third party URL. All
-                    the job records will be imported with selection of each XML
-                    parameter for corresponding values.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Auto assignment of categories:- Job category is
-                    automatically assigned for the best matched keyword while
-                    importing the jobs.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Import Jobseekers :- Employers can now{" "}
-                    <strong>import jobseekers</strong> in bulk through excel
-                    file by using the predefined format.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Announcement marquee :- Admin have ability to manage the
-                    announcements over the website which will show over the
-                    homepage.{" "}
-                  </span>
-                </li>
-              </ul>
-
-              <p>
-                V3.0 – June 29th, 2021 – New features added and design
-                improvements!
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    Search Job provided in the homepage for convenient searching
-                    with a new modern layout and even guest jobseekers can
-                    upload CV from the homepage itself.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Optimized job search with filters like title, skill,
-                    category and popular searches.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Upload video CV option where jobseekers can upload their{" "}
-                    <strong>video CV</strong> and employer can view it in
-                    jobseeker profile.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    A new layout with modern eye catching user interface
-                    components for every section in the web version.
-                  </span>
-                </li>
-              </ul>
-
-              <p>
-                V2.0 – November 03rd, 2020 – New features added and other small
-                improvements!
-              </p>
-              <ul>
-                <li>
-                  <span>Automatic Job Expiry feature.</span>
-                </li>
-                <li>
-                  <span>Membership plans for jobseekers.</span>
-                </li>
-                <li>
-                  <span>Performance improvements.</span>
-                </li>
-                <li>
-                  <span>Minor bug fixes</span>
-                </li>
-              </ul>
-              <p>
-                V1.0 – February 13th, 2020 – Major updates and design
-                improvements!
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    Modern design applied both for web version and apps.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <strong>Stripe</strong> payment gateway was integrated.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    New language as French added in frontend of the script.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Mail notification will send when job is posted, deleted and
-                    modified.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Provided ability to Recruiter to send email to any
-                    jobseeker.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Provided ability to admin to configure paypal with payment
-                    mode.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    New announcement section shown over home page in scrolling
-                    strip bar.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    New section as Professional certification/participation
-                    added in jobseeker profile.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Recruiter &amp; Jobseeker can delete profile by himself with
-                    specific reason.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Mail history will show in both Jobseeker &amp; recruiter
-                    panel.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> */}
+   
 
       <section className="job_portal_area job_portal_area_food">
         <div className="container">
@@ -2248,22 +1456,7 @@ const Page = () => {
             </h2>
             <br />
             <div className="logic-parter">
-              {/* <a
-                className=""
-                aria-controls="jobportal"
-                onClick={toggleJobPortalModal}
-              >
-                <i className="fa fa-cogs" aria-hidden="true"></i>
-                <span>How It Works</span>
-              </a> */}
-              {/* <a
-                className=""
-                aria-controls="buyjobportal"
-                onClick={toggleBuyJobPortalModal}
-              >
-                <i className="fa fa-building" aria-hidden="true"></i>
-                <span>Companies Using It</span>
-              </a> */}
+            
               <a onClick={toggleInfo} className="ylogicspice">
                 <i>
                   <Image
@@ -2282,244 +1475,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      {/* <div>
-        <Modal
-          show={jobportal}
-          onHide={toggleJobPortalModal}
-          id="jobportal"
-          className="modal-service"
-        >
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Body>
-            <Image
-              unoptimized={true}
-              width={900}
-              height={100}
-              src="/img/jobboard/Job_board_for_page.jpg"
-              alt="icon"
-              title=""
-              className="img-fluid"
-            />
-          </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
-
-        <Modal
-          show={buyjobportal}
-          onHide={toggleBuyJobPortalModal}
-          id="buyjobportal"
-          className="modal-service"
-        >
-          <Modal.Header
-            className="modal-dialog-service"
-            closeButton="close"
-          ></Modal.Header>
-          <Modal.Body>
-            <div id="jobboardclients" closeButton>
-              <Slider {...companies}>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://sellfomote.ch/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      sellfomote.ch
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://sellfomote.ch/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/sellfomote.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.ejtecs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ejtecs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.ejtecs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/ejtecs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://jobs.restrowizard.com.co/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      jobs.restrowizard.com.co
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://jobs.restrowizard.com.co/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/restrowizard.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.healthandsocialcarejobs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      healthandsocialcarejobs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.healthandsocialcarejobs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/healthandsocialcarejobs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.joblisto.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      joblisto.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.joblisto.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/joblisto.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.booyajobs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      booyajobs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.booyajobs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/booyajobs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.jobseakers.com.au/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      jobseakers.com.au
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.jobseakers.com.au/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/jobseakers.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-              </Slider>
-            </div>
-          </Modal.Body>
-          <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleBuyJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer>
-        </Modal>
-      </div> */}
-      <section className="used_technology_section" id="technologies">
+      
+      {/* <section className="used_technology_section" id="technologies">
         <div className="container">
           <h4 className="title_main">
             <span>Used Technologies</span> and Server Requirements
@@ -2604,7 +1561,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="whatsupport_section" id="support">
         <div className="container">
           <h4 className="title_main">
@@ -2683,10 +1640,7 @@ const Page = () => {
               <div className="ecommerce--review">
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext">
-                    As a growing business, we needed the best HR software for
-                    small business, and this is it! It’s affordable, efficient,
-                    and has everything we need to manage payroll, attendance,
-                    and performance.
+                  Most ticketing systems are either too complicated or too expensive. This one is perfect for our growing business—easy, efficient, and cost-effective!
                   </div>
                   <div className="who_ratset">
                     <span
@@ -2699,7 +1653,7 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    David L. Senior HR Coordinator
+                    Sophie T., Operations Manager
                     {/* <span>
                       <Image
                         unoptimized={true}
@@ -2714,11 +1668,7 @@ const Page = () => {
                 </div>
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
-                    We were looking for a solution that could scale with our
-                    growing team. This HRMS software has exceeded our
-                    expectations. From recruitment to employee management, it
-                    has made everything more efficient, and the support team has
-                    been incredibly responsive.
+                  We needed reliable help desk software, and Logicspice delivered! Setting up was simple, and our team got the hang of it in no time. The multi-channel support is a big plus.
                   </div>
 
                   <div className="who_ratset">
@@ -2732,7 +1682,7 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    <span id="client-name">Emily W., HR Head</span>{" "}
+                    <span id="client-name">Mark L., IT Support Lead</span>{" "}
                     {/* <span>
                       <Image
                         unoptimized={true}
@@ -2748,10 +1698,7 @@ const Page = () => {
 
                 <div className="customers_review_sec_row">
                   <div className="customer_review_stext" id="fiveer-clone">
-                    This HR and payroll software has completely transformed how
-                    we manage our team. The payroll process used to take hours
-                    every month, but now it’s automated and much faster. It’s a
-                    huge time-saver!
+                  We used to struggle with managing customer emails and support requests, but the Logicspice Support Ticket System changed everything. Now, we never miss a ticket, and our customers get faster responses.
                   </div>
 
                   <div className="who_ratset">
@@ -2765,7 +1712,7 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
-                    <span id="client-name">John P., HR Manager</span>{" "}
+                    <span id="client-name">David M., Business Owner</span>{" "}
                     {/* <span>
                       <Image
                         unoptimized={true}
@@ -2797,7 +1744,7 @@ const Page = () => {
                         style={{ width: "100%" }}
                       ></div>
                     </div>
-                    <div className="people_star_num">279</div>
+                    <div className="people_star_num">371</div>
                   </div>
 
                   <div className="review_rating_fjs">
@@ -2814,7 +1761,7 @@ const Page = () => {
                         style={{ width: "30%" }}
                       ></div>
                     </div>
-                    <div className="people_star_num">31</div>
+                    <div className="people_star_num">41</div>
                   </div>
 
                   <div className="review_rating_fjs">
@@ -2876,7 +1823,7 @@ const Page = () => {
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="Human Resource Management Software"
+                    title="Support Ticket System"
                   />
                 </div>
                 <div className="main-rait">
@@ -2906,19 +1853,13 @@ const Page = () => {
                         toggleAccordion(0);
                       }}
                       style={titleStyle}
-                    >
-                      <span>01. </span> What is HRMS software and how can it
-                      help my business?
+                    ><span>01. </span> What is the Logicspice Support Ticket System?
                     </a>
                   </div>
                   <div style={activeIndex === 0 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        HRMS software helps you manage everything related to
-                        your employees, like payroll, attendance, and
-                        performance, in one user-friendly platform. It enhances
-                        the speed and accuracy of HR tasks, saving your business
-                        time and reducing effort.
+                      Our support ticket system software is a tool that helps businesses manage customer inquiries efficiently. It tracks, organizes, and automates support tickets to ensure quick resolutions.
                       </p>
                     </div>
                   </div>
@@ -2934,15 +1875,14 @@ const Page = () => {
                       }}
                       style={titleStyle}
                     >
-                      <span>02. </span> Is your HRMS software easy to set up?
+                      <span>02. </span> Who can use this software?
                     </a>
                   </div>
                   <div style={activeIndex === 1 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes! Our HRMS software is very easy to set up. You don’t
-                        need any technical skills, and our team will help you
-                        get everything up and running quickly.
+                      Any business that provides customer support! It’s perfect for IT support teams, service-based businesses, eCommerce, healthcare, and more.
+
                       </p>
                     </div>
                   </div>
@@ -2958,18 +1898,13 @@ const Page = () => {
                       }}
                       style={titleStyle}
                     >
-                      <span>03. </span> Can your HRMS software handle payroll
-                      for small businesses?
+                      <span>03. </span>  Does it support multiple channels like email and chat? 
                     </a>
                   </div>
                   <div style={activeIndex === 2 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes, our{" "}
-                        <strong>best HR software for small business</strong> is
-                        perfect for managing payroll. It automatically
-                        calculates wages, handles tax deductions, and ensures
-                        everything is accurate and on time.
+                      Yes! Customers can submit tickets via email, live chat, or a web portal, and everything is managed in one central dashboard.
                       </p>
                     </div>
                   </div>
@@ -2985,17 +1920,13 @@ const Page = () => {
                         toggleAccordion(3);
                       }}
                     >
-                      <span>04. </span> How secure is the data in your HRMS
-                      solution?
+                      <span>04. </span> Can I automate responses and ticket assignments?
                     </a>
                   </div>
                   <div style={activeIndex === 3 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        We take security seriously. Our software uses strong
-                        security features like encryption and secure access to
-                        protect your data, so you can trust that your
-                        information is safe.
+                      Absolutely! Our best help desk software comes with automation features that assign tickets based on priority, team availability, or predefined rules.
                       </p>
                     </div>
                   </div>
@@ -3011,17 +1942,13 @@ const Page = () => {
                         toggleAccordion(4);
                       }}
                     >
-                      <span>05. </span> Can employees access their information
-                      in the system?
+                      <span>05. </span> Is it easy to set up?
                     </a>
                   </div>
                   <div style={activeIndex === 4 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes, employees can log in to see their profiles, check
-                        their pay, request time off, and track their
-                        performance, all through a simple and easy-to-use
-                        interface.
+                      Yes! No technical skills are required. We provide full setup support to help you get started quickly.
                       </p>
                     </div>
                   </div>
@@ -3037,16 +1964,14 @@ const Page = () => {
                         toggleAccordion(5);
                       }}
                     >
-                      <span>06. </span> Is the HRMS software suitable for global
-                      businesses?
+                      <span>06. </span> Is my data secure?
                     </a>
                   </div>
                   <div style={activeIndex === 5 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes! Our HRMS software works for businesses worldwide.
-                        It adjusts to local laws and rules, so it&apos;s perfect
-                        for companies with employees in different countries.
+                      Yes! Our customer support ticket system follows industry security standards, ensuring encrypted data storage and privacy protection.
+
                       </p>
                     </div>
                   </div>
@@ -3062,22 +1987,20 @@ const Page = () => {
                         toggleAccordion(6);
                       }}
                     >
-                      <span>07. </span> Can I track employee performance using
-                      your HRMS software?
+                      <span>07. </span>  Can I customize the software to match my brand?
                     </a>
                   </div>
                   <div style={activeIndex === 6 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes, our software lets you set goals and track employee
-                        performance, making it easier to review progress and
-                        give feedback.
+                      Yes! You can add your company logo, adjust workflows, and personalize settings to fit your business needs.
+
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* <div style={panelStyle} data-aos="fade-up">
+                <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>
                     <a
                       href="#collapse201"
@@ -3087,15 +2010,14 @@ const Page = () => {
                         toggleAccordion(7);
                       }}
                     >
-                      <span>08. </span> Can I update some design and
-                      functionality in application code myself?
+                      <span>08. </span> What kind of reports does the system provide?
                     </a>
                   </div>
                   <div style={activeIndex === 7 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        Yes, you will have access to all the code, except some
-                        of the core encrypted files.
+                      You get insights on ticket volume, response times, agent performance, and customer feedback, helping you improve your support strategy.
+
                       </p>
                     </div>
                   </div>
@@ -3111,21 +2033,20 @@ const Page = () => {
                         toggleAccordion(8);
                       }}
                     >
-                      <span>09. </span> Will I be able to use it on multiple
-                      domains after I purchase this script?
+                      <span>09. </span>  How do I get started?
                     </a>
                   </div>
                   <div style={activeIndex === 8 ? showStyle : collapseStyle}>
                     <div style={bodyStyle}>
                       <p>
-                        You will be licensed to use it only for the domain you
-                        purchased it for.
+                      Contact us today for a free demo and see how our support ticket system software can improve your customer service!
+
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div style={panelStyle} data-aos="fade-up">
+                {/* <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>
                     <a
                       href="#collapse203"
@@ -3385,10 +2306,10 @@ const Page = () => {
               <div className="btn btn-primary" onClick={openModal}>
                 <a>Enquire Now</a>
                 {
-                  <SoftwareEnquiry
+                  <EnquiryModal
                     modalStatus={showModal}
                     toggle={openModal}
-                    title="Human Resource Management Software"
+                    title="Support Ticket System"
                   />
                 }
               </div>
@@ -3513,7 +2434,10 @@ const Page = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
+
+
+

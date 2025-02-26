@@ -766,6 +766,12 @@ a:focus {
   }
 }
 
+@media (max-width: 400px){
+  .blog-image{
+    height: 150px;
+  }
+}
+
 @font-face {
   font-family: "interregular";
   src: url("/fonts/inter-regular-webfont.woff2") format("woff2"),

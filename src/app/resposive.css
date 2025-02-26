@@ -3401,6 +3401,14 @@
     display: inline-block;
   }
 
+  /* .SubscriptionModelPriceBx .job-pr-icon li{
+    border-right: none!important;
+  } */
+
+  .single_device {
+    border: unset!important;
+  }
+
   .job-portal-banner-link .my-breadcrumb {
     width: 100%;
   }

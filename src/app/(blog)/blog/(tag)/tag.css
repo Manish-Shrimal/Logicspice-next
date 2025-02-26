@@ -516,6 +516,7 @@
 
 /* Media Queries for better responsiveness */
 @media (min-width: 768px) {
+  
   .container {
     width: 750px;
   }
@@ -557,6 +558,12 @@
   .category-container {
     grid-column: 2;
     margin-left: 80px;
+  }
+}
+
+@media (max-width: 400px){
+  .blog-image{
+    height: 150px;
   }
 }
 

@@ -1393,7 +1393,7 @@ const Page = () => {
                 </div>
                 <div className="jocpp">
                   <ul className="job-pr-icon">
-                    <li>
+                    <li className="single_device">
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
                   </ul>

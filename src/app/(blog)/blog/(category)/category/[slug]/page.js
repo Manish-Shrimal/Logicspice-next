@@ -292,7 +292,7 @@ const Page = ({ params }) => {
               <Loader />
             ) : (
               <div className="blog-container">
-                <nav aria-label="breadcrumb" className="w-max mb-3">
+                {/* <nav aria-label="breadcrumb" className="w-max mb-3">
                   <ol class="flex flex-wrap items-center rounded-md bg-slate-100 px-4 py-2">
                     <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                       <Link href="/blog">
@@ -312,9 +312,40 @@ const Page = ({ params }) => {
                         /
                       </span>
                     </li>
-                    <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
+                    <li class="flex cursor-pointer items-center text-sm text-ellipsis overflow-hidden text-slate-500 transition-colors duration-300 hover:text-slate-800">
+                      <Link href="#">
+                        <p className="text-lg font-medium whitespace-nowrap text-ellipsis overflow-hidden max-w-full !pb-0 !mb-0">
+                          {params.slug
+                            .replace(/-/g, " ")
+                            .replace(/\b\w/g, (char) => char.toUpperCase())}
+                        </p>
+                      </Link>
+                    </li>
+                  </ol>
+                </nav> */}
+                <nav aria-label="breadcrumb" className="w-max mb-3">
+                  <ol className="flex flex-wrap items-center rounded-md bg-slate-100 px-4 py-2">
+                    <li className="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
+                      <Link href="/blog">
+                        <p className="text-lg font-medium !pb-0 !mb-0">Blog</p>
+                      </Link>
+                      <span className="pointer-events-none mx-2 text-slate-800">
+                        /
+                      </span>
+                    </li>
+                    <li className="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                       <Link href="#">
                         <p className="text-lg font-medium !pb-0 !mb-0">
+                          Category
+                        </p>
+                      </Link>
+                      <span className="pointer-events-none mx-2 text-slate-800">
+                        /
+                      </span>
+                    </li>
+                    <li className="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
+                      <Link href="#">
+                        <p className="text-lg font-medium whitespace-nowrap text-ellipsis overflow-hidden max-w-28 sm:max-w-sm !pb-0 !mb-0">
                           {params.slug
                             .replace(/-/g, " ")
                             .replace(/\b\w/g, (char) => char.toUpperCase())}
@@ -323,6 +354,7 @@ const Page = ({ params }) => {
                     </li>
                   </ol>
                 </nav>
+
                 {currentBlogs.length > 0 ? (
                   currentBlogs.map((blog, i) => (
                     <div className="blog-box" key={blog.id}>

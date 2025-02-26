@@ -420,7 +420,7 @@ const Page = ({ params }) => {
     <>
       <Navbar />
       <div>
-        <div className="container mt-32">
+        <div className="container mt-16 lg:mt-32">
           <div className="main-blog-container">
             <>
               {searchResults.length > 0 ? (
@@ -439,10 +439,11 @@ const Page = ({ params }) => {
                       </li>
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="#">
-                          <p className="text-lg font-medium !pb-0 !mb-0">
-                            {blogData.subject.length > 60
-                              ? blogData.subject.slice(0, 60) + "..."
-                              : blogData.subject}
+                          <p className="text-lg font-medium whitespace-nowrap text-ellipsis overflow-hidden max-w-40 sm:max-w-64 !pb-0 !mb-0">
+                            {/* {blogData.subject.length > 20
+                              ? blogData.subject.slice(0, 20) + "..."
+                              : blogData.subject} */}
+                              {blogData.subject}
                           </p>
                         </Link>
                       </li>
@@ -628,10 +629,11 @@ const Page = ({ params }) => {
                       </li>
                       <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                         <Link href="#">
-                          <p className="text-lg font-medium !pb-0 !mb-0">
-                            {blogData.subject.length > 60
-                              ? blogData.subject.slice(0, 60) + "..."
-                              : blogData.subject}
+                          <p className="text-lg whitespace-nowrap text-ellipsis overflow-hidden max-w-36 sm:max-w-64 font-medium !pb-0 !mb-0">
+                            {/* {blogData.subject.length > 20
+                              ? blogData.subject.slice(0, 20) + "..."
+                              : blogData.subject} */}
+                              {blogData.subject}
                           </p>
                         </Link>
                       </li>

@@ -310,7 +310,7 @@ const Page = ({ params }) => {
                     </li>
                     <li class="flex cursor-pointer items-center text-sm text-slate-500 transition-colors duration-300 hover:text-slate-800">
                       <Link href="#">
-                        <p className="text-lg font-medium !pb-0 !mb-0">
+                        <p className="text-lg whitespace-nowrap text-ellipsis overflow-hidden max-w-28 sm:max-w-sm font-medium !pb-0 !mb-0">
                           {params.slug
                             .replace(/-/g, " ")
                             .replace(/\b\w/g, (char) => char.toUpperCase())}
