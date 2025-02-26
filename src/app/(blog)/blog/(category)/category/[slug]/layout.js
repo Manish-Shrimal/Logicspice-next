@@ -10,12 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/blog`, {
+  const product = await fetch(`${BaseAPI}/blog/getMetadataByCategory/${params.slug}`, {
     cache: "no-store",
   }).then((res) => res.json());
 
   let pageSlug = params;
-
+  
   let text = product.data.schema;
 
   let schemaOrg = null;
@@ -34,7 +34,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
-    keywords: product.data.meta_keyword,
+    keywords: JSON.parse(product.data.meta_keyword),
     // Add other meta tags as needed
     alternates: {
       canonical: `${Domain}/blog/category/${params.slug}`,

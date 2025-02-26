@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/blog`, {
+  const product = await fetch(`${BaseAPI}/blog/getMetadataByTag/${params.slug}`, {
     cache: "no-store",
   }).then((res) => res.json());
 
@@ -30,11 +30,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
     schemaOrg = cleanedText && JSON.parse(cleanedText);
   }
 
-  // Return metadata
   return {
     title: product.data.meta_title,
     description: product.data.meta_description,
-    keywords: product.data.meta_keyword,
+    keywords: JSON.parse(product.data.meta_keyword),
     // Add other meta tags as needed
     alternates: {
       canonical: `${Domain}/blog/tag/${params.slug}`,
