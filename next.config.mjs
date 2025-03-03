@@ -491,22 +491,22 @@ const nextConfig = {
       },
       {
         source: "/hire-experts/codeigniter-developers",
-        destination: "/hire-codeignitor-developers",
+        destination: "/hire-codeigniter-developers",
         permanent: true,
       },
       {
         source: "/hire-experts/codeigniter-developers/",
-        destination: "/hire-codeignitor-developers",
+        destination: "/hire-codeigniter-developers",
         permanent: true,
       },
       {
         source: "/hire-codeigniter-developers",
-        destination: "/hire-codeignitor-developers",
+        destination: "/hire-codeigniter-developers",
         permanent: true,
       },
       {
         source: "/hire-codeigniter-developers/",
-        destination: "/hire-codeignitor-developers",
+        destination: "/hire-codeigniter-developers",
         permanent: true,
       },
       {
@@ -713,6 +713,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/auction-software-solution/",
+        destination: "/auction-software-solution",
+        permanent: true,
+      },
+      {
         source: "/custom_solutions/php-auction-script",
         destination: "/auction-software-solution",
         permanent: true,
@@ -727,11 +732,11 @@ const nextConfig = {
         destination: "/auction-software-solution",
         permanent: true,
       },
-      {
-        source: "/Auction-software-solution",
-        destination: "/auction-software-solution",
-        permanent: true,
-      },
+      // {
+      //   source: "/Auction-software-solution",
+      //   destination: "/auction-software-solution",
+      //   permanent: true,
+      // },
       {
         source: "/products/auction-script.htm",
         destination: "/auction-software-solution",
@@ -1889,6 +1894,11 @@ const nextConfig = {
       {
         source: "/services/professional-training/",
         destination: "https://plp.logicspice.com/",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/chatgpt-1",
+        destination: "/blog/category/chatgpt",
         permanent: true,
       },
 

@@ -10,14 +10,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 // export async function generateMetadata({ params, searchParams }, parent) {
 //   // Fetch data
-//   const product = await fetch(`${BaseAPI}/blog/getMetadataByCategory/${params.slug}`, {
-//     cache: "no-store",
-//   }).then((res) => res.json());
+//   const product = await fetch(
+//     `${BaseAPI}/blog/getMetadataByCategory/${params.slug}`,
+//     {
+//       cache: "no-store",
+//     }
+//   ).then((res) => res.json());
 
 //   let pageSlug = params;
 
 //   let text = product.data.meta_keyword;
 
+//   // Use the meta_keyword directly if it's not a JSON string
 //   let keywordOrg = null;
 //   if (text) {
 //     const cleanedText = text
@@ -27,7 +31,7 @@ const inter = Inter({ subsets: ["latin"] });
 //       .replace(/\\+/g, "") // Remove unnecessary backslashes
 //       .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-//     keywordOrg = cleanedText && JSON.parse(cleanedText);
+//     keywordOrg = cleanedText; // Use the cleaned text directly without parsing it as JSON
 //   }
 
 //   // Return metadata
@@ -53,55 +57,82 @@ const inter = Inter({ subsets: ["latin"] });
 //     // schemaOrg: schemaOrg || null,
 //   };
 // }
-
 export async function generateMetadata({ params, searchParams }, parent) {
-  // Fetch data
-  const product = await fetch(
-    `${BaseAPI}/blog/getMetadataByCategory/${params.slug}`,
-    {
-      cache: "no-store",
+  try {
+    // Fetch data
+    const product = await fetch(
+      `${BaseAPI}/blog/getMetadataByCategory/${params.slug}`,
+      {
+        cache: "no-store",
+      }
+    ).then((res) => res.json());
+
+    // Check if 'product.data' exists
+    if (!product || !product.data) {
+      throw new Error("Product data is missing");
     }
-  ).then((res) => res.json());
 
-  let pageSlug = params;
+    let pageSlug = params;
 
-  let text = product.data.meta_keyword;
+    // Check if 'meta_keyword' exists
+    let text = product.data.meta_keyword || "";
 
-  // Use the meta_keyword directly if it's not a JSON string
-  let keywordOrg = null;
-  if (text) {
-    const cleanedText = text
-      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, "") // Remove \n (newline)
-      .replace(/\\r/g, "") // Remove \r (carriage return)
-      .replace(/\\+/g, "") // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
+    // Use the meta_keyword directly if it's not a JSON string
+    let keywordOrg = null;
+    if (text) {
+      const cleanedText = text
+        .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+        .replace(/\\n/g, "") // Remove \n (newline)
+        .replace(/\\r/g, "") // Remove \r (carriage return)
+        .replace(/\\+/g, "") // Remove unnecessary backslashes
+        .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-    keywordOrg = cleanedText; // Use the cleaned text directly without parsing it as JSON
-  }
+      keywordOrg = cleanedText; // Use the cleaned text directly without parsing it as JSON
+    }
 
-  // Return metadata
-  return {
-    title: product.data.meta_title,
-    description: product.data.meta_description,
-    keywords: keywordOrg,
-    // Add other meta tags as needed
-    alternates: {
-      canonical: `${Domain}/blog/category/${params.slug}`,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
+    // Return metadata
+    return {
+      title: product.data.meta_title,
+      description: product.data.meta_description,
+      keywords: keywordOrg,
+      alternates: {
+        canonical: `${Domain}/blog/category/${params.slug}`,
+      },
+      robots: {
         index: true,
         follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
       },
-    },
-    // schemaOrg: schemaOrg || null,
-  };
+    };
+  } catch (error) {
+    console.error("Error fetching metadata:", error.message);
+    // Handle error appropriately, e.g., return fallback metadata
+    return {
+      title: "Default Title",
+      description: "Default Description",
+      keywords: "",
+      alternates: {
+        canonical: `${Domain}/blog/category/${params.slug}`,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
+    };
+  }
 }
 
 export default async function RootLayout({ children, params, searchParams }) {
