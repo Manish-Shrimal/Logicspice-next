@@ -1903,11 +1903,13 @@ const nextConfig = {
       },
 
       // blog
-      // {
-      //   source: "/blog/why-choose-wordpress-for-your-website-development",
-      //   destination: "https://blog.logicspice.com/why-choose-wordpress-for-your-website-development",
-      //   permanent: true,
-      // },
+
+      
+      {
+        source: "/blog/guest-posting-strategies-for-tech-enthusiasts-tips-and-tricks",
+        destination: "/blog/guest-posting-strategies-for-tech-enthusiasts",
+        permanent: true,
+      },
       // {
       //   source: "/blog/startup-ideas-for-small-business-with-low-investment",
       //   destination: "https://blog.logicspice.com/startup-ideas-for-small-business-with-low-investment",
