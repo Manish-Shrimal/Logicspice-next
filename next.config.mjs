@@ -20,7 +20,7 @@ const nextConfig = {
       "www.logicspice.com",
       "lswebsitedemo.logicspice.com",
       "manage.logicspice.com",
-      "blog.logicspice.com"
+      "blog.logicspice.com",
     ],
   },
 
@@ -329,7 +329,7 @@ const nextConfig = {
         permanent: true,
       },
       // Industries
-      
+
       {
         source: "/industries/commercial-and-residential-real-estate-apps",
         destination: "/industries/commercial-and-residential-apps",
@@ -366,7 +366,7 @@ const nextConfig = {
         destination: "/industries",
         permanent: true,
       },
-     
+
       {
         source: "/industries/Hotels-apps/",
         destination: "/industries/Hotel-apps",
@@ -593,12 +593,14 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/services/software-development/online-booking-software-solution",
+        source:
+          "/services/software-development/online-booking-software-solution",
         destination: "/booking-app-development",
         permanent: true,
       },
       {
-        source: "/services/software-development/online-booking-software-solution/",
+        source:
+          "/services/software-development/online-booking-software-solution/",
         destination: "/booking-app-development",
         permanent: true,
       },
@@ -1068,7 +1070,7 @@ const nextConfig = {
         destination: "/website-design",
         permanent: true,
       },
-      
+
       {
         source: "/technologies/php-framework",
         destination: "/php-development",
@@ -1079,7 +1081,7 @@ const nextConfig = {
         destination: "/hire-yii-developers",
         permanent: true,
       },
-      
+
       {
         source: "/products/ecommerce-script",
         destination: "/ecommerce-website",
@@ -1301,7 +1303,7 @@ const nextConfig = {
         destination: "/ios-app-development",
         permanent: true,
       },
-      
+
       {
         source: "/artificial-",
         destination: "/artificial-intelligence",
@@ -1890,7 +1892,7 @@ const nextConfig = {
         destination: "https://plp.logicspice.com/",
         permanent: true,
       },
-      
+
       {
         source: "/services/professional-training/",
         destination: "https://plp.logicspice.com/",
@@ -1904,10 +1906,49 @@ const nextConfig = {
 
       // blog
 
-      
       {
         source: "/blog/guest-posting-strategies-for-tech-enthusiasts-tips-and-tricks",
         destination: "/blog/guest-posting-strategies-for-tech-enthusiasts",
+        permanent: true,
+      },
+      {
+        source: "/blog/one-of-the-useful-seo-techniques-to-make-your-website-search-engine-friendly",
+        destination: "/blog/web-applications-gaining-popularity",
+        permanent: true,
+      },
+      {
+        source: "/blog/a-compatible-tool-for-web-designing-html-5",
+        destination: "/blog/compatible-html5-tools-for-web-designing",
+        permanent: true,
+      },
+      {
+        source: "/blog/chatgpt-how-does-It-works-and-its-limitations",
+        destination: "/blog/how-does-ChatGPT-work-and-its-limitations",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-our-clients-say-about-us-on-social-platforms-business-profiles",
+        destination: "/blog/client-reviews-social-profiles",
+        permanent: true,
+      },
+      {
+        source: "/blog/unlocking-the-secrets-to-effective-candidate-tracking-the-role-of-recruitment-management-software",
+        destination: "/blog/the-role-of-recruitment-management-software",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-future-of-e-commerce-how-artificial-intelligence-is-changing-the-game",
+        destination: "/blog/future-of-e-commerce-ai",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-impact-of-ai-on-mobile-app-development-trends-and-innovations",
+        destination: "/blog/ai-in-mobile-app-development",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-future-of-blockchain-top-trends-shaping-the-industry-in-2024",
+        destination: "/blog/future-of-blockchain-2024",
         permanent: true,
       },
       // {
