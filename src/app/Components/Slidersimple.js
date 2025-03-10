@@ -74,7 +74,7 @@ const Slidersimple = () => {
               <div className="col-xs-12 col-sm-6 col-md-6 pull-left">
                 <div className="HomeSliderTxt">
                   <h2>
-                    Mobile Apps Development{" "}
+                    Mobile App Development{" "}
                     <span className="smallText">Company</span>
                   </h2>
                   <p>
