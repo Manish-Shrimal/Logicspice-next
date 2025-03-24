@@ -29,15 +29,11 @@ const Slidersimple = () => {
         breakpoint: 768, // You can adjust the breakpoint based on your needs
         settings: {
           dots: false, // Hide dots below 768px screen width
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
-
-  
-
-  
   return (
     <>
       <Slider {...settings}>
@@ -48,6 +44,7 @@ const Slidersimple = () => {
                 <div className="HomeBannerImg">
                   <div className="LeftGolImg balloon">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/gol-img.webp"
@@ -56,6 +53,7 @@ const Slidersimple = () => {
                   </div>
                   <div className="LeftTxtImg">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/job-text-img.webp"
@@ -63,6 +61,7 @@ const Slidersimple = () => {
                     />
                   </div>
                   <Image
+                    priority
                     width={500}
                     height={100 / (100 / 100)}
                     className="AppDevelomentsImgHome"
@@ -82,10 +81,7 @@ const Slidersimple = () => {
                     <br />
                     1800+ projects | 18+ years | 60% repeat clients
                   </p>
-                  <Link
-                    href="/portfolio"
-                    className="btn btn-primary bt34"
-                  >
+                  <Link href="/portfolio" className="btn btn-primary bt34">
                     PORTFOLIO
                   </Link>{" "}
                   <Link
@@ -106,6 +102,7 @@ const Slidersimple = () => {
                 <div className="HomeBannerImg">
                   <div className="GrouponIcons1">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/groupon-icon1.webp"
@@ -114,6 +111,7 @@ const Slidersimple = () => {
                   </div>
                   <div className="GrouponIcons2">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/groupon-icon2.webp"
@@ -122,6 +120,7 @@ const Slidersimple = () => {
                   </div>
                   <div className="GrouponIcons3">
                     <Image
+                      priority
                       width={500}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/groupon-icon3.webp"
@@ -129,6 +128,7 @@ const Slidersimple = () => {
                     />
                   </div>
                   <Image
+                    priority
                     width={500}
                     height={100 / (100 / 100)}
                     src="/img/home/top-banner/groupon-development-banner.webp"
@@ -142,10 +142,7 @@ const Slidersimple = () => {
                     Groupon Clone <span>Script</span>
                   </h2>
                   <p>Similar to Daily Deal Software &amp; Coupon Script</p>
-                  <Link
-                    className="btn btn-primary"
-                    href="/groupon-clone"
-                  >
+                  <Link className="btn btn-primary" href="/groupon-clone">
                     KNOW MORE
                   </Link>
                 </div>
@@ -160,6 +157,7 @@ const Slidersimple = () => {
                 <div className="HomeBannerImg">
                   <div className="FivverIcons1">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon1.webp"
@@ -168,6 +166,7 @@ const Slidersimple = () => {
                   </div>
                   <div className="FivverIcons2">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon2.webp"
@@ -176,6 +175,7 @@ const Slidersimple = () => {
                   </div>
                   <div className="FivverIcons3">
                     <Image
+                      priority
                       width={500}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon3.webp"
@@ -184,6 +184,7 @@ const Slidersimple = () => {
                   </div>
                   <div className="FivverIcons4">
                     <Image
+                      priority
                       width={100}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/fivver-icon4.webp"
@@ -191,6 +192,7 @@ const Slidersimple = () => {
                     />
                   </div>
                   <Image
+                    priority
                     width={500}
                     height={100 / (100 / 100)}
                     src="/img/home/top-banner/fivver-development-banner.webp"
@@ -204,10 +206,7 @@ const Slidersimple = () => {
                     Fiverr Clone <span>Script</span>
                   </h2>
                   <p>Online Micro Job Portal Software and Mobile Apps</p>
-                  <Link
-                    className="btn btn-primary"
-                    href="/fiverr-clone"
-                  >
+                  <Link className="btn btn-primary" href="/fiverr-clone">
                     KNOW MORE
                   </Link>
                 </div>
@@ -224,6 +223,7 @@ const Slidersimple = () => {
                   <div className="HomeBannerImg">
                     <div className="FreelancerIcons1">
                       <Image
+                        priority
                         width={100}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon1.webp"
@@ -232,6 +232,7 @@ const Slidersimple = () => {
                     </div>
                     <div className="FreelancerIcons2">
                       <Image
+                        priority
                         width={100}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon2.webp"
@@ -240,6 +241,7 @@ const Slidersimple = () => {
                     </div>
                     <div className="FreelancerIcons3">
                       <Image
+                        priority
                         width={100}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/fivver-icon4.webp"
@@ -248,6 +250,7 @@ const Slidersimple = () => {
                     </div>
                     <div className="FreelancerIcons4">
                       <Image
+                        priority
                         width={500}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon2.webp"
@@ -256,6 +259,7 @@ const Slidersimple = () => {
                     </div>
                     <div className="FreelancerIcons5">
                       <Image
+                        priority
                         width={100}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/freelancer-icon3.webp"
@@ -263,6 +267,7 @@ const Slidersimple = () => {
                       />
                     </div>
                     <Image
+                      priority
                       width={500}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/freelancer-development-banner.webp"
@@ -278,10 +283,7 @@ const Slidersimple = () => {
                     <p>
                       Freelance Marketplace software &amp; Upwork clone script
                     </p>
-                    <Link
-                      className="btn btn-primary"
-                      href="/freelancer-clone"
-                    >
+                    <Link className="btn btn-primary" href="/freelancer-clone">
                       KNOW MORE
                     </Link>
                   </div>
@@ -299,6 +301,7 @@ const Slidersimple = () => {
                   <div className="HomeBannerImg">
                     <div className="LaravelIcons1">
                       <Image
+                        priority
                         width={500}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/laravel-icon1.webp"
@@ -307,6 +310,7 @@ const Slidersimple = () => {
                     </div>
                     <div className="LaravelIcons2">
                       <Image
+                        priority
                         width={500}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/laravel-icon2.webp"
@@ -314,6 +318,7 @@ const Slidersimple = () => {
                       />
                     </div>
                     <Image
+                      priority
                       width={500}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/laravel-development-banner.webp"
@@ -350,6 +355,7 @@ const Slidersimple = () => {
                   <div className="HomeBannerImg">
                     <div className="ClassifiedIcons1">
                       <Image
+                        priority
                         width={100}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/classified-icon1.webp"
@@ -358,6 +364,7 @@ const Slidersimple = () => {
                     </div>
                     <div className="ClassifiedIcons2">
                       <Image
+                        priority
                         width={500}
                         height={100 / (100 / 100)}
                         src="/img/home/top-banner/classified-icon2.webp"
@@ -365,6 +372,7 @@ const Slidersimple = () => {
                       />
                     </div>
                     <Image
+                      priority
                       width={500}
                       height={100 / (100 / 100)}
                       src="/img/home/top-banner/classified-development-banner.webp"

@@ -11,6 +11,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon1.png"
             alt=""
+            loading="lazy"
           />
         </div>
         <div class="IndustriesIcon2">
@@ -19,6 +20,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon2.png"
             alt=""
+            loading="lazy"
           />
         </div>
         <div class="IndustriesIcon3">
@@ -27,6 +29,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon3.png"
             alt=""
+              loading="lazy"
           />
         </div>
         <div class="IndustriesIcon4">
@@ -35,6 +38,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon4.png"
             alt=""
+              loading="lazy"
           />
         </div>
         <div class="IndustriesIcon5">
@@ -43,6 +47,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon5.png"
             alt=""
+              loading="lazy"
           />
         </div>
         <div class="IndustriesIcon6">
@@ -51,6 +56,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon6.png"
             alt=""
+              loading="lazy"
           />
         </div>
         <div class="IndustriesIcon7">
@@ -59,6 +65,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon7.png"
             alt=""
+              loading="lazy"
           />
         </div>
         <div class="IndustriesIcon8">
@@ -67,6 +74,7 @@ const IndustriesWeServe = () => {
             height={100}
             src="/img/home/industries/icon8.png"
             alt=""
+              loading="lazy"
           />
         </div>
         <div className="container">

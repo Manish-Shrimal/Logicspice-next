@@ -146,11 +146,165 @@
 // export default ServicesNewSection;
 
 
+// import React from "react";
+// import Image from "next/image";
+// import AOS from "aos"; // Import AOS
+// import "../resposive.css";
+// import Link from "next/link";
+
+// const ServicesNewSection = () => {
+//   return (
+//     <section className="ServicesNewSection">
+      
+//       <div className="container">
+//         <div className="positivity">
+//           <div className="positivitymain">
+//             {/* Mobile Development Section */}
+//             <div
+//               className="ServiceTextAnimationWeb ServiceTextApp hidediv"
+//               id="mobilediv"
+//               style={{ display: "none", opacity: "0" }}
+//             >
+//               <span className="positivity__alone">Mobile app development</span>
+//               <div className="positivity__words">
+//                 <span className="change color-blue">
+//                   Your vision, Our expertise, Live results
+//                   <i>
+//                     <Image
+//                      priority={true}
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/your-vision.png"
+//                       alt="icon"
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-red">
+//                   Turning vision into apps
+//                   <i>
+//                     <Image
+//                      priority={true}
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/turning-vision.png"
+//                       alt="icon"
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-yellow">
+//                   Empower business solutions
+//                   <i>
+//                     <Image
+//                        priority={true}
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/empower-business.png"
+//                       alt="icon"
+//                     />
+//                   </i>
+//                 </span>
+//               </div>
+//             </div>
+
+//             {/* Web Development Section */}
+//             <div
+//               className="ServiceTextAnimationWeb ServiceTextApp showdiv"
+//               id="websitediv"
+//               style={{ opacity: "1" }}
+//             >
+//               <span className="positivity__alone">Web development</span>
+//               <div className="positivity__words">
+//                 <span className="change color-blue">
+//                   Seamless web: Design, function, UX
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/ux-design.png"
+//                       alt="icon"
+//                       priority={true}
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-red">
+//                   Turning ideas into responsive web
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/responsive-web.png"
+//                       alt="icon"
+//                       priority={true}
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-yellow">
+//                   Laravel experts, web &amp; app solutions
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/laravel-experts.png"
+//                       alt="icon"
+//                       priority={true}
+//                     />
+//                   </i>
+//                 </span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="MoreServicesBtn">
+//           <Link href="/services" rel="preload" className="">
+//             <span>
+//               More Services
+//               <i>
+//                 <Image
+//                   layout="fixed"
+//                   width={20}
+//                   height={20}
+//                   src="/img/home/top-banner/rightArrowIcon.svg"
+//                   alt="icon"
+//                   priority={true}
+//                 />
+//               </i>
+//             </span>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ServicesNewSection;
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
 import Image from "next/image";
-import AOS from "aos"; // Import AOS
-import "../resposive.css";
 import Link from "next/link";
+import "../resposive.css";
 
 const ServicesNewSection = () => {
   return (
@@ -158,7 +312,7 @@ const ServicesNewSection = () => {
       <div className="container">
         <div className="positivity">
           <div className="positivitymain">
-            {/* Mobile Development Section */}
+            {/* Mobile Development Section (Initially Hidden) */}
             <div
               className="ServiceTextAnimationWeb ServiceTextApp hidediv"
               id="mobilediv"
@@ -175,7 +329,7 @@ const ServicesNewSection = () => {
                       height={100}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/your-vision.png"
-                      alt="icon"
+                      alt="Your Vision Icon"
                     />
                   </i>
                 </span>
@@ -188,7 +342,7 @@ const ServicesNewSection = () => {
                       height={100}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/turning-vision.png"
-                      alt="icon"
+                      alt="Turning Vision Icon"
                     />
                   </i>
                 </span>
@@ -201,14 +355,14 @@ const ServicesNewSection = () => {
                       height={100}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/empower-business.png"
-                      alt="icon"
+                      alt="Empower Business Icon"
                     />
                   </i>
                 </span>
               </div>
             </div>
 
-            {/* Web Development Section */}
+            {/* Web Development Section (Visible by Default) */}
             <div
               className="ServiceTextAnimationWeb ServiceTextApp showdiv"
               id="websitediv"
@@ -225,7 +379,9 @@ const ServicesNewSection = () => {
                       height={100}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/ux-design.png"
-                      alt="icon"
+                      alt="UX Design Icon"
+                      priority={true} // ✅ Only this image has priority
+                      loading="eager"
                     />
                   </i>
                 </span>
@@ -238,7 +394,7 @@ const ServicesNewSection = () => {
                       height={100}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/responsive-web.png"
-                      alt="icon"
+                      alt="Responsive Web Icon"
                     />
                   </i>
                 </span>
@@ -251,7 +407,7 @@ const ServicesNewSection = () => {
                       height={100}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/laravel-experts.png"
-                      alt="icon"
+                      alt="Laravel Experts Icon"
                     />
                   </i>
                 </span>
@@ -260,8 +416,9 @@ const ServicesNewSection = () => {
           </div>
         </div>
 
+        {/* More Services Button */}
         <div className="MoreServicesBtn">
-          <Link href="/services" className="">
+          <Link href="/services" rel="preload">
             <span>
               More Services
               <i>
@@ -270,7 +427,7 @@ const ServicesNewSection = () => {
                   width={20}
                   height={20}
                   src="/img/home/top-banner/rightArrowIcon.svg"
-                  alt="icon"
+                  alt="Right Arrow Icon"
                 />
               </i>
             </span>
@@ -282,3 +439,4 @@ const ServicesNewSection = () => {
 };
 
 export default ServicesNewSection;
+
