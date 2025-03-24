@@ -339,7 +339,7 @@ const ServicesNewSection = () => {
                     <Image
                       layout="responsive"
                       width={600}
-                      height={100}
+                      height={553}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/turning-vision.png"
                       alt="Turning Vision Icon"
@@ -352,7 +352,7 @@ const ServicesNewSection = () => {
                     <Image
                       layout="responsive"
                       width={600}
-                      height={100}
+                      height={553}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/empower-business.png"
                       alt="Empower Business Icon"
@@ -376,7 +376,7 @@ const ServicesNewSection = () => {
                     <Image
                       layout="responsive"
                       width={600}
-                      height={100}
+                      height={553}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/ux-design.png"
                       alt="UX Design Icon"
@@ -391,7 +391,7 @@ const ServicesNewSection = () => {
                     <Image
                       layout="responsive"
                       width={600}
-                      height={100}
+                      height={553}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/responsive-web.png"
                       alt="Responsive Web Icon"
@@ -404,7 +404,7 @@ const ServicesNewSection = () => {
                     <Image
                       layout="responsive"
                       width={600}
-                      height={100}
+                      height={553}
                       sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/laravel-experts.png"
                       alt="Laravel Experts Icon"
