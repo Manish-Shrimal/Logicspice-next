@@ -301,68 +301,224 @@
 
 
 
-import React from "react";
+// import React from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import "../resposive.css";
+
+// const ServicesNewSection = () => {
+//   return (
+//     <section className="ServicesNewSection">
+//       <div className="container">
+//         <div className="positivity">
+//           <div className="positivitymain">
+//             {/* Mobile Development Section (Initially Hidden) */}
+//             <div
+//               className="ServiceTextAnimationWeb ServiceTextApp hidediv"
+//               id="mobilediv"
+//               style={{ display: "none", opacity: "0" }}
+//             >
+//               <span className="positivity__alone">Mobile app development</span>
+//               <div className="positivity__words">
+//                 <span className="change color-blue">
+//                   Your vision, Our expertise, Live results
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={100}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/your-vision.png"
+//                       alt="Your Vision Icon"
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-red">
+//                   Turning vision into apps
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={553}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/turning-vision.png"
+//                       alt="Turning Vision Icon"
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-yellow">
+//                   Empower business solutions
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={553}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/empower-business.png"
+//                       alt="Empower Business Icon"
+//                     />
+//                   </i>
+//                 </span>
+//               </div>
+//             </div>
+
+//             {/* Web Development Section (Visible by Default) */}
+//             <div
+//               className="ServiceTextAnimationWeb ServiceTextApp showdiv"
+//               id="websitediv"
+//               style={{ opacity: "1" }}
+//             >
+//               <span className="positivity__alone">Web development</span>
+//               <div className="positivity__words">
+//                 <span className="change color-blue">
+//                   Seamless web: Design, function, UX
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={553}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/ux-design.png"
+//                       alt="UX Design Icon"
+//                       priority={true} // ✅ Only this image has priority
+//                       loading="eager"
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-red">
+//                   Turning ideas into responsive web
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={553}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/responsive-web.png"
+//                       alt="Responsive Web Icon"
+//                     />
+//                   </i>
+//                 </span>
+//                 <span className="change color-yellow">
+//                   Laravel experts, web &amp; app solutions
+//                   <i>
+//                     <Image
+//                       layout="responsive"
+//                       width={600}
+//                       height={553}
+//                       sizes="(max-width: 768px) 100vw, 600px"
+//                       src="/img/home/laravel-experts.png"
+//                       alt="Laravel Experts Icon"
+//                     />
+//                   </i>
+//                 </span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* More Services Button */}
+//         <div className="MoreServicesBtn">
+//           <Link href="/services" rel="preload">
+//             <span>
+//               More Services
+//               <i>
+//                 <Image
+//                   layout="fixed"
+//                   width={20}
+//                   height={20}
+//                   src="/img/home/top-banner/rightArrowIcon.svg"
+//                   alt="Right Arrow Icon"
+//                 />
+//               </i>
+//             </span>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ServicesNewSection;
+
+
+
+
+
+
+
+
+
+
+"use client"; // If using Next.js 13+ with app directory
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../resposive.css";
 
 const ServicesNewSection = () => {
+  const [showMobileDiv, setShowMobileDiv] = useState(false);
+
+  useEffect(() => {
+    // Render mobile section only after initial mount
+    setShowMobileDiv(true);
+  }, []);
+
   return (
     <section className="ServicesNewSection">
       <div className="container">
         <div className="positivity">
           <div className="positivitymain">
-            {/* Mobile Development Section (Initially Hidden) */}
-            <div
-              className="ServiceTextAnimationWeb ServiceTextApp hidediv"
-              id="mobilediv"
-              style={{ display: "none", opacity: "0" }}
-            >
-              <span className="positivity__alone">Mobile app development</span>
-              <div className="positivity__words">
-                <span className="change color-blue">
-                  Your vision, Our expertise, Live results
-                  <i>
-                    <Image
-                      layout="responsive"
-                      width={600}
-                      height={100}
-                      sizes="(max-width: 768px) 100vw, 600px"
-                      src="/img/home/your-vision.png"
-                      alt="Your Vision Icon"
-                    />
-                  </i>
-                </span>
-                <span className="change color-red">
-                  Turning vision into apps
-                  <i>
-                    <Image
-                      layout="responsive"
-                      width={600}
-                      height={553}
-                      sizes="(max-width: 768px) 100vw, 600px"
-                      src="/img/home/turning-vision.png"
-                      alt="Turning Vision Icon"
-                    />
-                  </i>
-                </span>
-                <span className="change color-yellow">
-                  Empower business solutions
-                  <i>
-                    <Image
-                      layout="responsive"
-                      width={600}
-                      height={553}
-                      sizes="(max-width: 768px) 100vw, 600px"
-                      src="/img/home/empower-business.png"
-                      alt="Empower Business Icon"
-                    />
-                  </i>
-                </span>
+            {/* Mobile Development Section - Delayed Render */}
+            {showMobileDiv && (
+              <div
+                className="ServiceTextAnimationWeb ServiceTextApp hidediv"
+                id="mobilediv"
+                style={{ opacity: "0", display: "none" }}
+              >
+                <span className="positivity__alone">Mobile app development</span>
+                <div className="positivity__words">
+                  <span className="change color-blue">
+                    Your vision, Our expertise, Live results
+                    <i>
+                      <Image
+                        src="/img/home/your-vision.png"
+                        alt="Your Vision Icon"
+                        width={600}
+                        height={100}
+                        loading="lazy"
+                      />
+                    </i>
+                  </span>
+                  <span className="change color-red">
+                    Turning vision into apps
+                    <i>
+                      <Image
+                        src="/img/home/turning-vision.png"
+                        alt="Turning Vision Icon"
+                        width={600}
+                        height={553}
+                        loading="lazy"
+                      />
+                    </i>
+                  </span>
+                  <span className="change color-yellow">
+                    Empower business solutions
+                    <i>
+                      <Image
+                        src="/img/home/empower-business.png"
+                        alt="Empower Business Icon"
+                        width={600}
+                        height={553}
+                        loading="lazy"
+                      />
+                    </i>
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Web Development Section (Visible by Default) */}
+            {/* Web Development Section - LCP Critical */}
             <div
               className="ServiceTextAnimationWeb ServiceTextApp showdiv"
               id="websitediv"
@@ -374,13 +530,11 @@ const ServicesNewSection = () => {
                   Seamless web: Design, function, UX
                   <i>
                     <Image
-                      layout="responsive"
-                      width={600}
-                      height={553}
-                      sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/ux-design.png"
                       alt="UX Design Icon"
-                      priority={true} // ✅ Only this image has priority
+                      width={600}
+                      height={553}
+                      priority // LCP optimization
                       loading="eager"
                     />
                   </i>
@@ -389,12 +543,12 @@ const ServicesNewSection = () => {
                   Turning ideas into responsive web
                   <i>
                     <Image
-                      layout="responsive"
-                      width={600}
-                      height={553}
-                      sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/responsive-web.png"
                       alt="Responsive Web Icon"
+                      width={600}
+                      height={553}
+                      priority
+                      loading="eager"
                     />
                   </i>
                 </span>
@@ -402,12 +556,12 @@ const ServicesNewSection = () => {
                   Laravel experts, web &amp; app solutions
                   <i>
                     <Image
-                      layout="responsive"
-                      width={600}
-                      height={553}
-                      sizes="(max-width: 768px) 100vw, 600px"
                       src="/img/home/laravel-experts.png"
                       alt="Laravel Experts Icon"
+                      width={600}
+                      height={553}
+                      priority
+                      loading="eager"
                     />
                   </i>
                 </span>
@@ -418,16 +572,16 @@ const ServicesNewSection = () => {
 
         {/* More Services Button */}
         <div className="MoreServicesBtn">
-          <Link href="/services" rel="preload">
+          <Link href="/services" prefetch={true}>
             <span>
               More Services
               <i>
                 <Image
-                  layout="fixed"
-                  width={20}
-                  height={20}
                   src="/img/home/top-banner/rightArrowIcon.svg"
                   alt="Right Arrow Icon"
+                  width={20}
+                  height={20}
+                  loading="eager"
                 />
               </i>
             </span>
@@ -439,4 +593,5 @@ const ServicesNewSection = () => {
 };
 
 export default ServicesNewSection;
+
 
