@@ -192,51 +192,139 @@
 
 
 
+// "use client";
+// import Script from 'next/script';
+
+// export default function GTMComponent() {
+//   return (
+//     <>
+//       {/* Load gtag.js (Google Analytics) */}
+//       <Script
+//         src="https://www.googletagmanager.com/gtag/js?id=AW-946594877"
+//         strategy="afterInteractive"
+//       />
+
+//       {/* Initialize Google Analytics */}
+//       <Script id="gtag-init" strategy="afterInteractive">
+//         {`
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+//           gtag('config', 'AW-946594877');
+//           gtag('config', 'G-080ZLKT6JT');
+//           gtag('config', 'G-ZXWWBTSP0T');
+//         `}
+//       </Script>
+
+//       {/* Load Google Tag Manager */}
+//       <Script id="gtm-init" strategy="afterInteractive">
+//         {`
+//           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+//           var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+//           j.async=true; j.defer=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+//           f.parentNode.insertBefore(j,f);
+//           })(window,document,'script','dataLayer','GTM-5357VDW');
+//         `}
+//       </Script>
+
+//       {/* Optional: Add GTM noscript fallback */}
+//       <noscript>
+//         <iframe
+//           src="https://www.googletagmanager.com/ns.html?id=GTM-5357VDW"
+//           height="0"
+//           width="0"
+//           style={{ display: 'none', visibility: 'hidden' }}
+//         ></iframe>
+//       </noscript>
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+
+// "use client";
+// import Script from "next/script";
+
+// export default function GTMComponent() {
+//   return (
+//     <>
+//       {/* Load Google Tag Manager with lazy loading */}
+//       <Script
+//         id="gtm-script"
+//         strategy="lazyOnload"
+//         dangerouslySetInnerHTML={{
+//           __html: `
+//             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+//             var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+//             j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+//             f.parentNode.insertBefore(j, f);
+//             })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+//           `,
+//         }}
+//       />
+
+//       {/* Load Google Analytics AFTER page load */}
+//       <Script
+//         src="https://www.googletagmanager.com/gtag/js?id=AW-946594877"
+//         strategy="lazyOnload"
+//       />
+//       <Script id="gtag-init" strategy="lazyOnload">
+//         {`
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+//           gtag('config', 'AW-946594877', { send_page_view: false });
+//         `}
+//       </Script>
+//     </>
+//   );
+// }
+
+
+
 "use client";
-import Script from 'next/script';
+import Script from "next/script";
 
 export default function GTMComponent() {
   return (
     <>
-      {/* Load gtag.js (Google Analytics) */}
+      {/* Load Google Tag Manager AFTER page load */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-946594877"
-        strategy="afterInteractive"
+        id="gtm-script"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+          `,
+        }}
       />
 
-      {/* Initialize Google Analytics */}
-      <Script id="gtag-init" strategy="afterInteractive">
+      {/* Load Google Analytics AFTER page load */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-946594877"
+        strategy="lazyOnload"
+      />
+      <Script id="gtag-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'AW-946594877');
-          gtag('config', 'G-080ZLKT6JT');
-          gtag('config', 'G-ZXWWBTSP0T');
+          gtag('config', 'AW-946594877', { send_page_view: false });
         `}
       </Script>
-
-      {/* Load Google Tag Manager */}
-      <Script id="gtm-init" strategy="afterInteractive">
-        {`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-          var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-          j.async=true; j.defer=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5357VDW');
-        `}
-      </Script>
-
-      {/* Optional: Add GTM noscript fallback */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5357VDW"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        ></iframe>
-      </noscript>
     </>
   );
 }
+
+
+
 
