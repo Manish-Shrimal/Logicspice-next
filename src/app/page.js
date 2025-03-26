@@ -18,7 +18,7 @@ import Servercomponents from "./Components/Servercomponents";
 import "aos/dist/aos.css"; // Import AOS CSS
 import AOS from "aos"; // Import AOS
 import GTMComponent from "./Components/GTMComponent";
-import Chatbot from "./Components/Chatbot";
+// import Chatbot from "./Components/Chatbot";
 import "../../public/css/font-awesome.css";
 import CookiesConsent from "./Components/CookiesConsent";
 
@@ -29,6 +29,8 @@ const ServicesNewSection = lazy(() =>
 const Slidersimple = lazy(() => import("./Components/Slidersimple"),{
   ssr: false,
 });
+
+
 
 const TakeaLook = lazy(() => import("./Components/home/TakeaLook"), {
   ssr: false,
@@ -115,7 +117,10 @@ const Page = () => {
       </Suspense>
   
       {}
-      <hr />
+      {/* <hr /> */}
+
+      <hr style={{ height: "2px", margin: "20px 0", visibility: "visible" }} />
+
 
       <section className="new_contentt">
     <div className="container">

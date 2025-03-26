@@ -164,6 +164,7 @@ const Certificationtabs = () => {
       className="lazy"
       src="/img/home/certificates/iso_logo.webp"
       alt="iOS app development"
+      priority={true} // Prevent late loading shifts
     />
   </li>
   <li>

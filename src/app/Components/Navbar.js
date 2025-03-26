@@ -75,6 +75,7 @@ const Navbar = () => {
     <>
       <header
         className={`header home-header fixed ${scroll ? "scrolled" : ""}`}
+        style={{ minHeight: "60px" }}
       >
         <nav className="navbar navbar-light  navbar-expand-lg navbar-default mega-menu  ">
           <div className="container">
