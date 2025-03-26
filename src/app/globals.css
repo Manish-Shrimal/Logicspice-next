@@ -2081,6 +2081,17 @@ bread-top {
   background-attachment: fixed;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .ServiceTextAnimation {
   width: 100%;
   text-align: left;
@@ -7976,6 +7987,11 @@ section {
 .new_contentt{
   padding: 60px 0 ;
   background: #eeeeee;
+}
+
+.new_contentt .content-paragraph {
+  margin-bottom: 15px;
+  
 }
 
 .new_contentt a{
