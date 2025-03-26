@@ -771,8 +771,8 @@ const ServicesNewSection = () => {
                     <Image
                       src="/img/home/ux-design.png"
                       alt="UX Design Icon"
-                      width={400}
-                      height={350}
+                      width={600}
+                      height={553}
                       priority // LCP optimization
                     />
                   </i>
