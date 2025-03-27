@@ -1,19 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import Footer from "@/app/Components/Footer";
 import NavBar from "@/app/Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
-// import "@fortawesome/fontawesome-free/css/all.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+// import Contactusmodel from "@/app/Components/Contactusmodel";
+// import Enquirymodal from "@/app/Components/Enquirymodal";
+// import Whylogicspice from "@/app/Components/Whylogicspice";
+// import Reviewmodals from "@/app/Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
@@ -23,9 +22,17 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+// import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+// import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
+
+
+const Contactusmodel = lazy(() => import("@/app/Components/Contactusmodel"));
+const Enquirymodal = lazy(() => import("@/app/Components/Enquirymodal"));
+const Whylogicspice = lazy(() => import("@/app/Components/Whylogicspice"));
+const Reviewmodals = lazy(() => import("@/app/Components/Reviewmodals"));
+const SoftwareEnquiry = lazy(() => import("@/app/Components/SoftwareEnquiry"));
+const GetDemoEnquiry = lazy(() => import("@/app/Components/GetDemoEnquiry"));
 
 const Page = () => {
   var settings = {
@@ -70,7 +77,6 @@ const Page = () => {
   const [userTab, setUserTab] = useState(true);
   const [organizerTab, setOrganizerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
-  // const [customerTab, setCustomerTab] = useState(false);
 
   const handleUserTab = () => {
     setUserTab(true);
@@ -103,8 +109,6 @@ const Page = () => {
       console.log(error.message);
     }
   };
-
-
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -160,7 +164,6 @@ const Page = () => {
     setDemoAccessModal(!demoAccessModal);
   };
 
- 
   return (
     <>
       <NavBar />
@@ -204,20 +207,23 @@ const Page = () => {
                     style={{ textAlign: "center" }}
                   >
                     <button>Get Demo Access!</button>
-                    {
-                  //     <SoftwareEnquiry
-                  //       modalStatus={showModal}
-                  //       toggle={openModal}
-                  //       title="Please fill the form below and get access to the live demo of Equipment Rental Script
-                  // .See how it work yourself!"
-                  //     />
-
-                  <GetDemoEnquiry
+                    {/* {
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of Event Booking Software. See how it works yourself!"
                       />
-                    }
+                    } */}
+
+<Suspense fallback={<div>Loading ...</div>}>
+        {demoAccessModal && (
+          <SoftwareEnquiry
+            modalStatus={demoAccessModal}
+            toggle={openDemoAccessModal}
+           title="Please fill the form below and get access to the live demo of Event Booking Software. See how it works yourself!"
+          />
+        )}
+      </Suspense>
                   </div>
                   <Link
                     className="btn fiverr-buys"
@@ -250,14 +256,28 @@ const Page = () => {
 
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                {/* <Image
                   unoptimized={true}
                   src="/img/softwares-banner-img/lsevent-mobile.png"
                   alt="Event_Booking_Software"
                   className="lazy"
                   width={316}
                   height={500 / (100 / 100)}
-                />
+                /> */}
+
+<Image
+  src="/img/softwares-banner-img/lsevent-mobile.png"
+  alt="Event_Booking_Software"
+  width={316}
+  height={500}
+  priority // ✅ Ensures it loads first for better LCP
+  fetchPriority="high" // ✅ Tells browser it's most important
+  loading="eager" // ✅ Ensures it loads immediately
+  quality={75} // ✅ Reduces file size, 75 is a good balance
+  placeholder="blur" // ✅ Displays a low-quality preview while loading
+  blurDataURL="/img/softwares-banner-img/lsevent-mobile-blur.jpg" // ✅ Placeholder for faster perception of load
+  style={{ objectFit: "cover", maxWidth: "100%", height: "auto" }} // ✅ Ensures responsiveness
+/>
               </div>
             </div>
           </div>
@@ -318,7 +338,7 @@ const Page = () => {
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job taxt_tt_job_new">
-              Seat Booking app Features
+              Event Booking app Features
             </h2>
           </div>
           <div className="tatxt_txt_job"></div>
@@ -1334,18 +1354,11 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-                  //   <SoftwareEnquiry
-                  //     modalStatus={showModal}
-                  //     toggle={openModal}
-                  //     title="Please fill the form below and get access to the live demo of Equipment Rental Script
-                  // .See how it work yourself!"
-                  //   />
-
-                  <GetDemoEnquiry
-                  modalStatus={demoAccessModal}
-                  toggle={openDemoAccessModal}
-                  title="Please fill the form below and get access to the live demo of Event Booking Software. See how it works yourself!"
-                />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Event Booking Software. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link
@@ -1486,14 +1499,6 @@ const Page = () => {
               height={100}
             />
           </Modal.Body>
-          {/* <Modal.Footer>
-            <button
-              className="btn btn-secondary"
-              onClick={toggleJobPortalModal}
-            >
-              Close
-            </button>
-          </Modal.Footer> */}
         </Modal>
       </div>
 
@@ -1828,7 +1833,6 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="customers_review_sec_row">
-                    {/* <!--                    <div className="customers_review_sec_row_ra"><div className="starget">5 <i className="fa fa-star" aria-hidden="true"></i></div><span>Build an Online Store</span></div>--> */}
                     <div className="customer_review_stext">
                       &quot;Recently I bought this script from logicspice and it
                       worked really nice, it helped my business to gain more
@@ -1867,70 +1871,6 @@ const Page = () => {
             <div className="col-md-6 Quick_FAQ">
               <h4 className="title_main">FAQ&apos;s</h4>
               <div className="MainFaqBx">
-                {/* <MDBAccordion v-model="activeItem" borderless>
-                  <MDBAccordionItem
-                    headerTitle="Once I purchase this script, how many days will it take to go online?"
-                    collapseId="flush-collapse1"
-                  >
-                    <p>
-                      It takes 2 working days generally, provided all the
-                      information to make it live has been given.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I get help for customization?"
-                    collapseId="flush-collapse2"
-                  >
-                    <p>
-                      Yes, we have an experienced team of developers to help you
-                      with customization as per your requirements.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I resell the script? Will I have rights over the script code?"
-                    collapseId="flush-collapse3"
-                  >
-                    <p>
-                      No, You can&apos;t resell the script. All rights will
-                      remain with Logicspice only.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Will I be able to use it on multiple domains, after I purchase this script?"
-                    collapseId="flush-collapse4"
-                  >
-                    <p>
-                      You will be licensed to use it only for the domain, you
-                      purchased for.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Can I use your script without any programming skills?"
-                    collapseId="flush-collapse5"
-                  >
-                    <p>
-                      Yes, You can directly install our given script and can
-                      manage everything in the admin panel which is very user
-                      friendly.
-                    </p>
-                  </MDBAccordionItem>
-
-                  <MDBAccordionItem
-                    headerTitle="Along with hosting server details, what other recommendations?"
-                    collapseId="flush-collapse12"
-                  >
-                    <p>
-                      We recommend you purchase SSL certificate along with a
-                      hosting server, considering that an SSL certificate is
-                      necessary for all the websites these days and it provides
-                      a secure layer to the website as well.
-                    </p>
-                  </MDBAccordionItem>
-                </MDBAccordion> */}
                 <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
@@ -1985,8 +1925,8 @@ const Page = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can&apos;t resell the script. All rights will remain
-                      with Logicspice only.
+                      No, you can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -2063,7 +2003,7 @@ const Page = () => {
       <section className="content_area feature_inner" id="features">
         <div className="container">
           <h2 className="title_main">Event Booking Software Features</h2>
-          {/* <div className="sliders-div"> */}
+
           <ul className="nav nav-tabs-slide">
             <li
               id="features1_li"
@@ -2108,8 +2048,11 @@ const Page = () => {
                       </div>
                       <div className="hands-proved">
                         <div className="titleof_scnew">Event Listing</div>
-                        <div className="pro-feat-detai">User can view the event listing and also able to filter by categories,price etc.</div>
-                    </div>
+                        <div className="pro-feat-detai">
+                          User can view the event listing and also able to
+                          filter by categories,price etc.
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -2123,8 +2066,11 @@ const Page = () => {
                       </div>
                       <div className="hands-proved">
                         <div className="titleof_scnew">Favourite List</div>
-                        <div className="pro-feat-detai">Listed favourite events of user,User can able to remove event from his favourite list.</div>
-                    </div>
+                        <div className="pro-feat-detai">
+                          Listed favourite events of user,User can able to
+                          remove event from his favourite list.
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -2138,8 +2084,11 @@ const Page = () => {
                       </div>
                       <div className="hands-proved">
                         <div className="titleof_scnew">Event Details</div>
-                        <div className="pro-feat-detai">User can able to view details of event and shows of respective event.</div>
-                    </div>
+                        <div className="pro-feat-detai">
+                          User can able to view details of event and shows of
+                          respective event.
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -2153,8 +2102,11 @@ const Page = () => {
                       </div>
                       <div className="hands-proved">
                         <div className="titleof_scnew">Booking step 1</div>
-                        <div className="pro-feat-detai">While booking show user can able to select quantity category wise.</div>
-                    </div>
+                        <div className="pro-feat-detai">
+                          While booking show user can able to select quantity
+                          category wise.
+                        </div>
+                      </div>
                     </div>
                     <div className="SliderMainBx">
                       <div className="feat-slide-img">
@@ -2168,28 +2120,12 @@ const Page = () => {
                       </div>
                       <div className="hands-proved">
                         <div className="titleof_scnew">Booking step 2</div>
-                        <div className="pro-feat-detai">In booking second step user can able to apply coupon,facilitated to do online payment(paypal).</div>
-                    </div>
-                    </div>
-                    {/* <div className="SliderMainBx">
-                      <div className="feat-slide-img">
-                        <Image
-                          unoptimized={true}
-                          src="/img/jobboard/membership_plan_job_portal_script.png"
-                          alt="Membership Plan"
-                          width={1075}
-                          height={100}
-                        />
-                      </div>
-                      <div className="hands-proved">
-                        <div className="titleof_scnew">Membership Plan</div>
                         <div className="pro-feat-detai">
-                          Employers buy membership plan which suits their
-                          requirement best.They can renew or update your
-                          membership plan at any time.
+                          In booking second step user can able to apply
+                          coupon,facilitated to do online payment(paypal).
                         </div>
                       </div>
-                    </div> */}
+                    </div>
                   </Slider>
                 </div>
               </>
@@ -2209,12 +2145,12 @@ const Page = () => {
                         height={100}
                       />
                     </div>
-                     <div className="hands-proved">
-                        <div className="titleof_scnew">Add Show</div>
-                        <div className="pro-feat-detai">Organizer can able to add shows for his events.</div>
+                    <div className="hands-proved">
+                      <div className="titleof_scnew">Add Show</div>
+                      <div className="pro-feat-detai">
+                        Organizer can able to add shows for his events.
+                      </div>
                     </div>
-                    {/* <div className="titleof_scnew">Add Show</div>
-                        <div className="pro-feat-detai">Organizer can able to add shows for his events. </div> */}
                   </div>
                   <div className="SliderMainBx">
                     <div className="feat-slide-img">
@@ -2227,8 +2163,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Artists</div>
-                        <div className="pro-feat-detai">Organizer can able to manage artists like add,edit,delete etc.</div>
+                      <div className="titleof_scnew">Manage Artists</div>
+                      <div className="pro-feat-detai">
+                        Organizer can able to manage artists like
+                        add,edit,delete etc.
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2242,8 +2181,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Events</div>
-                        <div className="pro-feat-detai">Organizer can able to manage his events like add,edit,add terms and conditions etc.</div>
+                      <div className="titleof_scnew">Manage Events</div>
+                      <div className="pro-feat-detai">
+                        Organizer can able to manage his events like
+                        add,edit,add terms and conditions etc.
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2257,8 +2199,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Payment History</div>
-                        <div className="pro-feat-detai">Organizer can able to view payments and it&apos;s details.</div>
+                      <div className="titleof_scnew">Payment History</div>
+                      <div className="pro-feat-detai">
+                        Organizer can able to view payments and it&apos;s
+                        details.
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2272,34 +2217,18 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Ticket Verification</div>
-                        <div className="pro-feat-detai">Provided facility for organizer to verify tickets of users.</div>
-                    </div>
-                  </div>
-                  {/* <div className="SliderMainBx">
-                    <div className="feat-slide-img">
-                      <Image
-                        unoptimized={true}
-                        src="/img/jobboard/membership_plan_job_portal_script.png"
-                        alt="Membership Plan"
-                        width={1075}
-                        height={100}
-                      />
-                    </div>
-                    <div className="hands-proved">
-                      <div className="titleof_scnew">Membership Plan</div>
+                      <div className="titleof_scnew">Ticket Verification</div>
                       <div className="pro-feat-detai">
-                        Employers buy membership plan which suits their
-                        requirement best.They can renew or update your
-                        membership plan at any time.
+                        Provided facility for organizer to verify tickets of
+                        users.
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </Slider>
               </div>
             </>
           )}
-          {/* </div> */}
+
           {adminTab && (
             <>
               <div id="joblboardslide">
@@ -2315,8 +2244,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Admin dashboard</div>
-                        <div className="pro-feat-detai">It will facilitate admin to users, gigs and other details like : profile, orders, service request etc..</div>
+                      <div className="titleof_scnew">Admin dashboard</div>
+                      <div className="pro-feat-detai">
+                        It will facilitate admin to users, gigs and other
+                        details like : profile, orders, service request etc..
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2330,8 +2262,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Site Settings</div>
-                        <div className="pro-feat-detai">Admin can manage website setting like : name, logo, payment detail etc..</div>
+                      <div className="titleof_scnew">Manage Site Settings</div>
+                      <div className="pro-feat-detai">
+                        Admin can manage website setting like : name, logo,
+                        payment detail etc..
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2345,8 +2280,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Wallets</div>
-                        <div className="pro-feat-detai"> Admin can view wallet detail of all users.</div>
+                      <div className="titleof_scnew">Manage Wallets</div>
+                      <div className="pro-feat-detai">
+                        {" "}
+                        Admin can view wallet detail of all users.
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2360,8 +2298,11 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Gigs</div>
-                        <div className="pro-feat-detai">Admin can manage all added gig and admin can deactivate, activate and delete gigs from the website.</div>
+                      <div className="titleof_scnew">Manage Gigs</div>
+                      <div className="pro-feat-detai">
+                        Admin can manage all added gig and admin can deactivate,
+                        activate and delete gigs from the website.
+                      </div>
                     </div>
                   </div>
                   <div className="SliderMainBx">
@@ -2375,29 +2316,13 @@ const Page = () => {
                       />
                     </div>
                     <div className="hands-proved">
-                        <div className="titleof_scnew">Manage Qualifications</div>
-                        <div className="pro-feat-detai">Admin can view list of Qualifications & can manage (view/add/edit/delete) qualifications.</div>
-                    </div>
-                  </div>
-                  {/* <div className="SliderMainBx">
-                    <div className="feat-slide-img">
-                      <Image
-                        unoptimized={true}
-                        src="/img/jobboard/membership_plan_job_portal_script.png"
-                        alt="Membership Plan"
-                        width={1075}
-                        height={100}
-                      />
-                    </div>
-                    <div className="hands-proved">
-                      <div className="titleof_scnew">Membership Plan</div>
+                      <div className="titleof_scnew">Manage Qualifications</div>
                       <div className="pro-feat-detai">
-                        Employers buy membership plan which suits their
-                        requirement best.They can renew or update your
-                        membership plan at any time.
+                        Admin can view list of Qualifications & can manage
+                        (view/add/edit/delete) qualifications.
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </Slider>
               </div>
             </>
@@ -2411,23 +2336,25 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-              {/* <Link
-                href="#"
-                id=""
-                className="btn btn-primary"
-                onClick={() => openEnquiryModal()}
-              >
-                Enquire Now
-              </Link> */}
               <div className="btn btn-primary" onClick={openModal}>
                 <button>Enquire Now</button>
-                {
+                {/* {
                   <SoftwareEnquiry
                     modalStatus={showModal}
                     toggle={openModal}
                     title="Event Booking Software"
                   />
-                }
+                } */}
+
+<Suspense fallback={<div>Loading ...</div>}>
+        {showModal && (
+          <SoftwareEnquiry
+            modalStatus={showModal}
+            toggle={openModal}
+            title="Event Booking Software"
+          />
+        )}
+      </Suspense>
               </div>
             </div>
           </div>
@@ -2440,11 +2367,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/ebay-clone"
-                  >
+                  <Link title="View Detail" target="_black" href="/ebay-clone">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>eBay Clone</h3>
@@ -2466,9 +2389,9 @@ const Page = () => {
                         </p>
                         <div className="other-socila-pr-icon">
                           <i className="fa fa-globe" aria-hidden="true"></i>
-                          {/* <i className="fa fa-android" aria-hidden="true"></i> */}
+
                           <i className="fa-brands fa-android"></i>
-                          {/* <i className="fa fa-apple" aria-hidden="true"></i> */}
+
                           <i className="fa-brands fa-apple"></i>
                         </div>
                       </div>
@@ -2505,7 +2428,6 @@ const Page = () => {
                         </p>
                         <div className="other-socila-pr-icon">
                           <i className="fa fa-globe" aria-hidden="true"></i>
-                       
                         </div>
                       </div>
                     </div>
@@ -2541,7 +2463,6 @@ const Page = () => {
                         </p>
                         <div className="other-socila-pr-icon">
                           <i className="fa fa-globe" aria-hidden="true"></i>
-                         
                         </div>
                       </div>
                     </div>
