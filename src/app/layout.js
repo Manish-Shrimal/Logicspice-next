@@ -154,14 +154,14 @@ export async function generateMetadata({ params }) {
             url:
               og_image ||
               `${Domain}/img/logo.png`,
-            // width: 1200,
-            // height: 630,
+            width: 1200,
+            height: 630,
             // alt: meta_title || "OG Image",
           },
         ],
       },
       twitter: {
-        card: `${Domain}/img/logo.png`,
+        card: `summary_large_image`,
         title: meta_title || "Default Twitter Title",
         description: meta_description || "Default Twitter Description",
         images: [
@@ -196,8 +196,8 @@ export async function generateMetadata({ params }) {
         images: [
           {
             url: `${Domain}/img/logo.png`,
-            // width: 1200,
-            // height: 630,
+            width: 1200,
+            height: 630,
             // alt: "Default OG Image",
           },
         ],
@@ -206,7 +206,7 @@ export async function generateMetadata({ params }) {
         card: "summary_large_image",
         title: "Default Twitter Title",
         description: "Default Twitter Description",
-        images: [`${Domain}/default-og-image.jpg`],
+        images: [`${Domain}/img/logo.png`],
       },
       robots: {
         index: true,
