@@ -26,7 +26,6 @@ import Typography from "@mui/material/Typography";
 // import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
 
-
 const Contactusmodel = lazy(() => import("@/app/Components/Contactusmodel"));
 const Enquirymodal = lazy(() => import("@/app/Components/Enquirymodal"));
 const Whylogicspice = lazy(() => import("@/app/Components/Whylogicspice"));
@@ -215,15 +214,15 @@ const Page = () => {
                       />
                     } */}
 
-<Suspense fallback={<div>Loading ...</div>}>
-        {demoAccessModal && (
-          <SoftwareEnquiry
-            modalStatus={demoAccessModal}
-            toggle={openDemoAccessModal}
-           title="Please fill the form below and get access to the live demo of Event Booking Software. See how it works yourself!"
-          />
-        )}
-      </Suspense>
+                    <Suspense fallback={<div>Loading ...</div>}>
+                      {demoAccessModal && (
+                        <SoftwareEnquiry
+                          modalStatus={demoAccessModal}
+                          toggle={openDemoAccessModal}
+                          title="Please fill the form below and get access to the live demo of Event Booking Software. See how it works yourself!"
+                        />
+                      )}
+                    </Suspense>
                   </div>
                   <Link
                     className="btn fiverr-buys"
@@ -265,19 +264,42 @@ const Page = () => {
                   height={500 / (100 / 100)}
                 /> */}
 
-<Image
-  src="/img/softwares-banner-img/lsevent-mobile.png"
-  alt="Event_Booking_Software"
-  width={316}
-  height={500}
-  priority // ✅ Ensures it loads first for better LCP
-  fetchPriority="high" // ✅ Tells browser it's most important
-  loading="eager" // ✅ Ensures it loads immediately
-  quality={75} // ✅ Reduces file size, 75 is a good balance
-  placeholder="blur" // ✅ Displays a low-quality preview while loading
-  blurDataURL="/img/softwares-banner-img/lsevent-mobile-blur.jpg" // ✅ Placeholder for faster perception of load
-  style={{ objectFit: "cover", maxWidth: "100%", height: "auto" }} // ✅ Ensures responsiveness
-/>
+                {/* <Image
+                  src="/img/softwares-banner-img/lsevent-mobile.png"
+                  alt="Event_Booking_Software"
+                  width={316}
+                  height={500}
+                  priority // ✅ Ensures it loads first for better LCP
+                  fetchPriority="high" // ✅ Tells browser it's most important
+                  loading="eager" // ✅ Ensures it loads immediately
+                  quality={75} // ✅ Reduces file size, 75 is a good balance
+                  placeholder="blur" // ✅ Displays a low-quality preview while loading
+                  blurDataURL="/img/softwares-banner-img/lsevent-mobile-blur.jpg" // ✅ Placeholder for faster perception of load
+                  style={{
+                    objectFit: "cover",
+                    maxWidth: "100%",
+                    height: "auto",
+                  }} // ✅ Ensures responsiveness
+                /> */}
+
+                <Image
+                  src="/img/softwares-banner-img/lsevent-mobile.png"
+                  alt="Event_Booking_Software"
+                  width={316}
+                  height={500}
+                  layout="intrinsic" // ✅ Ensures it reserves space before loading
+                  priority
+                  fetchPriority="high"
+                  loading="eager"
+                  quality={75}
+                  placeholder="blur"
+                  blurDataURL="/img/softwares-banner-img/lsevent-mobile-blur.jpg"
+                  style={{
+                    objectFit: "cover",
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -2346,15 +2368,15 @@ const Page = () => {
                   />
                 } */}
 
-<Suspense fallback={<div>Loading ...</div>}>
-        {showModal && (
-          <SoftwareEnquiry
-            modalStatus={showModal}
-            toggle={openModal}
-            title="Event Booking Software"
-          />
-        )}
-      </Suspense>
+                <Suspense fallback={<div>Loading ...</div>}>
+                  {showModal && (
+                    <SoftwareEnquiry
+                      modalStatus={showModal}
+                      toggle={openModal}
+                      title="Event Booking Software"
+                    />
+                  )}
+                </Suspense>
               </div>
             </div>
           </div>

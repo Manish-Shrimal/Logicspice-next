@@ -249,14 +249,33 @@ const Page = () => {
               </div>
               <div className="col-sm-5 col-md-5">
                 <div className="por-mobile-new">
-                  <Image
+                  {/* <Image
                     width={440}
                     height={100 / (100 / 100)}
                     className="lazy"
                     src="/img/salon-booking/salon-img.png"
                     alt="Salon Booking Software"
                     unoptimized={true}
-                  />
+                  /> */}
+
+<Image
+  width={440}
+  height={100} // ✅ Set directly
+  className="lazy"
+  src="/img/salon-booking/salon-img.png"
+  alt="Salon Booking Software"
+  priority // ✅ Ensures it loads early for better LCP
+  loading="eager" // ✅ Ensures immediate loading
+  fetchPriority="high" // ✅ Optimizes browser resource loading
+  placeholder="blur" // ✅ Prevents layout shift by showing a blurred preview
+  blurDataURL="/img/salon-booking/salon-img-blur.jpg" // ✅ Placeholder image for smooth loading
+  style={{
+    objectFit: "cover",
+    maxWidth: "100%",
+    height: "auto",
+  }}
+/>
+
                 </div>
               </div>
             </div>

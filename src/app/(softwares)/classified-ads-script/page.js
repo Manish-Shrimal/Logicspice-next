@@ -43,6 +43,7 @@ const Page = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
   const [pageData, setPageData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const getData = async () => {
     try {
@@ -324,13 +325,32 @@ const Page = () => {
                   width={100}
                   height={100}
                 /> */}
-                <Image
+                {/* <Image
                   unoptimized={true}
                   src="/img/classified/classsifiedr-banner-img.png"
                   alt="classified_Ads_Script"
                   width={460}
                   height={500 / (100 / 100)} // Adjust height to maintain aspect ratio
-                />
+                /> */}
+
+<Image
+  src="/img/classified/classsifiedr-banner-img.png"
+  alt="classified_Ads_Script"
+  width={460}
+  height={500} // Ensure proper height
+  priority // ✅ Ensures it loads early
+  loading="eager" // ✅ Prevents lazy-loading delays
+  fetchPriority="high"
+  quality={75} // ✅ Good balance between size & quality
+  placeholder="blur" // ✅ Blurred placeholder for smoother loading
+  blurDataURL="/img/classified/classsifiedr-banner-img-blur.jpg" // ✅ Small placeholder image
+  style={{
+    objectFit: "cover",
+    maxWidth: "100%",
+    height: "auto",
+  }}
+/>
+
               </div>
             </div>
           </div>
@@ -371,7 +391,7 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-6 job-video">
+            {/* <div className="col-md-6 job-video">
               <iframe
                 src="https://player.vimeo.com/video/797230876?h=6b4f994a41&amp;autoplay=0&amp;loop=1&amp;color=451095&amp;byline=0"
                 width="100%"
@@ -380,7 +400,54 @@ const Page = () => {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen=""
               ></iframe>
-            </div>
+            </div> */}
+
+<div className="col-md-6 job-video" style={{ position: "relative", cursor: "pointer" }}>
+      {!isLoaded ? (
+        <div
+          className="video-placeholder"
+          onClick={() => setIsLoaded(true)}
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "312px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#000",
+          }}
+        >
+       
+         
+          <div
+            style={{
+              position: "absolute",
+              width: "60px",
+              height: "60px",
+              backgroundColor: "rgba(0,0,0,0.6)",
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              fontSize: "24px",
+              fontWeight: "bold",
+            }}
+          >
+            ▶
+          </div>
+        </div>
+      ) : (
+        <iframe
+          src="https://player.vimeo.com/video/797230876?h=6b4f994a41&autoplay=1&loop=1&color=451095&byline=0"
+          width="100%"
+          height="312"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
+    </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new">
                 <ul>
