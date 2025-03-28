@@ -173,8 +173,8 @@ table tbody tr td {
 .blog-detail-text table td {
   border-bottom: 2px #b7b7b7 solid;
   border-right: 2px #b7b7b7 solid;
-  padding: 10px 15px;
-  font-size: 15px;
+  padding: 10px 9px;
+  font-size: 13px;
 }
 
 .blog-detail-text h3::after {
