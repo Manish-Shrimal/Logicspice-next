@@ -110,6 +110,7 @@ import Domain from "./BaseAPI/Domain";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
+let schemaData;
 
 // ✅ Function to fetch metadata dynamically
 export async function generateMetadata({ params }) {
@@ -152,7 +153,7 @@ export async function generateMetadata({ params }) {
           {
             url:
               og_image ||
-              `${Domain}/_next/image?url=%2Fimg%2Flogo.png&w=384&q=75`,
+              `${Domain}/img/logo.png`,
             // width: 1200,
             // height: 630,
             // alt: meta_title || "OG Image",
@@ -160,11 +161,11 @@ export async function generateMetadata({ params }) {
         ],
       },
       twitter: {
-        card: `${Domain}/_next/image?url=%2Fimg%2Flogo.png&w=384&q=75`,
+        card: `${Domain}/img/logo.png`,
         title: meta_title || "Default Twitter Title",
         description: meta_description || "Default Twitter Description",
         images: [
-          og_image || `${Domain}/_next/image?url=%2Fimg%2Flogo.png&w=384&q=75`,
+          og_image || `${Domain}/img/logo.png`,
         ],
       },
       robots: {
@@ -194,7 +195,7 @@ export async function generateMetadata({ params }) {
         type: "website",
         images: [
           {
-            url: `${Domain}/_next/image?url=%2Fimg%2Flogo.png&w=384&q=75`,
+            url: `${Domain}/img/logo.png`,
             // width: 1200,
             // height: 630,
             // alt: "Default OG Image",
@@ -225,6 +226,7 @@ export async function generateMetadata({ params }) {
 
 // ✅ Root Layout Component with Dynamic Metadata
 export default async function RootLayout({ children, params }) {
+  const isHomePage = params && params.slug === undefined;
   const metadata = await generateMetadata({ params });
 
   return (
@@ -268,6 +270,23 @@ export default async function RootLayout({ children, params }) {
         <link rel="preload" as="image" />
 
         {/* ✅ JSON-LD Schema Markup for Google */}
+      </Head>
+
+      <body className={inter.className}>
+        {/* ✅ Chatbot, AOS (Animations), and GTM */}
+        <Chatbot />
+        <AOSInitializer>{children}</AOSInitializer>
+        <GTMComponent />
+        {/* {isHomePage && (
+          <>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({ __html: schemaData }),
+              }}
+            />
+          </>
+        )} */}
         {metadata.schemaData && (
           <script
             type="application/ld+json"
@@ -276,13 +295,6 @@ export default async function RootLayout({ children, params }) {
             }}
           />
         )}
-      </Head>
-
-      <body className={inter.className}>
-        {/* ✅ Chatbot, AOS (Animations), and GTM */}
-        <Chatbot />
-        <AOSInitializer>{children}</AOSInitializer>
-        <GTMComponent />
       </body>
     </html>
   );

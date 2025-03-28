@@ -19,7 +19,7 @@ const Slidersimple = () => {
   var settings = {
     dots: true, // Dots will be visible by default
     infinite: true,
-    lazyLoad: "progressive",
+    // lazyLoad: "progressive",
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
