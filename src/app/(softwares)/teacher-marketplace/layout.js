@@ -23,18 +23,21 @@ export async function generateMetadata({ params, searchParams }, parent) {
   console.log(text,"from tmp");
 
   let schemaOrg = null;
-  if(text){
-    console.log("from if")
-    const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      
-      .replace(/[\u0000-\u001F\u007F]/g, ''); 
+  if (text) {
+    try {
+      // Clean and parse JSON schema
+      const cleanedText = text
+        .replace(/\\r\\n/g, "")
+        .replace(/\\n/g, "")
+        .replace(/\\r/g, "")
+        .replace(/\\+/g, "")
+        .replace(/[\u0000-\u001F\u007F]/g, "");
 
-
-      schemaOrg = cleanedText;
-
+      schemaOrg = cleanedText && JSON.parse(cleanedText);
+    } catch (error) {
+      console.error("Error parsing schemaOrg JSON:", error);
+      schemaOrg = null;
+    }
   }
   // Return metadata
   return {
@@ -75,10 +78,14 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: metadata.schemaOrg }}
-      />
+      {metadata.schemaOrg && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schemaOrg),
+          }}
+        />
+      )}
     </html>
   );
 }

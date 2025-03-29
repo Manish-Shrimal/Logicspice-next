@@ -199,10 +199,14 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: metadata.schemaOrg }}
-      />
+      {metadata.schemaOrg && (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(metadata.schemaOrg),
+    }}
+  />
+)}
       {/* {metadata.schemaOrg && (
         <script
           type="application/ld+json"

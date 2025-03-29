@@ -93,16 +93,40 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let text = product.data.schema;
 
   let schemaOrg = null;
-  if (text) {
-    const cleanedText = text
-      .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, "") // Remove \n (newline)
-      .replace(/\\r/g, "") // Remove \r (carriage return)
-      .replace(/\\+/g, "") // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
 
-    schemaOrg = cleanedText && JSON.parse(cleanedText);
+
+  // if (text) {
+  //   try {
+  //     // Ensure it's a valid JSON string
+  //     const cleanedText = text
+  //     .replace(/\\r\\n/g, "")
+  //       .replace(/\\n/g, "")
+  //       .replace(/\\r/g, "")
+  //       .replace(/\\+/g, "")
+  //       .replace(/[\u0000-\u001F\u007F]/g, "")
+  
+  //     // Ensure JSON is properly parsed
+  //     schemaOrg = JSON.parse(cleanedText);
+      
+  //     // Convert to a valid JSON string for display/debugging
+  //     schemaOrg = JSON.stringify(schemaOrg, null, 2);
+  //   } catch (error) {
+  //     console.error("Error parsing schemaOrg JSON:", error);
+  //     schemaOrg = null;
+  //   }
+  // }
+
+  if (product.data.schema) {
+    try {
+      // Remove escape sequences and parse JSON properly
+      const cleanedText = product.data.schema.replace(/\\r\\n|\\n|\\r|\\+/g, "").trim();
+      schemaOrg = JSON.parse(cleanedText);
+    } catch (error) {
+      console.error("Error parsing schemaOrg JSON:", error);
+      schemaOrg = null;
+    }
   }
+  
 
   // Example FAQ schema
   const faqSchema = {
@@ -216,18 +240,18 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
-      {/* <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      /> */}
-      {/* {metadata.schemaOrg && ( */}
+
+
+{metadata.schemaOrg && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: metadata.schemaOrg,
+            __html: JSON.stringify(metadata.schemaOrg),
           }}
         />
-      {/* )} */}
+      )}
+
+
       {/* Render the FAQ schema separately */}
       {metadata.faqSchema && (
         <script

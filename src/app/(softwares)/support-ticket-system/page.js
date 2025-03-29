@@ -380,29 +380,8 @@ const Page = () => {
                     <li>
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
-                    {/* <li>
-                      <i class="fa fa-android" aria-hidden="true"></i>
-                    </li>
-                    <li>
-                      <i class="fa fa-apple" aria-hidden="true"></i>
-                    </li> */}
                   </ul>
                   <div className="portel-btnbx">
-                    {/* <Link
-                      href=""
-                      className="StartFreeTrialBtn animate-charcter"
-                      onClick={openModal}
-                    >
-                      <button>Start Free Trial</button>
-                      {
-                        <SoftwareEnquiry
-                          modalStatus={showModal}
-                          toggle={openModal}
-                          title="Please fill the form"
-                        />
-                      }
-                    </Link> */}
-
                     <a
                       className="btn text-primary jobportal-btn js-anchor-link"
                       href="#subscriptionmodel"
@@ -477,14 +456,6 @@ const Page = () => {
           </p>
 
           <p style={{ marginBottom: "15px" }}>
-            {/* Efficiently manage your human resources with our HRMS payroll
-            Software, a complete solution for HR and payroll needs. Built to
-            simplify HR operations, our software is ideal for small to mid-sized
-            businesses seeking reliable, scalable, and customizable HRMS
-            software solutions. Whether you&apos;re managing employee
-            information, tracking attendance, or processing payroll, our best HR
-            Management software helps you handle everything from one easy-to-use
-            platform. */}
             The Logicspice Support Ticket System is an easy-to-use help desk
             software that helps businesses manage customer support more
             effectively. Whether you&apos;re a small business or a large
@@ -510,21 +481,6 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            {/* <div className="col-md-6 job-video">
-              <div ref={iframeRef}>
-              {inView && (
-                <iframe
-                  id="ytplayer"
-                  width="100%"
-                  height="312"
-                  src="https://www.youtube-nocookie.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                )}
-              </div>
-            </div> */}
             <div className="col-md-12">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
@@ -539,9 +495,6 @@ const Page = () => {
                   <li>Multi-Currency Support </li>
                   <li>One-Time License Fee</li>
                   <li>Reports & Analytics</li>
-                  {/* <li>Auto Suggestion Filtering</li>
-                  <li>Multi-Language/Currency Support</li>
-                  <li>Optimized job search with filters</li> */}
                 </ul>
               </div>
             </div>
@@ -777,28 +730,6 @@ const Page = () => {
                                 </div>
                               </span>
                             </li>
-                            {/* <li>
-                              <i className="JobBoardImg">
-                                <Image
-                                  unoptimized={true}
-                                  width={100}
-                                  height={100}
-                                  className="lazy"
-                                  src="/img/jobboard/manage_edu.png"
-                                  alt="Jobseeker App Feature"
-                                />
-                              </i>
-                              <span>
-                                Guest Mode
-                                <div className="product-idea">
-                                  <p>
-                                    Employees can quickly access specific
-                                    features, such as leave balance and
-                                    payslips, without full login requirements.
-                                  </p>
-                                </div>
-                              </span>
-                            </li> */}
                           </ul>
                         </div>
                       </div>
@@ -1230,17 +1161,6 @@ const Page = () => {
             </h2>
             <h3 className="Haeddinh2">Makes Customer Support Easy</h3>
             <p>
-              {/* Our exceptional job board advertising software doesn&apos;t just
-              stop at facilitating connections; it empowers you to craft your
-              own recruitment portal. This ready-to-deploy script,{" "}
-              <strong>
-                <i>secure and responsive</i>
-              </strong>
-              , provides dedicated dashboards for administrators, employers, and
-              job seekers. The setup process is a breeze, requiring zero coding
-              know-how - our expert technical team ensures a seamless setup for
-              you. Effortlessly launch your own job board advertising website in
-              record time with our ready-to-use Job Board Software Script. */}
               Our support ticket PHP software helps businesses handle customer
               queries without any hassle. Instead of sorting through messy
               emails and lost messages, all support requests are organized in
@@ -1280,7 +1200,10 @@ const Page = () => {
               Whether you&apos;re a small startup or a large company, our best
               help desk software is built to grow with you. It’s flexible,
               customizable, and supports multiple languages, so you can create a{" "}
-              <Link href="/software-maintenance-support" className="special_links">
+              <Link
+                href="/software-maintenance-support"
+                className="special_links"
+              >
                 {" "}
                 customer support{" "}
               </Link>{" "}
@@ -1375,46 +1298,11 @@ const Page = () => {
           <h2 className="taxt_tt_job">Delivered Solution</h2>
           <div className="SubscriptionModelPrice">
             <div className="SubscriptionModelPriceBx">
-              <h4>
-                {/* {pageData.currency_symbol}
-                {pageData.price} */}
-                $895
-                {/* <span className="sml_labl"> {pageData.name}</span> */}
-              </h4>
-              {/* <h4>
-                {pageData.currency_symbol}
-                {pageData.price}
-                <span className="sml_labl"> {pageData.name}</span>
-              </h4>
-              <strike className="srik_cls">
-                {pageData.currency_symbol}
-                {pageData.other_price}
-                <span className="sml_labl"> {pageData.name}</span>
-              </strike>
-
-              <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get" onClick={openDemoAccessModal}>
-                  <button>Get Demo Access!</button>
-                  {
-                    <GetDemoEnquiry
-                      modalStatus={demoAccessModal}
-                      toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Support Ticket System. See how it works yourself!"
-                    />
-                  }
-                </div>
-                <Link
-                  className="btn fiverr-buys"
-                  href="/buy-now/hrms-software"
-                  id="buy_now_1"
-                >
-                  Buy Now
-                </Link>
-              </div> */}
+              <h4>$895</h4>
 
               <div className="SubscriptionModelPriceBtn">
                 <div className="btn btn-get" onClick={openModal}>
-                  <button>Enquire Now</button>
+                  <a>Enquire Now</a>
                   {
                     <EnquiryModal
                       modalStatus={showModal}
@@ -1429,12 +1317,6 @@ const Page = () => {
                   <li className="single_device">
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
-                  {/* <li>
-                    <i className="fa fa-android" aria-hidden="true"></i>
-                  </li>
-                  <li>
-                    <i className="fa fa-apple" aria-hidden="true"></i>
-                  </li> */}
                 </ul>
                 <div className="portel-btnbx">
                   <div className="line-border NewLineBoader">
@@ -1719,16 +1601,6 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     Sophie T., Operations Manager
-                    {/* <span>
-                      <Image
-                        unoptimized={true}
-                        width={100}
-                        height={100}
-                        src="/img/jobboard/usa_flag_img.png"
-                        alt="mobile app development in USA"
-                        style={{ width: "20px", marginLeft: "3px;" }}
-                      />
-                    </span> */}
                   </div>
                 </div>
                 <div className="customers_review_sec_row">
@@ -1750,16 +1622,6 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span id="client-name">Mark L., IT Support Lead</span>{" "}
-                    {/* <span>
-                      <Image
-                        unoptimized={true}
-                        width={100}
-                        height={100}
-                        src="/img/jobboard/german.png"
-                        alt="mobile app development in USA"
-                        style={{ width: "20px", marginLeft: "3px;" }}
-                      />
-                    </span> */}
                   </div>
                 </div>
 
@@ -1783,16 +1645,6 @@ const Page = () => {
                       <i className="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span id="client-name">David M., Business Owner</span>{" "}
-                    {/* <span>
-                      <Image
-                        unoptimized={true}
-                        width={100}
-                        height={100}
-                        src="/img/jobboard/australia_flag_img.png"
-                        alt="mobile app development in USA"
-                        style={{ width: "20px", marginLeft: "3px;" }}
-                      />
-                    </span> */}
                   </div>
                 </div>
               </div>
@@ -2133,259 +1985,11 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* <div style={panelStyle} data-aos="fade-up">
-                  <div style={headingStyle}>
-                    <a
-                      href="#collapse203"
-                      style={titleStyle}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        toggleAccordion(9);
-                      }}
-                    >
-                      <span>10. </span> Can I resell the script? Will I have
-                      rights over the script code?
-                    </a>
-                  </div>
-                  <div style={activeIndex === 9 ? showStyle : collapseStyle}>
-                    <div style={bodyStyle}>
-                      <p>
-                        All rights will remain with Logicspice only, and you
-                        cannot resell it.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div style={panelStyle} data-aos="fade-up">
-                  <div style={headingStyle}>
-                    <a
-                      href="#collapse204"
-                      style={titleStyle}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        toggleAccordion(10);
-                      }}
-                    >
-                      <span>11. </span> Do you offer Money Back Guarantee?
-                    </a>
-                  </div>
-                  <div style={activeIndex === 10 ? showStyle : collapseStyle}>
-                    <div style={bodyStyle}>
-                      <p>
-                        Yes, we offer a 30-day money back guarantee to ensure
-                        customer satisfaction with our software. If for any
-                        reason you wish to discontinue using the product, you
-                        can ask us for a refund. We will refund your total money
-                        except for the installation and configuration charges,
-                        which is USD 65 or 20% of the application cost,
-                        whichever is greater. Any cost of customization will not
-                        be refunded.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div style={panelStyle} data-aos="fade-up">
-                  <div style={headingStyle}>
-                    <a
-                      href="#collapse07"
-                      style={titleStyle}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        toggleAccordion(11);
-                      }}
-                    >
-                      <span>12. </span> Do I need to provide Google map API key?
-                      If yes, how to generate Google map API key?
-                    </a>
-                  </div>
-                  <div style={activeIndex === 11 ? showStyle : collapseStyle}>
-                    <div style={bodyStyle}>
-                      <p>
-                        Yes, you need to provide a map API key. Please follow
-                        the steps mentioned in the below URL to generate a
-                        Google map API key:{" "}
-                        <a
-                          href="https://developers.google.com/maps/documentation/javascript/get-api-key"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Generate Google Map API Key
-                        </a>
-                        . You need to set up your billing details over that.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div style={panelStyle} data-aos="fade-up">
-                  <div style={headingStyle}>
-                    <a
-                      href="#collapse504"
-                      style={titleStyle}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        toggleAccordion(12);
-                      }}
-                    >
-                      <span>13. </span> Along with hosting server details, what
-                      other recommendations?
-                    </a>
-                  </div>
-                  <div style={activeIndex === 12 ? showStyle : collapseStyle}>
-                    <div style={bodyStyle}>
-                      <p>
-                        We recommend you purchase an SSL certificate along with
-                        a hosting server, considering that an SSL certificate is
-                        necessary for all websites these days and it provides a
-                        secure layer to the website as well.
-                      </p>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <section className="content_area feature_inner" id="features">
-        <div className="container">
-          <h2 className="title_main">LS Jobber Features</h2>
-          <div id="joblboardslide">
-            <Slider {...settings}>
-              <div className="SliderMainBx">
-                <div className="feat-slide-img">
-                  <Image
-                    unoptimized={true}
-                    width={1500}
-                    height={100 / (100 / 100)}
-                    src="/img/jobboard/job_portal_script_apply_jobs.png"
-                    alt="Job Application"
-                  />
-                </div>
-                <div className="hands-proved">
-                  <div className="titleof_scnew">Job Application</div>
-                  <div className="pro-feat-detai">
-                    Jobseekers can apply for the job directly to the company or
-                    they can attach a cover letter along with their application.
-                  </div>
-                </div>
-              </div>
-              <div className="SliderMainBx">
-                <div className="feat-slide-img">
-                  <Image
-                    unoptimized={true}
-                    width={1500}
-                    height={100 / (100 / 100)}
-                    src="/img/jobboard/Job_portal_script_create_job.png"
-                    alt="Create New Job"
-                  />
-                </div>
-                <div className="hands-proved">
-                  <div className="titleof_scnew">Create New Job</div>
-                  <div className="pro-feat-detai">
-                    Employers create new jobs by entering details i.e. Job
-                    title,Category,Description,Company Name, Work Type.
-                  </div>
-                </div>
-              </div>
-              <div className="SliderMainBx">
-                <div className="feat-slide-img">
-                  <Image
-                    unoptimized={true}
-                    width={1500}
-                    height={100 / (100 / 100)}
-                    src="/img/jobboard/job_portal_system_search_jobs.png"
-                    alt="Job Search"
-                  />
-                </div>
-                <div className="hands-proved">
-                  <div className="titleof_scnew">Job Search</div>
-                  <div className="pro-feat-detai">
-                    Search jobs by keywords, category, location, industry,
-                    functional area & city.
-                  </div>
-                </div>
-              </div>
-              <div className="SliderMainBx">
-                <div className="feat-slide-img">
-                  <Image
-                    unoptimized={true}
-                    width={1500}
-                    height={100 / (100 / 100)}
-                    src="/img/jobboard/make_a_cv_job_portal_app.png"
-                    alt="Create CV"
-                  />
-                </div>
-                <div className="hands-proved">
-                  <div className="titleof_scnew">Create CV</div>
-                  <div className="pro-feat-detai">
-                    Jobseekers will be able to create and download their CV on
-                    the website. All the details will get automated from
-                    profile.
-                  </div>
-                </div>
-              </div>
-              <div className="SliderMainBx">
-                <div className="feat-slide-img">
-                  <Image
-                    unoptimized={true}
-                    width={1500}
-                    height={100 / (100 / 100)}
-                    src="/img/jobboard/Manage_jobs_job_portal_script.png"
-                    alt="Job Management"
-                  />
-                </div>
-                <div className="hands-proved">
-                  <div className="titleof_scnew">Job Management</div>
-                  <div className="pro-feat-detai">
-                    Manage the jobs created by them making them active or
-                    inactive. Check the list of job seekers who applied for job.
-                  </div>
-                </div>
-              </div>
-              <div className="SliderMainBx">
-                <div className="feat-slide-img">
-                  <Image
-                    unoptimized={true}
-                    width={1500}
-                    height={100 / (100 / 100)}
-                    src="/img/jobboard/membership_plan_job_portal_script.png"
-                    alt="Membership Plan"
-                  />
-                </div>
-                <div className="hands-proved">
-                  <div className="titleof_scnew">Membership Plan</div>
-                  <div className="pro-feat-detai">
-                    Employers buy membership plan which suits their requirement
-                    best.They can renew or update your membership plan at any
-                    time.
-                  </div>
-                </div>
-              </div>
-            </Slider>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <section className="JObboardVideSection">
-        <div className="container">
-          <div className="JobBoardVideoBottom JobBoardbxVideoBottom" ref={secondVideoRef}>
-          {inViewSecond && (
-            <iframe
-              width="100%"
-              height="312"
-              src="https://www.youtube-nocookie.com/embed/7fJVD2R2kkA?rel=0"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""
-            ></iframe>
-            )}
-          </div>
-        </div>
-      </section> */}
 
       <section className="enq-section">
         <div className="container">
