@@ -93,8 +93,6 @@ const Page = () => {
     }
   };
 
-
-
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -149,7 +147,6 @@ const Page = () => {
     setDemoAccessModal(!demoAccessModal);
   };
 
-  
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
   const [isInView, setIsInView] = useState(false);
@@ -257,14 +254,14 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-//                       <SoftwareEnquiry
-//                         modalStatus={showModal}
-//                         toggle={openModal}
-//                         title="Please fill the form below and get access to the live demo of Groupon Clone Script.
-// See how it work yourself!"
-//                       />
+                      //                       <SoftwareEnquiry
+                      //                         modalStatus={showModal}
+                      //                         toggle={openModal}
+                      //                         title="Please fill the form below and get access to the live demo of Groupon Clone Script.
+                      // See how it work yourself!"
+                      //                       />
 
-<GetDemoEnquiry
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of Groupon Clone. See how it works yourself!"
@@ -289,14 +286,14 @@ const Page = () => {
                       alt="crowd_funding_script"
                       src="/img/jobboard/stars.png"
                     />
-                    <p>12 Reviews</p>
+                    <p>983 Reviews</p>
                   </div>
                 </div>
               </div>
               <div className="jocpp">
                 <ul className="job-pr-icon jobwidthauto">
                   <li>
-                  <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
                     <i className="fa fa-android"></i>
@@ -366,8 +363,6 @@ const Page = () => {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen=""
               ></iframe>
-             
-              
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd JobBoardServiceMarketFeatures">
@@ -1260,7 +1255,7 @@ const Page = () => {
           </div>
         </div>
       </section> */}
-       <section className="SubscriptionModel" id="subscriptionmodel">
+      <section className="SubscriptionModel" id="subscriptionmodel">
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job">Subscription Model</h2>
@@ -1295,7 +1290,8 @@ const Page = () => {
                 </li>
                 <li>
                   <span>
-                  Unlimited Appointment Booking: Book as many appointments as you need without any limitations.
+                    Unlimited Appointment Booking: Book as many appointments as
+                    you need without any limitations.
                   </span>
                 </li>
                 <li>
@@ -1351,18 +1347,18 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-//                     <SoftwareEnquiry
-//                       modalStatus={showModal}
-//                       toggle={openModal}
-//                       title="Please fill the form below and get access to the live demo of Groupon Clone Script.
-// See how it work yourself!"
-//                     />
+                    //                     <SoftwareEnquiry
+                    //                       modalStatus={showModal}
+                    //                       toggle={openModal}
+                    //                       title="Please fill the form below and get access to the live demo of Groupon Clone Script.
+                    // See how it work yourself!"
+                    //                     />
 
-<GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Groupon Clone. See how it works yourself!"
-                      />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Groupon Clone. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link className="btn fiverr-buys" href="/buy-now/groupon-clone">
@@ -1372,7 +1368,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                  <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
                     <i className="fa fa-android"></i>
@@ -1391,7 +1387,7 @@ const Page = () => {
                       alt=""
                       className="lazy"
                     />
-                    <p>12 Reviews</p>
+                    <p>983 Reviews</p>
                   </div>
                 </div>
               </div>
@@ -1680,7 +1676,7 @@ const Page = () => {
                           style={{ width: "100%" }}
                         ></div>
                       </div>
-                      <div className="people_star_num">9</div>
+                      <div className="people_star_num">897</div>
                     </div>
 
                     <div className="review_rating_fjs">
@@ -1697,7 +1693,7 @@ const Page = () => {
                           style={{ width: "10%" }}
                         ></div>
                       </div>
-                      <div className="people_star_num">3</div>
+                      <div className="people_star_num">86</div>
                     </div>
 
                     <div className="review_rating_fjs">
@@ -1754,7 +1750,7 @@ const Page = () => {
                 </div>
                 <div className="col-md-7">
                   <a className="btn btn-primary" onClick={openReviewModel}>
-                  Rate and Review product 
+                    Rate and Review product
                   </a>
 
                   <Reviewmodals
@@ -1880,11 +1876,9 @@ const Page = () => {
               <h4 className="title_main">Quick FAQ</h4>
 
               <div className="MainFaqBx">
-              
                 <Accordion
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
-                  
                 >
                   <AccordionSummary
                     aria-controls="panel1d-content"
