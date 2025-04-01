@@ -7370,6 +7370,15 @@ body.modal-open .quote_pop_plus {
   padding: 15px 50px;
   text-transform: none;
 }
+.panel-thanks .btn-download-script:hover {
+  background: #451095;
+  box-shadow: 0 1px 1px #999;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold !important;
+  padding: 15px 50px;
+  text-transform: none;
+}
 
 .thnks_se .panel-thanks h1,
 .thnks_se .panel-thanks span.thnk_ss {
