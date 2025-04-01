@@ -10,12 +10,10 @@ import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import Cookies from "js-cookie";
 import { Router } from "next/navigation";
 // import "@fortawesome/fontawesome-free/css/all.css";
-import "../../../../../../public/css/font-awesome.css"
+import "../../../../../../public/css/font-awesome.css";
 import Image from "next/image";
 import Link from "next/link";
 import Contactusmodel from "@/app/Components/Contactusmodel";
-
-
 
 const Page = ({ params }) => {
   const router = useRouter();
@@ -25,7 +23,6 @@ const Page = ({ params }) => {
   const [queryParameter, setQueryParameter] = useState(null);
   const [billingInitials, setBillingInitials] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
-
 
   let checkedAndroid = useRef(false);
   let checkedIphone = useRef(false);
@@ -324,306 +321,331 @@ const Page = ({ params }) => {
     <>
       <Navbar />
       <div className="buy_now_software">
-      <section className="breadcrems_header">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h1>Software Order</h1>
-            </div>
-            <div className="col-md-6">
-              <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                  <a href="/">Home</a>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                  Buy Now
-                </li>
-              </ol>
+        <section className="breadcrems_header">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <h1>Software Order</h1>
+              </div>
+              <div className="col-md-6">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
+                    <a href="/">Home</a>
+                  </li>
+                  <li className="breadcrumb-item active" aria-current="page">
+                    Buy Now
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
+        </section>
+
+        <div className="main_cart_loader" id="loadercart">
+          <Image
+            width={100}
+            height={100}
+            src="/img/loader_large_blue.gif"
+            alt=""
+          />
         </div>
-      </section>
 
-      <div className="main_cart_loader" id="loadercart">
-        <Image width={100} height={100} src="/img/loader_large_blue.gif" alt="" />
-      </div>
-
-      {productDetails && (
-        <section className="order_summarty">
-          <div className="container">
-            <div className="order_summarty_inner">
-              {!billing && (
-                <>
-                  <div class="SubscribePlan">
-                    <h3>
-                      Monthly Subscription plan of{" "}
-                      <span>
-                        $45/<small>mo</small>
-                      </span>
-                    </h3>
-                    <div class="SubscribeBtn">
-                      <form
-                        action="https://www.paypal.com/cgi-bin/webscr"
-                        method="post"
-                        target="_top"
-                      >
-                        <input type="hidden" name="cmd" value="_s-xclick" />
-                        <input
-                          type="hidden"
-                          name="hosted_button_id"
-                          value="ZWM436F2HGX3C"
-                        />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <input
-                          class="SubscribleBtn"
-                          type="submit"
-                          src=""
-                          border="0"
-                          name="submit"
-                          title="PayPal - The safer, easier way to pay online!"
-                          alt="Subscribe"
-                          value="Buy Now"
-                        />
-                      </form>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              <form
-                id="offerForm"
-                onSubmit={submitForm}
-                encType="multipart/form-data"
-                method="post"
-                acceptCharset="utf-8"
-                noValidate
-              >
-                <div className="order_title">
-                  <h4 className="titke">
-                    You’ve added {productDetails.productType} Software
-                  </h4>
-                </div>
-                <div className="order_summarty_right">
-                  <div className="order_summarty_right_inner">
-                    <div className="order_title">Order Summary</div>
-                    <div className="order_wrap">
-                      <div id="offeer_sec">
-                        <div className="order_wrap_row" id="and_sec">
-                          <div className="order_wrap_left">
-                            <span className="basi_title">
-                              {productDetails.productType}
-                            </span>
-                            <br />
-                            (Web Version)
-                          </div>
-                          <div className="order_wrap_right">
-                            {productDetails.currencyDetail.currency_symbol}
-                            <span id="and_price">
-                              {productDetails.currencyDetail.price}
-                            </span>{" "}
-                            {productDetails.currencyDetail.name}
-                          </div>
-                        </div>
-                        <div id="custom_sec"></div>
-                      </div>
-                      <div id="ofer_nw">
-                        <div className="order_wrap_row">
-                          <div className="order_wrap_left">
-                            <span className="basi_title">Total</span>
-                          </div>
-                          <div className="order_wrap_right">
-                            {productDetails.currencyDetail.currency_symbol}
-                            <span id="tot_sec">
-                              {productDetails.currencyDetail.price}
-                            </span>{" "}
-                            {productDetails.currencyDetail.name}
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div className="off_sect">
-                        <span id="show" className="drop drop_left">
-                          We Offer Money Back Guarantee{" "}
-                          <i className="question_icon"></i>
-                          <div className="drop_contanet drop_left_content">
-                            <span id="hide"></span>
-                            Yes, we provide a 30 days money back guarantee to
-                            ensure customer satisfaction with our software. If,
-                            for any reason, you decide to stop using the
-                            product, you can request a refund. We will reimburse
-                            the entire amount, excluding the installation and
-                            configuration charges, which are either USD 65 or
-                            20% of the application cost, whichever is higher.
-                            Please note that the money back guarantee does not
-                            apply to customers who have received updates as per
-                            their specific requests, taking into account the
-                            significant efforts and time invested by the team
-                            for their project.
-                          </div>
+        {productDetails && (
+          <section className="order_summarty">
+            <div className="container">
+              <div className="order_summarty_inner">
+                {!billing && (
+                  <>
+                    <div class="SubscribePlan">
+                      <h3>
+                        Monthly Subscription plan of{" "}
+                        <span>
+                          $45/<small>mo</small>
                         </span>
-                        <div className="pay_pri_term">
-                          For more detail visit following pages{" "}
-                          <Link
-                            href="/privacy-policy"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Privacy Policy
-                          </Link>{" "}
-                          and{" "}  
-                          <Link
-                            href="/terms-of-use"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Terms Of Use
-                          </Link>
+                      </h3>
+                      <div class="SubscribeBtn">
+                        <form
+                          action="https://www.paypal.com/cgi-bin/webscr"
+                          method="post"
+                          target="_top"
+                        >
+                          <input type="hidden" name="cmd" value="_s-xclick" />
+                          <input
+                            type="hidden"
+                            name="hosted_button_id"
+                            value="ZWM436F2HGX3C"
+                          />
+                          <input
+                            type="hidden"
+                            name="currency_code"
+                            value="USD"
+                          />
+                          <input
+                            type="hidden"
+                            name="return"
+                            value="https://logicspice.com/thank-you"
+                          />
+                          <input
+                            type="hidden"
+                            name="cancel_return"
+                            value={`https://logicspice.com/buy-now/${params.slug}`}
+                          />
+
+                          <input
+                            class="SubscribleBtn"
+                            type="submit"
+                            src=""
+                            border="0"
+                            name="submit"
+                            title="PayPal - The safer, easier way to pay online!"
+                            alt="Subscribe"
+                            value="Buy Now"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                <form
+                  id="offerForm"
+                  onSubmit={submitForm}
+                  encType="multipart/form-data"
+                  method="post"
+                  acceptCharset="utf-8"
+                  noValidate
+                >
+                  <div className="order_title">
+                    <h4 className="titke">
+                      You’ve added {productDetails.productType} Software
+                    </h4>
+                  </div>
+                  <div className="order_summarty_right">
+                    <div className="order_summarty_right_inner">
+                      <div className="order_title">Order Summary</div>
+                      <div className="order_wrap">
+                        <div id="offeer_sec">
+                          <div className="order_wrap_row" id="and_sec">
+                            <div className="order_wrap_left">
+                              <span className="basi_title">
+                                {productDetails.productType}
+                              </span>
+                              <br />
+                              (Web Version)
+                            </div>
+                            <div className="order_wrap_right">
+                              {productDetails.currencyDetail.currency_symbol}
+                              <span id="and_price">
+                                {productDetails.currencyDetail.price}
+                              </span>{" "}
+                              {productDetails.currencyDetail.name}
+                            </div>
+                          </div>
+                          <div id="custom_sec"></div>
+                        </div>
+                        <div id="ofer_nw">
+                          <div className="order_wrap_row">
+                            <div className="order_wrap_left">
+                              <span className="basi_title">Total</span>
+                            </div>
+                            <div className="order_wrap_right">
+                              {productDetails.currencyDetail.currency_symbol}
+                              <span id="tot_sec">
+                                {productDetails.currencyDetail.price}
+                              </span>{" "}
+                              {productDetails.currencyDetail.name}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="off_sect">
+                          <span id="show" className="drop drop_left">
+                            We Offer Money Back Guarantee{" "}
+                            <i className="question_icon"></i>
+                            <div className="drop_contanet drop_left_content">
+                              <span id="hide"></span>
+                              Yes, we provide a 30 days money back guarantee to
+                              ensure customer satisfaction with our software.
+                              If, for any reason, you decide to stop using the
+                              product, you can request a refund. We will
+                              reimburse the entire amount, excluding the
+                              installation and configuration charges, which are
+                              either USD 65 or 20% of the application cost,
+                              whichever is higher. Please note that the money
+                              back guarantee does not apply to customers who
+                              have received updates as per their specific
+                              requests, taking into account the significant
+                              efforts and time invested by the team for their
+                              project.
+                            </div>
+                          </span>
+                          <div className="pay_pri_term">
+                            For more detail visit following pages{" "}
+                            <Link
+                              href="/privacy-policy"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Privacy Policy
+                            </Link>{" "}
+                            and{" "}
+                            <Link
+                              href="/terms-of-use"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Terms Of Use
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="order_summarty_left">
-                  <div className="oder_inner">
-                    <div className="order_addonStep">
-                      {productDetails.additionalPoints.map((additional) => (
-                        <div className="addonStep_row" key={additional.id}>
-                          <div className="addonStep_row_inner">
-                            <div className="right_input">
-                              <div className="form__remember">
-                                <input
-                                  type="checkbox"
-                                  name="data[Additional][ids][]"
-                                  id={`remember-in-inline${additional.id}`}
-                                  className="in-checkbox"
-                                  onClick={(e) =>
-                                    addAdditional(e, additional.price)
-                                  }
-                                  value={additional.id}
-                                />
-                                <label
-                                  htmlFor={`remember-in-inline${additional.id}`}
-                                  className="in-label"
-                                ></label>
-                              </div>
-                            </div>
-                            <div className="input_des">
-                              {additional.name}
-                              <span className="row_des">
-                                ({additional.subtitle})
-                              </span>
-                            </div>
-                            <div className="input_rate">
-                              <span className="rate">
-                                {productDetails.currencyDetail.currency_symbol}
-                                {additional.price}{" "}
-                                {productDetails.currencyDetail.name}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                      {productDetails.currencyDetail.android_app !== null && (
-                        <>
-                          <div className="addonStep_row" key="2">
+                  <div className="order_summarty_left">
+                    <div className="oder_inner">
+                      <div className="order_addonStep">
+                        {productDetails.additionalPoints.map((additional) => (
+                          <div className="addonStep_row" key={additional.id}>
                             <div className="addonStep_row_inner">
                               <div className="right_input">
                                 <div className="form__remember">
                                   <input
                                     type="checkbox"
                                     name="data[Additional][ids][]"
-                                    id="remember-in-inline-android"
+                                    id={`remember-in-inline${additional.id}`}
                                     className="in-checkbox"
-                                    checked={checkedAndroid.current}
-                                    onClick={(e) => {
-                                      (checkedAndroid.current =
-                                        !checkedAndroid.current),
-                                        addAdditional(
-                                          e,
-                                          productDetails.currencyDetail
-                                            .android_app
-                                        );
-                                    }}
-                                    value="android"
+                                    onClick={(e) =>
+                                      addAdditional(e, additional.price)
+                                    }
+                                    value={additional.id}
                                   />
                                   <label
-                                    htmlFor="remember-in-inline-android"
+                                    htmlFor={`remember-in-inline${additional.id}`}
                                     className="in-label"
                                   ></label>
                                 </div>
                               </div>
-                              <div className="input_des">Android App</div>
+                              <div className="input_des">
+                                {additional.name}
+                                <span className="row_des">
+                                  ({additional.subtitle})
+                                </span>
+                              </div>
                               <div className="input_rate">
                                 <span className="rate">
                                   {
                                     productDetails.currencyDetail
                                       .currency_symbol
                                   }
-                                  {productDetails.currencyDetail.android_app}{" "}
+                                  {additional.price}{" "}
                                   {productDetails.currencyDetail.name}
                                 </span>
                               </div>
                             </div>
                           </div>
-                        </>
-                      )}
-                      {productDetails.currencyDetail.android_app !== null && (
-                        <>
-                          <div className="addonStep_row" key="2">
-                            <div className="addonStep_row_inner">
-                              <div className="right_input">
-                                <div className="form__remember">
-                                  <input
-                                    type="checkbox"
-                                    name="data[Additional][ids][]"
-                                    id="remember-in-inline-ios"
-                                    className="in-checkbox"
-                                    checked={checkedIphone.current}
-                                    onClick={(e) => {
-                                      (checkedIphone.current =
-                                        !checkedIphone.current),
-                                        addAdditional(
-                                          e,
-                                          productDetails.currencyDetail.ios_app
-                                        );
-                                    }}
-                                    value="iphone"
-                                  />
-                                  <label
-                                    htmlFor="remember-in-inline-ios"
-                                    className="in-label"
-                                  ></label>
+                        ))}
+                        {productDetails.currencyDetail.android_app !== null && (
+                          <>
+                            <div className="addonStep_row" key="2">
+                              <div className="addonStep_row_inner">
+                                <div className="right_input">
+                                  <div className="form__remember">
+                                    <input
+                                      type="checkbox"
+                                      name="data[Additional][ids][]"
+                                      id="remember-in-inline-android"
+                                      className="in-checkbox"
+                                      checked={checkedAndroid.current}
+                                      onClick={(e) => {
+                                        (checkedAndroid.current =
+                                          !checkedAndroid.current),
+                                          addAdditional(
+                                            e,
+                                            productDetails.currencyDetail
+                                              .android_app
+                                          );
+                                      }}
+                                      value="android"
+                                    />
+                                    <label
+                                      htmlFor="remember-in-inline-android"
+                                      className="in-label"
+                                    ></label>
+                                  </div>
+                                </div>
+                                <div className="input_des">Android App</div>
+                                <div className="input_rate">
+                                  <span className="rate">
+                                    {
+                                      productDetails.currencyDetail
+                                        .currency_symbol
+                                    }
+                                    {productDetails.currencyDetail.android_app}{" "}
+                                    {productDetails.currencyDetail.name}
+                                  </span>
                                 </div>
                               </div>
-                              <div className="input_des">iPhone App</div>
-                              <div className="input_rate">
-                                <span className="rate">
-                                  {
-                                    productDetails.currencyDetail
-                                      .currency_symbol
-                                  }
-                                  {productDetails.currencyDetail.ios_app}{" "}
-                                  {productDetails.currencyDetail.name}
-                                </span>
+                            </div>
+                          </>
+                        )}
+                        {productDetails.currencyDetail.android_app !== null && (
+                          <>
+                            <div className="addonStep_row" key="2">
+                              <div className="addonStep_row_inner">
+                                <div className="right_input">
+                                  <div className="form__remember">
+                                    <input
+                                      type="checkbox"
+                                      name="data[Additional][ids][]"
+                                      id="remember-in-inline-ios"
+                                      className="in-checkbox"
+                                      checked={checkedIphone.current}
+                                      onClick={(e) => {
+                                        (checkedIphone.current =
+                                          !checkedIphone.current),
+                                          addAdditional(
+                                            e,
+                                            productDetails.currencyDetail
+                                              .ios_app
+                                          );
+                                      }}
+                                      value="iphone"
+                                    />
+                                    <label
+                                      htmlFor="remember-in-inline-ios"
+                                      className="in-label"
+                                    ></label>
+                                  </div>
+                                </div>
+                                <div className="input_des">iPhone App</div>
+                                <div className="input_rate">
+                                  <span className="rate">
+                                    {
+                                      productDetails.currencyDetail
+                                        .currency_symbol
+                                    }
+                                    {productDetails.currencyDetail.ios_app}{" "}
+                                    {productDetails.currencyDetail.name}
+                                  </span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </>
-                      )}
+                          </>
+                        )}
+                      </div>
+                    </div>
+                    <div className="action_btn ">
+                      <button
+                        type="submit"
+                        className="custom_btn btn btn-primary"
+                        // onClick={submitForm}
+                      >
+                        Continue
+                      </button>
                     </div>
                   </div>
-                  <div className="action_btn ">
-                    <button
-                      type="submit"
-                      className="custom_btn btn btn-primary"
-                      // onClick={submitForm}
-                    >
-                    Continue
-                    </button>
-                  </div>
-                </div>
 
-                {/* <div className="order_summarty_right">
+                  {/* <div className="order_summarty_right">
                   <div className="order_summarty_right_inner">
                     <div className="order_title">Order Summary</div>
                     <div className="order_wrap">
@@ -703,15 +725,14 @@ const Page = ({ params }) => {
                     </div>
                   </div>
                 </div> */}
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
       </div>
-    
 
-<div className="quoue_box_full_sec">
+      <div className="quoue_box_full_sec">
         <div className="whatsapp-call">
           <a
             href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
