@@ -32,7 +32,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   // Return metadata
   return {
-    title: product.data.meta_title,
+    title: "Thank you",
     description: product.data.meta_description,
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
