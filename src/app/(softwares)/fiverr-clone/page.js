@@ -176,10 +176,6 @@ const Page = () => {
     setDemoAccessModal(!demoAccessModal);
   };
 
- 
-
- 
-
   const [isFullyVisible, setIsFullyVisible] = useState(false);
   const videoRef = useRef(null);
 
@@ -275,7 +271,6 @@ const Page = () => {
     <>
       <Navbar />
 
-
       <section className="paid-pro job-portal-banner job-portal-bg fiverr-new-banner NewJobSiteDesign JobBoardNewDesign FiverrCloneMainBanner">
         <div className="container">
           <div className="row">
@@ -352,12 +347,7 @@ const Page = () => {
                   >
                     <a>Get Demo Access!</a>
                     {
-                      //     <SoftwareEnquiry
-                      //       modalStatus={showModal}
-                      //       toggle={openModal}
-                      //       title="Please fill the form below and get access to the live demo of Fiverr Clone
-                      // .See how it work yourself!"
-                      //     />
+                  
                       <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
@@ -398,7 +388,7 @@ const Page = () => {
                     <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
-                    {/* <i className="fa-brands fa-android" aria-hidden="true"></i> */}
+                    
                     <i class="fa fa-android" aria-hidden="true"></i>
                   </li>
                   <li>
@@ -427,32 +417,18 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                {/* <Image
-                  unoptimized={true}
-                  width={450}
-                  height={500 / (100 / 100)}
-                  src="/img/fiverrclone/gigger-mobiles.png"
-                  alt="Fiverr_clone"
-                  className="lazy"
-                /> */}
-                {/* <Image
-                unoptimized={true}
-  priority={true}
-  width={450}
-  height={500}
-  src="/img/fiverrclone/gigger-mobiles.png"
-  alt="Fiverr Clone"
-  className="lazy"
-/> */}
+          
 
                 <Image
-                  priority={true}
+                  priority
                   width={450}
                   height={500}
                   src="/img/fiverrclone/gigger-mobiles.png"
                   alt="Fiverr Clone"
                   sizes="(max-width: 768px) 100vw, 450px"
-                  className="lazy"
+                  quality={75} // Adjust quality for better performance
+                  placeholder="blur" // Use placeholder blur for better UX
+                  blurDataURL="/img/fiverrclone/gigger-mobiles-small.png" // Provide a smaller version for blur effect
                 />
               </div>
             </div>
@@ -505,29 +481,7 @@ const Page = () => {
                   </div>
                 )}
               </div>
-              {/* <div ref={iframeRef}>
-                {isInView && (
-                  <iframe
-                    width="100%"
-                    height="312"
-                    src="https://www.youtube.com/embed/83xCE7lMRTs?rel=0&autoplay=0"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                )}
-              </div> */}
-              {/* <div ref={iframeRef}>
-                <iframe
-                  id="ytplayer"
-                  width="100%"
-                  height="312"
-                  src="https://www.youtube.com/embed/83xCE7lMRTs?enablejsapi=1&mute=1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div> */}
+             
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">

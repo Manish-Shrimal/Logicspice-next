@@ -427,15 +427,36 @@ const Page = () => {
               </div>
             </div>
             <div className="col-sm-5 col-md-5">
-              <div className="por-mobile-new">
+              {/* <div className="por-mobile-new">
+             
                 <Image
-                  width={350}
-                  height={100}
-                  className="lazy"
                   src="/img/jobboard/new-img-jobboard.png"
                   alt="Job_Board_Software"
+                  width={350}
+                  height={100}
                   sizes="(max-width: 768px) 100vw, 350px"
-                  unoptimized={false} // Ensure image optimization is enabled
+                  priority
+                  placeholder="blur" // Uses a low-quality preview while loading
+                  fetchPriority="high" // Ensures it loads early
+                  loading="eager" // Forces immediate loading
+                  blurDataURL="/img/jobboard/new-img-jobboard.png"
+                  style={{ objectFit: "cover" }} // Prevents layout shifts
+                />
+              </div> */}
+
+              <div className="por-mobile-new">
+                <Image
+                  src="/img/jobboard/new-img-jobboard.png"
+                  alt="Job Board Software"
+                  width={700} // Increased resolution
+                  height={200} // Adjusted to maintain aspect ratio
+                  sizes="(max-width: 768px) 100vw, 700px" // Ensures correct scaling on mobile
+                  priority
+                  placeholder="blur"
+                  fetchPriority="high"
+                  loading="eager"
+                  blurDataURL="/img/jobboard/new-img-jobboard.png"
+                  style={{ objectFit: "cover" }} // Prevents image distortion
                 />
               </div>
             </div>
@@ -2027,10 +2048,10 @@ const Page = () => {
 
                 <li>
                   <span>
-                    The platform's <b>multilingual support</b> feature is now
-                    updated with Greek, German and Ukrainian languages, allowing
-                    users to navigate and use the system in their preferred
-                    language for a more <b>localized experience</b>.
+                    The platform&apos;s <b>multilingual support</b> feature is
+                    now updated with Greek, German and Ukrainian languages,
+                    allowing users to navigate and use the system in their
+                    preferred language for a more <b>localized experience</b>.
                   </span>
                 </li>
               </ul>
@@ -2554,7 +2575,7 @@ const Page = () => {
                     </div>
                     <div className="icntechimg_nm">Laravel</div>
                   </li>
-                  <li data-aos="fade-up">
+                  {/* <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
                         unoptimized={true}
@@ -2589,7 +2610,47 @@ const Page = () => {
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
+                  </li> */}
+
+                  <li data-aos="fade-up">
+                    <div className="icntechimg">
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
+                        src="/img/jobboard/html-5.png"
+                        alt="HTML5 logo"
+                      />
+                    </div>
+                    <div className="icntechimg_nm">HTML5</div>
                   </li>
+
+                  <li data-aos="fade-up">
+                    <div className="icntechimg">
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
+                        src="/img/jobboard/tech_mysql_icon.png"
+                        alt="MySQL database logo"
+                      />
+                    </div>
+                    <div className="icntechimg_nm">MySQL</div>
+                  </li>
+
+                  <li data-aos="fade-up">
+                    <div className="icntechimg">
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
+                        src="/img/jobboard/tech_apache_icon.png"
+                        alt="Apache server logo"
+                      />
+                    </div>
+                    <div className="icntechimg_nm">Apache</div>
+                  </li>
+
                   <li data-aos="fade-up">
                     <div className="icntechimg">
                       <Image
@@ -2826,7 +2887,7 @@ const Page = () => {
             </div>
             <div className="col-md-3">
               <div className="ecommerce--review--point ">
-                <div className="outof_rating">
+                {/* <div className="outof_rating">
                   <div className="review_rating_fjs">
                     <div className="star_num">
                       5 <i className="fa fa-star"></i>
@@ -2911,7 +2972,35 @@ const Page = () => {
                     </div>
                     <div className="people_star_num">0</div>
                   </div>
+                </div> */}
+                <div className="outof_rating">
+                  {[
+                    { stars: 5, value: 100, count: 206 },
+                    { stars: 4, value: 30, count: 13 },
+                    { stars: 0, value: 0, count: 0 },
+                    { stars: 2, value: 0, count: 0 },
+                    { stars: 1, value: 0, count: 0 },
+                  ].map((rating, index) => (
+                    <div key={index} className="review_rating_fjs">
+                      <div className="star_num">
+                        {rating.stars} <i className="fa fa-star"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-label={`Rating ${rating.stars} stars progress`}
+                          aria-valuenow={rating.value}
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style={{ width: `${rating.value}%` }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">{rating.count}</div>
+                    </div>
+                  ))}
                 </div>
+
                 <div className="ecommerce--review--btn ">
                   <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
@@ -2939,350 +3028,7 @@ const Page = () => {
           <div className="row">
             <div className="col-md-12 ecommerce__Quick_FAQ">
               <h4 className="title_main">Quick FAQ</h4>
-              {/* <div className="panel-group faq_quick_sec" id="accordion">
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        aria-expanded="true"
-                        href="#collapse1"
-                      >
-                        <span>01. </span> Can a Jobseeker upload his CV to apply
-                        for job?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse1" className="panel-collapse collapse in">
-                    <div className="panel-body">
-                      <p>
-                        No. The information about the jobseeker will go from his
-                        profile to the employer that he is applying the job for.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse2"
-                      >
-                        <span>02. </span> Will there be any installation charges
-                        when I purchase the job portal script?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse2" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        No. The installation of our Job Portal Product will be
-                        absolutely free of cost.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse3"
-                      >
-                        <span>03. </span> Can jobseeker download the CV that he
-                        has created on this website?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse3" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes. Once the job seeker creates his CV, he can download
-                        the same in a PDF format.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse4"
-                      >
-                        <span>04. </span> Can employer or jobseeker write blog
-                        posts?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse4" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        The employers and jobseekers can not write blog posts.
-                        The blog posts will be written by admin and employers
-                        &amp; Job Seekers can view them.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse6"
-                      >
-                        <span>05. </span> Once I purchase the job portal script,
-                        how many days will it take to go online?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse6" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        It takes 2 working days generally, provided all the
-                        information to make it live has been given. If you want
-                        customizations, then time taken to implement your Job
-                        portal depends on the level of customization and data
-                        migration.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse7"
-                      >
-                        <span>06. </span> How can Jobseeker apply for a job?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse7" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Jobseeker can send their details directly to the job
-                        company or they can attached a cover letter along with
-                        their application. They can edit add or delete their
-                        cover letter from the profile.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse8"
-                      >
-                        <span>07. </span> How can Jobseeker create job alerts?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse8" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Jobseekers will be able to manage the alerts that will
-                        help them to receive emails if the job is available
-                        according to their set criteria. They can add alerts by
-                        providing the information like designation of job
-                        required and location of job.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse201"
-                      >
-                        <span>08. </span> Can I update some design and
-                        functionality in application code myself?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse201" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes, You will have access of the all the code, except
-                        some of the core encrypted files.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse202"
-                      >
-                        <span>09. </span> Will I be able to use it on multiple
-                        domains, after I purchase this script?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse202" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        You will be licensed to use it only for the domain, you
-                        purchased for.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse203"
-                      >
-                        <span>10. </span> Can I resell the script? Will I have
-                        rights over the script code?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse203" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        All rights will remain with Logicspice only, and you can
-                        not resell it.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse204"
-                      >
-                        <span>11. </span> Do you offer Money Back Guarantee?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse204" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes, we offer 30 days money back guarantee to ensure
-                        customer satisfaction of our softwares. If for any
-                        reason, you wish to discontinue using the product, you
-                        can ask us for refund. We will refund your total money
-                        except the installation and configuration charges, which
-                        is USD 65 or 20% of application cost, whichever is
-                        greater. Any cost of customization will not be refunded.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse07"
-                      >
-                        <span>12. </span> Do I need to provide Google map API
-                        key? If yes, how to generate Google map API key?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse07" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        Yes, you need to provide map API key. Please follow the
-                        steps mentioned in below URL to generate Google map API
-                        key:
-                        https://developers.google.com/maps/documentation/javascript/get-api-key.
-                        You need to setup your billing details over that.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="panel panel-default aos-init aos-animate"
-                  data-aos="fade-up"
-                >
-                  <div className="panel-heading">
-                    <div className="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapse504"
-                      >
-                        <span>13. </span> Along with hosting server details,
-                        what other recommendations?
-                      </a>
-                    </div>
-                  </div>
-                  <div id="collapse504" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      <p>
-                        We recommend you purchase SSL certificate along with a
-                        hosting server, considering that an SSL certificate is
-                        necessary for all the websites these days and it
-                        provides a secure layer to the website as well.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+
               <div id="accordion">
                 <div style={panelStyle} data-aos="fade-up">
                   <div style={headingStyle}>
