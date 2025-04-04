@@ -419,7 +419,7 @@ const Page = () => {
               <div className="por-mobile-new">
           
 
-                <Image
+                {/* <Image
                   priority
                   width={450}
                   height={500}
@@ -429,7 +429,41 @@ const Page = () => {
                   quality={75} // Adjust quality for better performance
                   placeholder="blur" // Use placeholder blur for better UX
                   blurDataURL="/img/fiverrclone/gigger-mobiles-small.png" // Provide a smaller version for blur effect
-                />
+                /> */}
+
+{/* <Image
+        src="/img/fiverrclone/gigger-mobiles.png" // Convert to WebP for better performance
+        alt="Fiverr Clone"
+        width={450}
+        height={500}
+        sizes="(max-width: 768px) 100vw, 450px"
+        priority // Ensures it loads fast (LCP optimization)
+        fetchPriority="high" // Forces early loading
+        decoding="async" // Optimized decoding
+        quality={80} // Adjust for performance & quality balance
+        placeholder="blur"
+        blurDataURL="/img/fiverrclone/gigger-mobiles-small.png" // Ensure lightweight preview
+      /> */}
+
+<Image
+   src="/img/fiverrclone/gigger-mobiles.png" // ✅ Use WebP (or AVIF) for better compression
+   alt="Fiverr Clone"
+   width={450}
+   height={500}
+   sizes="(max-width: 768px) 100vw, 450px"
+   priority // ✅ Ensures early loading (important for LCP)
+   fetchPriority="high" // ✅ Forces browser to load it ASAP
+   decoding="async" // ✅ Improves rendering speed
+   loading="eager" // ✅ Ensures immediate loading
+   quality={80} // ✅ Optimized balance between quality & size
+   placeholder="blur"
+   blurDataURL="/img/fiverrclone/gigger-mobiles-small.png" // ✅ Smaller preview image
+   style={{
+
+     objectFit: "cover", // ✅ Prevents layout shifts
+   }}
+/>
+
               </div>
             </div>
           </div>

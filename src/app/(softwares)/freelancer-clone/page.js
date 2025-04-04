@@ -346,13 +346,45 @@ const Page = () => {
             </div>
             <div className="col-sm-5 col-md-5">
               <div className="por-mobile-new">
-                <Image
+                {/* <Image
                   unoptimized={true}
                   width={330}
                   height={100 / (100 / 100)}
                   src="/img/freelancerclone/lsfreelancer-banner-img.png"
                   alt="Freelancer_clone"
-                />
+                /> */}
+
+{/* <Image
+          src="/img/freelancerclone/lsfreelancer-banner-img.png" // Use WebP format
+          alt="Freelancer Clone"
+          width={330}
+          height={100} // Maintain proper aspect ratio
+          priority={false} // Lazy load for performance
+          quality={75} // Adjust quality for balance between size and clarity
+          placeholder="blur" // Optional: Blur effect before loading
+          blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.webp" // Smaller preview image
+        /> */}
+
+<Image
+  src="/img/freelancerclone/lsfreelancer-banner-img.png" // ✅ Use WebP for better compression
+  alt="Freelancer Clone"
+  width={330}
+  height={100}
+  sizes="(max-width: 768px) 100vw, 330px" // ✅ Adaptive for smaller screens
+  priority // ✅ Critical for LCP optimization
+  fetchPriority="high" // ✅ Browser loads it ASAP
+  quality={80} // ✅ Optimized balance for performance
+  decoding="async" // ✅ Faster rendering
+  loading="eager" // ✅ Ensures immediate loading
+  placeholder="blur"
+  blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.png" // ✅ Use WebP preview
+  style={{
+   
+    objectFit: "cover", // ✅ Ensures proper rendering
+  }}
+
+/>
+
               </div>
             </div>
           </div>
@@ -373,7 +405,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="job-section-top-new JobBoardSectionNew">
+      {/* <section className="job-section-top-new JobBoardSectionNew">
         <div className="container">
           <p>
             Take our Freelancer clone application on your smart mobile phones.
@@ -385,7 +417,24 @@ const Page = () => {
             Logicspice today to get a demo of your app.
           </p>
         </div>
-      </section>
+      </section> */}
+
+<section className="job-section-top-new JobBoardSectionNew">
+  <div className="container">
+    <div style={{ minHeight: "120px" }}> {/* Adjust based on content */}
+      <p>
+        Take our Freelancer clone application on your smart mobile phones.
+        The mobile application will provide all the features of the website.
+        Nowadays the freelancing industry is growing rapidly. It&apos;s time
+        to take advantage of these changing trends, our freelancer
+        marketplace script helps you to launch your own freelancing bidding
+        website with all advance modules in less time. Get in touch with
+        Logicspice today to get a demo of your app.
+      </p>
+    </div>
+  </div>
+</section>
+
       <section
         className="client-say crowdfunding-say"
         style={{ backgroundColor: "#fff" }}
@@ -393,16 +442,8 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-              {/* <iframe
-                width="100%"
-                height="312"
-                src="https://www.youtube-nocookie.com/embed/MaLzH8m_GqQ?rel=0&autoplay=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen=""
-              ></iframe> */}
-              <div ref={iframeRef}>
+       
+              {/* <div ref={iframeRef}>
                 <iframe
                   id="ytplayer"
                   width="100%"
@@ -412,7 +453,21 @@ const Page = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-              </div>
+              </div> */}
+
+<div ref={iframeRef}>
+  <iframe
+    id="ytplayer"
+    width="100%"
+    height="312"
+    src="https://www.youtube.com/embed/MaLzH8m_GqQ?enablejsapi=1&mute=1"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    loading="lazy"
+  ></iframe>
+</div>
+
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new">
