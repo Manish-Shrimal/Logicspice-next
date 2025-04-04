@@ -334,22 +334,23 @@ const Page = () => {
                 /> */}
 
 <Image
-  src="/img/classified/classsifiedr-banner-img.png"
+  src="/img/classified/classsifiedr-banner-img.png" // Use WebP version
   alt="classified_Ads_Script"
   width={460}
-  height={500} // Ensure proper height
-  priority // ✅ Ensures it loads early
-  loading="eager" // ✅ Prevents lazy-loading delays
+  height={500}
+  priority
+  loading="eager"
   fetchPriority="high"
-  quality={75} // ✅ Good balance between size & quality
-  placeholder="blur" // ✅ Blurred placeholder for smoother loading
-  blurDataURL="/img/classified/classsifiedr-banner-img-blur.jpg" // ✅ Small placeholder image
+  quality={60} // Lower quality for performance
+  placeholder="blur"
+  blurDataURL="/img/classified/classsifiedr-banner-img-blur.png"
   style={{
     objectFit: "cover",
     maxWidth: "100%",
     height: "auto",
   }}
 />
+
 
               </div>
             </div>
