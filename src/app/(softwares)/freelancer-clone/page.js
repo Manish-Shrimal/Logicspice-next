@@ -365,7 +365,7 @@ const Page = () => {
           blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.webp" // Smaller preview image
         /> */}
 
-<Image
+{/* <Image
   src="/img/freelancerclone/lsfreelancer-banner-img.png" // ✅ Use WebP for better compression
   alt="Freelancer Clone"
   width={330}
@@ -383,7 +383,28 @@ const Page = () => {
     objectFit: "cover", // ✅ Ensures proper rendering
   }}
 
+/> */}
+
+
+
+<Image
+  src="/img/freelancerclone/lsfreelancer-banner-img.png" // ✅ better compression
+  alt="Freelancer Clone"
+  width={330}
+  height={100}
+  sizes="(max-width: 768px) 100vw, 330px"
+  priority
+  fetchPriority="high"
+  quality={75} // lower it slightly if using webp/avif
+  decoding="async"
+  loading="eager"
+  placeholder="blur"
+  blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.png"
+  style={{
+    objectFit: "cover",
+  }}
 />
+
 
               </div>
             </div>

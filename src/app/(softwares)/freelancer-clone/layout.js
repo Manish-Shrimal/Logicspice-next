@@ -220,17 +220,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
 // import { Inter } from "next/font/google";
 // import "../../globals.css";
 // import Head from "next/head";
@@ -335,7 +324,6 @@
 
 //   return (
 //     <html lang="en">
-   
 
 // <Head>
 //   <meta name="description" content={metadata.description} />
@@ -347,7 +335,6 @@
 //   <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 //   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
 // </Head>
-
 
 //       <CookiesConsent />
 
@@ -374,9 +361,6 @@
 //     </html>
 //   );
 // }
-
-
-
 
 import { Inter } from "next/font/google";
 import "../../globals.css";
@@ -490,7 +474,11 @@ export default async function RootLayout({ children, params, searchParams }) {
 
         {/* ✅ Preconnect and load Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
           rel="stylesheet"
@@ -523,4 +511,3 @@ export default async function RootLayout({ children, params, searchParams }) {
     </html>
   );
 }
-
