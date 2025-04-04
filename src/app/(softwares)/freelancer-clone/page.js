@@ -2253,7 +2253,7 @@ const Page = () => {
                         width={50}
                         height={100}
                         src="/img/jobboard/html-5.png"
-                        alt="HTML5"
+                        alt="HTML5 Logo"
                       />
                     </div>
                     <div className="icntechimg_nm">HTML5</div>
@@ -2265,7 +2265,7 @@ const Page = () => {
                         width={50}
                         height={100}
                         src="/img/jobboard/tech_mysql_icon.png"
-                        alt="MySQL"
+                        alt="MySQL Logo"
                       />
                     </div>
                     <div className="icntechimg_nm">MySQL</div>
@@ -2277,7 +2277,7 @@ const Page = () => {
                         width={50}
                         height={100}
                         src="/img/jobboard/tech_apache_icon.png"
-                        alt="Apache"
+                        alt="Apache Server Logo"
                       />
                     </div>
                     <div className="icntechimg_nm">Apache</div>
@@ -2410,7 +2410,7 @@ const Page = () => {
                         <span>4.9 out of 5 stars</span>
                       </span>
                     </div>
-                    <div className="review_rating_fjs">
+                    {/* <div className="review_rating_fjs">
                       <div className="star_num">
                         5 <i className="fa fa-star"></i>
                       </div>
@@ -2493,7 +2493,99 @@ const Page = () => {
                         ></div>
                       </div>
                       <div className="people_star_num">0</div>
-                    </div>
+                    </div> */}
+
+
+<div className="review_rating_fjs">
+  <div className="star_num">
+    5 <i className="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div className="progress">
+    <div
+      className="progress-bar progress-bar-danger progress-bar-striped"
+      role="progressbar"
+      aria-label="5 star rating progress"
+      aria-valuenow="100"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style={{ width: "100%" }}
+    ></div>
+  </div>
+  <div className="people_star_num">115</div>
+</div>
+
+<div className="review_rating_fjs">
+  <div className="star_num">
+    4 <i className="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div className="progress">
+    <div
+      className="progress-bar progress-bar-danger progress-bar-striped"
+      role="progressbar"
+      aria-label="4 star rating progress"
+      aria-valuenow="60"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style={{ width: "60%" }}
+    ></div>
+  </div>
+  <div className="people_star_num">13</div>
+</div>
+
+<div className="review_rating_fjs">
+  <div className="star_num">
+    3 <i className="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div className="progress">
+    <div
+      className="progress-bar progress-bar-danger progress-bar-striped"
+      role="progressbar"
+      aria-label="3 star rating progress"
+      aria-valuenow="20"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style={{ width: "20%" }}
+    ></div>
+  </div>
+  <div className="people_star_num">0</div>
+</div>
+
+<div className="review_rating_fjs">
+  <div className="star_num">
+    2 <i className="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div className="progress">
+    <div
+      className="progress-bar progress-bar-danger progress-bar-striped"
+      role="progressbar"
+      aria-label="2 star rating progress"
+      aria-valuenow="0"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style={{ width: "0%" }}
+    ></div>
+  </div>
+  <div className="people_star_num">0</div>
+</div>
+
+<div className="review_rating_fjs">
+  <div className="star_num">
+    1 <i className="fa fa-star" aria-hidden="true"></i>
+  </div>
+  <div className="progress">
+    <div
+      className="progress-bar progress-bar-danger progress-bar-striped"
+      role="progressbar"
+      aria-label="1 star rating progress"
+      aria-valuenow="0"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style={{ width: "0%" }}
+    ></div>
+  </div>
+  <div className="people_star_num">0</div>
+</div>
+
                   </div>
                 </div>
                 <div className="col-md-7">

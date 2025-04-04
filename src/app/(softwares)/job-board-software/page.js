@@ -448,8 +448,8 @@ const Page = () => {
                 <Image
                   src="/img/jobboard/new-img-jobboard.png"
                   alt="Job Board Software"
-                  width={700} // Increased resolution
-                  height={200} // Adjusted to maintain aspect ratio
+                  width={350} // Increased resolution
+                  height={100} // Adjusted to maintain aspect ratio
                   sizes="(max-width: 768px) 100vw, 700px" // Ensures correct scaling on mobile
                   priority
                   placeholder="blur"

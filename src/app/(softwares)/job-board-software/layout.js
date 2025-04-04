@@ -255,361 +255,150 @@
 
 
 
-// import { Inter } from "next/font/google";
-// import "../../globals.css";
-// import Head from "next/head";
-// import dynamic from "next/dynamic";
-// import Script from "next/script";
-// import BaseAPI from "@/app/BaseAPI/BaseAPI";
-// import MetadataApi from "@/app/BaseAPI/MetadataApi";
-// import Domain from "@/app/BaseAPI/Domain";
-
-// // Lazy load heavy components to reduce JavaScript execution time
-// const Chatbot = dynamic(() => import("@/app/Components/Chatbot"), { ssr: false });
-// const CookiesConsent = dynamic(() => import("@/app/Components/CookiesConsent"), { ssr: false });
-
-// const inter = Inter({ subsets: ["latin"] });
-
-// export async function generateMetadata({ params, searchParams }) {
-//   const product = await fetch(`${MetadataApi}/job-board-software`, { cache: "no-store" })
-//     .then((res) => res.json());
-
-//   let text = product.data.schema;
-//   let schemaOrg = null;
-
-//   if (text) {
-//     const cleanedText = text
-//       .replace(/\\r\\n/g, '')
-//       .replace(/\\n/g, '')
-//       .replace(/\\r/g, '')
-//       .replace(/\\+/g, '')
-//       .replace(/[\u0000-\u001F\u007F]/g, '');
-    
-//     schemaOrg = cleanedText ? JSON.parse(cleanedText) : null;
-//   }
-
-//   // FAQ Schema for structured data
-//   const faqSchema = {
-//     "@context": "https://schema.org",
-//     "@type": "FAQPage",
-//     "mainEntity": [
-//       {
-//         "@type": "Question",
-//         "name": "Can a Jobseeker upload his CV to apply for a job?",
-//         "acceptedAnswer": {
-//           "@type": "Answer",
-//           "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
-//         }
-//       },
-//       {
-//         "@type": "Question",
-//         "name": "Will there be any installation charges when I purchase the job portal script?",
-//         "acceptedAnswer": {
-//           "@type": "Answer",
-//           "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
-//         }
-//       },
-//       {
-//         "@type": "Question",
-//         "name": "Can jobseeker download the CV that he has created on this website?",
-//         "acceptedAnswer": {
-//           "@type": "Answer",
-//           "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
-//         }
-//       }
-//     ]
-//   };
-
-//   return {
-//     title: product.data.meta_title,
-//     description: product.data.meta_description,
-//     keywords: product.data.meta_keyword,
-//     alternates: {
-//       canonical: `${Domain}/job-board-software`,
-//     },
-//     robots: {
-//       index: true,
-//       follow: true,
-//       googleBot: {
-//         index: true,
-//         follow: true,
-//         "max-video-preview": -1,
-//         "max-image-preview": "large",
-//         "max-snippet": -1,
-//       },
-//     },
-//     schemaOrg: schemaOrg || null,
-//     faqSchema: faqSchema,
-//   };
-// }
-
-// export default async function RootLayout({ children, params, searchParams }) {
-//   const metadata = await generateMetadata({ params, searchParams });
-
-//   return (
-//     <html lang="en">
-//       <Head>
-//         {/* Preconnect to Google Fonts */}
-//         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-//         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-//         <link rel="preconnect" href="https://fonts.googleapis.com" />
-//         <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
-
-//         {/* Load Google Fonts */}
-//         <link
-//           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-//           rel="stylesheet"
-//         />
-
-//         <meta name="description" content={metadata.description} />
-//         <meta name="keywords" content={metadata.keywords} />
-//         <title>{metadata.title}</title>
-//       </Head>
-
-//       <body className={inter.className}>
-//         <Chatbot />
-//         <CookiesConsent />
-//         {children}
-
-//         {/* Render Structured Data (Schema.org) */}
-//         {metadata.schemaOrg && (
-//           <script
-//             type="application/ld+json"
-//             dangerouslySetInnerHTML={{
-//               __html: JSON.stringify(metadata.schemaOrg),
-//             }}
-//           />
-//         )}
-
-//         {/* Render FAQ Schema separately */}
-//         {metadata.faqSchema && (
-//           <script
-//             type="application/ld+json"
-//             dangerouslySetInnerHTML={{
-//               __html: JSON.stringify(metadata.faqSchema),
-//             }}
-//           />
-//         )}
-
-//         {/* Load external scripts efficiently */}
-//         <Script
-//           src="https://www.googletagmanager.com/gtag/js?id=AW-946..."
-//           strategy="lazyOnload"
-//         />
-//       </body>
-//     </html>
-//   );
-// }
-
-
-
-
 import { Inter } from "next/font/google";
 import "../../globals.css";
+import Head from "next/head";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "@/app/BaseAPI/Domain";
 
-// Lazy load heavy components
+// Lazy load heavy components to reduce JavaScript execution time
 const Chatbot = dynamic(() => import("@/app/Components/Chatbot"), { ssr: false });
 const CookiesConsent = dynamic(() => import("@/app/Components/CookiesConsent"), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export async function generateMetadata() {
-//   try {
-//     const response = await fetch(`${MetadataApi}/job-board-software`, { cache: "no-store" });
-//     const product = await response.json();
+export async function generateMetadata({ params, searchParams }) {
+  const product = await fetch(`${MetadataApi}/job-board-software`, { cache: "no-store" })
+    .then((res) => res.json());
 
-//     let schemaOrg = null;
-//     if (product?.data?.schema) {
-//       try {
-//         schemaOrg = JSON.parse(product.data.schema.replace(/\r?\n|\r/g, ""));
-//       } catch (error) {
-//         console.error("Error parsing schema JSON:", error);
-//       }
-//     }
+  let text = product.data.schema;
+  let schemaOrg = null;
 
-//     // FAQ Schema
-//     const faqSchema = {
-//       "@context": "https://schema.org",
-//       "@type": "FAQPage",
-//       "mainEntity": [
-//         {
-//           "@type": "Question",
-//           "name": "Can a Jobseeker upload his CV to apply for a job?",
-//           "acceptedAnswer": {
-//             "@type": "Answer",
-//             "text": "No. The jobseeker's information comes directly from their profile."
-//           }
-//         },
-//         {
-//           "@type": "Question",
-//           "name": "Will there be any installation charges for the job portal script?",
-//           "acceptedAnswer": {
-//             "@type": "Answer",
-//             "text": "No. Installation is completely free."
-//           }
-//         },
-//         {
-//           "@type": "Question",
-//           "name": "Can a jobseeker download their CV?",
-//           "acceptedAnswer": {
-//             "@type": "Answer",
-//             "text": "Yes, job seekers can download their CV in PDF format."
-//           }
-//         }
-//       ]
-//     };
+  if (text) {
+    const cleanedText = text
+      .replace(/\\r\\n/g, '')
+      .replace(/\\n/g, '')
+      .replace(/\\r/g, '')
+      .replace(/\\+/g, '')
+      .replace(/[\u0000-\u001F\u007F]/g, '');
+    
+    schemaOrg = cleanedText ? JSON.parse(cleanedText) : null;
+  }
 
-//     return {
-//       title: product.data.meta_title || "Job Board Software",
-//       description: product.data.meta_description || "Find the best job board software.",
-//       keywords: product.data.meta_keyword || "job board, job portal, job listings",
-//       alternates: {
-//         canonical: `${Domain}/job-board-software`,
-//       },
-//       robots: {
-//         index: true,
-//         follow: true,
-//         googleBot: {
-//           index: true,
-//           follow: true,
-//           "max-video-preview": -1,
-//           "max-image-preview": "large",
-//           "max-snippet": -1,
-//         },
-//       },
-//       schemaOrg,
-//       faqSchema,
-//     };
-//   } catch (error) {
-//     console.error("Error fetching metadata:", error);
-//     return {};
-//   }
-// }
-
-
-export async function generateMetadata() {
-  try {
-    const response = await fetch(`${MetadataApi}/job-board-software`, { cache: "force-cache" });
-    const product = await response.json();
-
-    let schemaOrg = null;
-    if (product?.data?.schema) {
-      try {
-        schemaOrg = JSON.parse(product.data.schema.replace(/\r?\n|\r/g, ""));
-      } catch (error) {
-        console.error("Error parsing schema JSON:", error);
-      }
-    }
-
-    // FAQ Schema
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can a Jobseeker upload his CV to apply for a job?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The jobseeker's information comes directly from their profile."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will there be any installation charges for the job portal script?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Installation is completely free."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can a jobseeker download their CV?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, job seekers can download their CV in PDF format."
-          }
+  // FAQ Schema for structured data
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a Jobseeker upload his CV to apply for a job?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
         }
-      ]
-    };
-
-    return {
-      title: product.data.meta_title || "Job Board Software",
-      description: product.data.meta_description || "Find the best job board software.",
-      keywords: product.data.meta_keyword || "job board, job portal, job listings",
-      alternates: {
-        canonical: `${Domain}/job-board-software`,
       },
-      robots: {
+      {
+        "@type": "Question",
+        "name": "Will there be any installation charges when I purchase the job portal script?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can jobseeker download the CV that he has created on this website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
+        }
+      }
+    ]
+  };
+
+  return {
+    title: product.data.meta_title,
+    description: product.data.meta_description,
+    keywords: product.data.meta_keyword,
+    alternates: {
+      canonical: `${Domain}/job-board-software`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
         index: true,
         follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
-      schemaOrg,
-      faqSchema,
-    };
-  } catch (error) {
-    console.error("Error fetching metadata:", error);
-    return {};
-  }
+    },
+    schemaOrg: schemaOrg || null,
+    faqSchema: faqSchema,
+  };
 }
 
-export default async function RootLayout({ children }) {
-  const metadata = await generateMetadata();
+export default async function RootLayout({ children, params, searchParams }) {
+  const metadata = await generateMetadata({ params, searchParams });
 
   return (
     <html lang="en">
-      <head>
-        {/* Preconnect for Performance */}
+      <Head>
+        {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.youtube-nocookie.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
 
-        {/* Google Fonts */}
+        {/* Load Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
           rel="stylesheet"
         />
 
-        {/* Meta Tags */}
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <title>{metadata.title}</title>
-      </head>
+      </Head>
 
       <body className={inter.className}>
         <Chatbot />
         <CookiesConsent />
         {children}
 
-        {/* Structured Data (Schema.org) */}
+        {/* Render Structured Data (Schema.org) */}
         {metadata.schemaOrg && (
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(metadata.schemaOrg),
+            }}
           />
         )}
 
-        {/* FAQ Schema */}
+        {/* Render FAQ Schema separately */}
         {metadata.faqSchema && (
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.faqSchema) }}
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(metadata.faqSchema),
+            }}
           />
         )}
 
-        {/* Google Tag Manager */}
+        {/* Load external scripts efficiently */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-946..."
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>
   );
 }
+
 
