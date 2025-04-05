@@ -41,7 +41,8 @@ const Blogslider = () => {
   const settings = {
     dots: false,
     arrows: false,
-    lazyLoad: true,
+    // lazyLoad: true,
+    lazyLoad: "progressive",
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -80,7 +81,7 @@ const Blogslider = () => {
       ) : (
   
         <Slider {...settings}>
-          {blogs.map((i, index) => (
+          {blogs.slice(0,10).map((i, index) => (
             <div key={index} style={{ gap: "10px" }}>
               <ul>
               <li
