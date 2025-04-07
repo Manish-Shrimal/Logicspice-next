@@ -65,14 +65,7 @@ export default function RootLayout({ children, params, searchParams }) {
   return (
     <html lang="en">
       <Head>
-               <meta property="og:title" content={metadata.openGraph.title} />
-         <meta
-          property="og:description"
-          content={metadata.description}
-        />
-        <meta property="og:image" content={metadata.images[0].url} />
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:type" content="website" />
+  
 
         {/* ✅ Twitter Card Meta Tags */}
         {/* <meta name="twitter:card" content="summary_large_image" />
