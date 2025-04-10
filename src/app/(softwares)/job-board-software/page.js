@@ -2366,7 +2366,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/sellfomote.webp"
+                      src="/img/jobboard/sellfomote.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2402,15 +2402,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://jobs.restrowizard.com.co/"
+                      href="https://firstnationsjobs.com.au/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      jobs.restrowizard.com.co
+                      firstnationsjobs.com.au
                     </Link>
                   </div>
                   <Link
-                    href="https://jobs.restrowizard.com.co/"
+                    href="https://firstnationsjobs.com.au/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -2418,7 +2418,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/restrowizard.webp"
+                      src="/img/jobboard/firstnationjobs.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2480,15 +2480,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://www.booyajobs.com/"
+                      href="https://grc.ua/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      booyajobs.com
+                      grc.ua
                     </Link>
                   </div>
                   <Link
-                    href="https://www.booyajobs.com/"
+                    href="https://grc.ua/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -2496,7 +2496,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/booyajobs.webp"
+                      src="/img/jobboard/grc.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2506,15 +2506,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://www.jobseakers.com.au/"
+                      href="https://www.lgbtijobs.com.au/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      jobseakers.com.au
+                      lgbtijobs.com.au
                     </Link>
                   </div>
                   <Link
-                    href="https://www.jobseakers.com.au/"
+                    href="https://www.lgbtijobs.com.au/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -2522,7 +2522,137 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/jobseakers.webp"
+                      src="/img/jobboard/lgbtijobs.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://jobvibe.co.uk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobvibe.co.uk
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://jobvibe.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/jobvibe.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://jobs.needtoday.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobs.needtoday.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://jobs.needtoday.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/needtoday.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://unchaayi.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      unchaayi.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://unchaayi.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/needtoday.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://jobs.bepsl.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobs.bepsl.in
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://jobs.bepsl.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/bepsl.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.bpservices.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      bpservices.in
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.bpservices.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/bpservices.png"
                       alt="icon"
                       title=""
                       className="img-fluid"

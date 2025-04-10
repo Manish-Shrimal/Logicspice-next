@@ -1263,15 +1263,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <a
-                      href="https://salorapido.com/"
+                      href="https://freelancer.needtoday.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      salorapido.com
+                      freelancer.needtoday.com
                     </a>
                   </div>
                   <a
-                    href="https://salorapido.com/"
+                    href="https://freelancer.needtoday.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1279,7 +1279,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/salorapido.jpg"
+                      src="/img/fiverrclone/freelancer-needtoday.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1306,23 +1306,23 @@ const Page = () => {
                 </div>
                 <div className="SliderMainBx">
                   <div className="site-titles">
-                    <Link href="https://dilancer.com/" target="_blank">
-                      dilancer.com
+                    <Link href="https://incognitocoach.com/" target="_blank">
+                    incognitocoach.com
                     </Link>
                   </div>
-                  <Link href="https://dilancer.com/" target="_blank">
+                  <Link href="https://incognitocoach.com/" target="_blank">
                     <Image
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/dilancer.jpg"
+                      src="/img/fiverrclone/incognito-coach.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
                     />
                   </Link>
                 </div>
-                <div className="SliderMainBx">
+                {/* <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link href="https://www.bimtower.in/" target="_blank">
                       bimtower.in
@@ -1372,7 +1372,7 @@ const Page = () => {
                       title=""
                     />
                   </Link>
-                </div>
+                </div> */}
               </Slider>
             </div>
           </Modal.Body>

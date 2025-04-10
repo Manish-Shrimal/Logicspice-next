@@ -1797,15 +1797,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://fletes24.com/"
+                      href="https://tawasul.co/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      fletes24.com
+                      tawasul.co
                     </Link>
                   </div>
                   <Link
-                    href="https://fletes24.com/"
+                    href="https://tawasul.co/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1813,7 +1813,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 / 100)}
-                      src="/img/logisticmarketplace/fletes24.jpg"
+                      src="/img/logisticmarketplace/tawasul.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1823,15 +1823,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://logistics.onestop.global/"
+                      href="https://emptytrailer.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      logistics.onestop.global
+                      emptytrailer.com
                     </Link>
                   </div>
                   <Link
-                    href="https://logistics.onestop.global/"
+                    href="https://emptytrailer.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1839,7 +1839,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 / 100)}
-                      src="/img/logisticmarketplace/logisticsonestop.jpg"
+                      src="/img/logisticmarketplace/empty-trailer.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1901,15 +1901,15 @@ const Page = () => {
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
-                      href="https://loadboard.trucking21.com/"
+                      href="https://shipping.shareplant.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      loadboard.trucking21.com
+                      shipping.shareplant.com
                     </Link>
                   </div>
                   <Link
-                    href="https://loadboard.trucking21.com/"
+                    href="https://shipping.shareplant.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1917,7 +1917,111 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 / 100)}
-                      src="/img/logisticmarketplace/loadboard.jpg"
+                      src="/img/logisticmarketplace/shareplant.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.letsgoheavy.co.za/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      letsgoheavy.co.za
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.letsgoheavy.co.za/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100 / (100 / 100)}
+                      src="/img/logisticmarketplace/letsgoheavy.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://anycars.uk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      anycars.uk
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://anycars.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100 / (100 / 100)}
+                      src="/img/logisticmarketplace/anycars.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://shipeazee.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      shipeazee.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://shipeazee.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100 / (100 / 100)}
+                      src="/img/logisticmarketplace/shipeazee.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://transporasia.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      transporasia.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://transporasia.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100 / (100 / 100)}
+                      src="/img/logisticmarketplace/transporasia.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
