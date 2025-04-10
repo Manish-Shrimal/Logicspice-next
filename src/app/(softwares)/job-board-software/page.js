@@ -2581,7 +2581,7 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-                <div className="SliderMainBx">
+                {/* <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
                       href="https://unchaayi.com/"
@@ -2600,13 +2600,13 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/needtoday.png"
+                      src="/img/jobboard/"
                       alt="icon"
                       title=""
                       className="img-fluid"
                     />
                   </Link>
-                </div>
+                </div> */}
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
