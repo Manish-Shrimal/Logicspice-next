@@ -85,12 +85,13 @@ export default function RootLayout({ children, params, searchParams }) {
         <link rel="preload" as="image" />
       </Head>
 
-      <body className={inter.className}>
+
+{/* this code works but the gtm component here causes a run time error */}
+      {/* <body className={inter.className}>
         <Chatbot />
         <AOSInitializer>{children}</AOSInitializer>
 
         <GTMComponent />
-        {/* <CookiesConsent /> */}
         {isHomePage && (
           <>
             <script
@@ -101,7 +102,31 @@ export default function RootLayout({ children, params, searchParams }) {
             />
           </>
         )}
-      </body>
+      </body> */}
+<body className={inter.className}>
+  <GTMComponent />
+  <noscript
+    dangerouslySetInnerHTML={{
+      __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5357VDW"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+    }}
+  />
+
+  <Chatbot />
+  <AOSInitializer>{children}</AOSInitializer>
+
+  {isHomePage && (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schemaData),
+      }}
+    />
+  )}
+</body>
+
+
+
     </html>
   );
 }
