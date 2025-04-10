@@ -2513,190 +2513,320 @@ const Page = () => {
           ></Modal.Header>
           <Modal.Body>
             <div id="jobboardclients" closeButton>
-              <Slider {...settings}>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://sellfomote.ch/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      salorapido.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://sellfomote.ch/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/sellfomote.jpg"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.ejtecs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ejtecs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.ejtecs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/ejtecs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://jobs.restrowizard.com.co/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      jobs.restrowizard.com.co
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://jobs.restrowizard.com.co/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/restrowizard.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.healthandsocialcarejobs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      healthandsocialcarejobs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.healthandsocialcarejobs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/healthandsocialcarejobs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.joblisto.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      joblisto.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.joblisto.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/joblisto.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.booyajobs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      booyajobs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.booyajobs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/booyajobs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.jobseakers.com.au/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      jobseakers.com.au
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.jobseakers.com.au/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/jobseakers.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-              </Slider>
+              <Slider {...companies}>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://sellfomote.ch/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    sellfomote.ch
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://sellfomote.ch/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/sellfomote.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://www.ejtecs.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    ejtecs.com
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://www.ejtecs.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/ejtecs.webp"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://firstnationsjobs.com.au/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    firstnationsjobs.com.au
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://firstnationsjobs.com.au/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/firstnationjobs.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://www.healthandsocialcarejobs.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    healthandsocialcarejobs.com
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://www.healthandsocialcarejobs.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/healthandsocialcarejobs.webp"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://www.joblisto.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    joblisto.com
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://www.joblisto.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/joblisto.webp"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://grc.ua/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    grc.ua
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://grc.ua/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/grc.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://www.lgbtijobs.com.au/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    lgbtijobs.com.au
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://www.lgbtijobs.com.au/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/lgbtijobs.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://jobvibe.co.uk/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    jobvibe.co.uk
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://jobvibe.co.uk/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/jobvibe.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://jobs.needtoday.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    jobs.needtoday.com
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://jobs.needtoday.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/needtoday.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              {/* <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://unchaayi.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    unchaayi.com
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://unchaayi.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div> */}
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://jobs.bepsl.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    jobs.bepsl.in
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://jobs.bepsl.in/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/bepsl.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                              <div className="SliderMainBx">
+                                <div className="site-titles">
+                                  <Link
+                                    href="https://www.bpservices.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    bpservices.in
+                                  </Link>
+                                </div>
+                                <Link
+                                  href="https://www.bpservices.in/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Image
+                                    unoptimized={true}
+                                    width={900}
+                                    height={100}
+                                    src="/img/jobboard/bpservices.png"
+                                    alt="icon"
+                                    title=""
+                                    className="img-fluid"
+                                  />
+                                </Link>
+                              </div>
+                            </Slider>
             </div>
           </Modal.Body>
           <Modal.Footer>
