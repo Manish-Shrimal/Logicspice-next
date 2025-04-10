@@ -115,14 +115,24 @@ export default function RootLayout({ children, params, searchParams }) {
   <Chatbot />
   <AOSInitializer>{children}</AOSInitializer>
 
-  {isHomePage && (
+  {/* {isHomePage && (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(schemaData),
       }}
     />
-  )}
+  )} */}
+
+{isHomePage && schemaData && (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(schemaData),
+    }}
+  />
+)}
+
 </body>
 
 
