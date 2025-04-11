@@ -98,7 +98,7 @@ const Page = () => {
     <GTMComponent />
     <CookiesConsent />
       <NavBar />
-      <div className="mt-[110px]">
+      <div className="topSectionHome">
       <Suspense fallback={<div>Loading Take a look...</div>}>
         <TakeaLook />
       </Suspense>

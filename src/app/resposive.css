@@ -4558,9 +4558,11 @@
   }
 
   .take-a-look {
-    padding: 30px 0  !important;
+    padding: 0px  !important;
   }
-
+  .topSectionHome {
+    margin-top: 75px;
+  }
 
 
   .readymateSolution .ready-product {

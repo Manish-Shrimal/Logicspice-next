@@ -267,6 +267,10 @@ body {
   text-transform: uppercase;
 } */
 
+.topSectionHome {
+  margin-top: 110px;
+}
+
 /* footer css  */
 .nav.navbar-nav .ad-footer-view-all .btn.btn-primary {
   padding: 6px 5px !important;
