@@ -84,7 +84,7 @@ const Page = () => {
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
-  var settings = {
+  var companies = {
     dots: true,
     arrows: true,
     infinite: true,
@@ -3613,7 +3613,7 @@ const Page = () => {
         <div className="container">
           <h2 className="title_main">LS Jobber Features</h2>
           <div id="joblboardslide">
-            <Slider {...settings}>
+            <Slider {...companies}>
               <div className="SliderMainBx">
                 <div className="feat-slide-img">
                   <Image
