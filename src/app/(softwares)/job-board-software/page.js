@@ -108,6 +108,97 @@ const Page = () => {
     getData();
   }, []);
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 13; // change this based on how many items you render
+
+  const CustomNextArrow = (props) => {
+    const { onClick, currentSlide, slideCount } = props;
+    const isLastSlide = currentSlide >= slideCount - 1;
+  
+    if (isLastSlide) return null; // Hide on last slide
+  
+    return (
+      <button
+        className="custom-arrow next"
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "-65px",
+          transform: "translateY(-50%)",
+          backgroundColor: "#333",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      >
+        <i
+          className="fa fa-chevron-circle-right"
+          aria-hidden="true"
+          style={{ fontSize: "24px" }}
+        ></i>
+      </button>
+    );
+  };
+  
+
+  const CustomPrevArrow = (props) => {
+    const { onClick, currentSlide } = props;
+    const isFirstSlide = currentSlide === 0;
+  
+    if (isFirstSlide) return null; // Hide on first slide
+  
+    return (
+      <button
+        className="custom-arrow prev"
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "-65px",
+          transform: "translateY(-50%)",
+          backgroundColor: "#333",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      >
+        <i
+          className="fa fa-chevron-circle-left"
+          aria-hidden="true"
+          style={{ fontSize: "24px" }}
+        ></i>
+      </button>
+    );
+  };
+  
+
+  const companies = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+    nextArrow: <CustomNextArrow currentSlide={currentSlide} />,
+    prevArrow: <CustomPrevArrow currentSlide={currentSlide} />,
+  };
+
   var settings = {
     dots: true,
     arrows: true,
@@ -118,16 +209,16 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
-  var companies = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-  };
+  // var companies = {
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  // };
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
@@ -2347,58 +2438,7 @@ const Page = () => {
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...companies}>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://sellfomote.ch/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      sellfomote.ch
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://sellfomote.ch/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/sellfomote.png"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
-                <div className="SliderMainBx">
-                  <div className="site-titles">
-                    <Link
-                      href="https://www.ejtecs.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ejtecs.com
-                    </Link>
-                  </div>
-                  <Link
-                    href="https://www.ejtecs.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized={true}
-                      width={900}
-                      height={100}
-                      src="/img/jobboard/ejtecs.webp"
-                      alt="icon"
-                      title=""
-                      className="img-fluid"
-                    />
-                  </Link>
-                </div>
+                
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
@@ -2444,7 +2484,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/healthandsocialcarejobs.webp"
+                      src="/img/jobboard/healthandsocialcarejobs.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2470,7 +2510,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/jobboard/joblisto.webp"
+                      src="/img/jobboard/joblisto.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -2581,7 +2621,7 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-                <div className="SliderMainBx">
+                {/* <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
                       href="https://unchaayi.com/"
@@ -2606,7 +2646,7 @@ const Page = () => {
                       className="img-fluid"
                     />
                   </Link>
-                </div>
+                </div> */}
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <Link
@@ -2653,6 +2693,58 @@ const Page = () => {
                       width={900}
                       height={100}
                       src="/img/jobboard/bpservices.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://sellfomote.ch/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      sellfomote.ch
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://sellfomote.ch/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/sellfomote.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.ejtecs.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ejtecs.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.ejtecs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/ejtecs.png"
                       alt="icon"
                       title=""
                       className="img-fluid"

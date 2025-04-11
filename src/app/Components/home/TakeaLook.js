@@ -6,7 +6,7 @@ const TakeaLook = () => {
     <section class="take-a-look">
         <div class="container">
           <div class="headings">
-            <h2>TAKE A LOOK AT WHAT WE HAVE BEEN WORKING ON</h2>
+            {/* <h2>TAKE A LOOK AT WHAT WE HAVE BEEN WORKING ON</h2> */}
             <p>
               We have established partnerships with prominent organizations and
               well-known brands,

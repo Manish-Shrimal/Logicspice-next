@@ -20,7 +20,6 @@ import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
 
-
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -84,16 +83,16 @@ const Page = () => {
   const openReviewModel = () => {
     setShowReviewModal(!showReviewModal);
   };
-  var companies = {
-    dots: true,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-  };
+  // var companies = {
+  //   dots: true,
+  //   arrows: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  // };
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
@@ -133,14 +132,103 @@ const Page = () => {
     getData();
   }, []);
 
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const totalSlides = 13; // change this based on how many items you render
+  
+    const CustomNextArrow = (props) => {
+      const { onClick, currentSlide, slideCount } = props;
+      const isLastSlide = currentSlide >= slideCount - 1;
+    
+      if (isLastSlide) return null; // Hide on last slide
+    
+      return (
+        <button
+          className="custom-arrow next"
+          onClick={onClick}
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: "-65px",
+            transform: "translateY(-50%)",
+            backgroundColor: "#333",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            border: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            cursor: "pointer",
+            zIndex: 2,
+          }}
+        >
+          <i
+            className="fa fa-chevron-circle-right"
+            aria-hidden="true"
+            style={{ fontSize: "24px" }}
+          ></i>
+        </button>
+      );
+    };
+    
+  
+    const CustomPrevArrow = (props) => {
+      const { onClick, currentSlide } = props;
+      const isFirstSlide = currentSlide === 0;
+    
+      if (isFirstSlide) return null; // Hide on first slide
+    
+      return (
+        <button
+          className="custom-arrow prev"
+          onClick={onClick}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "-65px",
+            transform: "translateY(-50%)",
+            backgroundColor: "#333",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            border: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            cursor: "pointer",
+            zIndex: 2,
+          }}
+        >
+          <i
+            className="fa fa-chevron-circle-left"
+            aria-hidden="true"
+            style={{ fontSize: "24px" }}
+          ></i>
+        </button>
+      );
+    };
+    
+  
+    const companies = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+      nextArrow: <CustomNextArrow currentSlide={currentSlide} />,
+      prevArrow: <CustomPrevArrow currentSlide={currentSlide} />,
+    };
+
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
     // console.log(showModal);
 
     setDemoAccessModal(!demoAccessModal);
   };
-
- 
 
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
@@ -336,10 +424,7 @@ const Page = () => {
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
                     <li>
-                      <i
-                        className="fa fa-android"
-                        aria-hidden="true"
-                      ></i>
+                      <i className="fa fa-android" aria-hidden="true"></i>
                     </li>
                     <li>
                       <i className="fa fa-apple" aria-hidden="true"></i>
@@ -396,7 +481,10 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section className="" style={{ backgroundColor: "#f1f1f1", padding: "60px 0" }}>
+      <section
+        className=""
+        style={{ backgroundColor: "#f1f1f1", padding: "60px 0" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
@@ -2128,10 +2216,10 @@ const Page = () => {
                     // />
 
                     <GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Job Portal Script. See how it works yourself!"
-                      />
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Job Portal Script. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link
@@ -2514,241 +2602,189 @@ const Page = () => {
           <Modal.Body>
             <div id="jobboardclients" closeButton>
               <Slider {...companies}>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://sellfomote.ch/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    sellfomote.ch
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://sellfomote.ch/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/sellfomote.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://www.ejtecs.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    ejtecs.com
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://www.ejtecs.com/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/ejtecs.webp"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://firstnationsjobs.com.au/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    firstnationsjobs.com.au
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://firstnationsjobs.com.au/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/firstnationjobs.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://www.healthandsocialcarejobs.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    healthandsocialcarejobs.com
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://www.healthandsocialcarejobs.com/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/healthandsocialcarejobs.webp"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://www.joblisto.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    joblisto.com
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://www.joblisto.com/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/joblisto.webp"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://grc.ua/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    grc.ua
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://grc.ua/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/grc.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://www.lgbtijobs.com.au/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    lgbtijobs.com.au
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://www.lgbtijobs.com.au/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/lgbtijobs.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://jobvibe.co.uk/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    jobvibe.co.uk
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://jobvibe.co.uk/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/jobvibe.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://jobs.needtoday.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    jobs.needtoday.com
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://jobs.needtoday.com/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/needtoday.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://firstnationsjobs.com.au/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      firstnationsjobs.com.au
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://firstnationsjobs.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/firstnationjobs.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.healthandsocialcarejobs.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      healthandsocialcarejobs.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.healthandsocialcarejobs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/healthandsocialcarejobs.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.joblisto.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      joblisto.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.joblisto.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/joblisto.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://grc.ua/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      grc.ua
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://grc.ua/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/grc.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.lgbtijobs.com.au/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      lgbtijobs.com.au
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.lgbtijobs.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/lgbtijobs.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://jobvibe.co.uk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobvibe.co.uk
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://jobvibe.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/jobvibe.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://jobs.needtoday.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobs.needtoday.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://jobs.needtoday.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/needtoday.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                {/* <div className="SliderMainBx">
                                 <div className="site-titles">
                                   <Link
                                     href="https://unchaayi.com/"
@@ -2773,60 +2809,112 @@ const Page = () => {
                                     className="img-fluid"
                                   />
                                 </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://jobs.bepsl.in/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    jobs.bepsl.in
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://jobs.bepsl.in/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/bepsl.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="SliderMainBx">
-                                <div className="site-titles">
-                                  <Link
-                                    href="https://www.bpservices.in/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    bpservices.in
-                                  </Link>
-                                </div>
-                                <Link
-                                  href="https://www.bpservices.in/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Image
-                                    unoptimized={true}
-                                    width={900}
-                                    height={100}
-                                    src="/img/jobboard/bpservices.png"
-                                    alt="icon"
-                                    title=""
-                                    className="img-fluid"
-                                  />
-                                </Link>
-                              </div>
-                            </Slider>
+                              </div> */}
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://jobs.bepsl.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      jobs.bepsl.in
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://jobs.bepsl.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/bepsl.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.bpservices.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      bpservices.in
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.bpservices.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/bpservices.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://sellfomote.ch/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      sellfomote.ch
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://sellfomote.ch/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/sellfomote.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link
+                      href="https://www.ejtecs.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ejtecs.com
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://www.ejtecs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/jobboard/ejtecs.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+              </Slider>
             </div>
           </Modal.Body>
           <Modal.Footer>
@@ -2943,14 +3031,13 @@ const Page = () => {
                     Safari 5+, IE 9+
                   </li>
                   <li className="same ">
-                    <b>Framework - </b> Laravel 10.x 
+                    <b>Framework - </b> Laravel 10.x
                   </li>
                   <li className="same ">
                     <b>Library - </b> ReactJS (Version 18.2.0)
                   </li>
                   <li className="same">
-                    <b>Language - </b> PHP 8.2,
-                    jQuery
+                    <b>Language - </b> PHP 8.2, jQuery
                   </li>
                   <li className="other">
                     <b>Design - </b> HTML 5, CSS 3, Bootstrap4, JavaScript
@@ -3742,16 +3829,16 @@ const Page = () => {
               allowfullscreen
             ></iframe> */}
             <div ref={iframeRef}>
-                <iframe
-                  id="ytplayer"
-                  width="100%"
-                  height="312"
-                  src="https://www.youtube.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
+              <iframe
+                id="ytplayer"
+                width="100%"
+                height="312"
+                src="https://www.youtube.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -3781,11 +3868,7 @@ const Page = () => {
             <div className="row">
               <div className="col-sm-6 col-md-4">
                 <div className="thumbnail">
-                  <Link
-                    title="View Detail"
-                    target="_black"
-                    href="/udemy-clone"
-                  >
+                  <Link title="View Detail" target="_black" href="/udemy-clone">
                     <div className="caption">
                       <div className="other-caption-bx">
                         <h3>Udemy Clone</h3>

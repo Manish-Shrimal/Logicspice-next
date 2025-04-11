@@ -61,6 +61,95 @@ const Page = () => {
     setShowReviewModal(!showReviewModal);
   };
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 10; // change this based on how many items you render
+
+  const CustomNextArrow = (props) => {
+    const { onClick, currentSlide, slideCount } = props;
+    const isLastSlide = currentSlide >= slideCount - 1;
+
+    if (isLastSlide) return null; // Hide on last slide
+
+    return (
+      <button
+        className="custom-arrow next"
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "-65px",
+          transform: "translateY(-50%)",
+          backgroundColor: "#333",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      >
+        <i
+          className="fa fa-chevron-circle-right"
+          aria-hidden="true"
+          style={{ fontSize: "24px" }}
+        ></i>
+      </button>
+    );
+  };
+
+  const CustomPrevArrow = (props) => {
+    const { onClick, currentSlide } = props;
+    const isFirstSlide = currentSlide === 0;
+
+    if (isFirstSlide) return null; // Hide on first slide
+
+    return (
+      <button
+        className="custom-arrow prev"
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "-65px",
+          transform: "translateY(-50%)",
+          backgroundColor: "#333",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      >
+        <i
+          className="fa fa-chevron-circle-left"
+          aria-hidden="true"
+          style={{ fontSize: "24px" }}
+        ></i>
+      </button>
+    );
+  };
+
+  const companies = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+    nextArrow: <CustomNextArrow currentSlide={currentSlide} />,
+    prevArrow: <CustomPrevArrow currentSlide={currentSlide} />,
+  };
+
   var settings = {
     dots: true,
     arrows: true,
@@ -71,16 +160,16 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
-  var companies = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-  };
+  // var companies = {
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 3000,
+  // };
   const [sellerTab, setSellerTab] = useState(true);
   const [buyerTab, setBuyerTab] = useState(false);
   const [adminTab, setAdminTab] = useState(false);
@@ -116,7 +205,6 @@ const Page = () => {
     }
   };
 
- 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -164,7 +252,6 @@ const Page = () => {
     getData();
   }, []);
 
- 
   return (
     <>
       <NavBar />
@@ -1787,7 +1874,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 / 100)}
-                      src="/img/logisticmarketplace/loadmoversgh.jpg"
+                      src="/img/logisticmarketplace/loadmoversgh.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1865,7 +1952,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 / 100)}
-                      src="/img/logisticmarketplace/afodel.jpg"
+                      src="/img/logisticmarketplace/afodel.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1891,7 +1978,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100 / (100 / 100)}
-                      src="/img/logisticmarketplace/esseltransport.jpg"
+                      src="/img/logisticmarketplace/esseltransport.png"
                       alt="icon"
                       title=""
                       className="img-fluid"

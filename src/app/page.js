@@ -98,23 +98,40 @@ const Page = () => {
     <GTMComponent />
     <CookiesConsent />
       <NavBar />
-      <div className="home-slider">
+      <div className="mt-[110px]">
+      <Suspense fallback={<div>Loading Take a look...</div>}>
+        <TakeaLook />
+      </Suspense>
+      </div>
+      <Suspense fallback={<div>Loading Services...</div>}>
+        <ServicesNewSection />
+      </Suspense>
+      {/* <div className="home-slider">
         <div className="container">
           <Suspense fallback={<div>Loading Services...</div>}>
             <Slidersimple />
           </Suspense>
         </div>
-      </div>
+      </div> */}
 
-      <Suspense fallback={<div>Loading Services...</div>}>
-        <ServicesNewSection />
-      </Suspense>
+{/* <Suspense fallback={<div>Loading Services...</div>}>
+            <Slidersimple />
+          </Suspense> */}
+
+     
 
       
 
-      <Suspense fallback={<div>Loading Take a look...</div>}>
+      {/* <Suspense fallback={<div>Loading Take a look...</div>}>
         <TakeaLook />
-      </Suspense>
+      </Suspense> */}
+      {/* <div className="home-slider">
+        <div className="container">
+          <Suspense fallback={<div>Loading Services...</div>}>
+            <Slidersimple />
+          </Suspense>
+        </div>
+      </div> */}
   
       {}
       {/* <hr /> */}

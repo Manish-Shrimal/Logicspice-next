@@ -104,6 +104,97 @@ const Page = () => {
     autoplaySpeed: 3000,
   };
 
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const totalSlides = 4; // change this based on how many items you render
+  
+    const CustomNextArrow = (props) => {
+      const { onClick, currentSlide, slideCount } = props;
+      const isLastSlide = currentSlide >= slideCount - 1;
+    
+      if (isLastSlide) return null; // Hide on last slide
+    
+      return (
+        <button
+          className="custom-arrow next"
+          onClick={onClick}
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: "-65px",
+            transform: "translateY(-50%)",
+            backgroundColor: "#333",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            border: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            cursor: "pointer",
+            zIndex: 2,
+          }}
+        >
+          <i
+            className="fa fa-chevron-circle-right"
+            aria-hidden="true"
+            style={{ fontSize: "24px" }}
+          ></i>
+        </button>
+      );
+    };
+    
+  
+    const CustomPrevArrow = (props) => {
+      const { onClick, currentSlide } = props;
+      const isFirstSlide = currentSlide === 0;
+    
+      if (isFirstSlide) return null; // Hide on first slide
+    
+      return (
+        <button
+          className="custom-arrow prev"
+          onClick={onClick}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "-65px",
+            transform: "translateY(-50%)",
+            backgroundColor: "#333",
+            borderRadius: "50%",
+            width: "45px",
+            height: "45px",
+            border: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            cursor: "pointer",
+            zIndex: 2,
+          }}
+        >
+          <i
+            className="fa fa-chevron-circle-left"
+            aria-hidden="true"
+            style={{ fontSize: "24px" }}
+          ></i>
+        </button>
+      );
+    };
+    
+  
+    const companies = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+      nextArrow: <CustomNextArrow currentSlide={currentSlide} />,
+      prevArrow: <CustomPrevArrow currentSlide={currentSlide} />,
+    };
+
   const [activeTab, setActiveTab] = useState("tab2");
 
   const [pageData, setPageData] = useState([]);
@@ -1259,7 +1350,7 @@ const Page = () => {
           </Modal.Header>
           <Modal.Body>
             <div id="jobboardclients">
-              <Slider {...settings}>
+              <Slider {...companies}>
                 <div className="SliderMainBx">
                   <div className="site-titles">
                     <a
@@ -1297,7 +1388,7 @@ const Page = () => {
                       unoptimized={true}
                       width={900}
                       height={100}
-                      src="/img/fiverrclone/gblancers.jpg"
+                      src="/img/fiverrclone/gblancers.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
@@ -1316,6 +1407,24 @@ const Page = () => {
                       width={900}
                       height={100}
                       src="/img/fiverrclone/incognito-coach.png"
+                      alt="icon"
+                      title=""
+                      className="img-fluid"
+                    />
+                  </Link>
+                </div>
+                <div className="SliderMainBx">
+                  <div className="site-titles">
+                    <Link href="https://www.gigsfive.com/" target="_blank">
+                    gigsfive.com
+                    </Link>
+                  </div>
+                  <Link href="https://www.gigsfive.com/" target="_blank">
+                    <Image
+                      unoptimized={true}
+                      width={900}
+                      height={100}
+                      src="/img/fiverrclone/gigsfive.png"
                       alt="icon"
                       title=""
                       className="img-fluid"
