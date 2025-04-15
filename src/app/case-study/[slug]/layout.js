@@ -10,35 +10,24 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/case-studies`,{
+  const response = await fetch(`https://manage.logicspice.com/api/case-studies/${params.slug}`,{
     cache: "no-store",
   }).then((res) =>
     res.json()
   );
 
+  // console.log(response.allblogs, "Test");
+
   let pageSlug = params;
 
-  let text = product.data.schema;
+  let product = response?.allblogs;
 
-  let schemaOrg = null;
-  if(text){
-    const cleanedText = text
-      .replace(/\\r\\n/g, '')   // Remove \r\n (carriage return + newline)
-      .replace(/\\n/g, '')      // Remove \n (newline)
-      .replace(/\\r/g, '')      // Remove \r (carriage return)
-      .replace(/\\+/g, '')      // Remove unnecessary backslashes
-      .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
-
-
-      schemaOrg = cleanedText && JSON.parse(cleanedText);
-
-  }
 
   // Return metadata
   return {
-    title: product.data.meta_title,
-    description: product.data.meta_description,
-    keywords: product.data.meta_keyword,
+    title: product?.meta_title,
+    description: product?.meta_description,
+    keywords: product?.meta_keyword,
     // Add other meta tags as needed
     alternates: {
       canonical: `${Domain}/case-study/${pageSlug.slug}`,
@@ -54,7 +43,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
         "max-snippet": -1,
       },
     },
-    schemaOrg: schemaOrg || null,
+    
   };
 }
 
@@ -72,10 +61,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
-      {/* <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
-      /> */}
+      
     </html>
   );
 }
