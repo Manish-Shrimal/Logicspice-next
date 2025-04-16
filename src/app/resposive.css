@@ -1953,7 +1953,7 @@
 
   .headings.headings p,
   .headings p {
-    font-size: 15px !important;
+    font-size: 24px !important;
     padding: 0 10px;
     /* color: #505458; */
   }
@@ -4559,6 +4559,9 @@
 
   .take-a-look {
     padding: 0px  !important;
+  }
+  .take-a-look .MainHeading {
+    font-size: 24px !important;
   }
   .topSectionHome {
     margin-top: 75px;

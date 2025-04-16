@@ -16,6 +16,8 @@
   }
 }
 
+
+
 /* *{
   border: 2px solid red;
 } */
@@ -3701,6 +3703,11 @@ positivitymain {
   margin: 0!important;
 
 }
+.take-a-look .MainHeading {
+  font-size: 26px;
+}
+
+
 
 .take-a-look .carousel-control {
   background-image: none !important;
@@ -5414,6 +5421,10 @@ body.modal-open .quote_pop_plus {
     color: #303030;
     box-shadow: none;
     border-radius: 0 !important;
+  }
+
+  .take-a-look p {
+    font-size: 24px !important;
   }
 
   .footer-bg .CustomQuickFAQScript .accordion-item {
