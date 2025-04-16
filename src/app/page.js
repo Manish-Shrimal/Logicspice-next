@@ -22,60 +22,58 @@ import GTMComponent from "./Components/GTMComponent";
 import "../../public/css/font-awesome.css";
 import CookiesConsent from "./Components/CookiesConsent";
 
-
 const ServicesNewSection = lazy(() =>
   import("./Components/ServicesNewSection")
 );
-const Slidersimple = lazy(() => import("./Components/Slidersimple"),{
+const Slidersimple = lazy(() => import("./Components/Slidersimple"), {
   ssr: false,
 });
-
-
 
 const TakeaLook = lazy(() => import("./Components/home/TakeaLook"), {
   ssr: false,
 });
 
-const ClientSide = lazy(() => import("./Components/home/ClientSide"),{
+const ClientSide = lazy(() => import("./Components/home/ClientSide"), {
   ssr: false,
 });
 
-const CustomizeTop = lazy(() => import("./Components/home/CustomizeTop"),{
+const CustomizeTop = lazy(() => import("./Components/home/CustomizeTop"), {
   ssr: false,
 });
 
-const ClientSay = lazy(() => import("./Components/home/ClientSay"),{
+const ClientSay = lazy(() => import("./Components/home/ClientSay"), {
   ssr: false,
 });
 
-const IndustriesWeServe = lazy(() =>
-  import("./Components/home/IndustriesWeServe"),{
+const IndustriesWeServe = lazy(
+  () => import("./Components/home/IndustriesWeServe"),
+  {
     ssr: false,
   }
 );
 
-const ReadymadeSolution = lazy(() =>
-  import("./Components/home/ReadymadeSolution"),{
-    ssr: false
+const ReadymadeSolution = lazy(
+  () => import("./Components/home/ReadymadeSolution"),
+  {
+    ssr: false,
   }
 );
 
-const HireExpert = lazy(() => import("./Components/home/HireExpert"),{
+const HireExpert = lazy(() => import("./Components/home/HireExpert"), {
   ssr: false,
 });
 
-const Blogslider = lazy(() => import("./Components/Blogslider"),{
+const Blogslider = lazy(() => import("./Components/Blogslider"), {
   ssr: false,
 });
 const Certificationtabs = lazy(() => import("./Components/Certificationtabs"), {
   ssr: false,
 });
-const Workingwith = lazy(() => import("./Components/Workingwith"),{
+const Workingwith = lazy(() => import("./Components/Workingwith"), {
   ssr: false,
 });
 
 const Page = () => {
-
   // useEffect(() => {
   //   const handleScroll = () => {
   //     if (
@@ -95,13 +93,13 @@ const Page = () => {
   // }, []);s
   return (
     <>
-    <GTMComponent />
-    <CookiesConsent />
+      <GTMComponent />
+      <CookiesConsent />
       <NavBar />
       <div className="topSectionHome">
-      <Suspense fallback={<div>Loading Take a look...</div>}>
-        <TakeaLook />
-      </Suspense>
+        <Suspense fallback={<div>Loading Take a look...</div>}>
+          <TakeaLook />
+        </Suspense>
       </div>
       <Suspense fallback={<div>Loading Services...</div>}>
         <ServicesNewSection />
@@ -114,13 +112,9 @@ const Page = () => {
         </div>
       </div> */}
 
-{/* <Suspense fallback={<div>Loading Services...</div>}>
+      {/* <Suspense fallback={<div>Loading Services...</div>}>
             <Slidersimple />
           </Suspense> */}
-
-     
-
-      
 
       {/* <Suspense fallback={<div>Loading Take a look...</div>}>
         <TakeaLook />
@@ -132,50 +126,64 @@ const Page = () => {
           </Suspense>
         </div>
       </div> */}
-  
+
       {}
       {/* <hr /> */}
 
       <hr style={{ height: "2px", margin: "20px 0", visibility: "visible" }} />
 
-
       <section className="new_contentt">
-    <div className="container">
-        <p style={{ marginBottom: "15px" }}>
-          At Logicspice, we are always growing to meet the evolving needs of
-          businesses. Our newest services include
-          <Link href="/blockchain-development"> Blockchain Development services </Link>
-           for secure and transparent operations, Generative AI to drive
-          creativity and boost efficiency, and Video Creation for high-quality,
-          impactful brand videos.
-        </p>
-        <p>
-          We have also developed ready-to-use software solutions for healthcare
-          providers, such as Doctor Appointment Booking Software; Salon Booking
-          Software for beauty and wellness businesses, Group Chat Apps for
-          Internal Communication, Live Chat Software, and flexible booking for a
-          whole profundity of service industries, making it easy for people to
-          book appointments in order to enrich customer interactions.
-        </p>
-      </div>
-    </section>
-
-
-
+        
+        <div className="container">
+          <p
+            style={{
+              marginBottom: "15px",
+              fontSize: "18px",
+              // fontFamily: "Kanit, sans-serif",
+              // fontWeight: 500,
+              // fontStyle: "normal",
+            }}
+          >
+            <em>At Logicspice</em>, we are always growing to meet the evolving needs of
+            businesses. Our newest services include
+            <Link href="/blockchain-development">
+              {" "}
+              Blockchain Development services{" "}
+            </Link>
+            for secure and transparent operations, <strong>Generative AI</strong> to drive
+            creativity and boost efficiency, and Video Creation for
+            high-quality, impactful brand videos.
+          </p>
+          <p style={{
+              marginBottom: "15px",
+              fontSize: "18px",
+              // fontFamily: "Kanit, sans-serif",
+              // fontWeight: 500,
+              // fontStyle: "normal",
+            }}>
+            We have also developed <em>ready-to-use software solutions</em> for
+            healthcare providers, such as <strong>Doctor Appointment Booking Software</strong>,{" "}
+            <strong>Salon Booking Software</strong> for beauty and wellness businesses, <strong>Group
+            Chat Apps</strong> for Internal Communication, <strong>Live Chat Software</strong>, and
+            flexible booking for a whole profundity of service industries,
+            making it easy for people to book appointments in order to enrich
+            customer interactions.
+          </p>
+        </div>
+      </section>
 
       {/* Lets load initially till this point and futher section will be loader when we scroll down. */}
-      
 
       {/* ReadyMade Solution Section  */}
       <Suspense fallback={<div>Loading readymade solution...</div>}>
         <ReadymadeSolution />
       </Suspense>
-      
+
       {/* Hire section  */}
       <Suspense fallback={<div>Loading readymade hire expert...</div>}>
         <HireExpert />
       </Suspense>
-      
+
       <section className="blog-home">
         <div className="container">
           <div className="headings">
@@ -201,7 +209,7 @@ const Page = () => {
       <Suspense fallback={<div>Loading client side...</div>}>
         <ClientSide />
       </Suspense>
-      
+
       <section className="working_with">
         <div className="container">
           <h3
@@ -219,18 +227,15 @@ const Page = () => {
       <Suspense fallback={<div>Loading customize top...</div>}>
         <CustomizeTop />
       </Suspense>
-      
 
       <Suspense fallback={<div>Loading Client say...</div>}>
         <ClientSay />
       </Suspense>
-     
 
       {/* Industries  */}
       <Suspense fallback={<div>Loading Industries we serve...</div>}>
         <IndustriesWeServe />
       </Suspense>
-
 
       <Footer />
       <Servercomponents />
