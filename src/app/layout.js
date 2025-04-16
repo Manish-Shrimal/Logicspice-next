@@ -83,6 +83,8 @@ export default function RootLayout({ children, params, searchParams }) {
           href="/rss.xml"
         />
         <link rel="preload" as="image" />
+
+       
       </Head>
 
 
@@ -112,7 +114,7 @@ export default function RootLayout({ children, params, searchParams }) {
     }}
   />
 
-  <Chatbot />
+  {/* <Chatbot /> */}
   <AOSInitializer>{children}</AOSInitializer>
 
   {/* {isHomePage && (
