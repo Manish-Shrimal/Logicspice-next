@@ -1288,6 +1288,9 @@ bread-top {
 .hover_btn_menu .menu_icon_all.icon_portfolio {
   background: url(/img/header/portfolio-icon.png) no-repeat;
 }
+.hover_btn_menu .menu_icon_all.icon_partner_with_us {
+  background: url(/img/header/partners-icon.png) no-repeat;
+}
 
 .hover_btn_menu .menu_icon_all.icon_development_methodology {
   background-position: -32px -80px;

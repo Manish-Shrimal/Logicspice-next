@@ -52,24 +52,23 @@ const Navbar = () => {
     const handleResize = () => {
       const currentScreenSize = window.innerWidth;
       if (currentScreenSize < 768) {
-        setMobileOpen(true);  // Mobile screen (less than 768px)
+        setMobileOpen(true); // Mobile screen (less than 768px)
       } else {
         setMobileOpen(false); // Desktop or larger screen
       }
     };
-  
+
     // Initial check
     handleResize();
-  
+
     // Listen to window resizing
     window.addEventListener("resize", handleResize);
-  
+
     // Cleanup on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
 
   return (
     <>
@@ -201,6 +200,20 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li
+                              className={
+                                router.pathname === "/partner-with-us"
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href="/partner-with-us">
+                                <span className="hover_btn_menu">
+                                  <i className="menu_icon_all icon_partner_with_us"></i>
+                                </span>
+                                <span>Partner With Us</span>
+                              </Link>
+                            </li>
+                            <li
                               // className={
                               //   router.pathname ===
                               //   "https://blog.logicspice.com/"
@@ -208,10 +221,7 @@ const Navbar = () => {
                               //     : ""
                               // }
                               className={
-                                router.pathname ===
-                                "/blog"
-                                  ? "active"
-                                  : ""
+                                router.pathname === "/blog" ? "active" : ""
                               }
                             >
                               {/* <Link href="https://blog.logicspice.com/">
@@ -277,7 +287,6 @@ const Navbar = () => {
                   <Link
                     className=" dropdown-toggle"
                     href={isMobileOpen ? "" : "/softwares"}
-
                     id="softwareDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -332,7 +341,6 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-
                             <li>
                               <Link href="/doctor-appointment-scheduling-software">
                                 <span className="hover_btn_menu ">
@@ -358,24 +366,11 @@ const Navbar = () => {
                                 <span>Human Resource Management</span>
                               </Link>
                             </li>
- 
-
-
-
-
-
-
-                            
-                           
-                            
-                     
-                           
-                            
                           </ul>
                         </div>
                         <div className="col-sm-4">
                           <ul>
-                          <li>
+                            <li>
                               <Link href="/logistic-marketplace-software">
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_logistic"></i>
@@ -431,14 +426,10 @@ const Navbar = () => {
                                 <span>Crowdfunding Script</span>
                               </Link>
                             </li>
-
-
-
                           </ul>
                         </div>
                         <div className="col-sm-4">
                           <ul>
-                          
                             <li>
                               <Link href="/marketplace-software-solution">
                                 <span className="hover_btn_menu ">
@@ -490,7 +481,10 @@ const Navbar = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link href="https://free-templates.logicspice.com/" target="_blank">
+                              <Link
+                                href="https://free-templates.logicspice.com/"
+                                target="_blank"
+                              >
                                 <span className="hover_btn_menu ">
                                   <i className="menu_icon_all icon_temp"></i>
                                 </span>
@@ -503,13 +497,6 @@ const Navbar = () => {
                                 </span>
                               </Link>
                             </li>
-
-
-
-                            
-                           
-                            
-                           
 
                             <li className="ad-footer-view-all">
                               <Link
@@ -604,12 +591,6 @@ const Navbar = () => {
                                 <span>eCommerce Website Package</span>
                               </Link>
                             </li>
-
-
-
-                           
-                            
-                            
                           </ul>
                         </div>
                         <div className="col-sm-4">
@@ -734,12 +715,6 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-
-
-                            
-                            
-                            
-                            
                             <li class="ad-footer-view-all mobile-show">
                               <Link href="/services" class="btn btn-primary">
                                 View All Services
@@ -892,7 +867,6 @@ const Navbar = () => {
                 <li>
                   {/* <Link href="https://blog.logicspice.com/">blog</Link> */}
                   <Link href="/blog">blog</Link>
-
                 </li>
                 <li>
                   <div

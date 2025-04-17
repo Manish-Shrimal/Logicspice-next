@@ -691,7 +691,7 @@ const Page = () => {
                       </Link>
                     </div>
                   </li>
-                  <li className="col-lg-3 col-md-4 col-sm-6 col-xs-6 moreBox">
+                  {/* <li className="col-lg-3 col-md-4 col-sm-6 col-xs-6 moreBox">
                     <div className="product_show_bx_new">
                       <div className="client-chat">
                         <Link href="javascript:void($zopim.livechat.window.show())">
@@ -726,7 +726,7 @@ const Page = () => {
                         </div>
                       </Link>
                     </div>
-                  </li>
+                  </li> */}
                   <li className="col-lg-3 col-md-4 col-sm-6 col-xs-6 moreBox">
                     <div className="product_show_bx_new">
                       <div className="client-chat">

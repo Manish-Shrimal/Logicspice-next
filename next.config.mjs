@@ -24,6 +24,8 @@ const nextConfig = {
     ],
   },
 
+
+
   async redirects() {
     return [
       {
@@ -517,6 +519,11 @@ const nextConfig = {
 
       // Custom solutions
 
+      {
+        source: "/point-of-sale-software",
+        destination: "/erp-system-software-development",
+        permanent: true,
+      },
       {
         source: "/erp-system-software-developement",
         destination: "/erp-system-software-development",

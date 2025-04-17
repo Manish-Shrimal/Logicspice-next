@@ -338,7 +338,7 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div className="col-md-4 col-sm-4 padding-no">
+              {/* <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/software-testing-services">
                   <div className="our-services-bx">
                     <div className="our-services-img">
@@ -352,7 +352,7 @@ const Page = () => {
                     <h2>Testing Services</h2>
                   </div>
                 </Link>
-              </div>
+              </div> */}
               <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/software-development">
                   <div className="our-services-bx right-none">
@@ -872,7 +872,7 @@ const Page = () => {
                   </div>
                 </Link>
               </div>
-              <div className="col-md-4 col-sm-4 padding-no">
+              {/* <div className="col-md-4 col-sm-4 padding-no">
                 <Link href="/partner-with-us">
                   <div className="our-services-bx botton-none">
                     <div className="our-services-img">
@@ -886,7 +886,7 @@ const Page = () => {
                     <h2>Partner With us</h2>
                   </div>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
