@@ -21,6 +21,8 @@ import GTMComponent from "./Components/GTMComponent";
 // import Chatbot from "./Components/Chatbot";
 import "../../public/css/font-awesome.css";
 import CookiesConsent from "./Components/CookiesConsent";
+import HeaderAnimation from "./Components/home/HeaderAnimation";
+import HeaderBgAnimation from "./Components/home/HeaderBgAnimation";
 
 const ServicesNewSection = lazy(() =>
   import("./Components/ServicesNewSection")
@@ -96,21 +98,27 @@ const Page = () => {
       <GTMComponent />
       <CookiesConsent />
       <NavBar />
+
       <div className="topSectionHome">
-        <Suspense fallback={<div>Loading Take a look...</div>}>
+      <div className="HomeTopAnimation">
+      <HeaderAnimation />
+        <HeaderBgAnimation />
+        </div>
+        {/* <Suspense fallback={<div>Loading Take a look...</div>}>
           <TakeaLook />
-        </Suspense>
+        </Suspense> */}
       </div>
-      <Suspense fallback={<div>Loading Services...</div>}>
-        <ServicesNewSection />
-      </Suspense>
-      {/* <div className="home-slider">
+      <div className="home-slider">
         <div className="container">
           <Suspense fallback={<div>Loading Services...</div>}>
             <Slidersimple />
           </Suspense>
         </div>
-      </div> */}
+      </div>
+      <Suspense fallback={<div>Loading Services...</div>}>
+        <ServicesNewSection />
+      </Suspense>
+      
 
       {/* <Suspense fallback={<div>Loading Services...</div>}>
             <Slidersimple />
@@ -184,6 +192,14 @@ const Page = () => {
         <HireExpert />
       </Suspense>
 
+      {/* <div className="home-slider">
+        <div className="container">
+          <Suspense fallback={<div>Loading Services...</div>}>
+            <Slidersimple />
+          </Suspense>
+        </div>
+      </div> */}
+
       <section className="blog-home">
         <div className="container">
           <div className="headings">
@@ -206,9 +222,9 @@ const Page = () => {
       </section>
 
       {/* client side  */}
-      <Suspense fallback={<div>Loading client side...</div>}>
+      {/* <Suspense fallback={<div>Loading client side...</div>}>
         <ClientSide />
-      </Suspense>
+      </Suspense> */}
 
       <section className="working_with">
         <div className="container">
@@ -224,9 +240,9 @@ const Page = () => {
         </div>
       </section>
 
-      <Suspense fallback={<div>Loading customize top...</div>}>
+      {/* <Suspense fallback={<div>Loading customize top...</div>}>
         <CustomizeTop />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<div>Loading Client say...</div>}>
         <ClientSay />

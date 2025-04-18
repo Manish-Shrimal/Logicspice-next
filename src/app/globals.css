@@ -3091,7 +3091,7 @@ positivitymain {
 .HomeSlider {
   display: inline-block;
   width: 100%;
-  padding-top: 140px;
+  padding-top: 40px;
   float: left;
   direction: rtl;
   height: 420px;
@@ -3152,6 +3152,11 @@ positivitymain {
 
 .HomeBannerImg {
   position: relative;
+}
+
+.home-slider {
+  display: inline-block !important;
+  width: 100% !important;
 }
 
 .home-slider #testiCW .owl-dot span {
@@ -6284,6 +6289,7 @@ body.modal-open .quote_pop_plus {
 
   .home-slider {
     height: 540px;
+    
     /* overflow: hidden; */
   }
 
@@ -8038,4 +8044,15 @@ section {
 .new_contentt p{
   font-family: "roboto", sans-serif !important;
   color: #3f3f3f!important;
+}
+.HomeTopAnimation {
+	position: relative;
+	padding: 20px 0 20px;
+}
+.HomeTextAnimation {
+	position: relative;
+	z-index: 99;
+}
+.HomeTextAnimation h1 {
+	font-size: 30px;
 }
