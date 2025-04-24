@@ -5421,6 +5421,27 @@ body.modal-open .quote_pop_plus {
 }
 
 @media (max-width: 767px) {
+
+  .quoue_box_full_sec {
+   
+    position: fixed;
+    z-index: 99;
+    top: auto;
+    bottom: 10px !important;
+    right: 0;
+    width: auto;
+    box-shadow: 0px 0 4px 0 rgba(0, 0, 0, 0.5);
+  }
+
+
+.whatsapp-call {
+  position: fixed;
+  right: 7px;
+  top: auto;
+  bottom: 140px !important;
+  z-index: 999999;
+}
+
   .CustomQuickFAQScript .accordion-header .accordion-button {
     background: url(/img/ordermanagement/faq_select-min.png) 4% center no-repeat
       #fff;
@@ -5643,9 +5664,14 @@ body.modal-open .quote_pop_plus {
     font-size: 14px !important;
   }
 
-  .laravel_core_features_section {
+  /* .laravel_core_features_section {
     padding: 50px 0 0 !important;
     background-color: #f00 !important;
+    background-image: none !important;
+  } */
+  .php-development.laravel_core_features_section {
+    padding: 50px 0 0 !important;
+    background-color: none !important;
     background-image: none !important;
   }
 
@@ -5692,11 +5718,11 @@ body.modal-open .quote_pop_plus {
     margin: 10px 0 60px !important;
   }
 
-  .laravel_core_features_section {
+  /* .laravel_core_features_section {
     padding: 50px 0 0 !important;
     background-color: #f00 !important;
     background-image: none !important;
-  }
+  } */
 
   .laravel_choose_features_section h2 {
     font-size: 20px !important;
