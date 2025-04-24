@@ -7,33 +7,33 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Slidersimple = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 15000,
+  };
   // var settings = {
-  //   dots: true,
+  //   dots: true, // Dots will be visible by default
   //   infinite: true,
+  //   // lazyLoad: "progressive",
   //   speed: 500,
   //   slidesToShow: 1,
   //   slidesToScroll: 1,
   //   autoplay: true,
   //   autoplaySpeed: 3000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768, // You can adjust the breakpoint based on your needs
+  //       settings: {
+  //         dots: false, // Hide dots below 768px screen width
+  //       },
+  //     },
+  //   ],
   // };
-  var settings = {
-    dots: true, // Dots will be visible by default
-    infinite: true,
-    // lazyLoad: "progressive",
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 768, // You can adjust the breakpoint based on your needs
-        settings: {
-          dots: false, // Hide dots below 768px screen width
-        },
-      },
-    ],
-  };
 
   return (
     <>
