@@ -2290,7 +2290,7 @@ const Page = () => {
                   <b>Android - </b> java 9 and Android Studio 3.4
                 </li> */}
                 <li className="other aos-init" data-aos="fade-up">
-                    <b>Mobile Apps - </b> React Native Version 0.71.8
+                    <b>Mobile Apps - </b> React Native Version 0.72.4
                 </li>
               </ul>
             </div>
