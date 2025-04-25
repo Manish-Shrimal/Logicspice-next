@@ -1681,6 +1681,50 @@ const Page = () => {
             <br />
             <div className="script-update_title">
               <p>
+                V1.2 - April 25th, 2025 - Latest release packed with powerful
+                new features, a refreshed user interface, and significant
+                technological advancements:
+              </p>
+              <ul>
+                <li>
+                  <span>
+                    A unified and modern design experience now available across
+                    both <strong>web and mobile platforms</strong>.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Upgraded to <strong>PHP 8.28.2</strong> and transitioned to{" "}
+                    <strong>Laravel 10.10</strong> for improved performance and
+                    maintainability.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Mobile apps for both Android and iOS have migrated to{" "}
+                    <strong>
+                      React Native, enhancing speed, consistency, and user
+                      experience
+                    </strong>
+                    .
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <system>System optimizations</system> have been implemented,
+                    resulting in measurable improvements in overall performance.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Introduced a <strong>Review & Ratings feature</strong>,
+                    enabling customers to rate transporters based on their
+                    shipment experience.
+                  </span>
+                </li>
+              </ul>
+
+              <p>
                 V1.1 - September 20th&rsquo; 2022 - PHP version update and other
                 major improvements!
               </p>
@@ -2135,11 +2179,11 @@ const Page = () => {
                       unoptimized={true}
                       width={50}
                       height={100}
-                      src="/img/jobboard/tech_cakephp_icon.png"
+                      src="/img/technology/laravel-bg.png"
                       alt="CakePHP Development"
                     />
                   </div>
-                  <div className="icntechimg_nm">CakePHP</div>
+                  <div className="icntechimg_nm">Laravel</div>
                 </li>
                 <li data-aos="fade-up">
                   <div className="icntechimg">
@@ -2203,34 +2247,50 @@ const Page = () => {
                   </div>
                   <div className="icntechimg_nm">Android</div>
                 </li>
+                <li data-aos="fade-up">
+                  <div className="icntechimg">
+                    <Image
+                      unoptimized={true}
+                      width={50}
+                      height={100}
+                      src="/img/technology/react-icon.png"
+                      alt="Apache"
+                      className="lazy"
+                    />
+                  </div>
+                  <div className="icntechimg_nm">React Native</div>
+                </li>
               </ul>
             </div>
             <div className="col-sm-6">
               <ul className="list_detail">
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Browsers - </b> Firefox 32.6+&rsquo; Chrome 20.0+&rsquo;
-                  Opera 30.0+&rsquo; Safari 5+&rsquo; IE 9+
+                  <b>Browsers - </b> Firefox 32.6+, Chrome 20.0+,
+                  Opera 30.0+, Safari 5+, IE 9+
                 </li>
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Framework - </b> Cakephp
+                  <b>Framework - </b> Laravel 10
                 </li>
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Language - </b> PHP 7.4.30&rsquo; AJAX&rsquo; jQuery
+                  <b>Language - </b> PHP 8.2, AJAX, jQuery
                 </li>
                 <li className="other aos-init aos-animate" data-aos="fade-up">
-                  <b>Design - </b> HTML 5&rsquo; CSS 3&rsquo; JavaScript
+                  <b>Design - </b> HTML 5, CSS 3, JavaScript
                 </li>
                 <li className="other aos-init" data-aos="fade-up">
-                  <b>Database – </b> MySQL 5.5+{" "}
+                  <b>Database – </b> MySQL: 8.2.28{" "}
                 </li>
                 <li className="other aos-init" data-aos="fade-up">
                   <b>Server – </b> Apache 2.4+
                 </li>
-                <li className="other aos-init" data-aos="fade-up">
+                {/* <li className="other aos-init" data-aos="fade-up">
                   <b>iOS - </b> xcode 10.2.1 and swift 4.2{" "}
                 </li>
                 <li className="other aos-init" data-aos="fade-up">
                   <b>Android - </b> java 9 and Android Studio 3.4
+                </li> */}
+                <li className="other aos-init" data-aos="fade-up">
+                    <b>Mobile Apps - </b> React Native Version 0.71.8
                 </li>
               </ul>
             </div>

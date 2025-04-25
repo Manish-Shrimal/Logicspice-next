@@ -2791,6 +2791,18 @@ const Page = () => {
                         unoptimized={true}
                         width={60}
                         height={100}
+                        src="/img/jobboard/tech_reactjs_icon.png"
+                        alt="ReactJS Development"
+                      />
+                    </div>
+                    <div className="icntechimg_nm">React Native</div>
+                  </li>
+                  <li data-aos="fade-up">
+                    <div className="icntechimg">
+                      <Image
+                        unoptimized={true}
+                        width={60}
+                        height={100}
                         src="/img/jobboard/LaravelLogo.png"
                         alt="Laravel Development"
                       />
