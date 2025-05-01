@@ -151,8 +151,6 @@ const Page = () => {
     getData();
   }, []);
 
- 
-
   return (
     <>
       <NavBar />
@@ -234,10 +232,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                    <i
-                      className="fa fa-globe"
-                      aria-hidden="true"
-                    ></i>
+                    <i className="fa fa-globe" aria-hidden="true"></i>
                   </li>
                 </ul>
               </div>
@@ -290,19 +285,44 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="service-market-ttd">
+              <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
-                  <li>Post Unlimited Jobs</li>
-
-                  <li>Advance Search Filter</li>
-                  <li>SEO Friendly</li>
-                  <li>Responsive website (mobile friendly)</li>
-                  <li>White labeled script </li>
-                  <li>Manage Candidate Database</li>
-                  <li>Social Media Sharing</li>
-                  <li>Location Management</li>
-                  <li>Reporting</li>
-                  <li>One time License Fee</li>
+                  <li>
+                    Offer letter creation with draft-saving functionality for
+                    candidates
+                  </li>
+                  <li>
+                    Comprehensive onboarding panel for candidates after offer
+                    acceptance
+                  </li>
+                  <li>
+                    Feature-rich dashboard with data visualization and calendar
+                    integration
+                  </li>
+                  <li>
+                    AI assistance to help employers create job postings
+                    efficiently
+                  </li>
+                  <li>
+                    AI support for candidates to apply faster and more
+                    effectively{" "}
+                  </li>
+                  <li>AI resume parser for bulk resume data extraction</li>
+                  <li>
+                    Advanced interview scheduling system with robust features
+                  </li>
+                  <li>Collaborative notes panel for employers and staff</li>
+                  <li>
+                    Visual representation of candidate's interview journey with
+                    data
+                  </li>
+                  <li>Employer-managed candidate account creation</li>
+                  <li>
+                    Fully customizable branding options (banner, logo, header,
+                    footer)
+                  </li>
+                  <li>Email and in-app notifications for interview updates</li>
+                  <li>Role and responsibility management for employer staff</li>
                 </ul>
               </div>
             </div>
@@ -334,20 +354,20 @@ const Page = () => {
                   <a>Staff / HR Features</a>
                 </li>
                 <li
+                  id="tab3_li"
+                  className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
+                  onClick={() => handleAdminTab()}
+                >
+                  <a>Employer</a>
+                </li>
+                <li
                   id="tab2_li"
                   className={`jobseeker_app_job ddlj ${
                     jobseekersTab ? "active" : ""
                   }`}
                   onClick={() => handleJobSeekersTab()}
                 >
-                  <a>Job Seekers Features</a>
-                </li>
-                <li
-                  id="tab3_li"
-                  className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
-                  onClick={() => handleAdminTab()}
-                >
-                  <a>Admin Panel</a>
+                  <a>Candidate</a>
                 </li>
               </ul>
             </div>
@@ -374,7 +394,7 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
@@ -391,7 +411,27 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/manage-dashboard.png"
+                                />
+                              </i>
+                              <span>
+                                Dashboard
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can view the dashboard where
+                                    it shows the summary of all the activities.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/configuration.png"
@@ -411,20 +451,18 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/add-collab.png"
                                 />
                               </i>
                               <span>
-                                Staff Log List
+                                Interviews Assigned
                                 <div className="product-idea">
                                   <p>
-                                    Staff members can view the self log activity
-                                    on each job application which can be managed
-                                    by themselves,and submit the staff log
-                                    comment for activity.
+                                    Staff members can view the list of
+                                    interviews assigned to them.
                                   </p>
                                 </div>
                               </span>
@@ -433,18 +471,185 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
-                                  src="/img/jobboard/book_apartment.png"
+                                  src="/img/jobboard/notification-alert.png"
                                 />
                               </i>
                               <span>
-                                Manage Job Application
+                                Notification Alert
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can view the notification
+                                    alert.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/interview-schedule.png"
+                                />
+                              </i>
+                              <span>
+                                Interview schedule
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can can schedule interview for
+                                    candidates.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/interview-reschedule.png"
+                                />
+                              </i>
+                              <span>
+                                Interview Reschedule
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can reschedule interview for
+                                    candidates.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/candidate-list.png"
+                                />
+                              </i>
+                              <span>
+                                Candidate List
                                 <div className="product-idea">
                                   <p>
                                     Staff members can view the list of
-                                    shortlisted job applicants data.
+                                    candidates and take action on them.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/selected-candidates.png"
+                                />
+                              </i>
+                              <span>
+                                Selected Candidates
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can select a candidate for
+                                    offer and can view the list of selected
+                                    candidates.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/resume-parser.png"
+                                />
+                              </i>
+                              <span>
+                                Resume Parser
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can view the list of
+                                    candidates and can parse their resume. The
+                                    resume parser is powered by AI.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/manage-job.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Job
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can view the list of jobs and
+                                    can add,update and delete any job.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/offer-letter.png"
+                                />
+                              </i>
+                              <span>
+                                Offer letter Panel
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can create an offer letter for
+                                    a candidate and send them the link of the
+                                    offer letter panel. The offer letter can be
+                                    saved as draft as well.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/on-boarding.png"
+                                />
+                              </i>
+                              <span>
+                                On boarding Panel
+                                <div className="product-idea">
+                                  <p>
+                                    Staff members can create an onboarding link
+                                    for a candidate who has accepted the offer
+                                    letter. The total information of the can
+                                    didate can be collected using on boarding
+                                    panel.
                                   </p>
                                 </div>
                               </span>
@@ -478,19 +683,55 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/secure_login.png"
+                                />
+                              </i>
+                              <span>
+                                Secure Login
+                                <div className="product-idea">
+                                  <p>Candidate login is secured.</p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/manage-dashboard.png"
+                                />
+                              </i>
+                              <span>
+                                Dashboard
+                                <div className="product-idea">
+                                  <p>
+                                    Candidates can view the dashboard where it
+                                    shows the summary of all the activities.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/search_job.png"
                                 />
                               </i>
                               <span>
-                                Search Jobs
+                                Applied Jobs History
                                 <div className="product-idea">
                                   <p>
-                                    Job aspirant can search Jobs using keyword,
-                                    category, location & work type etc. which
-                                    will provide them with the relevant result.
+                                    Candidates can view the list of jobs they
+                                    have applied.
                                   </p>
                                 </div>
                               </span>
@@ -499,18 +740,18 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/share_job.png"
                                 />
                               </i>
                               <span>
-                                Share A Job
+                                Talent Center
                                 <div className="product-idea">
                                   <p>
-                                    Job aspirant can share Job on Tumblr,
-                                    Facebook, Twitter, Pinterest, Gmail etc..
+                                    Candidates can access the talent center to
+                                    see jobs, skills and etc.
                                   </p>
                                 </div>
                               </span>
@@ -519,18 +760,17 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/apply_job.png"
                                 />
                               </i>
                               <span>
-                                Apply A Job
+                                Profile Details
                                 <div className="product-idea">
                                   <p>
-                                    Job Seeker can apply for Job, which is a
-                                    potential match for their profile.
+                                    Candidates can view their profile details.
                                   </p>
                                 </div>
                               </span>
@@ -539,20 +779,61 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
-                                  src="/img/jobboard/book_apartment.png"
+                                  src="/img/jobboard/job-recommendations-based.png"
                                 />
                               </i>
                               <span>
-                                Job Application
+                                Job Recommendations Based on Skills
                                 <div className="product-idea">
                                   <p>
-                                    Once the profile is shortlisted, aspirants
-                                    need to submit job application data with
-                                    their personal information, experience,
-                                    education, etc..
+                                    Candidates can get job recommendations based
+                                    on their skills that has been added while
+                                    applying to jobs.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/easy-resume-upload.png"
+                                />
+                              </i>
+                              <span>
+                                Easy Resume Upload
+                                <div className="product-idea">
+                                  <p>
+                                    Candidates can upload their resume easily
+                                    from the profile details section of
+                                    candidate panel.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/offer-letter-view-acceptance.png"
+                                />
+                              </i>
+                              <span>
+                                Offer Letter View and Acceptance Panel
+                                <div className="product-idea">
+                                  <p>
+                                    Candidates can view the offer letter and
+                                    accept it. The offer letter can be accessed
+                                    through the link of the offer letter panel.
                                   </p>
                                 </div>
                               </span>
@@ -586,7 +867,7 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/secure_login.png"
@@ -603,39 +884,18 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
-                                  height={100 / (100 / 100)}
-                                  alt="img"
-                                  src="/img/jobboard/configuration.png"
-                                />
-                              </i>
-                              <span>
-                                Manage Configuration
-                                <div className="product-idea">
-                                  <p>
-                                    Admin can change the username, password,
-                                    email, set contact address & can also change
-                                    the site settings.
-                                  </p>
-                                </div>
-                              </span>
-                            </li>
-                            <li>
-                              <i>
-                                <Image
-                                  unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage-dashboard.png"
                                 />
                               </i>
                               <span>
-                                Admin Dashboard
+                                Dashboard
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view the dashboard where it will
-                                    display the total number of jobseekers,
+                                    Employer can view the dashboard where it
+                                    will display the total number of jobseekers,
                                     categories, skills, designation, locations,
                                     jobs etc.
                                   </p>
@@ -646,18 +906,40 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/configuration.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Configuration
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can change the username, password,
+                                    email, set contact address & can also change
+                                    the site settings.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/view_category.png"
                                 />
                               </i>
                               <span>
-                                Manage Category
+                                Manage Category List
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view and manage (add/edit/delete)
-                                    all categories.
+                                    Employer can view and manage
+                                    (add/edit/delete) all categories.
                                   </p>
                                 </div>
                               </span>
@@ -666,18 +948,18 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/manage_skill.png"
                                 />
                               </i>
                               <span>
-                                Manage Skills
+                                Manage Skill List
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view and manage (add/edit/delete)
-                                    all skills.
+                                    Employer can view and manage
+                                    (add/edit/delete) all skills.
                                   </p>
                                 </div>
                               </span>
@@ -686,24 +968,24 @@ const Page = () => {
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/ragister-icon.png"
                                 />
                               </i>
                               <span>
-                                Manage Designation
+                                Manage Designation List
                                 <div className="product-idea">
                                   <p>
-                                    Admin can view a list of all designations
+                                    Employer can view a list of all designations
                                     and can manage (add/edit/delete) all
                                     designations.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
+                            {/* <li>
                               <i>
                                 <Image
                                   unoptimized={true}
@@ -723,8 +1005,8 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
-                            <li>
+                            </li> */}
+                            {/* <li>
                               <i>
                                 <Image
                                   unoptimized={true}
@@ -746,31 +1028,31 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
+                            </li> */}
                             <li>
                               <i>
                                 <Image
                                   unoptimized={true}
-                                  width={47}
+                                  width={43}
                                   height={100 / (100 / 100)}
                                   alt="img"
                                   src="/img/jobboard/corporate_training.png"
                                 />
                               </i>
                               <span>
-                                Manage Staff members
+                                Manage Staff
                                 <div className="product-idea">
                                   <p>
-                                    Admin can have a look at the list of staff
-                                    members and can manage the staff members.
-                                    Admin can activate/deactivate staff members
-                                    & admin can assign the roles for each staff
-                                    member of the management.
+                                    Employer can have a look at the list of
+                                    staff members and can manage the staff
+                                    members. Employer can activate/deactivate
+                                    staff members & admin can assign the roles
+                                    for each staff member of the management.
                                   </p>
                                 </div>
                               </span>
                             </li>
-                            <li>
+                            {/* <li>
                               <i>
                                 <Image
                                   unoptimized={true}
@@ -790,8 +1072,8 @@ const Page = () => {
                                   </p>
                                 </div>
                               </span>
-                            </li>
-                            <li>
+                            </li> */}
+                            {/* <li>
                               <i>
                                 <Image
                                   unoptimized={true}
@@ -807,6 +1089,221 @@ const Page = () => {
                                   <p>
                                     Admin can view the list of shortlisted job
                                     applicants data.
+                                  </p>
+                                </div>
+                              </span>
+                            </li> */}
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/qualification-list.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Qualification List
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can view a list of all
+                                    qualification and can manage
+                                    (add/edit/delete) all qualification.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/industry-list.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Industry List
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can view a list of all industry and
+                                    can manage (add/edit/delete) all industry.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/currency-list.png"
+                                />
+                              </i>
+                              <span>
+                                Manage Currency List
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can view a list of all currency and
+                                    can manage (add/edit/delete) all currencies.
+                                    Employer can also set a default currency for
+                                    the platform.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/email-templates.png"
+                                />
+                              </i>
+                              <span>
+                              Manage Email Templates
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can view a list of all email templates being used on the platform. Employer can also change the email templates according to their requirements.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/notes-icon.png"
+                                />
+                              </i>
+                              <span>
+                              Notes Management
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can add, edit, view and delete the notes on the panel. The note panel is available throughout the panel where candidates are listed.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/website-setting.png"
+                                />
+                              </i>
+                              <span>
+                              Website Setting
+                                <div className="product-idea">
+                                  <p>
+                                    Employer change the setting of the website from this section, like controlling the visibility of logo, footer, header, color and font of the website and link expiry time.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/status-icon.png"
+                                />
+                              </i>
+                              <span>
+                              Status Management
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can add, edit and delete status from this section.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/process-icon.png"
+                                />
+                              </i>
+                              <span>
+                              Process Management
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can add, edit and delete interview processes from this section.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/assign-user-interview.png"
+                                />
+                              </i>
+                              <span>
+                              Assign user to Interview
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can assign staffs to any interview process from this section.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/applied-candidate-list.png"
+                                />
+                              </i>
+                              <span>
+                              Applied Candidate List
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can check the list of candidates who has applied for a particular job.
+                                  </p>
+                                </div>
+                              </span>
+                            </li>
+                            <li>
+                              <i>
+                                <Image
+                                  unoptimized={true}
+                                  width={43}
+                                  height={100 / (100 / 100)}
+                                  alt="img"
+                                  src="/img/jobboard/notification-alert.png"
+                                />
+                              </i>
+                              <span>
+                              Notification Alert
+                                <div className="product-idea">
+                                  <p>
+                                    Employer can see the notification alert from the notification tab.
                                   </p>
                                 </div>
                               </span>
