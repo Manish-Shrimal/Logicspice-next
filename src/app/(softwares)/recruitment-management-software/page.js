@@ -876,7 +876,7 @@ const Page = () => {
                               <span>
                                 Secure Login
                                 <div className="product-idea">
-                                  <p>Admin login is secured.</p>
+                                  <p>Employer login is secured.</p>
                                 </div>
                               </span>
                             </li>
@@ -1046,7 +1046,7 @@ const Page = () => {
                                     Employer can have a look at the list of
                                     staff members and can manage the staff
                                     members. Employer can activate/deactivate
-                                    staff members & admin can assign the roles
+                                    staff members and can assign the roles
                                     for each staff member of the management.
                                   </p>
                                 </div>
