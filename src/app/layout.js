@@ -273,7 +273,7 @@ export default function RootLayout({ children, params, searchParams }) {
                 },
                 {
                   "@type": "Question",
-                  "name": "Why choose Logicspice for custom software development services?",
+                  "name": "Why choose Logicspice for custom software development service?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Logicspice brings together deep industry experience and modern tech like AI, Blockchain, Next.js, and Laravel to build smart, scalable software that fits your business perfectly."
