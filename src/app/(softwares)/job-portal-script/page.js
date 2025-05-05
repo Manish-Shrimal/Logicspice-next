@@ -132,96 +132,94 @@ const Page = () => {
     getData();
   }, []);
 
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const totalSlides = 13; // change this based on how many items you render
-  
-    const CustomNextArrow = (props) => {
-      const { onClick, currentSlide, slideCount } = props;
-      const isLastSlide = currentSlide >= slideCount - 1;
-    
-      if (isLastSlide) return null; // Hide on last slide
-    
-      return (
-        <button
-          className="custom-arrow next"
-          onClick={onClick}
-          style={{
-            position: "absolute",
-            top: "50%",
-            right: "-65px",
-            transform: "translateY(-50%)",
-            backgroundColor: "#333",
-            borderRadius: "50%",
-            width: "45px",
-            height: "45px",
-            border: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            cursor: "pointer",
-            zIndex: 2,
-          }}
-        >
-          <i
-            className="fa fa-chevron-circle-right"
-            aria-hidden="true"
-            style={{ fontSize: "24px" }}
-          ></i>
-        </button>
-      );
-    };
-    
-  
-    const CustomPrevArrow = (props) => {
-      const { onClick, currentSlide } = props;
-      const isFirstSlide = currentSlide === 0;
-    
-      if (isFirstSlide) return null; // Hide on first slide
-    
-      return (
-        <button
-          className="custom-arrow prev"
-          onClick={onClick}
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "-65px",
-            transform: "translateY(-50%)",
-            backgroundColor: "#333",
-            borderRadius: "50%",
-            width: "45px",
-            height: "45px",
-            border: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            cursor: "pointer",
-            zIndex: 2,
-          }}
-        >
-          <i
-            className="fa fa-chevron-circle-left"
-            aria-hidden="true"
-            style={{ fontSize: "24px" }}
-          ></i>
-        </button>
-      );
-    };
-    
-  
-    const companies = {
-      dots: false,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: false,
-      beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
-      nextArrow: <CustomNextArrow currentSlide={currentSlide} />,
-      prevArrow: <CustomPrevArrow currentSlide={currentSlide} />,
-    };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 13; // change this based on how many items you render
+
+  const CustomNextArrow = (props) => {
+    const { onClick, currentSlide, slideCount } = props;
+    const isLastSlide = currentSlide >= slideCount - 1;
+
+    if (isLastSlide) return null; // Hide on last slide
+
+    return (
+      <button
+        className="custom-arrow next"
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "-65px",
+          transform: "translateY(-50%)",
+          backgroundColor: "#333",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      >
+        <i
+          className="fa fa-chevron-circle-right"
+          aria-hidden="true"
+          style={{ fontSize: "24px" }}
+        ></i>
+      </button>
+    );
+  };
+
+  const CustomPrevArrow = (props) => {
+    const { onClick, currentSlide } = props;
+    const isFirstSlide = currentSlide === 0;
+
+    if (isFirstSlide) return null; // Hide on first slide
+
+    return (
+      <button
+        className="custom-arrow prev"
+        onClick={onClick}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "-65px",
+          transform: "translateY(-50%)",
+          backgroundColor: "#333",
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#fff",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
+      >
+        <i
+          className="fa fa-chevron-circle-left"
+          aria-hidden="true"
+          style={{ fontSize: "24px" }}
+        ></i>
+      </button>
+    );
+  };
+
+  const companies = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+    nextArrow: <CustomNextArrow currentSlide={currentSlide} />,
+    prevArrow: <CustomPrevArrow currentSlide={currentSlide} />,
+  };
 
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
@@ -2322,6 +2320,71 @@ const Page = () => {
             <h2 className="taxt_tt_job">Script Update History</h2>
             <br />
             <div className="script-update_title">
+              <p>
+                V8.0 - May 5th, 2025 - New feature added and several key
+                improvements to enhance functionality and user experience.
+              </p>
+
+              <ul>
+                <li>
+                  <span>
+                    Enjoy a <b>unified modern design</b> for the web platform.
+                  </span>
+                </li>
+
+                <li>
+                  <span>Improved the website performance.</span>
+                </li>
+
+                <li>
+                  <span>Utilized the backend API's.</span>
+                </li>
+
+                <li>
+                  <span>Minor bug fixes.</span>
+                </li>
+              </ul>
+
+              <p>
+                V7.0 - December 24th, 2024 - New feature added and several key
+                improvements to enhance functionality and user experience.
+              </p>
+
+              <ul>
+                <li>
+                  <span>
+                    Admin can now efficiently{" "}
+                    <b>import jobs via CSV or XLSX files</b>, automatically
+                    associating them with the selected employer for streamlined
+                    management.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    Optimization techniques implemented for faster page load and{" "}
+                    <b>performance optimization</b> for smoother user
+                    experience.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    Admin can now assign specific roles to sub-admins through{" "}
+                    <b>sub-admin role management</b>, restricting their access
+                    to authorized features and sections only.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                    The platform&apos;s <b>multilingual support</b> feature is
+                    now updated with Greek, German and Ukrainian languages,
+                    allowing users to navigate and use the system in their
+                    preferred language for a more <b>localized experience</b>.
+                  </span>
+                </li>
+              </ul>
               <p>
                 V6.0 - September 19th, 2023 - Latest release brings new
                 features, coupled with significant leaps in technologies!

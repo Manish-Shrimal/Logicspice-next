@@ -2106,6 +2106,41 @@ const Page = () => {
             <h2 className="taxt_tt_job">Script Update History</h2>
             <br />
             <div className="script-update_title">
+
+              {/* New update */}
+
+              <p>
+              V8.0 - May 5th, 2025 - New feature added and several key improvements to enhance functionality and user experience.
+              </p>
+
+              <ul>
+                <li>
+                  <span>
+                  Enjoy a <b>unified modern design</b> for the web platform.
+                    
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                  Improved the website performance.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                  Utilized the backend API's.
+                  </span>
+                </li>
+
+                <li>
+                  <span>
+                  Minor bug fixes.
+                  </span>
+                </li>
+              </ul>
+
+
               <p>
                 V7.0 - December 24th, 2024 - New feature added and several key
                 improvements to enhance functionality and user experience.
