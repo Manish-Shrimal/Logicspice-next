@@ -54,6 +54,13 @@ const IndustriesWeServe = lazy(
   }
 );
 
+const Faq = lazy(
+  () => import("./Components/home/FAQ"),
+  {
+    ssr: false,
+  }
+);
+
 const ReadymadeSolution = lazy(
   () => import("./Components/home/ReadymadeSolution"),
   {
@@ -251,6 +258,10 @@ const Page = () => {
       {/* Industries  */}
       <Suspense fallback={<div>Loading Industries we serve...</div>}>
         <IndustriesWeServe />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading Faq...</div>}>
+        <Faq />
       </Suspense>
 
       <Footer />
