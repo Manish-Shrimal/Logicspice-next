@@ -8095,166 +8095,6 @@ section {
 
 
 
-/* .faq-wrapper {
-  padding: 60px 20px;
-  background-color: #EDE5D5;
-  text-align: center;
-  position: relative;
-}
-
-.faq-heading {
-  font-size: 30px!important;
-  font-weight: bold!important;
-  margin-bottom: 40px!important;
-  color: #000!important;
-  text-transform: uppercase!important;
-}
-
-.faq-container {
-  background: #fff;
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-}
-
-.faq-item {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 12px 0;
-  text-align: left;
-}
-
-.faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-weight: 600;
-  color: #333;
-}
-
-.faq-icon {
-  margin-left: 10px;
-  font-size: 16px;
-  color: #666;
-}
-
-.faq-answer {
-  margin-top: 10px;
-  font-size: 15px;
-  color: #2E2E2E;
-  line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-  .faq-heading {
-    font-size: 18px;
-  }
-
-  .faq-container {
-    padding: 16px;
-  }
-
-  .faq-answer {
-    font-size: 14px;
-  }
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* .faq-section {
-  position: relative;
-  background-color: #EDE5D5;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.faq-heading {
-  font-size: 30px!important;
-  font-weight: bold!important;
-  margin-bottom: 30px!important;
-  color: #000!important;
-  text-transform: uppercase!important;
-}
-
-.faq-box {
-  max-width: 1080px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.faq-item {
-  border-bottom: 1px solid #eee;
-  padding: 25px 0;
-}
-
-.faq-question {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 16px;
-  color: #333;
-}
-
-.faq-icon {
-  font-size: 22px;
-  font-weight: bold;
-  margin-left: 10px;
-  color: #5a5a5a;
-}
-
-.faq-answer {
-  margin-top: 10px;
-  color: #666;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.faq-top-img
-{
-  width: 150px;
-  position: absolute;
-}
-
-.faq-bottom-img {
-  width: 120px;
-  position: absolute;
-}
-
-.faq-top-img {
-  top: 10px;
-  left: 70px;
-}
-
-.faq-bottom-img {
-  bottom: 50px;
-  right: 30px;
-} */
-
-
-
-
-
-
-
-
-
-
-
 
 
 .faq-section {
@@ -8380,86 +8220,90 @@ section {
 
 @media (max-width: 1024px) {
   .faq-heading {
-    font-size: 26px;
+    font-size: 26px!important;
   }
 
   .faq-box {
-    padding: 15px;
+    padding: 15px!important;
   }
 
   .faq-question {
-    font-size: 15px;
+    font-size: 15px!important;
   }
 
   .faq-answer {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   .faq-top-img {
-    width: 120px;
-    left: 30px;
+    width: 120px!important;
+    left: 30px!important;
   }
 
   .faq-bottom-img {
-    width: 100px;
-    right: 20px;
+    width: 100px!important;
+    right: 20px!important;
   }
 }
 
 @media (max-width: 768px) {
   .faq-heading {
-    font-size: 24px;
+    font-size: 24px!important;
   }
 
   .faq-question {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    /* flex-direction: column; */
+    align-items: flex-start!important;
+    gap: 10px!important;
   }
 
   .faq-icon {
-    align-self: flex-end;
+    align-self: flex-end!important;
+    font-size: 14px!important;
   }
 
   .faq-top-img {
-    width: 100px;
+    /* width: 100px;
     left: 20px;
-    top: 5px;
+    top: 5px; */
+    display: none!important;
   }
 
   .faq-bottom-img {
-    width: 90px;
+    /* width: 90px;
     right: 10px;
-    bottom: 30px;
+    bottom: 30px; */
+    display: none!important;
   }
 }
 
 @media (max-width: 480px) {
   .faq-heading {
-    font-size: 20px;
+    font-size: 20px!important;
   }
 
   .faq-box {
-    padding: 10px;
+    padding: 10px!important;
   }
 
   .faq-question {
-    font-size: 14px;
+    font-size: 14px!important;
   }
 
   .faq-answer {
-    font-size: 13px;
+    font-size: 13px!important;
+    margin-top: 5px!important;
   }
 
   .faq-top-img {
-    width: 80px;
-    left: 10px;
+    width: 80px!important;
+    left: 10px!important;
   }
 
   .faq-bottom-img {
-    width: 70px;
-    right: 5px;
-    bottom: 20px;
+    width: 70px!important;
+    right: 5px!important;
+    bottom: 20px!important;
   }
 }
 
