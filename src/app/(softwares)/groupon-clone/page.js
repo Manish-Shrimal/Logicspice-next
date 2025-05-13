@@ -1528,31 +1528,17 @@ const Page = () => {
                   </div>
                   <div className="icntechimg_nm">Apache</div>
                 </li>
-                <li data-aos="fade-up" className="aos-init aos-animate">
+                <li data-aos="fade-up">
                   <div className="icntechimg">
                     <Image
                       unoptimized={true}
-                      width={50}
+                      width={60}
                       height={100}
-                      src="/img/jobboard/apple_phn_icon.png"
-                      alt="MySQL"
-                      className="lazy"
+                      src="/img/jobboard/tech_reactjs_icon.png"
+                      alt="ReactJS Development"
                     />
                   </div>
-                  <div className="icntechimg_nm">iOS</div>
-                </li>
-                <li data-aos="fade-up" className="aos-init aos-animate">
-                  <div className="icntechimg">
-                    <Image
-                      unoptimized={true}
-                      width={50}
-                      height={100}
-                      src="/img/jobboard/andoird_icon.png"
-                      alt="Apache"
-                      className="lazy"
-                    />
-                  </div>
-                  <div className="icntechimg_nm">Android</div>
+                  <div className="icntechimg_nm">React Native</div>
                 </li>
               </ul>
             </div>
@@ -1563,10 +1549,10 @@ const Page = () => {
                   Safari 5+, IE 9+
                 </li>
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Framework - </b> Laravel 6
+                  <b>Framework - </b> Laravel 10.x
                 </li>
                 <li className="same aos-init aos-animate" data-aos="fade-up">
-                  <b>Language - </b> PHP 7.2 Supported, AJAX, jQuery
+                  <b>Language - </b> PHP 8.1 Supported, AJAX, jQuery
                 </li>
                 <li className="other aos-init aos-animate" data-aos="fade-up">
                   <b>Design - </b> HTML 5, CSS 3, Bootstrap4, JavaScript
@@ -1577,11 +1563,8 @@ const Page = () => {
                 <li className="other aos-init aos-animate" data-aos="fade-up">
                   <b>Server – </b> Apache 2.4+
                 </li>
-                <li className="other aos-init aos-animate" data-aos="fade-up">
-                  <b>iOS - </b> xcode 11.3 and swift 5{" "}
-                </li>
-                <li className="other aos-init aos-animate" data-aos="fade-up">
-                  <b>Android - </b> java 9 and Android Studio 4.1
+                <li className="other aos-init" data-aos="fade-up">
+                  <b>Mobile Apps - </b> React Native Version 0.71.8
                 </li>
               </ul>
             </div>
