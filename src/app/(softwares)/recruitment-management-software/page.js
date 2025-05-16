@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,21 +10,21 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import Contactusmodel from "../../Components/Contactusmodel";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
@@ -284,7 +284,18 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+          <div className="col-md-6 job-video flex justify-center items-center">
+              <iframe
+  width="100%"
+  height="312"
+  src="https://www.youtube.com/embed/jbnzTcJqv1U?rel=0&autoplay=1"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen=""
+></iframe>
+            </div>
+            <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
                   <li>
@@ -295,18 +306,9 @@ const Page = () => {
                     Comprehensive onboarding panel for candidates after offer
                     acceptance
                   </li>
-                  <li>
-                    Feature-rich dashboard with data visualization and calendar
-                    integration
-                  </li>
-                  <li>
-                    AI assistance to help employers create job postings
-                    efficiently
-                  </li>
-                  <li>
-                    AI support for candidates to apply faster and more
-                    effectively{" "}
-                  </li>
+                  
+                  
+                  
                   <li>AI resume parser for bulk resume data extraction</li>
                   <li>
                     Advanced interview scheduling system with robust features
@@ -323,6 +325,18 @@ const Page = () => {
                   </li>
                   <li>Email and in-app notifications for interview updates</li>
                   <li>Role and responsibility management for employer staff</li>
+                  <li>
+                    AI support for candidates to apply faster and more
+                    effectively{" "}
+                  </li>
+                  <li>
+                    Feature-rich dashboard with data visualization and calendar
+                    integration
+                  </li>
+                  <li>
+                    AI assistance to help employers create job postings
+                    efficiently
+                  </li>
                 </ul>
               </div>
             </div>

@@ -95,10 +95,10 @@ import "../../globals.css";
 import AOSInitializer from "../../Components/AOSInitializer";
 import GTMComponent from "../../Components/GTMComponent";
 import Chatbot from "../../Components/Chatbot";
-import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import MetadataApi from "../../BaseAPI/MetadataApi";
 import Domain from "../../BaseAPI/Domain";
 import Head from "next/head";
-import CookiesConsent from "@/app/Components/CookiesConsent";
+import CookiesConsent from "../../Components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 let schemaData;
