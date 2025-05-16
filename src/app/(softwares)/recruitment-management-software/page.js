@@ -284,7 +284,7 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-          <div className="col-md-6 job-video flex justify-center items-center">
+          <div className="col-md-12 job-video flex mb-5">
               <iframe
   width="100%"
   height="312"
@@ -295,17 +295,14 @@ const Page = () => {
   allowfullscreen=""
 ></iframe>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-12">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
                   <li>
                     Offer letter creation with draft-saving functionality for
                     candidates
                   </li>
-                  <li>
-                    Comprehensive onboarding panel for candidates after offer
-                    acceptance
-                  </li>
+                  
                   
                   
                   
@@ -336,6 +333,10 @@ const Page = () => {
                   <li>
                     AI assistance to help employers create job postings
                     efficiently
+                  </li>
+                  <li>
+                    Comprehensive onboarding panel for candidates after offer
+                    acceptance
                   </li>
                 </ul>
               </div>
