@@ -85,7 +85,7 @@ const ClientSay = () => {
           </div>
           <div className="col-md-6">
             <p>
-              Logicspice offers <span>Cost Effective</span> solutions, and the{" "}
+              Logicspice offers <span>Cost Effective</span> software solutions, and the{" "}
               <span>quality</span> of their work is very good. Logicspice has
               excellent <span>reviews</span> with hundreds of projects across
               various domains, providing detailed feedback with a{" "}
