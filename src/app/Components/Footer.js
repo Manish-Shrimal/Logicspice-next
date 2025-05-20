@@ -739,8 +739,8 @@ const Footer = () => {
                     width={21}
                     height={100}
                     
-                    src="/img/footer/skya_icon.png"
-                    alt="Skype - Logicspice"
+                    src="/img/Microsoft-teams.png"
+                    alt="Microsoft Teams - Logicspice"
                   />
                 </i>
                 <span>logicspice</span>

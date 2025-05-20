@@ -948,8 +948,8 @@ const Navbar = () => {
                                   <Image
                                     width={100}
                                     height={100}
-                                    src="/img/footer/skya_icon.png"
-                                    alt="Logicspice Contact - Skype"
+                                    src="/img/Microsoft-teams.png"
+                                    alt="Logicspice Contact - Teams"
                                   />
                                   <span>logicspice</span>
                                 </li>
