@@ -260,13 +260,13 @@ import "../../globals.css";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Script from "next/script";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import MetadataApi from "@/app/BaseAPI/MetadataApi";
-import Domain from "@/app/BaseAPI/Domain";
+import BaseAPI from "../../BaseAPI/BaseAPI";
+import MetadataApi from "../../BaseAPI/MetadataApi";
+import Domain from "../../BaseAPI/Domain";
 
 // Lazy load heavy components to reduce JavaScript execution time
-const Chatbot = dynamic(() => import("@/app/Components/Chatbot"), { ssr: false });
-const CookiesConsent = dynamic(() => import("@/app/Components/CookiesConsent"), { ssr: false });
+const Chatbot = dynamic(() => import("../../Components/Chatbot"), { ssr: false });
+const CookiesConsent = dynamic(() => import("../../Components/CookiesConsent"), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -367,7 +367,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
 
       <body className={inter.className}>
-        <Chatbot />
+        {/* <Chatbot /> */}
         <CookiesConsent />
         {children}
 
