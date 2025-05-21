@@ -247,6 +247,7 @@ export default async function RootLayout({ children, params }) {
         {/* <Chatbot /> */}
         <AOSInitializer>{children}</AOSInitializer>
         <GTMComponent />
+        {/* test */}
         {/* {isHomePage && (
           <>
             <script
