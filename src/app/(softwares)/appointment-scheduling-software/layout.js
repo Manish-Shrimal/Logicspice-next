@@ -166,44 +166,42 @@ export async function generateMetadata({ params }) {
     };
   } catch (error) {
     console.error("Metadata API fetch error:", error);
-    return {
-      title: "Default Title",
-      description: "Default Description",
-      keywords: "default, keywords",
-      alternates: { canonical: Domain / appointment - scheduling - software },
-      openGraph: {
-        title: "Default OG Title",
-        description: "Default OG Description",
-        url: Domain / appointment - scheduling - software,
-        type: "website",
-        images: [
-          {
-            url: `${Domain}/img/softwares-banner-img/abs_banner_img.png`,
-            // width: 1200,
-            // height: 630,
-            // alt: "Default OG Image",
-          },
-        ],
-      },
-      twitter: {
-        card: "summary_large_image",
-        title: "Default Twitter Title",
-        description: "Default Twitter Description",
-        images: [`${Domain}/default-og-image.jpg`],
-      },
-      robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-          index: true,
-          follow: true,
-          "max-video-preview": -1,
-          "max-image-preview": "large",
-          "max-snippet": -1,
-        },
-      },
-      schemaData: null,
-    };
+    // return {
+    //   title: "Default Title",
+    //   description: "Default Description",
+    //   keywords: "default, keywords",
+    //   alternates: { canonical: Domain / appointment - scheduling - software },
+    //   openGraph: {
+    //     title: "Default OG Title",
+    //     description: "Default OG Description",
+    //     url: Domain / appointment - scheduling - software,
+    //     type: "website",
+    //     images: [
+    //       {
+    //         url: `${Domain}/img/softwares-banner-img/abs_banner_img.png`,
+            
+    //       },
+    //     ],
+    //   },
+    //   twitter: {
+    //     card: "summary_large_image",
+    //     title: "Default Twitter Title",
+    //     description: "Default Twitter Description",
+    //     images: [`${Domain}/default-og-image.jpg`],
+    //   },
+    //   robots: {
+    //     index: true,
+    //     follow: true,
+    //     googleBot: {
+    //       index: true,
+    //       follow: true,
+    //       "max-video-preview": -1,
+    //       "max-image-preview": "large",
+    //       "max-snippet": -1,
+    //     },
+    //   },
+    //   schemaData: null,
+    // };
   }
 }
 
