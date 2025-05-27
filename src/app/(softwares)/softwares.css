@@ -1727,7 +1727,7 @@ section {
 .small_bbx_job_new {
   display: inline-block;
   width: 100% !important;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .small_bbx_job_new .thumbnail-new {
@@ -7699,7 +7699,7 @@ background: #451095!important;
 }
 
 .jobboard_best_partner {
-  height: 300px;
+  min-height: 300px;
 }
 .jobboard-script-update {
   height: 280px;
