@@ -1,4 +1,3 @@
-"use server";
 
 import AppointmentSchedulingSoftware from "./AppointmentSchedulingSoftware";
 

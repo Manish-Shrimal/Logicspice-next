@@ -85,7 +85,7 @@ import "../../globals.css";
 import AOSInitializer from "../../Components/AOSInitializer";
 import GTMComponent from "../../Components/GTMComponent";
 import Chatbot from "../../Components/Chatbot";
-import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import MetadataApi from "../../BaseAPI/MetadataApi";
 import Domain from "../../BaseAPI/Domain";
 import Head from "next/head";
 
