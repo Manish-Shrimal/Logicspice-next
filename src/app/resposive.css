@@ -2263,8 +2263,15 @@
   z-index: 1;
 }
 
+.JobBoardPageNew::before {
+  top: auto;
+  width: 132%;
+  height: 40%;
+  bottom: -70px;
+}
+
 .jobboard_best_partner {
-  height: 400px !important;
+  min-height: 400px !important;
 }
 .jobboard-script-update {
   height: 410px !important;

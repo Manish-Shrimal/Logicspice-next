@@ -1597,7 +1597,7 @@ const Page = () => {
                                     width={100}
                                     height={100}
                                     alt="img"
-                                    src="/img/jobboard/emplyer-mobile.png"
+                                    src="/img/jobboard/ragister-icon.png"
                                   />
                                 </i>
                                 <span>
