@@ -270,77 +270,269 @@ const CookiesConsent = dynamic(() => import("../../Components/CookiesConsent"), 
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata({ params, searchParams }) {
-  const product = await fetch(`${MetadataApi}/job-board-software`, { cache: "no-store" })
-    .then((res) => res.json());
+// export async function generateMetadata({ params, searchParams }) {
 
-  let text = product.data.schema;
+//   const product = await fetch(`${MetadataApi}/job-board-software`, { cache: "no-store" })
+//     .then((res) => res.json());
+
+//   let text = product.data.schema;
+//   let schemaOrg = null;
+
+//   if (text) {
+//     const cleanedText = text
+//       .replace(/\\r\\n/g, '')
+//       .replace(/\\n/g, '')
+//       .replace(/\\r/g, '')
+//       .replace(/\\+/g, '')
+//       .replace(/[\u0000-\u001F\u007F]/g, '');
+    
+//     schemaOrg = cleanedText ? JSON.parse(cleanedText) : null;
+//   }
+
+//   // FAQ Schema for structured data
+//   const faqSchema = {
+//     "@context": "https://schema.org",
+//     "@type": "FAQPage",
+//     "mainEntity": [
+//       {
+//         "@type": "Question",
+//         "name": "Can a Jobseeker upload his CV to apply for a job?",
+//         "acceptedAnswer": {
+//           "@type": "Answer",
+//           "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
+//         }
+//       },
+//       {
+//         "@type": "Question",
+//         "name": "Will there be any installation charges when I purchase the job portal script?",
+//         "acceptedAnswer": {
+//           "@type": "Answer",
+//           "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
+//         }
+//       },
+//       {
+//         "@type": "Question",
+//         "name": "Can jobseeker download the CV that he has created on this website?",
+//         "acceptedAnswer": {
+//           "@type": "Answer",
+//           "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
+//         }
+//       }
+//     ]
+//   };
+
+//   return {
+//     title: product.data.meta_title,
+//     description: product.data.meta_description,
+//     keywords: product.data.meta_keyword,
+//     alternates: {
+//       canonical: `${Domain}/job-board-software`,
+//     },
+//     robots: {
+//       index: true,
+//       follow: true,
+//       googleBot: {
+//         index: true,
+//         follow: true,
+//         "max-video-preview": -1,
+//         "max-image-preview": "large",
+//         "max-snippet": -1,
+//       },
+//     },
+//     schemaOrg: schemaOrg || null,
+//     faqSchema: faqSchema,
+//   };
+// }
+
+export async function generateMetadata({ params, searchParams }) {
+  let product = null;
   let schemaOrg = null;
 
-  if (text) {
-    const cleanedText = text
-      .replace(/\\r\\n/g, '')
-      .replace(/\\n/g, '')
-      .replace(/\\r/g, '')
-      .replace(/\\+/g, '')
-      .replace(/[\u0000-\u001F\u007F]/g, '');
+  try {
+    const response = await fetch(`${MetadataApi}/job-board-software`, { cache: "no-store" });
     
-    schemaOrg = cleanedText ? JSON.parse(cleanedText) : null;
-  }
-
-  // FAQ Schema for structured data
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can a Jobseeker upload his CV to apply for a job?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will there be any installation charges when I purchase the job portal script?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can jobseeker download the CV that he has created on this website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
-        }
+    if (!response.ok) {
+      if (response.status >= 500 && response.status < 600) {
+        console.error(`Server error ${response.status}: Failed to fetch product data`);
+        // Fallback to default metadata in case of server error
+        return {
+          title: "Job Board Software",
+          description: "Default description for Job Board Software",
+          keywords: "job board, software, recruitment",
+          alternates: {
+            canonical: `${Domain}/job-board-software`,
+          },
+          robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+              index: true,
+              follow: true,
+              "max-video-preview": -1,
+              "max-image-preview": "large",
+              "max-snippet": -1,
+            },
+          },
+          schemaOrg: null,
+          faqSchema: {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can a Jobseeker upload his CV to apply for a job?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will there be any installation charges when I purchase the job portal script?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can jobseeker download the CV that he has created on this website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
+                }
+              }
+            ]
+          }
+        };
       }
-    ]
-  };
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
-  return {
-    title: product.data.meta_title,
-    description: product.data.meta_description,
-    keywords: product.data.meta_keyword,
-    alternates: {
-      canonical: `${Domain}/job-board-software`,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
+    product = await response.json();
+
+    let text = product.data.schema;
+    if (text) {
+      const cleanedText = text
+        .replace(/\\r\\n/g, '')
+        .replace(/\\n/g, '')
+        .replace(/\\r/g, '')
+        .replace(/\\+/g, '')
+        .replace(/[-\u001F\u007F]/g, '');
+      
+      try {
+        schemaOrg = cleanedText ? JSON.parse(cleanedText) : null;
+      } catch (parseError) {
+        console.error('Error parsing schema JSON:', parseError);
+        schemaOrg = null;
+      }
+    }
+
+    return {
+      title: product.data.meta_title,
+      description: product.data.meta_description,
+      keywords: product.data.meta_keyword,
+      alternates: {
+        canonical: `${Domain}/job-board-software`,
+      },
+      robots: {
         index: true,
         follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
       },
-    },
-    schemaOrg: schemaOrg || null,
-    faqSchema: faqSchema,
-  };
+      schemaOrg: schemaOrg,
+      faqSchema: {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can a Jobseeker upload his CV to apply for a job?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will there be any installation charges when I purchase the job portal script?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can jobseeker download the CV that he has created on this website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
+            }
+          }
+        ]
+      }
+    };
+
+  } catch (error) {
+    console.error('Error fetching metadata:', error);
+    // Fallback metadata in case of any other errors
+    return {
+      title: "Job Board Software",
+      description: "Default description for Job Board Software",
+      keywords: "job board, software, recruitment",
+      alternates: {
+        canonical: `${Domain}/job-board-software`,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
+      schemaOrg: null,
+      faqSchema: {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can a Jobseeker upload his CV to apply for a job?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The information about the jobseeker will go from his profile to the employer that he is applying the job for."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will there be any installation charges when I purchase the job portal script?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The installation of our Job Portal Product will be absolutely free of cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can jobseeker download the CV that he has created on this website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Once the job seeker creates his CV, he can download the same in a PDF format."
+            }
+          }
+        ]
+      }
+    };
+  }
 }
 
 export default async function RootLayout({ children, params, searchParams }) {

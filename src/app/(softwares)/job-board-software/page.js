@@ -21,6 +21,7 @@ import axios from "axios";
 import BaseAPI from "../../BaseAPI/BaseAPI";
 import { Button } from "@mui/material";
 import TableRow from "./TableRow";
+import useWindowWidth from "../../Components/useWindowWidth";
 
 const GetDemoEnquiry = dynamic(
   () => import("../../Components/GetDemoEnquiry"),
@@ -113,7 +114,9 @@ const tableData = [
 ];
 const Page = () => {
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  let windowWidth = useWindowWidth();
   
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -3630,7 +3633,7 @@ const Page = () => {
                 <div className="ecommerce--review">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      I have purchased this script and has constructed my own
+                      I have purchased this software and has constructed my own
                       job-site. This was an easy task because of
                       logicspice&apos;s free installation and support. Keep up
                       the good work. I will be back for more in the future.
@@ -3661,9 +3664,9 @@ const Page = () => {
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext" id="fiveer-clone">
-                      This is the best job portal script. Thanks for your great
+                      This is the best job board software. Thanks for your great
                       efforts and support while installing the script. Your
-                      prompt service regarding a few minor issues was superb
+                      prompt service regarding a few minor issues was superb.
                     </div>
 
                     <div className="who_ratset">
