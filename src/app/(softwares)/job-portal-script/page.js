@@ -4104,7 +4104,7 @@ const Page = () => {
               </div>
               <div className="col-md-3">
                 <div className="ecommerce--review--point ">
-                  <div className="outof_rating">
+                  {/* <div className="outof_rating">
                     <div className="review_rating_fjs">
                       <div className="star_num">
                         5 <i className="fa fa-star"></i>
@@ -4189,7 +4189,99 @@ const Page = () => {
                       </div>
                       <div className="people_star_num">0</div>
                     </div>
-                  </div>
+                  </div> */}
+                  <div className="outof_rating">
+  <div className="review_rating_fjs">
+    <div className="star_num">
+      5 <i className="fa fa-star"></i>
+    </div>
+    <div className="progress">
+      <div
+        className="progress-bar progress-bar-danger progress-bar-striped"
+        role="progressbar"
+        aria-valuenow="100"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label="5 star rating progress"
+        style={{ width: "100%" }}
+      ></div>
+    </div>
+    <div className="people_star_num">174</div>
+  </div>
+
+  <div className="review_rating_fjs">
+    <div className="star_num">
+      4 <i className="fa fa-star"></i>
+    </div>
+    <div className="progress">
+      <div
+        className="progress-bar progress-bar-danger progress-bar-striped"
+        role="progressbar"
+        aria-valuenow="30"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label="4 star rating progress"
+        style={{ width: "30%" }}
+      ></div>
+    </div>
+    <div className="people_star_num">44</div>
+  </div>
+
+  <div className="review_rating_fjs">
+    <div className="star_num">
+      0 <i className="fa fa-star"></i>
+    </div>
+    <div className="progress">
+      <div
+        className="progress-bar progress-bar-danger progress-bar-striped"
+        role="progressbar"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label="0 star rating progress"
+        style={{ width: "0%" }}
+      ></div>
+    </div>
+    <div className="people_star_num">0</div>
+  </div>
+
+  <div className="review_rating_fjs">
+    <div className="star_num">
+      2 <i className="fa fa-star"></i>
+    </div>
+    <div className="progress">
+      <div
+        className="progress-bar progress-bar-danger progress-bar-striped"
+        role="progressbar"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label="2 star rating progress"
+        style={{ width: "0%" }}
+      ></div>
+    </div>
+    <div className="people_star_num">0</div>
+  </div>
+
+  <div className="review_rating_fjs">
+    <div className="star_num">
+      1 <i className="fa fa-star"></i>
+    </div>
+    <div className="progress">
+      <div
+        className="progress-bar progress-bar-danger progress-bar-striped"
+        role="progressbar"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label="1 star rating progress"
+        style={{ width: "0%" }}
+      ></div>
+    </div>
+    <div className="people_star_num">0</div>
+  </div>
+</div>
+
                   <div className="ecommerce--review--btn ">
                     <a className="btn btn-primary" onClick={openReviewModel}>
                       Rate and Review product
