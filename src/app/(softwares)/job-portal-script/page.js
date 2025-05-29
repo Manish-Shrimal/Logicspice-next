@@ -13,7 +13,7 @@ import Contactusmodel from "../../Components/Contactusmodel";
 import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
 import "../../resposive.css";
 import Whylogicspice from "../../Components/Whylogicspice";
-import YouTubeLazyEmbed  from "../../Components/YouTubeLazyEmbed";
+import YouTubeLazyEmbed from "../../Components/YouTubeLazyEmbed";
 
 import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
@@ -420,9 +420,9 @@ const Page = () => {
                   LS Jobber - White Label Job Portal <br />Script{" "}
                 </h1> */}
                 <h1 className="mt-2 text-3xl font-bold text-black leading-snug">
-  LS Jobber – White Label Job Portal <br />
-  Script
-</h1>
+                  LS Jobber – White Label Job Portal <br />
+                  Script
+                </h1>
 
                 <div className="both-left-p-sec">
                   <h2>
@@ -661,20 +661,7 @@ const Page = () => {
         </section>
         <section className="job-section-top-new JobBoardSectionNew">
           <div className="container">
-            {/* <p>
-              Crafting a personalized job portal has never been this empowering.
-              Our LS Jobber offers a gateway for businesses and companies to
-              establish their own
-              <strong> bespoke white label job portals</strong>. Not just that,
-              entrepreneurs can seamlessly integrate recruiters into the hiring
-              process, streamlining the journey from opportunity to employment.
-              With its <i>advanced functionalities</i> and{" "}
-              <i>user-friendliness</i>, even individuals without a technical
-              background can effortlessly navigate this dynamic platform. The
-              admin&apos;s role is made effortless through a responsive and
-              user-friendly dashboard, where insights into users, jobs,
-              categories, and payment histories are at your fingertips.
-            </p> */}
+      
 
             <div className="flex flex-col items-center pb-0">
               <h1 className="w-full text-left text-4xl font-bold text-gray-800 mb-8">
@@ -726,23 +713,7 @@ const Page = () => {
                 />
               </div>
 
-              {/* <div className="text-left">
-                <p className="text-lg text-gray-600 mb-4">
-                  <span className="font-semibold">LS Jobber</span> is the
-                  fastest and most reliable way to launch your own classified
-                  for job postings. Designed for businesses, recruiters, and
-                  agencies, it gives you everything you need to create a fully
-                  branded, feature-rich hiring portal—
-                  <em>without writing a single line of code.</em>
-                </p>
-                <p className="text-gray-600">
-                  Whether you&apos;re building for a niche industry or a broader
-                  market, LS Jobber provides a ready-to-use solution that works.
-                  From job posting and job search to resume uploads (including
-                  video CVs), it delivers a seamless experience for both
-                  employers and job seekers.
-                </p>
-              </div> */}
+             
             </div>
           </div>
         </section>
@@ -756,7 +727,6 @@ const Page = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-6 job-video">
-                
                 {/* <div ref={iframeRef}>
                   <iframe
                     className="!rounded-xl"
@@ -798,7 +768,6 @@ const Page = () => {
                     <li className="!text-white">Custom Code & CSS</li>
                     <li className="!text-white">One-Click Data Export</li>
                     <li className="!text-white">Modern, Customizable Design</li>
-
                   </ul>
                 </div>
               </div>
@@ -905,7 +874,9 @@ const Page = () => {
                   </li>
                   <li
                     id="tab3_li"
-                    className={`admin_app_job_job_portal ddlj ${adminTab ? "active" : ""}`}
+                    className={`admin_app_job_job_portal ddlj ${
+                      adminTab ? "active" : ""
+                    }`}
                     onClick={() => handleAdminTab()}
                   >
                     <a
@@ -4191,96 +4162,96 @@ const Page = () => {
                     </div>
                   </div> */}
                   <div className="outof_rating">
-  <div className="review_rating_fjs">
-    <div className="star_num">
-      5 <i className="fa fa-star"></i>
-    </div>
-    <div className="progress">
-      <div
-        className="progress-bar progress-bar-danger progress-bar-striped"
-        role="progressbar"
-        aria-valuenow="100"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-label="5 star rating progress"
-        style={{ width: "100%" }}
-      ></div>
-    </div>
-    <div className="people_star_num">174</div>
-  </div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-label="5 star rating progress"
+                          style={{ width: "100%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">174</div>
+                    </div>
 
-  <div className="review_rating_fjs">
-    <div className="star_num">
-      4 <i className="fa fa-star"></i>
-    </div>
-    <div className="progress">
-      <div
-        className="progress-bar progress-bar-danger progress-bar-striped"
-        role="progressbar"
-        aria-valuenow="30"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-label="4 star rating progress"
-        style={{ width: "30%" }}
-      ></div>
-    </div>
-    <div className="people_star_num">44</div>
-  </div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        4 <i className="fa fa-star"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-valuenow="30"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-label="4 star rating progress"
+                          style={{ width: "30%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">44</div>
+                    </div>
 
-  <div className="review_rating_fjs">
-    <div className="star_num">
-      0 <i className="fa fa-star"></i>
-    </div>
-    <div className="progress">
-      <div
-        className="progress-bar progress-bar-danger progress-bar-striped"
-        role="progressbar"
-        aria-valuenow="0"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-label="0 star rating progress"
-        style={{ width: "0%" }}
-      ></div>
-    </div>
-    <div className="people_star_num">0</div>
-  </div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        0 <i className="fa fa-star"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-valuenow="0"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-label="0 star rating progress"
+                          style={{ width: "0%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">0</div>
+                    </div>
 
-  <div className="review_rating_fjs">
-    <div className="star_num">
-      2 <i className="fa fa-star"></i>
-    </div>
-    <div className="progress">
-      <div
-        className="progress-bar progress-bar-danger progress-bar-striped"
-        role="progressbar"
-        aria-valuenow="0"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-label="2 star rating progress"
-        style={{ width: "0%" }}
-      ></div>
-    </div>
-    <div className="people_star_num">0</div>
-  </div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        2 <i className="fa fa-star"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-valuenow="0"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-label="2 star rating progress"
+                          style={{ width: "0%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">0</div>
+                    </div>
 
-  <div className="review_rating_fjs">
-    <div className="star_num">
-      1 <i className="fa fa-star"></i>
-    </div>
-    <div className="progress">
-      <div
-        className="progress-bar progress-bar-danger progress-bar-striped"
-        role="progressbar"
-        aria-valuenow="0"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-label="1 star rating progress"
-        style={{ width: "0%" }}
-      ></div>
-    </div>
-    <div className="people_star_num">0</div>
-  </div>
-</div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        1 <i className="fa fa-star"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-valuenow="0"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-label="1 star rating progress"
+                          style={{ width: "0%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">0</div>
+                    </div>
+                  </div>
 
                   <div className="ecommerce--review--btn ">
                     <a className="btn btn-primary" onClick={openReviewModel}>
@@ -4771,7 +4742,7 @@ const Page = () => {
         <section className="JObboardVideSection">
           <div className="container">
             <div className="JobBoardVideoBottom">
-            <YouTubeLazyEmbed videoId="jZUjtbUTuHQ" />
+              <YouTubeLazyEmbed videoId="jZUjtbUTuHQ" />
               {/* <div ref={iframeRef}>
                 <iframe
                   id="ytplayer"
@@ -4783,7 +4754,6 @@ const Page = () => {
                   allowFullScreen
                 ></iframe>
               </div> */}
-              
             </div>
           </div>
         </section>

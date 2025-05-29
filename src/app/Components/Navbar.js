@@ -969,6 +969,8 @@ const Navbar = () => {
                                     />
                                   </span>
                                 </li>
+                                
+
                               </ul>
                               <Link
                                 href="/contact-us"
@@ -991,7 +993,7 @@ const Navbar = () => {
                                     +91-7727974242
                                   </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                   <Image
                                     width={100}
                                     height={100}
@@ -999,7 +1001,17 @@ const Navbar = () => {
                                     alt="Logicspice Contact - Email"
                                   />{" "}
                                   <span> hr@logicspice.com </span>
-                                </li>
+                                </li> */}
+                                <li className="contact-item">
+  <Image
+    src="/img/footer/mail.png"
+    alt="Email icon"
+    width={20}
+    height={20}
+  />
+  <span>hr@logicspice.com</span>
+</li>
+
                               </ul>
                               <Link
                                 href="/apply-now"
