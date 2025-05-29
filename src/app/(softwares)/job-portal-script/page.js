@@ -13,6 +13,8 @@ import Contactusmodel from "../../Components/Contactusmodel";
 import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
 import "../../resposive.css";
 import Whylogicspice from "../../Components/Whylogicspice";
+import YouTubeLazyEmbed  from "../../Components/YouTubeLazyEmbed";
+
 import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
@@ -414,9 +416,14 @@ const Page = () => {
           <div className="container">
             <div className="row">
               <div className="col-sm-7 col-md-7">
-                <h1 className="!mt-[10px]">
+                {/* <h1 className="!mt-[10px]">
                   LS Jobber - White Label Job Portal <br />Script{" "}
-                </h1>
+                </h1> */}
+                <h1 className="mt-2 text-3xl font-bold text-black leading-snug">
+  LS Jobber – White Label Job Portal <br />
+  Script
+</h1>
+
                 <div className="both-left-p-sec">
                   <h2>
                     All-in-one job board script to launch a job portal clone.
@@ -749,16 +756,8 @@ const Page = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-6 job-video">
-                {/* <iframe
-                id="jobvideo"
-                width="100%"
-                height="312"
-                src="https://www.youtube.com/embed/7fJVD2R2kkA?rel=0&autoplay=0"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe> */}
-                <div ref={iframeRef}>
+                
+                {/* <div ref={iframeRef}>
                   <iframe
                     className="!rounded-xl"
                     id="ytplayer"
@@ -769,7 +768,8 @@ const Page = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                </div>
+                </div> */}
+                <YouTubeLazyEmbed videoId="7fJVD2R2kkA" />
               </div>
               <div className="col-md-6">
                 <div className="job-board-features">
@@ -4679,16 +4679,8 @@ const Page = () => {
         <section className="JObboardVideSection">
           <div className="container">
             <div className="JobBoardVideoBottom">
-              {/* <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/jZUjtbUTuHQ?si=NrWfYG4wQYAnm1bJ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe> */}
-              <div ref={iframeRef}>
+            <YouTubeLazyEmbed videoId="jZUjtbUTuHQ" />
+              {/* <div ref={iframeRef}>
                 <iframe
                   id="ytplayer"
                   width="100%"
@@ -4698,7 +4690,8 @@ const Page = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-              </div>
+              </div> */}
+              
             </div>
           </div>
         </section>
