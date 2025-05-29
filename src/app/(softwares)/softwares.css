@@ -2829,6 +2829,10 @@ section {
   background: url("/img/jobboard/jobseeker-toggle-image.png") center top no-repeat;
   background-size: 130px;
 }
+.JobBoardNewtab .jobseeker_app_job_job_portal a {
+  background: url("/img/job-portal/jobseeker-icon.png") center top no-repeat;
+  background-size: 130px;
+}
 .JobBoardJobseekerNewtabOpen{
   color: #8764C7 !important;
 }
@@ -2846,10 +2850,23 @@ section {
   background-size: 130px;
 }
 
+.JobBoardNewtab .emplyer_app_job_job_portal a,
+.JobBoardNewtab .emplyer_app_job_job_portal.active a,
+.JobBoardNewtab .emplyer_app_job_job_portal:hover a {
+  background: url(/img/job-portal/employer-icon.png) center top no-repeat;
+  background-size: 130px;
+}
+
 .JobBoardNewtab .admin_app_job a,
 .JobBoardNewtab .admin_app_job.active a,
 .JobBoardNewtab .admin_app_job:hover a {
   background: url(/img/jobboard/admin-toggle-image.png) center top no-repeat;
+  background-size: 130px;
+}
+.JobBoardNewtab .admin_app_job_job_portal a,
+.JobBoardNewtab .admin_app_job_job_portal.active a,
+.JobBoardNewtab .admin_app_job_job_portal:hover a {
+  background: url(/img/job-portal/admin-panel.png) center top no-repeat;
   background-size: 130px;
 }
 
@@ -3900,6 +3917,7 @@ section {
   background: url(/img/fiverrclone/businessman.png) center top no-repeat;
   background-size: 110px;
 }
+
 
 .emplyer_app_job a,
 .emplyer_app_job.active a,
@@ -7036,6 +7054,10 @@ a:hover {
     background-size: 65px;
   }
 
+  .JobBoardNewtab .jobseeker_app_job_job_portal a {
+    background-size: 65px;
+  }
+
   .tab_bbx_job .JobBoardNewtab li a {
     padding-top: 55px;
   }
@@ -7052,13 +7074,29 @@ a:hover {
     background-size: 65px;
   }
 
+  .JobBoardNewtab .emplyer_app_job_job_portal a,
+  .JobBoardNewtab .emplyer_app_job_job_portal.active a,
+  .JobBoardNewtab .emplyer_app_job_job_portal:hover a {
+    background-size: 55px;
+  }
+
   .JobBoardNewtab .admin_app_job a,
   .JobBoardNewtab .admin_app_job.active a,
   .JobBoardNewtab .admin_app_job:hover a {
     background-size: 60px;
   }
 
+  .JobBoardNewtab .admin_app_job_job_portal a,
+  .JobBoardNewtab .admin_app_job_job_portal.active a,
+  .JobBoardNewtab .admin_app_job_job_portal:hover a {
+    background-size: 55px;
+  }
+
   .JobBoardNewtab .jobseeker_app_job a {
+    background-size: 65px;
+  }
+
+  .JobBoardNewtab .jobseeker_app_job_job_portal a {
     background-size: 65px;
   }
 
@@ -7746,5 +7784,32 @@ background: #451095!important;
 	padding: 0 4px;
 }
 .JobBoardPageNew .por-mobile-new {
+	margin-top: 20px;
+}
+
+
+.JobPortalPageNew::after{ display: none;}
+.JobPortalPageNew::before {
+	position: absolute;
+	right: -40px;
+	top: -60px;
+	content: "";
+	background-color: #71A8DB;
+	width: 42%;
+	height: 150%;
+	left: auto;
+	display: block;
+	-webkit-transform: rotate(11deg);
+	-moz-transform: rotate(11deg);
+	-ms-transform: rotate(11deg);
+	-o-transform: rotate(11deg);
+	transform: rotate(11deg);
+
+}
+.JobPortalPageNew .job-pr-icon li {
+	border-right: none;
+	padding: 0 4px;
+}
+.JobPortalPageNew .por-mobile-new {
 	margin-top: 20px;
 }
