@@ -1,29 +1,29 @@
 "use client";
 import dynamic from "next/dynamic";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState, useRef } from "react";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import "../../../../public/css/font-awesome.css";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 
 const GetDemoEnquiry = dynamic(
-  () => import("@/app/Components/GetDemoEnquiry"),
+  () => import("../../Components/GetDemoEnquiry"),
   { ssr: false }
 );
 const SoftwareEnquiry = dynamic(
-  () => import("@/app/Components/SoftwareEnquiry"),
+  () => import("../../Components/SoftwareEnquiry"),
   { ssr: false }
 );
 
@@ -149,8 +149,6 @@ const Page = () => {
     setBuyerTab(false);
     setAdminTab(true);
   };
-
- 
 
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
@@ -306,7 +304,7 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="job-valu-btn">
-                  <div
+                    {/* <div
                       className="enquiry_software_btn"
                       style={{ marginTop: "15px" }}
                       onClick={openModal}
@@ -321,9 +319,9 @@ const Page = () => {
                           title="WordPress eCommerce Website"
                         />
                       }
-                    </div>
-                  
-                    {/* <span>Fill your basic details and</span>
+                    </div> */}
+
+                    <span>Fill your basic details and</span>
 
                     <div
                       className="btn-get"
@@ -342,11 +340,11 @@ const Page = () => {
 
                     <a
                       className=" fiverr-buys NewGreenBtnJob text-center"
-                      href="/buy-now/job-board-software"
+                      href="/buy-now/group-chat-internal-communication"
                       id="buy_now_1"
                     >
                       BUY NOW
-                    </a> */}
+                    </a>
                   </div>
                   <div
                     className="portal-price portal-priceNew"
@@ -402,9 +400,7 @@ const Page = () => {
                       <li>
                         <i className="fa fa-globe" aria-hidden="true"></i>
                       </li>
-                     
                     </ul>
-                    
                   </div>
                 </div>
               </div>
@@ -460,7 +456,7 @@ const Page = () => {
               LS Jobber is a ready-to-use Job Board Software that can assist you
               to launch your own <i>white Label job board</i> in less time.
             </p>
-        
+
             <p>
               Designed for businesses of all sizes, our internal communication
               software for business connects teams seamlessly, ensuring smooth
@@ -852,6 +848,145 @@ const Page = () => {
                                   </div>
                                 </span>
                               </li>
+
+                              <li>
+                                <i className="JobBoardImg">
+                                  <Image
+                                    unoptimized={true}
+                                    width={100}
+                                    height={100}
+                                    className="lazy"
+                                    src="/img/jobboard/pin-post-icon.png"
+                                    alt="Jobseeker App Feature"
+                                  />
+                                </i>
+                                <span>
+                                  Pin Post
+                                  <div className="product-idea">
+                                    <p>
+                                      Allows users to pin or unpin important
+                                      messages within a specific chat for easy
+                                      reference.
+                                    </p>
+                                  </div>
+                                </span>
+                              </li>
+
+                              <li>
+                                <i className="JobBoardImg">
+                                  <Image
+                                    unoptimized={true}
+                                    width={100}
+                                    height={100}
+                                    className="lazy"
+                                    src="/img/jobboard/delete-post.png"
+                                    alt="Jobseeker App Feature"
+                                  />
+                                </i>
+                                <span>
+                                  Delete Post
+                                  <div className="product-idea">
+                                    <p>
+                                      Allows users to remove their own messages
+                                      from a conversation, helping maintain
+                                      privacy and control over shared content.
+                                    </p>
+                                  </div>
+                                </span>
+                              </li>
+
+                              <li>
+                                <i className="JobBoardImg">
+                                  <Image
+                                    unoptimized={true}
+                                    width={100}
+                                    height={100}
+                                    className="lazy"
+                                    src="/img/jobboard/favorite-chat-icon.png"
+                                    alt="Jobseeker App Feature"
+                                  />
+                                </i>
+                                <span>
+                                  Add to Favorite Chat
+                                  <div className="product-idea">
+                                    <p>
+                                      Allows users to mark a chat as a favorite
+                                      for quick and easy access from their chat
+                                      list.
+                                    </p>
+                                  </div>
+                                </span>
+                              </li>
+
+                              <li>
+                                <i className="JobBoardImg">
+                                  <Image
+                                    unoptimized={true}
+                                    width={100}
+                                    height={100}
+                                    className="lazy"
+                                    src="/img/jobboard/remove-favorite-chat-icon.png"
+                                    alt="Jobseeker App Feature"
+                                  />
+                                </i>
+                                <span>
+                                  Remove from Favorite Chat
+                                  <div className="product-idea">
+                                    <p>
+                                      Lets users unmark a previously favorite
+                                      chat, removing it from their favorites
+                                      list.
+                                    </p>
+                                  </div>
+                                </span>
+                              </li>
+
+                              <li>
+                                <i className="JobBoardImg">
+                                  <Image
+                                    unoptimized={true}
+                                    width={100}
+                                    height={100}
+                                    className="lazy"
+                                    src="/img/jobboard/exit-group-icon.png"
+                                    alt="Jobseeker App Feature"
+                                  />
+                                </i>
+                                <span>
+                                  Exit Group
+                                  <div className="product-idea">
+                                    <p>
+                                      Enables users to leave a group chat,
+                                      removing their access to group messages
+                                      and notifications.
+                                    </p>
+                                  </div>
+                                </span>
+                              </li>
+
+                              <li>
+                                <i className="JobBoardImg">
+                                  <Image
+                                    unoptimized={true}
+                                    width={100}
+                                    height={100}
+                                    className="lazy"
+                                    src="/img/jobboard/invite-members-icon.png"
+                                    alt="Jobseeker App Feature"
+                                  />
+                                </i>
+                                <span>
+                                  Invite Members
+                                  <div className="product-idea">
+                                    <p>
+                                      Allows users to invite others to join the
+                                      messenger by sending a registration link,
+                                      enabling new users to sign up and join the
+                                      conversation.
+                                    </p>
+                                  </div>
+                                </span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -1168,84 +1303,85 @@ const Page = () => {
           </div>
         </section>
 
-       <section className="SubscriptionModel" id="subscriptionmodel">
-        <div className="container">
-          <div className="job_or_title">
-            <h2 className="taxt_tt_job">Subscription Model</h2>
-            <br />
-            <div className="SubscriptionModelBx">
-              <p>
-                Experience convenience like never before with our
-                subscription-based hassle-free model, available at just{" "}
-                <strong>USD 45 per month</strong>, limited offer available for
-                the first year.
-              </p>
-              <p>Key Benefits:</p>
-              <ul>
-                <li>
-                  <span>
-                    Lifetime Updates: Enjoy complimentary updates for your
-                    software version throughout its lifespan.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Timely Upgrades: Seamlessly transition to upgraded versions
-                    at regular intervals, all at no extra cost.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <strong>Zero Setup Fees</strong>:- There are no additional
-                    charges for the setup and installation of the software,
-                    making it easier for customers to get started.
-                  </span>
-                </li>
-                {/* <li>
+        <section className="SubscriptionModel" id="subscriptionmodel">
+          <div className="container">
+            <div className="job_or_title">
+              <h2 className="taxt_tt_job">Subscription Model</h2>
+              <br />
+              <div className="SubscriptionModelBx">
+                <p>
+                  Experience convenience like never before with our
+                  subscription-based hassle-free model, available at just{" "}
+                  <strong>USD 45 per month</strong>, limited offer available for
+                  the first year.
+                </p>
+                <p>Key Benefits:</p>
+                <ul>
+                  <li>
+                    <span>
+                      Lifetime Updates: Enjoy complimentary updates for your
+                      software version throughout its lifespan.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Timely Upgrades: Seamlessly transition to upgraded
+                      versions at regular intervals, all at no extra cost.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <strong>Zero Setup Fees</strong>:- There are no additional
+                      charges for the setup and installation of the software,
+                      making it easier for customers to get started.
+                    </span>
+                  </li>
+                  {/* <li>
                   <span>
                   Unlimited Appointment Booking: Book as many appointments as you need without any limitations.
                   </span>
                 </li> */}
-                 <li>
-                  <span>
-                    Enhanced Communication: Avail yourself of 5 domain-based
-                    email accounts to enhance your professional communication.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Effortless Program Operation: Revel in robust bandwidth that
-                    guarantees your program runs flawlessly, supported by
-                    resources allocated to your subscription model. Any increase
-                    in allocated resources will incur additional charges beyond
-                    the standard subscription model.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Enduring Support: We are committed to providing lifelong
-                    assistance through our subscription model. If any software
-                    issues arise, our <strong>dedicated technical team</strong>{" "}
-                    will promptly address them during office hours.
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Personalized Customization Assistance: Delivering Custom
-                    Features According to Client Requirements at additional
-                    cost.
-                  </span>
-                </li>
-              </ul>
-              <p>
-                Discover a new era of convenience and efficiency with our
-                subscription offering. Subscribe today and elevate your
-                experience with our readymade solution!
-              </p>
+                  <li>
+                    <span>
+                      Enhanced Communication: Avail yourself of 5 domain-based
+                      email accounts to enhance your professional communication.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Effortless Program Operation: Revel in robust bandwidth
+                      that guarantees your program runs flawlessly, supported by
+                      resources allocated to your subscription model. Any
+                      increase in allocated resources will incur additional
+                      charges beyond the standard subscription model.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Enduring Support: We are committed to providing lifelong
+                      assistance through our subscription model. If any software
+                      issues arise, our{" "}
+                      <strong>dedicated technical team</strong> will promptly
+                      address them during office hours.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Personalized Customization Assistance: Delivering Custom
+                      Features According to Client Requirements at additional
+                      cost.
+                    </span>
+                  </li>
+                </ul>
+                <p>
+                  Discover a new era of convenience and efficiency with our
+                  subscription offering. Subscribe today and elevate your
+                  experience with our readymade solution!
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
         <section id="subscriptionprice" className="SubscriptionpriceSection">
           <div className="container">
             <h2 className="taxt_tt_job">Delivered Solution</h2>
@@ -1257,11 +1393,11 @@ const Page = () => {
                   <span className="sml_labl"> {pageData.name}</span>
                 </h4> */}
                 <h4>
-                {/* {pageData.currency_symbol}
+                  {/* {pageData.currency_symbol}
                 {pageData.price} */}
-                $ 895
-                {/* <span className="sml_labl"> {pageData.name}</span> */}
-              </h4>
+                  $ 895
+                  {/* <span className="sml_labl"> {pageData.name}</span> */}
+                </h4>
                 {/* <strike className="srik_cls">
                   {pageData.currency_symbol}
                   {pageData.other_price}
@@ -1287,28 +1423,27 @@ const Page = () => {
                     Buy Now
                   </a> */}
                   <div
-                      className="enquiry_software_btn"
-                      style={{ marginTop: "15px" }}
-                      onClick={openModal}
-                    >
-                      <button className="btn fiverr-buys NewGreenBtnJob">
-                        Enquire Now
-                      </button>
-                      {
-                        <SoftwareEnquiry
-                          modalStatus={showModal}
-                          toggle={openModal}
-                          title="Group Chat App"
-                        />
-                      }
-                    </div>
+                    className="enquiry_software_btn"
+                    style={{ marginTop: "15px" }}
+                    onClick={openModal}
+                  >
+                    <button className="btn fiverr-buys NewGreenBtnJob">
+                      Enquire Now
+                    </button>
+                    {
+                      <SoftwareEnquiry
+                        modalStatus={showModal}
+                        toggle={openModal}
+                        title="Group Chat App"
+                      />
+                    }
+                  </div>
                 </div>
                 <div className="jocpp">
                   <ul className="job-pr-icon">
                     <li>
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </li>
-                    
                   </ul>
                   <div className="portel-btnbx">
                     <div className="line-border NewLineBoader">
