@@ -468,11 +468,7 @@ const Page = () => {
                     >
                       <button>Get Demo Access!</button>
                       {
-                        // <SoftwareEnquiry
-                        //   modalStatus={showModal}
-                        //   toggle={openModal}
-                        //   title="Please fill the form below and get access to the live demo of Job Board Software.See how it work yourself!"
-                        // />
+                        
                         <GetDemoEnquiry
                           modalStatus={demoAccessModal}
                           toggle={openDemoAccessModal}
@@ -664,9 +660,9 @@ const Page = () => {
       
 
             <div className="flex flex-col items-center pb-0">
-              <h1 className="w-full text-left text-4xl font-bold text-gray-800 mb-8">
+              <h2 className="w-full text-left text-4xl font-bold text-gray-800 mb-8">
                 Launch Faster. Hire Smarter. Grow Bigger.
-              </h1>
+              </h2>
 
               <div className="text-left">
                 <p className="text-lg text-gray-600 mb-4">
@@ -2578,7 +2574,7 @@ const Page = () => {
           <div className="container">
             <div className="comparison_heading_box">
               <h3 className="comparison_heading">
-                Logicspice Job Portal Script (LS Jobber) vs. Other Job Board
+                Logicspice Job Board Script (LS Jobber) vs. Other Job Portal
                 Solutions
               </h3>
             </div>
@@ -2600,7 +2596,7 @@ const Page = () => {
                             <p>{row.logicspice}</p>
                           </li>
                           <li className="card others-card">
-                            <h3>Other Job Board Solutions</h3>
+                            <h3>Other Job Portal Solutions</h3>
                             <p>{row.others}</p>
                           </li>
                         </ul>
@@ -2627,7 +2623,7 @@ const Page = () => {
                   </ul>
                   {/* Others Column */}
                   <ul className="column-list others-list header-list">
-                    <li>Other Job Board Solutions</li>
+                    <li>Other Job Portal Solutions</li>
                     {tableData.map((row, index) => (
                       <li key={index}>{row.others}</li>
                     ))}
@@ -3978,10 +3974,7 @@ const Page = () => {
                 <div className="ecommerce--review">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                      I have purchased this script and has constructed my own
-                      job-site. This was an easy task because of
-                      logicspice&apos;s free installation and support. Keep up
-                      the good work. I will be back for more in the future.
+                    Launching my job portal with Logicspice’s script was one of the best decisions I’ve made. The customization options are impressive, and the admin panel is super intuitive. It saved me a lot of time and development cost. I appreciate the quick assistance provided during setup.
                     </div>
                     <div className="who_ratset">
                       <span
@@ -3994,13 +3987,14 @@ const Page = () => {
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
-                      John, USA
+                   {/* Mark Reynolds,  United Kingdom */}
+                   <span id="client-name">Mark Reynolds,  United Kingdom </span>{" "}
                       <span>
                         <Image
                           unoptimized={true}
                           width={100}
                           height={100}
-                          src="/img/job-portal/usa_flag_img.png"
+                          src="/img/job-portal/uk_flag_img.png"
                           alt="mobile app development in USA"
                           style={{ width: "20px", marginLeft: "3px;" }}
                         />
@@ -4009,9 +4003,7 @@ const Page = () => {
                   </div>
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext" id="fiveer-clone">
-                      This is the best job portal script. Thanks for your great
-                      efforts and support while installing the script. Your
-                      prompt service regarding a few minor issues was superb
+                     As someone new to web development, I was nervous about setting up a job site. But Logicspice made it surprisingly easy. Their script is beginner-friendly, and the customer support team really knows their stuff. They answered my questions fast and got me through the technical setup without stress.
                     </div>
 
                     <div className="who_ratset">
@@ -4025,46 +4017,43 @@ const Page = () => {
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
                       </span>
-                      <span id="client-name">D. Smith, Germany in USA</span>{" "}
-                      <span>
-                        <Image
-                          unoptimized={true}
-                          width={100}
-                          height={100}
-                          src="/img/job-portal/german.png"
-                          alt="mobile app development in USA"
-                          style={{ width: "20px", marginLeft: "3px;" }}
-                        />
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="customers_review_sec_row">
-                    <div className="customer_review_stext" id="fiveer-clone">
-                      Recently I bought this script from logicspice and it
-                      worked really nice, it helped my business to gain more
-                      efficiency. I recommend for all whom looking for a job
-                      board script, it&apos;s really nice.
-                    </div>
-
-                    <div className="who_ratset">
-                      <span
-                        className="star_review_main"
-                        style={{ paddingRight: "10px", color: "gold;" }}
-                      >
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                      </span>
-                      <span id="client-name">mike wilshon, AUS</span>{" "}
+                      <span id="client-name">Dan Huge,  Australia</span>{" "}
                       <span>
                         <Image
                           unoptimized={true}
                           width={100}
                           height={100}
                           src="/img/job-portal/australia_flag_img.png"
+                          alt="mobile app development in USA"
+                          style={{ width: "20px", marginLeft: "3px;" }}
+                        />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="customers_review_sec_row">
+                    <div className="customer_review_stext" id="fiveer-clone">
+                     I’ve tried other scripts before, but Logicspice really stands out. The platform is stable, easy to manage, and packed with the right features for employers and job seekers. Their documentation was clear, and the support team resolved my queries quickly. 
+                    </div>
+
+                    <div className="who_ratset">
+                      <span
+                        className="star_review_main"
+                        style={{ paddingRight: "10px", color: "gold;" }}
+                      >
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span id="client-name">Tomas Herrera, United States</span>{" "}
+                      <span>
+                        <Image
+                          unoptimized={true}
+                          width={100}
+                          height={100}
+                          src="/img/job-portal/usa_flag_img.png"
                           alt="mobile app development in USA"
                           style={{ width: "20px", marginLeft: "3px;" }}
                         />
@@ -4574,7 +4563,7 @@ const Page = () => {
                         <p>
                           Yes, to show locations on your site, you’ll need a
                           Google Map API key. To generate one, follow the steps
-                          provided in the official
+                          provided in the official {""}
                           <a
                             href="https://developers.google.com/maps/documentation/javascript/get-api-key"
                             target="_blank"
@@ -4884,21 +4873,33 @@ const Page = () => {
               <p className="text-sm font-semibold text-gray-500 uppercase mb-2">
                 {/* Get Started */}
               </p>
-              <h1 className="text-3xl font-extrabold text-gray-900 mb-4">
-                Ready to Launch Your Own{" "}
-                <span className="text-[#451095]">Job Board?</span>
-              </h1>
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+                {/* Ready to Launch Your Own{" "}
+                <span className="text-[#451095]">Job Board?</span> */}
+                Make Finding Talent Simple and Fast
+              </h2>
               <p className="text-md text-gray-800 mb-6 max-w-3xl mx-auto">
-                LS Jobber makes it easy to build and manage a job portal that
+                {/* LS Jobber makes it easy to build and manage a job portal that
                 delivers results. Whether you&apos;re creating a niche hiring
                 site or a global job marketplace, our white label job board
-                software gives you everything you need to grow and succeed.
+                software gives you everything you need to grow and succeed. */}
+                Ready to make hiring easier and faster? LS Jobber lets you create your job portal quickly—no tech skills required.
+
               </p>
+               <p className="text-md text-gray-800 mb-6 max-w-3xl mx-auto">
+                Try our free demo now and see how simple it is to post jobs, manage candidates, and grow your hiring process.
+               </p>
+                 <p className="text-md text-gray-800 mb-6 max-w-3xl mx-auto">
+               If you have any questions, just reach out—we’re here to help!
+
+               </p>
+              
               <button
                 className="bg-[#451095] hover:bg-[#6c10f7] text-white font-semibold py-2 px-6 rounded-full"
                 onClick={toggleModal}
               >
-                Launch Your Job Board Now
+                {/* Launch Your Job Board Now */}
+                Get started today 
               </button>
             </div>
           </div>
