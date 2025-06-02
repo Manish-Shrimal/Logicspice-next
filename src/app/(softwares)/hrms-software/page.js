@@ -1,8 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -10,22 +10,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState, useRef } from "react";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 
 const GetDemoEnquiry = dynamic(
-  () => import("@/app/Components/GetDemoEnquiry"),
+  () => import("../../Components/GetDemoEnquiry"),
   { ssr: false }
 );
 const SoftwareEnquiry = dynamic(
-  () => import("@/app/Components/SoftwareEnquiry"),
+  () => import("../../Components/SoftwareEnquiry"),
   { ssr: false }
 );
 
@@ -151,8 +151,6 @@ const Page = () => {
     setBuyerTab(false);
     setAdminTab(true);
   };
-
- 
 
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
@@ -520,32 +518,34 @@ const Page = () => {
       >
         <div className="container">
           <div className="row">
-            {/* <div className="col-md-6 job-video">
+            <div className="col-md-6 job-video">
               <div ref={iframeRef}>
-              {inView && (
-                <iframe
-                  id="ytplayer"
-                  width="100%"
-                  height="312"
-                  src="https://www.youtube-nocookie.com/embed/jZUjtbUTuHQ?enablejsapi=1&mute=1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                {inView && (
+                  <iframe
+                    id="ytplayer"
+                    width="100%"
+                    height="220"
+                    src="https://www.youtube-nocookie.com/embed/F-vdU2cbEsQ?enablejsapi=1&mute=1"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 )}
               </div>
-            </div> */}
-            <div className="col-md-12">
+            </div>
+            <div className="col-md-6">
               <div className="service-market-ttd-new JobBoardServiceMarketFeatures">
                 <ul>
                   <li>Payroll Management</li>
-                  <li>Employee Database Management</li>
-                  <li>Attendance and Leave Tracking</li>
                   <li>Performance Evaluation</li>
                   <li>Customizable Reports</li>
                   <li>User-Friendly Interface</li>
                   <li>Scalable and Customizable</li>
                   <li>Recruitment and Onboarding</li>
+                  <li>Attendance and Leave Tracking</li>
+                  <li>Employee Database Management</li>
+
+
                   {/* <li>Theme Color Management</li>
                   <li>One time License Fee</li>
                   <li>Email Notification</li>
@@ -1828,7 +1828,7 @@ const Page = () => {
           </div>
         </div>
       </section> */}
-       <section className="SubscriptionModel" id="subscriptionmodel">
+      <section className="SubscriptionModel" id="subscriptionmodel">
         <div className="container">
           <div className="job_or_title">
             <h2 className="taxt_tt_job">Subscription Model</h2>
@@ -1866,7 +1866,7 @@ const Page = () => {
                   Unlimited Appointment Booking: Book as many appointments as you need without any limitations.
                   </span>
                 </li> */}
-                 <li>
+                <li>
                   <span>
                     Enhanced Communication: Avail yourself of 5 domain-based
                     email accounts to enhance your professional communication.

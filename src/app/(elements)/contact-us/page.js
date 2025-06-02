@@ -1,18 +1,18 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Navbar from "@/app/Components/Navbar";
-import Footer from "@/app/Components/Footer";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 import "../../../../public/css/font-awesome.css";
 import "/public/css/font-awesome.css";
 import "/public/css/font-awesome.min.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import DraftsOutlinedIcon from "@mui/icons-material/DraftsOutlined";
 import Image from "next/image";
 import "../elements.css";
-import "@/app/globals.css";
+import "../../globals.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import Swal from "sweetalert2";
 
 const Page = () => {
@@ -166,8 +166,8 @@ const Page = () => {
           recaptcha_token: "",
         });
 
-        if (recaptchaNewsletterRef.current) {
-          recaptchaNewsletterRef.current.reset();
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
         }
       } else if (response.data.status === 500) {
         // console.log("yaha aaya")
@@ -829,13 +829,23 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-sm-4">
-                <div className="logic-fd">
+                <div className="logic-fd ">
                   {/* <i className="fa fa-skype" aria-hidden="true"></i> */}
-                  <i className="fa fa-skype"></i>
+                  {/* <i className="fa fa-team"></i> */}
+                  <div className="flex justify-center items-center">
+                  <Image 
+                    width={80}
+                    height={50}
+                    src="/img/teams-icon.png"
+                    alt="Contact - Logicspice"
+                    unoptimized={true}
+                  />
+                  </div>
+                  
                   <span>
                     Don&apos;t Have Much Time?
                     <br />
-                    Connect to us on Skype: logicspice
+                    Connect to us on MS Teams: logicspice
                   </span>
                 </div>
               </div>

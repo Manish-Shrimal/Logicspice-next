@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../BaseAPI/BaseAPI";
 import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -448,15 +448,15 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                       </div>
                     </div>
                     <div className="logicspice-contact-bx">
-                      <label>OUR SKYPE ID</label>
+                      <label>OUR MS TEAMS ID</label>
                       <div className="logicspice-mail">
                         <a href="skype:logicspice?call">
                           <Image
-                            width={100}
-                            height={100}
-                            src="/img/contactus/logic-skyap.png"
-                            alt=""
-                          />{" "}
+                            width={80}
+                            height={80}
+                            src="/img/Microsoft-teams.png"
+                            alt="Microsoft Teams - Logicspice"
+                          />{" "}{" "}
                           logicspice
                         </a>
                       </div>
