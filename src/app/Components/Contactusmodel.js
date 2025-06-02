@@ -456,7 +456,8 @@ const Contactusmodel = ({ modalStatus, toggle }) => {
                             height={80}
                             src="/img/Microsoft-teams.png"
                             alt="Microsoft Teams - Logicspice"
-                          />{" "}{" "}
+                            className="mr-1"
+                          />
                           logicspice
                         </a>
                       </div>

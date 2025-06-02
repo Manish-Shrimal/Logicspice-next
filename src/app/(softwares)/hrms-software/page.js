@@ -524,7 +524,7 @@ const Page = () => {
                   <iframe
                     id="ytplayer"
                     width="100%"
-                    height="220"
+                    height="314"
                     src="https://www.youtube-nocookie.com/embed/F-vdU2cbEsQ?enablejsapi=1&mute=1"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
