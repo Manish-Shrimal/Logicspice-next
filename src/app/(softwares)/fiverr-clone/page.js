@@ -2,15 +2,17 @@
 // import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@/app/(softwares)/softwares.css";
+// import "@/app/(softwares)/softwares.css";
+import "../../(softwares)/softwares.css";
+
 // import Footer from "@/app/Components/Footer";
 // import Navbar from "@/app/Components/Navbar";
 import React, { useEffect, useRef, useState } from "react";
 import { lazy, Suspense } from "react";
 import "../../resposive.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import { Modal, ModalBody } from "react-bootstrap";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -33,20 +35,20 @@ import "slick-carousel/slick/slick-theme.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import dynamic from "next/dynamic";
 
-const GetDemoEnquiry = lazy(() => import("@/app/Components/GetDemoEnquiry"), {
+const GetDemoEnquiry = lazy(() => import("../../Components/GetDemoEnquiry"), {
   ssr: false,
 });
-const SoftwareEnquiry = lazy(() => import("@/app/Components/SoftwareEnquiry"), {
+const SoftwareEnquiry = lazy(() => import("../../Components/SoftwareEnquiry"), {
   ssr: false,
 });
 // import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-const Footer = lazy(() => import("@/app/Components/Footer"), { ssr: false });
+import Navbar from "../../Components/Navbar";
+const Footer = lazy(() => import("../../Components/Footer"), { ssr: false });
 const TabSection = lazy(
-  () => import("@/app/(softwares)/fiverr-clone/TabSection"),
+  () => import("../../(softwares)/fiverr-clone/TabSection"),
   { ssr: false }
 );
 

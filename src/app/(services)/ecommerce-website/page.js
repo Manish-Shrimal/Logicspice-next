@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
-import "@/app/(services)/services.css";
+import "../../(services)/services.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -12,9 +12,9 @@ import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
+import Reviewmodals from "../../Components/Reviewmodals";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";

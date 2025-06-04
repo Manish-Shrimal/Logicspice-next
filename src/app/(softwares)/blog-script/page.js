@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";

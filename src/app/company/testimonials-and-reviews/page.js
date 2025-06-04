@@ -1,15 +1,15 @@
 "use client";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/company/company.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../../company/company.css";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import parse from "html-react-parser";
 import Link from "next/link";
 import "../../../../public/css/font-awesome.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 
 const Page = () => {
   const [pageData, setPageData] = useState([]);

@@ -74,40 +74,84 @@
 
 
 
+// old
 
+// "use client";
+// import { useEffect, useState } from "react";
+
+// export default function Chatbot() {
+//   const [isLoaded, setIsLoaded] = useState(false);
+
+//   useEffect(() => {
+//     const loadTawk = () => {
+//       if (isLoaded) return; // Prevent multiple executions
+//       setIsLoaded(true);
+
+//       const script = document.createElement("script");
+//       script.async = true;
+//       script.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
+//       script.charset = "UTF-8";
+//       script.setAttribute("crossorigin", "*");
+//       document.body.appendChild(script);
+
+//       window.removeEventListener("scroll", loadTawk);
+//       window.removeEventListener("click", loadTawk);
+//     };
+
+//     // Load Tawk.to only when user scrolls or clicks
+//     window.addEventListener("scroll", loadTawk);
+//     window.addEventListener("click", loadTawk);
+
+//     return () => {
+//       window.removeEventListener("scroll", loadTawk);
+//       window.removeEventListener("click", loadTawk);
+//     };
+//   }, [isLoaded]);
+
+//   return null;
+// }
 
 "use client";
-import { useEffect, useState } from "react";
 
-export default function Chatbot() {
-  const [isLoaded, setIsLoaded] = useState(false);
+import { useEffect } from "react";
 
+const ChatIframe = () => {
   useEffect(() => {
-    const loadTawk = () => {
-      if (isLoaded) return; // Prevent multiple executions
-      setIsLoaded(true);
-
-      const script = document.createElement("script");
-      script.async = true;
-      script.src = "https://embed.tawk.to/66ed1e29e5982d6c7bb15ccc/1i873rkmf";
-      script.charset = "UTF-8";
-      script.setAttribute("crossorigin", "*");
-      document.body.appendChild(script);
-
-      window.removeEventListener("scroll", loadTawk);
-      window.removeEventListener("click", loadTawk);
+    const handleMessage = (event) => {
+      if (event.data?.type === "chatsize") {
+        const iframe = document.getElementById("myIframe");
+        if (iframe) {
+          iframe.style.height = event.data.iframeHeight + 10 + "px";
+          iframe.style.width = event.data.iframeWidth + 10 + "px";
+        }
+      }
     };
 
-    // Load Tawk.to only when user scrolls or clicks
-    window.addEventListener("scroll", loadTawk);
-    window.addEventListener("click", loadTawk);
+    window.addEventListener("message", handleMessage);
+
+    const chatIframe = document.createElement("iframe");
+    chatIframe.id = "myIframe";
+    chatIframe.style.position = "fixed";
+    chatIframe.style.width = "550px";
+    chatIframe.style.height = "550px";
+    chatIframe.style.zIndex = "1000";
+    chatIframe.style.border = "none";
+    chatIframe.style.bottom = "0";
+    chatIframe.style.right = "0";
+    chatIframe.src =
+      "https://approchat.com/chat/d144c4e4-c1f4-4465-84af-510a062320a9/?referrer_url=" +
+      encodeURIComponent(window.location.href);
+
+    document.body.appendChild(chatIframe);
 
     return () => {
-      window.removeEventListener("scroll", loadTawk);
-      window.removeEventListener("click", loadTawk);
+      window.removeEventListener("message", handleMessage);
+      const iframe = document.getElementById("myIframe");
+      if (iframe) document.body.removeChild(iframe);
     };
-  }, [isLoaded]);
+  }, []);
 
-  return null;
-}
+  return null; // No visible component, just the iframe injection
+};
 
+export default ChatIframe;

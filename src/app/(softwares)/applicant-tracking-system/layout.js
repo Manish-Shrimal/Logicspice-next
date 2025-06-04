@@ -262,7 +262,7 @@ export default async function RootLayout({ children, params }) {
 
       <body className={inter.className}>
         {/* ✅ Chatbot, AOS (Animations), and GTM */}
-        {/* <Chatbot /> */}
+        <Chatbot />
         <AOSInitializer>{children}</AOSInitializer>
         <GTMComponent />
         {/* test */}

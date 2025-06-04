@@ -1,27 +1,27 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import Contactusmodel from "../../Components/Contactusmodel";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
@@ -29,7 +29,6 @@ const Page = () => {
 
   const [demoAccessModal, setDemoAccessModal] = useState(false);
   const openDemoAccessModal = () => {
-    // console.log(showModal);
 
     setDemoAccessModal(!demoAccessModal);
   };

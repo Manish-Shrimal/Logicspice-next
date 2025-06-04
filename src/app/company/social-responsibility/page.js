@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/company/company.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../company/company.css";
 import Image from "next/image";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import "../../../../public/css/font-awesome.css";
 import Link from "next/link";
 

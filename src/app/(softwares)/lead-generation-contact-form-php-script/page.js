@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -15,7 +15,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
 import {
   MDBAccordion,
   MDBAccordionItem,
@@ -26,10 +26,10 @@ import {
   MDBModalFooter,
 } from "mdb-react-ui-kit";
 
-import Reviewmodals from "@/app/Components/Reviewmodals";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import DownloadForm from "@/app/Components/DownloadForm";
-import EnquiryModal from "@/app/Components/Enquirymodal";
+import Reviewmodals from "../../Components/Reviewmodals";
+import Contactusmodel from "../../Components/Contactusmodel";
+import DownloadForm from "../../Components/DownloadForm";
+import EnquiryModal from "../../Components/Enquirymodal";
 import "../../../../public/css/font-awesome.css";
 
 

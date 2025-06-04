@@ -1,20 +1,42 @@
+// import React from 'react'
+
+// const layout = () => {
+//   return (
+//     <>
+      
+//     </>
+//   )
+// }
+
+// export default layout
+
+
+
+
+
+
+
+
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
-import MetadataApi from "@/app/BaseAPI/MetadataApi";
-import Domain from "@/app/BaseAPI/Domain";
-import CookiesConsent from "@/app/Components/CookiesConsent";
+import MetadataApi from "../../BaseAPI/MetadataApi";
+import Domain from "../../BaseAPI/Domain";
+import CookiesConsent from "../../Components/CookiesConsent";
+import Chatbot from "../../Components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`${MetadataApi}/codeigniter-developers`, {
+  const product = await fetch(`${MetadataApi}/hire-ai-developers`,{
     cache: "no-store",
-  }).then((res) => res.json());
+  }).then((res) =>
+    res.json()
+  );
   // console.log(product)
 
-  // let text = product.data.schema;
+  let text = product.data.schema;
 
   // let schemaOrg = null;
   // if(text){
@@ -24,6 +46,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   //     .replace(/\\r/g, '')      // Remove \r (carriage return)
   //     .replace(/\\+/g, '')      // Remove unnecessary backslashes
   //     .replace(/[\u0000-\u001F\u007F]/g, '');  // Remove control characters
+
 
   //     schemaOrg = cleanedText && JSON.parse(cleanedText);
 
@@ -36,7 +59,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: product.data.meta_keyword,
     // Add other meta tags as needed
     alternates: {
-      canonical: `${Domain}/hire-codeignitor-developers`,
+      canonical: `${Domain}/hire-ai-developers`,
     },
     robots: {
       index: true,
@@ -56,6 +79,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function RootLayout({ children, params, searchParams }) {
   // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
+ 
 
   return (
     <html lang="en">
@@ -65,15 +89,16 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
       </Head>
       <CookiesConsent />
+      <Chatbot />
       <body className={inter.className}>{children}</body>
       {metadata.schemaOrg && (
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schemaOrg),
-          }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schemaOrg) }}
+      />
       )}
+      
     </html>
   );
 }
+

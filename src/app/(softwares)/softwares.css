@@ -2139,6 +2139,7 @@ section {
 .who_ratset span {
   display: inline-block;
   vertical-align: middle;
+  /* margin-left: 5px; */
 }
 
 .enq-section {

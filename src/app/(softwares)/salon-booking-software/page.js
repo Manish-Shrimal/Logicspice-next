@@ -1,7 +1,7 @@
 "use client";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -9,8 +9,8 @@ import Link from "next/link";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import React, { lazy, Suspense, useEffect, useState } from "react";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
@@ -22,17 +22,17 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "../../resposive.css";
-// import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+// import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import BaseAPI from "../../BaseAPI/BaseAPI";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 
 import dynamic from 'next/dynamic';
 const FAQSection = dynamic(() => import('./FAQSection'), { ssr: false });
-const Whylogicspice = dynamic(() => import("@/app/Components/Whylogicspice"), {
+const Whylogicspice = dynamic(() => import("../../Components/Whylogicspice"), {
   ssr: false, // Disable server-side rendering if needed
 });
 const CustomerReviews = dynamic(() => import("./CustomerReviews"), {

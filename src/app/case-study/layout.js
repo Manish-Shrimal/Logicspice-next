@@ -1,10 +1,10 @@
 import { Inter } from "next/font/google";
 import "../globals.css";
 import Head from "next/head";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import MetadataApi from "@/app/BaseAPI/MetadataApi";
-import Domain from "@/app/BaseAPI/Domain";
+import MetadataApi from "../BaseAPI/MetadataApi";
+import Domain from "../BaseAPI/Domain";
 import CookiesConsent from "../Components/CookiesConsent";
+import Chatbot from "../Components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,6 +70,7 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
       </Head>
       <CookiesConsent />
+      <Chatbot />
       <body className={inter.className}>{children}</body>
       {/* <script
         type="application/ld+json"

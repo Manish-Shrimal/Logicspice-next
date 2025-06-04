@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/company/company.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../company/company.css";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import React, { useEffect, useState } from "react";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import Enquirymodal from "../../Components/Enquirymodal";
 import "../../../../public/css/font-awesome.css";
 
 const Page = () => {

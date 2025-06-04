@@ -1,29 +1,29 @@
 "use client";
 import dynamic from "next/dynamic";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState, useRef } from "react";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import "../../../../public/css/font-awesome.css";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 
 const GetDemoEnquiry = dynamic(
-  () => import("@/app/Components/GetDemoEnquiry"),
+  () => import("../../Components/GetDemoEnquiry"),
   { ssr: false }
 );
 const SoftwareEnquiry = dynamic(
-  () => import("@/app/Components/SoftwareEnquiry"),
+  () => import("../../Components/SoftwareEnquiry"),
   { ssr: false }
 );
 

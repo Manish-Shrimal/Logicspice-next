@@ -1,18 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(hire-developers)/hire-developer.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(hire-developers)/hire-developer.css";
 import Image from "next/image";
 import Link from "next/link";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
 import "../../resposive.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css"
-import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
-import Support from "@/app/Components/Support";
-import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";
+import Customsolutiontabs from "../../Components/Customsolutiontabs";
+import Support from "../../Components/Support";
+import WhyHireFromLogicspice from "../../Components/WhyHireFromLogicspice";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 
 const Page = () => {
@@ -21,53 +21,92 @@ const Page = () => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+  // const testimonialData = [
+  //   {
+  //     id: 1,
+  //     image:
+  //       "/img/pythondevelopment/alex-morgan.jpg",
+  //     heading: "",
+  //     text: "Our Python development needs were complex, but the developer we hired from Logicspice tackled them with ease. Their proficiency in Django was particularly impressive.",
+  //     name: "Michael T.,",
+  //     location: "Startup Founder",
+  //   },
+  //   {
+  //     id: 2,
+  //     image:
+  //       "/img/pythondevelopment/sophia-turner.jpg",
+  //     heading: "",
+  //     text: "We needed a Python expert for our machine learning project, and the professional from Logicspice exceeded all expectations.",
+  //     name: "Sophia R.,",
+  //     location: "Tech Department Manager",
+  //   },
+  //   {
+  //     id: 3,
+  //     image:
+  //       "/img/pythondevelopment/david-clark.jpg",
+  //     heading: "",
+  //     text: "Hiring a Python developer for our backend systems was a crucial step. The developer's skill in Flask and database management has greatly improved our application's performance.",
+  //     name: "David K.,",
+  //     location: "IT Project Coordinator",
+  //   },
+  //   {
+  //     id: 4,
+  //     image:
+  //       "/img/pythondevelopment/isabella-clark.jpg",
+  //     heading: "",
+  //     text: "The Python developer we hired was outstanding. They understood our vision and brought in their unique perspective, which added immense value to our web application.",
+  //     name: "Isabella G.,",
+  //     location: "Product Manager",
+  //   },
+  //   {
+  //     id: 5,
+  //     image:
+  //       "/img/pythondevelopment/emma-turner.jpg",
+  //     heading: "",
+  //     text: "The Python developer we brought on board from Logicspice was a game-changer for our project. Their expertise in data analysis and web development helped us achieve milestones ahead of schedule.",
+  //     name: "Emma L.,",
+  //     location: "Project Lead",
+  //   },
+  // ];
+
   const testimonialData = [
     {
       id: 1,
-      image:
-        "/img/pythondevelopment/alex-morgan.jpg",
-      heading: "",
-      text: "Our Python development needs were complex, but the developer we hired from Logicspice tackled them with ease. Their proficiency in Django was particularly impressive.",
-      name: "Michael T.,",
-      location: "Startup Founder",
+      image: "/img/pythondevelopment/alex-morgan.jpg",
+      text: "Logicspice's React Native team brilliantly transformed my app idea for iOS and Android. Highly recommended!",
+      name: "Amanda J.",
+  
     },
     {
       id: 2,
-      image:
-        "/img/pythondevelopment/sophia-turner.jpg",
-      heading: "",
-      text: "We needed a Python expert for our machine learning project, and the professional from Logicspice exceeded all expectations.",
-      name: "Sophia R.,",
-      location: "Tech Department Manager",
+      image: "/img/pythondevelopment/sophia-turner.jpg",
+      text: "Exceptional service from Logicspice. Their React Native developers delivered beyond expectations with clear communication.",
+      name: "Darren L.",
+     
     },
     {
       id: 3,
-      image:
-        "/img/pythondevelopment/david-clark.jpg",
-      heading: "",
-      text: "Hiring a Python developer for our backend systems was a crucial step. The developer's skill in Flask and database management has greatly improved our application's performance.",
-      name: "David K.,",
-      location: "IT Project Coordinator",
+      image: "/img/pythondevelopment/sonia-clark.jpg",
+      text: "Logicspice's React Native team stands out. My app is fast, sleek, and bug-free, thanks to their expertise.",
+      name: "Sonia R.",
+      
     },
     {
       id: 4,
-      image:
-        "/img/pythondevelopment/isabella-clark.jpg",
-      heading: "",
-      text: "The Python developer we hired was outstanding. They understood our vision and brought in their unique perspective, which added immense value to our web application.",
-      name: "Isabella G.,",
-      location: "Product Manager",
+      image: "/img/pythondevelopment/david-clark.jpg",
+      text: "Our startup's app, developed by Logicspice's React Native pros, is user-friendly and efficient. Big thumbs up!",
+      name: "Vincent H.",
+     
     },
     {
       id: 5,
-      image:
-        "/img/pythondevelopment/emma-turner.jpg",
-      heading: "",
-      text: "The Python developer we brought on board from Logicspice was a game-changer for our project. Their expertise in data analysis and web development helped us achieve milestones ahead of schedule.",
-      name: "Emma L.,",
-      location: "Project Lead",
-    },
+      image: "/img/pythondevelopment/rebecca-clark.jpg",
+      text: "Professional and innovative, Logicspice's React Native developers were a joy to work with on my project.",
+      name: "Rebecca K.",
+     
+    }
   ];
+  
   return (
     <>
       {" "}
@@ -113,12 +152,19 @@ const Page = () => {
                     Hire Now!
                   </a>
 
-                  <a
+                  {/* <a
                     href="javascript:$zopim.livechat.window.show();"
                     class="btn btn-primary"
                   >
                     Chat with a Developer
-                  </a>
+                  </a> */}
+                   <a
+            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
+            target="_blank"
+            className="btn btn-primary"
+          >
+             Chat with a Developer
+          </a>
                 </div>
               </div>
               <div class="col-md-5">

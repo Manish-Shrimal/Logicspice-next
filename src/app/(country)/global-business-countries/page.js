@@ -1,12 +1,12 @@
 "use client";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import "@/app/industries/industry.css";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import "../../industries/industry.css";
+import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

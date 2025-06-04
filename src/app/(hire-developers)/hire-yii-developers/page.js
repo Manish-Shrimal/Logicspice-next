@@ -1,24 +1,24 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(hire-developers)/hire-developer.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(hire-developers)/hire-developer.css";
 import Image from "next/image";
 import Link from "next/link";
-import "@/app/(softwares)/softwares.css";
+import "../../(softwares)/softwares.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Workingwith from "@/app/Components/Workingwith";
-import Certificationtabs from "@/app/Components/Certificationtabs";
+import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
+import Workingwith from "../../Components/Workingwith";
+import Certificationtabs from "../../Components/Certificationtabs";
 import "../../resposive.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css"
-import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
-import Support from "@/app/Components/Support";
-import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";
+import Customsolutiontabs from "../../Components/Customsolutiontabs";
+import Support from "../../Components/Support";
+import WhyHireFromLogicspice from "../../Components/WhyHireFromLogicspice";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);

@@ -1,16 +1,16 @@
 "use client";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/company/company.css";
+import Footer from "../Components/Footer";
+import NavBar from "../Components/Navbar";
+import "../company/company.css";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 // import Blogslider from "../../Components/Blogslider";
 import Ourclient from "../Components/Ourclient";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import BlogSlider from "@/app/Components/BlogSliderDynamic";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import BaseAPI from "../BaseAPI/BaseAPI";
+import BlogSlider from "../Components/BlogSliderDynamic";
+import Contactusmodel from "../Components/Contactusmodel";
 import "../../../public/css/font-awesome.css";
 
 const Page = () => {

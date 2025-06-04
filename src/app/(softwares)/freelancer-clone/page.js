@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -10,20 +10,20 @@ import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import Reviewmodals from "@/app/Components/Reviewmodals";
-import Whylogicspice from "@/app/Components/Whylogicspice";
+import Contactusmodel from "../../Components/Contactusmodel";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
+import Reviewmodals from "../../Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
@@ -108,8 +108,6 @@ const Page = () => {
     setAdminTab(true);
   };
 
- 
-
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -163,8 +161,6 @@ const Page = () => {
 
     setDemoAccessModal(!demoAccessModal);
   };
-
- 
 
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
@@ -275,14 +271,14 @@ const Page = () => {
                   >
                     <button>Get Demo Access!</button>
                     {
-//                       <SoftwareEnquiry
-//                         modalStatus={showModal}
-//                         toggle={openModal}
-//                         title="Please fill the form below and get access to the live demo of Freelancer Clone.
-// See how it work yourself!"
-//                       />
+                      //                       <SoftwareEnquiry
+                      //                         modalStatus={showModal}
+                      //                         toggle={openModal}
+                      //                         title="Please fill the form below and get access to the live demo of Freelancer Clone.
+                      // See how it work yourself!"
+                      //                       />
 
-<GetDemoEnquiry
+                      <GetDemoEnquiry
                         modalStatus={demoAccessModal}
                         toggle={openDemoAccessModal}
                         title="Please fill the form below and get access to the live demo of Freelancer Clone. See how it works yourself!"
@@ -313,7 +309,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon jobwidthauto">
                   <li>
-                  <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
                     <i className="fa fa-android"></i>
@@ -354,7 +350,7 @@ const Page = () => {
                   alt="Freelancer_clone"
                 /> */}
 
-{/* <Image
+                {/* <Image
           src="/img/freelancerclone/lsfreelancer-banner-img.png" // Use WebP format
           alt="Freelancer Clone"
           width={330}
@@ -365,7 +361,7 @@ const Page = () => {
           blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.webp" // Smaller preview image
         /> */}
 
-{/* <Image
+                {/* <Image
   src="/img/freelancerclone/lsfreelancer-banner-img.png" // ✅ Use WebP for better compression
   alt="Freelancer Clone"
   width={330}
@@ -385,27 +381,23 @@ const Page = () => {
 
 /> */}
 
-
-
-<Image
-  src="/img/freelancerclone/lsfreelancer-banner-img.png" // ✅ better compression
-  alt="Freelancer Clone"
-  width={330}
-  height={100}
-  sizes="(max-width: 768px) 100vw, 330px"
-  priority
-  fetchPriority="high"
-  quality={75} // lower it slightly if using webp/avif
-  decoding="async"
-  loading="eager"
-  placeholder="blur"
-  blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.png"
-  style={{
-    objectFit: "cover",
-  }}
-/>
-
-
+                <Image
+                  src="/img/freelancerclone/lsfreelancer-banner-img.png" // ✅ better compression
+                  alt="Freelancer Clone"
+                  width={330}
+                  height={100}
+                  sizes="(max-width: 768px) 100vw, 330px"
+                  priority
+                  fetchPriority="high"
+                  quality={75} // lower it slightly if using webp/avif
+                  decoding="async"
+                  loading="eager"
+                  placeholder="blur"
+                  blurDataURL="/img/freelancerclone/lsfreelancer-banner-img-small.png"
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -440,21 +432,23 @@ const Page = () => {
         </div>
       </section> */}
 
-<section className="job-section-top-new JobBoardSectionNew">
-  <div className="container">
-    <div style={{ minHeight: "120px" }}> {/* Adjust based on content */}
-      <p>
-        Take our Freelancer clone application on your smart mobile phones.
-        The mobile application will provide all the features of the website.
-        Nowadays the freelancing industry is growing rapidly. It&apos;s time
-        to take advantage of these changing trends, our freelancer
-        marketplace script helps you to launch your own freelancing bidding
-        website with all advance modules in less time. Get in touch with
-        Logicspice today to get a demo of your app.
-      </p>
-    </div>
-  </div>
-</section>
+      <section className="job-section-top-new JobBoardSectionNew">
+        <div className="container">
+          <div style={{ minHeight: "120px" }}>
+            {" "}
+            {/* Adjust based on content */}
+            <p>
+              Take our Freelancer clone application on your smart mobile phones.
+              The mobile application will provide all the features of the
+              website. Nowadays the freelancing industry is growing rapidly.
+              It&apos;s time to take advantage of these changing trends, our
+              freelancer marketplace script helps you to launch your own
+              freelancing bidding website with all advance modules in less time.
+              Get in touch with Logicspice today to get a demo of your app.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section
         className="client-say crowdfunding-say"
@@ -463,7 +457,6 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 job-video">
-       
               {/* <div ref={iframeRef}>
                 <iframe
                   id="ytplayer"
@@ -476,19 +469,18 @@ const Page = () => {
                 ></iframe>
               </div> */}
 
-<div ref={iframeRef}>
-  <iframe
-    id="ytplayer"
-    width="100%"
-    height="312"
-    src="https://www.youtube.com/embed/MaLzH8m_GqQ?enablejsapi=1&mute=1"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    loading="lazy"
-  ></iframe>
-</div>
-
+              <div ref={iframeRef}>
+                <iframe
+                  id="ytplayer"
+                  width="100%"
+                  height="312"
+                  src="https://www.youtube.com/embed/MaLzH8m_GqQ?enablejsapi=1&mute=1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
             <div className="col-md-6">
               <div className="service-market-ttd-new">
@@ -547,7 +539,7 @@ const Page = () => {
           <div className="tab_bbx_job">
             <div className="tab_bbx_top_job">
               <ul className="fiverrClone">
-                <li
+                {/* <li
                   id="tab1_li"
                   className={`jobseeker_app_job ddlj ${
                     employerTab ? "active" : ""
@@ -571,7 +563,32 @@ const Page = () => {
                   onClick={() => handleAdminTab()}
                 >
                   <a>Admin Panel</a>
-                </li>
+                </li> */}
+
+<li
+  id="tab1_li"
+  className={`jobseeker_app_job ddlj ${employerTab ? "active" : ""}`}
+  onClick={handleEmployerTab}
+>
+  <a href="#" onClick={(e) => e.preventDefault()}>Employer</a>
+</li>
+
+<li
+  id="tab2_li"
+  className={`emplyer_app_job ddlj ${freelancerTab ? "active" : ""}`}
+  onClick={handleFreelancerTab}
+>
+  <a href="#" onClick={(e) => e.preventDefault()}>Freelancer</a>
+</li>
+
+<li
+  id="tab3_li"
+  className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
+  onClick={handleAdminTab}
+>
+  <a href="#" onClick={(e) => e.preventDefault()}>Admin Panel</a>
+</li>
+
               </ul>
             </div>
             <div className="tab_contant">
@@ -1570,18 +1587,18 @@ const Page = () => {
                 <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
-//                     <SoftwareEnquiry
-//                       modalStatus={showModal}
-//                       toggle={openModal}
-//                       title="Please fill the form below and get access to the live demo of Groupon Clone Script.
-// See how it work yourself!"
-//                     />
+                    //                     <SoftwareEnquiry
+                    //                       modalStatus={showModal}
+                    //                       toggle={openModal}
+                    //                       title="Please fill the form below and get access to the live demo of Groupon Clone Script.
+                    // See how it work yourself!"
+                    //                     />
 
-<GetDemoEnquiry
-                        modalStatus={demoAccessModal}
-                        toggle={openDemoAccessModal}
-                        title="Please fill the form below and get access to the live demo of Freelancer Clone. See how it works yourself!"
-                      />
+                    <GetDemoEnquiry
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Freelancer Clone. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link
@@ -1596,7 +1613,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                  <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
                     <i className="fa fa-android"></i>
@@ -1667,7 +1684,18 @@ const Page = () => {
             </ul>
             <p>
               For details on an Enterprise license, please{" "}
-              <a onClick={toggleModal}>contact us</a>.
+              {/* <a onClick={toggleModal}>contact us</a>. */}
+
+              <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    toggleModal();
+  }}
+>
+  Contact Us
+</a>
+
             </p>
           </div>
         </div>
@@ -1681,7 +1709,7 @@ const Page = () => {
             </h2>
             <br />
             <div className="logic-parter">
-              <a
+              {/* <a
                 className=""
                 aria-controls="jobportal"
                 onClick={toggleJobPortalModal}
@@ -1709,7 +1737,55 @@ const Page = () => {
                   />
                 </i>
                 <span>Why Logicspice</span>
-              </a>
+              </a> */}
+
+<a
+  href="#"
+  className=""
+  aria-controls="jobportal"
+  onClick={(e) => {
+    e.preventDefault();
+    toggleJobPortalModal();
+  }}
+>
+  <i className="fa fa-cogs" aria-hidden="true"></i>
+  <span>How It Works</span>
+</a>
+
+<a
+  href="#"
+  className=""
+  aria-controls="buyjobportal"
+  onClick={(e) => {
+    e.preventDefault();
+    toggleBuyJobPortalModal();
+  }}
+>
+  <i className="fa fa-building" aria-hidden="true"></i>
+  <span>Companies Using It</span>
+</a>
+
+<a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    toggleInfo();
+  }}
+  className="ylogicspice"
+>
+  <i>
+    <Image
+      unoptimized={true}
+      width={20}
+      height={100}
+      src="/img/images/why-logic-icon.png"
+      alt="Why Logicspice icon"
+      className=""
+    />
+  </i>
+  <span>Why Logicspice</span>
+</a>
+
             </div>
           </div>
 
@@ -2050,7 +2126,6 @@ const Page = () => {
               className="img-fluid"
             />
           </Modal.Body>
-         
         </Modal>
 
         <Modal
@@ -2059,7 +2134,7 @@ const Page = () => {
           id="buyjobportal"
           className="modal-service"
         >
-         <Modal.Header className="modal-dialog-service">
+          <Modal.Header className="modal-dialog-service">
             <button
               type="button"
               className="custom-close-button"
@@ -2231,7 +2306,6 @@ const Page = () => {
               </Slider>
             </div>
           </Modal.Body>
-          
         </Modal>
       </div>
       <section className="used_technology_section" id="technologies">
@@ -2516,108 +2590,118 @@ const Page = () => {
                       <div className="people_star_num">0</div>
                     </div> */}
 
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        5 <i className="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-label="5 star rating progress"
+                          aria-valuenow="100"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style={{ width: "100%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">115</div>
+                    </div>
 
-<div className="review_rating_fjs">
-  <div className="star_num">
-    5 <i className="fa fa-star" aria-hidden="true"></i>
-  </div>
-  <div className="progress">
-    <div
-      className="progress-bar progress-bar-danger progress-bar-striped"
-      role="progressbar"
-      aria-label="5 star rating progress"
-      aria-valuenow="100"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style={{ width: "100%" }}
-    ></div>
-  </div>
-  <div className="people_star_num">115</div>
-</div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        4 <i className="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-label="4 star rating progress"
+                          aria-valuenow="60"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style={{ width: "60%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">13</div>
+                    </div>
 
-<div className="review_rating_fjs">
-  <div className="star_num">
-    4 <i className="fa fa-star" aria-hidden="true"></i>
-  </div>
-  <div className="progress">
-    <div
-      className="progress-bar progress-bar-danger progress-bar-striped"
-      role="progressbar"
-      aria-label="4 star rating progress"
-      aria-valuenow="60"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style={{ width: "60%" }}
-    ></div>
-  </div>
-  <div className="people_star_num">13</div>
-</div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        3 <i className="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-label="3 star rating progress"
+                          aria-valuenow="20"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style={{ width: "20%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">0</div>
+                    </div>
 
-<div className="review_rating_fjs">
-  <div className="star_num">
-    3 <i className="fa fa-star" aria-hidden="true"></i>
-  </div>
-  <div className="progress">
-    <div
-      className="progress-bar progress-bar-danger progress-bar-striped"
-      role="progressbar"
-      aria-label="3 star rating progress"
-      aria-valuenow="20"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style={{ width: "20%" }}
-    ></div>
-  </div>
-  <div className="people_star_num">0</div>
-</div>
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        2 <i className="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-label="2 star rating progress"
+                          aria-valuenow="0"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style={{ width: "0%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">0</div>
+                    </div>
 
-<div className="review_rating_fjs">
-  <div className="star_num">
-    2 <i className="fa fa-star" aria-hidden="true"></i>
-  </div>
-  <div className="progress">
-    <div
-      className="progress-bar progress-bar-danger progress-bar-striped"
-      role="progressbar"
-      aria-label="2 star rating progress"
-      aria-valuenow="0"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style={{ width: "0%" }}
-    ></div>
-  </div>
-  <div className="people_star_num">0</div>
-</div>
-
-<div className="review_rating_fjs">
-  <div className="star_num">
-    1 <i className="fa fa-star" aria-hidden="true"></i>
-  </div>
-  <div className="progress">
-    <div
-      className="progress-bar progress-bar-danger progress-bar-striped"
-      role="progressbar"
-      aria-label="1 star rating progress"
-      aria-valuenow="0"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style={{ width: "0%" }}
-    ></div>
-  </div>
-  <div className="people_star_num">0</div>
-</div>
-
+                    <div className="review_rating_fjs">
+                      <div className="star_num">
+                        1 <i className="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div className="progress">
+                        <div
+                          className="progress-bar progress-bar-danger progress-bar-striped"
+                          role="progressbar"
+                          aria-label="1 star rating progress"
+                          aria-valuenow="0"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style={{ width: "0%" }}
+                        ></div>
+                      </div>
+                      <div className="people_star_num">0</div>
+                    </div>
                   </div>
                 </div>
                 <div className="col-md-7">
-                  <a className="btn btn-primary" onClick={openReviewModel}>
+                  {/* <a className="btn btn-primary" onClick={openReviewModel}>
                     Rate and Review product
-                  </a>
+                  </a> */}
+
+<a
+  href="#"
+  className="btn btn-primary"
+  onClick={(e) => {
+    e.preventDefault();
+    openReviewModel();
+  }}
+>
+  Rate and Review product
+</a>
+
 
                   <Reviewmodals
                     modalStatus={showReviewModal}
                     toggle={openReviewModel}
-                    title="PHP Business Directory Script"
+                    title="Freelancer Clone"
                   />
                 </div>
                 <div className="col-md-12">
@@ -3035,8 +3119,8 @@ const Page = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can&apos;t resell the script. All rights will remain
-                      with Logicspice only.
+                      No, you can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>

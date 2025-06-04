@@ -147,7 +147,7 @@ export default async function RootLayout({ children, params, searchParams }) {
       </Head>
 
       <body className={inter.className}>
-        {/* <Chatbot /> */}
+        <Chatbot />
         <CookiesConsent />
         {children}
 

@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../softwares.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import Image from "next/image";
 import "../../resposive.css";
@@ -14,7 +14,7 @@ import {
   MDBModalBody,
 } from "mdb-react-ui-kit";
 import "bootstrap/dist/css/bootstrap.min.css";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 // import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
@@ -23,12 +23,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contactusmodel from "../../Components/Contactusmodel";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -53,7 +53,6 @@ const Page = () => {
     setShowInfo(!showInfo);
   };
   const openModal = () => {
-
     setShowModal(!showModal);
   };
   const [demoAccessModal, setDemoAccessModal] = useState(false);
@@ -87,7 +86,7 @@ const Page = () => {
     autoplay: false,
     autoplaySpeed: 3000,
   };
-  
+
   const [activeTab, setActiveTab] = useState("tab2");
   const [sellerTab, setSellerTab] = useState(false);
   const [buyerTab, setBuyerTab] = useState(true);
@@ -192,8 +191,6 @@ const Page = () => {
     getData();
   }, []);
 
- 
-
   const iframeRef = useRef(null);
   const [player, setPlayer] = useState(null);
   const [isInView, setIsInView] = useState(false);
@@ -296,7 +293,6 @@ const Page = () => {
                   </div>
                 </div>
                 <div className="job-valu-btn">
-                 
                   <div
                     className=" btn-get"
                     onClick={openDemoAccessModal}
@@ -310,13 +306,16 @@ const Page = () => {
                       //   title="Please fill the form below and get access to the live demo of Udemy Clone..See how it work yourself!"
                       // />
                       <GetDemoEnquiry
-                      modalStatus={demoAccessModal}
-                      toggle={openDemoAccessModal}
-                      title="Please fill the form below and get access to the live demo of Udemy Clone. See how it works yourself!"
-                    />
+                        modalStatus={demoAccessModal}
+                        toggle={openDemoAccessModal}
+                        title="Please fill the form below and get access to the live demo of Udemy Clone. See how it works yourself!"
+                      />
                     }
                   </div>
-                  <Link className="btn fiverr-buys NewGreenBtnJob" href="/buy-now/udemy-clone">
+                  <Link
+                    className="btn fiverr-buys NewGreenBtnJob"
+                    href="/buy-now/udemy-clone"
+                  >
                     Buy Now
                   </Link>
                 </div>
@@ -336,7 +335,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon jobwidthauto">
                   <li>
-                  <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
                     <i className="fa fa-android"></i>
@@ -460,7 +459,16 @@ const Page = () => {
                   }`}
                   onClick={() => handleSellerTab()}
                 >
-                  <a>Student Panel</a>
+                  {/* <Link href="">Student Panel</Link> */}
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSellerTab();
+                    }}
+                  >
+                    Student Panel
+                  </Link>
                 </li>
                 <li
                   id="tab2_li"
@@ -469,14 +477,32 @@ const Page = () => {
                   }`}
                   onClick={() => handleBuyerTab()}
                 >
-                  <a>Instructor Panel</a>
+                  {/* <a>Instructor Panel</a> */}
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleBuyerTab();
+                    }}
+                  >
+                    Instructor Panel
+                  </Link>
                 </li>
                 <li
                   id="tab3_li"
                   className={`admin_app_job ddlj ${adminTab ? "active" : ""}`}
                   onClick={() => handleAdminTab()}
                 >
-                  <a>Admin Panel</a>
+                  {/* <a>Admin Panel</a> */}
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleAdminTab();
+                    }}
+                  >
+                    Admin Panel
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -1222,7 +1248,7 @@ const Page = () => {
                 <span className="sml_labl"> {pageData.name}</span>
               </strike>
               <div className="SubscriptionModelPriceBtn">
-                <div className="btn btn-get"  onClick={openDemoAccessModal}>
+                <div className="btn btn-get" onClick={openDemoAccessModal}>
                   <button>Get Demo Access!</button>
                   {
                     // <SoftwareEnquiry
@@ -1231,10 +1257,10 @@ const Page = () => {
                     //   title="Please fill the form below and get access to the live demo of Udemy Clone..See how it work yourself!"
                     // />
                     <GetDemoEnquiry
-                    modalStatus={demoAccessModal}
-                    toggle={openDemoAccessModal}
-                    title="Please fill the form below and get access to the live demo of Udemy Clone. See how it works yourself!"
-                  />
+                      modalStatus={demoAccessModal}
+                      toggle={openDemoAccessModal}
+                      title="Please fill the form below and get access to the live demo of Udemy Clone. See how it works yourself!"
+                    />
                   }
                 </div>
                 <Link className="btn fiverr-buys" href="/buy-now/udemy-clone">
@@ -1244,7 +1270,7 @@ const Page = () => {
               <div className="jocpp">
                 <ul className="job-pr-icon">
                   <li>
-                  <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                   </li>
                   <li>
                     <i className="fa fa-android"></i>
@@ -1385,6 +1411,9 @@ const Page = () => {
               </a>
               <Whylogicspice open={showInfo} />
             </div>
+
+
+
           </div>
         </div>
       </section>
@@ -1456,7 +1485,6 @@ const Page = () => {
                     />
                   </Link>
                 </div>
-                
               </Slider>
             </div>
           </Modal.Body>
@@ -2058,8 +2086,8 @@ const Page = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      No, you can&apos;t resell the script. All rights will remain
-                      with Logicspice only.
+                      No, you can&apos;t resell the script. All rights will
+                      remain with Logicspice only.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -2098,39 +2126,36 @@ const Page = () => {
             <ul className="nav nav-tabs-slide" role="tablist">
               <li role="presentation" className={studentTab ? "active" : ""}>
                 <a
-                  
                   aria-controls="homefiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="true"
                   onClick={() => handleStudentTab()}
-                  style={{cursor: "pointer"}}
+                  style={{ cursor: "pointer" }}
                 >
                   Student Features
                 </a>
               </li>
               <li role="presentation" className={instructorTab ? "active" : ""}>
                 <a
-                 
                   aria-controls="profilefiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="false"
                   onClick={() => handleInstructorTab()}
-                  style={{cursor: "pointer"}}
+                  style={{ cursor: "pointer" }}
                 >
                   Instructor Features
                 </a>
               </li>
               <li role="presentation" className={adminpanelTab ? "active" : ""}>
                 <a
-                
                   aria-controls="adminfiveer"
                   role="tab"
                   data-toggle="tab"
                   aria-expanded="false"
                   onClick={() => handleAdminpanelTab()}
-                  style={{cursor: "pointer"}}
+                  style={{ cursor: "pointer" }}
                 >
                   Admin Panel
                 </a>
@@ -2447,8 +2472,9 @@ const Page = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 text-center">
-              <div className="btn btn-primary" onClick={openModal}>
+              {/* <div className="btn btn-primary" onClick={openModal}>
                 <a>Enquire Now</a>
+                
                 {
                   <SoftwareEnquiry
                     modalStatus={showModal}
@@ -2456,7 +2482,18 @@ const Page = () => {
                     title="Udemy Clone"
                   />
                 }
-              </div>
+              </div> */}
+
+<button className="btn btn-primary" onClick={openModal}>
+  Enquire Now
+</button>
+
+<SoftwareEnquiry
+  modalStatus={showModal}
+  toggle={openModal}
+  title="Udemy Clone"
+/>
+
             </div>
           </div>
         </div>

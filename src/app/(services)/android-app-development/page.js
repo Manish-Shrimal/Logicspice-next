@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(services)/services.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../../(services)/services.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
@@ -10,7 +10,7 @@ import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 
 const Page = () => {
   var settings = {
