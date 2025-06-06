@@ -11,7 +11,7 @@ import Looksilder from "./Components/Looksilder";
 // import Workingwith from "./Components/Workingwith";
 // import Certificationtabs from "./Components/Certificationtabs";
 import Customizeweb from "./Components/Customizeweb";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+// import Contactusmodel from "./Components/Contactusmodel";
 import "./resposive.css";
 import Image from "next/image";
 import Servercomponents from "./Components/Servercomponents";
