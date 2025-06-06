@@ -154,11 +154,9 @@
 
 import { Inter } from "next/font/google";
 import "../../globals.css";
-import BaseAPI from "../../BaseAPI/BaseAPI";
-import MetadataApi from "../../BaseAPI/MetadataApi";
-import Domain from "../../BaseAPI/Domain";
-import Chatbot from "../../Components/Chatbot";
-import CookiesConsent from "../../Components/CookiesConsent";
+import Domain from "@/app/BaseAPI/Domain";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import CookiesConsent from "@/app/Components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -294,7 +292,6 @@ export default async function RootLayout({ children }) {
       </head>
 
       <body className={inter.className}>
-        <Chatbot />
         <CookiesConsent />
         {children}
       </body>

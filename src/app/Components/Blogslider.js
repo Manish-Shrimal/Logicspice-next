@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-// import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import axios from "axios";
 import Link from "next/link";
 

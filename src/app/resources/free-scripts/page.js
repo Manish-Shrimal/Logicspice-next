@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import "../resources.css";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../../../public/css/font-awesome.css";
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

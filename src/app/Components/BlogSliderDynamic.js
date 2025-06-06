@@ -39,8 +39,8 @@ const BlogSliderDynamic = ({ blogData, blogImagePath }) => {
     ],
   };
 
-  console.log(blogData, "data");
-  console.log(blogImagePath, "imagepath");
+  // console.log(blogData, "data");
+  // console.log(blogImagePath, "imagepath");
 
   return (
     <>

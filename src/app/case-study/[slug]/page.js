@@ -1,22 +1,22 @@
 "use client";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import "../../company/company.css";
-import BlogSlider from "../../Components/BlogSliderDynamic";
+import "@/app/company/company.css";
+import BlogSlider from "@/app/Components/BlogSliderDynamic";
 import "../../../../public/css/font-awesome.css";
 import axios from "axios";
-import BaseAPI from "../../BaseAPI/BaseAPI";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import parse from "html-react-parser";
-import Ourclient from "../../Components/Ourclient";
-import Blogslider from "../../Components/Blogslider";
-import BlogSliderDynamic from "../../Components/BlogSliderDynamic";
-import Enquirymodal from "../../Components/Enquirymodal";
+import Ourclient from "@/app/Components/Ourclient";
+import Blogslider from "@/app/Components/Blogslider";
+import BlogSliderDynamic from "@/app/Components/BlogSliderDynamic";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 import HTMLReactParser from "html-react-parser";
 // import "../../../responsive.css";
-// import "../../responsive.css";
+import "@/app/resposive.css";
 
 const Page = ({ params }) => {
   const [pageData, setPageData] = useState([]);

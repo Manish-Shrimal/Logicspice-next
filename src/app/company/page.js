@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import "../company/company.css";
-import NavBar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import Contactusmodel from "../Components/Contactusmodel";
+import "@/app/company/company.css";
+import NavBar from "@/app/Components/Navbar";
+import Footer from "@/app/Components/Footer";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../../public/css/font-awesome.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

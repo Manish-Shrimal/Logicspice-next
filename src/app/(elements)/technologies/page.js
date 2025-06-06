@@ -1,13 +1,13 @@
 "use client";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
 import Link from "next/link";
-import "../../company/company.css";
+import "@/app/company/company.css";
 import Image from "next/image";
 import React, { useState } from "react";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

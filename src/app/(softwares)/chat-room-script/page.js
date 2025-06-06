@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
-import "../../(softwares)/softwares.css";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,20 +10,20 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "../../Components/Contactusmodel";
-import Whylogicspice from "../../Components/Whylogicspice";
-import Reviewmodals from "../../Components/Reviewmodals";
-import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import Whylogicspice from "@/app/Components/Whylogicspice";
+import Reviewmodals from "@/app/Components/Reviewmodals";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 import axios from "axios";
-import BaseAPI from "../../BaseAPI/BaseAPI";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
-import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css"
 
 const Page = () => {

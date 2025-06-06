@@ -1,14 +1,62 @@
 import { Inter } from "next/font/google";
 import "../../../../../globals.css";
 import Head from "next/head";
-import BaseAPI from "../../../../../BaseAPI/BaseAPI";
-import MetadataApi from "../../../../../BaseAPI/MetadataApi";
-import Domain from "../../../../../BaseAPI/Domain";
-import CookiesConsent from "../../../../../Components/CookiesConsent";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
+import CookiesConsent from "@/app/Components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// export async function generateMetadata({ params, searchParams }, parent) {
+//   // Fetch data
+//   const product = await fetch(
+//     `${BaseAPI}/blog/getMetadataByCategory/${params.slug}`,
+//     {
+//       cache: "no-store",
+//     }
+//   ).then((res) => res.json());
 
+//   let pageSlug = params;
+
+//   let text = product.data.meta_keyword;
+
+//   // Use the meta_keyword directly if it's not a JSON string
+//   let keywordOrg = null;
+//   if (text) {
+//     const cleanedText = text
+//       .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
+//       .replace(/\\n/g, "") // Remove \n (newline)
+//       .replace(/\\r/g, "") // Remove \r (carriage return)
+//       .replace(/\\+/g, "") // Remove unnecessary backslashes
+//       .replace(/[\u0000-\u001F\u007F]/g, ""); // Remove control characters
+
+//     keywordOrg = cleanedText; // Use the cleaned text directly without parsing it as JSON
+//   }
+
+//   // Return metadata
+//   return {
+//     title: product.data.meta_title,
+//     description: product.data.meta_description,
+//     keywords: keywordOrg,
+//     // Add other meta tags as needed
+//     alternates: {
+//       canonical: `${Domain}/blog/category/${params.slug}`,
+//     },
+//     robots: {
+//       index: true,
+//       follow: true,
+//       googleBot: {
+//         index: true,
+//         follow: true,
+//         "max-video-preview": -1,
+//         "max-image-preview": "large",
+//         "max-snippet": -1,
+//       },
+//     },
+//     // schemaOrg: schemaOrg || null,
+//   };
+// }
 export async function generateMetadata({ params, searchParams }, parent) {
   try {
     // Fetch data
@@ -87,8 +135,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }
 }
 
-
-export default async function RootLayout({ children }) {  // Fetch metadata using the generateMetadata function
+export default async function RootLayout({ children, params, searchParams }) {
+  // Fetch metadata using the generateMetadata function
   const metadata = await generateMetadata({ params, searchParams });
 
   return (

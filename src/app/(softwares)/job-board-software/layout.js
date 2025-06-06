@@ -264,7 +264,6 @@ import BaseAPI from "../../BaseAPI/BaseAPI";
 import MetadataApi from "../../BaseAPI/MetadataApi";
 import Domain from "../../BaseAPI/Domain";
 
-
 // Lazy load heavy components to reduce JavaScript execution time
 const Chatbot = dynamic(() => import("../../Components/Chatbot"), { ssr: false });
 const CookiesConsent = dynamic(() => import("../../Components/CookiesConsent"), { ssr: false });
@@ -562,7 +561,6 @@ export default async function RootLayout({ children, params, searchParams }) {
       <body className={inter.className}>
         {/* <Chatbot /> */}
         <CookiesConsent />
-        <Chatbot />
         {children}
 
         {/* Render Structured Data (Schema.org) */}

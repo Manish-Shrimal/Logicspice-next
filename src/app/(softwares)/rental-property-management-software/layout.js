@@ -1,19 +1,17 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
-import BaseAPI from "../../BaseAPI/BaseAPI";
-import MetadataApi from "../../BaseAPI/MetadataApi";
-import Domain from "../../BaseAPI/Domain";
-import CookiesConsent from "../../Components/CookiesConsent";
-import Chatbot from "../../Components/Chatbot";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
+import CookiesConsent from "@/app/Components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
   const product = await fetch(
-    `${MetadataApi}/rental-property-management-software`,
-    {
+    `${MetadataApi}/rental-property-management-software`,{
       cache: "no-store",
     }
   ).then((res) => res.json());
@@ -76,7 +74,6 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
       </Head>
       <CookiesConsent />
-      <Chatbot />
       <body className={inter.className}>{children}</body>
       {metadata.schemaOrg && (
         <script

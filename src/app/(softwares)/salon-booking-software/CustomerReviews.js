@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Reviewmodals from "../../Components/Reviewmodals";
+import Reviewmodals from "@/app/Components/Reviewmodals";
 
 const CustomerReviews = () => {
     const [showReviewModal, setShowReviewModal] = useState(false);

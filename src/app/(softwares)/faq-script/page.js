@@ -1,15 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
-import "../../(softwares)/softwares.css";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
-import Contactusmodel from "../../Components/Contactusmodel";
-import Enquirymodal from "../../Components/Enquirymodal";
-import Reviewmodals from "../../Components/Reviewmodals";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Reviewmodals from "@/app/Components/Reviewmodals";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -19,8 +19,8 @@ import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton } from "@mui/material";
-import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
-import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
 
 

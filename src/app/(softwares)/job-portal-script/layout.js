@@ -98,7 +98,6 @@ import Head from "next/head";
 import MetadataApi from "../../BaseAPI/MetadataApi";
 import Domain from "../../BaseAPI/Domain";
 import CookiesConsent from "../../Components/CookiesConsent";
-import Chatbot from "../../Components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({
@@ -170,7 +169,6 @@ export default async function RootLayout({ children, params, searchParams }) {
 
       </Head>
       <CookiesConsent />
-      <Chatbot />
       <body className={`${inter.className} ${roboto.className}`}>
         {children}
         {metadata.schemaOrg && (

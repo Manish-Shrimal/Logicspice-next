@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
-import "../../industries/industry.css";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
+import "@/app/industries/industry.css";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 import "../../../../public/css/font-awesome.css";
 

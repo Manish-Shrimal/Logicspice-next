@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef, useState } from "react";
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
-import "../../(services)/services.css";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
+import "@/app/(services)/services.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,13 +11,13 @@ import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Enquirymodal from "../../Components/Enquirymodal";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import BaseAPI from "../../BaseAPI/BaseAPI";
-import Domain from "../../BaseAPI/Domain";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Domain from "@/app/BaseAPI/Domain";
 
 const Page = () => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";

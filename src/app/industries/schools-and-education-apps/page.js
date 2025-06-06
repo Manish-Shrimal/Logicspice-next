@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
-import "../../industries/industry.css";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
+import "@/app/industries/industry.css";
 import Image from "next/image";
 import Link from "next/link";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 import "../../../../public/css/font-awesome.css";
 import Slider from "react-slick";
@@ -604,7 +604,7 @@ const Page = () => {
                             width={100}
                             height={100}
                             className="media-object"
-                            src="/img/globalbusinesscountries/kesepara.jpg"
+                            src="/img/kesepara.jpg"
                             alt="..."
                           />
                         </div>

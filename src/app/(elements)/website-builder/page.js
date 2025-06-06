@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../elements.css";
 import Image from "next/image";
-import Contactusmodel from "../../Components/Contactusmodel";
-import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 import Link from "next/link";
 import "../../../../public/css/font-awesome.css";
-import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
-import "../../(softwares)/softwares.css";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import "@/app/(softwares)/softwares.css";
 
 const Page = () => {
     const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";
@@ -722,7 +722,7 @@ const Page = () => {
                   <label class="" for="textinput">
                     18.How does your business and products benefit your target
                     audience? Please specify a clear list of bullet items of
-                    benefits. What can your business offer your visitors, what&apos;s
+                    benefits. What can your business offer your visitors, what's
                     in it for them, how can you help them? What problems do your
                     prospects have that your business solves?
                   </label>

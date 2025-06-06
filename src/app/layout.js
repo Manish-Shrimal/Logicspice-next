@@ -5,7 +5,7 @@ import AOSInitializer from "./Components/AOSInitializer";
 import GTMComponent from "./Components/GTMComponent";
 import CookiesConsent from "./Components/CookiesConsent";
 import Chatbot from "./Components/Chatbot";
-// import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
 import Domain from "./BaseAPI/Domain";
 import Head from "next/head";
 
@@ -14,9 +14,7 @@ let schemaData;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // Fetch data
-  const product = await fetch(`
-    https://manage.logicspice.com/api/getMetaData/home`,
-     {
+  const product = await fetch(`${MetadataApi}/home`, {
     cache: "no-store",
   }).then((res) => res.json());
 
@@ -87,8 +85,6 @@ export default function RootLayout({ children, params, searchParams }) {
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
         />
-
-        <Chatbot />
         <AOSInitializer>{children}</AOSInitializer>
 
         {isHomePage && schemaData && (

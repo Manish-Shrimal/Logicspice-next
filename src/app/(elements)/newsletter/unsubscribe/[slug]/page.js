@@ -1,6 +1,6 @@
 "use client";
-import BaseAPI from "../../../../BaseAPI/BaseAPI";
-import Domain from "../../../../BaseAPI/Domain";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Domain from "@/app/BaseAPI/Domain";
 import axios from "axios";
 import React, { useEffect } from "react";
 import Swal from "sweetalert2";

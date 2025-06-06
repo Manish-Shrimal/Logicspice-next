@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
-import "../../(services)/services.css";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/(services)/services.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,11 +11,10 @@ import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Enquirymodal from "../../Components/Enquirymodal";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../resposive.css";
-import FrameworkSelector from "./FrameworkSelector";
 
 const Page = () => {
   var settings = {
@@ -448,7 +447,7 @@ const Page = () => {
               scripting <br />
               language that helps empower your websites.
             </p>
-            {/* <div className="laravel_core_features_bx phpweb_features_bx">
+            <div className="laravel_core_features_bx phpweb_features_bx">
               <div className="row">
                 <div className="col-sm-6 col-md-6" data-aos="fade-right">
                   <div className="laravel_core_featureBox">
@@ -543,8 +542,7 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
-            <FrameworkSelector />
+            </div>
           </div>
         </section>
 

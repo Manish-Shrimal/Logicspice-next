@@ -1,18 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
-import "../../(hire-developers)/hire-developer.css";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
+import "@/app/(hire-developers)/hire-developer.css";
 import Image from "next/image";
 import Link from "next/link";
-import Enquirymodal from "../../Components/Enquirymodal";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css"
-import Customsolutiontabs from "../../Components/Customsolutiontabs";
-import Support from "../../Components/Support";
-import WhyHireFromLogicspice from "../../Components/WhyHireFromLogicspice";
+import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
+import Support from "@/app/Components/Support";
+import WhyHireFromLogicspice from "@/app/Components/WhyHireFromLogicspice";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -109,19 +109,12 @@ const Page = () => {
                       Hire Now!
                     </a>
 
-                    {/* <a
+                    <a
                       href="javascript:$zopim.livechat.window.show();"
                       className="btn btn-primary"
                     >
                       Chat with a Developer
-                    </a> */}
-                    <a
-            href="https://api.whatsapp.com/send?phone=+919829559922&amp;text=Hi Logicspice Team, I have a question regarding the solutions you provide. Please Help!"
-            target="_blank"
-            className="btn btn-primary"
-          >
-            Chat with a Developer
-          </a>
+                    </a>
                   </div>
                 </div>
                 <div className="col-md-4">

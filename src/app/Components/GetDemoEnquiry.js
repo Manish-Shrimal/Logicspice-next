@@ -6,7 +6,7 @@ import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import BaseAPI from "../BaseAPI/BaseAPI";
-import "../(services)/services.css";
+import "@/app/(services)/services.css";
 
 const Enquirymodal = ({ modalStatus, toggle, title }) => {
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";

@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
-import "../../(softwares)/softwares.css";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,22 +10,23 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "../../Components/Contactusmodel";
-import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
 import { Modal, ModalBody } from "react-bootstrap";
 import "../../resposive.css";
-import Whylogicspice from "../../Components/Whylogicspice";
-import Reviewmodals from "../../Components/Reviewmodals";
+import Whylogicspice from "@/app/Components/Whylogicspice";
+import Reviewmodals from "@/app/Components/Reviewmodals";
 import axios from "axios";
-import BaseAPI from "../../BaseAPI/BaseAPI";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
-import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
+import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import Chatbot from "@/app/Components/Chatbot";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -164,7 +165,7 @@ const Page = () => {
 
 
 
-
+ 
 
 
 
@@ -1474,7 +1475,7 @@ const Page = () => {
               </div>
               <div className="jocpp">
                 <ul className="job-pr-icon">
-                  <li className="single_device">
+                  <li>
                     <i className="fa fa-globe"></i>
                   </li>
                 </ul>

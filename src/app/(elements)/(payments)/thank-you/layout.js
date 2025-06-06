@@ -2,9 +2,9 @@ import { Inter } from "next/font/google";
 import "../../../globals.css";
 
 import Head from "next/head";
-import BaseAPI from "../../../BaseAPI/BaseAPI";
-import MetadataApi from "../../../BaseAPI/MetadataApi";
-import Domain from "../../../BaseAPI/Domain";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
 
 const inter = Inter({ subsets: ["latin"] });
 

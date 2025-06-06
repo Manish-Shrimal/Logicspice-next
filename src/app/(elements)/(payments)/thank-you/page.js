@@ -1,15 +1,15 @@
 "use client";
-import BaseAPI from "../../../BaseAPI/BaseAPI";
-import Footer from "../../../Components/Footer";
-import Navbar from "../../../Components/Navbar";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Footer from "@/app/Components/Footer";
+import Navbar from "@/app/Components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../../public/css/font-awesome.css";
 import "../../elements.css";
-import Contactusmodel from "../../../Components/Contactusmodel";
-import Domain from "../../../BaseAPI/Domain";
+import Contactusmodel from "@/app/Components/Contactusmodel";
+import Domain from "@/app/BaseAPI/Domain";
 import axios from "axios";
 
 const Page = () => {

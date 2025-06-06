@@ -1,11 +1,10 @@
 import { Inter } from "next/font/google";
 import "../../globals.css";
 import Head from "next/head";
-import BaseAPI from "../../BaseAPI/BaseAPI";
-import MetadataApi from "../../BaseAPI/MetadataApi";
-import Domain from "../../BaseAPI/Domain";
-import Chatbot from "../../Components/Chatbot";
-import CookiesConsent from "../../Components/CookiesConsent";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import MetadataApi from "@/app/BaseAPI/MetadataApi";
+import Domain from "@/app/BaseAPI/Domain";
+import CookiesConsent from "@/app/Components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +20,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   
   let schemaOrg = null;
   if (product?.data?.schema) {
-    // console.log("from if of chat-room-script", product.data.schema);
+    console.log("from if of chat-room-script", product.data.schema);
     const cleanedText = product.data.schema
       .replace(/\\r\\n/g, "") // Remove \r\n (carriage return + newline)
       .replace(/\\n/g, "") // Remove \n (newline)
@@ -72,7 +71,6 @@ export default async function RootLayout({ children, params, searchParams }) {
         <title>{metadata.title}</title>
         
       </Head>
-    <Chatbot/>
       <CookiesConsent />
       <body className={inter.className}>{children}</body>
       <script

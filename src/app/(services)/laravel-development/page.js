@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
-import "../../(services)/services.css";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/(services)/services.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,8 +11,8 @@ import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Enquirymodal from "../../Components/Enquirymodal";
-import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import "../../resposive.css";
 const Page = () => {
   var settings = {
@@ -195,7 +195,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* <section className="laravel-descriptions ">
+      <section className="laravel-descriptions ">
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
@@ -205,7 +205,6 @@ const Page = () => {
                   height={500 / (100 / 100)}
                   src="/img/laraveldevelopment/laravel-logo-img.png"
                   alt="laravel web development"
-                  priority={false} // Lazy loading enabled by default
                 />
               </div>
             </div>
@@ -248,7 +247,18 @@ const Page = () => {
                   comprehensibility.
                 </p>
                 <h3>Why Choose LogicSpice for Your Web Development Needs?</h3>
-               
+                {/* <p>
+                  While in pursuit of top-tier Laravel developers, look no
+                  further than Logicspice, your ultimate Laravel development
+                  company. Our team comprises highly skilled professionals
+                  deeply immersed in the intricacies of the Laravel Framework.
+                  Also, our company follows the{" "}
+                  <i>latest practices and approach of software development</i>{" "}
+                  and also uses lots of related technologies like javascript and
+                  their frameworks at expert level. We orchestrate{" "}
+                  <strong>tailor-made solutions</strong> to address your unique
+                  software development needs, assuring excellence at every step.
+                </p> */}
                 If you&apos;re looking for the best Laravel developers, look no
                 further than LogicSpice. We are a leading Laravel development
                 company with a team of highly skilled professionals who have
@@ -301,41 +311,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section> */}
-
-<section className="laravel-descriptions">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-sm-6 col-md-5 pull-right">
-            <div className="laravel_img">
-              <Image
-                width={310}
-                height={500 / (100 / 100)}
-                src="/img/laraveldevelopment/laravel-logo-img.webp" // ✅ Serve WebP
-                alt="Laravel Web Development"
-                priority={false} // Lazy loading enabled by default
-              />
-            </div>
-          </div>
-          <div className="col-sm-6 col-md-7 pull-left">
-            <div className="laravel-descriptions-bx" dir="ltr">
-              <h2>
-                Laravel Custom
-                <br /> Web Development Agency
-              </h2>
-              <h3>
-                Advantages of Laravel for Your Custom Web Development Needs
-              </h3>
-              <p>
-                Our Laravel web development services focus on customization,
-                allowing us to create unique products with a wide range of
-                features tailored to your specific needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
       <section className="ReadyMadeScriptSection">
         <div className="container">
           <div className="TopHadding">

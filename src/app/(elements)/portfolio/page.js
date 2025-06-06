@@ -1,15 +1,15 @@
 "use client";
-import Footer from "../../Components/Footer";
-import NavBar from "../../Components/Navbar";
-import "../../company/company.css";
+import Footer from "@/app/Components/Footer";
+import NavBar from "@/app/Components/Navbar";
+import "@/app/company/company.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import BaseAPI from "../../BaseAPI/BaseAPI";
-import Contactusmodel from "../../Components/Contactusmodel";
+import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Contactusmodel from "@/app/Components/Contactusmodel";
 import { Modal, Button } from "react-bootstrap"; // Import from react-bootstrap
 
 const Page = () => {
