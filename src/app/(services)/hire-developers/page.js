@@ -18,7 +18,7 @@ import "../../../../public/css/font-awesome.min.css";
 import "../../../../public/css/font-awesome.css";
 
 
-const Workingwith = lazy(() => import("@/app/Components/Workingwith"));
+const Workingwith = lazy(() => import("../../Components/Workingwith"));
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

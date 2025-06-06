@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import "../../(softwares)/softwares.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,12 +16,12 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
 
 
