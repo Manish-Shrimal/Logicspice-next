@@ -132,7 +132,7 @@ const ChatIframe = () => {
     const chatIframe = document.createElement("iframe");
     chatIframe.id = "myIframe";
     chatIframe.style.position = "fixed";
-    chatIframe.style.width = "550px";
+    chatIframe.style.width = "80px";
     chatIframe.style.height = "550px";
     chatIframe.style.zIndex = "1000";
     chatIframe.style.border = "none";

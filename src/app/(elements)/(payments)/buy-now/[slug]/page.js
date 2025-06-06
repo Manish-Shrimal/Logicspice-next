@@ -1,19 +1,19 @@
 "use client";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import Footer from "../../../../Components/Footer";
+import Navbar from "../../../../Components/Navbar";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import "../../../elements.css";
-import Billing from "@/app/Components/Billing";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Billing from "../../../../Components/Billing";
+import BaseAPI from "../../../../BaseAPI/BaseAPI";
 import Cookies from "js-cookie";
 import { Router } from "next/navigation";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../../../public/css/font-awesome.css";
 import Image from "next/image";
 import Link from "next/link";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../../../Components/Contactusmodel";
 
 const Page = ({ params }) => {
   const router = useRouter();
@@ -54,6 +54,9 @@ const Page = ({ params }) => {
 
     fetchData();
   }, []);
+
+  const [isAndroidChecked, setIsAndroidChecked] = useState(false);
+  const [isIphoneChecked, setIsIphoneChecked] = useState(false);
 
   const addAdditional = async (event, addPrice) => {
     document.querySelector("#loadercart").style.display = "block";
@@ -638,93 +641,11 @@ const Page = ({ params }) => {
                       <button
                         type="submit"
                         className="custom_btn btn btn-primary"
-                        // onClick={submitForm}
                       >
                         Continue
                       </button>
                     </div>
                   </div>
-
-                  {/* <div className="order_summarty_right">
-                  <div className="order_summarty_right_inner">
-                    <div className="order_title">Order Summary</div>
-                    <div className="order_wrap">
-                      <div id="offeer_sec">
-                        <div className="order_wrap_row" id="and_sec">
-                          <div className="order_wrap_left">
-                            <span className="basi_title">
-                              {productDetails.productType}
-                            </span>
-                            <br />
-                            (Web Version)
-                          </div>
-                          <div className="order_wrap_right">
-                            {productDetails.currencyDetail.currency_symbol}
-                            <span id="and_price">
-                              {productDetails.currencyDetail.price}
-                            </span>{" "}
-                            {productDetails.currencyDetail.name}
-                          </div>
-                        </div>
-                        <div id="custom_sec"></div>
-                      </div>
-                      <div id="ofer_nw">
-                        <div className="order_wrap_row">
-                          <div className="order_wrap_left">
-                            <span className="basi_title">Total</span>
-                          </div>
-                          <div className="order_wrap_right">
-                            {productDetails.currencyDetail.currency_symbol}
-                            <span id="tot_sec">
-                              {productDetails.currencyDetail.price}
-                            </span>{" "}
-                            {productDetails.currencyDetail.name}
-                          </div>
-                        </div>
-                      </div>
-                     
-                      <div className="off_sect">
-                        <span id="show" className="drop drop_left">
-                          We Offer Money Back Guarantee{" "}
-                          <i className="question_icon"></i>
-                          <div className="drop_contanet drop_left_content">
-                            <span id="hide"></span>
-                            Yes, we provide a 30 days money back guarantee to
-                            ensure customer satisfaction with our software. If,
-                            for any reason, you decide to stop using the
-                            product, you can request a refund. We will reimburse
-                            the entire amount, excluding the installation and
-                            configuration charges, which are either USD 65 or
-                            20% of the application cost, whichever is higher.
-                            Please note that the money back guarantee does not
-                            apply to customers who have received updates as per
-                            their specific requests, taking into account the
-                            significant efforts and time invested by the team
-                            for their project.
-                          </div>
-                        </span>
-                        <div className="pay_pri_term">
-                          For more detail visit following pages
-                          <Link
-                            href="/privacy-policy"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Privacy Policy
-                          </Link>{" "}
-                          and
-                          <Link
-                            href="/terms-of-use"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Terms Of Use
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
                 </form>
               </div>
             </div>

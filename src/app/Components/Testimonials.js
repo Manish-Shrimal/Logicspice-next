@@ -102,7 +102,7 @@ const Testimonials = ({ testimonialData }) => {
     tempElement.innerHTML = str;
     return tempElement.textContent || tempElement.innerText;
   };
-  
+    
   return (
     <div className="slider-container">
       <Slider {...settings}>
@@ -114,14 +114,15 @@ const Testimonials = ({ testimonialData }) => {
                   width={120}
                   height={100}
                   className="media-object"
+                  unoptimized={true}
                   src={item.image}
                   alt={item.heading}
                 />
               </div>
               <div className="media-body">
                 <h4 className="media-heading">{item.heading}</h4>
-                <p>
-                  {/* Decode HTML entities in the text */}
+                {/* <p>
+                
                   {decodeHtmlEntities(item.text)}
                   <a
                     style={{ cursor: "pointer", color: "#31aae1" }}
@@ -129,7 +130,26 @@ const Testimonials = ({ testimonialData }) => {
                   >
                     More
                   </a>
-                </p>
+
+
+                  
+                </p> */}
+
+<p>
+  {/* Decode HTML entities in the text */}
+  {decodeHtmlEntities(item.text)}
+
+  {/* Show 'More' only if item.text has more content */}
+  {/* {item.text && item.text.length > 100 && ( // you can adjust the length as needed
+    <a
+      style={{ cursor: "pointer", color: "#31aae1", marginLeft: 5 }}
+      className="show_data"
+    >
+      More
+    </a>
+  )} */}
+</p>
+
                 <div className="author_name">
                   <p>
                     {item.name} {item.location}

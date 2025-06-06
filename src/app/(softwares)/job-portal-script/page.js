@@ -669,7 +669,7 @@ const Page = () => {
                   <span className="font-semibold">LS Jobber</span> is a powerful
                   white label job portal script created for businesses, HR
                   agencies, and entrepreneurs who want to build and run their
-                  own custom job portal platform. Whether you're starting a new
+                  own custom job portal platform. Whether you&apos;re starting a new
                   job portal or scaling an existing recruitment business, LS
                   Jobber offers a complete solution with full customization and
                   zero coding hassle.
@@ -1051,7 +1051,7 @@ const Page = () => {
                                   Track Your Applications
                                   <div className="product-idea">
                                     <p>
-                                      Keep a clear view of all the jobs you've
+                                      Keep a clear view of all the jobs you&apos;ve
                                       applied to, all in one place.
                                     </p>
                                   </div>
@@ -3974,7 +3974,7 @@ const Page = () => {
                 <div className="ecommerce--review">
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext">
-                    Launching my job portal with Logicspice’s script was one of the best decisions I’ve made. The customization options are impressive, and the admin panel is super intuitive. It saved me a lot of time and development cost. I appreciate the quick assistance provided during setup.
+                    Launching my job portal with Logicspice&apos;s script was one of the best decisions I&apos;ve made. The customization options are impressive, and the admin panel is super intuitive. It saved me a lot of time and development cost. I appreciate the quick assistance provided during setup.
                     </div>
                     <div className="who_ratset">
                       <span
@@ -4033,7 +4033,7 @@ const Page = () => {
 
                   <div className="customers_review_sec_row">
                     <div className="customer_review_stext" id="fiveer-clone">
-                     I’ve tried other scripts before, but Logicspice really stands out. The platform is stable, easy to manage, and packed with the right features for employers and job seekers. Their documentation was clear, and the support team resolved my queries quickly. 
+                     I&apos;ve tried other scripts before, but Logicspice really stands out. The platform is stable, easy to manage, and packed with the right features for employers and job seekers. Their documentation was clear, and the support team resolved my queries quickly. 
                     </div>
 
                     <div className="who_ratset">
@@ -4561,7 +4561,7 @@ const Page = () => {
                     <div style={activeIndex === 11 ? showStyle : collapseStyle}>
                       <div style={bodyStyle}>
                         <p>
-                          Yes, to show locations on your site, you’ll need a
+                          Yes, to show locations on your site, you&apos;ll need a
                           Google Map API key. To generate one, follow the steps
                           provided in the official {""}
                           <a
@@ -4890,7 +4890,7 @@ const Page = () => {
                 Try our free demo now and see how simple it is to post jobs, manage candidates, and grow your hiring process.
                </p>
                  <p className="text-md text-gray-800 mb-6 max-w-3xl mx-auto">
-               If you have any questions, just reach out—we’re here to help!
+               If you have any questions, just reach out—we&apos;re here to help!
 
                </p>
               

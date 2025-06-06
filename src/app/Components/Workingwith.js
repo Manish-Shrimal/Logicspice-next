@@ -84,7 +84,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import "@/app/globals.css";
+// import "@/app/globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
