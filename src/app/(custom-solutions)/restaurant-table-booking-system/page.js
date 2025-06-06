@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(custom-solutions)/customsolutions.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../../(custom-solutions)/customsolutions.css";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,14 +11,14 @@ import "../../../../public/css/font-awesome.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
 import { Modal, ModalBody } from "react-bootstrap";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
-import Support from "@/app/Components/Support";
-import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
+import Support from "../../Components/Support";
+import Customsolutiontabs from "../../Components/Customsolutiontabs";
 import { Collapse } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 

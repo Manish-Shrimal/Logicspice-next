@@ -1,19 +1,19 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(custom-solutions)/customsolutions.css";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import "../../(custom-solutions)/customsolutions.css";
 import Image from "next/image";
 import Link from "next/link";
-import Enquirymodal from "@/app/Components/Enquirymodal";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
 import "../../resposive.css";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css"
-import Customsolutiontabs from "@/app/Components/Customsolutiontabs";
+import Customsolutiontabs from "../../Components/Customsolutiontabs";
 import { Accordion, Card, Button } from "react-bootstrap";
-import Support from "@/app/Components/Support";
-import Carrentaltab from "@/app/Components/Carrentaltab";
+import Support from "../../Components/Support";
+import Carrentaltab from "../../Components/Carrentaltab";
 import {
   MDBAccordion,
   MDBAccordionItem,
