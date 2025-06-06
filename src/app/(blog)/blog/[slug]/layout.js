@@ -1,10 +1,10 @@
 import { Inter } from "next/font/google";
 import "../../../globals.css";
 import Head from "next/head";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import MetadataApi from "@/app/BaseAPI/MetadataApi";
-import Domain from "@/app/BaseAPI/Domain";
-import CookiesConsent from "@/app/Components/CookiesConsent";
+import BaseAPI from "../../../BaseAPI/BaseAPI";
+import MetadataApi from "../../../BaseAPI/MetadataApi";
+import Domain from "../../../BaseAPI/Domain";
+import CookiesConsent from "../../../Components/CookiesConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   let pageSlug = params;
 
-  let text = product.data.schema;
+  // let text = product.data.schema;
 
   // let schemaOrg = null;
   // if(text){
@@ -42,9 +42,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   // Return metadata
   return {
-    title: product.data.meta_title,
-    description: product.data.meta_description,
-    keywords: product.data.meta_keyword,
+    title: product.data?.meta_title,
+    description: product.data?.meta_description,
+    keywords: product.data?.meta_keyword,
     // Add other meta tags as needed
     alternates: {
       canonical: `${Domain}/blog/${pageSlug.slug}`,

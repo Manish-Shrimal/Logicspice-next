@@ -1,16 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import Footer from "../../../../../Components/Footer";
+import Navbar from "../../../../../Components/Navbar";
 import axios from "axios";
-import "@/app/(blog)/blog/(category)/category.css";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import "../../../(category)/category.css";
+import BaseAPI from "../../../../../BaseAPI/BaseAPI";
 import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 import Swal from "sweetalert2";
-import Loader from "@/app/Components/loader";
+import Loader from "../../../../../Components/loader";
 const Page = ({ params }) => {
   let currentTime = Date.now();
   const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";

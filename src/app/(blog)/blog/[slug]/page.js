@@ -1,16 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import "@/app/(blog)/blog.css";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import "../../../(blog)/blog.css";
+import Footer from "../../../Components/Footer";
+import Navbar from "../../../Components/Navbar";
 import axios from "axios";
 import Image from "next/image";
 import parse from "html-react-parser";
 import Link from "next/link";
 import Swal from "sweetalert2";
-import Loader from "@/app/Components/loader";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import Loader from "../../../Components/loader";
+import BaseAPI from "../../../BaseAPI/BaseAPI";
 
 const Page = ({ params }) => {
   let currentTime = Date.now();
