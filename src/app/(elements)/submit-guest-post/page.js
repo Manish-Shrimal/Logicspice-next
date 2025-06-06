@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 import "../../../../public/css/font-awesome.css";
 import "../elements.css";
-import Workingwith from "@/app/Components/Workingwith";
-import Reviewmodals from "@/app/Components/Reviewmodals";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Workingwith from "../../Components/Workingwith";
+import Reviewmodals from "../../Components/Reviewmodals";
+import Contactusmodel from "../../Components/Contactusmodel";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import Swal from "sweetalert2";
 import ReCAPTCHA from "react-google-recaptcha";
 

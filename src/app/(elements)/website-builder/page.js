@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../elements.css";
 import Image from "next/image";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import Enquirymodal from "@/app/Components/Enquirymodal";
+import Contactusmodel from "../../Components/Contactusmodel";
+import Enquirymodal from "../../Components/Enquirymodal";
 import Link from "next/link";
 import "../../../../public/css/font-awesome.css";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
-import "@/app/(softwares)/softwares.css";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
+import "../../(softwares)/softwares.css";
 
 const Page = () => {
     const recaptchaKey = "6Lep5B8qAAAAABS1ppbvL1LHjDXYRjPojknlmdzo";

@@ -1,14 +1,14 @@
 "use client";
-import Footer from "@/app/Components/Footer";
-import NavBar from "@/app/Components/Navbar";
+import Footer from "../../Components/Footer";
+import NavBar from "../../Components/Navbar";
 import Link from "next/link";
 // import "../resources.css";
-import "@/app/resources/resources.css";
+import "../../resources/resources.css";
 import Image from "next/image";
 import React, { useState } from "react";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css"
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 
 const Page = () => {
   const [showModal, setShowModal] = useState(false);

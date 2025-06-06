@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
 import React, { useRef, useEffect, useState } from "react";
-import Navbar from "@/app/Components/Navbar";
-import Footer from "@/app/Components/Footer";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 import "../elements.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import Image from "next/image";
 // import "@fortawesome/fontawesome-free/css/all.css";
 import "../../../../public/css/font-awesome.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 

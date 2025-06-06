@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import Navbar from "@/app/Components/Navbar";
-import Footer from "@/app/Components/Footer";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 import "../elements.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../Components/Contactusmodel";
 import Image from "next/image";
 import "../../../../public/css/font-awesome.css";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import axios from "axios";
 import Swal from "sweetalert2";
 
