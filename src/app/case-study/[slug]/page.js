@@ -16,7 +16,7 @@ import BlogSliderDynamic from "../../Components/BlogSliderDynamic";
 import Enquirymodal from "../../Components/Enquirymodal";
 import HTMLReactParser from "html-react-parser";
 // import "../../../responsive.css";
-import "@/app/resposive.css";
+// import "../../responsive.css";
 
 const Page = ({ params }) => {
   const [pageData, setPageData] = useState([]);

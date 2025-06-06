@@ -22,13 +22,13 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "../../resposive.css";
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import BaseAPI from "../../BaseAPI/BaseAPI";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 
 const Page = () => {
   const [activeIndex, setActiveIndex] = useState(null);

@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "@/app/globals.css";
+import "../../globals.css";
 import Head from "next/head";
 import BaseAPI from "../../BaseAPI/BaseAPI";
 import MetadataApi from "../../BaseAPI/MetadataApi";

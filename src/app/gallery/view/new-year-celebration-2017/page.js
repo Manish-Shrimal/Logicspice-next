@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Footer from "@/app/Components/Footer";
-import Navbar from "@/app/Components/Navbar";
+import Footer from "../../../Components/Footer";
+import Navbar from "../../../Components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import "../../gallery.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../../../Components/Contactusmodel";
 import "../../../../../public/css/font-awesome.css";
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);

@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 
-import "@/app/(hire-developers)/hire-developer.css";
+import "../(hire-developers)/hire-developer.css";
 import "../../app/globals.css";
 import Image from "next/image";
 import Certificationtabs from "./Certificationtabs";
 import WorkedWith from "./WorkedWith";
 import Testimonials from "./Testimonials";
-import Contactusmodel from "@/app/Components/Contactusmodel";
+import Contactusmodel from "../Components/Contactusmodel";
 
 const WhyHireFromLogicspice = ({ testimonialData }) => {
   const [modalOpen, setModalOpen] = useState(false);
