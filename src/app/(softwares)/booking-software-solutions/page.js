@@ -1,21 +1,21 @@
 "use client";
-import Footer from "@/app/Components/Footer";
+import Footer from "../../Components/Footer";
 import React, { useEffect, useState } from "react";
-import Navbar from "@/app/Components/Navbar";
-import "@/app/(softwares)/softwares.css";
+import Navbar from "../../Components/Navbar";
+import "../../(softwares)/softwares.css";
 import Image from "next/image";
 import Link from "next/link";
 // import "@fortawesome/fontawesome-free/css/all.css";
-import Contactusmodel from "@/app/Components/Contactusmodel";
-import SoftwareEnquiry from "@/app/Components/SoftwareEnquiry";
+import Contactusmodel from "../../Components/Contactusmodel";
+import SoftwareEnquiry from "../../Components/SoftwareEnquiry";
 import "../../resposive.css";
-import EnquiryModal from "@/app/Components/Enquirymodal";
+import EnquiryModal from "../../Components/Enquirymodal";
 
-import Whylogicspice from "@/app/Components/Whylogicspice";
-import Reviewmodals from "@/app/Components/Reviewmodals";
+import Whylogicspice from "../../Components/Whylogicspice";
+import Reviewmodals from "../../Components/Reviewmodals";
 import { Modal, ModalBody } from "react-bootstrap";
 import axios from "axios";
-import BaseAPI from "@/app/BaseAPI/BaseAPI";
+import BaseAPI from "../../BaseAPI/BaseAPI";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -25,7 +25,7 @@ import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
-import GetDemoEnquiry from "@/app/Components/GetDemoEnquiry";
+import GetDemoEnquiry from "../../Components/GetDemoEnquiry";
 import "../../../../public/css/font-awesome.css";
 
 const Page = () => {
